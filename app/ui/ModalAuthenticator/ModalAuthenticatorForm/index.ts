@@ -1,0 +1,1 @@
+export { ModalAuthenticatorForm } from "./ModalAuthenticatorForm";

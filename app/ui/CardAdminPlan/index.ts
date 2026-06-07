@@ -1,0 +1,1 @@
+export { CardAdminPlan } from "./CardAdminPlan";

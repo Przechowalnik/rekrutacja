@@ -1,0 +1,8 @@
+{
+  "buttonLinkToRegistration": "Copy employee account registration link",
+  "buttonNew": "Create employee account",
+  "description": "This page allows you to add a new employee to the company system. You can either create an employee account directly or copy a registration link to send it to the employee for self-registration.",
+  "linkRegistrationCopyMessage": " You can now send it to the employee so they can create their account.",
+  "linkRegistrationCopyTitle": "User registration link has been copied to the clipboard! 😍",
+  "title": "New employee"
+}

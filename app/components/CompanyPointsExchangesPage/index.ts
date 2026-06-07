@@ -1,0 +1,1 @@
+export { CompanyPointsExchangesPage } from "./CompanyPointsExchangesPage";

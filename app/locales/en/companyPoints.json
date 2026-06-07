@@ -1,0 +1,6 @@
+{
+  "buttonReplace": "Exchange points",
+  "description": "On this page, you can view all available <tooltipicon label='{{tooltipPoints}}'>Points</tooltipicon> that you can use while managing your business on the platform.",
+  "information": "Available points balance: {{pointsBalance}}",
+  "title": "Points"
+}

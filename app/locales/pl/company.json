@@ -1,0 +1,23 @@
+{
+  "buttonAddCard": "Dodaj firmową kartę płatniczą",
+  "buttonAddListings": "Dodaj firmowe ogłoszenie",
+  "buttonBugs": "Zgłoszone błędy na platformie",
+  "buttonCardUpdate": "Zaktualizuj firmową kartę płatniczą",
+  "buttonChangeCompanyPhone": "Zmień numer telefonu",
+  "buttonConfirmPhone": "Potwierdź numer telefonu",
+  "buttonDaysOff": "Dni wolne w firmie",
+  "buttonDeleteCompany": "Usuń firmę",
+  "buttonInvoices": "Faktury",
+  "buttonListings": "Firmowe ogłoszenia",
+  "buttonPoints": "Punkty",
+  "buttonProfile": "Informacje o firmie",
+  "buttonReferral": "System poleceń",
+  "buttonRefresh": "Odśwież dane",
+  "buttonSettings": "Ustawienia",
+  "buttonSubscriptions": "Subskrypcje",
+  "buttonWorkers": "Pracownicy",
+  "fieldsetListings": "Ogłoszenia",
+  "fieldsetOthers": "Pozostałe",
+  "fieldsetPayments": "Płatności",
+  "fieldsetSettings": "Ustawienia firmy"
+}

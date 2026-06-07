@@ -1,0 +1,5 @@
+{
+  "buttonNew": "Add employee",
+  "description": "This page displays a <b>list of all employees in the company</b>.<br/>You can view basic information about each of them, such as their position and email address.",
+  "title": "Employees"
+}

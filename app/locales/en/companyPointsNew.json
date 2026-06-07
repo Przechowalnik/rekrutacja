@@ -1,0 +1,6 @@
+{
+  "buttonAdd": "Top up",
+  "description": "On this page, you can <gradient>purchase SMS packages</gradient> that allow you to communicate easily and quickly with your clients. With SMS messages, you can send appointment confirmations immediately after booking and reminders a day before the scheduled visit, provided this feature is enabled in the <a href='companySettings'>Settings</a>.<br/><br/><b>Select the right SMS package</b> depending on your business needs. Our platform offers flexible options tailored to various message volumes, helping you save time and resources while efficiently managing communication.<br/><br/><b>Increase your service efficiency — regular reminders can reduce no-shows and improve client satisfaction!</b>",
+  "information": "Available points balance: {{pointsBalance}}",
+  "title": "Top up SMS credits"
+}

@@ -1,0 +1,8 @@
+{
+  "buttonDelete": "Usuń aktualną kartę",
+  "description": "Na tej stronie możesz <b>sprawdzić, jaka karta płatnicza jest aktualnie podpięta do konta</b>. Wyświetlana jest jej końcówka (ostatnie 4 cyfry), co pozwala na identyfikację karty bez ujawniania pełnych danych.",
+  "noCard": "Nie masz jeszcze dodanej karty płatniczej do konta.",
+  "title": "Aktualizacja firmowej karty płatniczej",
+  "titleAdd": "Dodaj firmową kartę płatniczą",
+  "tooltipCard": "Nie można usunąć tej karty płatniczej, ponieważ jest ona aktualnie powiązana z aktywną subskrypcją. Aby usunąć kartę, najpierw anuluj subskrypcję. Jeśli chcesz zmienić kartę płatności, nie musisz usuwać tej — wystarczy ją zaktualizować, a nowa karta automatycznie zastąpi obecną w rozliczeniach subskrypcji."
+}

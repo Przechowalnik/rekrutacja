@@ -1,0 +1,8 @@
+{
+  "alert": "Pamiętaj, że konto można usunąć jedynie, jeśli pracownik nie ma aktywnych rezerwacji. Po usunięciu konto zostanie trwale usunięte z systemu i nie będzie możliwości jego przywrócenia. Jeśli chcesz kontynuować, upewnij się, że wszystkie rezerwacje zostały zakończone lub anulowane.",
+  "buttonDelete": "Usuń konto pracownicze",
+  "buttonSaveTooltip": "Brak zmian do zapisania",
+  "description": "Czy na pewno chcesz usunąć konto? Ta operacja jest nieodwracalna i spowoduje trwałe usunięcie wszystkich danych z naszego systemu. 😱",
+  "textToDelete": "Aby potwierdzić, wpisz imię osoby posiadającej konto:",
+  "title": "Usuń konto pracownicze"
+}

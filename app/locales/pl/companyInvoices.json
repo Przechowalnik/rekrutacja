@@ -1,0 +1,11 @@
+{
+  "actions": "Wyślij fakturę na adres e-mail",
+  "buttonEdit": "Aktualizuj dane",
+  "buttonEditFull": "Aktualizuj dane do faktur",
+  "buttonSendInvoice": "Wyślij",
+  "createdAt": "Data utworzenia faktury",
+  "dataToInvoices": "Dane do faktur",
+  "description": "Na tej stronie znajdziesz wszystkie faktury przypisane do konta.",
+  "noInvoices": "Brak faktur do wyświetlenia.",
+  "title": "Faktury"
+}

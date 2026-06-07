@@ -1,0 +1,8 @@
+{
+  "buttonDelete": "Delete current card",
+  "description": "On this page, you can <b>check which payment card is currently linked to your account</b>. Only the last 4 digits are displayed, allowing you to identify the card without revealing full details.",
+  "noCard": "You haven’t added a payment card to your account yet.",
+  "title": "Update company payment card",
+  "titleAdd": "Add company payment card",
+  "tooltipCard": "You cannot delete this payment card because it’s currently linked to an active subscription. To remove the card, please cancel your subscription first. If you want to change the payment card, you don’t need to delete it — simply update it, and the new card will automatically replace the current one for subscription payments."
+}

@@ -1,0 +1,6 @@
+{
+  "buttonSave": "Delete account",
+  "description": "Are you sure you want to delete your account? This action is irreversible and will permanently remove all your data from our system. 😱",
+  "textToDelete": "To confirm, please enter the name of the account holder:",
+  "title": "Delete account"
+}

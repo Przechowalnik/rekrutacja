@@ -1,0 +1,1 @@
+export { AccountBugNewPage } from "./AccountBugNewPage";

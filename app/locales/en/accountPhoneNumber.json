@@ -1,0 +1,13 @@
+{
+  "buttonConfirmNewNumber": "Confirm phone number change",
+  "buttonSaveTooltip": "No changes to save",
+  "currentPhoneNumber": "Current phone number:",
+  "description": "On this page you can <b>change</b> your <b>phone number</b>. After the change, an SMS with a verification code will be sent to the new number. You must enter this code to confirm the new number. After successful verification, the number will be automatically updated in <b>all your listings</b>.",
+  "descriptionNoVerify": "On this page you can <b>change</b> your <b>phone number</b>.",
+  "information": "A phone number is required when creating a listing.",
+  "inputNewPhoneNumber": "New phone number",
+  "newPhoneNumber": "New phone number to confirm:",
+  "noPhone": "none",
+  "title": "Change phone number",
+  "titleAdd": "Add phone number"
+}

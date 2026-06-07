@@ -1,0 +1,8 @@
+{
+  "buttonLinkToRegistration": "Skopiuj link do rejestracji konta pracowniczego",
+  "buttonNew": "Utwórz konto pracownika",
+  "description": "Strona umożliwia dodanie nowego pracownika do systemu firmowego. Możesz stworzyć konto pracownika bezpośrednio lub skopiować link rejestracyjny, aby przesłać go pracownikowi do samodzielnej rejestracji.",
+  "linkRegistrationCopyMessage": " Teraz możesz go wysłać pracownikowi, aby mógł założyć swoje konto.",
+  "linkRegistrationCopyTitle": "Link do rejestracji użytkownika został skopiowany do schowka! 😍",
+  "title": "Nowy pracownik"
+}

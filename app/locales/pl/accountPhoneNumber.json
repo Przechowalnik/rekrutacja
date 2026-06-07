@@ -1,0 +1,13 @@
+{
+  "buttonConfirmNewNumber": "Potwierdź zmianę numeru telefonu",
+  "buttonSaveTooltip": "Brak zmian do zapisania",
+  "currentPhoneNumber": "Obecny numer telefonu:",
+  "description": "Na tej stronie możesz <b>zmienić</b> swój <b>numer telefonu</b>. Po dokonaniu zmiany na nowy numer zostanie wysłany SMS z kodem, który musisz wprowadzić, aby potwierdzić nowy numer. Po pomyślnym potwierdzeniu numer zostanie automatycznie zaktualizowany we <b>wszystkich Twoich ogłoszeniach</b>.",
+  "descriptionNoVerify": "Na tej stronie możesz <b>zmienić</b> swój <b>numer telefonu</b>.",
+  "information": "Numer telefonu jest wymagany podczas tworzenia ogłoszenia.",
+  "inputNewPhoneNumber": "Nowy numer telefonu",
+  "newPhoneNumber": "Nowy numer telefonu do potwierdzenia:",
+  "noPhone": "brak",
+  "title": "Zmień numer telefonu",
+  "titleAdd": "Dodaj numer telefonu"
+}

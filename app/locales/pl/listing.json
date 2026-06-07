@@ -1,0 +1,13 @@
+{
+  "location": "Jak tutaj trafić?",
+  "replacePhoneNumber": "<s><b>ukryty numer telefonu</b></s>",
+  "searchListingCategoryCity": {
+    "buttonShowMap": "Pokaż na mapie"
+  },
+  "share": {
+    "text": "Może to ogłoszenie Ci się spodoba 🙂"
+  },
+  "title": "Ogłoszenie",
+  "tooltipReport": "Zgłoś",
+  "tooltipSearch": "Udostępnij"
+}

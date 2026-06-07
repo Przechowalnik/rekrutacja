@@ -1,0 +1,11 @@
+{
+  "buttonEdit": "Edit",
+  "copyURL": "Copy URL",
+  "description": "On this page, you can <b>update your company information.</b>",
+  "noDescription": "No description available",
+  "noneUrl": "No link available",
+  "title": "Company information",
+  "urlToCompany": "URL to the main company profile",
+  "urlToCompanyLocation": "URL to the company’s location ({{location}})",
+  "urlToCompanyMobile": "URL to the company’s mobile services profile (if applicable)"
+}

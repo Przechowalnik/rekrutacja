@@ -1,0 +1,8 @@
+{
+  "alert": "Once deleted, the account will be permanently removed from the system and cannot be restored.",
+  "buttonDelete": "Delete company account",
+  "buttonSaveTooltip": "No changes to save",
+  "description": "Are you sure you want to delete the account? This action is irreversible and will permanently remove all company and user data from our system. 😱",
+  "textToDelete": "To confirm, please enter the name of the account owner:",
+  "title": "Delete company account"
+}

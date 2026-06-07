@@ -1,0 +1,1 @@
+export { CompanyCardPage } from "./CompanyCardPage";

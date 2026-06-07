@@ -1,0 +1,13 @@
+{
+  "contentBlock": {
+    "description": "In {{city}} ({{voivodeship}} voivodeship) you'll find {{count}} current listings - from garages and parking spots through warehouses, units and plots, to storage units and attics. Compare prices, check locations and find the space that fits your needs. The offers also cover selected districts of {{city}}.",
+    "descriptionEmpty": "There are no active listings in {{city}} ({{voivodeship}} voivodeship) on MaszBox yet. If you have an unused space - a garage, warehouse, plot or storage unit - add your listing and be the first to reach people looking for space in {{city}}.",
+    "titleNoListings": "Rent and sale of spaces in {{city}}",
+    "titleWithListings": "Rent and sale of spaces in {{city}} - {{count}} current listings"
+  },
+  "description": "Select the listing category that interests you. This way, we’ll show you only the offers that best match your needs.",
+  "descriptionDistrict": "Select the listing category you're interested in. We'll show only the offers that best match your needs.",
+  "title": "Choose a category or select a district below",
+  "titleCategory": "Select a category",
+  "titleDistrict": "Or maybe a district?"
+}

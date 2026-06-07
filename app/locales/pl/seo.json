@@ -1,0 +1,956 @@
+{
+  "imagesAlt": {
+    "banner": "Baner promujący ofertę nieruchomości",
+    "bannerRent": "Baner promujący wynajem nieruchomości",
+    "bannerRentHorizontally": "Baner promujący wynajem nieruchomości w układzie poziomym",
+    "burgerMenu": "Menu",
+    "cardCode": {
+      "button": "Skopiuj polecenie"
+    },
+    "clear": "Wyczyś",
+    "close": "Zamknij",
+    "hiddenPassword": "Ukryj hasło",
+    "icon": "Ikona",
+    "iconAttic": "Ikona strychu",
+    "iconBox": "Ikona pudełka",
+    "iconBriefcase": "Ikona aktówki",
+    "iconBuildingLock": "Ikona budynku z kłódką",
+    "iconHotel": "Ikona hotelu",
+    "iconHouse": "Ikona domu jednorodzinnego",
+    "iconLayerGroup": "Ikona grupy warstw",
+    "iconLocationDot": "Ikona pinezki lokalizacji",
+    "iconParkingDetached": "Ikona oddzielonego miejsca parkingowego",
+    "iconParkingGroundPlace": "Ikona miejsca parkingowego naziemnego",
+    "iconParkingMultilevel": "Ikona parkingu wielopoziomowego",
+    "iconParkingUnderground": "Ikona parkingu podziemnego",
+    "iconShare": "Ikona udostępnij",
+    "iconSquareParking": "Ikona parkingu oznaczonego kwadratem",
+    "iconTableCellsColumnLock": "Ikona kolumny tabeli z blokadą",
+    "iconUpRightAndDownLeftFromCenter": "Pokaż",
+    "iconWarehouse": "Ikona magazynu",
+    "imageCompanyBanner": "Baner firmowy",
+    "imageListing": "Zdjęcie ogłoszenia",
+    "logo": "Logo firmy",
+    "map": {
+      "centerMapLocation": "Wyśrodkuj mapę względem wybranego obszaru",
+      "close": "Zamknij mapę",
+      "minus": "Oddal mapę",
+      "next": "Kolejne ogłoszenie",
+      "plus": "Przybliż mapę",
+      "previous": "Poprzednie ogłoszenie"
+    },
+    "modalCarouselItem": "Obraz w podglądzie karuzeli",
+    "next": "Następny",
+    "previewImage": "Podgląd wybranego obrazka",
+    "previous": "Poprzedni",
+    "progressBar": "Ładowanie danych strony",
+    "selectImagesItem": "Obraz dostępny do wyboru",
+    "showPassword": "Pokaż hasło"
+  },
+  "jsonLdFaq": {
+    "aboutUs": {
+      "description": "Maszbox to pierwsza w Polsce platforma umożliwiająca wynajem i sprzedaż małych powierzchni - od garaży, magazynów, aż po komórki lokatorskie. Naszym celem jest ułatwienie zarówno właścicielom, jak i najemcom, szybkiego i bezpiecznego zawierania transakcji online. Dzięki Maszbox możesz w prosty sposób dodać ogłoszenie, zarządzać płatnościami oraz monitorować dostępność powierzchni. Platforma łączy innowacyjne technologie z intuicyjnym interfejsem, co sprawia, że korzystanie z niej jest wygodne i bezproblemowe. Dowiedz się, jak Maszbox zmienia rynek wynajmu w Polsce, umożliwiając szybkie, bezpieczne i transparentne transakcje."
+    },
+    "accessibility": {
+      "description": "W Maszbox stawiamy na dostępność - nasza strona i aplikacja spełniają standard WCAG 2.1 AA, wspierają czytniki ekranu i zapewniają odpowiedni kontrast. Dbamy, aby każdy użytkownik mógł wygodnie i bez przeszkód korzystać z platformy."
+    },
+    "account": {
+      "description": "Zarządzaj swoim kontem na Maszbox - dodawaj ogłoszenia, kontroluj płatności i punkty oraz dbaj o bezpieczeństwo danych."
+    },
+    "accountAuthenticator": {
+      "description": "Zwiększ bezpieczeństwo konta dzięki autoryzacji dwuetapowej."
+    },
+    "accountBugDetails": {
+      "description": "Sprawdź szczegóły zgłoszonych problemów na Maszbox i monitoruj ich status."
+    },
+    "accountBugNew": {
+      "description": "Zgłaszaj błędy i problemy napotkane na platformie Maszbox."
+    },
+    "accountBugs": {
+      "description": "Przeglądaj listę wszystkich zgłoszonych błędów i monitoruj ich rozwiązanie."
+    },
+    "accountConsents": {
+      "description": "Zarządzaj swoimi zgodami marketingowymi i ustawieniami prywatności."
+    },
+    "accountDelete": {
+      "description": "Dowiedz się, jak bezpiecznie usunąć swoje konto z platformy Maszbox."
+    },
+    "accountEmail": {
+      "description": "Zaktualizuj adres e-mail powiązany z kontem Maszbox."
+    },
+    "accountInvoices": {
+      "description": "Przeglądaj i pobieraj faktury za korzystanie z platformy."
+    },
+    "accountListings": {
+      "description": "Zarządzaj swoimi ogłoszeniami - dodawaj, edytuj i monitoruj płatności."
+    },
+    "accountListingsEdit": {
+      "description": "Edytuj swoje ogłoszenia, aby zwiększyć ich atrakcyjność i widoczność."
+    },
+    "accountListingsNew": {
+      "description": "Dodaj nowe ogłoszenie na Maszbox i zacznij zarabiać na swojej przestrzeni."
+    },
+    "accountListingsPayments": {
+      "description": "Zarządzaj płatnościami powiązanymi z ogłoszeniami na platformie Maszbox."
+    },
+    "accountPassword": {
+      "description": "Zmień hasło do konta, aby zwiększyć bezpieczeństwo swojego profilu."
+    },
+    "accountPhone": {
+      "description": "Aktualizuj numer telefonu przypisany do Twojego konta Maszbox."
+    },
+    "accountPoints": {
+      "description": "Sprawdzaj i wymieniaj punkty zgromadzone w systemie Maszbox."
+    },
+    "accountProfile": {
+      "description": "Zarządzaj swoim profilem użytkownika i danymi widocznymi dla innych."
+    },
+    "accountReferral": {
+      "description": "Zapraszaj znajomych i korzystaj z bonusów w systemie poleceń Maszbox."
+    },
+    "accountSessions": {
+      "description": "Zarządzaj aktywnymi sesjami swojego konta i zwiększ bezpieczeństwo logowania."
+    },
+    "admin": {
+      "description": "Panel administratora Maszbox - zarządzaj platformą i monitoruj aktywność użytkowników."
+    },
+    "adminBlogPostEdit": {
+      "description": "Edytuj istniejący blog i aktualizuj jego treść na platformie Maszbox."
+    },
+    "adminBlogPostNew": {
+      "description": "Utwórz nowy blog i opublikuj treści na platformie Maszbox."
+    },
+    "adminBlogPosts": {
+      "description": "Lista wszystkich opublikowanych wpisów blogowych na platformie Maszbox."
+    },
+    "adminBugDetails": {
+      "description": "Sprawdź szczegóły zgłoszonych błędów i monitoruj ich rozwiązanie."
+    },
+    "adminBugEdit": {
+      "description": "Edytuj zgłoszenia błędów i aktualizuj ich status w panelu administratora."
+    },
+    "adminBugs": {
+      "description": "Lista wszystkich zgłoszonych błędów na platformie Maszbox."
+    },
+    "adminCouponEdit": {
+      "description": "Edytuj istniejące kupony promocyjne dla użytkowników."
+    },
+    "adminCouponNew": {
+      "description": "Dodaj nowy kupon promocyjny dostępny dla użytkowników platformy."
+    },
+    "adminCoupons": {
+      "description": "Przeglądaj wszystkie aktywne kupony dostępne w Maszbox."
+    },
+    "adminExchanges": {
+      "description": "Zarządzaj wymianami punktów i transakcjami w systemie."
+    },
+    "adminExchangesEdit": {
+      "description": "Edytuj szczegóły i status wybranej wymiany punktów."
+    },
+    "adminExchangesNew": {
+      "description": "Dodaj nową wymianę punktów lub usług na platformie."
+    },
+    "adminMarketingEmail": {
+      "description": "Wyślij email marketingowy do klientów."
+    },
+    "adminPlanNew": {
+      "description": "Utwórz nowy plan abonamentowy dla użytkowników Maszbox."
+    },
+    "adminPlans": {
+      "description": "Przeglądaj dostępne plany subskrypcyjne i ofertowe."
+    },
+    "adminPlansEdit": {
+      "description": "Edytuj szczegóły wybranego planu w panelu administratora."
+    },
+    "adminProducts": {
+      "description": "Zarządzaj cennikami ogłoszeń i usług na platformie."
+    },
+    "adminProductsEdit": {
+      "description": "Edytuj istniejące cenniki ogłoszeń i usług."
+    },
+    "adminProductsNew": {
+      "description": "Dodaj nowy cennik ogłoszeń lub usług na platformie."
+    },
+    "adminReports": {
+      "description": "Lista wszystkich zgłoszeń na platformie."
+    },
+    "adminSettingEdit": {
+      "description": "Edytuj ustawienia platformy Maszbox, aby dopasować działanie systemu."
+    },
+    "adminSettingNew": {
+      "description": "Dodaj nowe ustawienia konfiguracji platformy."
+    },
+    "adminSettings": {
+      "description": "Przeglądaj i zarządzaj ustawieniami globalnymi platformy."
+    },
+    "apiAccountAuthenticatorNew2FA": {
+      "description": "Funkcje API związane z konfiguracją nowej autoryzacji 2FA."
+    },
+    "apiAccountCookie": {
+      "description": "Funkcje API związane z pobieraniem sesji."
+    },
+    "apiAccountLanguage": {
+      "description": "Funkcje API do zarządzania językiem konta."
+    },
+    "apiAccountReport": {
+      "description": "Funkcje API do zgłaszania naruszeń związanych z kontem."
+    },
+    "apiAccountSession": {
+      "description": "Funkcje API do zarządzania sesją konta użytkownika."
+    },
+    "apiAutocompleteAddress": {
+      "description": "Funkcje API do obsługi mechanizmu autouzupełniania adresów."
+    },
+    "apiAutocompleteCity": {
+      "description": "Funkcje API do obsługi mechanizmu autouzupełniania adresów."
+    },
+    "apiCompanyBanner": {
+      "description": "Funkcje API do zarządzania banerem firmy."
+    },
+    "apiCompanySubscriptionDelete": {
+      "description": "Funkcje API do usuwania subskrypcji firmowej."
+    },
+    "apiLatestListings": { "description": "" },
+    "apiLogin": { "description": "Funkcje API logowania użytkownika." },
+    "apiRecoveryAccount": {
+      "description": "Funkcje API do odzyskiwania konta użytkownika."
+    },
+    "apiRecoveryAccountBackupEmail": {
+      "description": "Funkcje API do odzyskiwania konta przez zapasowy email."
+    },
+    "apiRecoveryAccountChangePassword": {
+      "description": "Funkcje API do zmiany hasła przy odzyskiwaniu konta."
+    },
+    "apiRecoveryAccountReset2FA": {
+      "description": "Funkcje API do resetowania 2FA przy odzyskiwaniu konta."
+    },
+    "apiRegistrationAccount": {
+      "description": "Funkcje API do rejestracji nowego konta użytkownika."
+    },
+    "apiRegistrationCompany": {
+      "description": "Funkcje API do rejestracji nowej firmy."
+    },
+    "apiResetFetcher": {
+      "description": "Funkcje API do resetowania fetchera danych."
+    },
+    "apiSearch": { "description": "Funkcje API związane z wyszukiwaniem." },
+    "apiSearchMap": {
+      "description": "Funkcje API związane z wyszukiwaniem na mapie."
+    },
+    "authenticator": {
+      "description": "Autoryzacja konta użytkownika i bezpieczeństwo logowania."
+    },
+    "blogPostDetails": {
+      "description": "Przeczytaj pełny artykuł na blogu Maszbox - szczegółowe opracowanie, wartościowe wskazówki i praktyczne informacje przygotowane specjalnie dla naszych użytkowników."
+    },
+    "blogPosts": {
+      "description": "Na platformie Maszbox dzielimy się wiedzą, poradami i aktualnościami. Nasz blog to miejsce, w którym znajdziesz starannie przygotowane artykuły, wartościowe treści i inspiracje związane z naszą platformą oraz branżą."
+    },
+    "cities": {
+      "description": "Wyszukaj miasta i lokalizacje dostępne w serwisie."
+    },
+    "company": {
+      "description": "Zarządzaj kontem firmowym - ogłoszenia, faktury, punkty i pracownicy."
+    },
+    "companyBugDetails": {
+      "description": "Sprawdź szczegóły zgłoszeń przypisanych do firmy i monitoruj ich status."
+    },
+    "companyBugs": {
+      "description": "Przeglądaj wszystkie błędy zgłoszone na konto firmowe."
+    },
+    "companyCard": {
+      "description": "Aktualizuj dane karty płatniczej powiązanej z kontem firmowym."
+    },
+    "companyDelete": {
+      "description": "Usuń konto firmowe w bezpieczny sposób."
+    },
+    "companyInvoiceEdit": {
+      "description": "Edytuj dane potrzebne do wystawienia faktur."
+    },
+    "companyInvoices": {
+      "description": "Przeglądaj faktury wystawione dla Twojej firmy."
+    },
+    "companyListings": {
+      "description": "Zarządzaj firmowymi ogłoszeniami - dodawaj, edytuj i kontroluj płatności."
+    },
+    "companyListingsEdit": {
+      "description": "Edytuj firmowe ogłoszenia, aby zwiększyć ich skuteczność."
+    },
+    "companyListingsNew": {
+      "description": "Dodaj nowe ogłoszenie firmowe na platformie."
+    },
+    "companyListingsPayments": {
+      "description": "Zarządzaj płatnościami związanymi z firmowymi ogłoszeniami."
+    },
+    "companyPhone": {
+      "description": "Aktualizuj numer telefonu przypisany do konta firmowego."
+    },
+    "companyPoints": {
+      "description": "Sprawdzaj i wymieniaj punkty."
+    },
+    "companyPointsExchanges": {
+      "description": "Dokonuj wymiany punktów na dodatkowe usługi firmowe."
+    },
+    "companyProfile": {
+      "description": "Przeglądaj informacje o firmie widoczne na platformie."
+    },
+    "companyProfileEdit": {
+      "description": "Edytuj profil firmy, aby prezentować aktualne dane."
+    },
+    "companyReferral": {
+      "description": "Skorzystaj z systemu poleceń dla firm."
+    },
+    "companySettings": {
+      "description": "Dostosuj ustawienia konta firmowego do swoich potrzeb."
+    },
+    "companySubscriptionNew": {
+      "description": "Wykup nową subskrypcję dla konta firmowego."
+    },
+    "companySubscriptions": {
+      "description": "Przeglądaj i zarządzaj aktywnymi subskrypcjami firmowymi."
+    },
+    "companyWorkerEdit": {
+      "description": "Edytuj dane pracownika przypisanego do konta firmowego."
+    },
+    "companyWorkerEditPermissions": {
+      "description": "Zarządzaj stanowiskiem i uprawnieniami pracownika."
+    },
+    "companyWorkerEditProfile": {
+      "description": "Edytuj profil pracownika firmy."
+    },
+    "companyWorkerNew": {
+      "description": "Dodaj nowego pracownika do konta firmowego."
+    },
+    "companyWorkers": {
+      "description": "Przeglądaj listę wszystkich pracowników firmy."
+    },
+    "contact": {
+      "description": "Skontaktuj się z nami, wysyłając wiadomość e-mail na podany adres."
+    },
+    "error": {
+      "description": "Wystąpił błąd podczas korzystania z platformy Maszbox."
+    },
+    "errorAccountNotFound": {
+      "description": "Podane konto nie istnieje lub zostało usunięte."
+    },
+    "errorListingNotFound": {
+      "description": "Ogłoszenie jest niedostępne."
+    },
+    "errorLoginFromFacebook": {
+      "description": "Wystąpił problem podczas logowania przez Facebook."
+    },
+    "errorLoginFromGoogle": {
+      "description": "Wystąpił problem podczas logowania przez Google."
+    },
+    "errorLoginFromPassword": {
+      "description": "Nie udało się zalogować przy użyciu podanego hasła."
+    },
+    "help": {
+      "description": "Znajdź odpowiedzi na najczęściej zadawane pytania i skontaktuj się z obsługą."
+    },
+    "home": {
+      "description": "Witamy na Maszbox - innowacyjnej platformie do wynajmu i sprzedaży małych powierzchni w Polsce. Oferujemy szybkie i bezpieczne rozwiązania dla właścicieli przestrzeni, którzy chcą zarabiać, oraz dla najemców szukających dostępnych miejsc. Nasza platforma pozwala w prosty sposób przeglądać ogłoszenia, dodawać własne, zarządzać płatnościami i monitorować dostępność powierzchni. Dzięki nowoczesnym narzędziom i intuicyjnemu interfejsowi Maszbox zapewnia komfort użytkowania oraz bezpieczeństwo transakcji, niezależnie od tego, czy szukasz garażu, magazynu czy powierzchni biurowej."
+    },
+    "howToAddListing": {
+      "description": "Dowiedz się, jak dodać ogłoszenie, postępując zgodnie z poniższymi krokami."
+    },
+    "howToSearchListing": {
+      "description": "Dowiedz się, jak szukać ogłoszeń na naszej platformie i znaleźć idealną przestrzeń."
+    },
+    "listings": {
+      "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie Maszbox."
+    },
+    "login": {
+      "description": "Zaloguj się, aby w pełni korzystać z funkcji Maszbox."
+    },
+    "loginFacebook": {
+      "description": "Zaloguj się przy pomocy konta Facebook."
+    },
+    "loginFromCreateListing": {
+      "description": "Zaloguj się, aby w pełni korzystać z funkcji Maszbox."
+    },
+    "loginGoogle": { "description": "Zaloguj się przy pomocy konta Google." },
+    "logout": { "description": "Wyloguj się bezpiecznie ze swojego konta." },
+    "newsletter": {
+      "description": "Zapoznaj się z newsletterem."
+    },
+    "pricing": {
+      "description": "Sprawdź ceny i dostępne pakiety usług na platformie."
+    },
+    "privacyPolicy": {
+      "description": "Zapoznaj się z polityką prywatności i zasadami ochrony danych."
+    },
+    "recoveryAccount": {
+      "description": "Odzyskaj dostęp do swojego konta Maszbox."
+    },
+    "recoveryAccountBackupEmail": {
+      "description": "Przywróć konto za pomocą zapasowego adresu e-mail."
+    },
+    "recoveryAccountChangePassword": {
+      "description": "Zmień hasło swojego konta, aby zwiększyć bezpieczeństwo."
+    },
+    "registration": {
+      "description": "Załóż konto na Maszbox i rozpocznij korzystanie z platformy."
+    },
+    "registrationAccount": {
+      "description": "Utwórz konto użytkownika i korzystaj z funkcji Maszbox."
+    },
+    "registrationCompany": {
+      "description": "Zarejestruj firmę i rozpocznij publikację ogłoszeń."
+    },
+    "search": {
+      "description": "Wyszukaj interesujące ogłoszenia i treści w Maszbox."
+    },
+    "termsAndConditions": {
+      "description": "Poznaj regulamin Maszbox i zasady korzystania z platformy."
+    }
+  },
+  "jsonLdReview": {},
+  "jsonLdStructured": {
+    "description": "Maszbox to pierwsza w Polsce platforma ogłoszeniowa stworzona specjalnie do wynajmu i sprzedaży małych powierzchni. Garaż, miejsce parkingowe, piwnica, komórka lokatorska czy niewielki magazyn - każda z tych przestrzeni może być źródłem dodatkowego dochodu. Założyliśmy Maszbox, aby połączyć właścicieli wolnych przestrzeni z osobami, które ich potrzebują - prosto, lokalnie i bez zbędnych formalności. Naszym celem jest, aby każdy użytkownik Maszboxa czuł się bezpiecznie i komfortowo, dlatego dbamy o regulaminy, ochronę danych i przejrzyste zasady publikacji ogłoszeń. Korzystając z platformy Maszbox, możesz zarabiać na tym, co masz - dodatkowy dochód nawet kilka tysięcy zł rocznie, pomagasz innym - Twoja piwnica może stać się miejscem na rower, a garaż bezpiecznym parkingiem, a do tego wszystko jest proste w obsłudze - dodanie ogłoszenia zajmuje tylko 3 minuty. Maszbox to polska platforma stworzona z myślą o lokalnych potrzebach, dzięki której Twoja wolna przestrzeń zaczyna pracować dla Ciebie!",
+    "isPartOfName": "Maszbox",
+    "name": "Maszbox",
+    "url": "https://maszbox.pl"
+  },
+  "meta": {
+    "aboutUs": {
+      "description": "Poznaj naszą misję, wartości i zespół tworzący {{companyName}}. Dowiedz się, co nas wyróżnia i dlaczego warto nam zaufać.",
+      "title": "O nas i wartości | {{companyName}}"
+    },
+    "accessibility": {
+      "description": "{{companyName}} dba o dostępność cyfrową, spełniając standard WCAG 2.1 AA. Nasza platforma i aplikacja PWA są projektowane tak, aby każdy użytkownik mógł korzystać z nich w sposób wygodny i bez barier.",
+      "title": "Dostępność dla wszystkich | {{companyName}}"
+    },
+    "account": {
+      "description": "Zarządzaj ustawieniami swojego konta, danymi osobowymi i preferencjami, aby w pełni korzystać z platformy.",
+      "title": "Panel konta użytkownika | {{companyName}}"
+    },
+    "accountAuthenticator": {
+      "description": "Aktywuj dwuetapową autoryzację i zwiększ bezpieczeństwo swojego konta. Chroń swoje dane i dostęp do platformy.",
+      "title": "Autoryzacja dwuetapowa | {{companyName}}"
+    },
+    "accountBugDetails": {
+      "description": "Sprawdź szczegóły zgłoszonego błędu i aktualny status jego rozwiązania. Monitoruj zgłoszenia w swoim panelu.",
+      "title": "Szczegóły zgłoszenia błędu | {{companyName}}"
+    },
+    "accountBugNew": {
+      "description": "Zgłoś nowy problem napotkany na platformie. Twoje zgłoszenie pomoże nam szybciej go rozwiązać.",
+      "title": "Nowe zgłoszenie błędu | {{companyName}}"
+    },
+    "accountBugs": {
+      "description": "Przeglądaj listę błędów zgłoszonych z Twojego konta i śledź ich status rozwiązania na platformie.",
+      "title": "Twoje zgłoszenia błędów | {{companyName}}"
+    },
+    "accountConsents": {
+      "description": "Zarządzaj zgodami marketingowymi i ustawieniami prywatności, aby dopasować komunikację do swoich preferencji.",
+      "title": "Zgody i prywatność | {{companyName}}"
+    },
+    "accountDelete": {
+      "description": "Usuń swoje konto, jeśli nie chcesz dalej korzystać z platformy. Pamiętaj, że to działanie jest nieodwracalne.",
+      "title": "Usuń konto użytkownika | {{companyName}}"
+    },
+    "accountEmail": {
+      "description": "Aktualizuj swój adres e-mail przypisany do konta, aby otrzymywać powiadomienia i mieć dostęp do logowania.",
+      "title": "Zmiana adresu e-mail | {{companyName}}"
+    },
+    "accountInvoices": {
+      "description": "Sprawdź i pobierz wszystkie swoje faktury za korzystanie z platformy. Zarządzaj dokumentami online.",
+      "title": "Historia faktur | {{companyName}}"
+    },
+    "accountListings": {
+      "description": "Zarządzaj swoimi ogłoszeniami, edytuj treści i sprawdzaj statystyki. Dodawaj nowe i aktualizuj istniejące wpisy.",
+      "title": "Twoje ogłoszenia | {{companyName}}"
+    },
+    "accountListingsEdit": {
+      "description": "Edytuj treść, zdjęcia i ustawienia swojego ogłoszenia, aby zwiększyć jego atrakcyjność i skuteczność.",
+      "title": "Edycja ogłoszenia | {{companyName}}"
+    },
+    "accountListingsNew": {
+      "description": "Dodaj nowe ogłoszenie, aby dotrzeć do większej liczby odbiorców. Skorzystaj z intuicyjnego formularza dodawania.",
+      "title": "Dodaj nowe ogłoszenie | {{companyName}}"
+    },
+    "accountListingsPayments": {
+      "description": "Zarządzaj płatnościami i dodatkowymi usługami powiązanymi z Twoimi ogłoszeniami, aby zwiększyć ich zasięg.",
+      "title": "Płatności ogłoszeń | {{companyName}}"
+    },
+    "accountPassword": {
+      "description": "Zmień swoje hasło, aby zwiększyć poziom bezpieczeństwa konta i ochronić dane przed nieuprawnionym dostępem.",
+      "title": "Zmiana hasła | {{companyName}}"
+    },
+    "accountPhone": {
+      "description": "Dodaj lub edytuj numer telefonu przypisany do Twojego konta. Ułatw kontakt i weryfikację tożsamości.",
+      "title": "Numer telefonu | {{companyName}}"
+    },
+    "accountPoints": {
+      "description": "Sprawdź swoje punkty zgromadzone w systemie i wykorzystaj je na dodatkowe usługi dostępne na platformie.",
+      "title": "Twoje punkty | {{companyName}}"
+    },
+    "accountProfile": {
+      "description": "Zarządzaj swoimi danymi i informacjami widocznymi w Twoim profilu. Uzupełnij szczegóły, aby zwiększyć wiarygodność.",
+      "title": "Profil użytkownika | {{companyName}}"
+    },
+    "accountReferral": {
+      "description": "Korzystaj z systemu poleceń. Zapraszaj znajomych i zdobywaj dodatkowe korzyści oraz punkty.",
+      "title": "System poleceń | {{companyName}}"
+    },
+    "accountSessions": {
+      "description": "Zarządzaj aktywnymi sesjami swojego konta i zwiększ bezpieczeństwo logowania.",
+      "title": "Zarządzanie sesjami | {{companyName}}"
+    },
+    "admin": {
+      "description": "Panel administratora umożliwia zarządzanie platformą, użytkownikami i ustawieniami systemowymi.",
+      "title": "Panel administratora | {{companyName}}"
+    },
+    "adminBlogPostEdit": {
+      "description": "Edytuj szczegóły istniejącego blogu na platformie Maszbox.",
+      "title": "Edycja blogu | {{companyName}}"
+    },
+    "adminBlogPostNew": {
+      "description": "Utwórz nowy blog na platformie Maszbox.",
+      "title": "Nowy blog | {{companyName}}"
+    },
+    "adminBlogPosts": {
+      "description": "Lista artykułów opublikowanych w serwisie. Zarządzaj treściami, aktualizuj je i dodawaj nowe wpisy.",
+      "title": "Artykuły blogowe | {{companyName}}"
+    },
+    "adminBugDetails": {
+      "description": "Sprawdź szczegóły błędów zgłoszonych przez użytkowników i monitoruj postęp ich rozwiązywania.",
+      "title": "Szczegóły błędu | {{companyName}}"
+    },
+    "adminBugEdit": {
+      "description": "Edytuj zgłoszone błędy i aktualizuj ich status. Zarządzaj naprawami i komunikacją z użytkownikami.",
+      "title": "Edycja zgłoszenia błędu | {{companyName}}"
+    },
+    "adminBugs": {
+      "description": "Lista błędów zgłoszonych przez użytkowników. Monitoruj i zarządzaj wszystkimi zgłoszeniami w systemie.",
+      "title": "Zgłoszone błędy | {{companyName}}"
+    },
+    "adminCouponEdit": {
+      "description": "Edytuj istniejące kupony promocyjne, zmieniaj warunki i sprawdzaj ich skuteczność marketingową.",
+      "title": "Edycja kuponu | {{companyName}}"
+    },
+    "adminCouponNew": {
+      "description": "Dodaj nowy kupon promocyjny dostępny dla użytkowników, aby wspierać sprzedaż i promocję usług.",
+      "title": "Dodaj kupon | {{companyName}}"
+    },
+    "adminCoupons": {
+      "description": "Przeglądaj wszystkie kupony aktywne na platformie. Zarządzaj promocjami i ich warunkami.",
+      "title": "Lista kuponów | {{companyName}}"
+    },
+    "adminExchanges": {
+      "description": "Zarządzaj transakcjami wymiany punktów i usług w systemie. Monitoruj status operacji użytkowników.",
+      "title": "Wymiany punktów | {{companyName}}"
+    },
+    "adminExchangesEdit": {
+      "description": "Edytuj szczegóły i status wymiany punktów lub usług w systemie. Zmieniaj ustawienia transakcji.",
+      "title": "Edycja wymiany | {{companyName}}"
+    },
+    "adminExchangesNew": {
+      "description": "Dodaj nową wymianę punktów lub usług w systemie. Rozwijaj możliwości korzystania z platformy.",
+      "title": "Nowa wymiana | {{companyName}}"
+    },
+    "adminMarketingEmail": {
+      "description": "Wyślij nowy email marketingowy do klientów.",
+      "title": "Nowy email marketingowy | {{companyName}}"
+    },
+    "adminPlanNew": {
+      "description": "Utwórz nowy plan abonamentowy dla użytkowników. Dopasuj parametry i warunki subskrypcji.",
+      "title": "Dodaj plan | {{companyName}}"
+    },
+    "adminPlans": {
+      "description": "Przeglądaj i zarządzaj dostępnymi planami subskrypcyjnymi oraz ofertami dla użytkowników.",
+      "title": "Plany abonamentowe | {{companyName}}"
+    },
+    "adminPlansEdit": {
+      "description": "Edytuj szczegóły planu subskrypcyjnego. Dopasuj parametry do potrzeb użytkowników.",
+      "title": "Edycja planu | {{companyName}}"
+    },
+    "adminProducts": {
+      "description": "Zarządzaj cennikami powiązanymi z ogłoszeniami na platformie. Edytuj dostępne pakiety i ceny.",
+      "title": "Cenniki ogłoszeń | {{companyName}}"
+    },
+    "adminProductsEdit": {
+      "description": "Edytuj szczegóły wybranego cennika ogłoszeń. Zmieniaj warunki i ceny usług.",
+      "title": "Edycja cennika | {{companyName}}"
+    },
+    "adminProductsNew": {
+      "description": "Dodaj nowy cennik dla ogłoszeń publikowanych na platformie. Ustal ceny i zasady pakietów.",
+      "title": "Nowy cennik | {{companyName}}"
+    },
+    "adminReports": {
+      "description": "Przeglądaj i zarządzaj wszystkimi zgłoszoniami. Monitoruj działania i dbaj o jakość platformy.",
+      "title": "Zgłoszonia | {{companyName}}"
+    },
+    "adminSettingEdit": {
+      "description": "Edytuj ustawienia platformy, dopasuj parametry i konfigurację do aktualnych potrzeb biznesowych.",
+      "title": "Edycja ustawień | {{companyName}}"
+    },
+    "adminSettingNew": {
+      "description": "Dodaj nowe parametry i ustawienia systemowe, aby rozwinąć funkcjonalności platformy.",
+      "title": "Nowe ustawienia | {{companyName}}"
+    },
+    "adminSettings": {
+      "description": "Zarządzaj globalnymi ustawieniami systemu i konfiguracją platformy. Dostosuj je do swoich celów.",
+      "title": "Ustawienia systemowe | {{companyName}}"
+    },
+    "apiAccountAuthenticatorNew2FA": {
+      "description": "Skonfiguruj nową metodę autoryzacji dwuetapowej poprzez API, aby zwiększyć bezpieczeństwo konta.",
+      "title": "Nowa autoryzacja API | {{companyName}}"
+    },
+    "apiAccountCookie": {
+      "description": "",
+      "title": "Pobieranie sesji | {{companyName}}"
+    },
+    "apiAccountLanguage": {
+      "description": "Zmień język interfejsu i powiadomień w API na preferowany. Dostosuj platformę do własnych potrzeb.",
+      "title": "Ustawienia języka API | {{companyName}}"
+    },
+    "apiAccountReport": {
+      "description": "Zgłaszaj naruszenia dotyczące kont za pomocą API. Skorzystaj z dostępnych metod raportowania.",
+      "title": "Zgłaszanie naruszeń konta API | {{companyName}}"
+    },
+    "apiAccountSession": {
+      "description": "Zarządzaj aktywnymi sesjami i bezpieczeństwem swojego konta przy użyciu API. Monitoruj logowania.",
+      "title": "Sesje konta API | {{companyName}}"
+    },
+    "apiAutocompleteAddress": {
+      "description": "Pobieraj podpowiedzi adresów przez API, aby zwiększyć użyteczność formularzy i dokładność danych.",
+      "title": "API Autocomplete | {{companyName}}"
+    },
+    "apiAutocompleteCity": {
+      "description": "Pobieraj podpowiedzi adresów przez API, aby zwiększyć użyteczność formularzy i dokładność danych.",
+      "title": "API Autocomplete | {{companyName}}"
+    },
+    "apiCompanyBanner": {
+      "description": "Dodaj lub edytuj baner widoczny na profilu Twojej firmy poprzez API. Zwiększ widoczność marki.",
+      "title": "Baner firmy API | {{companyName}}"
+    },
+    "apiCompanySubscriptionDelete": {
+      "description": "Usuń aktywną subskrypcję przypisaną do firmy za pomocą API. Zarządzaj usługami online.",
+      "title": "Usuń subskrypcję API | {{companyName}}"
+    },
+    "apiLatestListings": {
+      "description": "",
+      "title": ""
+    },
+    "apiLogin": {
+      "description": "Uzyskaj dostęp do platformy poprzez logowanie z wykorzystaniem API. Zintegruj swoje systemy.",
+      "title": "Logowanie przez API | {{companyName}}"
+    },
+    "apiRecoveryAccount": {
+      "description": "Odzyskaj dostęp do swojego konta za pomocą API. Skorzystaj z dostępnych metod przywracania.",
+      "title": "Odzyskiwanie konta API | {{companyName}}"
+    },
+    "apiRecoveryAccountBackupEmail": {
+      "description": "Zarządzaj zapasowym adresem e-mail przypisanym do konta, aby przywracać dostęp przez API.",
+      "title": "Backup e-mail API | {{companyName}}"
+    },
+    "apiRecoveryAccountChangePassword": {
+      "description": "Zmień hasło do konta korzystając z metod API. Zadbaj o bezpieczeństwo swojego logowania.",
+      "title": "Zmiana hasła API | {{companyName}}"
+    },
+    "apiRecoveryAccountReset2FA": {
+      "description": "Zresetuj zabezpieczenie dwuetapowe przy użyciu API. Przywróć dostęp i skonfiguruj zabezpieczenia.",
+      "title": "Reset 2FA API | {{companyName}}"
+    },
+    "apiRegistrationAccount": {
+      "description": "Załóż nowe konto użytkownika poprzez API. Zintegruj rejestrację z własnymi systemami.",
+      "title": "Rejestracja konta API | {{companyName}}"
+    },
+    "apiRegistrationCompany": {
+      "description": "Dodaj konto firmowe za pomocą API i rozpocznij promocję swoich usług na platformie.",
+      "title": "Rejestracja firmy API | {{companyName}}"
+    },
+    "apiResetFetcher": {
+      "description": "Zresetuj ustawienia i dane powiązane z API. Przywróć domyślną konfigurację integracji.",
+      "title": "Reset API | {{companyName}}"
+    },
+    "apiSearch": {
+      "description": "Wyszukuj dane na platformie korzystając z API. Ułatw integrację i szybki dostęp do informacji.",
+      "title": "Wyszukiwanie API | {{companyName}}"
+    },
+    "apiSearchMap": {
+      "description": "Znajduj wyniki wyszukiwania powiązane z mapą poprzez API. Integruj dane z lokalizacjami.",
+      "title": "Wyszukiwanie mapy API | {{companyName}}"
+    },
+    "authenticator": {
+      "description": "Zaloguj się i potwierdź swoją tożsamość korzystając z autoryzatora. Zwiększ bezpieczeństwo konta.",
+      "title": "Autoryzacja użytkownika | {{companyName}}"
+    },
+    "blogPostDetails": {
+      "description": "Poznaj szczegółowy artykuł przygotowany przez {{companyName}}, który w przystępny sposób omawia ważne zagadnienia i dostarcza praktycznej wiedzy. Dbamy o rzetelność oraz jasność przekazu, aby treść była pomocna dla każdego użytkownika.",
+      "title": "Blog | {{companyName}}"
+    },
+    "blogPosts": {
+      "description": "{{companyName}} publikuje wartościowe artykuły, poradniki i analizy, aby wspierać użytkowników w rozwoju i świadomym korzystaniu z platformy. Nasze treści są tworzone z myślą o przejrzystości, jakości i aktualności informacji.",
+      "title": "Artykuły i wpisy blogowe | {{companyName}}"
+    },
+    "cities": {
+      "description": "Znajdź miasta i lokalizacje w naszej wyszukiwarce. Zawęż wyniki, aby szybciej dotrzeć do interesujących Cię ofert i treści.",
+      "title": "Wyszukiwanie miast i lokalizacji | {{companyName}}"
+    },
+    "company": {
+      "description": "Zarządzaj ustawieniami i danymi konta firmowego. Aktualizuj informacje i kontroluj widoczność.",
+      "title": "Panel firmy | {{companyName}}"
+    },
+    "companyBugDetails": {
+      "description": "Sprawdź szczegóły błędów zgłoszonych przez Twoją firmę. Monitoruj status rozwiązań problemów.",
+      "title": "Szczegóły błędów firmy | {{companyName}}"
+    },
+    "companyBugs": {
+      "description": "Lista błędów przypisanych do Twojej firmy. Śledź zgłoszenia i ich aktualny status.",
+      "title": "Zgłoszenia firmy | {{companyName}}"
+    },
+    "companyCard": {
+      "description": "Aktualizuj dane swojej karty płatniczej. Zapewnij bezpieczeństwo i poprawność transakcji.",
+      "title": "Karta płatnicza | {{companyName}}"
+    },
+    "companyDelete": {
+      "description": "Usuń swoje konto firmowe z platformy. To działanie jest trwałe i nieodwracalne.",
+      "title": "Usuń konto firmowe | {{companyName}}"
+    },
+    "companyInvoiceEdit": {
+      "description": "Edytuj dane do faktury wystawionej dla Twojej firmy. Dopasuj je do wymagań księgowych.",
+      "title": "Edycja danych do faktury | {{companyName}}"
+    },
+    "companyInvoices": {
+      "description": "Przeglądaj i pobieraj faktury wystawione dla Twojej firmy. Zarządzaj dokumentami online.",
+      "title": "Faktury firmy | {{companyName}}"
+    },
+    "companyListings": {
+      "description": "Zarządzaj ogłoszeniami dodanymi przez firmę. Edytuj treści, dodawaj nowe i kontroluj ich skuteczność.",
+      "title": "Ogłoszenia firmy | {{companyName}}"
+    },
+    "companyListingsEdit": {
+      "description": "Edytuj treść i ustawienia ogłoszeń firmowych, aby zwiększyć ich atrakcyjność i skuteczność.",
+      "title": "Edycja ogłoszenia firmy | {{companyName}}"
+    },
+    "companyListingsNew": {
+      "description": "Dodaj nowe ogłoszenie firmowe, aby dotrzeć do większej grupy klientów na platformie.",
+      "title": "Nowe ogłoszenie firmy | {{companyName}}"
+    },
+    "companyListingsPayments": {
+      "description": "Zarządzaj płatnościami i usługami związanymi z firmowymi ogłoszeniami. Zwiększ ich widoczność.",
+      "title": "Płatności firmy | {{companyName}}"
+    },
+    "companyPhone": {
+      "description": "Dodaj lub zmień numer telefonu przypisany do konta firmowego. Ułatw kontakt z klientami.",
+      "title": "Telefon firmowy | {{companyName}}"
+    },
+    "companyPoints": {
+      "description": "Sprawdź punkty przypisane do konta firmowego. Wymieniaj je na dodatkowe usługi.",
+      "title": "Punkty | {{companyName}}"
+    },
+    "companyPointsExchanges": {
+      "description": "Dokonaj wymiany punktów na dodatkowe usługi w ramach konta firmowego. Zarządzaj pakietami.",
+      "title": "Wymiana punktów | {{companyName}}"
+    },
+    "companyProfile": {
+      "description": "Zarządzaj informacjami o swojej firmie. Aktualizuj dane i opis, aby poprawić wizerunek marki.",
+      "title": "Profil firmy | {{companyName}}"
+    },
+    "companyProfileEdit": {
+      "description": "Edytuj dane i opis firmy widoczny na platformie. Zadbaj o atrakcyjny wizerunek marki.",
+      "title": "Edycja profilu firmy | {{companyName}}"
+    },
+    "companyReferral": {
+      "description": "Zapraszaj klientów i partnerów biznesowych, aby korzystać z bonusów i korzyści systemu poleceń.",
+      "title": "Polecenia firmy | {{companyName}}"
+    },
+    "companySettings": {
+      "description": "Zarządzaj ustawieniami widoczności i danymi konta firmowego. Dostosuj platformę do swoich potrzeb.",
+      "title": "Ustawienia firmy | {{companyName}}"
+    },
+    "companySubscriptionNew": {
+      "description": "Dodaj nową subskrypcję dla swojej firmy i korzystaj z dodatkowych funkcji platformy.",
+      "title": "Nowa subskrypcja firmy | {{companyName}}"
+    },
+    "companySubscriptions": {
+      "description": "Przeglądaj i zarządzaj subskrypcjami przypisanymi do firmy. Kontroluj usługi i opłaty.",
+      "title": "Subskrypcje firmy | {{companyName}}"
+    },
+    "companyWorkerEdit": {
+      "description": "Edytuj dane pracownika przypisanego do konta firmowego. Zmieniaj szczegóły i dostęp.",
+      "title": "Edycja pracownika | {{companyName}}"
+    },
+    "companyWorkerEditPermissions": {
+      "description": "Zarządzaj rolą i uprawnieniami pracownika przypisanego do konta firmowego na platformie.",
+      "title": "Uprawnienia pracownika | {{companyName}}"
+    },
+    "companyWorkerEditProfile": {
+      "description": "Edytuj profil pracownika przypisanego do firmy. Aktualizuj jego dane i ustawienia.",
+      "title": "Profil pracownika | {{companyName}}"
+    },
+    "companyWorkerNew": {
+      "description": "Dodaj nowego pracownika do konta firmowego. Zwiększ zespół i podziel zadania.",
+      "title": "Dodaj pracownika | {{companyName}}"
+    },
+    "companyWorkers": {
+      "description": "Przeglądaj listę wszystkich pracowników przypisanych do konta firmowego. Zarządzaj zespołem.",
+      "title": "Lista pracowników | {{companyName}}"
+    },
+    "contact": {
+      "description": "Skontaktuj się z nami, wysyłając wiadomość e-mail na podany adres. Odpowiemy najszybciej, jak to możliwe.",
+      "title": "Kontakt | {{companyName}}"
+    },
+    "default": {
+      "description": "Platforma do wynajmu i sprzedaży powierzchni. Sprawdź ofertę {{companyName}}.",
+      "title": "{{companyName}}"
+    },
+    "error": {
+      "description": "Wystąpił błąd podczas korzystania z platformy. Spróbuj ponownie lub skontaktuj się z obsługą.",
+      "title": "Błąd systemu | {{companyName}}"
+    },
+    "errorAccountNotFound": {
+      "description": "Podane konto nie istnieje lub zostało usunięte. Sprawdź dane logowania lub skontaktuj się z obsługą.",
+      "title": "Nie znaleziono konta | {{companyName}}"
+    },
+    "errorListingNotFound": {
+      "description": "Nie znaleziono ogłoszenia. Mogło zostać usunięte lub nie istnieje.",
+      "title": "Ogłoszenie nie znalezione | {{companyName}}"
+    },
+    "errorLoginFromFacebook": {
+      "description": "Wystąpił problem podczas logowania przez Facebook. Spróbuj ponownie lub wybierz inną metodę.",
+      "title": "Błąd logowania FB | {{companyName}}"
+    },
+    "errorLoginFromGoogle": {
+      "description": "Wystąpił problem podczas logowania przez Google. Spróbuj ponownie lub użyj innej opcji logowania.",
+      "title": "Błąd logowania Google | {{companyName}}"
+    },
+    "errorLoginFromPassword": {
+      "description": "Logowanie nie powiodło się z powodu błędnego hasła. Sprawdź dane i spróbuj ponownie.",
+      "title": "Błąd hasła | {{companyName}}"
+    },
+    "help": {
+      "description": "Znajdź odpowiedzi na najczęściej zadawane pytania i skontaktuj się z naszym zespołem wsparcia.",
+      "title": "Pomoc i FAQ | {{companyName}}"
+    },
+    "home": {
+      "description": "Sprawdź ofertę wynajmu i sprzedaży powierzchni. Skorzystaj z platformy {{companyName}} już teraz.",
+      "title": "Wynajem i sprzedaż powierzchni | {{companyName}}"
+    },
+    "howToAddListing": {
+      "description": "Dowiedz się, jak dodać ogłoszenie, korzystając z naszego prostego przewodnika krok po kroku. Utwórz swoją ofertę szybko i dotrzyj do nowych klientów.",
+      "title": "Jak dodać ogłoszenie | {{companyName}}"
+    },
+    "howToSearchListing": {
+      "description": "Dowiedz się, jak szukać ogłoszeń na naszej platformie. Skorzystaj z filtrów i mapy, aby znaleźć idealną przestrzeń.",
+      "title": "Jak szukać ogłoszenia | {{companyName}}"
+    },
+    "listing": {
+      "description": "Sprawdź szczegóły wybranego ogłoszenia na platformie. Zobacz zdjęcia, opis i dane kontaktowe.",
+      "title": "Ogłoszenie {{category}} {{city}} | {{companyName}}"
+    },
+    "listings": {
+      "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie. Znajdź powierzchnię dopasowaną do potrzeb.",
+      "title": "Lista ogłoszeń | {{companyName}}"
+    },
+    "login": {
+      "description": "Zaloguj się na swoje konto, aby w pełni korzystać z platformy. Uzyskaj dostęp do ogłoszeń i usług.",
+      "title": "Logowanie do konta | {{companyName}}"
+    },
+    "loginFacebook": {
+      "description": "Zaloguj się do platformy {{companyName}} korzystając ze swojego konta Facebook.",
+      "title": "Logowanie Facebook | {{companyName}}"
+    },
+    "loginFromCreateListing": {
+      "description": "Zaloguj się na swoje konto, aby w pełni korzystać z platformy. Uzyskaj dostęp do ogłoszeń i usług.",
+      "title": "Logowanie do konta | {{companyName}}"
+    },
+    "loginGoogle": {
+      "description": "Zaloguj się do platformy {{companyName}} przy użyciu swojego konta Google.",
+      "title": "Logowanie Google | {{companyName}}"
+    },
+    "logout": {
+      "description": "Wyloguj się z platformy w bezpieczny sposób. Zakończ sesję i chroń swoje dane.",
+      "title": "Wylogowanie | {{companyName}}"
+    },
+    "newsletter": {
+      "description": "Zapoznaj się z newsletterem obowiązującymi na platformie.",
+      "title": "Newsletter | {{companyName}}"
+    },
+    "pricing": {
+      "description": "Sprawdź ceny i dostępne pakiety usług. Wybierz opcję dopasowaną do swoich potrzeb biznesowych.",
+      "title": "Cennik usług | {{companyName}}"
+    },
+    "privacyPolicy": {
+      "description": "Zapoznaj się z polityką prywatności i zasadami przetwarzania danych osobowych obowiązującymi na platformie.",
+      "title": "Polityka prywatności | {{companyName}}"
+    },
+    "recoveryAccount": {
+      "description": "Odzyskaj dostęp do swojego konta korzystając z dostępnych metod. Zabezpiecz dane logowania.",
+      "title": "Odzyskiwanie konta | {{companyName}}"
+    },
+    "recoveryAccountBackupEmail": {
+      "description": "Przywróć dostęp do konta przy użyciu zapasowego adresu e-mail. Skorzystaj z dodatkowych zabezpieczeń.",
+      "title": "Odzyskaj konto e-mail | {{companyName}}"
+    },
+    "recoveryAccountChangePassword": {
+      "description": "Ustaw nowe hasło do swojego konta. Zwiększ bezpieczeństwo logowania i ochronę danych.",
+      "title": "Nowe hasło | {{companyName}}"
+    },
+    "registration": {
+      "description": "Załóż konto i dołącz do użytkowników korzystających z platformy. Zyskaj dostęp do ogłoszeń i usług.",
+      "title": "Rejestracja konta | {{companyName}}"
+    },
+    "registrationAccount": {
+      "description": "Utwórz konto użytkownika, aby rozpocząć korzystanie z platformy. Uzyskaj dostęp do pełnych funkcji.",
+      "title": "Rejestracja użytkownika | {{companyName}}"
+    },
+    "registrationCompany": {
+      "description": "Załóż konto firmowe i promuj swoje usługi na platformie {{companyName}}. Docieraj do klientów.",
+      "title": "Rejestracja firmy | {{companyName}}"
+    },
+    "search": {
+      "description": "Znajdź ogłoszenia i treści w naszej wyszukiwarce. Filtruj wyniki, aby dopasować je do swoich potrzeb.",
+      "title": "Wyszukiwarka ogłoszeń | {{companyName}}"
+    },
+    "searchCategory": {
+      "description": "Aktualne {{categoryPlural}} - przestrzenie do wynajmu lub sprzedaży. Porównaj ceny i lokalizacje ofert.",
+      "title": "{{categoryPlural}} - przestrzenie do wynajmu lub sprzedaży | {{companyName}}"
+    },
+    "searchCategoryCity": {
+      "description": "Sprawdź ogłoszenia {{categoryPlural}} {{city}} dostępne na wynajem lub sprzedaż. Aktualne oferty na {{companyName}}.",
+      "title": "Ogłoszenia {{categoryPlural}} {{city}} | {{companyName}}"
+    },
+    "searchCategoryCityDistrict": {
+      "description": "Sprawdź ogłoszenia {{categoryPlural}} {{city}} {{district}} dostępne na wynajem lub sprzedaż. Aktualne oferty na {{companyName}}.",
+      "title": "Ogłoszenia {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
+    },
+    "searchCategoryCityWithCount": {
+      "description": "Sprawdź {{count}} aktualnych ogłoszeń {{categoryPlural}} {{city}} dostępnych na wynajem lub sprzedaż. Porównaj ceny i lokalizacje na {{companyName}}.",
+      "title": "{{categoryPlural}} {{city}} - {{count}} ofert | {{companyName}}"
+    },
+    "searchCities": {
+      "description": "Lista miast z aktualnymi ogłoszeniami przestrzeni do wynajmu lub sprzedaży w całej Polsce.",
+      "title": "Miasta - przestrzenie do wynajmu lub sprzedaży | {{companyName}}"
+    },
+    "searchCity": {
+      "description": "Sprawdź ogłoszenia w {{city}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Aktualne oferty na {{companyName}}.",
+      "title": "Ogłoszenia {{city}} - garaże, magazyny, lokale | {{companyName}}"
+    },
+    "searchCityDistrict": {
+      "description": "Sprawdź ogłoszenia w {{city}} {{district}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Aktualne oferty na {{companyName}}.",
+      "title": "Ogłoszenia {{city}} {{district}} - wynajem i sprzedaż | {{companyName}}"
+    },
+    "searchCityWithCount": {
+      "description": "Sprawdź {{count}} aktualnych ogłoszeń w {{city}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Porównaj oferty na {{companyName}}.",
+      "title": "{{city}} - {{count}} ofert wynajmu i sprzedaży | {{companyName}}"
+    },
+    "termsAndConditions": {
+      "description": "Zapoznaj się z regulaminem korzystania z platformy oraz zasadami obowiązującymi użytkowników.",
+      "title": "Regulamin serwisu | {{companyName}}"
+    }
+  },
+  "seoFaq": {
+    "buttonShowLess": "Pokaż mniej",
+    "buttonShowMore": "Pokaż więcej",
+    "buttonShowMoreAriaLabel": "Pokaż więcej",
+    "title": "Pytania i odpowiedzi"
+  },
+  "socials": {
+    "default": {
+      "imageAlt": "Logo {{companyName}}"
+    }
+  }
+}

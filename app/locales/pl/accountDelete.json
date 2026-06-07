@@ -1,0 +1,6 @@
+{
+  "buttonSave": "Usuń konto",
+  "description": "Czy na pewno chcesz usunąć swoje konto? Ta operacja jest nieodwracalna i spowoduje trwałe usunięcie wszystkich Twoich danych z naszego systemu. 😱",
+  "textToDelete": "Aby potwierdzić, wpisz imię osoby posiadającej konto:",
+  "title": "Usuń konto"
+}

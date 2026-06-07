@@ -1,0 +1,23 @@
+{
+  "buttonAddCard": "Add company payment card",
+  "buttonAddListings": "Add company listing",
+  "buttonBugs": "Reported platform bugs",
+  "buttonCardUpdate": "Update company payment card",
+  "buttonChangeCompanyPhone": "Change phone number",
+  "buttonConfirmPhone": "Confirm phone number",
+  "buttonDaysOff": "Company days off",
+  "buttonDeleteCompany": "Delete company",
+  "buttonInvoices": "Invoices",
+  "buttonListings": "Company listings",
+  "buttonPoints": "Points",
+  "buttonProfile": "Company information",
+  "buttonReferral": "Referral system",
+  "buttonRefresh": "Refresh data",
+  "buttonSettings": "Settings",
+  "buttonSubscriptions": "Subscriptions",
+  "buttonWorkers": "Employees",
+  "fieldsetListings": "Listings",
+  "fieldsetOthers": "Others",
+  "fieldsetPayments": "Payments",
+  "fieldsetSettings": "Company settings"
+}

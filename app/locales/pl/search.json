@@ -1,0 +1,54 @@
+{
+  "categoryCityContent": {
+    "description": "Sprawdź {{count}} aktualnych ofert {{categoryPlural}} w {{city}} (województwo {{voivodeship}}) dostępnych na wynajem lub sprzedaż. Porównaj ceny, lokalizacje i wybierz powierzchnię dopasowaną do Twoich potrzeb. Możesz też przejść do innych kategorii w {{city}}.",
+    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze ofert w kategorii {{categoryPlural}}. Sprawdź inne dostępne kategorie w {{city}} lub dodaj swoje ogłoszenie i jako pierwszy dotrzyj do osób szukających {{categoryPlural}} w tej okolicy.",
+    "titleNoListings": "{{categoryPlural}} w {{city}} - przeglądaj kategorię",
+    "titleWithListings": "{{categoryPlural}} w {{city}} - {{count}} aktualnych ofert"
+  },
+  "categoryCityFaq": {
+    "q1": {
+      "answer": "Ceny {{categoryPlural}} w {{city}} zależą od lokalizacji, metrażu, standardu i długości wynajmu. Sprawdź {{count}} aktualnych ofert na MaszBox, aby porównać ceny i wybrać najlepszą dla siebie. Wiele ofert pozwala na negocjację ceny bezpośrednio z właścicielem.",
+      "question": "Ile kosztuje wynajem {{categoryPlural}} w {{city}}?"
+    },
+    "q2": {
+      "answer": "Aktualnie w {{city}} dostępnych jest {{count}} ofert {{categoryPlural}} - od małych przestrzeni do dużych. Oferty obejmują różne dzielnice {{city}} i okolice. Możesz filtrować wyniki po cenie, metrażu, dzielnicy i innych parametrach.",
+      "question": "Ile jest dostępnych ofert {{categoryPlural}} w {{city}}?"
+    },
+    "q3": {
+      "answer": "Wynajem krótkoterminowy ({{categoryPlural}} na dni lub tygodnie) jest dostępny dla wybranych ofert oznaczonych jako krótkoterminowe. Standardowo {{categoryPlural}} w {{city}} są oferowane na wynajem długoterminowy (miesięczny). Sprawdź filtry na liście ofert.",
+      "question": "Czy mogę wynająć {{categoryPlural}} w {{city}} na krótki termin?"
+    },
+    "q4": {
+      "answer": "Tak. MaszBox to platforma ogłoszeniowa, na której zarówno osoby prywatne, jak i firmy mogą dodawać oferty {{categoryPlural}} w {{city}} i innych miastach. Załóż konto i dodaj ogłoszenie - dotrzesz do osób aktywnie szukających powierzchni do wynajmu lub kupna.",
+      "question": "Czy mogę dodać własne ogłoszenie {{categoryPlural}} w {{city}}?"
+    },
+    "q5": {
+      "answer": "Aby skontaktować się z właścicielem oferty {{categoryPlural}} w {{city}}, wejdź w wybrane ogłoszenie i kliknij przycisk pokazujący numer telefonu. Kontakt jest bezpłatny dla osób szukających - bez prowizji i ukrytych opłat.",
+      "question": "Jak skontaktować się z właścicielem oferty {{categoryPlural}} w {{city}}?"
+    }
+  },
+  "categoryContent": {
+    "description": "Sprawdź {{count}} aktualnych ofert w kategorii {{categoryPlural}} dostępnych w {{cityCount}} miastach w całej Polsce. Wybierz miasto, które Cię interesuje, aby zobaczyć szczegółowe oferty wynajmu i sprzedaży.",
+    "titleWithListings": "{{categoryPlural}} w Polsce - {{count}} aktualnych ofert"
+  },
+  "cityFaq": {
+    "q1": {
+      "answer": "W {{city}} dostępnych jest {{count}} aktualnych ofert wynajmu i sprzedaży powierzchni: garaży i miejsc postojowych, magazynów, lokali, działek, komórek lokatorskich, piwnic, kontenerów, strychów oraz pokoi. Sprawdź wszystkie kategorie i wybierz tę, która Cię interesuje.",
+      "question": "Jakie powierzchnie można wynająć lub kupić w {{city}}?"
+    },
+    "q2": {
+      "answer": "Ceny w {{city}} (województwo {{voivodeship}}) zależą od kategorii, metrażu i lokalizacji. Najtańsze są zazwyczaj komórki lokatorskie i piwnice, najdroższe - lokale komercyjne i magazyny w centrum. Porównaj aktualne {{count}} ofert na MaszBox.",
+      "question": "Ile kosztuje wynajem powierzchni w {{city}}?"
+    },
+    "q3": {
+      "answer": "Tak. MaszBox to platforma ogłoszeniowa - możesz dodać własną ofertę wynajmu lub sprzedaży powierzchni w {{city}}. Załóż konto, opisz ofertę, dodaj zdjęcia i opublikuj. Twoje ogłoszenie trafi do osób aktywnie szukających powierzchni w {{city}}.",
+      "question": "Czy mogę dodać własną ofertę w {{city}}?"
+    },
+    "q4": {
+      "answer": "Tak. Oferty w {{city}} obejmują wszystkie dzielnice oraz okolice. Możesz filtrować wyniki po konkretnej dzielnicy lub po promieniu od centrum. Wybierz tę opcję, która najlepiej pasuje do Twoich potrzeb.",
+      "question": "Czy mogę filtrować oferty po dzielnicy {{city}}?"
+    }
+  },
+  "description": "Wybierz miasto, które Cię interesuje, aby zobaczyć ogłoszenia dostępne w wybranej lokalizacji. Dzięki temu łatwiej znajdziesz oferty dopasowane do Twojego regionu.",
+  "inputPlaceholder": "Znajdź miasto"
+}

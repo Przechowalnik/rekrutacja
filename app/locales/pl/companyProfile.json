@@ -1,0 +1,11 @@
+{
+  "buttonEdit": "Edytuj",
+  "copyURL": "Kopiuj adres URL",
+  "description": "Na tej stronie możesz <b>zaktualizować informacje o swojej firmie. ",
+  "noDescription": "Brak opisu",
+  "noneUrl": "Brak linku",
+  "title": "Informacje o firmie",
+  "urlToCompany": "Adres URL do profilu głównego firmy",
+  "urlToCompanyLocation": "Adres URL do lokalizacji firmy ({{location}})",
+  "urlToCompanyMobile": "Adres URL do profilu usług mobilnych firmy (jeśli firma świadczy takie usługi)"
+}

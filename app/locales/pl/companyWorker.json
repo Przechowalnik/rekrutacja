@@ -1,0 +1,8 @@
+{
+  "buttonDeleteAccount": "Usuń konto pracownicze",
+  "buttonProfile": "Profil pracownika",
+  "buttonProfileOwner": "Profil właściciela",
+  "buttonRole": "Uprawnienia",
+  "noData": "Pracownik musi mieć uprawnienia, aby móc sprawdzić informacje o nim.",
+  "title": "Informacje pracownika"
+}

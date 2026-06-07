@@ -1,0 +1,335 @@
+{
+  "faq": {
+    "accountCompany": {
+      "addCard": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zaktualizuj kartę płatniczą</b>.<br/><b>3.</b> Wprowadź dane, a następnie wybierz przycisk <b>Zapisz</b>.",
+        "title": "Dodaj kartę płatniczą"
+      },
+      "addCompanySocialLinks": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.<br/><b>3.</b> Kliknij przycisk <b>Edytuj</b>.<br/><b>4.</b> W odpowiednich polach wprowadź linki do profili Twojej firmy w serwisach <b>Instagram</b>, <b>Facebook</b> lub <b>TikTok</b>.<br/><b>5.</b> Po uzupełnieniu wszystkich danych naciśnij przycisk <b>Zapisz</b>.",
+        "title": "Dodanie linków do mediów społecznościowych firmy"
+      },
+      "addEmployee": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Pracownicy</b>.<br/><b>3.</b> Kliknij przycisk <b>Dodaj pracownika</b>.<br/><b>4.</b> Wybierz jeden z dostępnych sposobów dodania pracownika:<br/>- <b>Ręczne dodanie:</b> uzupełnij wszystkie wymagane pola (imię, nazwisko, adres e-mail, hasło itp.), a następnie naciśnij przycisk <b>Utwórz konto pracownika</b>.<br/>- <b>Wysłanie zaproszenia:</b> naciśnij przycisk <b>Wyślij link rejestracyjny</b>, aby przesłać zaproszenie pracownikowi. Pracownik samodzielnie zarejestruje się, korzystając z przesłanego linku.<br/><br/><b>Uwaga:</b> Po dodaniu lub rejestracji pracownika, zostanie on automatycznie przypisany do Twojej firmy i uzyska dostęp do firmowego konta zgodnie z nadanymi uprawnieniami.",
+        "title": "Dodawanie pracownika do firmy"
+      },
+      "addListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Dodaj ogłoszenie firmowe</b>.<br/><b>3.</b> Wypełnij wszystkie wymagane pola formularza ogłoszenia, takie jak tytuł, opis, kategoria, cena oraz zdjęcia.<br/><b>4.</b> Po uzupełnieniu danych:<br/>- jeśli ogłoszenie jest objęte aktywną subskrypcją lub jest bezpłatne, naciśnij przycisk <b>Dodaj ogłoszenie</b>,<br/>- jeśli ogłoszenie wymaga opłaty, naciśnij przycisk <b>Przejdź do płatności</b> i sfinalizuj proces płatności.<br/><br/><b>Uwaga:</b> Ogłoszenie zostanie opublikowane dopiero po jego zatwierdzeniu lub dokonaniu wymaganej płatności (jeśli dotyczy). Upewnij się, że wszystkie informacje są zgodne z regulaminem platformy.",
+        "title": "Dodawanie ogłoszenia firmy"
+      },
+      "changeCompanyPhone": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zmień numer telefonu</b>. Wprowadź nowy numer telefonu, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Potwierdź nowy numer telefonu wpisując otrzymany kod otrzymany SMS-em.<br/><b>4.</b> Jeżeli kod jest prawidłowy to numer telefonu powinien zostać zmieniony na nowy.<br/><br/><b>Uwaga:</b> Numer telefonu można dodać tylko 1 raz na dobę!",
+        "title": "Zmiana numer telefonu"
+      },
+      "checkCompanyPoints": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Punkty</b> lub <b>Punkty firmy</b>.<br/><b>3.</b> Na stronie zobaczysz łączną liczbę punktów zgromadzonych przez firmę oraz ich źródła.<br/><br/><b>Uwaga:</b> Punkty firmowe są przyznawane za:<br/>- zgłaszanie błędów przez pracowników firmy,<br/>- aktywność w <b>systemie poleceń</b> (polecanie firm lub użytkowników).<br/><br/>Zebrane punkty można wykorzystać na dwa sposoby:<br/>- do <b>tworzenia nowych ogłoszeń</b> lub <b>przedłużania istniejących ogłoszeń</b>,<br/>- do <b>wymiany na dodatkowe dni premium</b> w aktywnej subskrypcji firmy.<br/><br/>Warto regularnie sprawdzać saldo punktów, aby w pełni korzystać z dostępnych benefitów dla firm.",
+        "title": "Sprawdzanie liczby zgromadzonych punktów firmy"
+      },
+      "checkSubscriptionOrFreeTrial": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Subskrypcje</b>.",
+        "title": "Sprawdzanie statusu subskrypcji lub okresu próbnego"
+      },
+      "companyBugs": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>.<br/><br/><b>Uwaga:</b> Jeżeli zajdzie potrzeba zgłoszenia nowego błędu wystarczy nacisnąć przycisk <b>Zgłoś nowy błąd</b> po którym nastąpi przekierowanie do zgłaszania błędów na koncie użytkownika. Wszystkie zgłoszone błędy w taki sposób zostaną przydzielone do obecnej firmy.",
+        "title": "Podgląd zgłoszenych błędów przez pracowników"
+      },
+      "companyBugsDetails": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>.<br/><br/><b>Uwaga:</b> Jeżeli zajdzie potrzeba zgłoszenia nowego błędu wystarczy nacisnąć przycisk <b>Zgłoś nowy błąd</b> po którym nastąpi przekierowanie do zgłaszania błędów na koncie użytkownika. Wszystkie zgłoszone błędy w taki sposób zostaną przydzielone do obecnej firmy.",
+        "title": "Podgląd szczegółów błędów przez pracowników"
+      },
+      "createSubscription": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Subskrypcje</b>.<br/><b>3.</b> Wybierz odpowiadający Tobie plan.<br/><b>4.</b> Wprowadź kod promocyjny <b>(opcjonalnie)</b>.<br/><b>5.</b> Wprowadź dane karty płatniczej, jeśli nie zostały one jeszcze dodane do konta.<br/><b>6.</b> Naciśnij przycisk <b>Uruchom subskrypcję</b>.<br/><br/><b>Uwaga:</b> Nie można utworzyć nowej subskrypcji, gdy istnieje już jedna aktywna subskrypcja na koncie. Dodatkowo, jeśli wprowadzony kod promocyjny nie jest zgodny z wybraną subskrypcją, proces zakupu nie zostanie ukończony.",
+        "title": "Uruchomienie subskrypcji"
+      },
+      "deleteCompany": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Usuń firmę</b>.<br/><b>3.</b> Wypełnij wszystkie wymagane pola, jeśli się pojawią, a następnie naciśnij przycisk <b>Potwierdź usunięcie</b>.<br/><br/><b>Uwaga:</b> Aby usunąć firmę, należy wcześniej usunąć lub dezaktywować wszystkie aktywne ogłoszenia oraz zakończyć lub anulować aktywną subskrypcję. Jeśli którakolwiek z tych pozycji jest aktywna, usunięcie firmy nie będzie możliwe.",
+        "title": "Usuwanie konta firmowego"
+      },
+      "deleteEmployee": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Pracownicy</b>.<br/><b>3.</b> Wybierz z listy pracownika, którego konto chcesz usunąć.<br/><b>4.</b> Naciśnij przycisk <b>Usuń konto pracownicze</b>.<br/><b>5.</b> Wpisz wymagane dane w celu potwierdzenia operacji.<br/><b>6.</b> Naciśnij przycisk <b>Usuń konto pracownicze</b>, aby potwierdzić usunięcie.<br/><br/><b>Uwaga:</b> Po usunięciu konto pracownika zostanie trwale usunięte z systemu.",
+        "title": "Usuwanie pracownika z firmy"
+      },
+      "exchangePointsForSubscriptionDays": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Punkty</b>.<br/><b>3.</b> Kliknij przycisk <b>Wymień punkty</b>.<br/><b>4.</b> Wybierz z listy (select) odpowiednią stawkę wymiany, np. ile punktów chcesz wymienić na dodatkowe dni subskrypcji premium.<br/><b>5.</b> Po wybraniu stawki naciśnij przycisk <b>Wymień</b>.<br/><br/><b>Uwaga:</b> Dodatkowe dni premium zostaną automatycznie dodane do Twojej aktywnej subskrypcji. Wymiana jest możliwa tylko wtedy, gdy firma posiada aktywną subskrypcję.",
+        "title": "Wymiana punktów na dodatkowe darmowe dni subskrypcji"
+      },
+      "extendListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Ogłoszenia firmowe</b>.<br/><b>3.</b> Wybierz ogłoszenie, które chcesz przedłużyć.<br/><b>4.</b> Przejdź do zakładki <b>Płatności</b>.<br/><b>5.</b> Wybierz opcję <b>Przedłuż ogłoszenie</b> i sfinalizuj płatność, jeśli jest wymagana.<br/><br/><b>Uwaga:</b> Przedłużenie okresu ogłoszenia wymaga aktywnej subskrypcji lub ważnej płatności. Po przedłużeniu ogłoszenie pozostanie widoczne bez konieczności jego ponownego dodawania.",
+        "title": "Przedłużenie okresu ważności ogłoszenia firmy"
+      },
+      "findInvoices": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Faktury</b>.<br/><b>3.</b> Na tej stronie znajdziesz listę wszystkich wystawionych faktur za usługi powiązane z Twoim kontem firmowym.<br/><b>4.</b> Możesz wyświetlić szczegóły lub wysłać wybraną fakturę na konto e-mail, korzystając z odpowiedniego przycisku.<br/><br/><b>Uwaga:</b> Faktury są generowane automatycznie po opłaceniu subskrypcji lub innych usług. Warto upewnić się, że dane do faktury są aktualne w sekcji <b>Aktualizuj dane do faktur</b>.",
+        "title": "Gdzie znaleźć faktury za usługi"
+      },
+      "freeTrial": {
+        "description": "Aby uruchomić okres próbny, należy <b>utworzyć nowe konto</b> firmowe, które jeszcze <b>nie figurowało</b> w naszym systemie. Po pomyślnym utworzeniu konta aktywujemy dla Ciebie <b>30-dniowy okres próbny</b>.",
+        "title": "Okres próbny"
+      },
+      "getInvoice": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Faktury</b>.<br/><b>3.</b> Znajdź odpowiednią fakturę, a następnie naciśnij przycisk <b>Wyślij</b>.<br/><br/><b>Uwaga:</b> Jeśli podasz błędny numer NIP (Numer Identyfikacji Podatkowej), faktura może zostać wystawiona niepoprawnie. Sprawdź dwukrotnie, czy wszystkie dane są zgodne.",
+        "title": "Wysyłanie faktury na adres e-mail"
+      },
+      "information": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.",
+        "title": "Informacje o firmie"
+      },
+      "informationEdit": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.<br/><b>3.</b> Naciśnij przycisk <b>Edytuj</b>.<br/><b>4.</b> Wypełnij wszystkie pola, które chcesz zaktualizować a następnie naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Jeśli nazwa firmy zostanie zmieniona, adres URL do profilu firmy automatycznie zaktualizuje się, aby odzwierciedlić nową nazwę.",
+        "title": "Aktualizacja informacji o firmie"
+      },
+      "invoiceData": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Faktury</b>.<br/><b>3.</b> Naciśnij przycisk <b>Aktualizuj dane do faktur</b>.<br/><b>4.</b> Wypełnij wszystkie wymagane pola, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Jeśli podasz błędny numer NIP (Numer Identyfikacji Podatkowej), faktura może zostać wystawiona niepoprawnie. Sprawdź dwukrotnie, czy wszystkie dane są zgodne.",
+        "title": "Aktualizacja danych do faktur"
+      },
+      "manageEmployeePermissions": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Pracownicy</b>.<br/><b>3.</b> Wybierz z listy pracownika, którego uprawnienia chcesz zmienić.<br/><b>4.</b> Naciśnij przycisk <b>Uprawnienia</b>.<br/><b>5.</b> Zaznacz lub odznacz odpowiednie pola, aby dostosować dostęp do funkcji w ramach konta firmowego.<br/><b>6.</b> Po dokonaniu zmian naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Zmiana uprawnień ma natychmiastowy wpływ na możliwości pracownika w systemie. Upewnij się, że uprawnienia są zgodne z jego zakresem obowiązków.",
+        "title": "Zarządzanie uprawnieniami pracownika"
+      },
+      "manageLoginMethods": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Ustawienia</b>.<br/><b>3.</b> W sekcji <b>Sposoby logowania</b> możesz włączyć lub wyłączyć logowanie za pomocą <b>hasła</b>, <b>Google</b> lub <b>Facebook</b>.<br/><b>4.</b> Upewnij się, że przynajmniej jedna metoda logowania jest włączona.<br/><b>5.</b> Po dokonaniu zmian naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Zmiany dotyczą wszystkich członków firmy. Jeśli zostanie wyłączona metoda logowania, z której korzystali, konieczne będzie użycie innej aktywnej opcji logowania.",
+        "title": "Zarządzanie sposobami logowania w firmie (dla właściciela)"
+      },
+      "registerCompanyAccount": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk <b>Rejestracja</b>.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Rejestracja</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wybierz opcję <b>Utwórz konto firmowe</b>.<br/><b>3.</b> Uzupełnij wszystkie wymagane pola formularza, w tym dane firmy (np. nazwa firmy, NIP, adres e-mail, hasło).<br/><b>4.</b> Zaakceptuj <b>regulamin</b> oraz (opcjonalnie) zgody marketingowe.<br/><b>5.</b> Naciśnij przycisk <b>Zarejestruj firmę</b>.<br/><b>6.</b> Jeżeli wymagane, potwierdź rejestrację klikając w link aktywacyjny wysłany na adres e-mail.<br/><br/><b>Uwaga:</b> Po zakończeniu rejestracji możesz od razu rozpocząć konfigurację konta firmowego, dodać pracowników oraz rozpocząć korzystanie z dostępnych funkcji biznesowych.",
+        "title": "Rejestracja konta firmowego"
+      },
+      "requireSecurityForEmployees": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Ustawienia</b>.<br/><b>3.</b> W sekcji <b>Zabezpieczenia</b> zaznacz pola wyboru (checkboxy) obok opcji <b>Wymagaj 2FA</b> lub <b>Wymagaj Email OTP</b> dla pracowników, którzy nie mają jeszcze aktywnego zabezpieczenia.<br/><b>4.</b> Po wprowadzeniu zmian naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Włączenie tej opcji wymusi na wszystkich pracownikach firmy aktywację wybranego sposobu zabezpieczenia przy kolejnym logowaniu. Dzięki temu konto firmowe oraz dane będą lepiej chronione.",
+        "title": "Wymaganie włączenia zabezpieczeń 2FA lub Email OTP (dla właściciela)"
+      },
+      "showBugDetails": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>, a następnie znajdź zgłoszenie, które chcesz podejrzeć oraz naciśnij przycisk <b>Pokaż szczegóły</b>.<br/><b>3.</b> W szczegółach zgłoszenia błędu będą widoczne wszystkie informacje, które były wypełniane podczas tworzenia nowego zgłoszenia, ale również jeżeli nasz pracownik przetworzy zgłoszenie, będzie widoczne: priorytet błędu, możliwe punkty do zdobycia, data wypłacenia punktów (o ile zostaną one wypłacone). Jeżeli nie będzie tych informacji, to prosimy o cierpliwość. W ciągu <b>5 dni roboczych</b> powinna zostać dodana aktualizacja do zgłoszenia.",
+        "title": "Podgląd konkretnego zgłoszenia z błędami"
+      },
+      "showListings": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Ogłoszenia firmowe</b>.<br/><b>3.</b> W tym miejscu znajdziesz wszystkie ogłoszenia dodane przez Twoją firmę — zarówno aktywne, jak i zakończone.",
+        "title": "Wszystkie ogłoszenia firmowe"
+      },
+      "startReferral": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>System poleceń</b>.<br/><b>3.</b> Naciśnij przycisk <b>Rozpocznij</b>.<br/><br/><b>Uwaga:</b> Jeżeli masz uruchomiony system poleceń, to możesz wysyłać użytkownikom / firmom kod do wpisania podczas rejestracji. Kliknięcie w niego kopiuje kod do schowka. Aby wydrukować kody QR, które pozwalają na szybkie założenie konta użytkownika lub firmowego w celu uzyskania benefitów, naciśnij przycisk <b>Wydrukuj QR kod</b>.",
+        "title": "System poleceń"
+      },
+      "title": "Konto firmowe",
+      "updateCard": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zaktualizuj kartę płatniczą</b>.<br/><b>3.</b> Wprowadź dane, a następnie wybierz przycisk <b>Zapisz</b>.",
+        "title": "Aktualizacja karty płatniczej"
+      },
+      "updateCompanyAvatar": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.<br/><b>3.</b> Kliknij przycisk <b>Dodaj nowe logo</b> i wybierz nowe zdjęcie z urządzenia.<br/><b>4.</b> Po wybraniu pliku naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Logo firmy jest widoczny publicznie w profilu firmy oraz przy jej ogłoszeniach, dlatego zaleca się użycie czytelnego logotypu lub obrazu reprezentującego markę.",
+        "title": "Aktualizacja loga firmy"
+      },
+      "updateCompanyBanner": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.<br/><b>3.</b> Kliknij przycisk <b>Dodaj nowy banner</b> i wybierz nowe zdjęcie z urządzenia.<br/><b>4.</b> Po wybraniu pliku naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Banner jest wyświetlany w górnej części profilu firmy. Zalecany jest obraz o wysokiej jakości i odpowiednich proporcjach, aby prezentował się estetycznie.",
+        "title": "Aktualizacja banneru firmy"
+      },
+      "updateCompanyDescription": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Informacje o firmie</b>.<br/><b>3.</b> Kliknij przycisk <b>Edytuj</b>.<br/><b>4.</b> W polu <b>Opis firmy</b> wprowadź nową treść opisu.<br/><b>5.</b> Po zakończeniu edycji naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Opis firmy jest widoczny publicznie w jej profilu. Warto w nim zawrzeć najważniejsze informacje o działalności, usługach i wartościach marki.",
+        "title": "Aktualizacja opisu firmy"
+      },
+      "updateEmployeeAvatar": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Pracownicy</b>.<br/><b>3.</b> Wybierz z listy pracownika, którego avatar chcesz zmienić.<br/><b>4.</b> Naciśnij przycisk <b>Profil pracownika</b>.<br/><b>5.</b> Kliknij przycisk <b>Dodaj zdjęcie profilowe</b>, wybierz nowe zdjęcie z urządzenia i naciśnij <b>Zapisz zdjęcie</b>.<br/><br/><b>Uwaga:</b> Nowe zdjęcie proflowe pracownika jest widoczny w jego profilu oraz w miejscach, gdzie reprezentuje firmę. Zaleca się użycie profesjonalnego i czytelnego zdjęcia.",
+        "title": "Aktualizacja zdjęcia profilowego pracownika"
+      },
+      "updateEmployeeName": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Pracownicy</b>.<br/><b>3.</b> Wybierz z listy pracownika, którego dane chcesz zaktualizować.<br/><b>4.</b> Naciśnij przycisk <b>Profil pracownika</b>.<br/><b>5.</b> W polach <b>Imię</b> i <b>Nazwisko</b> wprowadź nowe dane.<br/><b>6.</b> Naciśnij przycisk <b>Zapisz</b>, aby zatwierdzić zmiany.<br/><br/><b>Uwaga:</b> Zmiana imienia lub nazwiska pracownika zostanie od razu odzwierciedlona w całym systemie, w tym przy ogłoszeniach i działaniach przypisanych do tego konta.",
+        "title": "Zmiana imienia i nazwiska pracownika"
+      },
+      "updateListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwsze 2 litery nazwy Twojej firmy.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto firmowe</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Ogłoszenia firmowe</b>.<br/><b>3.</b> Wybierz ogłoszenie, które chcesz zaktualizować.<br/><b>4.</b> Wprowadź wymagane zmiany, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Po zapisaniu zmian ogłoszenie zostanie automatycznie zaktualizowane i widoczne z nowymi danymi na platformie. Pamiętaj, że edycja ogłoszenia może wymagać aktywnej subskrypcji lub okresu próbnego.",
+        "title": "Aktualizacja ogłoszenia firmy"
+      }
+    },
+    "accountUser": {
+      "activeAuthenticator2FA": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Autoryzacja dwuetapowa</b>. Zaznacz autoryzację 2FA, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Zeskanuj kod QR przez aplikację do autoryzacji dwuetapowej (np.: Google Authenticator).<br/><b>4.</b> Wprowadź kod autoryzacyjny 2FA z aplikacji do autoryzacji dwuetapowej w celu potwierdzenia urządzenia.<br/><b>5.</b> Zapisz w bezpiecznym miejscu kod do resetowania autoryzacji dwuetapowej 2FA. Będzie on potrzebny, gdy utracisz dostęp do telefonu, na którym jest skonfigurowana autoryzacja dwuetapowa 2FA, w celu wyłączenia funkcji.<br/><br/><b>Uwaga:</b> Na koncie może być aktywna tylko 1 forma autoryzacji dwuetapowej!",
+        "title": "Włączenie autoryzacji dwuetapowej 2FA"
+      },
+      "activeAuthenticatorEmailOTP": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Autoryzacja dwuetapowa</b>. Zaznacz autoryzację e-mail OTP, a następne naciśniej przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Na koncie może być aktywna tylko 1 forma autoryzacji dwuetapowej!",
+        "title": "Włączenie autoryzacji dwuetapowej e-mail OTP"
+      },
+      "addBugs": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>, a następnie naciśnij przycisk <b>Zgłoś nowy błąd</b>.<br/><b>3.</b> Wypełnij wszystkie wymagane pola, a następnie naciśnij przycisk <b>Wyślij zgłoszenie</b>.<br/><br/><b>Uwaga:</b> Jeżeli chcesz dostać punkty za każde zgłoszenie (ilość punktów zależy od wagi błędu), to musisz posiadać firmę lub być pracownikiem w firmie.",
+        "title": "Dodawanie nowych zgłoszeń z błędami"
+      },
+      "addListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Dodaj ogłoszenie</b>.<br/><b>3.</b> Wypełnij wszystkie wymagane pola formularza ogłoszenia, takie jak tytuł, opis, kategoria, cena i zdjęcia.<br/><b>4.</b> Po uzupełnieniu danych:<br/>- jeśli ogłoszenie jest bezpłatne, naciśnij przycisk <b>Dodaj ogłoszenie</b>,<br/>- jeśli ogłoszenie wymaga opłaty, naciśnij przycisk <b>Przejdź do płatności</b> i sfinalizuj proces płatności.<br/><br/><b>Uwaga:</b> Ogłoszenie zostanie opublikowane dopiero po jego zatwierdzeniu lub dokonaniu wymaganej płatności (jeśli dotyczy). Upewnij się, że wszystkie informacje są zgodne z regulaminem platformy.",
+        "title": "Dodawanie ogłoszenia"
+      },
+      "addUserPhone": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.</br></br><b>Na urządzeniu mobilnym:</b></br><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.</b></br></br><b>Dalsze kroki (dla obu wersji):</b></br><b>2.</b> Naciśnij przycisk <b>Dodaj numer telefonu</b>. Wprowadź nowy numer telefonu, a astępnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Potwierdź nowy numer telefonu wpisując otrzymany kod otrzymany SMS-em.<br/><b>4.</b> Jeżeli kod jest prawidłowy to numer telefonu powinien zostać zmieniony na nowy.<br/><br/><b>Uwaga:</b> Numer telefonu można dodać tylko 1 raz na dobę!",
+        "title": "Dodanie numer telefonu"
+      },
+      "changeUserEmail": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.</br></br><b>Na urządzeniu mobilnym:</b></br><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.</b></br></br><b>Dalsze kroki (dla obu wersji):</b></br><b>2.</b> Naciśnij przycisk <b>Zmień adres e-mail</b>. Wprowadź nowy adres e-mail, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Potwierdź nowy adres e-mail wpisując otrzymany kod.<br/><b>4.</b> Jeżeli kod jest prawidłowy to adres e-mail powinien zostać zmieniony na nowy.<br/><br/><b>Uwaga:</b> Adres e-mail można zmieniać tylko 1 raz na dobę!",
+        "title": "Zmiana adres e-mail"
+      },
+      "changeUserName": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.</br></br><b>Na urządzeniu mobilnym:</b></br><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.</b></br></br><b>Dalsze kroki (dla obu wersji):</b></br><b>2.</b> Naciśnij przycisk <b>Profil użytkownika</b>. Wprowadź nowe imię, a nazwisko, po czym naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Imię i nazwisko będą zapisane w postaci małych liter.",
+        "title": "Zmiana nazwy użytkownika"
+      },
+      "changeUserPassword": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.</br></br><b>Na urządzeniu mobilnym:</b></br><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.</b></br></br><b>Dalsze kroki (dla obu wersji):</b></br><b>2.</b> Naciśnij przycisk <b>Zmień hasło</b>. Wprowadź nowe hasło, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Nowe hasło musi spełniać wszystkie wymogi bezpieczeństwa.",
+        "title": "Zmiana hasła"
+      },
+      "changeUserPhone": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.</br></br><b>Na urządzeniu mobilnym:</b></br><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.</b></br></br><b>Dalsze kroki (dla obu wersji):</b></br><b>2.</b> Naciśnij przycisk <b>Zmień numer telefonu</b>. Wprowadź nowy numer telefonu, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Potwierdź nowy numer telefonu wpisując otrzymany kod otrzymany SMS-em.<br/><b>4.</b> Jeżeli kod jest prawidłowy to numer telefonu powinien zostać zmieniony na nowy.<br/><br/><b>Uwaga:</b> Numer telefonu można dodać tylko 1 raz na dobę!",
+        "title": "Zmiana numer telefonu"
+      },
+      "checkUserPoints": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Punkty</b> lub <b>Moje punkty</b>.<br/><b>3.</b> Na stronie zobaczysz łączną liczbę zgromadzonych punktów oraz ich źródła.<br/><br/><b>Uwaga:</b> Punkty przyznawane są za:<br/>- zgłaszanie błędów na platformie (liczba punktów zależy od wagi i znaczenia błędu),<br/>- korzystanie z <b>systemu poleceń</b> — zarówno firmowego, jak i użytkowników.<br/><br/>Zebrane punkty można wykorzystać do <b>tworzenia nowych ogłoszeń</b> lub <b>przedłużania aktywnych ogłoszeń</b> bez konieczności płatności pieniężnej.<br/><br/>Warto regularnie sprawdzać saldo punktów, aby w pełni korzystać z przysługujących benefitów.",
+        "title": "Sprawdzanie liczby zgromadzonych punktów"
+      },
+      "deActiveAuthenticator2FA": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Autoryzacja dwuetapowa</b>. Odznacz autoryzację 2FA, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><b>3.</b> Wprowadź kod autoryzacyjny 2FA z aplikacji do autoryzacji dwuetapowej (np.: Google Authenticator).<br/><br/><b>Uwaga:</b> Na koncie może być aktywna tylko 1 forma autoryzacji dwuetapowej!",
+        "title": "Wyłączenie autoryzacji dwuetapowej 2FA"
+      },
+      "deActiveAuthenticatorEmailOTP": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Autoryzacja dwuetapowa</b>. Odznacz autoryzację e-mail OTP, a następne naciśniej przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Na koncie może być aktywna tylko 1 forma autoryzacji dwuetapowej!",
+        "title": "Wyłączenie autoryzacji dwuetapowej e-mail OTP"
+      },
+      "deleteAccount": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Usuń konto</b>.<br/><b>3.</b> Wypełnij wszystkie wymagane pola, a następnie naciśnij przycisk <b>Usuń konto</b>.<br/><br/><b>Uwaga:</b> Jeżeli chcesz pozytywnie usunąć konto, to nie możesz posiadać:<br/><b>1.</b> W koncie osobistym:<br/>- aktywnych ogłoszeń,<br/><br/><b>2.</b> W koncie firmowym jako właściciel:<br/>- aktywnej subskrypcji<br/><br/><b>Pracownik samodzielnie nie może usunąć swojego konta.",
+        "title": "Usuwanie konta"
+      },
+      "extendListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Twoje ogłoszenia</b>.<br/><b>3.</b> Wybierz ogłoszenie, które chcesz przedłużyć.<br/><b>4.</b> Przejdź do zakładki <b>Płatności</b>.<br/><b>5.</b> Wybierz opcję <b>Przedłuż ogłoszenie</b> i sfinalizuj płatność, jeśli jest wymagana.<br/><br/><b>Uwaga:</b> Przedłużenie okresu ogłoszenia umożliwia jego dalsze wyświetlanie bez konieczności ponownego dodawania. Jeśli ogłoszenie wygaśnie przed opłaceniem, zostanie automatycznie ukryte do momentu przedłużenia.",
+        "title": "Przedłużenie okresu ważności ogłoszenia"
+      },
+      "findInvoices": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Faktury</b>.<br/><b>3.</b> Na tej stronie znajdziesz listę wszystkich faktur za usługi powiązane z Twoim kontem użytkownika.<br/><b>4.</b> Możesz wyświetlić szczegóły lub wysłać wybraną fakturę na adres e-mail, korzystając z odpowiedniego przycisku.<br/><br/><b>Uwaga:</b> Użytkownicy indywidualni nie mają możliwości edycji danych do faktur. Faktury są wystawiane automatycznie na podstawie danych konta.",
+        "title": "Gdzie znaleźć faktury za usługi"
+      },
+      "loginToAccount": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk <b>Logowanie</b>.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Logowanie</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wypełnij wszystkie pola, a następnie naciśnij przycisk <b>Zaloguj się</b>.<br/><br/><b>Uwaga:</b> Jeżeli na koncie jest aktywna autoryzacja dwuetapowa, to będzie ona konieczna do zatwierdzenia.",
+        "title": "Logowanie do konta"
+      },
+      "loginWithFacebook": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> Kliknij przycisk <b>Logowanie</b> w górnym menu strony.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Logowanie</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wybierz opcję <b>Zaloguj się przez Facebook</b>.<br/><b>3.</b> Zostaniesz przekierowany na stronę logowania Facebooka. Wprowadź swoje dane logowania do Facebooka i naciśnij <b>Zaloguj się</b>.<br/><b>4.</b> Po pomyślnym zalogowaniu zostaniesz automatycznie przekierowany z powrotem na platformę.",
+        "title": "Logowanie przez Facebook"
+      },
+      "loginWithGoogle": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> Kliknij przycisk <b>Logowanie</b> w górnym menu strony.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Logowanie</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wybierz opcję <b>Zaloguj się przez Google</b>.<br/><b>3.</b> Zostaniesz przekierowany na stronę logowania Google. Wybierz konto Google, którego chcesz użyć, lub wprowadź dane logowania i naciśnij <b>Dalej</b>.<br/><b>4.</b> Po pomyślnym logowaniu zostaniesz automatycznie przekierowany z powrotem na platformę.",
+        "title": "Logowanie przez Google"
+      },
+      "logout": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Wyloguj się</b>.<br/><b>3.</b> Po potwierdzeniu zostaniesz wylogowany z konta i przeniesiony na stronę logowania platformy.<br/><br/><b>Uwaga:</b> Jeśli chcesz wylogować się ze wszystkich urządzeń oprócz bieżącego, przejdź do sekcji <b>Zarządzanie sesjami</b>.",
+        "title": "Wylogowanie z konta"
+      },
+      "manageSessions": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zarządzanie sesjami</b>.<br/><b>3.</b> Aby zwiększyć bezpieczeństwo konta, naciśnij przycisk <b>Wyloguj wszystkie inne urządzenia</b>.<br/><br/><b>Uwaga:</b> Po użyciu tej opcji zostaniesz wylogowany ze wszystkich urządzeń, z wyjątkiem tego, na którym obecnie jesteś zalogowany.",
+        "title": "Zarządzanie sesjami"
+      },
+      "recoveryAccount": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk <b>Logowanie</b>.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Logowanie</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Odzyskaj konto</b>.<br/><b>3.</b> Wypełnij wszystkie pola, a następnie naciśnij przycisk <b>Wyślij link</b>.<br/><b>4.</b> Wejdź na wskazany adres e-mail, a następnie naciśnij <b>Link do odzyskania konta</b>.<br/><b>5.</b> Wprowadź nowe hasło do konta, a następnie naciśnij przycisk <b>Zmień hasło</b>.<br/><br/><b>Uwaga:</b> Jeżeli na koncie jest aktywna autoryzacja dwuetapowa to będzie ona konieczna do zatwierdzenia.",
+        "title": "Odzyskiwanie dostępu do konta (hasło)"
+      },
+      "recoveryAccount2FA": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk <b>Logowanie</b>.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Logowanie</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wypełnij wszystkie pola, a następnie naciśnij przycisk <b>Zaloguj się</b>.<br/><b>3.</b> Naciśnij przycisk <b>Resetuj 2FA</b>.<br/><b>4.</b> Wprowadź kod do resetowania autoryzacji dwuetapowej (2FA) otrzymany podczas konfigurowania, a następnie naciśnij <b>Resetuj</b>.",
+        "title": "Odzyskiwanie dostępu do konta (autoryzacja dwuetapowa 2FA)"
+      },
+      "registerUserAccount": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk <b>Rejestracja</b>.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Rejestracja</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Wybierz opcję <b>Utwórz konto użytkownika</b>.<br/><b>3.</b> Uzupełnij wszystkie wymagane pola formularza rejestracyjnego (np. imię, nazwisko, adres e-mail, hasło).<br/><b>4.</b> Zaakceptuj <b>regulamin</b> i (opcjonalnie) zgody marketingowe.<br/><b>5.</b> Naciśnij przycisk <b>Zarejestruj się</b>.<br/><b>6.</b> Jeżeli wymagane, potwierdź rejestrację klikając w link aktywacyjny wysłany na adres e-mail.",
+        "title": "Rejestracja konta użytkownika"
+      },
+      "showBugDetails": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>, a następnie znajdź zgłoszenie, które chcesz podejrzeć oraz naciśnij przycisk <b>Pokaż szczegóły</b>.<br/><b>3.</b> W szczegółach zgłoszenia błędu będą widoczne wszystkie informacje, które były wypełniane podczas tworzenia nowego zgłoszenia, ale również jeżeli nasz pracownik przetworzy zgłoszenie, będzie widoczne: priorytet błędu, możliwe punkty do zdobycia, data wypłacenia punktów (o ile zostaną one wypłacone). Jeżeli nie będzie tych informacji, to prosimy o cierpliwość. W ciągu <b>5 dni roboczych</b> powinna zostać dodana aktualizacja do zgłoszenia.<br/><br/><b>Uwaga:</b> Jeżeli chcesz dostać punkty za każde zgłoszenie (ilość punktów zależy od wagi błędu), to musisz posiadać firmę lub być pracownikiem w firmie.",
+        "title": "Podgląd konkretnego zgłoszenia z błędami"
+      },
+      "showBugs": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgłoszone błędy na platformie</b>.<br/><br/><b>Uwaga:</b> Jeżeli chcesz dostać punkty za każde zgłoszenie (ilość punktów zależy od wagi błędu), musisz posiadać firmę lub być pracownikiem w firmie.",
+        "title": "Podgląd zgłoszonych błędów"
+      },
+      "showListings": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Twoje ogłoszenia</b>.<br/><b>3.</b> Na tej stronie znajdziesz wszystkie swoje aktywne, zakończone i oczekujące ogłoszenia.<br/><br/><b>Uwaga:</b> W tej sekcji możesz także edytować, usuwać lub przedłużać swoje ogłoszenia.",
+        "title": "Wszystkie ogłoszenia"
+      },
+      "startReferral": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>System poleceń</b>.<br/><b>3.</b> Naciśnij przycisk <b>Rozpocznij</b>.<br/><br/><b>Uwaga:</b> Jeżeli masz uruchomiony system poleceń, to możesz wysyłać użytkownikom / firmom kod do wpisania podczas rejestracji. Kliknięcie w niego kopiuje kod do schowka. Aby wydrukować kody QR, które pozwalają na szybkie założenie konta użytkownika lub firmowego w celu uzyskania benefitów, naciśnij przycisk <b>Wydrukuj QR kod</b>.",
+        "title": "System poleceń"
+      },
+      "title": "Konto użytkownika",
+      "updateConsents": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Zgody marketingowe</b>. Zaktualizuj zgody, a następnie naciśnij przycisk <b>Zapisz</b>.",
+        "title": "Aktualizacja zgód marketingowych"
+      },
+      "updateListing": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Twoje ogłoszenia</b>.<br/><b>3.</b> Wybierz ogłoszenie, które chcesz zaktualizować.<br/><b>4.</b> Wprowadź wymagane zmiany, a następnie naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Po zapisaniu zmian ogłoszenie zostanie automatycznie zaktualizowane i widoczne z nowymi danymi na platformie.",
+        "title": "Aktualizacja ogłoszenia"
+      },
+      "updateUserAvatar": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Profil użytkownika</b>.<br/><b>3.</b> Kliknij przycisk <b>Dodaj zdjęcie profilowe</b> i wybierz nowe zdjęcie z urządzenia.<br/><b>4.</b> Po wybraniu pliku naciśnij przycisk <b>Zapisz</b>.<br/><br/><b>Uwaga:</b> Zdjęcie profilowe użytkownika jest widoczny w Twoim profilu oraz przy Twoich aktywnościach na platformie. Zaleca się użycie wyraźnego zdjęcia lub obrazu, który dobrze Cię reprezentuje.",
+        "title": "Aktualizacja zdjęcie profilowe"
+      },
+      "updateUserName": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij okrągły przycisk, który wyświetla pierwszą literę Twojego imienia i nazwiska.<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Konto użytkownika</b>.<br/><br/><b>Dalsze kroki (dla obu wersji):</b><br/><b>2.</b> Naciśnij przycisk <b>Profil użytkownika</b>.<br/><b>3.</b> Wprowadź nowe imię i nazwisko w odpowiednich polach.<br/><b>4.</b> Naciśnij przycisk <b>Zapisz</b>, aby zatwierdzić zmiany.<br/><br/><b>Uwaga:</b> Po zapisaniu zmian imię i nazwisko będą automatycznie aktualizowane w Twoim profilu oraz widoczne w całym systemie.",
+        "title": "Aktualizacja imienia i nazwiska użytkownika"
+      }
+    },
+    "settingsSite": {
+      "changeColorMode": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk, który posiada ikonę do zmiany kolorów (koło przecięte na pół, w którym jedna część jest jasna a druga ciemna).<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Zmień kolor na ciemny</b> lub <b>Zmień kolor na jasny</b>.",
+        "title": "Zmiana kolorów na stronie (dark/light mode)"
+      },
+      "changeLanguage": {
+        "description": "<b>Na komputerze (desktop):</b><br/><b>1.</b> W menu nawigacji kliknij przycisk, który posiada ikonę do zmiany języków (litera A oraz chińska litera).<br/><br/><b>Na urządzeniu mobilnym:</b><br/><b>1.</b> Otwórz menu, a następnie wybierz przycisk <b>Zmień język na Angielski</b> lub <b>Change language to Polish</b>.",
+        "title": "Zmiana języka"
+      },
+      "enterReferralCode": {
+        "description": "<b>Podczas rejestracji:</b><br/><b>1.</b> W trakcie zakładania konta użytkownika lub konta firmowego znajdziesz pole <b>Kod polecający</b>.<br/><b>2.</b> Wpisz tam otrzymany kod, aby wesprzeć użytkownika lub firmę, która Cię poleciła.<br/><b>3.</b> Po wprowadzeniu kodu dokończ proces rejestracji.<br/><br/><b>Uwaga:</b> Kod polecający można wprowadzić wyłącznie podczas rejestracji. Po utworzeniu konta nie ma możliwości jego późniejszego dodania ani zmiany.",
+        "title": "Wprowadzenie kodu polecającego"
+      },
+      "searchListings": {
+        "description": "<b>Istnieją trzy sposoby wyszukiwania ogłoszeń na platformie:</b><br/><br/><b>1. Wyszukiwarka na stronie głównej:</b><br/>- Na stronie głównej, pod górnym menu nawigacji, znajduje się główna wyszukiwarka.<br/>- Zaznacz miasto, w którym chcesz szukać ogłoszeń.<br/>- (Opcjonalnie) Użyj dostępnych filtrów, aby doprecyzować wyniki - np. kategorię, typ ogłoszenia lub inne szczegóły.<br/>- Naciśnij przycisk <b>Szukaj</b>, aby wyświetlić dopasowane ogłoszenia.<br/><br/><b>2. Wybór miasta ze stopki:</b><br/>- Przewiń stronę w dół i w stopce wybierz interesujące Cię miasto.<br/>- Po wejściu w stronę miasta wybierz kategorię ogłoszeń, aby zawęzić wyniki.<br/>- Zostaną wyświetlone wszystkie dostępne ogłoszenia z wybranego miasta i kategorii.<br/><br/><b>3. Podstrona „Wyszukiwarka” w stopce:</b><br/>- W stopce znajdziesz link do podstrony <b>Wyszukiwarka</b>.<br/>- Po wejściu na tę stronę wybierz najpierw miasto, a następnie kategorię ogłoszeń.<br/>- Użyj dodatkowych filtrów, jeśli chcesz dokładniej dopasować wyniki.<br/><br/><b>Uwaga:</b> W każdym z powyższych sposobów możesz zawężać wyniki wyszukiwania, korzystając z filtrów dostępnych na stronie wyników - np. według typu ogłoszenia lub daty dodania.",
+        "title": "Wyszukiwanie ogłoszeń"
+      },
+      "title": "Ustawienia platformy",
+      "updateCookies": {
+        "description": "<b>Na komputerze (desktop) oraz urządzeniu mobilnym:</b><br/><b>1.</b> Na dole strony znajdź widoczny pasek informacyjny dotyczący plików cookies.<br/><b>2.</b> Naciśnij przycisk <b>Zmień ustawienia cookies</b>.<br/><b>3.</b> W wyświetlonym oknie wybierz, które kategorie plików cookies chcesz włączyć lub wyłączyć.<br/><b>4.</b> Po dokonaniu wyboru naciśnij przycisk <b>Zapisz</b>, aby zatwierdzić zmiany.<br/><br/><b>Uwaga:</b> Możesz w każdej chwili ponownie otworzyć ustawienia cookies — przycisk <b>Zmień ustawienia cookies</b> jest zawsze dostępny w stopce strony.",
+        "title": "Aktualizacja ustawień plików cookies"
+      }
+    }
+  },
+  "noData": "Bra wyników",
+  "placeholder": "Znajdź odpowiedź",
+  "synonyms": {
+    "aktualizacja": ["odswiezyc", "zaktualizowac", "zmienic"],
+    "avatar": ["obrazek", "profilowe", "zdjecie"],
+    "banner": ["baner", "naglowek", "zdjecie glowne"],
+    "cookies": ["ciasteczka", "pliki cookie", "ustawienia prywatnosci"],
+    "dodanie": ["dodac", "utworzyc", "wprowadzic"],
+    "email": ["adres mailowy", "mail", "poczta elektroniczna"],
+    "faktura": ["dokument platnosci", "paragon", "rachunek"],
+    "firma": ["biznes", "konto firmowe", "organizacja", "przedsiebiorstwo"],
+    "haslo": ["dane logowania", "kod dostepu", "login"],
+    "logowanie": ["logowac sie", "wejsc na konto", "zalogowac"],
+    "odzyskiwanie": ["odzyskac", "przywrocic", "resetowac"],
+    "ogloszenie": ["oferta", "post", "reklama", "wpis"],
+    "platnosc": ["oplacic", "oplata", "transakcja", "zaplacic"],
+    "rejestracja": [
+      "dolaczyc",
+      "stworz konto",
+      "utworzyc konto",
+      "zarejestrowac"
+    ],
+    "sesja": ["logowanie", "polaczenie", "urzadzenie"],
+    "subskrypcja": ["abonament", "oplata miesieczna", "plan"],
+    "telefon": ["komorka", "kontakt", "numer"],
+    "usuniecie": ["dezaktywowac", "skasowac", "usunac"],
+    "uzytkownik": ["konto prywatne", "osoba", "profil"],
+    "zmiana": ["aktualizowac", "edytowac", "zmienic"]
+  },
+  "title": "W czym możemy pomóc?",
+  "titleVariants": [
+    "Co zrobić aby {{base}}?",
+    "Gdzie mogę {{base}}?",
+    "Instrukcja: {{base}}",
+    "Jak działa {{base}}?",
+    "Jak mogę {{base}}?",
+    "Jak wykonać {{base}} krok po kroku?",
+    "Jak {{base}}?",
+    "Poradnik jak {{base}}",
+    "W jaki sposób {{base}}?",
+    "{{base}} krok po kroku"
+  ]
+}

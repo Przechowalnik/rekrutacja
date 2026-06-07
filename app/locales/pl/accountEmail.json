@@ -1,0 +1,6 @@
+{
+  "currentEmail": "Aktualny adres e-mail:",
+  "description": "Na tej stronie możesz <b>zmienić swój adres e-mail</b>. Po dokonaniu zmiany, na nowy adres zostanie wysłany e-mail potwierdzający, który musisz zaakceptować, aby zmiana została w pełni zaktualizowana. Upewnij się, że podany adres e-mail jest poprawny, aby uniknąć problemów z komunikacją. Po potwierdzeniu zmiany masz możliwość jej <b>cofnięcia w ciągu 1 dnia roboczego</b>, klikając w link, który otrzymasz w e-mailu po potwierdzeniu nowego adresu. Po upływie tego czasu zmiana stanie się nieodwracalna.",
+  "inputNewEmail": "Nowy adres e-mail",
+  "title": "Zmień adres e-mail"
+}

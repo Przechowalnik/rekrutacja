@@ -1,0 +1,1431 @@
+{
+  "Required": {
+    "message": "Field required.",
+    "title": "Error in field:"
+  },
+  "accountDeleted": {
+    "message": "",
+    "title": "The account has been deleted. 😓"
+  },
+  "accountHasReferral": {
+    "message": "",
+    "title": "You already have a referral system. 😊"
+  },
+  "accountHaveActiveSubscriptions": {
+    "message": "Cancel your subscription to delete the account.",
+    "title": "The account has an active subscription. 😫"
+  },
+  "accountLogoutOtherDevices": {
+    "message": "Your account has been logged out from all other devices to increase security.",
+    "title": "Logged out from other devices! 🔒"
+  },
+  "accountNoHaveActiveSubscriptions": {
+    "message": "You must purchase a subscription before performing this action.",
+    "title": "The account does not have an active subscription. 😫"
+  },
+  "accountNotFound": {
+    "message": "If you haven’t registered yet, please sign up to continue. If you have any questions, contact the administrator.",
+    "title": "No account found associated with this email address. 😓"
+  },
+  "accountUpdatePassword": {
+    "message": "You can now log in using your new password.",
+    "title": "Account password has been changed! 😍"
+  },
+  "added2FA": {
+    "message": "From now on, certain account actions will require entering a verification code.",
+    "title": "Two-step authentication (2FA) added! 😀"
+  },
+  "addedEmailOTP": {
+    "message": "From now on, certain account actions will require entering a verification code sent to your email.",
+    "title": "Two-step authentication (email OTP) added! 😀"
+  },
+  "addressNotSupported": {
+    "message": "At the moment, listings can only be added in selected cities. The selected address is outside the service area.",
+    "title": "This location is not supported"
+  },
+  "backupEmailExpires": {
+    "message": "",
+    "title": "The recovery email code has expired. 😥"
+  },
+  "bad2FACodeOnCreate": {
+    "message": "Please check whether the code you entered is correct.",
+    "title": "Invalid 2FA authorization code 🥲."
+  },
+  "badAuthenticator": {
+    "message": "Invalid authorization.",
+    "title": "Error in field:"
+  },
+  "badAuthenticatorCode": {
+    "message": "Please verify the code.",
+    "title": "Authorization code is incorrect. 😫"
+  },
+  "badBlogId": {
+    "message": "Invalid blog identifier.",
+    "title": "Field error:"
+  },
+  "badBlogPostId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badBlogPostSlug": {
+    "message": "Coś jest nie tak z URL blogu.",
+    "title": "Nieprawidłowy adres URL wpisu blogowego"
+  },
+  "badBlogPostTitle": {
+    "message": "Coś jest nie tak z tytułem blogu.",
+    "title": "Nieprawidłowy tytuł wpisu blogowego"
+  },
+  "badBlogPostsContent": {
+    "message": "Coś jest nie tak z treścią blogu.",
+    "title": "Nieprawidłowa treść wpisu blogowego"
+  },
+  "badBlogPostsDescription": {
+    "message": "Coś jest nie tak z opisem blogu.",
+    "title": "Nieprawidłowy opis wpisu blogowego"
+  },
+  "badBugEnvironment": {
+    "message": "Invalid bug environment.",
+    "title": "Error in field:"
+  },
+  "badBugId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badBugPriority": {
+    "message": "Invalid bug priority.",
+    "title": "Error in field:"
+  },
+  "badBugStatus": {
+    "message": "Invalid bug status.",
+    "title": "Error in field:"
+  },
+  "badCalendarView": {
+    "message": "Something is wrong with the calendar view.",
+    "title": "Error in field:"
+  },
+  "badCard": {
+    "message": "",
+    "title": "Something’s wrong with the card. 😐"
+  },
+  "badCheckbox": {
+    "message": "Select the required checkbox to continue.",
+    "title": "Checkbox not selected. 😐"
+  },
+  "badCity": {
+    "message": "",
+    "title": "Coś jest nie tak z nazwą miasta. 😐"
+  },
+  "badCodeToConfirmEmail": {
+    "message": "Check your email again and enter the correct code.",
+    "title": "The email confirmation code is incorrect! 😫"
+  },
+  "badColor": {
+    "message": "Invalid color. 😫",
+    "title": "Error in field:"
+  },
+  "badCompanyId": {
+    "message": "Company not found.",
+    "title": "Error in field:"
+  },
+  "badCompanyLocationId": {
+    "message": "Location not found.",
+    "title": "Error in field:"
+  },
+  "badCompanyLocationsIds": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badCompanyOpeningHourId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badCompanyServiceId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badCompanySettingsBookingGroupInterval": {
+    "message": "",
+    "title": "Invalid time interval for group appointments. 😫"
+  },
+  "badCompanySettingsBookingInterval": {
+    "message": "",
+    "title": "Invalid time interval. 😫"
+  },
+  "badCompanyWorkerPermission": {
+    "message": "Invalid employee permissions. 😫",
+    "title": "Error in field:"
+  },
+  "badCompanyWorkerRole": {
+    "message": "Invalid employee role. 😫",
+    "title": "Error in field:"
+  },
+  "badCompanyWorkerSettingsId": {
+    "message": "Employee not found.",
+    "title": "Error in field:"
+  },
+  "badCompanyWorkersIds": {
+    "message": "",
+    "title": "No employees selected. 😫"
+  },
+  "badCompanyWorkersSettingsIds": {
+    "message": "",
+    "title": "No employees selected. 😫"
+  },
+  "badCountry": {
+    "message": "Invalid country. 😫",
+    "title": "Error in field:"
+  },
+  "badCouponId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badData": {
+    "message": "Something is wrong with the data.",
+    "title": "Invalid data. 😓"
+  },
+  "badDays": {
+    "message": "Invalid days of the week.",
+    "title": "Error in field:"
+  },
+  "badDiscountsInCoupon": {
+    "message": "",
+    "title": "Something’s wrong with the coupon discounts. 😐"
+  },
+  "badEmailOrPassword": {
+    "message": "Incorrect email or password.",
+    "title": "Login error. 😥"
+  },
+  "badExchangeId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badInvoiceId": {
+    "message": "Invoice not found.",
+    "title": "Error in field:"
+  },
+  "badLanguages": {
+    "message": "Something’s wrong with the user language.",
+    "title": "Error in field:"
+  },
+  "badListingAccess": {
+    "message": "Invalid access. 😫",
+    "title": "Error in field:"
+  },
+  "badListingArea": {
+    "message": "The specified area is invalid.",
+    "title": "Error in field:"
+  },
+  "badListingAvailableFrom": {
+    "message": "The available from date is invalid.",
+    "title": "Error in field:"
+  },
+  "badListingAvailableTo": {
+    "message": "The available to date is invalid.",
+    "title": "Error in field:"
+  },
+  "badListingCategories": {
+    "message": "Invalid listing categories.",
+    "title": "Error in field:"
+  },
+  "badListingCategory": {
+    "message": "Invalid listing category.",
+    "title": "Error in field:"
+  },
+  "badListingCity": {
+    "message": "Invalid city for listing.",
+    "title": "Error in field:"
+  },
+  "badListingComfortOption": {
+    "message": "Invalid comfort option.",
+    "title": "Error in field:"
+  },
+  "badListingComfortOptions": {
+    "message": "Invalid comfort options. 😫",
+    "title": "Error in field:"
+  },
+  "badListingCondition": {
+    "message": "Invalid condition. 😫",
+    "title": "Error in field:"
+  },
+  "badListingContainerType": {
+    "message": "Invalid container type. 😫",
+    "title": "Error in field:"
+  },
+  "badListingContainerTypes": {
+    "message": "Invalid container types.",
+    "title": "Error in field:"
+  },
+  "badListingContractType": {
+    "message": "Invalid listing type. 😫",
+    "title": "Error in field:"
+  },
+  "badListingDeleteReason": {
+    "message": "Invalid listing deletion reason. 😫",
+    "title": "Error in field:"
+  },
+  "badListingDescription": {
+    "message": "Please check the listing description and try again.",
+    "title": "Something is wrong with the listing description 😓"
+  },
+  "badListingDistrict": {
+    "message": "Invalid district name.",
+    "title": "Error in field:"
+  },
+  "badListingEntryOption": {
+    "message": "Invalid entry option.",
+    "title": "Error in field:"
+  },
+  "badListingEntryOptions": {
+    "message": "Invalid entry options. 😫",
+    "title": "Error in field:"
+  },
+  "badListingExtension": {
+    "message": "Invalid number of extension months.",
+    "title": "Error in field:"
+  },
+  "badListingFloorLevel": {
+    "message": "Invalid floor level.",
+    "title": "Error in field:"
+  },
+  "badListingId": {
+    "message": "Listing not found.",
+    "title": "Error in field:"
+  },
+  "badListingMinimumRentalDays": {
+    "message": "Invalid minimum rental days.",
+    "title": "Error in field:"
+  },
+  "badListingParkingType": {
+    "message": "Invalid parking type. 😫",
+    "title": "Error in field:"
+  },
+  "badListingParkingTypes": {
+    "message": "Invalid parking types.",
+    "title": "Error in field:"
+  },
+  "badListingPlotType": {
+    "message": "Invalid plot type. 😫",
+    "title": "Field error:"
+  },
+  "badListingPlotTypes": {
+    "message": "Invalid plot types.",
+    "title": "Error in field:"
+  },
+  "badListingPrice": {
+    "message": "The specified price is invalid.",
+    "title": "Error in field:"
+  },
+  "badListingRentalDays": {
+    "message": "Invalid number of rental days.",
+    "title": "Error in field:"
+  },
+  "badListingSecurityOption": {
+    "message": "Invalid security option.",
+    "title": "Error in field:"
+  },
+  "badListingSecurityOptions": {
+    "message": "Invalid security options. 😫",
+    "title": "Error in field:"
+  },
+  "badListingStatus": {
+    "message": "Invalid listing status.",
+    "title": "Error in field:"
+  },
+  "badListingTitle": {
+    "message": "Please check the listing title and try again.",
+    "title": "Something is wrong with the listing title 😓"
+  },
+  "badListingType": {
+    "message": "Invalid listing type.",
+    "title": "Error in field:"
+  },
+  "badListingUnitType": {
+    "message": "Invalid unit type. 😫",
+    "title": "Field error:"
+  },
+  "badListingUnitTypes": {
+    "message": "Invalid unit types.",
+    "title": "Error in field:"
+  },
+  "badListingUsageOption": {
+    "message": "Invalid usage option.",
+    "title": "Error in field:"
+  },
+  "badListingUsageOptions": {
+    "message": "Invalid usage options. 😫",
+    "title": "Error in field:"
+  },
+  "badListingUtilityOption": {
+    "message": "Invalid utility option.",
+    "title": "Error in field:"
+  },
+  "badListingUtilityOptions": {
+    "message": "Invalid utility options. 😫",
+    "title": "Error in field:"
+  },
+  "badLocationId": {
+    "message": "Location not found.",
+    "title": "Error in field:"
+  },
+  "badLocationsPriority": {
+    "message": "",
+    "title": "Something’s wrong with the locations. 😐"
+  },
+  "badPassword": {
+    "message": "Check the password correctness.",
+    "title": "Password is incorrect. 😫"
+  },
+  "badPasswordRepeat": {
+    "message": "Passwords do not match.",
+    "title": "Error in field:"
+  },
+  "badPaymentMethodId": {
+    "message": "Something’s wrong with the card.",
+    "title": "Error in field:"
+  },
+  "badPhoneCountryCode": {
+    "message": "Invalid country code value.",
+    "title": "Error in field:"
+  },
+  "badPhoneNumber": {
+    "message": "Invalid phone number.",
+    "title": "Error in field:"
+  },
+  "badPlanId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badPlanInterval": {
+    "message": "",
+    "title": "Invalid plan interval. 😫"
+  },
+  "badPlanType": {
+    "message": "",
+    "title": "Invalid plan type. 😫"
+  },
+  "badPromotionCodeOrBadPlan": {
+    "message": "",
+    "title": "We couldn’t find this promo code, or it’s not available for the selected plan. 😓"
+  },
+  "badRecaptcha": {
+    "message": "Are you sure you’re not a robot?",
+    "title": "Recaptcha error. 😐"
+  },
+  "badReportDescription": {
+    "message": "Invalid report description.",
+    "title": "Error in field:"
+  },
+  "badReportType": {
+    "message": "Invalid report type.",
+    "title": "Error in field:"
+  },
+  "badShoppingCartId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badSubscriptionId": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "badTaxCountry": {
+    "message": "Invalid tax country.",
+    "title": "Error in field:"
+  },
+  "badUploadImagesGroupId": {
+    "message": "Invalid upload images group identifier.",
+    "title": "Field error:"
+  },
+  "badUrlFacebook": {
+    "message": "Invalid Facebook profile link.",
+    "title": "Error in field:"
+  },
+  "badUrlInstagram": {
+    "message": "Invalid Instagram profile link.",
+    "title": "Error in field:"
+  },
+  "badUrlTikTok": {
+    "message": "Invalid TikTok profile link.",
+    "title": "Error in field:"
+  },
+  "badUserId": {
+    "message": "User not found.",
+    "title": "Error in field:"
+  },
+  "badUserName": {
+    "message": "",
+    "title": "Invalid user name. 😫"
+  },
+  "bugErrorMessage": {
+    "message": "Invalid value.",
+    "title": "Error in field:"
+  },
+  "bugImagesMax3": {
+    "message": "",
+    "title": "You can upload up to 3 images. 😫"
+  },
+  "canNotBeEmail": {
+    "message": "The value cannot be an email address.",
+    "title": "Error in field:"
+  },
+  "canceledSubscription": {
+    "message": "The subscription will remain active until the end of the current billing period.",
+    "title": "Your subscription has been set to expire. 😥"
+  },
+  "canceledSubscriptionImmediately": {
+    "message": "The expiration period has been shortened and the subscription has expired immediately.",
+    "title": "Your subscription has been canceled. 😥"
+  },
+  "canceledSubscriptionNoActive": {
+    "message": "",
+    "title": "Your subscription has been canceled. 😥"
+  },
+  "cardAuthenticationRequired": {
+    "message": "Your payment requires additional authentication. Please follow your bank’s instructions or try again using the correct authentication method.",
+    "title": "Authentication required. 😐"
+  },
+  "cardDeclined": {
+    "message": "Your payment failed because the card was declined. Please check your card details or contact your card issuer for more information.",
+    "title": "Card was declined. 😐"
+  },
+  "cardExpired": {
+    "message": "Your payment failed because the card has expired. Please use a different card or update the expiration date with your card issuer.",
+    "title": "Card has expired. 😐"
+  },
+  "cardIncorrectCvc": {
+    "message": "Your payment failed because the CVC code entered is incorrect. Please verify your card details and try again.",
+    "title": "Invalid CVC code. 😐"
+  },
+  "cardProcessingError": {
+    "message": "An error occurred while processing your payment. Please try again later or contact support if the problem persists.",
+    "title": "Payment processing error. 😐"
+  },
+  "cardRequires3DS": {
+    "message": "Your card requires additional authentication (3D Secure), which could not be completed. Please try again or use a different payment method.",
+    "title": "Unable to complete payment. 😭"
+  },
+  "categoryChangeAlert": {
+    "message": "Changing the listing category has reset detailed information fields.",
+    "title": "Detailed information changed. 😊"
+  },
+  "cityChangeAlert": {
+    "message": "Changing the city has reset fields related to location.",
+    "title": "City changed. 😊"
+  },
+  "companyDaysOffExist": {
+    "message": "",
+    "title": "The selected range cannot be marked as days off because at least one of them is already marked as such. 😐"
+  },
+  "companyDaysOffStartTimeIsGreaterThanEndTime": {
+    "message": "",
+    "title": "The start date of days off cannot be later than the end date. 😐"
+  },
+  "companyHasActiveListings": {
+    "message": "The company has active listings. Please remove or deactivate them before deleting the account.",
+    "title": "Account cannot be deleted. 😕"
+  },
+  "companyHasActiveSubscription": {
+    "message": "",
+    "title": "The company already has an active subscription! 😊"
+  },
+  "companyHasReferral": {
+    "message": "",
+    "title": "The company already has a referral system. 😊"
+  },
+  "companyHasWorkers": {
+    "message": "Remove all employees (except the owner) before continuing the company account deletion process.",
+    "title": "Account cannot be deleted because there are still employees in the company. 😫"
+  },
+  "companyNameAlreadyExist": {
+    "message": "Please enter a different company name.",
+    "title": "Company name is already taken. 😫"
+  },
+  "companyOpeningHourDayExistInLocation": {
+    "message": "",
+    "title": "Opening hours for the selected days are already assigned to one of the locations. 😐"
+  },
+  "companyOpeningHourStartTimeIsGreaterThanEndTime": {
+    "message": "",
+    "title": "The opening time cannot be later than the closing time. 😐"
+  },
+  "companySettingsNoDetectedEmailOtpOr2FA": {
+    "message": "This is required in your company. Please enable one of the security options in your account settings.",
+    "title": "Neither Email OTP nor 2FA is enabled on your account! 😫"
+  },
+  "companySettingsRequireLoginForm": {
+    "message": "",
+    "title": "At least one login method is required! 😫"
+  },
+  "companyWorkerNonStandardDatesIsNotUnique": {
+    "message": "Please check the custom days.",
+    "title": "Some custom days overlap with each other. 😐"
+  },
+  "contractTypeChangeAlert": {
+    "message": "Changing the listing type has reset the ‘listing type’ and ‘price’ fields.",
+    "title": "Category changed. 😊"
+  },
+  "couponCodeExists": {
+    "message": "",
+    "title": "This promo code already exists. 😐"
+  },
+  "disabledAuthenticator": {
+    "message": "From now on, performing certain actions on your account will no longer require a verification code.",
+    "title": "Two-step authentication has been disabled. 😓"
+  },
+  "districtMissing": {
+    "message": "Please select a district to continue.",
+    "title": "District not selected. 😓"
+  },
+  "districtNotFound": {
+    "message": "Check whether the district is correct and try again.",
+    "title": "District not found. 😓"
+  },
+  "emailOTPExpiry": {
+    "message": "Send the authorization code again.",
+    "title": "The code has expired. 😢"
+  },
+  "errorCardCvc": {
+    "message": "",
+    "title": "No CVC code was entered for the card. 😐"
+  },
+  "errorCardExpiry": {
+    "message": "",
+    "title": "No card expiration date entered, or the card has expired. 😐"
+  },
+  "errorCardNumber": {
+    "message": "",
+    "title": "Invalid card number. 😐"
+  },
+  "errorCodeOnVerifiedPhone": {
+    "message": "",
+    "title": "The authorization code is incorrect. 😫"
+  },
+  "errorExtensionListing": {
+    "message": "",
+    "title": "Listing extension has been canceled. 😢"
+  },
+  "errorInGeolocation": {
+    "message": "An unidentified error occurred.",
+    "title": "Something went wrong while generating map coordinates. 😓"
+  },
+  "errorInPaymentMethod": {
+    "message": "",
+    "title": "No card data entered. 😐"
+  },
+  "errorOnAdded2FA": {
+    "message": "Please check if the code you entered is correct.",
+    "title": "Error while adding 2FA authentication 🥲."
+  },
+  "errorOnCreateBlogPostTitleAlreadyExists": {
+    "message": "This blog cannot be created because another blog has a very similar title. Please choose a more unique title and try again.",
+    "title": "Blog cannot be created. 😐"
+  },
+  "errorOnDeleteCompanyCardCompanyHasActiveSubscription": {
+    "message": "This payment card cannot be deleted because it is currently linked to an active subscription. To delete it, please cancel the subscription first. If you only want to change the payment card, you don’t need to remove this one — simply update it, and the new card will automatically replace the old one for subscription billing.",
+    "title": "Cannot delete the company payment card. 😐"
+  },
+  "errorOnLoadRecaptcha": {
+    "message": "Something went wrong.",
+    "title": "Error in field:"
+  },
+  "errorOnLoginCompany": {
+    "message": "It is currently not possible to log in to a company account.",
+    "title": "Login error 🥲"
+  },
+  "errorOnRegisterCompany": {
+    "message": "It is currently not possible to register a company account.",
+    "title": "Registration error 🥲"
+  },
+  "errorOnSendSMS": {
+    "message": "An unexpected error occurred.",
+    "title": "Error while sending SMS code. 😓"
+  },
+  "errorReportAlreadyExists": {
+    "message": "",
+    "title": "A similar report already exists. 👀"
+  },
+  "errorsInForm": {
+    "message": "Please correct the errors and then continue with the action. 😊",
+    "title": "Form errors"
+  },
+  "errorsInFormAuthenticator": {
+    "message": "You cannot use both two-factor authentication (2FA) and a one-time password (OTP) sent to your email at the same time. Please select only one of these authentication methods.",
+    "title": "Only one form of two-step authentication is allowed. 😐"
+  },
+  "exchangeExist": {
+    "message": "",
+    "title": "A point-to-SMS exchange with similar parameters already exists. 😫"
+  },
+  "exchangeMustHaveSubscriptionFreeDays": {
+    "message": "",
+    "title": "The exchange must include free subscription days. 😐"
+  },
+  "exchangeNoExist": {
+    "message": "",
+    "title": "The point-to-SMS exchange does not exist. 😫"
+  },
+  "exchangeSubscriptionOnlyOneInMonth": {
+    "message": "You can exchange points for additional subscription days only once per billing period.",
+    "title": "Point exchange limit reached. 😔"
+  },
+  "failedToMoveImages": {
+    "message": "Failed to move images. Please try again or contact the administrator.",
+    "title": "Image transfer error. 😓"
+  },
+  "failureStripeCallback": {
+    "message": "Try registering your Stripe account again.",
+    "title": "Error while creating Stripe account. 😥"
+  },
+  "fileAlreadyExists": {
+    "message": "The file {{fileName}} has already been added.",
+    "title": "Image already exists"
+  },
+  "fileTooLarge": {
+    "message": "The file {{fileName}} exceeds the allowed 2MB size limit.",
+    "title": "File too large"
+  },
+  "foundPlatformSettingsWithPlan": {
+    "message": "The plan is linked to the platform settings.",
+    "title": "The plan cannot be deleted. 😓"
+  },
+  "foundProduct": {
+    "message": "",
+    "title": "A price list with these parameters already exists in the system."
+  },
+  "freeListingsLimitReached": {
+    "message": "You have reached the maximum number of free listings.",
+    "title": "Free listings limit reached. ⚠️"
+  },
+  "goodPromotionCode": {
+    "message": "",
+    "title": "Promo code found! 😍"
+  },
+  "inProgressPhoneChange": {
+    "message": "The phone number change is in progress. To continue, please complete the verification or cancel the change.",
+    "title": "Phone number change in progress 🔄"
+  },
+  "invoiceSendToEmail": {
+    "message": "",
+    "title": "The invoice has been sent to your email address. 😍"
+  },
+  "limitChangeEmail": {
+    "message": "The daily email change limit has been reached (1 change per day).",
+    "title": "Email address cannot be changed right now. 😢"
+  },
+  "limitSendPhoneCode": {
+    "message": "The daily limit for sending verification codes to your phone number has been reached.",
+    "title": "Error while sending SMS code. 😓"
+  },
+  "limitUpdatePhoneCode": {
+    "message": "The daily phone number change limit has been reached.",
+    "title": "Error while changing phone number. 😓"
+  },
+  "listingChangeAvailableTo": {
+    "message": "Changing the start date of the listing’s availability has reset the end date field.",
+    "title": "Listing availability date changed. 😊"
+  },
+  "listingNotFound": {
+    "message": "The listing you are looking for does not exist or has been removed.",
+    "title": "Listing not found. 😓"
+  },
+  "listingTypeChangeAlert": {
+    "message": "Changing the listing type has reset the listing category field.",
+    "title": "Listing type changed. 😊"
+  },
+  "listingsImagesMax5": {
+    "message": "",
+    "title": "You can upload up to 5 images. 😫"
+  },
+  "locationNotFound": {
+    "message": "Make sure the entered data is correct and try again.",
+    "title": "Location could not be found. 😓"
+  },
+  "locationOverMaxArea": {
+    "message": "The selected location is outside the maximum search area.",
+    "title": "Location out of range. 😓"
+  },
+  "loginFromFacebook": {
+    "message": "",
+    "title": "Logging in with Facebook is not available for this company. 😐"
+  },
+  "loginFromGoogle": {
+    "message": "",
+    "title": "Logging in with Google is not available for this company. 😐"
+  },
+  "loginFromPassword": {
+    "message": "",
+    "title": "Password login is not available for this company. 😐"
+  },
+  "mustHaveAtLeastOneLocation": {
+    "message": "You cannot delete the company’s only location.",
+    "title": "You must have at least one location. 😐"
+  },
+  "mustHaveOnlyOneLocation": {
+    "message": "",
+    "title": "You cannot have two identical locations. 😐"
+  },
+  "newUserEmailTheSame": {
+    "message": "Use a different email address.",
+    "title": "The new email address is the same as the one currently in use. 🤨"
+  },
+  "newUserPhoneTheSame": {
+    "message": "Use a different phone number.",
+    "title": "The new phone number is the same as the one currently in use. 🤨"
+  },
+  "noActivePhoneNumber": {
+    "message": "To perform this action, you must have a verified phone number assigned to your profile.",
+    "title": "No verified phone number. 😐"
+  },
+  "noActivePhoneNumberCompany": {
+    "message": "To perform this action, the company must have a verified phone number.",
+    "title": "No verified company phone number. 😐"
+  },
+  "noAddedPercentOrAmountToCoupon": {
+    "message": "",
+    "title": "No discount added to the coupon. 😐"
+  },
+  "noBoolean": {
+    "message": "Invalid value.",
+    "title": "Error in field:"
+  },
+  "noChangesToShow": {
+    "message": "No new or updated information found to display at this time.",
+    "title": "No changes to display. 😅"
+  },
+  "noCheckedCheckbox": {
+    "message": "Checkbox not selected.",
+    "title": "Error in field:"
+  },
+  "noCheckedCheckboxCreateListing": {
+    "message": "Consent required",
+    "title": "You must agree to the Service Agreement in order to create a listing."
+  },
+  "noCheckedCheckboxRegulations": {
+    "message": "Welcome!",
+    "title": "You must accept the Terms of Service and Privacy Policy to create an account."
+  },
+  "noCheckedRecaptcha": {
+    "message": "Are you sure you’re not a robot? 😐",
+    "title": "Error in field:"
+  },
+  "noDate": {
+    "message": "Must be a valid date.",
+    "title": "Error in field:"
+  },
+  "noEmail": {
+    "message": "Must be a valid email address.",
+    "title": "Error in field:"
+  },
+  "noEnoughPoints": {
+    "message": "You don’t have enough points to perform this action.",
+    "title": "Insufficient points. 😫"
+  },
+  "noEnoughSms": {
+    "message": "You don’t have enough SMS credits to perform this action.",
+    "title": "Insufficient number of SMS messages. 😫"
+  },
+  "noFile": {
+    "message": "Must be a file.",
+    "title": "Error in field:"
+  },
+  "noFileImage2MB": {
+    "message": "Invalid image format or size.",
+    "title": "Error in field:"
+  },
+  "noFileImage5MB": {
+    "message": "Invalid image format or size.",
+    "title": "Error in field:"
+  },
+  "noFileVideo100MB": {
+    "message": "Invalid video format or size.",
+    "title": "Error in field:"
+  },
+  "noFilesProvided": {
+    "message": "No files were provided.",
+    "title": "No files."
+  },
+  "noHasLowercase": {
+    "message": "Must contain at least one lowercase letter.",
+    "title": "Error in field:"
+  },
+  "noHasNumber": {
+    "message": "Must contain at least one number.",
+    "title": "Error in field:"
+  },
+  "noHasSpecialCharacter": {
+    "message": "Must contain at least one special character.",
+    "title": "Error in field:"
+  },
+  "noHasUppercase": {
+    "message": "Must contain at least one uppercase letter.",
+    "title": "Error in field:"
+  },
+  "noListingCategoryInListingType": {
+    "message": "",
+    "title": "Invalid listing category value. 😐"
+  },
+  "noListingContractType": {
+    "message": "",
+    "title": "Invalid listing type value. 😐"
+  },
+  "noListingMinimumRentalDays": {
+    "message": "",
+    "title": "Invalid minimum rental days value. 😐"
+  },
+  "noListingPlotType": {
+    "message": "",
+    "title": "Invalid plot type value. 😐"
+  },
+  "noListingUnitType": {
+    "message": "",
+    "title": "Invalid unit type value. 😐"
+  },
+  "noNeedActiveFreeTrial": {
+    "message": "To perform this action, you must have an active subscription.",
+    "title": "This action cannot be performed because you have an active free trial period. 😐"
+  },
+  "noNumber": {
+    "message": "Invalid value.",
+    "title": "Error in field:"
+  },
+  "noPermission": {
+    "message": "",
+    "title": "No permissions! 😠"
+  },
+  "noPromotionCode": {
+    "message": "",
+    "title": "No promo code. 😓"
+  },
+  "noSelectedListingCondition": {
+    "message": "Condition required",
+    "title": "You must select a condition to create the listing."
+  },
+  "noSelectedPlan": {
+    "message": "",
+    "title": "No plan selected. 😓"
+  },
+  "noString": {
+    "message": "Invalid value.",
+    "title": "Error in field:"
+  },
+  "noUrl": {
+    "message": "Invalid link.",
+    "title": "Error in field:"
+  },
+  "notFoundAllWorkersSettingsIds": {
+    "message": "",
+    "title": "Not all listed employees were found. 😐"
+  },
+  "notFoundBlogPost": {
+    "message": "",
+    "title": "Blog not found. 😓"
+  },
+  "notFoundCompanyId": {
+    "message": "Are you sure you received the correct link?",
+    "title": "Company not found. 😐"
+  },
+  "notFoundCompanyTaxNumber": {
+    "message": "Check the entered number and try again.",
+    "title": "We couldn’t find a company with that tax number. 😐"
+  },
+  "notFoundCoupon": {
+    "message": "",
+    "title": "Coupon not found. 😓"
+  },
+  "notFoundInvoice": {
+    "message": "Please contact our support team.",
+    "title": "Invoice not found. 😓"
+  },
+  "notFoundPlan": {
+    "message": "",
+    "title": "Plan not found. 😓"
+  },
+  "notFoundPlanForFreeTrial": {
+    "message": "Please contact our support team.",
+    "title": "Plan for free trial not found. 😐"
+  },
+  "notFoundProduct": {
+    "message": "",
+    "title": "Price list not found. 😐"
+  },
+  "notFoundReferral": {
+    "message": "",
+    "title": "Referral code not found. 😓"
+  },
+  "notFoundUser": {
+    "message": "Please log in again.",
+    "title": "User not found. 😓"
+  },
+  "notFoundUserWithoutMessage": {
+    "message": "",
+    "title": "User not found. 😓"
+  },
+  "passwordSameAsPrevious": {
+    "message": "The entered password is identical to the previous one. Please choose a different password to update it.",
+    "title": "You cannot use the same password 🔒"
+  },
+  "pastDateError": {
+    "message": "You cannot select a past date. Please choose the current or a future date.",
+    "title": "Action cannot be performed because the selected date is outdated. 📅"
+  },
+  "planExist": {
+    "message": "",
+    "title": "A plan with similar parameters already exists. 😫"
+  },
+  "planId": {
+    "message": "Plan not found.",
+    "title": "Error in field:"
+  },
+  "priceRequiredWhenTaxIsDefined": {
+    "message": "",
+    "title": "If the service price is 0 PLN, the tax amount must also be 0%."
+  },
+  "rateLimitExceeded": {
+    "message": "You have performed too many actions in a short period of time. Please try again in a moment.",
+    "title": "Too many requests. 😵"
+  },
+  "recoveryAccountBadCodeReset2FA": {
+    "message": "Please check if the code is correct.",
+    "title": "The 2FA reset code is invalid. 😫"
+  },
+  "recoveryAccountExpires": {
+    "message": "The user was not found, or the password reset code has expired.",
+    "title": "Something went wrong while recovering your account. 😓"
+  },
+  "recoveryAccountSuccess": {
+    "message": "You can now log in using your new password.",
+    "title": "Your account password has been changed! 😍"
+  },
+  "recoveryLinkFail": {
+    "message": "Please check your email again and click the correct link.",
+    "title": "The password reset link is invalid. 😫"
+  },
+  "recoveryLinkHasBeenSend": {
+    "message": "We’ve just sent you an email with a password reset link. Check your inbox!",
+    "title": "Link has been sent! 😍"
+  },
+  "recoveryReset2FAAccountSuccess": {
+    "message": "Your account no longer has active 2FA authorization.",
+    "title": "2FA authorization has been disabled! 😀"
+  },
+  "reportDescriptionRequired": {
+    "message": "",
+    "title": "Report description is required."
+  },
+  "searchListingsError": {
+    "message": "",
+    "title": "Something went wrong while searching for listings. 😕"
+  },
+  "sendedCodeToConfirmEmail": {
+    "message": "We’ve sent a verification code to the provided email address. You can now confirm it!",
+    "title": "Verification code sent to email! 😀"
+  },
+  "serviceRequiredActiveSubscriptionOrFreeTrial": {
+    "message": "To use this service, you must have an active subscription plan or be within a free trial period.",
+    "title": "The account has no active subscription. 😫"
+  },
+  "sessionExpired": {
+    "message": "",
+    "title": "Session has expired. 😐"
+  },
+  "somethingWentWrong": {
+    "message": "An unidentified error occurred.",
+    "title": "Something went wrong. 😓"
+  },
+  "successAddCompanyToFavorites": {
+    "message": "",
+    "title": "Company has been added to favorites! 😀"
+  },
+  "successBackupEmail": {
+    "message": "",
+    "title": "Email address has been restored! 😎"
+  },
+  "successBugPointsPaid": {
+    "message": "",
+    "title": "Bug report points have been paid out! 😀"
+  },
+  "successBugUpdate": {
+    "message": "",
+    "title": "Bug report has been updated! 😀"
+  },
+  "successConfirmEmail": {
+    "message": "You can now log in using your new email address.",
+    "title": "Email address verified! 😀"
+  },
+  "successConfirmEmailAndSendSMS": {
+    "message": "You can now confirm your phone number.",
+    "title": "Email address verified! 😀"
+  },
+  "successCopyCode": {
+    "message": "",
+    "title": "Code copied to clipboard. 😊"
+  },
+  "successCopyLink": {
+    "message": "",
+    "title": "Link copied to clipboard. 😊"
+  },
+  "successCopyUrl": {
+    "message": "",
+    "title": "URL copied to clipboard. 😊"
+  },
+  "successCreateBlogPost": {
+    "message": "",
+    "title": "Blog has been created! 😀"
+  },
+  "successCreateBug": {
+    "message": "",
+    "title": "Bug report submitted! 😀"
+  },
+  "successCreateCompanyDaysOff": {
+    "message": "",
+    "title": "Company days off have been added for all employees. 😍"
+  },
+  "successCreateCompanyOpeningHours": {
+    "message": "",
+    "title": "Opening hours have been added. 😍"
+  },
+  "successCreateCompanyService": {
+    "message": "",
+    "title": "New service has been added! 😀"
+  },
+  "successCreateCompanyWorkerDaysOff": {
+    "message": "",
+    "title": "Employee days off have been added. 😍"
+  },
+  "successCreateCoupon": {
+    "message": "",
+    "title": "Coupon has been created! 😀"
+  },
+  "successCreateExchange": {
+    "message": "",
+    "title": "Point-to-SMS exchange has been created! 😀"
+  },
+  "successCreateListing": {
+    "message": "",
+    "title": "Listing has been created! 😀"
+  },
+  "successCreateListingCompany": {
+    "message": "",
+    "title": "Company listing has been created! 😀"
+  },
+  "successCreateListingCompanyToPay": {
+    "message": "To make the listing visible to others, please complete the payment.",
+    "title": "Company listing created - awaiting payment! 😀"
+  },
+  "successCreateListingToPay": {
+    "message": "To make the listing visible to others, please complete the payment.",
+    "title": "Listing created - awaiting payment! 😀"
+  },
+  "successCreateLocation": {
+    "message": "",
+    "title": "Location has been created! 😀"
+  },
+  "successCreateOrUpdateAccountLocation": {
+    "message": "",
+    "title": "Mobile service location data has been updated! 😀"
+  },
+  "successCreatePlan": {
+    "message": "",
+    "title": "Plan has been created! 😀"
+  },
+  "successCreatePlatformSettings": {
+    "message": "",
+    "title": "Platform settings have been created! 😀"
+  },
+  "successCreateProduct": {
+    "message": "",
+    "title": "Price list has been created! 😀"
+  },
+  "successCreateReferral": {
+    "message": "You can now share links, QR codes, and referral codes to earn extra rewards!",
+    "title": "Referral system has been created! 😍"
+  },
+  "successCreateService": {
+    "message": "",
+    "title": "Service has been created! 😀"
+  },
+  "successCreateSubscription": {
+    "message": "",
+    "title": "Subscription has been created! 😀"
+  },
+  "successDeleteBlogPost": {
+    "message": "",
+    "title": "Blog has been deleted. 🤨"
+  },
+  "successDeleteCompany": {
+    "message": "Company has been successfully deleted! 😊",
+    "title": ""
+  },
+  "successDeleteCompanyOpeningHours": {
+    "message": "",
+    "title": "Opening hours have been deleted. 😊"
+  },
+  "successDeleteCompanyWorker": {
+    "message": "Employee has been successfully deleted! 😊",
+    "title": ""
+  },
+  "successDeleteCoupon": {
+    "message": "",
+    "title": "Coupon has been deleted. 🤨"
+  },
+  "successDeleteExchange": {
+    "message": "",
+    "title": "Point-to-SMS exchange has been deleted! 😀"
+  },
+  "successDeleteListing": {
+    "message": "",
+    "title": "Listing has been deleted! 🥲"
+  },
+  "successDeleteListingCompany": {
+    "message": "",
+    "title": "Company listing has been deleted! 🥲"
+  },
+  "successDeleteLocation": {
+    "message": "",
+    "title": "Location has been deleted. 😊"
+  },
+  "successDeletePlan": {
+    "message": "",
+    "title": "Plan has been deleted. 🤨"
+  },
+  "successDeleteService": {
+    "message": "",
+    "title": "Service has been deleted! 😊"
+  },
+  "successDeleteShoppingCart": {
+    "message": "",
+    "title": "Booking has been removed from the cart. 😉"
+  },
+  "successDeleteUserLocation": {
+    "message": "",
+    "title": "Location data has been deleted. 😊"
+  },
+  "successExchange": {
+    "message": "",
+    "title": "Points successfully exchanged for SMS credits! 😀"
+  },
+  "successExtendCompanyListing": {
+    "message": "",
+    "title": "Listing has been extended! 😀"
+  },
+  "successExtensionListing": {
+    "message": "",
+    "title": "Listing has been extended! 😀"
+  },
+  "successExtensionListingCompany": {
+    "message": "",
+    "title": "Company listing has been extended! 😀"
+  },
+  "successExtensionListingPaymentIntent": {
+    "message": "Payment has been received. Some details, such as the invoice or status, may still be processing and will appear soon.",
+    "title": "Listing extended! 😀"
+  },
+  "successExtensionListingPaymentIntent3DS": {
+    "message": "Payment authorization in progress. Please wait — details will appear once it’s complete.",
+    "title": "Your payment is being processed ⏳"
+  },
+  "successOnSendSMS": {
+    "message": "",
+    "title": "SMS code sent! 😀"
+  },
+  "successOnVerifiedSMS": {
+    "message": "",
+    "title": "Phone number verified! 😀"
+  },
+  "successRegistrationCompany": {
+    "message": "",
+    "title": "Company registration completed successfully! 😍"
+  },
+  "successRegistrationCompanyWorker": {
+    "message": "The employee can now log in to their account to complete registration and start using the platform.",
+    "title": "Employee company account created successfully! 😍"
+  },
+  "successRegistrationUser": {
+    "message": "",
+    "title": "Registration completed successfully! 😍"
+  },
+  "successRemoveCompanyFromFavorites": {
+    "message": "",
+    "title": "Company has been removed from favorites. 🥲"
+  },
+  "successReportCreate": {
+    "message": "",
+    "title": "The report has been created! 😀"
+  },
+  "successRollBackCompanyPhoneToVerified": {
+    "message": "",
+    "title": "Company phone change reverted. 😊"
+  },
+  "successRollBackNewPhoneToVerified": {
+    "message": "",
+    "title": "Phone number addition has been reverted. 😊"
+  },
+  "successRollBackPhoneToVerified": {
+    "message": "",
+    "title": "Phone change reverted. 😊"
+  },
+  "successStripeCallback": {
+    "message": "You can now use payments on our platform!",
+    "title": "Stripe account has been created! 😍"
+  },
+  "successUpdateAccount": {
+    "message": "",
+    "title": "User profile updated! 😎"
+  },
+  "successUpdateBlogPost": {
+    "message": "",
+    "title": "Blog updated! 😀"
+  },
+  "successUpdateCompany": {
+    "message": "",
+    "title": "Company profile updated! 😎"
+  },
+  "successUpdateCompanyOpeningHours": {
+    "message": "",
+    "title": "Opening hours updated. 😍"
+  },
+  "successUpdateCompanyPhone": {
+    "message": "Enter the verification code we sent to your new phone number.",
+    "title": "Confirm your phone number change. 😊"
+  },
+  "successUpdateCompanyProfile": {
+    "message": "",
+    "title": "Company profile updated! 😎"
+  },
+  "successUpdateCompanySettings": {
+    "message": "",
+    "title": "Company settings updated! 😀"
+  },
+  "successUpdateCompanyWorkerPermissions": {
+    "message": "Employee permissions have been updated! 😀",
+    "title": ""
+  },
+  "successUpdateConsents": {
+    "message": "",
+    "title": "Marketing consents updated! 😀"
+  },
+  "successUpdateCoupon": {
+    "message": "",
+    "title": "Coupon updated! 😀"
+  },
+  "successUpdateExchange": {
+    "message": "",
+    "title": "Point-to-SMS exchange updated! 😀"
+  },
+  "successUpdateLanguage": {
+    "message": "",
+    "title": "Language updated! 😀"
+  },
+  "successUpdateListing": {
+    "message": "",
+    "title": "Listing updated! 😀"
+  },
+  "successUpdateListingCompany": {
+    "message": "",
+    "title": "Company listing updated! 😀"
+  },
+  "successUpdateLocation": {
+    "message": "",
+    "title": "Location updated! 😀"
+  },
+  "successUpdateLocationsPriority": {
+    "message": "",
+    "title": "Locations updated! 😀"
+  },
+  "successUpdateOfflineMode": {
+    "message": "Company visibility updated! 😀",
+    "title": ""
+  },
+  "successUpdatePhone": {
+    "message": "Enter the verification code we sent to your new phone number.",
+    "title": "Confirm your phone number change. 😊"
+  },
+  "successUpdatePlan": {
+    "message": "",
+    "title": "Plan updated! 😀"
+  },
+  "successUpdatePlatformSettings": {
+    "message": "",
+    "title": "Platform settings updated! 😀"
+  },
+  "successUpdateProduct": {
+    "message": "",
+    "title": "Price list updated! 😀"
+  },
+  "successUpdateService": {
+    "message": "",
+    "title": "Service updated! 😀"
+  },
+  "successUpdatedCard": {
+    "message": "",
+    "title": "Your card has been updated. 😍"
+  },
+  "successUpdatedInvoiceData": {
+    "message": "Please verify that all the details are correct.",
+    "title": "Invoice data updated. 😍"
+  },
+  "tooLong": {
+    "message": "Data is too long.",
+    "title": "Error in field:"
+  },
+  "tooManyFiles": {
+    "message": "Too many files were added.",
+    "title": "Too many files."
+  },
+  "tooManyImages": {
+    "message": "",
+    "title": "You can’t add more images — limit reached. 😅"
+  },
+  "tooManyWorkers": {
+    "message": "If you’d like to add another employee, please upgrade your subscription plan or adjust existing permissions.",
+    "title": "The maximum number of employees for your current plan has been reached. 😓"
+  },
+  "tooManyWorkersForSelectedPlan": {
+    "message": "Please upgrade your plan or reduce the number of employees to continue.",
+    "title": "The number of employees exceeds the limit for the selected plan. 😓"
+  },
+  "tooSmall": {
+    "message": "Invalid or too short value.",
+    "title": "Error in field:"
+  },
+  "uploadImageFailed": {
+    "message": "The image could not be uploaded. Please try again.",
+    "title": "Image upload failed. 😓"
+  },
+  "userEmailExisting": {
+    "message": "Use a different email address.",
+    "title": "An account with this email address already exists. 😓"
+  },
+  "userExisting": {
+    "message": "Use a different email address to create an account.",
+    "title": "An account with this email address already exists. 😓"
+  },
+  "userHasActiveListings": {
+    "message": "You have active listings. Please remove or deactivate them before deleting your account.",
+    "title": "Account cannot be deleted 😕"
+  },
+  "userIsBlocked": {
+    "message": "",
+    "title": "Account is blocked. 😐"
+  },
+  "userLoggedToSite": {
+    "message": "",
+    "title": "Successfully logged in to the platform! 😍"
+  },
+  "userLogout": {
+    "message": "",
+    "title": "Successfully logged out of the platform. 😊"
+  },
+  "userRegisteredToSite": {
+    "message": "Welcome!",
+    "title": "Account has been created! �"
+  },
+
+  "userTimeoutBlocked": {
+    "message": "Please wait a moment before performing the next action.",
+    "title": "Wait 5 seconds. �"
+  },
+  "waitForImagesUpload": {
+    "message": "Please wait until all images are uploaded.",
+    "title": "Images are still uploading ⏳"
+  }
+}

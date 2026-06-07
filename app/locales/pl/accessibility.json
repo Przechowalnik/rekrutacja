@@ -1,0 +1,11 @@
+{
+  "paragraph1": "W {{companyName}} zależy nam, aby każdy użytkownik mógł w pełni korzystać z naszej platformy - niezależnie od swoich potrzeb czy ograniczeń. Dlatego tworzymy rozwiązania, które są intuicyjne, praktyczne i dostępne. Serwis maszbox.pl oraz aplikację mobilną systematycznie rozwijamy i dostosowujemy, tak aby zapewniały komfortowe doświadczenie wszystkim użytkownikom.",
+  "paragraph2": "Strona {{companyName}} została przygotowana zgodnie ze standardami WCAG 2.1 na poziomie AA. Dzięki temu treści i funkcjonalności serwisu pozostają dostępne i czytelne dla szerokiego grona odbiorców.",
+  "paragraph3": "Obecnie {{companyName}} działa jako aplikacja PWA (Progressive Web App), którą można dodać na ekran główny telefonu i korzystać jak z tradycyjnej aplikacji. PWA zostało zaprojektowane z myślą o czytelności i obsłudze technologii wspierających, takich jak czytniki ekranu. W przyszłości planujemy również wdrożenie pełnoprawnej aplikacji mobilnej, która będzie spełniać wymogi dostępności cyfrowej.",
+  "paragraph4": "Dokładamy wszelkich starań, aby {{companyName}} był serwisem w pełni dostępnym i przyjaznym dla wszystkich użytkowników. Jeśli jednak zauważysz problemy z dostępnością strony internetowej lub aplikacji, prosimy o ich zgłoszenie.",
+  "paragraph5": "Możesz to zrobić poprzez formularz dostępny na stronie <a href='contact'>Kontakt</a>. Jeżeli jesteś zalogowany, masz także możliwość zgłaszania błędów bezpośrednio w panelu ustawień konta, w sekcji „Zgłoszone błędy”, gdzie możesz dodać nowe zgłoszenie oraz sprawdzić status wcześniejszych. Każde zgłoszenie jest dla nas ważne i dokładamy starań, aby reagować na nie jak najszybciej.",
+  "title1": "Dostępność dla wszystkich",
+  "title2": "Dostępność strony internetowej",
+  "title3": "Dostępność aplikacji mobilnej",
+  "title4": "Kontakt w sprawie dostępności"
+}

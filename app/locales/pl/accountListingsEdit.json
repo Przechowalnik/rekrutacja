@@ -1,0 +1,21 @@
+{
+  "alert": "Twoje ogłoszenie jest nieaktywne. Aby je aktywować, wystarczy przejść na <a custom='true' href='{{link}}'>stronę płatności</a> i wybrać sposób przedłużenia ogłoszenia.",
+  "buttonAdd": "Zapisz ogłoszenie",
+  "buttonDelete": "Usuń ogłoszenie",
+  "buttonPay": "Przejdź do płatności",
+  "buttonPayment": "Płatności",
+  "contactInteractions": "Wyświetlenia: {{viewsInteractions}}<br/>Kliknięcia w kontakt: {{contactInteractions}}",
+  "fieldsetInformation": "Informacje ogólne",
+  "fieldsetInformationFilters": "Informacje szczegółowe",
+  "fieldsetInformationsFilters": "Informacje szczegółowe",
+  "fieldsetLocation": "Adres lokalizacji",
+  "fieldsetPhone": "Numer kontaktowy",
+  "fieldsetPhoneDescription": "Numer telefonu widoczny w ogłoszeniu jest zawsze taki sam jak numer dodany i zweryfikowany na koncie i nie może być edytowany podczas tworzenia ogłoszenia. Aby użyć innego numeru telefonu, należy dodać i zweryfikować nowy numer na koncie. Takie rozwiązanie ma na celu ograniczenie oszustw, podszywania się oraz innych nadużyć.",
+  "fieldsetPrice": "Cena",
+  "hidden": "Ogłoszenie niewidoczne",
+  "information": "Twoje ogłoszenie jest aktywne do ({{date}}). Jeśli chcesz przedłużyć jego ważność, możesz to zrobić na <a custom='true' href='{{link}}'>stronie płatności</a>.<br/><br/>Wyświetlenia: {{viewsInteractions}}<br/>Wyświetlenia: {{viewsInteractions}}<br/>Kliknięcia w kontakt: {{contactInteractions}}",
+  "informationFreeListing": "Twoje ogłoszenie jest aktywne do ({{date}}).<br/><br/>Wyświetlenia: {{viewsInteractions}}<br/>Kliknięcia w kontakt: {{contactInteractions}}",
+  "title": "Edytuj ogłoszenie",
+  "warning": "Twoje ogłoszenie wygaśnie za mniej niż miesiąc ({{date}}).<br/>Jeśli chcesz je przedłużyć, przejdź na <a custom='true' href='{{link}}'>stronę płatności</a>.",
+  "warningSoon": "Ważność Twojego ogłoszenia wkrótce wygaśnie. Aby uniknąć przerwy w jego emisji, możesz je przedłużyć już teraz na <a custom='true' href='{{link}}'>stronie płatności</a>."
+}

@@ -1,0 +1,330 @@
+{
+  "faq": {
+    "accountCompany": {
+      "addCard": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Update payment card</b> button.<br/><b>3.</b> Enter your card details, then click <b>Save</b>.",
+        "title": "Add a payment card"
+      },
+      "addCompanySocialLinks": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.<br/><b>3.</b> Click <b>Edit</b>.<br/><b>4.</b> In the appropriate fields, enter links to your company’s <b>Instagram</b>, <b>Facebook</b>, or <b>TikTok</b> profiles.<br/><b>5.</b> After entering all the details, click <b>Save</b>.",
+        "title": "Add company social media links"
+      },
+      "addEmployee": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Employees</b> button.<br/><b>3.</b> Click <b>Add employee</b>.<br/><b>4.</b> Choose one of the available methods to add an employee:<br/>- <b>Manual addition:</b> Fill in all required fields (first name, last name, email address, password, etc.), then click <b>Create employee account</b>.<br/>- <b>Send an invitation:</b> Click <b>Send registration link</b> to invite the employee. They can register on their own using the link provided.<br/><br/><b>Note:</b> After adding or registering an employee, they will automatically be assigned to your company and gain access to the business account according to the permissions you’ve granted.",
+        "title": "Add an employee to your company"
+      },
+      "addListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Add company listing</b> button.<br/><b>3.</b> Fill in all required listing fields such as title, description, category, price, and photos.<br/><b>4.</b> After completing the form:<br/>- if the listing is covered by an active subscription or is free, click <b>Add listing</b>,<br/>- if the listing requires payment, click <b>Proceed to payment</b> and complete the payment process.<br/><br/><b>Note:</b> The listing will be published only after it has been approved or after the required payment has been completed (if applicable). Make sure all information complies with the platform’s terms and conditions.",
+        "title": "Add a company listing"
+      },
+      "changeCompanyPhone": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Change phone number</b> button. Enter your new phone number, then click <b>Save</b>.<br/><b>3.</b> Confirm the new phone number by entering the verification code sent via SMS.<br/><b>4.</b> If the code is correct, the phone number will be successfully updated.<br/><br/><b>Note:</b> You can change your phone number only once per day!",
+        "title": "Change company phone number"
+      },
+      "checkCompanyPoints": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Points</b> or <b>Company points</b> button.<br/><b>3.</b> On the page, you will see the total number of points accumulated by your company and their sources.<br/><br/><b>Note:</b> Company points are awarded for:<br/>- reporting bugs by company employees,<br/>- activity in the <b>referral system</b> (recommending companies or users).<br/><br/>Collected points can be used in two ways:<br/>- to <b>create new listings</b> or <b>extend existing listings</b>,<br/>- to <b>exchange for additional premium days</b> in an active company subscription.<br/><br/>It’s worth checking your points balance regularly to make full use of available company benefits.",
+        "title": "Check company points balance"
+      },
+      "checkSubscriptionOrFreeTrial": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Subscriptions</b> button.",
+        "title": "Check subscription or free trial status"
+      },
+      "companyBugs": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button.<br/><br/><b>Note:</b> If you need to report a new bug, simply click the <b>Report new bug</b> button — you’ll be redirected to the user account bug reporting page. All bugs reported this way will be automatically assigned to your current company.",
+        "title": "View bugs reported by employees"
+      },
+      "companyBugsDetails": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button.<br/><br/><b>Note:</b> If you need to report a new bug, simply click the <b>Report new bug</b> button — you’ll be redirected to the user account bug reporting page. All bugs reported this way will be automatically assigned to your current company.",
+        "title": "View bug details reported by employees"
+      },
+      "createSubscription": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Subscriptions</b> button.<br/><b>3.</b> Select the plan that suits you best.<br/><b>4.</b> Enter a promo code <b>(optional)</b>.<br/><b>5.</b> Enter your payment card details if they haven’t been added yet.<br/><b>6.</b> Click <b>Activate subscription</b>.<br/><br/><b>Note:</b> You cannot create a new subscription if one is already active on the account. Additionally, if the entered promo code does not match the selected subscription, the purchase process will not be completed.",
+        "title": "Start a subscription"
+      },
+      "deleteCompany": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Delete company</b> button.<br/><b>3.</b> Fill in all required fields if they appear, then click <b>Confirm deletion</b>.<br/><br/><b>Note:</b> To delete a company, you must first remove or deactivate all active listings and end or cancel any active subscription. If any of these items remain active, company deletion will not be possible.",
+        "title": "Delete company account"
+      },
+      "deleteEmployee": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Employees</b> button.<br/><b>3.</b> Select the employee you want to remove from the list.<br/><b>4.</b> Click the <b>Delete employee account</b> button.<br/><b>5.</b> Enter the required data to confirm the operation.<br/><b>6.</b> Click <b>Delete employee account</b> again to confirm deletion.<br/><br/><b>Note:</b> Once deleted, the employee account will be permanently removed from the system.",
+        "title": "Remove an employee from the company"
+      },
+      "exchangePointsForSubscriptionDays": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Points</b> button.<br/><b>3.</b> Click the <b>Exchange points</b> button.<br/><b>4.</b> From the list (select), choose the appropriate exchange rate — for example, how many points you want to trade for additional premium subscription days.<br/><b>5.</b> After selecting the rate, click <b>Exchange</b>.<br/><br/><b>Note:</b> Additional premium days will be automatically added to your active subscription. The exchange is only possible if the company currently has an active subscription.",
+        "title": "Exchange points for additional free subscription days"
+      },
+      "extendListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company listings</b> button.<br/><b>3.</b> Select the listing you want to extend.<br/><b>4.</b> Go to the <b>Payments</b> tab.<br/><b>5.</b> Choose the <b>Extend listing</b> option and complete the payment if required.<br/><br/><b>Note:</b> Extending a listing requires an active subscription or valid payment. Once extended, the listing will remain visible without needing to be re-added.",
+        "title": "Extend company listing duration"
+      },
+      "findInvoices": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Invoices</b> button.<br/><b>3.</b> On this page, you’ll find a list of all invoices issued for services linked to your business account.<br/><b>4.</b> You can view details or send a selected invoice to your email address using the appropriate button.<br/><br/><b>Note:</b> Invoices are generated automatically after paying for a subscription or other services. Make sure your billing details are up to date in the <b>Update billing details</b> section.",
+        "title": "Where to find service invoices"
+      },
+      "freeTrial": {
+        "description": "To start a free trial, you must <b>create a new company account</b> that has <b>not been previously registered</b> in our system. Once the account is successfully created, a <b>30-day free trial period</b> will be activated for you.",
+        "title": "Free trial period"
+      },
+      "getInvoice": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Invoices</b> button.<br/><b>3.</b> Find the appropriate invoice and click the <b>Send</b> button.<br/><br/><b>Note:</b> If you enter an incorrect VAT number (Tax Identification Number), the invoice may be issued incorrectly. Double-check that all billing information is accurate.",
+        "title": "Send an invoice to your email address"
+      },
+      "information": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.",
+        "title": "Company information"
+      },
+      "informationEdit": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.<br/><b>3.</b> Click <b>Edit</b>.<br/><b>4.</b> Fill in all the fields you wish to update, then click <b>Save</b>.<br/><br/><b>Note:</b> If the company name is changed, the company profile URL will automatically update to reflect the new name.",
+        "title": "Update company information"
+      },
+      "invoiceData": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Invoices</b> button.<br/><b>3.</b> Click the <b>Update billing details</b> button.<br/><b>4.</b> Fill in all required fields, then click <b>Save</b>.<br/><br/><b>Note:</b> If you enter an incorrect VAT number (Tax Identification Number), the invoice may be issued incorrectly. Double-check that all billing information is accurate.",
+        "title": "Update billing details"
+      },
+      "manageEmployeePermissions": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Employees</b> button.<br/><b>3.</b> Select the employee whose permissions you want to modify.<br/><b>4.</b> Click the <b>Permissions</b> button.<br/><b>5.</b> Check or uncheck the appropriate boxes to adjust access to specific company account features.<br/><b>6.</b> After making changes, click <b>Save</b>.<br/><br/><b>Note:</b> Permission changes take effect immediately. Make sure the assigned permissions match the employee’s responsibilities.",
+        "title": "Manage employee permissions"
+      },
+      "manageLoginMethods": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Settings</b> button.<br/><b>3.</b> In the <b>Login methods</b> section, you can enable or disable login via <b>Password</b>, <b>Google</b>, or <b>Facebook</b>.<br/><b>4.</b> Make sure at least one login method remains enabled.<br/><b>5.</b> After making changes, click <b>Save</b>.<br/><br/><b>Note:</b> These changes apply to all company members. If a login method used by an employee is disabled, they’ll need to use another active login option.",
+        "title": "Manage company login methods (for owner)"
+      },
+      "registerCompanyAccount": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the <b>Register</b> button.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Register</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Choose <b>Create a business account</b>.<br/><b>3.</b> Fill in all required fields in the registration form, including company details (e.g. company name, VAT number, email address, password).<br/><b>4.</b> Accept the <b>terms of service</b> and optionally agree to marketing consents.<br/><b>5.</b> Click <b>Register company</b>.<br/><b>6.</b> If required, confirm your registration by clicking the activation link sent to your email.<br/><br/><b>Note:</b> After completing registration, you can immediately begin setting up your company account, add employees, and start using available business features.",
+        "title": "Register a company account"
+      },
+      "requireSecurityForEmployees": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Settings</b> button.<br/><b>3.</b> In the <b>Security</b> section, check the boxes next to <b>Require 2FA</b> or <b>Require Email OTP</b> for employees who haven’t yet enabled these protections.<br/><b>4.</b> After applying changes, click <b>Save</b>.<br/><br/><b>Note:</b> Enabling this option will require all company employees to activate the chosen security method during their next login, ensuring better protection for your business account and data.",
+        "title": "Require 2FA or Email OTP security for employees (for owner)"
+      },
+      "showBugDetails": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button, then find the report you want to view and click <b>Show details</b>.<br/><b>3.</b> The bug report details will display all information submitted during report creation. If our support team processes the report, additional details will appear, such as bug priority, points earned, and payout date (if applicable). If these details are not yet visible, please be patient — an update should be added within <b>5 business days</b>.",
+        "title": "View specific bug report details"
+      },
+      "showListings": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company listings</b> button.<br/><b>3.</b> Here you’ll find all listings added by your company — both active and expired ones.",
+        "title": "All company listings"
+      },
+      "startReferral": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Referral system</b> button.<br/><b>3.</b> Click <b>Start</b>.<br/><br/><b>Note:</b> Once the referral system is activated, you can share your referral code with users or companies to enter during registration. Clicking it copies the code to the clipboard. To print QR codes that allow users or companies to quickly create an account and receive benefits, click the <b>Print QR code</b> button.",
+        "title": "Referral system"
+      },
+      "title": "Business account",
+      "updateCard": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Update payment card</b> button.<br/><b>3.</b> Enter your card details, then click <b>Save</b>.",
+        "title": "Update payment card"
+      },
+      "updateCompanyAvatar": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.<br/><b>3.</b> Click <b>Add new logo</b> and choose an image from your device.<br/><b>4.</b> After selecting the file, click <b>Save</b>.<br/><br/><b>Note:</b> The company logo is publicly visible in your company profile and next to its listings. It is recommended to use a clear and recognizable logo or an image representing your brand.",
+        "title": "Update company logo"
+      },
+      "updateCompanyBanner": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.<br/><b>3.</b> Click <b>Add new banner</b> and choose an image from your device.<br/><b>4.</b> After selecting the file, click <b>Save</b>.<br/><br/><b>Note:</b> The banner is displayed at the top of your company profile. Use a high-quality image with proper proportions to ensure a professional appearance.",
+        "title": "Update company banner"
+      },
+      "updateCompanyDescription": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company information</b> button.<br/><b>3.</b> Click <b>Edit</b>.<br/><b>4.</b> In the <b>Company description</b> field, enter your new description text.<br/><b>5.</b> After editing, click <b>Save</b>.<br/><br/><b>Note:</b> The company description is publicly visible in your profile. It’s worth including key information about your business, services, and brand values.",
+        "title": "Update company description"
+      },
+      "updateEmployeeAvatar": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Employees</b> button.<br/><b>3.</b> Select the employee whose avatar you want to change.<br/><b>4.</b> Click the <b>Employee profile</b> button.<br/><b>5.</b> Click <b>Add profile photo</b>, select a new image from your device, and click <b>Save photo</b>.<br/><br/><b>Note:</b> The new employee profile photo is visible in their profile and in areas where they represent the company. It is recommended to use a clear, professional photo.",
+        "title": "Update employee profile photo"
+      },
+      "updateEmployeeName": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Employees</b> button.<br/><b>3.</b> Select the employee whose information you want to update.<br/><b>4.</b> Click the <b>Employee profile</b> button.<br/><b>5.</b> In the <b>First name</b> and <b>Last name</b> fields, enter the new details.<br/><b>6.</b> Click <b>Save</b> to confirm the changes.<br/><br/><b>Note:</b> The updated employee name will immediately be reflected throughout the system, including in listings and any activity associated with the account.",
+        "title": "Update employee name"
+      },
+      "updateListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button displaying the first 2 letters of your company name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Business account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Company listings</b> button.<br/><b>3.</b> Select the listing you want to update.<br/><b>4.</b> Make the necessary changes and click <b>Save</b>.<br/><br/><b>Note:</b> Once saved, the listing will automatically update and display the new information on the platform. Keep in mind that editing a listing may require an active subscription or a free trial period.",
+        "title": "Update company listing"
+      }
+    },
+    "accountUser": {
+      "activeAuthenticator2FA": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Two-step authentication</b> button. Enable 2FA and then click <b>Save</b>.<br/><b>3.</b> Scan the QR code using your two-step authentication app (e.g., Google Authenticator).<br/><b>4.</b> Enter the 2FA verification code from the authenticator app to confirm your device.<br/><b>5.</b> Save the 2FA recovery code in a safe place. You will need it if you lose access to the phone where two-step authentication is configured, in order to disable it.<br/><br/><b>Note:</b> Only one form of two-step authentication can be active on your account at a time!",
+        "title": "Enable 2FA two-step authentication"
+      },
+      "activeAuthenticatorEmailOTP": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Two-step authentication</b> button. Enable <b>Email OTP</b> authentication and then click <b>Save</b>.<br/><br/><b>Note:</b> Only one form of two-step authentication can be active on your account at a time!",
+        "title": "Enable Email OTP two-step authentication"
+      },
+      "addBugs": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button, then click <b>Report new bug</b>.<br/><b>3.</b> Fill in all required fields and click <b>Submit report</b>.<br/><br/><b>Note:</b> To earn points for reporting bugs (the number of points depends on the severity of the issue), you must either own a company or be an employee of one.",
+        "title": "Report a new bug"
+      },
+      "addListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Add listing</b> button.<br/><b>3.</b> Fill in all required listing fields, such as title, description, category, price, and photos.<br/><b>4.</b> After entering all the information:<br/>- if the listing is free, click <b>Add listing</b>,<br/>- if the listing requires payment, click <b>Proceed to payment</b> and complete the payment process.<br/><br/><b>Note:</b> The listing will be published only after approval or once the payment is completed (if applicable). Make sure all information complies with the platform’s terms and conditions.",
+        "title": "Add a listing"
+      },
+      "addUserPhone": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.</br></br><b>On mobile:</b></br><b>1.</b> Open the menu and select the <b>User account</b> button.</br></br><b>Next steps (for both versions):</b></br><b>2.</b> Click the <b>Add phone number</b> button. Enter your new phone number and click <b>Save</b>.<br/><b>3.</b> Confirm your new phone number by entering the code received via SMS.<br/><b>4.</b> If the code is correct, your phone number will be successfully added.<br/><br/><b>Note:</b> You can add a phone number only once per day!",
+        "title": "Add phone number"
+      },
+      "changeUserEmail": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.</br></br><b>On mobile:</b></br><b>1.</b> Open the menu and select the <b>User account</b> button.</br></br><b>Next steps (for both versions):</b></br><b>2.</b> Click the <b>Change email address</b> button. Enter your new email address, then click <b>Save</b>.<br/><b>3.</b> Confirm your new email address by entering the verification code.<br/><b>4.</b> If the code is correct, your email address will be successfully updated.<br/><br/><b>Note:</b> The email address can only be changed once per day!",
+        "title": "Change email address"
+      },
+      "changeUserName": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.</br></br><b>On mobile:</b></br><b>1.</b> Open the menu and select the <b>User account</b> button.</br></br><b>Next steps (for both versions):</b></br><b>2.</b> Click the <b>User profile</b> button. Enter your new first and last name, then click <b>Save</b>.<br/><br/><b>Note:</b> The name will be stored in lowercase letters.",
+        "title": "Change username"
+      },
+      "changeUserPassword": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.</br></br><b>On mobile:</b></br><b>1.</b> Open the menu and select the <b>User account</b> button.</br></br><b>Next steps (for both versions):</b></br><b>2.</b> Click the <b>Change password</b> button. Enter your new password, then click <b>Save</b>.<br/><br/><b>Note:</b> The new password must meet all security requirements.",
+        "title": "Change password"
+      },
+      "changeUserPhone": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.</br></br><b>On mobile:</b></br><b>1.</b> Open the menu and select the <b>User account</b> button.</br></br><b>Next steps (for both versions):</b></br><b>2.</b> Click the <b>Change phone number</b> button. Enter your new phone number, then click <b>Save</b>.<br/><b>3.</b> Confirm your new phone number by entering the code received via SMS.<br/><b>4.</b> If the code is correct, your phone number will be successfully updated.<br/><br/><b>Note:</b> The phone number can only be changed once per day!",
+        "title": "Change phone number"
+      },
+      "checkUserPoints": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Points</b> or <b>My points</b> button.<br/><b>3.</b> On this page, you’ll see the total number of points you’ve accumulated and their sources.<br/><br/><b>Note:</b> Points are awarded for:<br/>- reporting bugs on the platform (the number of points depends on the severity and importance of the issue),<br/>- using the <b>referral system</b> — both for businesses and individual users.<br/><br/>Collected points can be used to <b>create new listings</b> or <b>extend active listings</b> without paying money.<br/><br/>It’s a good idea to check your point balance regularly to take full advantage of available benefits.",
+        "title": "Check accumulated points"
+      },
+      "deActiveAuthenticator2FA": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Two-step authentication</b> button. Uncheck the 2FA authentication option, then click <b>Save</b>.<br/><b>3.</b> Enter the 2FA verification code from your authentication app (e.g., Google Authenticator).<br/><br/><b>Note:</b> Only one form of two-step authentication can be active on your account at a time!",
+        "title": "Disable 2FA two-step authentication"
+      },
+      "deActiveAuthenticatorEmailOTP": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Two-step authentication</b> button. Uncheck the Email OTP option, then click <b>Save</b>.<br/><br/><b>Note:</b> Only one form of two-step authentication can be active on your account at a time!",
+        "title": "Disable Email OTP two-step authentication"
+      },
+      "deleteAccount": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Delete account</b> button.<br/><b>3.</b> Fill in all required fields, then click <b>Delete account</b>.<br/><br/><b>Note:</b> To successfully delete your account, you must not have:<br/><b>1.</b> On your personal account:<br/>- any active listings,<br/><br/><b>2.</b> On your company account as the owner:<br/>- an active subscription<br/><br/><b>Employees</b> cannot delete their accounts on their own.",
+        "title": "Delete account"
+      },
+      "extendListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Your listings</b> button.<br/><b>3.</b> Select the listing you want to extend.<br/><b>4.</b> Go to the <b>Payments</b> tab.<br/><b>5.</b> Choose the <b>Extend listing</b> option and complete the payment if required.<br/><br/><b>Note:</b> Extending a listing keeps it visible without having to recreate it. If the listing expires before payment, it will automatically be hidden until renewed.",
+        "title": "Extend listing duration"
+      },
+      "findInvoices": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Invoices</b> button.<br/><b>3.</b> On this page, you will find a list of all invoices for services linked to your user account.<br/><b>4.</b> You can view details or send the selected invoice to your email address using the appropriate button.<br/><br/><b>Note:</b> Individual users cannot edit invoice data. Invoices are automatically issued based on your account information.",
+        "title": "Where to find service invoices"
+      },
+      "loginToAccount": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the <b>Login</b> button.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Login</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Fill in all required fields and click <b>Log in</b>.<br/><br/><b>Note:</b> If two-step authentication is enabled on your account, it will be required to complete the login process.",
+        "title": "Log in to your account"
+      },
+      "loginWithFacebook": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> Click the <b>Login</b> button in the top menu of the page.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Login</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Choose the <b>Log in with Facebook</b> option.<br/><b>3.</b> You will be redirected to Facebook’s login page. Enter your Facebook login details and click <b>Log in</b>.<br/><b>4.</b> After successful login, you will be automatically redirected back to the platform.",
+        "title": "Login via Facebook"
+      },
+      "loginWithGoogle": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> Click the <b>Login</b> button in the top menu of the page.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Login</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Choose the <b>Log in with Google</b> option.<br/><b>3.</b> You will be redirected to Google’s login page. Select the Google account you want to use or enter your credentials and click <b>Next</b>.<br/><b>4.</b> After successful login, you will be automatically redirected back to the platform.",
+        "title": "Login via Google"
+      },
+      "logout": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Log out</b> button.<br/><b>3.</b> After confirming, you will be logged out and redirected to the platform’s login page.<br/><br/><b>Note:</b> If you want to log out from all devices except the current one, go to the <b>Session management</b> section.",
+        "title": "Log out of your account"
+      },
+      "manageSessions": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Session management</b> button.<br/><b>3.</b> To enhance your account security, click the <b>Log out of all other devices</b> button.<br/><br/><b>Note:</b> After using this option, you will be logged out from all devices except the one you are currently using.",
+        "title": "Session management"
+      },
+      "recoveryAccount": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the <b>Login</b> button.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Login</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Recover account</b> button.<br/><b>3.</b> Fill in all fields and click <b>Send link</b>.<br/><b>4.</b> Go to your email inbox and click the <b>Account recovery link</b>.<br/><b>5.</b> Enter your new account password and click <b>Change password</b>.<br/><br/><b>Note:</b> If two-step authentication is enabled on your account, it will be required to confirm the process.",
+        "title": "Account recovery (password)"
+      },
+      "recoveryAccount2FA": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the <b>Login</b> button.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Login</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Fill in all fields and click <b>Log in</b>.<br/><b>3.</b> Click the <b>Reset 2FA</b> button.<br/><b>4.</b> Enter the two-step authentication reset code (2FA) that you received during setup, then click <b>Reset</b>.",
+        "title": "Account recovery (two-step authentication 2FA)"
+      },
+      "registerUserAccount": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the <b>Register</b> button.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>Register</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Choose the <b>Create user account</b> option.<br/><b>3.</b> Fill in all required registration form fields (e.g., first name, last name, email address, password).<br/><b>4.</b> Accept the <b>terms of service</b> and (optionally) marketing consents.<br/><b>5.</b> Click the <b>Register</b> button.<br/><b>6.</b> If required, confirm your registration by clicking the activation link sent to your email address.",
+        "title": "User account registration"
+      },
+      "showBugDetails": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button, then find the report you want to view and click <b>Show details</b>.<br/><b>3.</b> The bug report details will display all the information provided during submission, as well as—once processed by our staff—bug priority, possible points to earn, and the date when points were awarded (if applicable). If these details are not yet visible, please be patient — an update should appear within <b>5 business days</b>.<br/><br/><b>Note:</b> To earn points for reporting bugs (the number of points depends on severity), you must either own a company or be an employee of one.",
+        "title": "View detailed bug report"
+      },
+      "showBugs": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Reported platform bugs</b> button.<br/><br/><b>Note:</b> To earn points for each reported bug (the number of points depends on severity), you must either own a company or be an employee of one.",
+        "title": "View reported bugs"
+      },
+      "showListings": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Your listings</b> button.<br/><b>3.</b> On this page, you will find all your active, expired, and pending listings.<br/><br/><b>Note:</b> In this section, you can also edit, delete, or extend your listings.",
+        "title": "All listings"
+      },
+      "startReferral": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Referral system</b> button.<br/><b>3.</b> Click the <b>Start</b> button.<br/><br/><b>Note:</b> Once your referral system is activated, you can share your referral code with users or companies to enter during registration. Clicking the code copies it to the clipboard. To print QR codes that allow quick user or company account registration for benefits, click the <b>Print QR code</b> button.",
+        "title": "Referral system"
+      },
+      "title": "User account",
+      "updateConsents": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Marketing consents</b> button. Update your consents, then click <b>Save</b>.",
+        "title": "Update marketing consents"
+      },
+      "updateListing": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>Your listings</b> button.<br/><b>3.</b> Select the listing you want to update.<br/><b>4.</b> Make the necessary changes and then click <b>Save</b>.<br/><br/><b>Note:</b> After saving, the listing will be automatically updated and displayed with the new information on the platform.",
+        "title": "Update listing"
+      },
+      "updateUserAvatar": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>User profile</b> button.<br/><b>3.</b> Click the <b>Add profile photo</b> button and choose a new image from your device.<br/><b>4.</b> Once selected, click <b>Save</b>.<br/><br/><b>Note:</b> Your profile photo is visible on your profile and in areas where you are active on the platform. It’s recommended to use a clear and professional image that represents you well.",
+        "title": "Update profile photo"
+      },
+      "updateUserName": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the round button that displays the first letter of your first and last name.<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select the <b>User account</b> button.<br/><br/><b>Next steps (for both versions):</b><br/><b>2.</b> Click the <b>User profile</b> button.<br/><b>3.</b> Enter your new first and last name in the respective fields.<br/><b>4.</b> Click <b>Save</b> to confirm the changes.<br/><br/><b>Note:</b> Once saved, your updated name will automatically appear on your profile and throughout the system.",
+        "title": "Update user’s first and last name"
+      }
+    },
+    "settingsSite": {
+      "changeColorMode": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the button with the color mode icon (a circle split in half — one side light, the other dark).<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select <b>Switch to dark mode</b> or <b>Switch to light mode</b>.",
+        "title": "Change website color mode (dark/light mode)"
+      },
+      "changeLanguage": {
+        "description": "<b>On desktop:</b><br/><b>1.</b> In the navigation menu, click the button with the language icon (a Latin letter A and a Chinese character).<br/><br/><b>On mobile:</b><br/><b>1.</b> Open the menu and select <b>Change language to English</b> or <b>Change language to Polish</b>.",
+        "title": "Change language"
+      },
+      "enterReferralCode": {
+        "description": "<b>During registration:</b><br/><b>1.</b> While creating a user or company account, you will find a <b>Referral code</b> field.<br/><b>2.</b> Enter the code you received to support the user or company that referred you.<br/><b>3.</b> After entering the code, complete the registration process.<br/><br/><b>Note:</b> The referral code can only be entered during registration. Once the account is created, it cannot be added or changed later.",
+        "title": "Enter referral code"
+      },
+      "searchListings": {
+        "description": "<b>There are three ways to search for listings on the platform:</b><br/><br/><b>1. Search bar on the homepage:</b><br/>- On the homepage, below the top navigation menu, you’ll find the main search bar.<br/>- Select the city where you want to search for listings.<br/>- (Optional) Use available filters to refine the results — for example, by category, listing type, or other details.<br/>- Click the <b>Search</b> button to display matching listings.<br/><br/><b>2. City selection from the footer:</b><br/>- Scroll down to the footer and select the city that interests you.<br/>- On the city page, choose a listing category to narrow your results.<br/>- All available listings from the selected city and category will be displayed.<br/><br/><b>3. “Search” page from the footer:</b><br/>- In the footer, you’ll find a link to the <b>Search</b> page.<br/>- Once there, first select a city, then a listing category.<br/>- Use additional filters if you want to further refine your results.<br/><br/><b>Note:</b> In all of the above methods, you can narrow search results further using filters available on the results page — for example, by listing type or date added.",
+        "title": "Search for listings"
+      },
+      "title": "Platform settings",
+      "updateCookies": {
+        "description": "<b>On desktop and mobile devices:</b><br/><b>1.</b> At the bottom of the page, find the visible information bar about cookies.<br/><b>2.</b> Click the <b>Change cookie settings</b> button.<br/><b>3.</b> In the displayed window, select which categories of cookies you want to enable or disable.<br/><b>4.</b> After making your selection, click <b>Save</b> to confirm your changes.<br/><br/><b>Note:</b> You can reopen the cookie settings at any time — the <b>Change cookie settings</b> button is always available in the website footer.",
+        "title": "Update cookie settings"
+      }
+    }
+  },
+  "noData": "No results found",
+  "placeholder": "Find an answer",
+  "synonyms": {
+    "add": ["create", "input", "insert"],
+    "avatar": ["image", "photo", "profile picture"],
+    "banner": ["cover", "header", "main image"],
+    "change": ["edit", "modify", "update"],
+    "company": ["business", "firm", "organization"],
+    "cookies": ["cookie files", "privacy settings"],
+    "delete": ["deactivate", "erase", "remove"],
+    "email": ["address", "email address", "mail"],
+    "invoice": ["bill", "payment document", "receipt"],
+    "listing": ["ad", "offer", "post"],
+    "login": ["access account", "log in", "sign in"],
+    "password": ["access code", "login credentials"],
+    "payment": ["checkout", "pay", "transaction"],
+    "phone": ["contact", "mobile", "number"],
+    "recover": ["reset", "restore", "retrieve"],
+    "registration": ["create account", "join", "register", "sign up"],
+    "session": ["connection", "device", "login"],
+    "subscription": ["membership", "plan", "premium access"],
+    "update": ["change", "refresh"],
+    "user": ["individual", "person", "profile"]
+  },
+  "title": "How can we help?",
+  "titleVariants": [
+    "Guide: {{base}}",
+    "How can I {{base}}?",
+    "How does {{base}} work?",
+    "How to {{base}}?",
+    "Step by step: how to {{base}}",
+    "Tutorial on how to {{base}}",
+    "What is the way to {{base}}?",
+    "What should I do to {{base}}?",
+    "Where can I {{base}}?",
+    "{{base}} - step by step"
+  ]
+}

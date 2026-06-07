@@ -1,0 +1,1 @@
+export { AccountConsentsPage } from "./AccountConsentsPage";

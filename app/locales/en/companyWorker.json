@@ -1,0 +1,8 @@
+{
+  "buttonDeleteAccount": "Delete employee account",
+  "buttonProfile": "Employee profile",
+  "buttonProfileOwner": "Owner profile",
+  "buttonRole": "Permissions",
+  "noData": "The employee must have permissions to view their information.",
+  "title": "Employee information"
+}

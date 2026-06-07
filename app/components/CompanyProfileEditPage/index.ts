@@ -1,0 +1,1 @@
+export { CompanyProfileEditPage } from "./CompanyProfileEditPage";

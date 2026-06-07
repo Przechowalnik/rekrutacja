@@ -1,0 +1,21 @@
+{
+  "alert": "Your listing is inactive. To activate it, simply go to the <a custom='true' href='{{link}}'>payment page</a> and choose a renewal option.",
+  "buttonAdd": "Save company listing",
+  "buttonDelete": "Delete company listing",
+  "buttonPay": "Go to payment",
+  "buttonPayment": "Payments",
+  "contactInteractions": "Views: {{viewsInteractions}}<br/>Contact clicks: {{contactInteractions}}",
+  "fieldsetInformation": "General information",
+  "fieldsetInformationFilters": "Detailed information",
+  "fieldsetInformationsFilters": "Detailed information",
+  "fieldsetLocation": "Location address",
+  "fieldsetPhone": "Contact number",
+  "fieldsetPhoneDescription": "The phone number displayed in the listing is always the same as the number added to and verified on the account and cannot be edited while creating a listing. To use a different phone number, you must add and verify a new number on your account. This approach helps prevent fraud, impersonation, and other forms of abuse.",
+  "fieldsetPrice": "Price",
+  "hidden": "Listing hidden",
+  "information": "Your listing is active to ({{date}}). If you want to extend its duration, you can do it on the <a custom='true' href='{{link}}'>payment page</a>.<br/><br/>Views: {{viewsInteractions}}<br/>Contact clicks: {{contactInteractions}}",
+  "informationFreeListing": "Your listing is active to ({{date}}).<br/><br/>Views: {{viewsInteractions}}<br/>Contact clicks: {{contactInteractions}}",
+  "title": "Edit company listing",
+  "warning": "Your listing will expire in less than a month ({{date}}).<br/>If you wish to extend it, visit the <a custom='true' href='{{link}}'>payment page</a>.",
+  "warningSoon": "Your listing will expire soon. To avoid interruption, you can renew it now on the <a custom='true' href='{{link}}'>payment page</a>."
+}

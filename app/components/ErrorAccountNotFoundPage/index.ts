@@ -1,0 +1,1 @@
+export { ErrorAccountNotFoundPage } from "./ErrorAccountNotFoundPage";

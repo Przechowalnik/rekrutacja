@@ -1,0 +1,12 @@
+{
+  "alert": "Points are awarded to the company the user is assigned to (has a company account linked to their profile)! If you report a bug using an employee account, the points will go to the company account. If you don’t have a company account, points will not be awarded.",
+  "bug1": "<b>Minor bugs - {{points}} points</b></br>For fixes that don’t significantly affect the website’s functionality but are still worth reporting!",
+  "bug2": "<b>Medium bugs - {{points}} points</b></br>Issues that make it harder to use certain features.",
+  "bug3": "<b>Major bugs - {{points}} points</b></br>Report critical problems that affect the entire site’s functionality!",
+  "buttonCancel": "Cancel",
+  "buttonSave": "Report a new bug",
+  "description": "Found a bug on our platform? Report it and earn points! 🏆</br>Each report gives you a chance to win rewards - the more serious the bug, the more points you can get! Here's how it works:",
+  "noData": "You haven’t reported any bugs yet.",
+  "subject": "Your report will help us improve the platform, and you’ll have a chance to earn extra points. 🚀 We’re waiting for your submissions!",
+  "title": "Reported platform bugs assigned to the company account"
+}

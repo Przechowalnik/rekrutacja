@@ -1,0 +1,1 @@
+export { AccountAuthenticatorPage } from "./AccountAuthenticatorPage";

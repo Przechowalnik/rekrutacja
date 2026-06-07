@@ -1,0 +1,1 @@
+export { RegistrationCompanyPage } from "./RegistrationCompanyPage";

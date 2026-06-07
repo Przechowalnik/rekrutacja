@@ -1,0 +1,869 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron",
+      "schedule": "0 3 * * *"
+    }
+  ],
+  "headers": [
+    {
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }],
+      "source": "/api/:path*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/dostepnosc"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/o-nas"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blad"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blad-konto-nie-znalezione"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blad-logowanie-facebook"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blad-logowanie-google"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blad-logowanie-haslo"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/pomoc"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/kontakt"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/:path(dostepnosc|o-nas|blad|blad-konto-nie-znalezione|blad-logowanie-facebook|blad-logowanie-google|blad-logowanie-haslo|pomoc|kontakt|jak-dodac-ogloszenie)"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/blog"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/blog/:slug*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/szukaj"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/szukaj/:listingCategory"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/szukaj/:listingCategory/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/miasta"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/miasta/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/en/ogloszenia/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/:path(odzyskaj-konto|odzyskaj-konto-email-zapasowy|odzyskaj-konto-zmien-haslo|logowanie|rejestracja)"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/rejestracja/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/en/:section(konto|firma)"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }],
+      "source": "/en/odzyskaj-konto/:path*"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }],
+      "source": "/en/:section(konto|firma)/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/en/:path(regulamin|polityka-prywatnosci|newsletter)"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }],
+      "source": "/en/wyloguj"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/odzyskaj-konto-email-zapasowy"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/odzyskaj-konto-zmien-haslo"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/odzyskaj-konto"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }],
+      "source": "/odzyskaj-konto/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/logowanie"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/rejestracja"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/rejestracja/:path*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/jak-dodac-ogloszenie"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blog"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/blog/:slug*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=86400, stale-while-revalidate=3600"
+        }
+      ],
+      "source": "/:section(konto|firma)"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "private, no-store" }],
+      "source": "/:section(konto|firma)/:path*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/szukaj"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/szukaj/:listingCategory"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/szukaj/:listingCategory/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/miasta"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/miasta/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=600, s-maxage=3600, stale-while-revalidate=600"
+        },
+        {
+          "key": "CDN-Cache-Control",
+          "value": "public, s-maxage=3600, stale-while-revalidate=600"
+        }
+      ],
+      "source": "/ogloszenia/:path*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ],
+      "source": "/fonts/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ],
+      "source": "/img-gen/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ],
+      "source": "/screenshots/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, immutable"
+        }
+      ],
+      "source": "/icons/:path*"
+    },
+
+    {
+      "headers": [
+        { "key": "Cross-Origin-Resource-Policy", "value": "cross-origin" }
+      ],
+      "source": "/logo/:path*"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, immutable"
+        }
+      ],
+      "source": "/logo/:path*"
+    },
+    {
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ],
+      "source": "/images/:path*"
+    },
+    {
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=604800" }
+      ],
+      "source": "/:path*.(png|jpg|jpeg|webp|svg|ico)"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/documents/:path*.pdf"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/documents/:path*"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/regulamin"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/polityka-prywatnosci"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/newsletter"
+    },
+
+    {
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }],
+      "source": "/sw.js"
+    },
+    {
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }],
+      "source": "/registerSW.js"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ],
+      "source": "/assets/:path*.(js|css)"
+    },
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ],
+      "source": "/:path*.(js|css)"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        },
+        { "key": "Content-Type", "value": "application/manifest+json" }
+      ],
+      "source": "/:path*.webmanifest"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/robots.txt"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ],
+      "source": "/favicon:rest*"
+    },
+
+    {
+      "headers": [{ "key": "Cache-Control", "value": "no-store" }],
+      "source": "/wyloguj"
+    },
+
+    {
+      "headers": [
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Resource-Policy", "value": "same-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Origin-Agent-Cluster", "value": "?1" },
+        {
+          "key": "Permissions-Policy",
+          "value": "accelerometer=(), autoplay=(), camera=(self), clipboard-read=(self), clipboard-write=(self), display-capture=(self), encrypted-media=(), fullscreen=(), gamepad=(), geolocation=(self), gyroscope=(), hid=(), magnetometer=(), microphone=(self), midi=(), payment=(), picture-in-picture=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), sync-xhr=(), usb=(), web-share=(self), xr-spatial-tracking=()"
+        },
+        {
+          "key": "Content-Security-Policy-Report-Only",
+          "value": "trusted-types default goog#html dompurify 'allow-duplicates'; require-trusted-types-for 'script';"
+        },
+        { "key": "Server", "value": "hidden" }
+      ],
+      "source": "/:path*"
+    }
+  ],
+  "images": {
+    "formats": ["image/avif", "image/webp"],
+    "minimumCacheTTL": 2592000,
+    "remotePatterns": [
+      { "hostname": "*.supabase.co", "protocol": "https" },
+      { "hostname": "maszbox.pl", "protocol": "https" }
+    ],
+    "sizes": [256, 384, 640, 750, 828, 1080, 1200, 1920]
+  },
+  "redirects": [
+    { "destination": "/logowanie", "permanent": true, "source": "/login" },
+    { "destination": "/wyloguj", "permanent": true, "source": "/logout" },
+    { "destination": "/pomoc", "permanent": true, "source": "/help" },
+    { "destination": "/kontakt", "permanent": true, "source": "/contact" },
+    {
+      "destination": "/jak-dodac-ogloszenie",
+      "permanent": true,
+      "source": "/how-to-add-a-listing"
+    },
+    {
+      "destination": "/uwierzytelniacz",
+      "permanent": true,
+      "source": "/authenticator"
+    },
+    { "destination": "/blad", "permanent": true, "source": "/error" },
+    {
+      "destination": "/blad-konto-nie-znalezione",
+      "permanent": true,
+      "source": "/error-account-not-found"
+    },
+    {
+      "destination": "/blad-logowanie-facebook",
+      "permanent": true,
+      "source": "/error-login-from-facebook"
+    },
+    {
+      "destination": "/blad-logowanie-google",
+      "permanent": true,
+      "source": "/error-login-from-google"
+    },
+    {
+      "destination": "/blad-logowanie-haslo",
+      "permanent": true,
+      "source": "/error-login-from-password"
+    },
+    {
+      "destination": "/blad-ogloszenie-nie-znalezione",
+      "permanent": true,
+      "source": "/error-listing-not-found"
+    },
+    {
+      "destination": "/polityka-prywatnosci",
+      "permanent": true,
+      "source": "/privacy-policy"
+    },
+    {
+      "destination": "/regulamin",
+      "permanent": true,
+      "source": "/terms-and-conditions"
+    },
+    {
+      "destination": "/odzyskaj-konto",
+      "permanent": true,
+      "source": "/recovery-account"
+    },
+    {
+      "destination": "/odzyskaj-konto-email-zapasowy",
+      "permanent": true,
+      "source": "/recovery-account-backup-email"
+    },
+    {
+      "destination": "/odzyskaj-konto-zmien-haslo",
+      "permanent": true,
+      "source": "/recovery-account-change-password"
+    },
+    {
+      "destination": "/rejestracja",
+      "permanent": true,
+      "source": "/registration"
+    },
+    {
+      "destination": "/rejestracja/konto",
+      "permanent": true,
+      "source": "/registration/account"
+    },
+    {
+      "destination": "/rejestracja/firma",
+      "permanent": true,
+      "source": "/registration/company"
+    },
+    { "destination": "/o-nas", "permanent": true, "source": "/about-us" },
+    {
+      "destination": "/dostepnosc",
+      "permanent": true,
+      "source": "/accessibility"
+    },
+    { "destination": "/szukaj", "permanent": true, "source": "/search" },
+    {
+      "destination": "/miasta/:listingCity",
+      "permanent": true,
+      "source": "/search/:listingCity"
+    },
+    {
+      "destination": "/ogloszenia/:path*",
+      "permanent": true,
+      "source": "/listings/:path*"
+    }
+  ]
+}

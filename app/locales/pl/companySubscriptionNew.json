@@ -1,0 +1,10 @@
+{
+  "buttonCheckCoupon": "Sprawdź kupon",
+  "buttonSave": "Uruchom subskrypcję",
+  "checkCoupon": "Sprawdź kupon rabatowy",
+  "description": "<gradient>Cieszymy się, że chcesz do nas dołączyć!</gradient></br/><b>Wybierz plan subskrypcji</b>, który najbardziej Ci odpowiada, <b>a następnie dokończ subskrypcję</b>. Twoje dane są u nas bezpieczne i będą używane tylko do przetwarzania płatności oraz do obciążania karty za subskrypcję na naszej platformie. Dane do karty płatniczej należy wprowadzić, jeśli nie jest ona podpięta do konta lub gdy chcemy ją zaktualizować.",
+  "selectedPlan": "Wybrany plan",
+  "title": "Nowa subskrypcja",
+  "tooltipNoSelectedPlan": "Nie zaznaczono planu subskrypcji",
+  "warning": "Jeśli okres próbny jest aktywny, zostanie on anulowany w momencie utworzenia nowej subskrypcji."
+}

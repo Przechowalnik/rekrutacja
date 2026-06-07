@@ -1,0 +1,14 @@
+{
+  "buttonConfirmNewNumber": "Confirm phone number change",
+  "buttonSaveTooltip": "No changes to save",
+  "buttonUpdatePhoneNumber": "Change phone number",
+  "currentPhoneNumber": "Current phone number:",
+  "description": "On this page, you can <b>change your company's phone number</b>. The updated number will be <b>automatically applied to all related listings</b>.<br/><br/>After entering the new number, the system will send an SMS with a verification code. The change will only take effect after confirming this code, which ensures security, prevents impersonation, and protects the accuracy of your contact information. Without verification, the number will not be updated.<br/><br/>Please note that the company phone number can be changed only <b>once per day</b>.",
+  "information": "A company phone number is required when creating a listing.",
+  "inputNewPhoneNumber": "New phone number",
+  "newPhoneNumber": "New phone number to confirm:",
+  "noPhone": "none",
+  "title": "Change company phone number",
+  "titleAdd": "Add company phone number",
+  "warning": "After providing and confirming the new phone number, you must enter the verification code sent via SMS to complete the process."
+}

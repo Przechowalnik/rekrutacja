@@ -1,0 +1,25 @@
+node_modules
+i18next-resources.d.ts
+/.cache
+/build
+.env
+entry.worker.js
+.react-router/
+.vercel
+react-router-build-result.json
+/.react-router/
+/build/
+/prisma/generated/client
+.env*.local
+/public/img-gen/*
+/generated/prisma
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Sentry Config File
+.env.sentry-build-plugin

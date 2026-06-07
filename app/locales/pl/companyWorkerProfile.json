@@ -1,0 +1,12 @@
+{
+  "buttonAddImage": "Dodaj zdjęcie profilowe",
+  "buttonDeleteImage": "Usuń zdjęcie profilowe",
+  "buttonNoSaveImage": "Nie zapisuj zdjęcia",
+  "buttonSaveImage": "Zapisz zdjęcie",
+  "currentAccountName": "Aktualne imię i nazwisko:",
+  "description": "Na tej stronie <b>możesz zaktualizować</b> dane profilowe, takie jak <b>imię</b>, <b>nazwisko</b> oraz <b>zdjęcie profilowe</b>. Te informacje będą widoczne w pracy, oraz podczas dokonywania rezerwacji. Upewnij się, że Twoje dane są aktualne!",
+  "imageInformation": "Aby dodać zdjęcie profilowe, najpierw usuń poprzednie zdjęcie, jeśli było ustawione.</br>Następnie kliknij przycisk: Dodaj zdjęcie profilowe.</br></br>Dozwolone formaty: jpeg, png, webp.</br>Maksymalny rozmiar obrazka to 2MB.",
+  "imageProfile": "Zdjęcie profilowe",
+  "title": "Profil użytkownika",
+  "titleOwner": "Profil właściciela"
+}

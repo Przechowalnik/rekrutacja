@@ -1,0 +1,6 @@
+{
+  "emailDisabled": "Email sending disabled",
+  "otpCodeDisabled": "Email OTP code sending disabled",
+  "smsDisabled": "SMS sending disabled",
+  "title": "Flags"
+}

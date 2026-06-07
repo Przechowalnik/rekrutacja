@@ -1,0 +1,23 @@
+{
+  "alert": "",
+  "availableSlots": "",
+  "buttonAdd": "Add",
+  "buttonExtend": "Extend",
+  "buttonExtension": "Go to payment",
+  "buttonGoToLastPayment": "Go to last payment",
+  "buttonPay": "",
+  "buttonReAdd": "Add again",
+  "buttonUsePoints": "Use points",
+  "descriptionCheckboxListingUsePoints": "Required points: {{countPoints}}, you currently have: {{countCurrentPoints}} points.",
+  "descriptionFreeListings": "You can renew your listing yourself by clicking the “Extend” option. If the listing is inactive or less than 1 month remain before it expires, it will automatically be extended by 1 month, starting from today.",
+  "extendByMonths": "",
+  "extendByMonths_few": "",
+  "extendByMonths_many": "",
+  "extendByMonths_zero": "",
+  "hidden": "Listing hidden",
+  "success": "Listing active until: {{date}}",
+  "title": "Listing payments",
+  "titleExtension": "Extend listing duration",
+  "titleNewExtension": "Pay for new listing",
+  "tooltipFreeExtend": "You can extend an active listing only when less than 1 month remain before it expires."
+}

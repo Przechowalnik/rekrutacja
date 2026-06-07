@@ -1,0 +1,75 @@
+User-agent: *
+Allow: /
+
+# Panele uzytkownika / firmy / admin
+Disallow: /konto/
+Disallow: /firma/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
+Disallow: /webhooks/
+Disallow: /collect/
+Disallow: /flagi
+
+# Strony auth (logowanie, rejestracja, recovery)
+Disallow: /logowanie
+Disallow: /wyloguj
+Disallow: /rejestracja
+Disallow: /odzyskaj-konto
+Disallow: /odzyskaj-konto-email-zapasowy
+Disallow: /odzyskaj-konto-zmien-haslo
+Disallow: /uwierzytelniacz
+Disallow: /handle-protocol
+
+# Strony bledow (HTTP 404/410, brak wartosci SEO)
+Disallow: /blad
+Disallow: /blad-konto-nie-znalezione
+Disallow: /blad-logowanie-facebook
+Disallow: /blad-logowanie-google
+Disallow: /blad-logowanie-haslo
+Disallow: /blad-ogloszenie-nie-znalezione
+
+# /en mirror
+Disallow: /en/konto/
+Disallow: /en/firma/
+Disallow: /en/admin/
+Disallow: /en/logowanie
+Disallow: /en/wyloguj
+Disallow: /en/rejestracja
+Disallow: /en/odzyskaj-konto
+Disallow: /en/odzyskaj-konto-email-zapasowy
+Disallow: /en/odzyskaj-konto-zmien-haslo
+Disallow: /en/uwierzytelniacz
+Disallow: /en/handle-protocol
+Disallow: /en/blad
+Disallow: /en/blad-konto-nie-znalezione
+Disallow: /en/blad-logowanie-facebook
+Disallow: /en/blad-logowanie-google
+Disallow: /en/blad-logowanie-haslo
+Disallow: /en/blad-ogloszenie-nie-znalezione
+
+# Crawl trap prevention: parametry filtrow generuja nieskonczone kombinacje URL-i
+# (canonical wskazuje czysty URL, ale lepiej zaoszczedzic crawl budget)
+Disallow: /*?page=
+Disallow: /*?limit=
+Disallow: /*?locationRadius=
+Disallow: /*?listingType=
+Disallow: /*?listingContractType=
+Disallow: /*?listingArea=
+Disallow: /*?listingPrice=
+Disallow: /*?listingMinimumRentalDays=
+Disallow: /*?listingFloorLevel=
+Disallow: /*?listingCondition=
+Disallow: /*?listingDistrict=
+Disallow: /*?checkbox
+
+# Tracking params - duplikaty URL-i z roznymi parametrami atrybucji
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?utm_term=
+Disallow: /*?utm_content=
+
+Sitemap: https://maszbox.pl/sitemap.xml

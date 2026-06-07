@@ -1,0 +1,12 @@
+{
+  "buttonAddImage": "Add profile photo",
+  "buttonDeleteImage": "Delete profile photo",
+  "buttonNoSaveImage": "Don't save photo",
+  "buttonSaveImage": "Save photo",
+  "currentAccountName": "Current first and last name:",
+  "description": "On this page, you can <b>update your profile details</b> such as <b>first name</b>, <b>last name</b>, and <b>profile photo</b>. This information will be visible at work and during reservations. Make sure your data is up to date!",
+  "imageInformation": "To add a profile photo, first delete the previous one if set.</br>Then click the button: Add profile photo.</br></br>Allowed formats: jpeg, png, webp.</br>Maximum image size: 2MB.",
+  "imageProfile": "Profile photo",
+  "title": "User profile",
+  "titleOwner": "Owner profile"
+}

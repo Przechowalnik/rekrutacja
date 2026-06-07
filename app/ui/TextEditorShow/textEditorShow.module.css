@@ -1,0 +1,70 @@
+.textEditorShow {
+  padding-top: 12px;
+}
+
+.textEditorShow br {
+  display: block;
+  margin-bottom: 0.75rem;
+  content: "";
+}
+
+.textEditorShow p {
+  margin: 0;
+  margin-bottom: calc(0.4375rem * var(--mantine-scale));
+  line-height: 1.6;
+  min-height: 1em;
+}
+
+.textEditorShow hr {
+  margin-top: var(--mantine-spacing-md);
+  margin-bottom: var(--mantine-spacing-md);
+  border: 0;
+  border-top: calc(0.0625rem * var(--mantine-scale)) solid;
+  border-color: var(--mantine-color-gray-3);
+}
+
+.textEditorShow h1 {
+  font-size: var(--mantine-h1-font-size);
+  line-height: var(--mantine-h1-line-height);
+  font-weight: var(--mantine-h1-font-weight);
+}
+
+.textEditorShow h2 {
+  font-size: var(--mantine-h2-font-size);
+  line-height: var(--mantine-h2-line-height);
+  font-weight: var(--mantine-h2-font-weight);
+}
+
+.textEditorShow h3 {
+  font-size: var(--mantine-h3-font-size);
+  line-height: var(--mantine-h3-line-height);
+  font-weight: var(--mantine-h3-font-weight);
+}
+
+.textEditorShow h4 {
+  font-size: var(--mantine-h4-font-size);
+  line-height: var(--mantine-h4-line-height);
+  font-weight: var(--mantine-h4-font-weight);
+}
+
+.textEditorShow h5 {
+  font-size: var(--mantine-h5-font-size);
+  line-height: var(--mantine-h5-line-height);
+  font-weight: var(--mantine-h5-font-weight);
+}
+
+.textEditorShow h6 {
+  font-size: var(--mantine-h6-font-size);
+  line-height: var(--mantine-h6-line-height);
+  font-weight: var(--mantine-h6-font-weight);
+}
+
+.textEditorShow h1,
+.textEditorShow h2,
+.textEditorShow h3,
+.textEditorShow h4,
+.textEditorShow h5,
+.textEditorShow h6 {
+  margin-bottom: var(--mantine-spacing-xs);
+  margin-top: 0;
+}

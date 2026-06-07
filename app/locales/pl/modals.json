@@ -1,0 +1,28 @@
+{
+  "buttonClose": "Zamknij",
+  "createdAccountOwner": {
+    "confetti": "true",
+    "description": "<b>Gratulacje!</b> Twoje konto jest teraz w pełni aktywne. Możesz zarządzać swoją firmą, dodawać pracowników, konfigurować usługi oraz monitorować rezerwacje i płatności.",
+    "title": "Twoje konto właściciela zostało potwierdzone! ✅"
+  },
+  "createdAccountUser": {
+    "confetti": "true",
+    "description": "<b>Gratulacje!</b> Twoje konto jest teraz w pełni aktywne. Możesz bez ograniczeń korzystać z naszej platformy - rezerwować usługi, zarządzać swoimi rezerwacjami i cieszyć się wszystkimi funkcjami dostępnymi dla klientów.",
+    "title": "Twoje konto zostało potwierdzone! ✅"
+  },
+  "createdAccountWorker": {
+    "confetti": "true",
+    "description": "<b>Gratulacje!</b> Twoje konto pracownicze jest teraz w pełni aktywne. Możesz zalogować się i rozpocząć pracę, zarządzać rezerwacjami oraz korzystać z dostępnych narzędzi.",
+    "title": "Twoje konto zostało potwierdzone! ✅"
+  },
+  "createdSubscription": {
+    "confetti": "true",
+    "description": "<b>Dziękujemy!</b> Twoja subskrypcja czeka na potwierdzenie i niedługo zostanie aktywowana! Gdy to nastąpi, będziesz mógł w pełni korzystać ze wszystkich dostępnych funkcji. 😍",
+    "title": "Twoja subskrypcja została utworzona! 🎉"
+  },
+  "setPassword": {
+    "confetti": "false",
+    "description": "Twoje konto zostało utworzone za pomocą logowania społecznościowego. Aby móc logować się również za pomocą hasła, ustaw je teraz w ustawieniach konta.",
+    "title": "Ustaw hasło do swojego konta"
+  }
+}

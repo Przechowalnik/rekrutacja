@@ -1,0 +1,8 @@
+{
+  "alert": "Remember that an account can only be deleted if the employee has no active reservations. Once deleted, the account will be permanently removed from the system and cannot be restored. Before proceeding, make sure all reservations have been completed or canceled.",
+  "buttonDelete": "Delete employee account",
+  "buttonSaveTooltip": "No changes to save",
+  "description": "Are you sure you want to delete this account? This action is irreversible and will permanently remove all related data from our system. 😱",
+  "textToDelete": "To confirm, please enter the name of the account holder:",
+  "title": "Delete employee account"
+}

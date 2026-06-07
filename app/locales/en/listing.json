@@ -1,0 +1,13 @@
+{
+  "location": "How to get here?",
+  "replacePhoneNumber": "<s><b>hidden phone number</b></s>",
+  "searchListingCategoryCity": {
+    "buttonShowMap": "Show on map"
+  },
+  "share": {
+    "text": "You might like this listing 🙂"
+  },
+  "title": "Listing",
+  "tooltipReport": "Report",
+  "tooltipSearch": "Search"
+}

@@ -1,0 +1,1 @@
+export { AdminPlatformSettingEditPage } from "./AdminPlatformSettingEditPage";

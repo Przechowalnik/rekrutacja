@@ -1,0 +1,6 @@
+{
+  "currentEmail": "Current email address:",
+  "description": "On this page, you can <b>change your email address</b>. After submitting the change, a confirmation email will be sent to your new address — you must confirm it for the update to take effect. Make sure the provided email address is correct to avoid communication issues. Once confirmed, you’ll have the option to <b>revert the change within 1 business day</b> by clicking the link included in the confirmation email. After that time, the change becomes permanent.",
+  "inputNewEmail": "New email address",
+  "title": "Change email address"
+}

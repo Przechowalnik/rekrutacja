@@ -1,0 +1,12 @@
+{
+  "alert": "Punkty są przyznawane firmie do której użytkownik jest dodany (ma przypiasne konto firmowe do swojego konta)! Jeśli zgłaszasz błąd, korzystając z konta pracowniczego - punkty trafią na konto firmowe. Jeśli nie posiadasz konta firmowego, punkty nie zostaną przyznane.",
+  "bug1": "<b>Drobne błędy - {{points}} punktów</b></br>Za poprawki, które nie wpływają znacząco na działanie strony, ale warto je zgłosić!",
+  "bug2": "<b>Średnie błędy - {{points}} punktów</b></br>Problemy, które utrudniają korzystanie z niektórych funkcji.",
+  "bug3": "<b>Poważne błędy - {{points}} punktów</b></br>Zgłoś krytyczne problemy, które wpływają na działanie całej strony!",
+  "buttonCancel": "Cofnij",
+  "buttonSave": "Zgłoś nowy błąd",
+  "description": "Odkryłeś błąd na naszej platformie? Zgłoś go i wygraj punkty! 🏆</br>Każde zgłoszenie ma szansę na nagrody - im poważniejszy błąd, tym więcej punktów możesz zdobyć! Oto, jak to działa:",
+  "noData": "Nie masz jeszcze zgłoszonych błędów.",
+  "subject": "Twoje zgłoszenie pomoże nam ulepszyć platformę, a Ty zyskasz szansę na dodatkowe punkty. 🚀 Czekamy na Twoje zgłoszenia!",
+  "title": "Zgłoszone błędy na platformie przypisane do konta firmowego"
+}

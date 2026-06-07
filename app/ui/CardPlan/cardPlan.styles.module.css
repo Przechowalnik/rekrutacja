@@ -1,0 +1,118 @@
+.cardPlan {
+  position: relative;
+  border: 2px solid var(--background-color-normal);
+  background-color: var(--mantine-color-body);
+  width: 320px;
+  max-width: 100%;
+  border-radius: 18px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.cardPlan .container {
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.gradientTRIAL {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    var(--mantine-color-gray-filled),
+    var(--mantine-color-gray-filled),
+    var(--mantine-color-gray-filled),
+    var(--mantine-color-gray-filled)
+  );
+  animation: gradient 15s ease infinite;
+}
+
+.gradientBASIC {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    var(--mantine-color-green-filled),
+    var(--mantine-color-teal-filled),
+    var(--mantine-color-cyan-filled),
+    var(--mantine-color-blue-filled)
+  );
+  animation: gradient 15s ease infinite;
+}
+
+.gradientPREMIUM {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    var(--mantine-color-indigo-filled),
+    var(--mantine-primary-color-filled),
+    var(--mantine-color-grape-filled),
+    var(--mantine-color-pink-filled)
+  );
+  animation: gradient 15s ease infinite;
+}
+
+.gradientSTANDARD {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    var(--mantine-color-cyan-filled),
+    var(--mantine-color-blue-filled),
+    var(--mantine-color-indigo-filled),
+    var(--mantine-primary-color-filled)
+  );
+  animation: gradient 15s ease infinite;
+}
+
+.gradientULTIMATE {
+  background-size: 400% 400%;
+  background-image: linear-gradient(
+    -45deg,
+    var(--mantine-color-grape-filled),
+    var(--mantine-color-pink-filled),
+    var(--mantine-color-red-filled),
+    var(--mantine-color-orange-filled)
+  );
+  animation: gradient 15s ease infinite;
+}
+
+.cardPlan .header {
+  padding: 14px;
+}
+
+.cardPlan .badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.cardPlan .divider {
+  border-radius: 12px;
+}
+
+.cardPlan .priceWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.cardPlan .plan-type {
+  font-size: 2rem !important;
+}
+
+.cardPlan .priceWrapper .price {
+  font-size: 3rem !important;
+  line-height: 2.5rem !important;
+}
+
+.cardPlan .priceWrapper .currency {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+.cardPlan .priceWrapper .month {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  margin-top: 4px;
+}

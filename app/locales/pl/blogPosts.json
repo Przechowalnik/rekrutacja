@@ -1,0 +1,9 @@
+{
+  "description": "Blog pełen praktycznej wiedzy o zwiększaniu przychodów i budowaniu dodatkowego dochodu. Oferujemy analizy, porady i inspiracje, które wspierają użytkowników w skutecznym wykorzystywaniu ich zasobów.",
+  "noData": "Brak postów",
+  "rss": {
+    "description": "Nowe wpisy na blogu",
+    "title": "Blog"
+  },
+  "title": "Blog pełen inspiracji"
+}

@@ -1,0 +1,16 @@
+{
+  "buttonNew": "Get started",
+  "buttonPrintQrCode": "Print QR code",
+  "buttonRegistrationAccount": "Link: user account registration",
+  "buttonRegistrationCompany": "Link: company account registration",
+  "description": "Recommend our platform and earn extra rewards. <strong>For each company</strong> that registers through your referral link and verifies its phone number, you’ll receive <strong>{{pointsReferralCompany}} points</strong>.<br/><br/>The company that creates an account not previously registered in our system will <strong>receive a 30-day free trial with the {{planFreeTrialCompany}} plan.</strong><br/><br/>Additionally, <strong>for every user</strong> who joins through your referral and verifies their phone number (not previously registered in our system), you’ll earn another <strong>{{pointsReferralUser}} points</strong> to your account.",
+  "information": "Simply share your unique code or QR code with someone who wants to create an account. This way, you can earn rewards from every referral.",
+  "noActiveReferral": "You don't have an active referral program. 😓",
+  "referralCompanies": "Referred companies",
+  "referralUsers": "Referred users",
+  "title": "Earn more with referrals!",
+  "titleCode": "Code to enter manually on the registration page",
+  "titleQrCodeAccount": "QR code for user registration",
+  "titleQrCodeCompany": "QR code for company registration",
+  "titleStatistics": "Your referral statistics"
+}

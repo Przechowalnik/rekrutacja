@@ -1,0 +1,1 @@
+export { ButtonLoginGoogle } from "./ButtonLoginGoogle";

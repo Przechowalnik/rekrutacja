@@ -1,0 +1,8 @@
+{
+  "alert": "In the <tooltipicon label='A billing period is a unit of time equal to one month of subscription use, regardless of its type or duration.'>current billing period</tooltipicon>, you’ve already used the option to gain additional subscription days.",
+  "buttonNew": "New subscription",
+  "description": "On this page, you can view all your subscriptions and their details, including trial periods.",
+  "existingSubscription": "You already have an active subscription",
+  "noSubscriptions": "No subscriptions found",
+  "title": "Subscriptions"
+}

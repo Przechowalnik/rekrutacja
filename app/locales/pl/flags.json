@@ -1,0 +1,6 @@
+{
+  "emailDisabled": "Wyłączone wysyłanie wiadomości E-MAIL",
+  "otpCodeDisabled": "Wyłączone wysyłanie kodów e-mail OTP",
+  "smsDisabled": "Wyłączone wysyłanie wiadomości SMS",
+  "title": "Flagi"
+}

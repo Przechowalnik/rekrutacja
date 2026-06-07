@@ -1,0 +1,1 @@
+export { AdminExchangeNewPage } from "./AdminExchangeNewPage";

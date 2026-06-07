@@ -1,0 +1,132 @@
+{
+  "company": {
+    "address": "ul. Sienkiewicza 36/5, 26-600 Radom",
+    "link": "https://maszbox.pl",
+    "name": "Maszbox Sp. z o. o.",
+    "taxId": "9482656317"
+  },
+  "footer": {
+    "content": "{{companyName}}<br/>{{companyAddress}}<br/>NIP: {{companyTaxId}}<br/><br/>©{{currentYear}} {{companyName}} - dziękujemy, że jesteś z nami",
+    "faq": "<b>Masz pytania?</b> Przygotowaliśmy sekcję [Pytania i odpowiedzi](https://maszbox.pl/pomoc).<br/>W razie potrzeby zapraszamy na stronę [Kontakt](https://maszbox.pl/kontakt).<br/><br/>Pozdrawiamy,<br/>Zespół Maszbox",
+    "policyPrivacy": "Polityka prywatności",
+    "termsAndCondition": "Regulamin",
+    "unsubscribe": "Wypisz się"
+  },
+  "footerParagraph": "Pozdrawiamy 😊",
+  "preview": "Witaj!",
+  "sendBackupChangedEmail": {
+    "paragraph1": "Twój adres e-mail został z powrotem zmieniony na platformie MaszBox.",
+    "subject": "Twój adres e-mail został z powrotem zmieniony na platformie MaszBox"
+  },
+  "sendChangedEmail": {
+    "paragraph1": "Twój adres e-mail został zmieniony na platformie MaszBox.",
+    "paragraph2": "Jeżeli to nie byłeś Ty prosimy o kliknięcie w poniższy link. Jest on ważny tylko 24h.",
+    "paragraph3": "Link do cofnięcia zmian.",
+    "subject": "Twój adres e-mail został zmieniony na platformie MaszBox"
+  },
+  "sendChangedPassword": {
+    "paragraph1": "Twoje hasło został zmienione na platformie MaszBox.",
+    "subject": "Twoje hasło został zmienione na platformie MaszBox"
+  },
+  "sendEmailIsVerified": {
+    "paragraph1": "Twój adres e-mail został pomyślnie potwierdzony przy użyciu kodu weryfikacyjnego. To ważny krok w zabezpieczaniu Twojego konta. 😎",
+    "paragraph2": "Jeśli nie dokonałeś(aś) tej operacji, skontaktuj się z naszym zespołem wsparcia, abyśmy mogli Ci pomóc. 😥",
+    "paragraph3": "Dziękujemy! 😍",
+    "preview": "Gratulacje!",
+    "subject": "Potwierdzono adres e-mail na platformie MaszBox",
+    "title": "Gratulacje! 😀"
+  },
+  "sendEmailOTPCode": {
+    "paragraph1": "Aby dokończyć proces autoryzacji dwuetapowej, proszę skopiuj poniższy kod:",
+    "paragraph2": "Następnie w odpowiednim polu wprowadź ten kod w celu zakończenia procesu aktywacji.",
+    "subject": "Kod autoryzacji dwuetapowej na platformie MaszBox"
+  },
+  "sendInvoice": {
+    "paragraph1": "W załączeniu przesyłam fakturę VAT za nasze usługi. Proszę o zapoznanie się z załączonym dokumentem.",
+    "paragraph2": "W razie pytań lub wątpliwości, prosimy o kontakt.",
+    "subject": "W załączeniu przesyłam fakturę VAT za nasze usługi. Proszę o zapoznanie się z załączonym dokumentem."
+  },
+  "sendListingExtensionPaymentFailed": {
+    "paragraph1": "Płatność za odnowienie Twojego ogłoszenia na naszej platformie nie powiodła się. Rozumiemy, że takie sytuacje mogą się zdarzyć.",
+    "paragraph2": "Aby przedłużyć ogłoszenie, prosimy o ponowne przejście procesu płatności. W razie potrzeby służymy pomocą.",
+    "paragraph3": "Odnowienie ogłoszenia będzie możliwe po skutecznym opłaceniu usługi.",
+    "paragraph4": "Dziękujemy za korzystanie z naszej platformy. W razie pytań zapraszamy do kontaktu — chętnie pomożemy!",
+    "subject": "Nieudana płatność za odnowienie ogłoszenia na platformie MaszBox",
+    "title2": "Problem z płatnością"
+  },
+  "sendRecoveryAccountPassword": {
+    "paragraph1": "Wiemy, że masz problem z dostępem do swojego konta na naszej platformie MaszBox. Chcemy Ci pomóc w odzyskaniu konta, abyś mógł/mogła wrócić do korzystania z naszych usług.",
+    "paragraph2": "Prosimy kliknij poniższy link, który przeniesie Cię do procesu odzyskiwania konta:",
+    "paragraph3": "Link do odzyskania konta.",
+    "subject": "Odzyskiwanie konta na platformie MaszBox"
+  },
+  "sendSmsCreditsPurchased": {
+    "paragraph1": "Dziękujemy za zakup doładowania SMS-ów na naszej platformie! Doceniamy Twoje zaufanie i cieszymy się, że możemy pomóc Ci w skutecznej komunikacji.",
+    "paragraph2": "Obecnie trwa przetwarzanie Twojego zakupu. Gdy tylko proces się zakończy, doładowane SMS-y będą dostępne na Twoim koncie, umożliwiając Ci natychmiastowe ich wykorzystanie.",
+    "paragraph3": "Jeśli masz pytania lub potrzebujesz wsparcia, nasz zespół jest gotowy, aby Ci pomóc. Skontaktuj się z nami, aby uzyskać wszelką potrzebną pomoc.",
+    "paragraph4": "Raz jeszcze dziękujemy za wybór naszej platformy. Wkrótce będziesz mógł w pełni korzystać z zakupionych SMS-ów i realizować swoje cele komunikacyjne!",
+    "subject": "Zakup doładowania SMS-ów na platformie MaszBox",
+    "title2": "Co teraz?"
+  },
+  "sendSubscriptionCancelled": {
+    "paragraph1": "Otrzymaliśmy informację o anulowaniu Twojej subskrypcji na naszej platformie. Zgodnie z Twoim wyborem, subskrypcja pozostanie aktywna do końca bieżącego okresu rozliczeniowego.",
+    "paragraph2": "W tym czasie możesz nadal korzystać ze wszystkich funkcji subskrypcji. Po zakończeniu okresu rozliczeniowego subskrypcja wygaśnie automatycznie, a Twoje konto zostanie ograniczone do wersji bezpłatnej.",
+    "paragraph3": "Jeśli zmienisz zdanie lub chciałbyś odnowić subskrypcję w przyszłości, zawsze będziemy gotowi, aby ponownie powitać Cię w pełnym dostępie.",
+    "paragraph4": "Dziękujemy za korzystanie z naszej platformy i mamy nadzieję, że nasze usługi spełniły Twoje oczekiwania. W przypadku jakichkolwiek pytań, jesteśmy do Twojej dyspozycji.",
+    "subject": "Anulowanie subskrypcji na platformie MaszBox",
+    "title2": "Subskrypcja aktywna do końca okresu rozliczeniowego"
+  },
+  "sendSubscriptionCreated": {
+    "paragraph1": "Dziękujemy za zakup subskrypcji na naszej platformie! Doceniamy Twoje zaufanie i z przyjemnością informujemy, że rozpoczęliśmy proces aktywacji Twojej subskrypcji.",
+    "paragraph2": "Obecnie trwa przetwarzanie Twojego zakupu. Gdy tylko proces się zakończy, wszystkie funkcje subskrypcji zostaną automatycznie aktywowane na Twoim koncie, umożliwiając pełny dostęp do naszych zasobów.",
+    "paragraph3": "Jeśli masz pytania lub potrzebujesz wsparcia, nasz zespół jest do Twojej dyspozycji. Jesteśmy tutaj, aby pomóc i zapewnić Ci jak najlepsze doświadczenia.",
+    "paragraph4": "Raz jeszcze dziękujemy za wybór naszej platformy. Wkrótce będziesz mógł korzystać z pełnych korzyści wynikających z subskrypcji!",
+    "subject": "Zakup subskrypcji na platformie MaszBox",
+    "title2": "Co teraz?"
+  },
+  "sendSubscriptionDeleted": {
+    "paragraph1": "Twoja subskrypcja na naszej platformie została pomyślnie anulowana i jej aktywność została natychmiast zakończona. Od tej chwili Twoje konto powróciło do wersji bezpłatnej z ograniczonym dostępem do niektórych funkcji.",
+    "paragraph2": "Jeśli w przyszłości zdecydujesz się ponownie skorzystać z pełnego dostępu, zawsze jesteśmy gotowi powitać Cię z powrotem. W każdej chwili możesz wznowić subskrypcję, aby korzystać ze wszystkich zasobów i funkcji platformy.",
+    "paragraph3": "Dziękujemy za korzystanie z naszej platformy i mamy nadzieję, że nasze usługi spełniły Twoje oczekiwania. W przypadku pytań lub potrzeby wsparcia, jesteśmy do Twojej dyspozycji.",
+    "subject": "Anulowanie subskrypcji na platformie MaszBox",
+    "title2": "Subskrypcja zakończona"
+  },
+  "sendSubscriptionPaymentFailed": {
+    "paragraph1": "Próba pobrania płatności za Twoją subskrypcję na naszej platformie nie powiodła się. Rozumiemy, że takie sytuacje mogą się zdarzyć, dlatego automatycznie podejmiemy kolejne próby obciążenia konta.",
+    "paragraph2": "W sumie zostaną przeprowadzone 3 próby płatności. W razie dalszych problemów skontaktujemy się z Tobą, aby pomóc w rozwiązaniu sytuacji.",
+    "paragraph3": "Kolejna próba płatności nastąpi:",
+    "paragraph4": "Dziękujemy za korzystanie z naszej platformy i w razie pytań zapraszamy do kontaktu. Jesteśmy tutaj, aby pomóc!",
+    "subject": "Nieudana płatność za subskrypcję na platformie MaszBox",
+    "title2": "Trzy próby płatności"
+  },
+  "sendSubscriptionTrialEndingWithBilling": {
+    "paragraph1": "Twój okres próbny na naszej platformie dobiega końca. Dziękujemy za wypróbowanie naszych usług i mamy nadzieję, że spełniły Twoje oczekiwania.",
+    "paragraph2": "Po zakończeniu okresu próbnego Twoje konto zostanie automatycznie przełączone na subskrypcję płatną, a wybrana metoda płatności zostanie obciążona kwotą zgodną z planem subskrypcyjnym. Obciążenie konta nastąpi w dniu:",
+    "paragraph3": "Jeśli zdecydujesz, że nie chcesz kontynuować subskrypcji, możesz anulować ją w ustawieniach konta przed końcem okresu próbnego, aby uniknąć obciążenia.",
+    "paragraph4": "Dziękujemy, że jesteś z nami. W razie pytań lub potrzeby wsparcia nasz zespół jest do Twojej dyspozycji.",
+    "subject": "Koniec okresu próbnego i nadchodzące obciążenie konta",
+    "title2": "Informacje o nadchodzącym obciążeniu konta"
+  },
+  "sendSubscriptionUpcoming": {
+    "paragraph1": "Chcielibyśmy przypomnieć, że zbliża się płatność za Twoją subskrypcję na naszej platformie. Twoja faktura zostanie wystawiona wkrótce, a płatność zostanie pobrana automatycznie z Twojej karty płatniczej.",
+    "paragraph2": "Po wystawieniu faktury Twoje konto zostanie obciążone kwotą zgodną z wybranym planem subskrypcyjnym. Obciążenie konta nastąpi w dniu:",
+    "paragraph3": "Jeśli zdecydujesz, że nie chcesz kontynuować subskrypcji, masz możliwość jej anulowania w ustawieniach konta przed terminem płatności, aby uniknąć obciążenia.",
+    "paragraph4": "Dziękujemy za korzystanie z naszej platformy. Jeśli masz jakiekolwiek pytania lub potrzebujesz wsparcia, nasz zespół jest gotowy, aby Ci pomóc.",
+    "subject": "Przypomnienie o nadchodzącej płatności subskrypcyjnej",
+    "title2": "Zbliża się Twoja kolejna płatność"
+  },
+  "sendVerifiedEmail": {
+    "paragraph1": "Aby dokończyć proces aktywacji konta, proszę skopiuj poniższy kod:",
+    "paragraph2": "Następnie przejdź do strony logowania na naszej platformie i w odpowiednim polu wprowadź ten kod w celu zakończenia procesu aktywacji.",
+    "paragraph3": "Dziękujemy za wybór naszej usługi! 😍",
+    "preview": "Witaj w MaszBox!",
+    "subject": "Kod aktywacyjny do platformy MaszBox",
+    "title": "Witaj w MaszBox! 😎"
+  },
+  "sendVerifiedNewEmail": {
+    "paragraph1": "Aby dokończyć proces zmiany adresu e-mail, proszę skopiuj poniższy kod:",
+    "paragraph2": "Następnie w odpowiednim polu wprowadź ten kod w celu zakończenia procesu aktywacji.",
+    "subject": "Kod aktywacyjny do platformy MaszBox"
+  },
+  "title": "Witaj! 😎"
+}

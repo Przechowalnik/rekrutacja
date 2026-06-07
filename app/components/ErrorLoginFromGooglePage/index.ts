@@ -1,0 +1,1 @@
+export { ErrorLoginFromGooglePage } from "./ErrorLoginFromGooglePage";

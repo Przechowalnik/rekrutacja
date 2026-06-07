@@ -1,0 +1,16 @@
+{
+  "buttonNew": "Rozpocznij",
+  "buttonPrintQrCode": "Wydrukuj QR kod",
+  "buttonRegistrationAccount": "Link: rejestracja konta użytkownika",
+  "buttonRegistrationCompany": "Link: rejestracja konta firmowego",
+  "description": "Poleć naszą firmę innym i zdobądź dodatkowe korzyści. <strong>Za każdą firmę</strong>, która zarejestruje się z Twojego polecenia oraz zweryfikuje numer telefonu otrzymasz <strong> {{pointsReferralCompany}} punktów</strong>.<br/><br/> Firma, która założy konto, które wcześniej nie widniało w naszym systemie <strong>otrzyma 30 dni darmowego okresu próbnego z planem: {{planFreeTrialCompany}}. </strong><br/><br/>Dodatkowo, <strong>za każdego użytkownika</strong>, który dołączy dzięki Tobie i zweryfikuje numer telefonu, które wcześniej nie widniało w naszym systemie  otrzymasz kolejne <strong> {{pointsReferralUser}} punkty</strong> do Twojego konta.",
+  "information": "Wystarczy, że przekażesz swój unikalny kod lub QR kod osobie, która chce założyć konto. Dzięki temu możesz zdobywać korzyści z każdego polecenia.",
+  "noActiveReferral": "Nie masz aktywnego systemu poleceń. 😓",
+  "referralCompanies": "Pozyskane firmy",
+  "referralUsers": "Pozyskani użytkownicy",
+  "title": "Zyskaj więcej z poleceniami!",
+  "titleCode": "Kod do wpisania ręcznie na stronie rejestracji",
+  "titleQrCodeAccount": "QR kod do rejestracji użytkownika",
+  "titleQrCodeCompany": "QR kod do rejestracji firmy",
+  "titleStatistics": "Statystyki Twoich poleceń"
+}

@@ -1,0 +1,956 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Authenticator2FA {
+  id         String    @id @default(uuid())
+  enabledAt  DateTime?
+  userId     String    @unique
+  tempSecret String?
+  secret     String?
+  backupCode String?
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AuthenticatorEmailOTP {
+  id        String    @id @default(uuid())
+  enabledAt DateTime?
+  userId    String    @unique
+  expiresAt DateTime
+  code      String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model EmailVerification {
+  id                          String    @id @default(uuid())
+  verifiedAt                  DateTime?
+  userId                      String    @unique
+  code                        String?
+  oldEmail                    String?
+  oldEmailBackupCode          String?
+  oldEmailBackupCodeExpiresAt DateTime?
+  newEmailToVerified          String?
+  newEmailToVerifiedCode      String?
+  createdAt                   DateTime  @default(now())
+  updatedAt                   DateTime  @updatedAt
+  user                        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model AccountRecovery {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  expiresAt DateTime
+  code      String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Consent {
+  id           String    @id @default(uuid())
+  userId       String    @unique
+  newsletterAt DateTime?
+  opinionAt    DateTime?
+  regulationAt DateTime  @default(now())
+  user         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model UserPhone {
+  id                   String    @id @default(uuid())
+  verifiedAt           DateTime?
+  userId               String    @unique
+  number               BigInt?
+  countryCode          Int?
+  code                 String?
+  numberToConfirm      BigInt?
+  countryCodeToConfirm Int?
+  codeExpires          DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  user                 User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model UserNotifications {
+  id        String    @id @default(uuid())
+  enabledAt DateTime?
+  userId    String    @unique
+  pwa       String?
+  native    String?
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model UserSocials {
+  id                           String    @id @default(uuid())
+  userId                       String    @unique
+  googleId                     String?
+  googleAccessToken            String?
+  googleAccessTokenExpiresAt   DateTime?
+  facebookId                   String?
+  facebookAccessToken          String?
+  facebookAccessTokenExpiresAt DateTime?
+  user                         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Referral {
+  id             String   @id @default(uuid())
+  userId         String?  @unique
+  companyId      String?  @unique
+  code           String   @unique
+  countCompanies Int      @default(0)
+  countUsers     Int      @default(0)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  company        Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  user           User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([companyId])
+}
+
+model UserIp {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  value     String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@unique([userId, value])
+  @@index([userId])
+  @@index([expiresAt])
+}
+
+model User {
+  id                       String                 @id @default(uuid())
+  firstName                String
+  lastName                 String?
+  email                    String                 @unique
+  password                 String
+  isPasswordSet            Boolean                @default(true)
+  sessionVersion           Int                    @default(1)
+  blockedAt                DateTime?
+  avatar                   String?
+  lang                     Languages              @default(PL)
+  role                     Role                   @default(USER)
+  createdFromReferralCode  String?
+  stripeCustomerId         String?                @unique
+  companyId                String?
+  createdAt                DateTime               @default(now())
+  updatedAt                DateTime               @updatedAt
+  recoveryAccount          AccountRecovery?
+  authenticator2FA         Authenticator2FA?
+  authenticatorEmailOTP    AuthenticatorEmailOTP?
+  bugs                     Bug[]
+  workerSettings           CompanyWorkerSettings?
+  consent                  Consent?
+  emailVerification        EmailVerification?
+  invoices                 Invoice[]
+  listings                 Listing[]
+  points                   Points?
+  referral                 Referral?
+  company                  Company?               @relation("WorkerCompany", fields: [companyId], references: [id], onDelete: NoAction)
+  notifications            UserNotifications?
+  phone                    UserPhone?
+  socials                  UserSocials?
+  createdBlogPosts         BlogPost[]
+  reportsAsTarget          Report[]               @relation("ReportTargetUser")
+  reportsAsReporter        Report[]               @relation("ReportReporter")
+  loginIps                 UserIp[]
+  listingInteractions      ListingInteraction[]   @relation("ListingInteractionUser")
+  ownedListingInteractions ListingInteraction[]   @relation("ListingInteractionOwner")
+
+  @@index([email])
+  @@index([id, role, blockedAt, companyId])
+  @@index([companyId, blockedAt])
+}
+
+model CompanyWorkerSettings {
+  id          String                    @id @default(uuid())
+  userId      String                    @unique
+  companyId   String
+  permissions CompanyWorkerPermission[]
+  company     Company                   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  user        User                      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+  @@index([userId])
+}
+
+model CompanyRegistry {
+  id        String     @id @default(uuid())
+  number    String
+  country   TaxCountry @default(PL)
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([number, country])
+}
+
+model CompanyInvoiceData {
+  id           String     @id @default(uuid())
+  companyId    String     @unique
+  companyName  String
+  taxNumber    String
+  taxCountry   TaxCountry @default(PL)
+  country      Country    @default(POLAND)
+  postalCode   String
+  city         String
+  streetName   String
+  streetNumber String
+  flatNumber   String?
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  company      Company    @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+}
+
+model CompanyPhone {
+  id                   String    @id @default(uuid())
+  verifiedAt           DateTime?
+  companyId            String    @unique
+  number               BigInt?
+  countryCode          Int?
+  code                 String?
+  numberToConfirm      BigInt?
+  countryCodeToConfirm Int?
+  codeExpires          DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+  company              Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+}
+
+model CompanyFreeTrial {
+  id        String   @id @default(uuid())
+  companyId String   @unique
+  startDate DateTime
+  endDate   DateTime
+  planId    String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  plan      Plan     @relation(fields: [planId], references: [id])
+
+  @@index([companyId])
+}
+
+model PointsHistory {
+  id                     String   @id @default(uuid())
+  pointsId               String
+  balanceAfterOperation  Int
+  balanceBeforeOperation Int
+  amount                 Int
+  createdAt              DateTime @default(now())
+  updatedAt              DateTime @updatedAt
+  points                 Points   @relation(fields: [pointsId], references: [id], onDelete: Cascade)
+
+  @@index([pointsId, createdAt])
+}
+
+model Points {
+  id        String          @id @default(uuid())
+  companyId String?         @unique
+  userId    String?         @unique
+  balance   Int
+  createdAt DateTime        @default(now())
+  updatedAt DateTime        @updatedAt
+  company   Company?        @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  user      User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  history   PointsHistory[]
+
+  @@index([userId])
+  @@index([companyId])
+}
+
+model CompanyStripe {
+  id                        String    @id @default(uuid())
+  companyId                 String    @unique
+  accountId                 String?   @unique
+  accountOnboardingActiveAt DateTime?
+  customerId                String?   @unique
+  customerCardId            String?
+  costumerCardLast4Numbers  String?
+  company                   Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+}
+
+model CompanySettings {
+  id                               String    @id @default(uuid())
+  companyId                        String    @unique
+  loginGoogleAt                    DateTime?
+  loginFacebookAt                  DateTime?
+  loginPasswordAt                  DateTime?
+  twoFactorAuthenticationEnabledAt DateTime?
+  company                          Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  @@index([companyId])
+}
+
+model Company {
+  id                      String                  @id @default(uuid())
+  idnumber                Int                     @unique @default(autoincrement())
+  slug                    String?
+  name                    String                  @unique
+  urlInstagram            String?
+  urlFacebook             String?
+  urlTiktok               String?
+  blockedAt               DateTime?
+  avatar                  String?
+  bannerHero              String?
+  description             String?
+  createdAt               DateTime                @default(now())
+  updatedAt               DateTime                @updatedAt
+  createdFromReferralCode String?
+  bugs                    Bug[]
+  freeTrial               CompanyFreeTrial?
+  invoiceData             CompanyInvoiceData?
+  phone                   CompanyPhone?
+  settings                CompanySettings?
+  stripe                  CompanyStripe?
+  workersSettings         CompanyWorkerSettings[]
+  invoices                Invoice[]
+  listings                Listing[]
+  points                  Points?
+  referral                Referral?
+  subscriptions           Subscription[]
+  workers                 User[]                  @relation("WorkerCompany")
+  reportsAsTarget         Report[]                @relation("ReportTargetCompany")
+  listingInteractions     ListingInteraction[]
+
+  @@index([id, slug])
+  @@index([slug])
+}
+
+model Geolocation {
+  id      String @id @default(uuid())
+  address String @unique
+  lat     Float
+  lng     Float
+
+  @@index([lat, lng])
+}
+
+model Product {
+  id                       String    @id @default(uuid())
+  isDeletedAt              DateTime?
+  name                     String
+  price_1                  BigInt
+  price_2_5                BigInt
+  price_6_plus             BigInt
+  points_1                 BigInt
+  points_2_5               BigInt
+  points_6_plus            BigInt
+  stripeProductId          String?   @unique
+  stripeSessionCheckoutId  String?
+  stripeSessionCheckoutUrl String?
+  createdAt                DateTime  @default(now())
+  updatedAt                DateTime  @updatedAt
+}
+
+model Plan {
+  id                     String             @id @default(uuid())
+  type                   PlanType
+  isDeletedAt            DateTime?
+  price                  BigInt
+  name                   String
+  description            String
+  enabledAt              DateTime?
+  stripePlanId           String?            @unique
+  stripeProductId        String?            @unique
+  interval               PlanInterval?
+  intervalCount          Int?
+  maximumListingsInMonth Int
+  listingDurationMonths  Int
+  createdAt              DateTime           @default(now())
+  updatedAt              DateTime           @updatedAt
+  companyFreeTrial       CompanyFreeTrial[]
+  platformSetting        PlatformSetting[]
+  subscriptions          Subscription[]
+  coupons                Coupon[]           @relation("CouponToPlan")
+}
+
+model Coupon {
+  id                    String         @id @default(uuid())
+  enabledAt             DateTime?
+  name                  String
+  percentOff            Int?
+  amountOff             BigInt?
+  minimumAmount         BigInt?
+  endDate               DateTime
+  promotionCode         String         @unique
+  stripeCouponId        String
+  stripePromotionCodeId String
+  durationInMonths      Int            @default(1)
+  maxRedemptions        BigInt?
+  firstTimeTransaction  Boolean
+  createdAt             DateTime       @default(now())
+  updatedAt             DateTime       @updatedAt
+  subscription          Subscription[]
+  plans                 Plan[]         @relation("CouponToPlan")
+
+  @@index([endDate])
+}
+
+model Exchange {
+  id                   String    @id @default(uuid())
+  name                 String
+  subscriptionFreeDays Int?
+  points               Int
+  enabledAt            DateTime?
+  createdAt            DateTime  @default(now())
+  updatedAt            DateTime  @updatedAt
+}
+
+model Invoice {
+  id                    String           @id @default(uuid())
+  stripePaymentIntentId String?          @unique
+  stripeCheckoutId      String?          @unique
+  fakturowniaInvoiceId  String?          @unique
+  subscriptionId        String?
+  companyId             String?
+  userId                String?
+  createdAt             DateTime         @default(now())
+  updatedAt             DateTime         @updatedAt
+  company               Company?         @relation(fields: [companyId], references: [id])
+  subscription          Subscription?    @relation(fields: [subscriptionId], references: [id])
+  user                  User?            @relation(fields: [userId], references: [id])
+  listingPayments       ListingPayment[]
+
+  @@index([companyId])
+}
+
+model Subscription {
+  id                           String             @id @default(uuid())
+  stripeSubscriptionId         String?            @unique
+  startDate                    DateTime
+  endDate                      DateTime?
+  status                       SubscriptionStatus
+  companyId                    String?
+  planId                       String
+  couponId                     String?
+  createdAt                    DateTime           @default(now())
+  updatedAt                    DateTime           @updatedAt
+  nextPaymentAttempt           DateTime?
+  endDateExchangeFreeDays      DateTime?
+  extraFreeDaysInCurrentPeriod Int?               @default(0)
+  invoices                     Invoice[]
+  company                      Company?           @relation(fields: [companyId], references: [id])
+  coupon                       Coupon?            @relation(fields: [couponId], references: [id])
+  plan                         Plan               @relation(fields: [planId], references: [id])
+
+  @@index([companyId, status])
+  @@index([companyId, startDate, endDate, status])
+}
+
+model PlatformSetting {
+  id                          String   @id @default(uuid())
+  pointsReferralCompany       Int
+  pointsReferralUser          Int
+  pointsSmallBug              Int
+  pointsMediumBug             Int
+  pointsBigBug                Int
+  planIdFreeTrialCompany      String
+  freeTrialCompanyMonthsCount Int
+  freeTrialMaxListings        Int      @default(1)
+  createdAt                   DateTime @default(now())
+  updatedAt                   DateTime @updatedAt
+  planFreeTrialCompany        Plan     @relation(fields: [planIdFreeTrialCompany], references: [id])
+}
+
+model Bug {
+  id                 String         @id @default(uuid())
+  userId             String
+  companyId          String?
+  images             String[]
+  video              String?
+  status             BugStatus
+  description        String
+  timestamp          DateTime
+  environment        BugEnvironment
+  actionsBeforeError String
+  errorMessage       String?
+  expectedBehavior   String?
+  isReproducible     Boolean
+  priority           BugPriority?
+  answer             String?
+  pointsPaidAt       DateTime?
+  createdAt          DateTime       @default(now())
+  updatedAt          DateTime       @updatedAt
+  company            Company?       @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  user               User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([companyId])
+}
+
+model BlogPost {
+  id              String   @id @default(uuid())
+  createdByUserId String?
+  slug            String   @unique
+  title           String   @unique
+  titleSeo        String   @unique
+  description     String
+  descriptionSeo  String
+  content         String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  createdByUser   User?    @relation(fields: [createdByUserId], references: [id], onDelete: SetNull)
+
+  @@index([title])
+  @@index([titleSeo])
+}
+
+model ListingLocation {
+  id            String    @id @default(uuid())
+  listingId     String    @unique
+  country       Country   @default(POLAND)
+  postalCode    String
+  cityCustom    String?
+  streetName    String
+  streetNumber  String
+  flatNumber    String?
+  lat           Float
+  lng           Float
+  cityId        String?
+  city          City?     @relation("ListingLocationCity", fields: [cityId], references: [id], onDelete: SetNull)
+  districtId    String?
+  district      District? @relation(fields: [districtId], references: [id], onDelete: SetNull)
+  listing       Listing   @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  nearestCityId String?
+  nearestCity   City?     @relation("ListingLocationNearestCity", fields: [nearestCityId], references: [id], onDelete: SetNull)
+
+  @@index([lat, lng])
+  @@index([cityId])
+  @@index([districtId])
+  @@index([cityId, districtId])
+}
+
+model ListingPayment {
+  id                    String               @id @default(uuid())
+  listingId             String
+  status                ListingPaymentStatus
+  free                  Boolean
+  monthsToAdd           Int?
+  points                BigInt?
+  amount                BigInt?
+  stripePaymentIntentId String?
+  stripeCheckoutId      String?
+  stripeCheckoutUrl     String?
+  expiresAtBeforeAdd    DateTime?
+  expiresAtAfterAdd     DateTime?
+  invoiceId             String?
+  createdAt             DateTime             @default(now())
+  updatedAt             DateTime             @updatedAt
+  invoice               Invoice?             @relation(fields: [invoiceId], references: [id])
+  listing               Listing              @relation(fields: [listingId], references: [id], onDelete: Cascade)
+
+  @@index([listingId])
+  @@index([listingId, status])
+  @@index([status, createdAt])
+  @@index([listingId, status, createdAt])
+}
+
+model ListingInteraction {
+  id   String                 @id @default(uuid())
+  type ListingInteractionType
+
+  listingId String?
+  listing   Listing? @relation(fields: [listingId], references: [id], onDelete: SetNull)
+
+  userId String?
+  user   User?   @relation("ListingInteractionUser", fields: [userId], references: [id], onDelete: SetNull)
+
+  ownerUserId String?
+  ownerUser   User?   @relation("ListingInteractionOwner", fields: [ownerUserId], references: [id], onDelete: Cascade)
+
+  ownerCompanyId String?
+  ownerCompany   Company? @relation(fields: [ownerCompanyId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+
+  @@index([listingId])
+  @@index([listingId, ownerCompanyId])
+  @@index([ownerCompanyId, type, createdAt])
+  @@index([ownerUserId, type, createdAt])
+  @@index([userId, type, createdAt])
+  @@index([type, createdAt])
+}
+
+model ListingImage {
+  id String @id @default(uuid())
+
+  listingId String
+  listing   Listing @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  url       String
+  isDefault Boolean
+
+  @@index([listingId, isDefault])
+}
+
+model Listing {
+  id                String                  @id @default(uuid())
+  listingIndex      Int                     @unique @default(autoincrement())
+  slug              String                  @unique
+  userId            String?
+  companyId         String?
+  contractType      ListingContractType?
+  type              ListingType
+  status            ListingStatus
+  deleteReason      ListingDeleteReason?
+  category          ListingCategory
+  title             String
+  description       String?
+  price             BigInt
+  area              Float?
+  negotiable        Boolean
+  interactions      ListingInteraction[]
+  floorLevel        Int?
+  parkingType       ListingParkingType?
+  minimumRentalDays Int?
+  access            ListingAccess?
+  securityOptions   ListingSecurityOption[]
+  comfortOptions    ListingComfortOption[]
+  entryOptions      ListingEntryOption[]
+  usageOptions      ListingUsageOptions[]
+  expiresAt         DateTime?
+  availableFrom     DateTime
+  availableTo       DateTime?
+  createdAt         DateTime                @default(now())
+  updatedAt         DateTime                @updatedAt
+  utilityOptions    ListingUtilityOption[]
+  condition         ListingCondition?
+  plotType          ListingPlotType?
+  unitType          ListingUnitType?
+  containerType     ListingContainerType?
+  company           Company?                @relation(fields: [companyId], references: [id], onDelete: NoAction)
+  user              User?                   @relation(fields: [userId], references: [id], onDelete: NoAction)
+  location          ListingLocation?
+  payments          ListingPayment[]
+  reports           Report[]                @relation("ReportListing")
+  images            ListingImage[]
+
+  @@index([status, category, createdAt])
+  @@index([status, category, expiresAt])
+  @@index([status, category, availableTo])
+  @@index([status, category, type, createdAt])
+  @@index([status, category, type, expiresAt])
+  @@index([userId, status, expiresAt])
+  @@index([companyId, status, expiresAt])
+  @@index([status, expiresAt, availableTo])
+  @@index([companyId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model Report {
+  id                  String     @id @default(uuid())
+  type                ReportType
+  listingId           String?
+  listing             Listing?   @relation("ReportListing", fields: [listingId], references: [id], onDelete: SetNull)
+  targetUserId        String?
+  targetUser          User?      @relation("ReportTargetUser", fields: [targetUserId], references: [id], onDelete: SetNull)
+  targetCompanyId     String?
+  targetCompany       Company?   @relation("ReportTargetCompany", fields: [targetCompanyId], references: [id], onDelete: SetNull)
+  targetUserEmailHash String?
+  userId              String?
+  user                User?      @relation("ReportReporter", fields: [userId], references: [id], onDelete: SetNull)
+  description         String?
+  createdAt           DateTime   @default(now())
+
+  @@index([listingId])
+  @@index([targetUserId])
+  @@index([targetCompanyId])
+  @@index([userId])
+}
+
+model City {
+  id          String @id @default(cuid())
+  name        String
+  nameSearch  String @unique
+  voivodeship String // eq. "mazowieckie"
+
+  lat Float
+  lng Float
+
+  radiusKm Float
+
+  districts               District[]
+  listingLocations        ListingLocation[] @relation("ListingLocationCity")
+  nearestListingLocations ListingLocation[] @relation("ListingLocationNearestCity")
+
+  @@unique([name, voivodeship, nameSearch])
+  @@index([voivodeship])
+  @@index([nameSearch])
+  @@index([name])
+  @@index([lat, lng])
+  @@index([lat])
+  @@index([lng])
+}
+
+model District {
+  id         String @id @default(cuid())
+  name       String
+  nameSearch String
+  cityId     String
+  city       City   @relation(fields: [cityId], references: [id], onDelete: Cascade)
+
+  lat              Float
+  lng              Float
+  listingLocations ListingLocation[]
+
+  @@unique([name, cityId])
+  @@unique([id, cityId])
+  @@index([nameSearch])
+  @@index([cityId])
+}
+
+enum ListingInteractionType {
+  CONTACT
+  VIEW
+}
+
+enum ReportType {
+  ILLEGAL_CONTENT
+  SCAM_FRAUD
+  MISLEADING_INFO
+  SPAM
+  OFFENSIVE_CONTENT
+  WRONG_CATEGORY
+  OTHER
+}
+
+enum ListingAccess {
+  ACCESS_24H
+  LIMITED_HOURS
+}
+
+enum ListingSecurityOption {
+  MONITORING
+  SECURITY
+  ELECTRONIC_LOCK
+  MANUAL_GATE
+  AUTOMATIC_GATE
+  PADLOCK
+  ALARM
+  DOOR_LOCK
+  BARRIER
+  REMOTE_CONTROL
+}
+
+enum ListingCondition {
+  NEEDS_RENOVATION
+  PARTIALLY_FINISHED
+  FINISHED
+  NEW
+  RAW
+}
+
+enum ListingUtilityOption {
+  ELECTRICITY
+  SEWAGE
+  WATER
+}
+
+enum ListingComfortOption {
+  HEATED
+  LIGHTING
+  PARKING
+  VENTILATION
+}
+
+enum ListingEntryOption {
+  ELEVATOR
+  STAIRCASE
+  STREET_ENTRANCE
+}
+
+enum ListingUsageOptions {
+  CAR_ACCESS
+  TIR_ACCESS
+}
+
+enum ListingPlotType {
+  FOREST
+  SERVICE
+  AGRICULTURAL
+  BUILDING
+  INVESTMENT
+  RECREATIONAL
+}
+
+enum ListingUnitType {
+  WAREHOUSE
+  RETAIL
+  SERVICE
+  PRODUCTION
+  OFFICE
+  CONFERENCE_ROOM
+}
+
+enum ListingContainerType {
+  MARINE
+  WAREHOUSE
+  OFFICE_SOCIAL
+  SANITARY
+  REFRIGERATED
+  MODULAR_RESIDENTIAL
+}
+
+enum ListingParkingType {
+  DETACHED
+  UNDERGROUND
+  MULTILEVEL_LIFT
+  GROUND_PLACE
+}
+
+enum ListingType {
+  SALE
+  RENT
+}
+
+enum ListingContractType {
+  SHORT_TERM
+  LONG_TERM
+}
+
+enum ListingPaymentStatus {
+  PAID
+  REJECTED
+  EXPIRED
+  UNPAID
+  FREE
+  PENDING
+}
+
+enum ListingStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+  REJECTED
+  EXPIRED
+  DELETED
+  UNPAID
+}
+
+enum ListingDeleteReason {
+  SOLD
+  RENTED
+  NO_LONGER_AVAILABLE
+  CHANGED_MIND
+  DUPLICATE
+  OTHER
+}
+
+enum ListingCategory {
+  PARKING
+  STORAGE_UNIT
+  ATTIC
+  BASEMENT
+  WAREHOUSE
+  ROOM
+  PLOT
+  UNIT
+  CONTAINER
+  BANQUET_HALL
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PENDING
+  CANCELLED
+  TRIALING
+  UNPAID
+  TO_BE_CANCELLED
+}
+
+enum PlanType {
+  TRIAL
+  BASIC
+  STANDARD
+  PREMIUM
+  ULTIMATE
+}
+
+enum Role {
+  B2B_WORKER
+  B2B_OWNER
+  USER
+  ADMIN
+  ADMIN_SUPER
+}
+
+enum CompanyWorkerPermission {
+  MANAGE_WORKERS
+  MANAGE_LISTINGS
+}
+
+enum Languages {
+  PL
+  EN
+}
+
+enum Country {
+  POLAND
+}
+
+enum TaxCountry {
+  PL
+}
+
+enum PlanInterval {
+  DAY
+  WEEK
+  MONTH
+  YEAR
+}
+
+enum BugPriority {
+  SMALL
+  MEDIUM
+  BIG
+}
+
+enum BugEnvironment {
+  DESKTOP_CHROME
+  DESKTOP_FIREFOX
+  DESKTOP_EDGE
+  DESKTOP_OTHER
+  PHONE_ANDROID
+  PHONE_IOS
+  PHONE_OTHER
+}
+
+enum BugStatus {
+  REPORTED
+  IN_PROGRESS
+  RESOLVED
+  REJECTED
+  DUPLICATE
+}

@@ -1,0 +1,1 @@
+export { AvatarWorker } from "./AvatarWorker";

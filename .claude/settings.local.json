@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx cross-env E2E=true VITE_IS_E2E=true CI=true npx react-router build)",
+      "Bash(npx tsc:*)"
+    ]
+  }
+}

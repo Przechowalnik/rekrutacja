@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "title": "Refine your search!"
+  },
+  "homeLatestListings": {
+    "title": "Recently added listings"
+  },
+  "noData": "No listings available.",
+  "noDataToSearch": "No category or location selected.",
+  "searchListingCategoryCity": {
+    "buttonShowMap": "Show on map"
+  },
+  "topCategories": {
+    "description": "Explore listings by category - garages, warehouses, plots, units and more.",
+    "title": "Categories of spaces"
+  },
+  "topCities": {
+    "description": "Browse listings in the biggest Polish cities with active offers.",
+    "title": "Popular cities"
+  }
+}

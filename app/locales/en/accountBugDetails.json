@@ -1,0 +1,11 @@
+{
+  "bugPointsLabel": "Possible points to earn",
+  "bugPointsPaidAtDescription": "If there’s no date, the points haven’t been paid yet.",
+  "buttonEdit": "Edit",
+  "noAnswer": "No response",
+  "showImages": "View images",
+  "showVideo": "Watch video",
+  "success": "Points have been paid!",
+  "title": "Report details",
+  "warning": "An admin has responded to your reported issue"
+}

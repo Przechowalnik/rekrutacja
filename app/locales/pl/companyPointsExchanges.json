@@ -1,0 +1,7 @@
+{
+  "alert": "W <tooltipicon label='{{tooltipBillingPeriod}}'>obecnym okresie rozliczeniowym</tooltipicon> wykorzystałeś już możliwość zdobycia dodatkowych dni subskrypcji.",
+  "buttonAdd": "Wymień",
+  "description": "Aby wymienić <gradient>punkty</gradient>, najpierw wybierz jeden z dostępnych opcji wymiany, który najlepiej odpowiada Twoim potrzebom. Następnie kliknij przycisk zatwierdzenia, aby sfinalizować operację. Upewnij się, że masz wystarczającą liczbę punktów przed zatwierdzeniem wymiany.<br/><br/><b>Pamiętaj, że proces wymiany jest nieodwracalny i nie ma możliwości cofnięcia punkty po dokonaniu transakcji.</b>",
+  "information": "Dostępna ilość punktów: {{pointsBalance}}",
+  "title": "Wymień punkty"
+}

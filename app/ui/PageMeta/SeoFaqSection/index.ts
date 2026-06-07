@@ -1,0 +1,1 @@
+export { SeoFaqSection } from "./SeoFaqSection";

@@ -1,0 +1,1 @@
+export { CompanyDeletePage } from "./CompanyDeletePage";

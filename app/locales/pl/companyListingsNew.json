@@ -1,0 +1,14 @@
+{
+  "buttonAdd": "Dodaj firmowe ogłoszenie",
+  "buttonPay": "Przejdź do płatności",
+  "fieldsetInformation": "Informacje ogólne",
+  "fieldsetInformationFilters": "Informacje szczegółowe",
+  "fieldsetLocation": "Adres lokalizacji",
+  "fieldsetPhone": "Numer kontaktowy",
+  "fieldsetPhoneDescription": "Numer telefonu widoczny w ogłoszeniu jest zawsze taki sam jak numer dodany i zweryfikowany na koncie i nie może być edytowany podczas tworzenia ogłoszenia. Aby użyć innego numeru telefonu, należy dodać i zweryfikować nowy numer na koncie. Takie rozwiązanie ma na celu ograniczenie oszustw, podszywania się oraz innych nadużyć.",
+  "fieldsetPrice": "Cena",
+  "information": "Każde ogłoszenie jest tworzone na okres 1 miesiąca. Po tym czasie należy je przedłużyć, aby pozostało aktywne. Przedłużenie jest możliwe dopiero wtedy, gdy do wygaśnięcia ogłoszenia pozostaje mniej niż 30 dni.",
+  "informationCompany": "W przypadku przekroczenia limitu, za każde dodatkowe ogłoszenie naliczana jest opłata według aktualnego <a target='_blank' href='pricing'>cennika</a>. Czas trwania ogłoszenia określany jest w miesiącach w ramach planu {{countMonths}}. Po tym czasie wymagają odnowienia, aby pozostały aktywne.",
+  "title": "Nowe firmowe ogłoszenie",
+  "warning": "Wykorzystano już {{countUsed}} z {{countPlanLimit}} darmowych ogłoszeń dostępnych w ramach Twojego planu na ten miesiąc."
+}

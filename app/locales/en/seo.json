@@ -1,0 +1,956 @@
+{
+  "imagesAlt": {
+    "banner": "Banner promoting a real estate offer",
+    "bannerRent": "Banner promoting property rental",
+    "bannerRentHorizontally": "Banner promoting property rental in a horizontal layout",
+    "burgerMenu": "Menu",
+    "cardCode": {
+      "button": "Copy referral code"
+    },
+    "clear": "Clear",
+    "close": "Close",
+    "hiddenPassword": "Hide password",
+    "icon": "Icon",
+    "iconAttic": "Attic icon",
+    "iconBox": "Box icon",
+    "iconBriefcase": "Briefcase icon",
+    "iconBuildingLock": "Building with lock icon",
+    "iconHotel": "Hotel icon",
+    "iconHouse": "Single-family house icon",
+    "iconLayerGroup": "Layer group icon",
+    "iconLocationDot": "Location pin icon",
+    "iconParkingDetached": "Detached parking space icon",
+    "iconParkingGroundPlace": "Ground-level parking space icon",
+    "iconParkingMultilevel": "Multilevel parking icon",
+    "iconParkingUnderground": "Underground parking icon",
+    "iconShare": "Icon share",
+    "iconSquareParking": "Square-marked parking icon",
+    "iconTableCellsColumnLock": "Table column with lock icon",
+    "iconUpRightAndDownLeftFromCenter": "Show",
+    "iconWarehouse": "Warehouse icon",
+    "imageCompanyBanner": "Company banner",
+    "imageListing": "Listing photo",
+    "logo": "Company logo",
+    "map": {
+      "centerMapLocation": "Center the map on the selected area",
+      "close": "Close map",
+      "minus": "Zoom out map",
+      "next": "Next listing",
+      "plus": "Zoom in map",
+      "previous": "Previous listing"
+    },
+    "modalCarouselItem": "Image in carousel preview",
+    "next": "Next",
+    "previewImage": "Preview of the selected image",
+    "previous": "Previous",
+    "progressBar": "Page data loading",
+    "selectImagesItem": "Selectable image",
+    "showPassword": "Show password"
+  },
+  "jsonLdFaq": {
+    "aboutUs": {
+      "description": "Maszbox is the first platform in Poland that enables the rental and sale of small spaces - from garages and storage units to utility rooms. Our goal is to make online transactions fast and secure for both owners and tenants. With Maszbox, you can easily add listings, manage payments, and monitor space availability. The platform combines innovative technology with an intuitive interface, ensuring a smooth and user-friendly experience. Discover how Maszbox is transforming the rental market in Poland by enabling quick, safe, and transparent transactions."
+    },
+    "accessibility": {
+      "description": "At Maszbox, we prioritize accessibility - our website and app meet the WCAG 2.1 AA standard, support screen readers, and maintain proper contrast. We make sure every user can use the platform comfortably and without barriers."
+    },
+    "account": {
+      "description": "Manage your Maszbox account - add listings, control payments and points, and ensure your data security."
+    },
+    "accountAuthenticator": {
+      "description": "Enhance your account security with two-factor authentication."
+    },
+    "accountBugDetails": {
+      "description": "Check the details of reported issues on Maszbox and monitor their status."
+    },
+    "accountBugNew": {
+      "description": "Report bugs and issues you encounter on the Maszbox platform."
+    },
+    "accountBugs": {
+      "description": "Browse all reported bugs and track their resolution."
+    },
+    "accountConsents": {
+      "description": "Manage your marketing consents and privacy preferences."
+    },
+    "accountDelete": {
+      "description": "Learn how to safely delete your Maszbox account."
+    },
+    "accountEmail": {
+      "description": "Update the email address associated with your Maszbox account."
+    },
+    "accountInvoices": {
+      "description": "View and download invoices for using the platform."
+    },
+    "accountListings": {
+      "description": "Manage your listings - add, edit, and monitor payments."
+    },
+    "accountListingsEdit": {
+      "description": "Edit your listings to increase their appeal and visibility."
+    },
+    "accountListingsNew": {
+      "description": "Add a new listing on Maszbox and start earning from your space."
+    },
+    "accountListingsPayments": {
+      "description": "Manage payments associated with your Maszbox listings."
+    },
+    "accountPassword": {
+      "description": "Change your password to enhance the security of your account."
+    },
+    "accountPhone": {
+      "description": "Update the phone number linked to your Maszbox account."
+    },
+    "accountPoints": {
+      "description": "Check and exchange points collected in the Maszbox system."
+    },
+    "accountProfile": {
+      "description": "Manage your user profile and information visible to others."
+    },
+    "accountReferral": {
+      "description": "Invite friends and earn bonuses through the Maszbox referral system."
+    },
+    "accountSessions": {
+      "description": "Manage your active sessions and enhance login security."
+    },
+    "admin": {
+      "description": "Maszbox admin panel - manage the platform and monitor user activity."
+    },
+    "adminBlogPostEdit": {
+      "description": "Edit an existing blog and update its content on the Maszbox platform."
+    },
+    "adminBlogPostNew": {
+      "description": "Create a new blog and publish content on the Maszbox platform."
+    },
+    "adminBlogPosts": {
+      "description": "A list of all blog posts published on the platform."
+    },
+    "adminBugDetails": {
+      "description": "Check detailed reports of submitted bugs and track their resolution."
+    },
+    "adminBugEdit": {
+      "description": "Edit bug reports and update their status in the admin panel."
+    },
+    "adminBugs": {
+      "description": "A list of all bugs reported on the Maszbox platform."
+    },
+    "adminCouponEdit": {
+      "description": "Edit existing promotional coupons for users."
+    },
+    "adminCouponNew": {
+      "description": "Add a new promotional coupon available to platform users."
+    },
+    "adminCoupons": {
+      "description": "View all active coupons available on Maszbox."
+    },
+    "adminExchanges": {
+      "description": "Manage point exchanges and transactions in the system."
+    },
+    "adminExchangesEdit": {
+      "description": "Edit details and status of a selected point exchange."
+    },
+    "adminExchangesNew": {
+      "description": "Add a new point or service exchange to the platform."
+    },
+    "adminMarketingEmail": {
+      "description": "Send a marketing email to customers."
+    },
+    "adminPlanNew": {
+      "description": "Create a new subscription plan for Maszbox users."
+    },
+    "adminPlans": {
+      "description": "View available subscription and offer plans."
+    },
+    "adminPlansEdit": {
+      "description": "Edit details of a selected plan in the admin panel."
+    },
+    "adminProducts": {
+      "description": "Manage pricing lists for listings and services on the platform."
+    },
+    "adminProductsEdit": {
+      "description": "Edit existing price lists for listings and services."
+    },
+    "adminProductsNew": {
+      "description": "Add a new pricing list for listings or services."
+    },
+    "adminReports": {
+      "description": "A list of all reports on the platform."
+    },
+    "adminSettingEdit": {
+      "description": "Edit Maszbox platform settings to adjust system behavior."
+    },
+    "adminSettingNew": {
+      "description": "Add new configuration settings for the platform."
+    },
+    "adminSettings": {
+      "description": "View and manage global platform settings."
+    },
+    "apiAccountAuthenticatorNew2FA": {
+      "description": "API functions related to setting up new 2FA authentication."
+    },
+    "apiAccountCookie": {
+      "description": "API functions related to get session."
+    },
+    "apiAccountLanguage": {
+      "description": "API functions for managing account language."
+    },
+    "apiAccountReport": {
+      "description": "API functions for reporting account-related violations."
+    },
+    "apiAccountSession": {
+      "description": "API functions for managing user account sessions."
+    },
+    "apiAutocompleteAddress": {
+      "description": "API functions for handling address autocomplete suggestions."
+    },
+    "apiAutocompleteCity": {
+      "description": "API functions for handling address autocomplete suggestions."
+    },
+    "apiCompanyBanner": {
+      "description": "API functions for managing company banners."
+    },
+    "apiCompanySubscriptionDelete": {
+      "description": "API functions for deleting a company subscription."
+    },
+    "apiLatestListings": { "description": "" },
+    "apiLogin": { "description": "API functions for user login." },
+    "apiRecoveryAccount": {
+      "description": "API functions for account recovery."
+    },
+    "apiRecoveryAccountBackupEmail": {
+      "description": "API functions for recovering accounts via backup email."
+    },
+    "apiRecoveryAccountChangePassword": {
+      "description": "API functions for changing the password during account recovery."
+    },
+    "apiRecoveryAccountReset2FA": {
+      "description": "API functions for resetting 2FA during account recovery."
+    },
+    "apiRegistrationAccount": {
+      "description": "API functions for registering a new user account."
+    },
+    "apiRegistrationCompany": {
+      "description": "API functions for registering a new company."
+    },
+    "apiResetFetcher": {
+      "description": "API functions for resetting data fetchers."
+    },
+    "apiSearch": { "description": "API functions related to search." },
+    "apiSearchMap": {
+      "description": "API functions related to map-based search."
+    },
+    "authenticator": {
+      "description": "User account authentication and login security."
+    },
+    "blogPostDetails": {
+      "description": "Read the full article on the Maszbox blog - an in-depth piece featuring practical insights, detailed explanations, and valuable guidance prepared for our users."
+    },
+    "blogPosts": {
+      "description": "At Maszbox, we share knowledge, insights, and updates. Our blog offers carefully crafted articles, valuable information, and inspiration related to our platform and the broader industry."
+    },
+    "cities": {
+      "description": "Search for cities and locations available on the platform."
+    },
+    "company": {
+      "description": "Manage your company account - listings, invoices, points, and employees."
+    },
+    "companyBugDetails": {
+      "description": "Check details of company-related reports and monitor their status."
+    },
+    "companyBugs": {
+      "description": "View all bugs reported under the company account."
+    },
+    "companyCard": {
+      "description": "Update the payment card linked to your company account."
+    },
+    "companyDelete": {
+      "description": "Safely delete your company account."
+    },
+    "companyInvoiceEdit": {
+      "description": "Edit details needed for invoice issuance."
+    },
+    "companyInvoices": {
+      "description": "Browse invoices issued for your company."
+    },
+    "companyListings": {
+      "description": "Manage company listings - add, edit, and monitor payments."
+    },
+    "companyListingsEdit": {
+      "description": "Edit company listings to increase their performance."
+    },
+    "companyListingsNew": {
+      "description": "Add a new company listing on the platform."
+    },
+    "companyListingsPayments": {
+      "description": "Manage payments related to company listings."
+    },
+    "companyPhone": {
+      "description": "Update the phone number linked to your company account."
+    },
+    "companyPoints": {
+      "description": "View and exchange points."
+    },
+    "companyPointsExchanges": {
+      "description": "Exchange collected points for additional company services."
+    },
+    "companyProfile": {
+      "description": "View company information displayed on the platform."
+    },
+    "companyProfileEdit": {
+      "description": "Edit your company profile to present up-to-date information."
+    },
+    "companyReferral": {
+      "description": "Use the referral system designed for companies."
+    },
+    "companySettings": {
+      "description": "Adjust your company account settings to your preferences."
+    },
+    "companySubscriptionNew": {
+      "description": "Purchase a new subscription for your company account."
+    },
+    "companySubscriptions": {
+      "description": "View and manage your active company subscriptions."
+    },
+    "companyWorkerEdit": {
+      "description": "Edit information for an employee assigned to the company account."
+    },
+    "companyWorkerEditPermissions": {
+      "description": "Manage the employee’s role and permissions."
+    },
+    "companyWorkerEditProfile": {
+      "description": "Edit a company employee’s profile."
+    },
+    "companyWorkerNew": {
+      "description": "Add a new employee to the company account."
+    },
+    "companyWorkers": {
+      "description": "Browse the list of all company employees."
+    },
+    "contact": {
+      "description": "Contact us by sending an email to the provided address."
+    },
+    "error": {
+      "description": "An error occurred while using the Maszbox platform."
+    },
+    "errorAccountNotFound": {
+      "description": "The provided account does not exist or has been deleted."
+    },
+    "errorListingNotFound": {
+      "description": "This listing is unavailable."
+    },
+    "errorLoginFromFacebook": {
+      "description": "An issue occurred while logging in via Facebook."
+    },
+    "errorLoginFromGoogle": {
+      "description": "An issue occurred while logging in via Google."
+    },
+    "errorLoginFromPassword": {
+      "description": "Login using the provided password was unsuccessful."
+    },
+    "help": {
+      "description": "Find answers to frequently asked questions and contact support."
+    },
+    "home": {
+      "description": "Welcome to Maszbox - an innovative platform for renting and selling small spaces in Poland. We offer fast and secure solutions for property owners who want to earn income and for tenants seeking available spaces. Our platform allows you to easily browse listings, add your own, manage payments, and monitor availability. With modern tools and an intuitive interface, Maszbox ensures convenience and transaction security, whether you're looking for a garage, warehouse, or office space."
+    },
+    "howToAddListing": {
+      "description": "Learn how to add a listing by following the steps provided below."
+    },
+    "howToSearchListing": {
+      "description": "Learn how to search for listings on our platform and find the perfect space."
+    },
+    "listings": {
+      "description": "Browse all available listings on the Maszbox platform."
+    },
+    "login": {
+      "description": "Log in to fully access all Maszbox features."
+    },
+    "loginFacebook": {
+      "description": "Log in using your Facebook account."
+    },
+    "loginFromCreateListing": {
+      "description": "Log in to fully access all Maszbox features."
+    },
+    "loginGoogle": {
+      "description": "Log in using your Google account."
+    },
+    "logout": {
+      "description": "Log out of your account securely."
+    },
+    "newsletter": {
+      "description": "Read the newsletter."
+    },
+    "pricing": {
+      "description": "Check prices and available service packages on the platform."
+    },
+    "privacyPolicy": {
+      "description": "Read the privacy policy and data protection rules."
+    },
+    "recoveryAccount": {
+      "description": "Recover access to your Maszbox account."
+    },
+    "recoveryAccountBackupEmail": {
+      "description": "Restore your account using a backup email address."
+    },
+    "recoveryAccountChangePassword": {
+      "description": "Change your account password to enhance security."
+    },
+    "registration": {
+      "description": "Create an account on Maszbox and start using the platform."
+    },
+    "registrationAccount": {
+      "description": "Create a user account and enjoy Maszbox features."
+    },
+    "registrationCompany": {
+      "description": "Register your company and start posting listings."
+    },
+    "search": {
+      "description": "Search for listings and content on Maszbox."
+    },
+    "termsAndConditions": {
+      "description": "Review Maszbox’s terms of service and platform usage rules."
+    }
+  },
+  "jsonLdReview": {},
+  "jsonLdStructured": {
+    "description": "Maszbox is the first platform in Poland dedicated specifically to the rental and sale of small spaces. A garage, parking spot, basement, storage unit, or small warehouse - each of these spaces can become an additional source of income. We created Maszbox to connect owners of unused spaces with people who need them - simply, locally, and without unnecessary formalities. Our goal is for every Maszbox user to feel safe and comfortable, which is why we ensure clear regulations, data protection, and transparent listing rules. By using the Maszbox platform, you can earn money from what you already have - gain extra income of even several thousand PLN per year, help others - your basement can become a bike storage, and your garage a secure parking spot, and above all, it’s easy to use - posting a listing takes just 3 minutes. Maszbox is a Polish platform created with local needs in mind, helping your unused space start working for you!",
+    "isPartOfName": "Maszbox",
+    "name": "Maszbox",
+    "url": "https://maszbox.pl"
+  },
+  "meta": {
+    "aboutUs": {
+      "description": "Learn about our mission, values, and the team behind {{companyName}}. Discover what makes us unique and why you can trust us.",
+      "title": "About Us & Our Values | {{companyName}}"
+    },
+    "accessibility": {
+      "description": "{{companyName}} ensures digital accessibility by meeting the WCAG 2.1 AA standard. Our platform and PWA app are designed to provide every user with a comfortable, barrier-free experience.",
+      "title": "Accessibility for Everyone | {{companyName}}"
+    },
+    "account": {
+      "description": "Manage your account settings, personal data, and preferences to make the most of the platform.",
+      "title": "User Account Panel | {{companyName}}"
+    },
+    "accountAuthenticator": {
+      "description": "Enable two-factor authentication to enhance the security of your account. Protect your data and platform access.",
+      "title": "Two-Factor Authentication | {{companyName}}"
+    },
+    "accountBugDetails": {
+      "description": "Check the details of a reported issue and monitor its resolution status. Track your reports from your panel.",
+      "title": "Bug Report Details | {{companyName}}"
+    },
+    "accountBugNew": {
+      "description": "Report a new issue encountered on the platform. Your feedback helps us resolve problems faster.",
+      "title": "New Bug Report | {{companyName}}"
+    },
+    "accountBugs": {
+      "description": "View the list of issues reported from your account and track their resolution status on the platform.",
+      "title": "Your Bug Reports | {{companyName}}"
+    },
+    "accountConsents": {
+      "description": "Manage your marketing consents and privacy settings to customize how we communicate with you.",
+      "title": "Consents & Privacy | {{companyName}}"
+    },
+    "accountDelete": {
+      "description": "Delete your account if you no longer wish to use the platform. Please note that this action is irreversible.",
+      "title": "Delete User Account | {{companyName}}"
+    },
+    "accountEmail": {
+      "description": "Update your email address linked to your account to receive notifications and maintain login access.",
+      "title": "Change Email Address | {{companyName}}"
+    },
+    "accountInvoices": {
+      "description": "View and download all your invoices for using the platform. Manage your documents online.",
+      "title": "Invoice History | {{companyName}}"
+    },
+    "accountListings": {
+      "description": "Manage your listings, edit content, and check performance statistics. Add new or update existing ones easily.",
+      "title": "Your Listings | {{companyName}}"
+    },
+    "accountListingsEdit": {
+      "description": "Edit your listing’s content, images, and settings to increase its visibility and effectiveness.",
+      "title": "Edit Listing | {{companyName}}"
+    },
+    "accountListingsNew": {
+      "description": "Add a new listing to reach more potential clients. Use our intuitive submission form.",
+      "title": "Add New Listing | {{companyName}}"
+    },
+    "accountListingsPayments": {
+      "description": "Manage payments and additional services related to your listings to boost their reach.",
+      "title": "Listing Payments | {{companyName}}"
+    },
+    "accountPassword": {
+      "description": "Change your password to improve your account security and protect your data from unauthorized access.",
+      "title": "Change Password | {{companyName}}"
+    },
+    "accountPhone": {
+      "description": "Add or update the phone number linked to your account. Simplify contact and identity verification.",
+      "title": "Phone Number | {{companyName}}"
+    },
+    "accountPoints": {
+      "description": "Check your accumulated points and redeem them for extra services available on the platform.",
+      "title": "Your Points | {{companyName}}"
+    },
+    "accountProfile": {
+      "description": "Manage your personal data and profile information visible to others. Complete your details to build trust.",
+      "title": "User Profile | {{companyName}}"
+    },
+    "accountReferral": {
+      "description": "Use the referral system - invite friends and earn additional rewards and points.",
+      "title": "Referral Program | {{companyName}}"
+    },
+    "accountSessions": {
+      "description": "Manage your active account sessions and enhance your login security.",
+      "title": "Session Management | {{companyName}}"
+    },
+    "admin": {
+      "description": "The admin panel allows you to manage the platform, users, and system settings efficiently.",
+      "title": "Admin Panel | {{companyName}}"
+    },
+    "adminBlogPostEdit": {
+      "description": "Edit an existing blog on the Maszbox platform.",
+      "title": "Edit Blog | {{companyName}}"
+    },
+    "adminBlogPostNew": {
+      "description": "Create a new blog on the Maszbox platform.",
+      "title": "New Blog | {{companyName}}"
+    },
+    "adminBlogPosts": {
+      "description": "View and manage all blog posts. Create, update, and maintain your platform’s published content.",
+      "title": "Blog Posts | {{companyName}}"
+    },
+    "adminBugDetails": {
+      "description": "View details of user-reported bugs and monitor the progress of their resolution.",
+      "title": "Bug Details | {{companyName}}"
+    },
+    "adminBugEdit": {
+      "description": "Edit reported bugs and update their status. Manage fixes and communication with users.",
+      "title": "Edit Bug Report | {{companyName}}"
+    },
+    "adminBugs": {
+      "description": "View and manage all user-reported bugs. Monitor progress and maintain platform quality.",
+      "title": "Reported Bugs | {{companyName}}"
+    },
+    "adminCouponEdit": {
+      "description": "Edit existing promotional coupons, modify conditions, and track their marketing effectiveness.",
+      "title": "Edit Coupon | {{companyName}}"
+    },
+    "adminCouponNew": {
+      "description": "Add a new promotional coupon available to users to boost sales and service promotion.",
+      "title": "Add Coupon | {{companyName}}"
+    },
+    "adminCoupons": {
+      "description": "Browse all active coupons on the platform. Manage promotions and their conditions.",
+      "title": "Coupon List | {{companyName}}"
+    },
+    "adminExchanges": {
+      "description": "Manage point and service exchange transactions within the system. Monitor user operations and statuses.",
+      "title": "Point Exchanges | {{companyName}}"
+    },
+    "adminExchangesEdit": {
+      "description": "Edit details and status of point or service exchanges. Adjust transaction settings as needed.",
+      "title": "Edit Exchange | {{companyName}}"
+    },
+    "adminExchangesNew": {
+      "description": "Add a new point or service exchange to the system. Expand platform functionality and options.",
+      "title": "New Exchange | {{companyName}}"
+    },
+    "adminMarketingEmail": {
+      "description": "Create and send a new marketing email to customers.",
+      "title": "Marketing email | {{companyName}}"
+    },
+    "adminPlanNew": {
+      "description": "Create a new subscription plan for users. Customize its features and pricing conditions.",
+      "title": "Add Plan | {{companyName}}"
+    },
+    "adminPlans": {
+      "description": "View and manage all available subscription plans and offers for users.",
+      "title": "Subscription Plans | {{companyName}}"
+    },
+    "adminPlansEdit": {
+      "description": "Edit subscription plan details. Adjust its parameters to better meet user needs.",
+      "title": "Edit Plan | {{companyName}}"
+    },
+    "adminProducts": {
+      "description": "Manage pricing tables linked to listings on the platform. Edit available packages and pricing options.",
+      "title": "Listing Pricing | {{companyName}}"
+    },
+    "adminProductsEdit": {
+      "description": "Edit details of existing listing pricing tables. Modify conditions and service prices.",
+      "title": "Edit Pricing | {{companyName}}"
+    },
+    "adminProductsNew": {
+      "description": "Add a new pricing plan for listings published on the platform. Set prices and package rules.",
+      "title": "New Pricing | {{companyName}}"
+    },
+    "adminReports": {
+      "description": "View and manage all reports. Monitor actions and maintain platform quality.",
+      "title": "Reports | {{companyName}}"
+    },
+    "adminSettingEdit": {
+      "description": "Edit platform settings and adjust configurations to meet current business needs.",
+      "title": "Edit Settings | {{companyName}}"
+    },
+    "adminSettingNew": {
+      "description": "Add new system parameters and settings to expand platform functionality.",
+      "title": "New Settings | {{companyName}}"
+    },
+    "adminSettings": {
+      "description": "Manage global system configurations and platform settings. Tailor them to your operational goals.",
+      "title": "System Settings | {{companyName}}"
+    },
+    "apiAccountAuthenticatorNew2FA": {
+      "description": "Set up a new two-factor authentication method via API to enhance account security.",
+      "title": "New API Authentication | {{companyName}}"
+    },
+    "apiAccountCookie": {
+      "description": "",
+      "title": "Get Session | {{companyName}}"
+    },
+    "apiAccountLanguage": {
+      "description": "Change the API interface and notification language to your preference. Customize the platform experience.",
+      "title": "API Language Settings | {{companyName}}"
+    },
+    "apiAccountReport": {
+      "description": "Report account violations using the API. Use the available reporting methods.",
+      "title": "Account Reporting API | {{companyName}}"
+    },
+    "apiAccountSession": {
+      "description": "Manage your active sessions and account security through API. Monitor logins and activity.",
+      "title": "API Account Sessions | {{companyName}}"
+    },
+    "apiAutocompleteAddress": {
+      "description": "Retrieve address autocomplete suggestions through API to improve form usability and accuracy.",
+      "title": "API Autocomplete | {{companyName}}"
+    },
+    "apiAutocompleteCity": {
+      "description": "Retrieve address autocomplete suggestions through API to improve form usability and accuracy.",
+      "title": "API Autocomplete | {{companyName}}"
+    },
+    "apiCompanyBanner": {
+      "description": "Add or edit the company banner visible on your profile via API to increase brand visibility.",
+      "title": "API Company Banner | {{companyName}}"
+    },
+    "apiCompanySubscriptionDelete": {
+      "description": "Remove an active company subscription via API. Manage online services efficiently.",
+      "title": "Delete API Subscription | {{companyName}}"
+    },
+    "apiLatestListings": {
+      "description": "",
+      "title": ""
+    },
+    "apiLogin": {
+      "description": "Access the platform via API login and integrate it with your own systems.",
+      "title": "API Login | {{companyName}}"
+    },
+    "apiRecoveryAccount": {
+      "description": "Recover access to your account using the API. Use the available recovery methods.",
+      "title": "API Account Recovery | {{companyName}}"
+    },
+    "apiRecoveryAccountBackupEmail": {
+      "description": "Manage your backup email address linked to the account for API recovery purposes.",
+      "title": "API Backup Email | {{companyName}}"
+    },
+    "apiRecoveryAccountChangePassword": {
+      "description": "Change your account password using API methods to enhance login security.",
+      "title": "API Password Change | {{companyName}}"
+    },
+    "apiRecoveryAccountReset2FA": {
+      "description": "Reset two-factor authentication protection via API. Restore access and reconfigure security.",
+      "title": "API 2FA Reset | {{companyName}}"
+    },
+    "apiRegistrationAccount": {
+      "description": "Register a new user account through the API. Integrate registration with your own systems.",
+      "title": "API Account Registration | {{companyName}}"
+    },
+    "apiRegistrationCompany": {
+      "description": "Create a company account via API and start promoting your services on the platform.",
+      "title": "API Company Registration | {{companyName}}"
+    },
+    "apiResetFetcher": {
+      "description": "Reset API-related settings and data. Restore the default integration configuration.",
+      "title": "API Reset | {{companyName}}"
+    },
+    "apiSearch": {
+      "description": "Search platform data using API endpoints. Simplify integration and information access.",
+      "title": "API Search | {{companyName}}"
+    },
+    "apiSearchMap": {
+      "description": "Find map-related search results via API. Integrate geolocation data easily.",
+      "title": "API Map Search | {{companyName}}"
+    },
+    "authenticator": {
+      "description": "Log in and verify your identity using the authenticator. Strengthen your account security.",
+      "title": "User Authentication | {{companyName}}"
+    },
+    "blogPostDetails": {
+      "description": "Read an in-depth article prepared by {{companyName}}, offering clear explanations, practical knowledge, and reliable information. Each post is crafted to be helpful, accessible, and valuable for every user.",
+      "title": "Blog {{companyName}}"
+    },
+    "blogPosts": {
+      "description": "{{companyName}} publishes valuable articles, guides, and insights to support users with clear, high-quality, and up-to-date information. Our content is designed to help you make informed decisions and better understand the platform.",
+      "title": "Articles & Blog Posts | {{companyName}}"
+    },
+    "company": {
+      "description": "Manage your company account settings and data. Update information and control visibility.",
+      "title": "Company Panel | {{companyName}}"
+    },
+    "companyBugDetails": {
+      "description": "View the details of issues reported by your company. Monitor the status and progress of their resolution.",
+      "title": "Company Bug Details | {{companyName}}"
+    },
+    "companyBugs": {
+      "description": "View all bugs reported under your company account. Track issues and their current status.",
+      "title": "Company Reports | {{companyName}}"
+    },
+    "companyCard": {
+      "description": "Update your company’s payment card details. Ensure transaction security and accuracy.",
+      "title": "Payment Card | {{companyName}}"
+    },
+    "companyDelete": {
+      "description": "Delete your company account from the platform. This action is permanent and cannot be undone.",
+      "title": "Delete Company Account | {{companyName}}"
+    },
+    "companyInvoiceEdit": {
+      "description": "Edit the billing information for your company invoices. Adjust details to meet accounting requirements.",
+      "title": "Edit Invoice Details | {{companyName}}"
+    },
+    "companyInvoices": {
+      "description": "View and download invoices issued for your company. Manage all documents online.",
+      "title": "Company Invoices | {{companyName}}"
+    },
+    "companyListings": {
+      "description": "Manage company listings - edit content, add new ones, and track their performance.",
+      "title": "Company Listings | {{companyName}}"
+    },
+    "companyListingsEdit": {
+      "description": "Edit company listing details and settings to improve their visibility and effectiveness.",
+      "title": "Edit Company Listing | {{companyName}}"
+    },
+    "companyListingsNew": {
+      "description": "Add a new company listing to reach a larger audience on the platform.",
+      "title": "New Company Listing | {{companyName}}"
+    },
+    "companyListingsPayments": {
+      "description": "Manage payments and additional services related to company listings to boost their exposure.",
+      "title": "Company Payments | {{companyName}}"
+    },
+    "companyPhone": {
+      "description": "Add or change the phone number linked to your company account. Make it easier for clients to contact you.",
+      "title": "Company Phone | {{companyName}}"
+    },
+    "companyPoints": {
+      "description": "Check points linked to your company account. Exchange them for additional services.",
+      "title": "Points | {{companyName}}"
+    },
+    "companyPointsExchanges": {
+      "description": "Exchange points for additional business services. Manage your company’s available packages.",
+      "title": "Point Exchange | {{companyName}}"
+    },
+    "companyProfile": {
+      "description": "Manage your company profile information. Update details and descriptions to strengthen your brand image.",
+      "title": "Company Profile | {{companyName}}"
+    },
+    "companyProfileEdit": {
+      "description": "Edit your company’s public information and description on the platform. Keep your profile attractive and up-to-date.",
+      "title": "Edit Company Profile | {{companyName}}"
+    },
+    "companyReferral": {
+      "description": "Invite customers and business partners to earn bonuses and rewards through the referral program.",
+      "title": "Company Referrals | {{companyName}}"
+    },
+    "companySettings": {
+      "description": "Manage visibility preferences and company account settings. Customize the platform to your business needs.",
+      "title": "Company Settings | {{companyName}}"
+    },
+    "companySubscriptionNew": {
+      "description": "Add a new subscription for your company and unlock access to additional platform features.",
+      "title": "New Company Subscription | {{companyName}}"
+    },
+    "companySubscriptions": {
+      "description": "View and manage subscriptions assigned to your company. Control services and billing.",
+      "title": "Company Subscriptions | {{companyName}}"
+    },
+    "companyWorkerEdit": {
+      "description": "Edit employee details assigned to your company account. Update access and personal information.",
+      "title": "Edit Employee | {{companyName}}"
+    },
+    "companyWorkerEditPermissions": {
+      "description": "Manage roles and permissions for employees linked to your company account on the platform.",
+      "title": "Employee Permissions | {{companyName}}"
+    },
+    "companyWorkerEditProfile": {
+      "description": "Edit the profile of an employee associated with your company. Keep their details current.",
+      "title": "Employee Profile | {{companyName}}"
+    },
+    "companyWorkerNew": {
+      "description": "Add a new employee to your company account. Expand your team and assign roles effectively.",
+      "title": "Add Employee | {{companyName}}"
+    },
+    "companyWorkers": {
+      "description": "Browse the list of all employees linked to your company account. Manage your team efficiently.",
+      "title": "Employee List | {{companyName}}"
+    },
+    "contact": {
+      "description": "Contact us by sending an email to the provided address. We’ll get back to you as soon as possible.",
+      "title": "Contact | {{companyName}}"
+    },
+    "default": {
+      "description": "A platform for renting and selling spaces. Explore the offer from {{companyName}}.",
+      "title": "{{companyName}}"
+    },
+    "error": {
+      "description": "An error occurred while using the platform. Please try again or contact support.",
+      "title": "System Error | {{companyName}}"
+    },
+    "errorAccountNotFound": {
+      "description": "The specified account does not exist or has been deleted. Check your login details or contact support.",
+      "title": "Account Not Found | {{companyName}}"
+    },
+    "errorListingNotFound": {
+      "description": "The listing could not be found. It may have been removed or does not exist.",
+      "title": "Listing not found | {{companyName}}"
+    },
+    "errorLoginFromFacebook": {
+      "description": "There was a problem logging in via Facebook. Please try again or choose another method.",
+      "title": "Facebook Login Error | {{companyName}}"
+    },
+    "errorLoginFromGoogle": {
+      "description": "There was a problem logging in via Google. Please try again or use another login option.",
+      "title": "Google Login Error | {{companyName}}"
+    },
+    "errorLoginFromPassword": {
+      "description": "Login failed due to an incorrect password. Check your credentials and try again.",
+      "title": "Password Error | {{companyName}}"
+    },
+    "help": {
+      "description": "Find answers to frequently asked questions and contact our support team for assistance.",
+      "title": "Help & FAQ | {{companyName}}"
+    },
+    "home": {
+      "description": "Browse available rental and sales listings. Start using {{companyName}} today.",
+      "title": "Rent & Sell Spaces | {{companyName}}"
+    },
+    "howToAddListing": {
+      "description": "Learn how to add a listing by following our simple step-by-step guide. Create your listing quickly and start reaching new customers.",
+      "title": "How to Add a Listing | {{companyName}}"
+    },
+    "howToSearchListing": {
+      "description": "Learn how to search for listings on our platform. Use filters and map to find the perfect space.",
+      "title": "How to Search for a Listing | {{companyName}}"
+    },
+    "listing": {
+      "description": "View the details of a selected listing on the platform. Check photos, descriptions, and contact information.",
+      "title": "Listing {{category}} {{city}} | {{companyName}}"
+    },
+    "listings": {
+      "description": "Explore all available listings on the platform. Find a space that fits your needs.",
+      "title": "Listing List | {{companyName}}"
+    },
+    "login": {
+      "description": "Log in to your account to fully access the platform. Get access to listings and services.",
+      "title": "Account Login | {{companyName}}"
+    },
+    "loginFacebook": {
+      "description": "Log in to {{companyName}} using your Facebook account.",
+      "title": "Facebook Login | {{companyName}}"
+    },
+    "loginFromCreateListing": {
+      "description": "Log in to your account to fully access the platform. Get access to listings and services.",
+      "title": "Account Login | {{companyName}}"
+    },
+    "loginGoogle": {
+      "description": "Log in to {{companyName}} using your Google account.",
+      "title": "Google Login | {{companyName}}"
+    },
+    "logout": {
+      "description": "Log out safely from the platform. End your session and protect your data.",
+      "title": "Logout | {{companyName}}"
+    },
+    "newsletter": {
+      "description": "Read our newsletter on the platform.",
+      "title": "Newsletter | {{companyName}}"
+    },
+    "pricing": {
+      "description": "Check prices and available service packages. Choose the option that best suits your business needs.",
+      "title": "Service Pricing | {{companyName}}"
+    },
+    "privacyPolicy": {
+      "description": "Read our privacy policy and learn how we handle and protect personal data on the platform.",
+      "title": "Privacy Policy | {{companyName}}"
+    },
+    "recoveryAccount": {
+      "description": "Recover access to your account using the available methods. Secure your login data.",
+      "title": "Account Recovery | {{companyName}}"
+    },
+    "recoveryAccountBackupEmail": {
+      "description": "Restore account access using your backup email address. Take advantage of extra security options.",
+      "title": "Recover via Backup Email | {{companyName}}"
+    },
+    "recoveryAccountChangePassword": {
+      "description": "Set a new password for your account. Improve login security and protect your data.",
+      "title": "New Password | {{companyName}}"
+    },
+    "registration": {
+      "description": "Create an account and join users already benefiting from the platform. Access listings and services.",
+      "title": "Account Registration | {{companyName}}"
+    },
+    "registrationAccount": {
+      "description": "Create a user account to start using the platform. Unlock full functionality and features.",
+      "title": "User Registration | {{companyName}}"
+    },
+    "registrationCompany": {
+      "description": "Create a company account and promote your services on {{companyName}}. Reach new clients effectively.",
+      "title": "Company Registration | {{companyName}}"
+    },
+    "search": {
+      "description": "Find listings and content with our search tool. Filter results to match your preferences.",
+      "title": "Listing Search | {{companyName}}"
+    },
+    "searchCategory": {
+      "description": "Current {{categoryPlural}} - spaces for rent or sale. Compare prices and locations of available offers.",
+      "title": "{{categoryPlural}} - spaces for rent or sale | {{companyName}}"
+    },
+    "searchCategoryCity": {
+      "description": "Browse {{categoryPlural}} in {{city}} available for rent or sale. Current listings on {{companyName}}.",
+      "title": "Listings {{categoryPlural}} {{city}} | {{companyName}}"
+    },
+    "searchCategoryCityDistrict": {
+      "description": "Browse {{categoryPlural}} in {{city}} {{district}} available for rent or sale. Current listings on {{companyName}}.",
+      "title": "Listings {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
+    },
+    "searchCategoryCityWithCount": {
+      "description": "Browse {{count}} current {{categoryPlural}} listings in {{city}} available for rent or sale. Compare prices and locations on {{companyName}}.",
+      "title": "{{categoryPlural}} {{city}} - {{count}} listings | {{companyName}}"
+    },
+    "searchCities": {
+      "description": "List of cities with current listings of spaces for rent or sale across Poland.",
+      "title": "Cities - spaces for rent or sale | {{companyName}}"
+    },
+    "searchCity": {
+      "description": "Browse listings in {{city}} including garages, units, plots, warehouses, containers and other spaces for rent or sale. Find current offers on {{companyName}}.",
+      "title": "{{city}} listings - garages, warehouses, units | {{companyName}}"
+    },
+    "searchCityDistrict": {
+      "description": "Browse listings in {{city}} {{district}} including garages, units, plots, warehouses, containers and other spaces for rent or sale. Find current offers on {{companyName}}.",
+      "title": "Listings {{city}} {{district}} - rent and sale | {{companyName}}"
+    },
+    "searchCityWithCount": {
+      "description": "Browse {{count}} current listings in {{city}} - garages, units, plots, warehouses, containers and other spaces for rent or sale. Compare offers on {{companyName}}.",
+      "title": "{{city}} - {{count}} rent and sale listings | {{companyName}}"
+    },
+    "termsAndConditions": {
+      "description": "Read the platform’s terms of service and the rules governing user activity.",
+      "title": "Terms & Conditions | {{companyName}}"
+    }
+  },
+  "seoFaq": {
+    "buttonShowLess": "Show less",
+    "buttonShowMore": "Show more",
+    "buttonShowMoreAriaLabel": "Show more",
+    "title": "Questions and Answers"
+  },
+  "socials": {
+    "default": {
+      "imageAlt": "{{companyName}} logo"
+    }
+  }
+}

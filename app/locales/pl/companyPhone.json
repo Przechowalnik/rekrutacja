@@ -1,0 +1,14 @@
+{
+  "buttonConfirmNewNumber": "Potwierdź zmianę numeru telefonu",
+  "buttonSaveTooltip": "Brak zmian do zapisania",
+  "buttonUpdatePhoneNumber": "Zmień numer telefonu",
+  "currentPhoneNumber": "Obecny numer telefonu:",
+  "description": "Na tej stronie możesz <b>zmienić numer telefonu firmy</b>. Zaktualizowany numer <b>zostanie automatycznie wyświetlony we wszystkich powiązanych ogłoszeniach</b>.<br/><br/>Po wprowadzeniu nowego numeru system wyśle SMS z kodem weryfikacyjnym. Zmiana numeru zostanie wprowadzona dopiero po jego potwierdzeniu, co pozwala zapewnić bezpieczeństwo, zapobiegać podszywaniu się oraz chronić poprawność danych kontaktowych. Bez potwierdzenia kodu numer nie zostanie zmieniony.<br/><br/>Należy również pamiętać, że numer telefonu można zmieniać tylko <b>raz dziennie</b>.",
+  "information": "Numer telefonu firmy jest wymagany podczas tworzenia ogłoszenia.",
+  "inputNewPhoneNumber": "Nowy numer telefonu",
+  "newPhoneNumber": "Nowy numer telefonu do potwierdzenia:",
+  "noPhone": "brak",
+  "title": "Zmień numer telefonu firmy",
+  "titleAdd": "Dodaj numer telefonu firmy",
+  "warning": "Po podaniu i zatwierdzeniu numeru telefonu, należy podać kod weryfikacyjny, który zostanie wysłany SMS-em na nowy numer telefonu, aby dokończyć proces."
+}

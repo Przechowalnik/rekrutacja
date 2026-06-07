@@ -1,0 +1,5 @@
+{
+  "alert": "If you provide an incorrect VAT ID (Tax Identification Number), an error will occur when updating invoice data. Double-check that all the information is correct.",
+  "description": "Remember that any changes made on this page will appear on future invoices. Make sure everything is accurate to avoid issues.",
+  "title": "Update invoice details"
+}

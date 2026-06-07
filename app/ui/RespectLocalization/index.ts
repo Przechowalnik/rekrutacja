@@ -1,0 +1,1 @@
+export { RespectLocalization } from "./RespectLocalization";

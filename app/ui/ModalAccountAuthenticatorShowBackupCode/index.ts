@@ -1,0 +1,1 @@
+export { ModalAccountAuthenticatorShowBackupCode } from "./ModalAccountAuthenticatorShowBackupCode";

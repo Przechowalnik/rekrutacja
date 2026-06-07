@@ -1,0 +1,8 @@
+{
+  "alert": "Po usunięciu konto zostanie trwale usunięte z systemu i nie będzie możliwości jego przywrócenia.",
+  "buttonDelete": "Usuń konto firmowe",
+  "buttonSaveTooltip": "Brak zmian do zapisania",
+  "description": "Czy na pewno chcesz usunąć konto? Ta operacja jest nieodwracalna i spowoduje trwałe usunięcie wszystkich danych odnośnie firmy oraz użytkownika z naszego systemu. 😱",
+  "textToDelete": "Aby potwierdzić, wpisz imię osoby posiadającej konto:",
+  "title": "Usuń konto firmowe"
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "dictionaries": ["cspell-words"],
+  "dictionaryDefinitions": [
+    {
+      "addWords": true,
+      "name": "cspell-words",
+      "path": "./cspell-words.txt"
+    }
+  ],
+  "ignorePaths": [
+    "/@types",
+    "/app/constants/cities.ts",
+    "/app/constants/routes.ts",
+    "/app/locales",
+    "/app/routes.ts",
+    "/build",
+    "/cspell-words.txt",
+    "/emails",
+    "/prisma",
+    "/prisma/generated/client",
+    "/public",
+    "blob-report",
+    "env.dist",
+    "generated",
+    "node_modules",
+    "playwright",
+    "playwright-report",
+    "react-router.config.ts",
+    "test-results",
+    "translations.config.js",
+    "vercel.json"
+  ],
+  "language": "en",
+  "version": "0.2"
+}

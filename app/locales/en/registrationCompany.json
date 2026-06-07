@@ -1,0 +1,11 @@
+{
+  "buttonGoToLogin": "Log in",
+  "buttonRegistration": "Create a company account",
+  "buttonRegistrationUser": "Change account type",
+  "checkboxFieldset": "Consents",
+  "companyFields": "Company account fields",
+  "description": "Fill in all the required fields to join us!",
+  "informationReferral": "For the referral code to work, after activating your email address, you must also verify a UNIQUE phone number. Only then will the person who referred you receive a reward.",
+  "title": "Company account registration 💼",
+  "userFields": "User account fields"
+}

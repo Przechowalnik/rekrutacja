@@ -1,0 +1,1 @@
+export { GlobalGeneratedModal } from "./GlobalGeneratedModal";

@@ -1,0 +1,15 @@
+{
+  "2fa": {
+    "alert": "Aktywując autoryzację dwuetapową (2FA), automatycznie dezaktywujesz autoryzację dwuetapową za pomocą adresu e-mail (e-mail OTP)!",
+    "description": "Świetnie, że chcesz włączyć dodatkową warstwę zabezpieczeń dla Twojego konta! Aby skonfigurować autoryzację dwuetapową (2FA), zeskanuj ten kod QR za pomocą aplikacji do uwierzytelniania np. (Google Authenticator) na Twoim urządzeniu mobilnym. Po zeskanowaniu będziesz mógł generować unikalne kody, które będą potrzebne podczas logowania. To podniesie bezpieczeństwo Twojego konta - sprawdź, jak proste to jest!",
+    "title": "Autoryzacja dwuetapowa 2FA"
+  },
+  "alertToEnableEmailOtpWith2FA": "Jeśli włączysz weryfikację za pomocą jednorazowego hasła (e-mail OTP) wysyłanego na adres e-mail, aktualnie aktywne uwierzytelnianie dwuskładnikowe (2FA) zostanie automatycznie wyłączone i zastąpione przez weryfikację e-mail OTP.",
+  "backup": {
+    "buttonConfirm": "Zapisałem/am kod w bezpiecznym miejscu",
+    "description": "Zachowaj ten kod zapasowy do uwierzytelnienia dwuetapowego (2FA), abyś mógł/mogła odzyskać dostęp do swojego konta, jeśli stracisz swój telefon do autoryzacji. To ważny awaryjny sposób dostępu, który pozwoli Ci przywrócić kontrolę nad kontem w przypadku utraty urządzenia autoryzacyjnego. Upewnij się, że przechowujesz ten kod w bezpiecznym miejscu, niedostępnym dla osób niepowołanych.",
+    "title": "Kod zapasowy 2FA"
+  },
+  "description": "Na tej stronie możesz <b>włączyć autoryzację dwuetapową</b> (2FA), aby zwiększyć bezpieczeństwo swojego konta.<br/><br/><b>Zalecamy włączenie jednej z tych opcji</b>, ponieważ dwuetapowa autoryzacja znacząco podnosi poziom bezpieczeństwa Twojego konta. Pamiętaj, że aktywacja 2FA jest bardzo ważna, aby chronić Twoje dane przed nieautoryzowanym dostępem.",
+  "title": "Autoryzacja dwuetapowa"
+}

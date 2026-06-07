@@ -1,0 +1,21 @@
+{
+  "filters": {
+    "title": "Sprecyzuj, czego szukasz!"
+  },
+  "homeLatestListings": {
+    "title": "Ostatnio dodane ogłoszenia"
+  },
+  "noData": "Brak ogłoszeń.",
+  "noDataToSearch": "Nie wybrano kategorii oraz lokalizacji.",
+  "searchListingCategoryCity": {
+    "buttonShowMap": "Pokaż na mapie"
+  },
+  "topCategories": {
+    "description": "Przeglądaj oferty według kategorii - garaże, magazyny, działki, lokale i inne.",
+    "title": "Kategorie powierzchni"
+  },
+  "topCities": {
+    "description": "Sprawdź oferty w największych miastach z aktywnymi ogłoszeniami.",
+    "title": "Popularne miasta"
+  }
+}

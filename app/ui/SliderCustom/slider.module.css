@@ -1,0 +1,81 @@
+.slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.sliderInitializing,
+.sliderInitializing * {
+  transition: none !important;
+}
+
+.sliderReady {
+  opacity: 1;
+  transition: opacity 0.2s ease !important;
+}
+
+.slider img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  pointer-events: none;
+}
+
+.sliderContainer {
+  align-items: center;
+  display: flex;
+  touch-action: pan-y;
+  transition-property: transform;
+}
+
+.sliderScrollBar {
+  position: absolute;
+  border-radius: 12px;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: light-dark(
+    var(--mantine-color-gray-3),
+    var(--mantine-color-dark-6)
+  );
+  transition-property: width, height, background-color, opacity;
+}
+
+.sliderScrollBarContainer {
+  position: relative;
+}
+
+.sliderScrollBarContent {
+  background-color: var(--mantine-primary-color-filled);
+  border-radius: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition-property: transform, width, height;
+}
+
+.sliderArrowLeft {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transition-property: transform, opacity;
+}
+
+.sliderArrowRight {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transition-property: transform, opacity;
+}
+
+.sliderItem {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  user-select: none;
+  width: 100%;
+}

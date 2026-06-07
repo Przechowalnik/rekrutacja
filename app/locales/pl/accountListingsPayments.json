@@ -1,0 +1,23 @@
+{
+  "alert": "",
+  "availableSlots": "",
+  "buttonAdd": "Dodaj",
+  "buttonExtend": "Przedłuż",
+  "buttonExtension": "Przejdź do płatności",
+  "buttonGoToLastPayment": "Przejdż do ostatniej płatności",
+  "buttonPay": "",
+  "buttonReAdd": "Dodaj ponownie",
+  "buttonUsePoints": "Wykorzystaj punkty",
+  "descriptionCheckboxListingUsePoints": "Potrzebna ilość punktów: {{countPoints}}, posiadasz: {{countCurrentPoints}} punktów.",
+  "descriptionFreeListings": "Ogłoszenie możesz przedłużyć samodzielnie, klikając opcję „Przedłuż”. Jeśli ogłoszenie jest nieaktywne lub do jego wygaśnięcia pozostało mniej niż 1 miesiąc, zostanie automatycznie przedłużone o 1 miesiąc, liczony od dzisiejszej daty.",
+  "extendByMonths": "",
+  "extendByMonths_few": "",
+  "extendByMonths_many": "",
+  "extendByMonths_zero": "",
+  "hidden": "Ogłoszenie niewidoczne",
+  "success": "Ogłoszenie aktywne do: {{date}}",
+  "title": "Płatności ogłoszenia",
+  "titleExtension": "Przedłuż czas trwania ogłoszenia",
+  "titleNewExtension": "Opłać nowe ogłoszenie",
+  "tooltipFreeExtend": "Możesz przedłużyć aktywne ogłoszenie dopiero wtedy, gdy do jego wygaśnięcia pozostanie mniej niż 1 miesiąc."
+}

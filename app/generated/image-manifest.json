@@ -1,0 +1,236 @@
+{
+  "/apple-touch-icon-120x120-precomposed.png": {
+    "avifSrcSet": "/img-gen/apple-touch-icon-120x120-precomposed@320w.avif 320w, /img-gen/apple-touch-icon-120x120-precomposed@480w.avif 480w, /img-gen/apple-touch-icon-120x120-precomposed@640w.avif 640w, /img-gen/apple-touch-icon-120x120-precomposed@768w.avif 768w, /img-gen/apple-touch-icon-120x120-precomposed@1024w.avif 1024w, /img-gen/apple-touch-icon-120x120-precomposed@1280w.avif 1280w, /img-gen/apple-touch-icon-120x120-precomposed@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/apple-touch-icon-120x120-precomposed@1024w.png",
+    "fallbackSrcSet": "/img-gen/apple-touch-icon-120x120-precomposed@320w.png 320w, /img-gen/apple-touch-icon-120x120-precomposed@480w.png 480w, /img-gen/apple-touch-icon-120x120-precomposed@640w.png 640w, /img-gen/apple-touch-icon-120x120-precomposed@768w.png 768w, /img-gen/apple-touch-icon-120x120-precomposed@1024w.png 1024w, /img-gen/apple-touch-icon-120x120-precomposed@1280w.png 1280w, /img-gen/apple-touch-icon-120x120-precomposed@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/apple-touch-icon-120x120-precomposed@320w.webp 320w, /img-gen/apple-touch-icon-120x120-precomposed@480w.webp 480w, /img-gen/apple-touch-icon-120x120-precomposed@640w.webp 640w, /img-gen/apple-touch-icon-120x120-precomposed@768w.webp 768w, /img-gen/apple-touch-icon-120x120-precomposed@1024w.webp 1024w, /img-gen/apple-touch-icon-120x120-precomposed@1280w.webp 1280w, /img-gen/apple-touch-icon-120x120-precomposed@1600w.webp 1600w"
+  },
+  "/apple-touch-icon-120x120.png": {
+    "avifSrcSet": "/img-gen/apple-touch-icon-120x120@320w.avif 320w, /img-gen/apple-touch-icon-120x120@480w.avif 480w, /img-gen/apple-touch-icon-120x120@640w.avif 640w, /img-gen/apple-touch-icon-120x120@768w.avif 768w, /img-gen/apple-touch-icon-120x120@1024w.avif 1024w, /img-gen/apple-touch-icon-120x120@1280w.avif 1280w, /img-gen/apple-touch-icon-120x120@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/apple-touch-icon-120x120@1024w.png",
+    "fallbackSrcSet": "/img-gen/apple-touch-icon-120x120@320w.png 320w, /img-gen/apple-touch-icon-120x120@480w.png 480w, /img-gen/apple-touch-icon-120x120@640w.png 640w, /img-gen/apple-touch-icon-120x120@768w.png 768w, /img-gen/apple-touch-icon-120x120@1024w.png 1024w, /img-gen/apple-touch-icon-120x120@1280w.png 1280w, /img-gen/apple-touch-icon-120x120@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/apple-touch-icon-120x120@320w.webp 320w, /img-gen/apple-touch-icon-120x120@480w.webp 480w, /img-gen/apple-touch-icon-120x120@640w.webp 640w, /img-gen/apple-touch-icon-120x120@768w.webp 768w, /img-gen/apple-touch-icon-120x120@1024w.webp 1024w, /img-gen/apple-touch-icon-120x120@1280w.webp 1280w, /img-gen/apple-touch-icon-120x120@1600w.webp 1600w"
+  },
+  "/apple-touch-icon-precomposed.png": {
+    "avifSrcSet": "/img-gen/apple-touch-icon-precomposed@320w.avif 320w, /img-gen/apple-touch-icon-precomposed@480w.avif 480w, /img-gen/apple-touch-icon-precomposed@640w.avif 640w, /img-gen/apple-touch-icon-precomposed@768w.avif 768w, /img-gen/apple-touch-icon-precomposed@1024w.avif 1024w, /img-gen/apple-touch-icon-precomposed@1280w.avif 1280w, /img-gen/apple-touch-icon-precomposed@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/apple-touch-icon-precomposed@1024w.png",
+    "fallbackSrcSet": "/img-gen/apple-touch-icon-precomposed@320w.png 320w, /img-gen/apple-touch-icon-precomposed@480w.png 480w, /img-gen/apple-touch-icon-precomposed@640w.png 640w, /img-gen/apple-touch-icon-precomposed@768w.png 768w, /img-gen/apple-touch-icon-precomposed@1024w.png 1024w, /img-gen/apple-touch-icon-precomposed@1280w.png 1280w, /img-gen/apple-touch-icon-precomposed@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/apple-touch-icon-precomposed@320w.webp 320w, /img-gen/apple-touch-icon-precomposed@480w.webp 480w, /img-gen/apple-touch-icon-precomposed@640w.webp 640w, /img-gen/apple-touch-icon-precomposed@768w.webp 768w, /img-gen/apple-touch-icon-precomposed@1024w.webp 1024w, /img-gen/apple-touch-icon-precomposed@1280w.webp 1280w, /img-gen/apple-touch-icon-precomposed@1600w.webp 1600w"
+  },
+  "/apple-touch-icon.png": {
+    "avifSrcSet": "/img-gen/apple-touch-icon@320w.avif 320w, /img-gen/apple-touch-icon@480w.avif 480w, /img-gen/apple-touch-icon@640w.avif 640w, /img-gen/apple-touch-icon@768w.avif 768w, /img-gen/apple-touch-icon@1024w.avif 1024w, /img-gen/apple-touch-icon@1280w.avif 1280w, /img-gen/apple-touch-icon@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/apple-touch-icon@1024w.png",
+    "fallbackSrcSet": "/img-gen/apple-touch-icon@320w.png 320w, /img-gen/apple-touch-icon@480w.png 480w, /img-gen/apple-touch-icon@640w.png 640w, /img-gen/apple-touch-icon@768w.png 768w, /img-gen/apple-touch-icon@1024w.png 1024w, /img-gen/apple-touch-icon@1280w.png 1280w, /img-gen/apple-touch-icon@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/apple-touch-icon@320w.webp 320w, /img-gen/apple-touch-icon@480w.webp 480w, /img-gen/apple-touch-icon@640w.webp 640w, /img-gen/apple-touch-icon@768w.webp 768w, /img-gen/apple-touch-icon@1024w.webp 1024w, /img-gen/apple-touch-icon@1280w.webp 1280w, /img-gen/apple-touch-icon@1600w.webp 1600w"
+  },
+  "/icons/apple-touch-icon.png": {
+    "avifSrcSet": "/img-gen/icons/apple-touch-icon@320w.avif 320w, /img-gen/icons/apple-touch-icon@480w.avif 480w, /img-gen/icons/apple-touch-icon@640w.avif 640w, /img-gen/icons/apple-touch-icon@768w.avif 768w, /img-gen/icons/apple-touch-icon@1024w.avif 1024w, /img-gen/icons/apple-touch-icon@1280w.avif 1280w, /img-gen/icons/apple-touch-icon@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/apple-touch-icon@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/apple-touch-icon@320w.png 320w, /img-gen/icons/apple-touch-icon@480w.png 480w, /img-gen/icons/apple-touch-icon@640w.png 640w, /img-gen/icons/apple-touch-icon@768w.png 768w, /img-gen/icons/apple-touch-icon@1024w.png 1024w, /img-gen/icons/apple-touch-icon@1280w.png 1280w, /img-gen/icons/apple-touch-icon@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/apple-touch-icon@320w.webp 320w, /img-gen/icons/apple-touch-icon@480w.webp 480w, /img-gen/icons/apple-touch-icon@640w.webp 640w, /img-gen/icons/apple-touch-icon@768w.webp 768w, /img-gen/icons/apple-touch-icon@1024w.webp 1024w, /img-gen/icons/apple-touch-icon@1280w.webp 1280w, /img-gen/icons/apple-touch-icon@1600w.webp 1600w"
+  },
+  "/icons/attic-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/attic-dark@320w.avif 320w, /img-gen/icons/attic-dark@480w.avif 480w, /img-gen/icons/attic-dark@640w.avif 640w, /img-gen/icons/attic-dark@768w.avif 768w, /img-gen/icons/attic-dark@1024w.avif 1024w, /img-gen/icons/attic-dark@1280w.avif 1280w, /img-gen/icons/attic-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/attic-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/attic-dark@320w.webp 320w, /img-gen/icons/attic-dark@480w.webp 480w, /img-gen/icons/attic-dark@640w.webp 640w, /img-gen/icons/attic-dark@768w.webp 768w, /img-gen/icons/attic-dark@1024w.webp 1024w, /img-gen/icons/attic-dark@1280w.webp 1280w, /img-gen/icons/attic-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/attic-dark@320w.webp 320w, /img-gen/icons/attic-dark@480w.webp 480w, /img-gen/icons/attic-dark@640w.webp 640w, /img-gen/icons/attic-dark@768w.webp 768w, /img-gen/icons/attic-dark@1024w.webp 1024w, /img-gen/icons/attic-dark@1280w.webp 1280w, /img-gen/icons/attic-dark@1600w.webp 1600w"
+  },
+  "/icons/attic-light.webp": {
+    "avifSrcSet": "/img-gen/icons/attic-light@320w.avif 320w, /img-gen/icons/attic-light@480w.avif 480w, /img-gen/icons/attic-light@640w.avif 640w, /img-gen/icons/attic-light@768w.avif 768w, /img-gen/icons/attic-light@1024w.avif 1024w, /img-gen/icons/attic-light@1280w.avif 1280w, /img-gen/icons/attic-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/attic-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/attic-light@320w.webp 320w, /img-gen/icons/attic-light@480w.webp 480w, /img-gen/icons/attic-light@640w.webp 640w, /img-gen/icons/attic-light@768w.webp 768w, /img-gen/icons/attic-light@1024w.webp 1024w, /img-gen/icons/attic-light@1280w.webp 1280w, /img-gen/icons/attic-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/attic-light@320w.webp 320w, /img-gen/icons/attic-light@480w.webp 480w, /img-gen/icons/attic-light@640w.webp 640w, /img-gen/icons/attic-light@768w.webp 768w, /img-gen/icons/attic-light@1024w.webp 1024w, /img-gen/icons/attic-light@1280w.webp 1280w, /img-gen/icons/attic-light@1600w.webp 1600w"
+  },
+  "/icons/fb.png": {
+    "avifSrcSet": "/img-gen/icons/fb@320w.avif 320w, /img-gen/icons/fb@480w.avif 480w, /img-gen/icons/fb@640w.avif 640w, /img-gen/icons/fb@768w.avif 768w, /img-gen/icons/fb@1024w.avif 1024w, /img-gen/icons/fb@1280w.avif 1280w, /img-gen/icons/fb@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/fb@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/fb@320w.png 320w, /img-gen/icons/fb@480w.png 480w, /img-gen/icons/fb@640w.png 640w, /img-gen/icons/fb@768w.png 768w, /img-gen/icons/fb@1024w.png 1024w, /img-gen/icons/fb@1280w.png 1280w, /img-gen/icons/fb@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/fb@320w.webp 320w, /img-gen/icons/fb@480w.webp 480w, /img-gen/icons/fb@640w.webp 640w, /img-gen/icons/fb@768w.webp 768w, /img-gen/icons/fb@1024w.webp 1024w, /img-gen/icons/fb@1280w.webp 1280w, /img-gen/icons/fb@1600w.webp 1600w"
+  },
+  "/icons/hall-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/hall-dark@320w.avif 320w, /img-gen/icons/hall-dark@480w.avif 480w, /img-gen/icons/hall-dark@640w.avif 640w, /img-gen/icons/hall-dark@768w.avif 768w, /img-gen/icons/hall-dark@1024w.avif 1024w, /img-gen/icons/hall-dark@1280w.avif 1280w, /img-gen/icons/hall-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/hall-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/hall-dark@320w.webp 320w, /img-gen/icons/hall-dark@480w.webp 480w, /img-gen/icons/hall-dark@640w.webp 640w, /img-gen/icons/hall-dark@768w.webp 768w, /img-gen/icons/hall-dark@1024w.webp 1024w, /img-gen/icons/hall-dark@1280w.webp 1280w, /img-gen/icons/hall-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/hall-dark@320w.webp 320w, /img-gen/icons/hall-dark@480w.webp 480w, /img-gen/icons/hall-dark@640w.webp 640w, /img-gen/icons/hall-dark@768w.webp 768w, /img-gen/icons/hall-dark@1024w.webp 1024w, /img-gen/icons/hall-dark@1280w.webp 1280w, /img-gen/icons/hall-dark@1600w.webp 1600w"
+  },
+  "/icons/hall-light.webp": {
+    "avifSrcSet": "/img-gen/icons/hall-light@320w.avif 320w, /img-gen/icons/hall-light@480w.avif 480w, /img-gen/icons/hall-light@640w.avif 640w, /img-gen/icons/hall-light@768w.avif 768w, /img-gen/icons/hall-light@1024w.avif 1024w, /img-gen/icons/hall-light@1280w.avif 1280w, /img-gen/icons/hall-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/hall-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/hall-light@320w.webp 320w, /img-gen/icons/hall-light@480w.webp 480w, /img-gen/icons/hall-light@640w.webp 640w, /img-gen/icons/hall-light@768w.webp 768w, /img-gen/icons/hall-light@1024w.webp 1024w, /img-gen/icons/hall-light@1280w.webp 1280w, /img-gen/icons/hall-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/hall-light@320w.webp 320w, /img-gen/icons/hall-light@480w.webp 480w, /img-gen/icons/hall-light@640w.webp 640w, /img-gen/icons/hall-light@768w.webp 768w, /img-gen/icons/hall-light@1024w.webp 1024w, /img-gen/icons/hall-light@1280w.webp 1280w, /img-gen/icons/hall-light@1600w.webp 1600w"
+  },
+  "/icons/instagram.png": {
+    "avifSrcSet": "/img-gen/icons/instagram@320w.avif 320w, /img-gen/icons/instagram@480w.avif 480w, /img-gen/icons/instagram@640w.avif 640w, /img-gen/icons/instagram@768w.avif 768w, /img-gen/icons/instagram@1024w.avif 1024w, /img-gen/icons/instagram@1280w.avif 1280w, /img-gen/icons/instagram@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/instagram@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/instagram@320w.png 320w, /img-gen/icons/instagram@480w.png 480w, /img-gen/icons/instagram@640w.png 640w, /img-gen/icons/instagram@768w.png 768w, /img-gen/icons/instagram@1024w.png 1024w, /img-gen/icons/instagram@1280w.png 1280w, /img-gen/icons/instagram@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/instagram@320w.webp 320w, /img-gen/icons/instagram@480w.webp 480w, /img-gen/icons/instagram@640w.webp 640w, /img-gen/icons/instagram@768w.webp 768w, /img-gen/icons/instagram@1024w.webp 1024w, /img-gen/icons/instagram@1280w.webp 1280w, /img-gen/icons/instagram@1600w.webp 1600w"
+  },
+  "/icons/parkingDetached-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingDetached-dark@320w.avif 320w, /img-gen/icons/parkingDetached-dark@480w.avif 480w, /img-gen/icons/parkingDetached-dark@640w.avif 640w, /img-gen/icons/parkingDetached-dark@768w.avif 768w, /img-gen/icons/parkingDetached-dark@1024w.avif 1024w, /img-gen/icons/parkingDetached-dark@1280w.avif 1280w, /img-gen/icons/parkingDetached-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingDetached-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingDetached-dark@320w.webp 320w, /img-gen/icons/parkingDetached-dark@480w.webp 480w, /img-gen/icons/parkingDetached-dark@640w.webp 640w, /img-gen/icons/parkingDetached-dark@768w.webp 768w, /img-gen/icons/parkingDetached-dark@1024w.webp 1024w, /img-gen/icons/parkingDetached-dark@1280w.webp 1280w, /img-gen/icons/parkingDetached-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingDetached-dark@320w.webp 320w, /img-gen/icons/parkingDetached-dark@480w.webp 480w, /img-gen/icons/parkingDetached-dark@640w.webp 640w, /img-gen/icons/parkingDetached-dark@768w.webp 768w, /img-gen/icons/parkingDetached-dark@1024w.webp 1024w, /img-gen/icons/parkingDetached-dark@1280w.webp 1280w, /img-gen/icons/parkingDetached-dark@1600w.webp 1600w"
+  },
+  "/icons/parkingDetached-light.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingDetached-light@320w.avif 320w, /img-gen/icons/parkingDetached-light@480w.avif 480w, /img-gen/icons/parkingDetached-light@640w.avif 640w, /img-gen/icons/parkingDetached-light@768w.avif 768w, /img-gen/icons/parkingDetached-light@1024w.avif 1024w, /img-gen/icons/parkingDetached-light@1280w.avif 1280w, /img-gen/icons/parkingDetached-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingDetached-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingDetached-light@320w.webp 320w, /img-gen/icons/parkingDetached-light@480w.webp 480w, /img-gen/icons/parkingDetached-light@640w.webp 640w, /img-gen/icons/parkingDetached-light@768w.webp 768w, /img-gen/icons/parkingDetached-light@1024w.webp 1024w, /img-gen/icons/parkingDetached-light@1280w.webp 1280w, /img-gen/icons/parkingDetached-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingDetached-light@320w.webp 320w, /img-gen/icons/parkingDetached-light@480w.webp 480w, /img-gen/icons/parkingDetached-light@640w.webp 640w, /img-gen/icons/parkingDetached-light@768w.webp 768w, /img-gen/icons/parkingDetached-light@1024w.webp 1024w, /img-gen/icons/parkingDetached-light@1280w.webp 1280w, /img-gen/icons/parkingDetached-light@1600w.webp 1600w"
+  },
+  "/icons/parkingGroundPlace-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingGroundPlace-dark@320w.avif 320w, /img-gen/icons/parkingGroundPlace-dark@480w.avif 480w, /img-gen/icons/parkingGroundPlace-dark@640w.avif 640w, /img-gen/icons/parkingGroundPlace-dark@768w.avif 768w, /img-gen/icons/parkingGroundPlace-dark@1024w.avif 1024w, /img-gen/icons/parkingGroundPlace-dark@1280w.avif 1280w, /img-gen/icons/parkingGroundPlace-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingGroundPlace-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingGroundPlace-dark@320w.webp 320w, /img-gen/icons/parkingGroundPlace-dark@480w.webp 480w, /img-gen/icons/parkingGroundPlace-dark@640w.webp 640w, /img-gen/icons/parkingGroundPlace-dark@768w.webp 768w, /img-gen/icons/parkingGroundPlace-dark@1024w.webp 1024w, /img-gen/icons/parkingGroundPlace-dark@1280w.webp 1280w, /img-gen/icons/parkingGroundPlace-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingGroundPlace-dark@320w.webp 320w, /img-gen/icons/parkingGroundPlace-dark@480w.webp 480w, /img-gen/icons/parkingGroundPlace-dark@640w.webp 640w, /img-gen/icons/parkingGroundPlace-dark@768w.webp 768w, /img-gen/icons/parkingGroundPlace-dark@1024w.webp 1024w, /img-gen/icons/parkingGroundPlace-dark@1280w.webp 1280w, /img-gen/icons/parkingGroundPlace-dark@1600w.webp 1600w"
+  },
+  "/icons/parkingGroundPlace-light.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingGroundPlace-light@320w.avif 320w, /img-gen/icons/parkingGroundPlace-light@480w.avif 480w, /img-gen/icons/parkingGroundPlace-light@640w.avif 640w, /img-gen/icons/parkingGroundPlace-light@768w.avif 768w, /img-gen/icons/parkingGroundPlace-light@1024w.avif 1024w, /img-gen/icons/parkingGroundPlace-light@1280w.avif 1280w, /img-gen/icons/parkingGroundPlace-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingGroundPlace-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingGroundPlace-light@320w.webp 320w, /img-gen/icons/parkingGroundPlace-light@480w.webp 480w, /img-gen/icons/parkingGroundPlace-light@640w.webp 640w, /img-gen/icons/parkingGroundPlace-light@768w.webp 768w, /img-gen/icons/parkingGroundPlace-light@1024w.webp 1024w, /img-gen/icons/parkingGroundPlace-light@1280w.webp 1280w, /img-gen/icons/parkingGroundPlace-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingGroundPlace-light@320w.webp 320w, /img-gen/icons/parkingGroundPlace-light@480w.webp 480w, /img-gen/icons/parkingGroundPlace-light@640w.webp 640w, /img-gen/icons/parkingGroundPlace-light@768w.webp 768w, /img-gen/icons/parkingGroundPlace-light@1024w.webp 1024w, /img-gen/icons/parkingGroundPlace-light@1280w.webp 1280w, /img-gen/icons/parkingGroundPlace-light@1600w.webp 1600w"
+  },
+  "/icons/parkingMultilevel-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingMultilevel-dark@320w.avif 320w, /img-gen/icons/parkingMultilevel-dark@480w.avif 480w, /img-gen/icons/parkingMultilevel-dark@640w.avif 640w, /img-gen/icons/parkingMultilevel-dark@768w.avif 768w, /img-gen/icons/parkingMultilevel-dark@1024w.avif 1024w, /img-gen/icons/parkingMultilevel-dark@1280w.avif 1280w, /img-gen/icons/parkingMultilevel-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingMultilevel-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingMultilevel-dark@320w.webp 320w, /img-gen/icons/parkingMultilevel-dark@480w.webp 480w, /img-gen/icons/parkingMultilevel-dark@640w.webp 640w, /img-gen/icons/parkingMultilevel-dark@768w.webp 768w, /img-gen/icons/parkingMultilevel-dark@1024w.webp 1024w, /img-gen/icons/parkingMultilevel-dark@1280w.webp 1280w, /img-gen/icons/parkingMultilevel-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingMultilevel-dark@320w.webp 320w, /img-gen/icons/parkingMultilevel-dark@480w.webp 480w, /img-gen/icons/parkingMultilevel-dark@640w.webp 640w, /img-gen/icons/parkingMultilevel-dark@768w.webp 768w, /img-gen/icons/parkingMultilevel-dark@1024w.webp 1024w, /img-gen/icons/parkingMultilevel-dark@1280w.webp 1280w, /img-gen/icons/parkingMultilevel-dark@1600w.webp 1600w"
+  },
+  "/icons/parkingMultilevel-light.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingMultilevel-light@320w.avif 320w, /img-gen/icons/parkingMultilevel-light@480w.avif 480w, /img-gen/icons/parkingMultilevel-light@640w.avif 640w, /img-gen/icons/parkingMultilevel-light@768w.avif 768w, /img-gen/icons/parkingMultilevel-light@1024w.avif 1024w, /img-gen/icons/parkingMultilevel-light@1280w.avif 1280w, /img-gen/icons/parkingMultilevel-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingMultilevel-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingMultilevel-light@320w.webp 320w, /img-gen/icons/parkingMultilevel-light@480w.webp 480w, /img-gen/icons/parkingMultilevel-light@640w.webp 640w, /img-gen/icons/parkingMultilevel-light@768w.webp 768w, /img-gen/icons/parkingMultilevel-light@1024w.webp 1024w, /img-gen/icons/parkingMultilevel-light@1280w.webp 1280w, /img-gen/icons/parkingMultilevel-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingMultilevel-light@320w.webp 320w, /img-gen/icons/parkingMultilevel-light@480w.webp 480w, /img-gen/icons/parkingMultilevel-light@640w.webp 640w, /img-gen/icons/parkingMultilevel-light@768w.webp 768w, /img-gen/icons/parkingMultilevel-light@1024w.webp 1024w, /img-gen/icons/parkingMultilevel-light@1280w.webp 1280w, /img-gen/icons/parkingMultilevel-light@1600w.webp 1600w"
+  },
+  "/icons/parkingUnderground-dark.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingUnderground-dark@320w.avif 320w, /img-gen/icons/parkingUnderground-dark@480w.avif 480w, /img-gen/icons/parkingUnderground-dark@640w.avif 640w, /img-gen/icons/parkingUnderground-dark@768w.avif 768w, /img-gen/icons/parkingUnderground-dark@1024w.avif 1024w, /img-gen/icons/parkingUnderground-dark@1280w.avif 1280w, /img-gen/icons/parkingUnderground-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingUnderground-dark@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingUnderground-dark@320w.webp 320w, /img-gen/icons/parkingUnderground-dark@480w.webp 480w, /img-gen/icons/parkingUnderground-dark@640w.webp 640w, /img-gen/icons/parkingUnderground-dark@768w.webp 768w, /img-gen/icons/parkingUnderground-dark@1024w.webp 1024w, /img-gen/icons/parkingUnderground-dark@1280w.webp 1280w, /img-gen/icons/parkingUnderground-dark@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingUnderground-dark@320w.webp 320w, /img-gen/icons/parkingUnderground-dark@480w.webp 480w, /img-gen/icons/parkingUnderground-dark@640w.webp 640w, /img-gen/icons/parkingUnderground-dark@768w.webp 768w, /img-gen/icons/parkingUnderground-dark@1024w.webp 1024w, /img-gen/icons/parkingUnderground-dark@1280w.webp 1280w, /img-gen/icons/parkingUnderground-dark@1600w.webp 1600w"
+  },
+  "/icons/parkingUnderground-light.webp": {
+    "avifSrcSet": "/img-gen/icons/parkingUnderground-light@320w.avif 320w, /img-gen/icons/parkingUnderground-light@480w.avif 480w, /img-gen/icons/parkingUnderground-light@640w.avif 640w, /img-gen/icons/parkingUnderground-light@768w.avif 768w, /img-gen/icons/parkingUnderground-light@1024w.avif 1024w, /img-gen/icons/parkingUnderground-light@1280w.avif 1280w, /img-gen/icons/parkingUnderground-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/parkingUnderground-light@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/parkingUnderground-light@320w.webp 320w, /img-gen/icons/parkingUnderground-light@480w.webp 480w, /img-gen/icons/parkingUnderground-light@640w.webp 640w, /img-gen/icons/parkingUnderground-light@768w.webp 768w, /img-gen/icons/parkingUnderground-light@1024w.webp 1024w, /img-gen/icons/parkingUnderground-light@1280w.webp 1280w, /img-gen/icons/parkingUnderground-light@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/parkingUnderground-light@320w.webp 320w, /img-gen/icons/parkingUnderground-light@480w.webp 480w, /img-gen/icons/parkingUnderground-light@640w.webp 640w, /img-gen/icons/parkingUnderground-light@768w.webp 768w, /img-gen/icons/parkingUnderground-light@1024w.webp 1024w, /img-gen/icons/parkingUnderground-light@1280w.webp 1280w, /img-gen/icons/parkingUnderground-light@1600w.webp 1600w"
+  },
+  "/icons/pwa-144x144.webp": {
+    "avifSrcSet": "/img-gen/icons/pwa-144x144@320w.avif 320w, /img-gen/icons/pwa-144x144@480w.avif 480w, /img-gen/icons/pwa-144x144@640w.avif 640w, /img-gen/icons/pwa-144x144@768w.avif 768w, /img-gen/icons/pwa-144x144@1024w.avif 1024w, /img-gen/icons/pwa-144x144@1280w.avif 1280w, /img-gen/icons/pwa-144x144@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-144x144@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/pwa-144x144@320w.webp 320w, /img-gen/icons/pwa-144x144@480w.webp 480w, /img-gen/icons/pwa-144x144@640w.webp 640w, /img-gen/icons/pwa-144x144@768w.webp 768w, /img-gen/icons/pwa-144x144@1024w.webp 1024w, /img-gen/icons/pwa-144x144@1280w.webp 1280w, /img-gen/icons/pwa-144x144@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-144x144@320w.webp 320w, /img-gen/icons/pwa-144x144@480w.webp 480w, /img-gen/icons/pwa-144x144@640w.webp 640w, /img-gen/icons/pwa-144x144@768w.webp 768w, /img-gen/icons/pwa-144x144@1024w.webp 1024w, /img-gen/icons/pwa-144x144@1280w.webp 1280w, /img-gen/icons/pwa-144x144@1600w.webp 1600w"
+  },
+  "/icons/pwa-16x16.webp": {
+    "avifSrcSet": "/img-gen/icons/pwa-16x16@320w.avif 320w, /img-gen/icons/pwa-16x16@480w.avif 480w, /img-gen/icons/pwa-16x16@640w.avif 640w, /img-gen/icons/pwa-16x16@768w.avif 768w, /img-gen/icons/pwa-16x16@1024w.avif 1024w, /img-gen/icons/pwa-16x16@1280w.avif 1280w, /img-gen/icons/pwa-16x16@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-16x16@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/pwa-16x16@320w.webp 320w, /img-gen/icons/pwa-16x16@480w.webp 480w, /img-gen/icons/pwa-16x16@640w.webp 640w, /img-gen/icons/pwa-16x16@768w.webp 768w, /img-gen/icons/pwa-16x16@1024w.webp 1024w, /img-gen/icons/pwa-16x16@1280w.webp 1280w, /img-gen/icons/pwa-16x16@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-16x16@320w.webp 320w, /img-gen/icons/pwa-16x16@480w.webp 480w, /img-gen/icons/pwa-16x16@640w.webp 640w, /img-gen/icons/pwa-16x16@768w.webp 768w, /img-gen/icons/pwa-16x16@1024w.webp 1024w, /img-gen/icons/pwa-16x16@1280w.webp 1280w, /img-gen/icons/pwa-16x16@1600w.webp 1600w"
+  },
+  "/icons/pwa-180x180.webp": {
+    "avifSrcSet": "/img-gen/icons/pwa-180x180@320w.avif 320w, /img-gen/icons/pwa-180x180@480w.avif 480w, /img-gen/icons/pwa-180x180@640w.avif 640w, /img-gen/icons/pwa-180x180@768w.avif 768w, /img-gen/icons/pwa-180x180@1024w.avif 1024w, /img-gen/icons/pwa-180x180@1280w.avif 1280w, /img-gen/icons/pwa-180x180@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-180x180@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/pwa-180x180@320w.webp 320w, /img-gen/icons/pwa-180x180@480w.webp 480w, /img-gen/icons/pwa-180x180@640w.webp 640w, /img-gen/icons/pwa-180x180@768w.webp 768w, /img-gen/icons/pwa-180x180@1024w.webp 1024w, /img-gen/icons/pwa-180x180@1280w.webp 1280w, /img-gen/icons/pwa-180x180@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-180x180@320w.webp 320w, /img-gen/icons/pwa-180x180@480w.webp 480w, /img-gen/icons/pwa-180x180@640w.webp 640w, /img-gen/icons/pwa-180x180@768w.webp 768w, /img-gen/icons/pwa-180x180@1024w.webp 1024w, /img-gen/icons/pwa-180x180@1280w.webp 1280w, /img-gen/icons/pwa-180x180@1600w.webp 1600w"
+  },
+  "/icons/pwa-32x32.webp": {
+    "avifSrcSet": "/img-gen/icons/pwa-32x32@320w.avif 320w, /img-gen/icons/pwa-32x32@480w.avif 480w, /img-gen/icons/pwa-32x32@640w.avif 640w, /img-gen/icons/pwa-32x32@768w.avif 768w, /img-gen/icons/pwa-32x32@1024w.avif 1024w, /img-gen/icons/pwa-32x32@1280w.avif 1280w, /img-gen/icons/pwa-32x32@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-32x32@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/pwa-32x32@320w.webp 320w, /img-gen/icons/pwa-32x32@480w.webp 480w, /img-gen/icons/pwa-32x32@640w.webp 640w, /img-gen/icons/pwa-32x32@768w.webp 768w, /img-gen/icons/pwa-32x32@1024w.webp 1024w, /img-gen/icons/pwa-32x32@1280w.webp 1280w, /img-gen/icons/pwa-32x32@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-32x32@320w.webp 320w, /img-gen/icons/pwa-32x32@480w.webp 480w, /img-gen/icons/pwa-32x32@640w.webp 640w, /img-gen/icons/pwa-32x32@768w.webp 768w, /img-gen/icons/pwa-32x32@1024w.webp 1024w, /img-gen/icons/pwa-32x32@1280w.webp 1280w, /img-gen/icons/pwa-32x32@1600w.webp 1600w"
+  },
+  "/icons/pwa-48x48.webp": {
+    "avifSrcSet": "/img-gen/icons/pwa-48x48@320w.avif 320w, /img-gen/icons/pwa-48x48@480w.avif 480w, /img-gen/icons/pwa-48x48@640w.avif 640w, /img-gen/icons/pwa-48x48@768w.avif 768w, /img-gen/icons/pwa-48x48@1024w.avif 1024w, /img-gen/icons/pwa-48x48@1280w.avif 1280w, /img-gen/icons/pwa-48x48@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-48x48@1024w.webp",
+    "fallbackSrcSet": "/img-gen/icons/pwa-48x48@320w.webp 320w, /img-gen/icons/pwa-48x48@480w.webp 480w, /img-gen/icons/pwa-48x48@640w.webp 640w, /img-gen/icons/pwa-48x48@768w.webp 768w, /img-gen/icons/pwa-48x48@1024w.webp 1024w, /img-gen/icons/pwa-48x48@1280w.webp 1280w, /img-gen/icons/pwa-48x48@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-48x48@320w.webp 320w, /img-gen/icons/pwa-48x48@480w.webp 480w, /img-gen/icons/pwa-48x48@640w.webp 640w, /img-gen/icons/pwa-48x48@768w.webp 768w, /img-gen/icons/pwa-48x48@1024w.webp 1024w, /img-gen/icons/pwa-48x48@1280w.webp 1280w, /img-gen/icons/pwa-48x48@1600w.webp 1600w"
+  },
+  "/icons/pwa-512x512.png": {
+    "avifSrcSet": "/img-gen/icons/pwa-512x512@320w.avif 320w, /img-gen/icons/pwa-512x512@480w.avif 480w, /img-gen/icons/pwa-512x512@640w.avif 640w, /img-gen/icons/pwa-512x512@768w.avif 768w, /img-gen/icons/pwa-512x512@1024w.avif 1024w, /img-gen/icons/pwa-512x512@1280w.avif 1280w, /img-gen/icons/pwa-512x512@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/pwa-512x512@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/pwa-512x512@320w.png 320w, /img-gen/icons/pwa-512x512@480w.png 480w, /img-gen/icons/pwa-512x512@640w.png 640w, /img-gen/icons/pwa-512x512@768w.png 768w, /img-gen/icons/pwa-512x512@1024w.png 1024w, /img-gen/icons/pwa-512x512@1280w.png 1280w, /img-gen/icons/pwa-512x512@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/pwa-512x512@320w.webp 320w, /img-gen/icons/pwa-512x512@480w.webp 480w, /img-gen/icons/pwa-512x512@640w.webp 640w, /img-gen/icons/pwa-512x512@768w.webp 768w, /img-gen/icons/pwa-512x512@1024w.webp 1024w, /img-gen/icons/pwa-512x512@1280w.webp 1280w, /img-gen/icons/pwa-512x512@1600w.webp 1600w"
+  },
+  "/icons/tiktok.png": {
+    "avifSrcSet": "/img-gen/icons/tiktok@320w.avif 320w, /img-gen/icons/tiktok@480w.avif 480w, /img-gen/icons/tiktok@640w.avif 640w, /img-gen/icons/tiktok@768w.avif 768w, /img-gen/icons/tiktok@1024w.avif 1024w, /img-gen/icons/tiktok@1280w.avif 1280w, /img-gen/icons/tiktok@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/tiktok@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/tiktok@320w.png 320w, /img-gen/icons/tiktok@480w.png 480w, /img-gen/icons/tiktok@640w.png 640w, /img-gen/icons/tiktok@768w.png 768w, /img-gen/icons/tiktok@1024w.png 1024w, /img-gen/icons/tiktok@1280w.png 1280w, /img-gen/icons/tiktok@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/tiktok@320w.webp 320w, /img-gen/icons/tiktok@480w.webp 480w, /img-gen/icons/tiktok@640w.webp 640w, /img-gen/icons/tiktok@768w.webp 768w, /img-gen/icons/tiktok@1024w.webp 1024w, /img-gen/icons/tiktok@1280w.webp 1280w, /img-gen/icons/tiktok@1600w.webp 1600w"
+  },
+  "/icons/website.png": {
+    "avifSrcSet": "/img-gen/icons/website@320w.avif 320w, /img-gen/icons/website@480w.avif 480w, /img-gen/icons/website@640w.avif 640w, /img-gen/icons/website@768w.avif 768w, /img-gen/icons/website@1024w.avif 1024w, /img-gen/icons/website@1280w.avif 1280w, /img-gen/icons/website@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/icons/website@1024w.png",
+    "fallbackSrcSet": "/img-gen/icons/website@320w.png 320w, /img-gen/icons/website@480w.png 480w, /img-gen/icons/website@640w.png 640w, /img-gen/icons/website@768w.png 768w, /img-gen/icons/website@1024w.png 1024w, /img-gen/icons/website@1280w.png 1280w, /img-gen/icons/website@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/icons/website@320w.webp 320w, /img-gen/icons/website@480w.webp 480w, /img-gen/icons/website@640w.webp 640w, /img-gen/icons/website@768w.webp 768w, /img-gen/icons/website@1024w.webp 1024w, /img-gen/icons/website@1280w.webp 1280w, /img-gen/icons/website@1600w.webp 1600w"
+  },
+  "/images/banner.webp": {
+    "avifSrcSet": "/img-gen/images/banner@320w.avif 320w, /img-gen/images/banner@480w.avif 480w, /img-gen/images/banner@640w.avif 640w, /img-gen/images/banner@768w.avif 768w, /img-gen/images/banner@1024w.avif 1024w, /img-gen/images/banner@1280w.avif 1280w, /img-gen/images/banner@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/banner@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/banner@320w.webp 320w, /img-gen/images/banner@480w.webp 480w, /img-gen/images/banner@640w.webp 640w, /img-gen/images/banner@768w.webp 768w, /img-gen/images/banner@1024w.webp 1024w, /img-gen/images/banner@1280w.webp 1280w, /img-gen/images/banner@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/banner@320w.webp 320w, /img-gen/images/banner@480w.webp 480w, /img-gen/images/banner@640w.webp 640w, /img-gen/images/banner@768w.webp 768w, /img-gen/images/banner@1024w.webp 1024w, /img-gen/images/banner@1280w.webp 1280w, /img-gen/images/banner@1600w.webp 1600w"
+  },
+  "/images/bannerPlaceholder.webp": {
+    "avifSrcSet": "/img-gen/images/bannerPlaceholder@320w.avif 320w, /img-gen/images/bannerPlaceholder@480w.avif 480w, /img-gen/images/bannerPlaceholder@640w.avif 640w, /img-gen/images/bannerPlaceholder@768w.avif 768w, /img-gen/images/bannerPlaceholder@1024w.avif 1024w, /img-gen/images/bannerPlaceholder@1280w.avif 1280w, /img-gen/images/bannerPlaceholder@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/bannerPlaceholder@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/bannerPlaceholder@320w.webp 320w, /img-gen/images/bannerPlaceholder@480w.webp 480w, /img-gen/images/bannerPlaceholder@640w.webp 640w, /img-gen/images/bannerPlaceholder@768w.webp 768w, /img-gen/images/bannerPlaceholder@1024w.webp 1024w, /img-gen/images/bannerPlaceholder@1280w.webp 1280w, /img-gen/images/bannerPlaceholder@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/bannerPlaceholder@320w.webp 320w, /img-gen/images/bannerPlaceholder@480w.webp 480w, /img-gen/images/bannerPlaceholder@640w.webp 640w, /img-gen/images/bannerPlaceholder@768w.webp 768w, /img-gen/images/bannerPlaceholder@1024w.webp 1024w, /img-gen/images/bannerPlaceholder@1280w.webp 1280w, /img-gen/images/bannerPlaceholder@1600w.webp 1600w"
+  },
+  "/images/bannerRent.webp": {
+    "avifSrcSet": "/img-gen/images/bannerRent@320w.avif 320w, /img-gen/images/bannerRent@480w.avif 480w, /img-gen/images/bannerRent@640w.avif 640w, /img-gen/images/bannerRent@768w.avif 768w, /img-gen/images/bannerRent@1024w.avif 1024w, /img-gen/images/bannerRent@1280w.avif 1280w, /img-gen/images/bannerRent@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/bannerRent@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/bannerRent@320w.webp 320w, /img-gen/images/bannerRent@480w.webp 480w, /img-gen/images/bannerRent@640w.webp 640w, /img-gen/images/bannerRent@768w.webp 768w, /img-gen/images/bannerRent@1024w.webp 1024w, /img-gen/images/bannerRent@1280w.webp 1280w, /img-gen/images/bannerRent@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/bannerRent@320w.webp 320w, /img-gen/images/bannerRent@480w.webp 480w, /img-gen/images/bannerRent@640w.webp 640w, /img-gen/images/bannerRent@768w.webp 768w, /img-gen/images/bannerRent@1024w.webp 1024w, /img-gen/images/bannerRent@1280w.webp 1280w, /img-gen/images/bannerRent@1600w.webp 1600w"
+  },
+  "/images/bannerRentHorizontally.webp": {
+    "avifSrcSet": "/img-gen/images/bannerRentHorizontally@320w.avif 320w, /img-gen/images/bannerRentHorizontally@480w.avif 480w, /img-gen/images/bannerRentHorizontally@640w.avif 640w, /img-gen/images/bannerRentHorizontally@768w.avif 768w, /img-gen/images/bannerRentHorizontally@1024w.avif 1024w, /img-gen/images/bannerRentHorizontally@1280w.avif 1280w, /img-gen/images/bannerRentHorizontally@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/bannerRentHorizontally@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/bannerRentHorizontally@320w.webp 320w, /img-gen/images/bannerRentHorizontally@480w.webp 480w, /img-gen/images/bannerRentHorizontally@640w.webp 640w, /img-gen/images/bannerRentHorizontally@768w.webp 768w, /img-gen/images/bannerRentHorizontally@1024w.webp 1024w, /img-gen/images/bannerRentHorizontally@1280w.webp 1280w, /img-gen/images/bannerRentHorizontally@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/bannerRentHorizontally@320w.webp 320w, /img-gen/images/bannerRentHorizontally@480w.webp 480w, /img-gen/images/bannerRentHorizontally@640w.webp 640w, /img-gen/images/bannerRentHorizontally@768w.webp 768w, /img-gen/images/bannerRentHorizontally@1024w.webp 1024w, /img-gen/images/bannerRentHorizontally@1280w.webp 1280w, /img-gen/images/bannerRentHorizontally@1600w.webp 1600w"
+  },
+  "/images/bannerRentHorizontallySmall.webp": {
+    "avifSrcSet": "/img-gen/images/bannerRentHorizontallySmall@320w.avif 320w, /img-gen/images/bannerRentHorizontallySmall@480w.avif 480w, /img-gen/images/bannerRentHorizontallySmall@640w.avif 640w, /img-gen/images/bannerRentHorizontallySmall@768w.avif 768w, /img-gen/images/bannerRentHorizontallySmall@1024w.avif 1024w, /img-gen/images/bannerRentHorizontallySmall@1280w.avif 1280w, /img-gen/images/bannerRentHorizontallySmall@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/bannerRentHorizontallySmall@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/bannerRentHorizontallySmall@320w.webp 320w, /img-gen/images/bannerRentHorizontallySmall@480w.webp 480w, /img-gen/images/bannerRentHorizontallySmall@640w.webp 640w, /img-gen/images/bannerRentHorizontallySmall@768w.webp 768w, /img-gen/images/bannerRentHorizontallySmall@1024w.webp 1024w, /img-gen/images/bannerRentHorizontallySmall@1280w.webp 1280w, /img-gen/images/bannerRentHorizontallySmall@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/bannerRentHorizontallySmall@320w.webp 320w, /img-gen/images/bannerRentHorizontallySmall@480w.webp 480w, /img-gen/images/bannerRentHorizontallySmall@640w.webp 640w, /img-gen/images/bannerRentHorizontallySmall@768w.webp 768w, /img-gen/images/bannerRentHorizontallySmall@1024w.webp 1024w, /img-gen/images/bannerRentHorizontallySmall@1280w.webp 1280w, /img-gen/images/bannerRentHorizontallySmall@1600w.webp 1600w"
+  },
+  "/images/bannerSmall.webp": {
+    "avifSrcSet": "/img-gen/images/bannerSmall@320w.avif 320w, /img-gen/images/bannerSmall@480w.avif 480w, /img-gen/images/bannerSmall@640w.avif 640w, /img-gen/images/bannerSmall@768w.avif 768w, /img-gen/images/bannerSmall@1024w.avif 1024w, /img-gen/images/bannerSmall@1280w.avif 1280w, /img-gen/images/bannerSmall@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/bannerSmall@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/bannerSmall@320w.webp 320w, /img-gen/images/bannerSmall@480w.webp 480w, /img-gen/images/bannerSmall@640w.webp 640w, /img-gen/images/bannerSmall@768w.webp 768w, /img-gen/images/bannerSmall@1024w.webp 1024w, /img-gen/images/bannerSmall@1280w.webp 1280w, /img-gen/images/bannerSmall@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/bannerSmall@320w.webp 320w, /img-gen/images/bannerSmall@480w.webp 480w, /img-gen/images/bannerSmall@640w.webp 640w, /img-gen/images/bannerSmall@768w.webp 768w, /img-gen/images/bannerSmall@1024w.webp 1024w, /img-gen/images/bannerSmall@1280w.webp 1280w, /img-gen/images/bannerSmall@1600w.webp 1600w"
+  },
+  "/images/flagPoland.webp": {
+    "avifSrcSet": "/img-gen/images/flagPoland@320w.avif 320w, /img-gen/images/flagPoland@480w.avif 480w, /img-gen/images/flagPoland@640w.avif 640w, /img-gen/images/flagPoland@768w.avif 768w, /img-gen/images/flagPoland@1024w.avif 1024w, /img-gen/images/flagPoland@1280w.avif 1280w, /img-gen/images/flagPoland@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/images/flagPoland@1024w.webp",
+    "fallbackSrcSet": "/img-gen/images/flagPoland@320w.webp 320w, /img-gen/images/flagPoland@480w.webp 480w, /img-gen/images/flagPoland@640w.webp 640w, /img-gen/images/flagPoland@768w.webp 768w, /img-gen/images/flagPoland@1024w.webp 1024w, /img-gen/images/flagPoland@1280w.webp 1280w, /img-gen/images/flagPoland@1600w.webp 1600w",
+    "webpSrcSet": "/img-gen/images/flagPoland@320w.webp 320w, /img-gen/images/flagPoland@480w.webp 480w, /img-gen/images/flagPoland@640w.webp 640w, /img-gen/images/flagPoland@768w.webp 768w, /img-gen/images/flagPoland@1024w.webp 1024w, /img-gen/images/flagPoland@1280w.webp 1280w, /img-gen/images/flagPoland@1600w.webp 1600w"
+  },
+  "/logo/logo-dark.png": {
+    "avifSrcSet": "/img-gen/logo/logo-dark@320w.avif 320w, /img-gen/logo/logo-dark@480w.avif 480w, /img-gen/logo/logo-dark@640w.avif 640w, /img-gen/logo/logo-dark@768w.avif 768w, /img-gen/logo/logo-dark@1024w.avif 1024w, /img-gen/logo/logo-dark@1280w.avif 1280w, /img-gen/logo/logo-dark@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/logo/logo-dark@1024w.png",
+    "fallbackSrcSet": "/img-gen/logo/logo-dark@320w.png 320w, /img-gen/logo/logo-dark@480w.png 480w, /img-gen/logo/logo-dark@640w.png 640w, /img-gen/logo/logo-dark@768w.png 768w, /img-gen/logo/logo-dark@1024w.png 1024w, /img-gen/logo/logo-dark@1280w.png 1280w, /img-gen/logo/logo-dark@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/logo/logo-dark@320w.webp 320w, /img-gen/logo/logo-dark@480w.webp 480w, /img-gen/logo/logo-dark@640w.webp 640w, /img-gen/logo/logo-dark@768w.webp 768w, /img-gen/logo/logo-dark@1024w.webp 1024w, /img-gen/logo/logo-dark@1280w.webp 1280w, /img-gen/logo/logo-dark@1600w.webp 1600w"
+  },
+  "/logo/logo-light.png": {
+    "avifSrcSet": "/img-gen/logo/logo-light@320w.avif 320w, /img-gen/logo/logo-light@480w.avif 480w, /img-gen/logo/logo-light@640w.avif 640w, /img-gen/logo/logo-light@768w.avif 768w, /img-gen/logo/logo-light@1024w.avif 1024w, /img-gen/logo/logo-light@1280w.avif 1280w, /img-gen/logo/logo-light@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/logo/logo-light@1024w.png",
+    "fallbackSrcSet": "/img-gen/logo/logo-light@320w.png 320w, /img-gen/logo/logo-light@480w.png 480w, /img-gen/logo/logo-light@640w.png 640w, /img-gen/logo/logo-light@768w.png 768w, /img-gen/logo/logo-light@1024w.png 1024w, /img-gen/logo/logo-light@1280w.png 1280w, /img-gen/logo/logo-light@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/logo/logo-light@320w.webp 320w, /img-gen/logo/logo-light@480w.webp 480w, /img-gen/logo/logo-light@640w.webp 640w, /img-gen/logo/logo-light@768w.webp 768w, /img-gen/logo/logo-light@1024w.webp 1024w, /img-gen/logo/logo-light@1280w.webp 1280w, /img-gen/logo/logo-light@1600w.webp 1600w"
+  },
+  "/logo/logo-purple-social.png": {
+    "avifSrcSet": "/img-gen/logo/logo-purple-social@320w.avif 320w, /img-gen/logo/logo-purple-social@480w.avif 480w, /img-gen/logo/logo-purple-social@640w.avif 640w, /img-gen/logo/logo-purple-social@768w.avif 768w, /img-gen/logo/logo-purple-social@1024w.avif 1024w, /img-gen/logo/logo-purple-social@1280w.avif 1280w, /img-gen/logo/logo-purple-social@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/logo/logo-purple-social@1024w.png",
+    "fallbackSrcSet": "/img-gen/logo/logo-purple-social@320w.png 320w, /img-gen/logo/logo-purple-social@480w.png 480w, /img-gen/logo/logo-purple-social@640w.png 640w, /img-gen/logo/logo-purple-social@768w.png 768w, /img-gen/logo/logo-purple-social@1024w.png 1024w, /img-gen/logo/logo-purple-social@1280w.png 1280w, /img-gen/logo/logo-purple-social@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/logo/logo-purple-social@320w.webp 320w, /img-gen/logo/logo-purple-social@480w.webp 480w, /img-gen/logo/logo-purple-social@640w.webp 640w, /img-gen/logo/logo-purple-social@768w.webp 768w, /img-gen/logo/logo-purple-social@1024w.webp 1024w, /img-gen/logo/logo-purple-social@1280w.webp 1280w, /img-gen/logo/logo-purple-social@1600w.webp 1600w"
+  },
+  "/screenshots/home-mobile.png": {
+    "avifSrcSet": "/img-gen/screenshots/home-mobile@320w.avif 320w, /img-gen/screenshots/home-mobile@480w.avif 480w, /img-gen/screenshots/home-mobile@640w.avif 640w, /img-gen/screenshots/home-mobile@768w.avif 768w, /img-gen/screenshots/home-mobile@1024w.avif 1024w, /img-gen/screenshots/home-mobile@1280w.avif 1280w, /img-gen/screenshots/home-mobile@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/screenshots/home-mobile@1024w.png",
+    "fallbackSrcSet": "/img-gen/screenshots/home-mobile@320w.png 320w, /img-gen/screenshots/home-mobile@480w.png 480w, /img-gen/screenshots/home-mobile@640w.png 640w, /img-gen/screenshots/home-mobile@768w.png 768w, /img-gen/screenshots/home-mobile@1024w.png 1024w, /img-gen/screenshots/home-mobile@1280w.png 1280w, /img-gen/screenshots/home-mobile@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/screenshots/home-mobile@320w.webp 320w, /img-gen/screenshots/home-mobile@480w.webp 480w, /img-gen/screenshots/home-mobile@640w.webp 640w, /img-gen/screenshots/home-mobile@768w.webp 768w, /img-gen/screenshots/home-mobile@1024w.webp 1024w, /img-gen/screenshots/home-mobile@1280w.webp 1280w, /img-gen/screenshots/home-mobile@1600w.webp 1600w"
+  },
+  "/screenshots/home-wide.png": {
+    "avifSrcSet": "/img-gen/screenshots/home-wide@320w.avif 320w, /img-gen/screenshots/home-wide@480w.avif 480w, /img-gen/screenshots/home-wide@640w.avif 640w, /img-gen/screenshots/home-wide@768w.avif 768w, /img-gen/screenshots/home-wide@1024w.avif 1024w, /img-gen/screenshots/home-wide@1280w.avif 1280w, /img-gen/screenshots/home-wide@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/screenshots/home-wide@1024w.png",
+    "fallbackSrcSet": "/img-gen/screenshots/home-wide@320w.png 320w, /img-gen/screenshots/home-wide@480w.png 480w, /img-gen/screenshots/home-wide@640w.png 640w, /img-gen/screenshots/home-wide@768w.png 768w, /img-gen/screenshots/home-wide@1024w.png 1024w, /img-gen/screenshots/home-wide@1280w.png 1280w, /img-gen/screenshots/home-wide@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/screenshots/home-wide@320w.webp 320w, /img-gen/screenshots/home-wide@480w.webp 480w, /img-gen/screenshots/home-wide@640w.webp 640w, /img-gen/screenshots/home-wide@768w.webp 768w, /img-gen/screenshots/home-wide@1024w.webp 1024w, /img-gen/screenshots/home-wide@1280w.webp 1280w, /img-gen/screenshots/home-wide@1600w.webp 1600w"
+  }
+}

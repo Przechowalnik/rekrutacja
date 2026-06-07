@@ -1,0 +1,28 @@
+{
+  "buttonClose": "Close",
+  "createdAccountOwner": {
+    "confetti": "true",
+    "description": "<b>Congratulations!</b> Your account is now fully active. You can manage your company, add employees, configure services, and monitor bookings and payments.",
+    "title": "Your owner account has been confirmed! ✅"
+  },
+  "createdAccountUser": {
+    "confetti": "true",
+    "description": "<b>Congratulations!</b> Your account is now fully active. You can freely use our platform - book services, manage your reservations, and enjoy all the features available to customers.",
+    "title": "Your account has been confirmed! ✅"
+  },
+  "createdAccountWorker": {
+    "confetti": "true",
+    "description": "<b>Congratulations!</b> Your employee account is now fully active. You can log in, start working, manage bookings, and use the available tools.",
+    "title": "Your account has been confirmed! ✅"
+  },
+  "createdSubscription": {
+    "confetti": "true",
+    "description": "<b>Thank you!</b> Your subscription is pending confirmation and will be activated soon! Once it’s active, you’ll be able to enjoy all available features to the fullest. 😍",
+    "title": "Your subscription has been created! 🎉"
+  },
+  "setPassword": {
+    "confetti": "false",
+    "description": "Your account was created using social login. To also be able to log in with a password, please set one now in your account settings.",
+    "title": "Set a password for your account"
+  }
+}

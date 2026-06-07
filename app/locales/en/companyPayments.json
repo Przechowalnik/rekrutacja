@@ -1,0 +1,8 @@
+{
+  "buttonRegisterInStripe": "Start payments",
+  "description": "On this page, you can add an account in <tooltipicon label='{{tooltipStripe}}'>Stripe</tooltipicon/>, which will be responsible for <b>processing payments from your clients</b>. A Stripe account is required if the service includes an option for prepayment or any other form of online payment. Once connected, all client transactions will be processed through Stripe, ensuring both convenience and security.",
+  "information": "If you don’t yet have a Stripe account, click <b>{{buttonRegisterInStripe}}</b> to set up and link your account to the system.",
+  "noActiveStripePayments": "You have no active payments.",
+  "title": "Client payments",
+  "warning": "Stripe <b>charges a commission on every transaction</b>, with the rates listed below. Please note that these fees may change if Stripe updates its pricing or policies. The fee is automatically deducted from each payment, and the remaining amount is transferred to your connected Stripe account. Commissions may apply to both domestic and international transactions, so it’s recommended to check current rates regularly.<br/><br/>Stripe commission per payment for European cards: 1.5% + 1.00 PLN."
+}

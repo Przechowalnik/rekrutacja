@@ -1,0 +1,152 @@
+{
+  "accountAuthenticator": {
+    "options2Fa": {
+      "description": "- <b>Email OTP</b> - you will receive one-time verification codes to your email address each time you log in.<br/>- <b>Google Authenticator</b> - you will use the Google Authenticator app to generate verification codes on your mobile device.",
+      "title": "What are the options for two-factor authentication?"
+    }
+  },
+  "accountBugDetails": {
+    "whenPointsPaid": {
+      "description": "Points for a reported bug will be awarded after it has been positively reviewed by our team.",
+      "title": "When will points for a reported bug be awarded?"
+    }
+  },
+  "accountBugs": {
+    "pointsPerBug": {
+      "description": "- <b>Minor bugs: {{points1}} points</b><br/>For small issues that don’t significantly affect the platform’s functionality, but are worth reporting!<br/>- <b>Medium bugs: {{points2}} points</b><br/>Problems that make using certain features more difficult.<br/><b>- Critical bugs: {{points3}} points</b><br/>Report serious issues that affect the overall functionality of the site!",
+      "title": "How many points can you earn for reporting bugs?"
+    },
+    "whenYouGetPoints": {
+      "description": "Points are awarded to the company linked to the user’s account (if the user has a company account assigned). If you report a bug using an employee account, the points will go to the company’s account. If you don’t have a company account, points will not be awarded.",
+      "title": "When are points awarded for reporting a bug?"
+    }
+  },
+  "accountInvoices": {
+    "sendInvoice": {
+      "description": "To send an invoice by email, select the appropriate invoice and click the <b>Send</b> button next to it.<br/>",
+      "title": "How to send an invoice by email?"
+    }
+  },
+  "accountPhone": {
+    "changePhone": {
+      "description": "You can change your phone number at most once per day.",
+      "title": "How often can I change my phone number?"
+    },
+    "confirmPhoneRequired": {
+      "description": "Phone number verification is required to improve user safety, prevent impersonation, and reduce abuse. A verified phone number confirms the authenticity of the user and enables safe contact regarding listings.",
+      "title": "Why is phone number verification required?"
+    },
+    "phoneVerification": {
+      "description": "Yes. A verified phone number is required to create listings.",
+      "title": "Is a verified phone number required to create listings?"
+    }
+  },
+  "companyCard": {
+    "updateCard": {
+      "description": "When you add a new payment card and another card is already assigned to your account, the system will automatically update the card information — the new card will replace the old one.",
+      "title": "What happens when I add a new payment card if another one is already assigned to my account?"
+    }
+  },
+  "companyInvoices": {
+    "sendInvoice": {
+      "description": "To send an invoice by email, select the appropriate invoice and click the <b>Send</b> button next to it.<br/><br/><b>Note:</b> All invoices are sent to the email address of the company owner.",
+      "title": "How to send an invoice by email?"
+    },
+    "updateDataToInvoice": {
+      "description": "To update your billing details for invoices, click the <b>Update invoice data</b> button located at the bottom of the page below all invoices.",
+      "title": "How to update data for future invoices?"
+    }
+  },
+  "companyPhone": {
+    "changePhone": {
+      "description": "You can change your company's phone number at most once per day.",
+      "title": "How often can I change the company phone number?"
+    },
+    "confirmPhoneRequired": {
+      "description": "Phone number verification is required to improve user safety, prevent impersonation, and reduce abuse. A verified phone number confirms the authenticity of the company and enables safe contact regarding listings.",
+      "title": "Why is phone number verification required?"
+    },
+    "locations": {
+      "description": "Yes, the phone number will be visible across all company locations.",
+      "title": "Will the phone number be visible in all company locations?"
+    },
+    "phoneVerification": {
+      "description": "Yes. A verified company phone number is required to create listings.",
+      "title": "Is a verified phone number required to create listings?"
+    }
+  },
+  "companyPoints": {
+    "billingPeriod": {
+      "description": "A billing period is a time unit corresponding to one month of subscription use, regardless of the plan type or duration.",
+      "title": "What is a billing period?"
+    },
+    "getPoints": {
+      "description": "<ol><li><b>Referral system</b> - Recommend our platform to companies and users to earn extra points. To learn more about referrals and statistics, visit the <a href='companyReferral'>Referral System</a> page on the platform.</li><li><b>Bug reporting</b> - Help us improve the platform by reporting bugs and earn points as a thank-you reward. To learn more about bug reporting, visit our <a href='companyBugs'>Reported Bugs</a> page, where you’ll find detailed instructions and tips on how to submit effective reports so we can resolve issues faster.</li></ol>",
+      "title": "How can you earn points on the platform?"
+    },
+    "getSubscriptionFreeDays": {
+      "description": "<ol><li><b>Exchange points for extra subscription days</b> - You can exchange your earned points for additional subscription days as a reward for your contribution to improving our platform. The extra days will be added to your <tooltipicon label='A billing period is a time unit corresponding to one month of subscription use, regardless of the plan type or duration.'>current billing cycle</tooltipicon>. To exchange points, click the <b>Exchange points</b> button below.</li></ol>",
+      "title": "How can you earn extra free subscription days?"
+    },
+    "pointsInformation": {
+      "description": "Points on the platform are part of a loyalty system that allows users to earn rewards for various activities. Collected points can be exchanged for additional services, such as SMS packages, to facilitate communication with clients.",
+      "title": "What are points used for on the platform?"
+    },
+    "subscriptionStatus": {
+      "description": "To <b>check</b> your <b>current subscription</b>, go to the <a href='companySubscriptions'>Subscriptions</a> section. There, you’ll find all details about your current plan and subscription.",
+      "title": "Where can you check your current subscription?"
+    }
+  },
+  "companyProfile": {
+    "locations": {
+      "description": "To change your company’s location points, go to the <a href='companyLocations'>Company Locations</a> page. There, you can easily add, edit, or remove locations, giving you full control over where your business appears and how it’s shown to clients.",
+      "title": "Where can you change your company’s location points?"
+    },
+    "status": {
+      "description": "To check the status of your company profile page for clients and employees, go to the <a href='companyVisibility'>Company Visibility</a> page. There you’ll find all information about visibility settings and profile availability. This allows you to easily control who can see your company page depending on your preferences.",
+      "title": "Where can you check the status of your company profile page?"
+    }
+  },
+  "companySubscriptionNew": {
+    "addCard": {
+      "description": "No, you only need to provide a payment card if none is currently linked to the account or if you wish to update it.",
+      "title": "Do I always need to update my payment card when creating a new subscription?"
+    },
+    "addCoupon": {
+      "description": "Yes, if you have a discount coupon, you can apply it while creating a new subscription to receive extra benefits.",
+      "title": "Can I enter a discount coupon when creating a new subscription?"
+    },
+    "cardError": {
+      "description": "If there’s an issue with your card that prevents the subscription from starting, an appropriate error message will be displayed.",
+      "title": "What happens if my card is declined when trying to start a subscription?"
+    },
+    "validCoupon": {
+      "description": "If an invalid discount coupon is entered, the subscription activation will be rejected, and an error message will appear.",
+      "title": "What happens if an invalid discount coupon is entered when creating a new subscription?"
+    }
+  },
+  "companySubscriptions": {
+    "freeSubscriptionDaysWithoutSubscription": {
+      "description": "No, to add extra free subscription days, you must have an active subscription that is not expiring, unpaid, or in a trial period.",
+      "title": "Can extra subscription days be added if there’s no active subscription?"
+    },
+    "maximumSubscriptions": {
+      "description": "Only one subscription can be active at a time.",
+      "title": "How many subscriptions can be active at once?"
+    },
+    "newSubscriptionOnActiveFreeTrial": {
+      "description": "Yes, you can activate a new subscription during a free trial. The trial will be canceled, and the new subscription will start immediately.",
+      "title": "Can I activate a new subscription during the free trial period?"
+    },
+    "replacePointsToFreeDaysInSubscription": {
+      "description": "To exchange points for additional free subscription days, go to the <a href='companyPointsExchanges'>Exchange Points</a> page, select the desired conversion rate, and complete the exchange. Extra days are added only once per <tooltipicon label='A billing period is a time unit corresponding to one month of subscription use, regardless of the plan type or duration.'>current billing period</tooltipicon>.",
+      "title": "How can you exchange points for additional free subscription days?"
+    }
+  },
+  "companyWorkerPermissions": {
+    "permissionInformation": {
+      "description": "<ol><li><b>Employee management</b> - allows adding, editing, and removing employees, as well as managing their permissions and schedules.</li></ol>",
+      "title": "What permissions can be assigned to an employee?"
+    }
+  }
+}

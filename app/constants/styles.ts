@@ -1,0 +1,32 @@
+export const globalClasses = {
+  accordion: "accordion",
+  accordionContent: "accordionContent",
+  accordionCustom: "accordionCustom",
+  accordionCustomActive: "accordionCustomActive",
+  borderRadius8: "border-radius-8",
+  borderRadiusMobile8: "border-radius-mobile-8",
+  bounce: "bounce",
+  buttonContent: "buttonContent",
+  buttonContentGradient: "buttonContentGradient",
+  fade: "fade",
+  fadePage: "fadePage",
+  flexGrow1: "flexGrow1",
+  focusAccessibility: "focusAccessibility",
+  noAnimation: "noAnimation",
+  opacityDelay: "opacityDelay",
+  shadowCard: "shadow-card",
+  shadowInset: "shadow-inset",
+  shadowInset2: "shadow-inset2",
+  shadowInsetBold: "shadow-inset-bold",
+  showAfterFadePage: "showAfterFadePage",
+  singleLine: "single-line",
+  site: "site",
+};
+
+export const globalIds = {
+  cardSearchListing: "cardSearchListing",
+  dnd: "dnd",
+  inputCounter: "inputCounter",
+  sliderUi: "sliderUi",
+  textareaCounter: "textareaCounter",
+};

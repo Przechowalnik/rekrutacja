@@ -1,0 +1,15 @@
+{
+  "2fa": {
+    "alert": "By enabling two-factor authentication (2FA), you will automatically disable email-based two-factor authentication (email OTP)!",
+    "description": "Great choice! Adding an extra layer of security to your account is a smart move. To set up two-factor authentication (2FA), scan this QR code using an authenticator app (e.g., Google Authenticator) on your mobile device. Once scanned, you’ll be able to generate unique codes required for logging in. It’s an easy and effective way to keep your account safe!",
+    "title": "Two-Factor Authentication (2FA)"
+  },
+  "alertToEnableEmailOtpWith2FA": "If you enable verification via a one-time password (email OTP) sent to your email address, your currently active two-factor authentication (2FA) will be automatically disabled and replaced with email OTP verification.",
+  "backup": {
+    "buttonConfirm": "I’ve saved the code in a safe place",
+    "description": "Keep this backup code for two-factor authentication (2FA) in a secure location. You’ll need it to regain access to your account if you lose your authentication device. This backup method ensures you can recover your account in case of device loss. Make sure to store the code safely and out of reach of unauthorized persons.",
+    "title": "2FA Backup Code"
+  },
+  "description": "On this page, you can <b>enable two-factor authentication</b> (2FA) to enhance the security of your account.<br/><br/><b>We strongly recommend enabling one of these options</b>, as two-factor authentication significantly increases your account’s protection. Remember, activating 2FA is an important step to safeguard your data against unauthorized access.",
+  "title": "Two-Factor Authentication"
+}

@@ -1,0 +1,11 @@
+{
+  "bugPointsLabel": "Możliwe punkty do zdobycia",
+  "bugPointsPaidAtDescription": "Jeżeli nie ma daty, to punkty jeszcze nie zostały wypłacone.",
+  "buttonEdit": "Edytuj",
+  "noAnswer": "Brak odpowiedzi",
+  "showImages": "Zobacz zdjęcia",
+  "showVideo": "Zobacz video",
+  "success": "Punkty zostały wypłacone!",
+  "title": "Szczegóły zgłoszenia",
+  "warning": "Do zgłoszonego błędu została dodana odpowiedź od administracji"
+}

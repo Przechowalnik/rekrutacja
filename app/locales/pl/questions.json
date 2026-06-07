@@ -1,0 +1,152 @@
+{
+  "accountAuthenticator": {
+    "options2Fa": {
+      "description": "- <b>E-mail OTP</b> - będziesz otrzymywać jednorazowe kody weryfikacyjne na swój adres e-mail przy każdej próbie logowania.<br/>- <b>Google Authenticator</b> - będziesz używać aplikacji Google Authenticator do generowania kodów weryfikacyjnych na urządzeniu mobilnym.",
+      "title": "Jakie są opcje dla autoryzacji dwuetapowej?"
+    }
+  },
+  "accountBugDetails": {
+    "whenPointsPaid": {
+      "description": "Punkty za zgłoszony błąd zostaną wypłacone po jego pozytywnym przetworzeniu przez nasz zespół",
+      "title": "Kiedy punkty za zgłoszony błąd zostaną wypłacone?"
+    }
+  },
+  "accountBugs": {
+    "pointsPerBug": {
+      "description": "- <b>Drobne błędy: {{points1}} punktów</b><br/>Za poprawki, które nie wpływają znacząco na działanie strony, ale warto je zgłosić!<br/>- <b>Średnie błędy: {{points2}} punktów</b><br/>Problemy, które utrudniają korzystanie z niektórych funkcji.<br/><b>- Poważne błędy: {{points3}} punktów</b><br/>Zgłoś krytyczne problemy, które wpływają na działanie całej strony!",
+      "title": "Ile punktów możesz zdobyć za zgłaszanie błędów?"
+    },
+    "whenYouGetPoints": {
+      "description": "Punkty są przyznawane firmie do której użytkownik jest dodany (ma przypiasne konto firmowe do swojego konta)! Jeśli zgłaszasz błąd, korzystając z konta pracowniczego - punkty trafią na konto firmowe. Jeśli nie posiadasz konta firmowego, punkty nie zostaną przyznane.",
+      "title": "Kiedy przyznawane są punkty za zgłoszenie błędu?"
+    }
+  },
+  "accountInvoices": {
+    "sendInvoice": {
+      "description": "Aby wysłać fakturę na adres e-mail, należy wybrać odpowiednią fakturę, a następnie kliknąć przycisk <b>Wyślij</b> znajdujący się obok niej.<br/>",
+      "title": "Jak wysłać fakturę na adres e-mail?"
+    }
+  },
+  "accountPhone": {
+    "changePhone": {
+      "description": "Numer telefonu można zmienić maksymalnie raz dziennie.",
+      "title": "Jak często można zmieniać numer telefonu?"
+    },
+    "confirmPhoneRequired": {
+      "description": "Weryfikacja numeru telefonu jest konieczna, aby zwiększyć bezpieczeństwo użytkowników, zapobiegać podszywaniu się pod inne osoby oraz ograniczać nadużycia. Zweryfikowany numer potwierdza autentyczność użytkownika i umożliwia bezpieczny kontakt w sprawie ogłoszenia.",
+      "title": "Dlaczego weryfikacja numeru telefonu jest wymagana?"
+    },
+    "phoneVerification": {
+      "description": "Tak. Aby utworzyć ogłoszenie, musisz posiadać zweryfikowany numer telefonu.",
+      "title": "Czy zweryfikowany numer telefonu jest wymagany do tworzenia ogłoszeń?"
+    }
+  },
+  "companyCard": {
+    "updateCard": {
+      "description": "Gdy podasz nową kartę płatniczą, a do konta jest już przypisana inna, system zaktualizuje dane karty, przypisując nową kartę do konta, a poprzednia karta zostanie usunięta.",
+      "title": "Co się stanie, gdy podam nową kartę płatniczą, jeśli do konta jest już przypisana inna?"
+    }
+  },
+  "companyInvoices": {
+    "sendInvoice": {
+      "description": "Aby wysłać fakturę na adres e-mail, należy wybrać odpowiednią fakturę, a następnie kliknąć przycisk <b>Wyślij</b> znajdujący się obok niej.<br/><br/><b>Uwaga:</b> Wszystkie faktury są wysyłane na adres e-mail właściciela firmy",
+      "title": "Jak wysłać fakturę na adres e-mail?"
+    },
+    "updateDataToInvoice": {
+      "description": "Aby zaktualizować dane do faktur, należy nacisnąć przycisk <b>Aktualizuj dane do faktur</b>, który znajduje się na dole strony, pod wszystkimi fakturami.",
+      "title": "Jak zaktualizować dane do przyszłych faktur?"
+    }
+  },
+  "companyPhone": {
+    "changePhone": {
+      "description": "Numer telefonu firmy można zmienić maksymalnie raz dziennie.",
+      "title": "Jak często można zmieniać numer telefonu firmy?"
+    },
+    "confirmPhoneRequired": {
+      "description": "Weryfikacja numeru telefonu jest konieczna, aby zwiększyć bezpieczeństwo użytkowników, zapobiegać podszywaniu się pod inne osoby oraz ograniczać nadużycia. Zweryfikowany numer potwierdza autentyczność firmy i umożliwia bezpieczny kontakt w sprawie ogłoszenia.",
+      "title": "Dlaczego weryfikacja numeru telefonu jest wymagana?"
+    },
+    "locations": {
+      "description": "Tak, numer telefonu będzie widoczny we wszystkich lokalizacjach firmy.",
+      "title": "Czy numer telefonu będzie widoczny we wszystkich lokalizacjach firmy?"
+    },
+    "phoneVerification": {
+      "description": "Tak. Aby utworzyć ogłoszenie firmowe, firma musi posiadać zweryfikowany numer telefonu.",
+      "title": "Czy zweryfikowany numer telefonu jest wymagany do tworzenia ogłoszeń?"
+    }
+  },
+  "companyPoints": {
+    "billingPeriod": {
+      "description": "Okres rozliczeniowy to jednostka czasu odpowiadająca jednemu miesiącowi korzystania z subskrypcji, niezależnie od jej rodzaju czy długości trwania.",
+      "title": "Co to jest okres rozliczeniowy?"
+    },
+    "getPoints": {
+      "description": "<ol><li><b>System poleceń</b> - Polecaj naszą stronę firmom i użytkownikom, aby zyskać dodatkowe punkty. Aby dowiedzieć się więcej szczegółów na temat poleceń oraz statystyk, odwiedź stronę <a href='companyReferral'>System poleceń</a> na platformie.</li><li><b>Zgłaszanie błędów</b> - Pomóż nam doskonalić stronę, zgłaszając zauważone błędy, i odbierz punkty w ramach podziękowania. Aby dowiedzieć się więcej na temat zgłaszania błędów, odwiedź naszą stronę <a href='companyBugs'>Zgłoszone błędy na platformie</a>. Znajdziesz tam szczegółowe informacje na temat procesu zgłaszania problemów oraz wskazówki, jak efektywnie przekazywać informacje o błędach, abyśmy mogli je jak najszybciej rozwiązać.</li></ol>",
+      "title": "W jaki sposób można zdobyć punkty na platformie?"
+    },
+    "getSubscriptionFreeDays": {
+      "description": "<ol><li><b>Wymianę punktów na dodatkowe dni subskrypcji</b> - Zgromadzone punkty możesz wymienić na dodatkowe dni subskrypcji, które nagrodzą Twój wkład w rozwój naszej aplikacji, dodając dodatkowe dni subskrypcji do <tooltipicon label='Okres rozliczeniowy to jednostka czasu odpowiadająca jednemu miesiącowi korzystania z subskrypcji, niezależnie od jej rodzaju czy długości trwania.'>bieżącego cyklu rozliczeniowego</tooltipicon>. Wymień swoje punkty na dodatkowe dni subskrypcji, naciskając przycisk <b>Wymień punkty</b> poniżej.</li></ol>",
+      "title": "W jaki sposób można zdobyć dodatkowe darmowe dni subskrypcji?"
+    },
+    "pointsInformation": {
+      "description": "Punkty na platformie to specjalny system lojalnościowy, który pozwala użytkownikom gromadzić nagrody za różne aktywności na platformie. Zebrane punkty można wymieniać na dodatkowe usługi, takie jak pakiety SMS-ów, co ułatwia komunikację z klientami.",
+      "title": "Do czego służą punkty na platformie?"
+    },
+    "subscriptionStatus": {
+      "description": "Aby <b>sprawdzić</b> swoją <b>aktualną subskrypcję</b>, przejdź do zakładki <a href='companySubscriptions'>Subskrypcje</a>. Znajdziesz tam szczegóły dotyczące Twojego obecnego planu oraz subskrypcji.",
+      "title": "Gdzie można sprawdzić swoją aktualną subskrypcję?"
+    }
+  },
+  "companyProfile": {
+    "locations": {
+      "description": "Aby zmienić lokalizację punktów firmy, przejdź na podstronę <a href='companyLocations'>Lokalizacja punktów firmy</a>. Na tej stronie możesz łatwo dodać, edytować lub usunąć lokalizacje. Dzięki temu masz pełną kontrolę nad tym, gdzie Twoja firma jest dostępna i jak wyświetlane są te informacje klientom.",
+      "title": "Gdzie można zmienić lokalizację punktów firmy?"
+    },
+    "status": {
+      "description": "Aby sprawdzić status strony profilu firmowego dla klientów oraz pracowników, przejdź na podstronę <a href='companyVisibility'>Widoczność firmy</a>. Tam znajdziesz wszystkie informacje dotyczące ustawień widoczności profilu oraz statusu dostępności dla różnych grup użytkowników. Dzięki temu łatwo dostosujesz, kto może zobaczyć Twoją stronę firmową, w zależności od potrzeb.",
+      "title": "Gdzie można sprawdzić status strony profilu firmowego?"
+    }
+  },
+  "companySubscriptionNew": {
+    "addCard": {
+      "description": "Nie, wystarczy podać kartę płatniczą, gdy jeszcze nie mamy przypisanej karty do konta lub gdy chcemy ją zaktualizować.",
+      "title": "Czy zawsze trzeba zaktualizować kartę płatniczą podczas tworzenia nowej subskrypcji?"
+    },
+    "addCoupon": {
+      "description": "Tak, jeśli posiadasz kupon rabatowy, możesz go wprowadzić podczas tworzenia nowej subskrypcji, aby zyskać dodatkowe korzyści.",
+      "title": "Czy można wprowadzić kupon rabatowy podczas tworzenia nowej subskrypcji?"
+    },
+    "cardError": {
+      "description": "Jeżeli wystąpi problem z kartą, uniemożliwiający uruchomienie subskrypcji, zostanie wyświetlony odpowiedni komunikat.",
+      "title": "Co się stanie, gdy podczas próby uruchomienia subskrypcji karta zostanie odrzucona?"
+    },
+    "validCoupon": {
+      "description": "Podczas podania nieprawidłowego kuponu rabatowego próba uruchomienia subskrypcji zostanie odrzucona, a wyświetlony zostanie odpowiedni komunikat.",
+      "title": "Co się stanie, gdy wprowadzony zostanie niepoprawny kupon rabatowy podczas próby uruchomienia nowej subskrypcji?"
+    }
+  },
+  "companySubscriptions": {
+    "freeSubscriptionDaysWithoutSubscription": {
+      "description": "Nie, aby dodać dodatkowe darmowe dni subskrypcji, musisz posiadać aktywną subskrypcję, która nie jest wygaszająca, nieopłacona ani w okresie próbnym.",
+      "title": "Czy dodatkowe dni subskrypcji mogą zostać dodane, jeśli subskrypcja jest nieaktywna lub jej nie ma?"
+    },
+    "maximumSubscriptions": {
+      "description": "Maksymalnie może być tylko jedna aktywna subskrypcja.",
+      "title": "Ile subskrypcji może być aktywnych jednocześnie?"
+    },
+    "newSubscriptionOnActiveFreeTrial": {
+      "description": "Tak, można aktywować nową subskrypcję podczas trwania darmowego okresu próbnego. Wówczas okres próbny zostaje anulowany, a nowa subskrypcja zostaje utworzona.",
+      "title": "Czy można aktywować nową subskrypcję podczas trwania darmowego okresu próbnego?"
+    },
+    "replacePointsToFreeDaysInSubscription": {
+      "description": "Aby wymienić punkty na dodatkowe darmowe dni subskrypcji, należy przejść na podstronę <a href='companyPointsExchanges'>Wymień punkty</a>, wybrać najbardziej interesujący Cię przelicznik punktów, a następnie dokonać wymiany. Dodatkowe dni subskrypcji są dodawane tylko raz w <tooltipicon label='Okres rozliczeniowy to jednostka czasu odpowiadająca jednemu miesiącowi korzystania z subskrypcji, niezależnie od jej rodzaju czy długości trwania.'>obecnym okresie rozliczeniowym</tooltipicon>.",
+      "title": "Jak można wymienić punkty na dodatkowe darmowe dni subskrypcji?"
+    }
+  },
+  "companyWorkerPermissions": {
+    "permissionInformation": {
+      "description": "<ol><li><b>Zarządzanie pracownikami</b> - pozwala na dodawanie, edytowanie oraz usuwanie pracowników, a także zarządzanie ich uprawnieniami i grafikiem.</li></ol>",
+      "title": "Jakie uprawnienia można przypisać pracownikowi?"
+    }
+  }
+}

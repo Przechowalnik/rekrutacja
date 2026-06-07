@@ -1,0 +1,11 @@
+{
+  "paragraph1": "At {{companyName}}, we want every user to fully enjoy our platform - regardless of their needs or limitations. That’s why we design solutions that are intuitive, practical, and accessible. We continuously improve and adapt the maszbox.pl website and mobile app to ensure a comfortable experience for everyone.",
+  "paragraph2": "The {{companyName}} website has been developed in accordance with WCAG 2.1 Level AA standards. This ensures that the site’s content and functionality remain accessible and easy to read for a wide audience.",
+  "paragraph3": "Currently, {{companyName}} operates as a PWA (Progressive Web App), which can be added to your phone’s home screen and used just like a regular mobile app. The PWA was designed with readability and support for assistive technologies in mind, such as screen readers. In the future, we also plan to launch a full-featured mobile application that will fully comply with digital accessibility requirements.",
+  "paragraph4": "We make every effort to ensure that {{companyName}} is a fully accessible and user-friendly platform for everyone. However, if you encounter any accessibility issues on our website or in the app, please let us know.",
+  "paragraph5": "You can do so via the form available on the <a href='contact'>Contact</a> page. If you’re logged in, you can also report issues directly from your account settings, in the “Reported issues” section, where you can submit new reports and check the status of previous ones. Every report matters to us, and we do our best to respond as quickly as possible.",
+  "title1": "Accessibility for Everyone",
+  "title2": "Website Accessibility",
+  "title3": "Mobile App Accessibility",
+  "title4": "Contact Regarding Accessibility"
+}

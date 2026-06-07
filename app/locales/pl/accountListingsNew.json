@@ -1,0 +1,14 @@
+{
+  "buttonAdd": "Dodaj ogłoszenie",
+  "buttonPay": "Przejdź do płatności",
+  "fieldsetInformation": "Informacje ogólne",
+  "fieldsetInformationFilters": "Informacje szczegółowe",
+  "fieldsetInformationsFilters": "Informacje szczegółowe",
+  "fieldsetLocation": "Adres lokalizacji",
+  "fieldsetPhone": "Numer kontaktowy",
+  "fieldsetPhoneDescription": "Numer telefonu widoczny w ogłoszeniu jest zawsze taki sam jak numer dodany i zweryfikowany na koncie i nie może być edytowany podczas tworzenia ogłoszenia. Aby użyć innego numeru telefonu, należy dodać i zweryfikować nowy numer na koncie. Takie rozwiązanie ma na celu ograniczenie oszustw, podszywania się oraz innych nadużyć.",
+  "fieldsetPrice": "Cena",
+  "information": "Każde ogłoszenie jest tworzone na okres 1 miesiąca. Po tym czasie należy je przedłużyć, aby pozostało aktywne. Przedłużenie jest możliwe dopiero wtedy, gdy do wygaśnięcia ogłoszenia pozostaje mniej niż 30 dni.",
+  "title": "Nowe ogłoszenie",
+  "warning": ""
+}

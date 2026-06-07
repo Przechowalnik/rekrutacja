@@ -1,0 +1,1 @@
+export { BannerIntroSearch } from "./BannerIntroSearch";
