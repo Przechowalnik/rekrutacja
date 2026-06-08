@@ -13,6 +13,7 @@
     "/app/constants/cities.ts",
     "/app/constants/routes.ts",
     "/app/locales",
+    "/app/models/enums.ts",
     "/app/routes.ts",
     "/build",
     "/cspell-words.txt",
