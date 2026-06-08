@@ -546,7 +546,7 @@
   },
   "goToHomePage": "Go to home page",
   "goToLoginPage": "Go to login page",
-  "homeShutdownAlert": "Unfortunately, the service is being gradually shut down and will only be available until 1 September.",
+  "homeShutdownAlert": "We are sorry, but the service is closing down and will be available only until 1 September.",
   "infiniteData": {
     "noData": "No more data to display.",
     "showMore": "Show more"
@@ -968,10 +968,10 @@
   },
   "listingExtension": {
     "1": "1 month",
-    "12": "12 months",
     "3": "3 months",
     "6": "6 months",
-    "9": "9 months"
+    "9": "9 months",
+    "12": "12 months"
   },
   "listingPaymentStatus": {
     "EXPIRED": "Expired",
