@@ -313,3 +313,4 @@ zielona
 ZOLIBORZ
 ZWIERZYNIEC
 smsplanet
+mies
