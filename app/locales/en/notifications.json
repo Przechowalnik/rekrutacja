@@ -207,20 +207,8 @@
     "message": "Something’s wrong with the user language.",
     "title": "Error in field:"
   },
-  "badListingAccess": {
-    "message": "Invalid access. 😫",
-    "title": "Error in field:"
-  },
-  "badListingArea": {
-    "message": "The specified area is invalid.",
-    "title": "Error in field:"
-  },
   "badListingAvailableFrom": {
     "message": "The available from date is invalid.",
-    "title": "Error in field:"
-  },
-  "badListingAvailableTo": {
-    "message": "The available to date is invalid.",
     "title": "Error in field:"
   },
   "badListingCategories": {
@@ -235,30 +223,6 @@
     "message": "Invalid city for listing.",
     "title": "Error in field:"
   },
-  "badListingComfortOption": {
-    "message": "Invalid comfort option.",
-    "title": "Error in field:"
-  },
-  "badListingComfortOptions": {
-    "message": "Invalid comfort options. 😫",
-    "title": "Error in field:"
-  },
-  "badListingCondition": {
-    "message": "Invalid condition. 😫",
-    "title": "Error in field:"
-  },
-  "badListingContainerType": {
-    "message": "Invalid container type. 😫",
-    "title": "Error in field:"
-  },
-  "badListingContainerTypes": {
-    "message": "Invalid container types.",
-    "title": "Error in field:"
-  },
-  "badListingContractType": {
-    "message": "Invalid listing type. 😫",
-    "title": "Error in field:"
-  },
   "badListingDeleteReason": {
     "message": "Invalid listing deletion reason. 😫",
     "title": "Error in field:"
@@ -271,60 +235,16 @@
     "message": "Invalid district name.",
     "title": "Error in field:"
   },
-  "badListingEntryOption": {
-    "message": "Invalid entry option.",
-    "title": "Error in field:"
-  },
-  "badListingEntryOptions": {
-    "message": "Invalid entry options. 😫",
-    "title": "Error in field:"
-  },
   "badListingExtension": {
     "message": "Invalid number of extension months.",
-    "title": "Error in field:"
-  },
-  "badListingFloorLevel": {
-    "message": "Invalid floor level.",
     "title": "Error in field:"
   },
   "badListingId": {
     "message": "Listing not found.",
     "title": "Error in field:"
   },
-  "badListingMinimumRentalDays": {
-    "message": "Invalid minimum rental days.",
-    "title": "Error in field:"
-  },
-  "badListingParkingType": {
-    "message": "Invalid parking type. 😫",
-    "title": "Error in field:"
-  },
-  "badListingParkingTypes": {
-    "message": "Invalid parking types.",
-    "title": "Error in field:"
-  },
-  "badListingPlotType": {
-    "message": "Invalid plot type. 😫",
-    "title": "Field error:"
-  },
-  "badListingPlotTypes": {
-    "message": "Invalid plot types.",
-    "title": "Error in field:"
-  },
-  "badListingPrice": {
-    "message": "The specified price is invalid.",
-    "title": "Error in field:"
-  },
-  "badListingRentalDays": {
-    "message": "Invalid number of rental days.",
-    "title": "Error in field:"
-  },
-  "badListingSecurityOption": {
-    "message": "Invalid security option.",
-    "title": "Error in field:"
-  },
-  "badListingSecurityOptions": {
-    "message": "Invalid security options. 😫",
+  "badListingSalary": {
+    "message": "The salary range is invalid (\"from\" cannot be greater than \"to\")",
     "title": "Error in field:"
   },
   "badListingStatus": {
@@ -335,32 +255,8 @@
     "message": "Please check the listing title and try again.",
     "title": "Something is wrong with the listing title 😓"
   },
-  "badListingType": {
-    "message": "Invalid listing type.",
-    "title": "Error in field:"
-  },
-  "badListingUnitType": {
-    "message": "Invalid unit type. 😫",
-    "title": "Field error:"
-  },
-  "badListingUnitTypes": {
-    "message": "Invalid unit types.",
-    "title": "Error in field:"
-  },
-  "badListingUsageOption": {
-    "message": "Invalid usage option.",
-    "title": "Error in field:"
-  },
-  "badListingUsageOptions": {
-    "message": "Invalid usage options. 😫",
-    "title": "Error in field:"
-  },
-  "badListingUtilityOption": {
-    "message": "Invalid utility option.",
-    "title": "Error in field:"
-  },
-  "badListingUtilityOptions": {
-    "message": "Invalid utility options. 😫",
+  "badListingWorkMode": {
+    "message": "Invalid work mode",
     "title": "Error in field:"
   },
   "badLocationId": {
@@ -503,10 +399,6 @@
     "message": "Your card requires additional authentication (3D Secure), which could not be completed. Please try again or use a different payment method.",
     "title": "Unable to complete payment. 😭"
   },
-  "categoryChangeAlert": {
-    "message": "Changing the listing category has reset detailed information fields.",
-    "title": "Detailed information changed. 😊"
-  },
   "cityChangeAlert": {
     "message": "Changing the city has reset fields related to location.",
     "title": "City changed. 😊"
@@ -558,10 +450,6 @@
   "companyWorkerNonStandardDatesIsNotUnique": {
     "message": "Please check the custom days.",
     "title": "Some custom days overlap with each other. 😐"
-  },
-  "contractTypeChangeAlert": {
-    "message": "Changing the listing type has reset the ‘listing type’ and ‘price’ fields.",
-    "title": "Category changed. 😊"
   },
   "couponCodeExists": {
     "message": "",
@@ -719,17 +607,9 @@
     "message": "The daily phone number change limit has been reached.",
     "title": "Error while changing phone number. 😓"
   },
-  "listingChangeAvailableTo": {
-    "message": "Changing the start date of the listing’s availability has reset the end date field.",
-    "title": "Listing availability date changed. 😊"
-  },
   "listingNotFound": {
     "message": "The listing you are looking for does not exist or has been removed.",
     "title": "Listing not found. 😓"
-  },
-  "listingTypeChangeAlert": {
-    "message": "Changing the listing type has reset the listing category field.",
-    "title": "Listing type changed. 😊"
   },
   "listingsImagesMax5": {
     "message": "",
@@ -859,25 +739,9 @@
     "message": "Must contain at least one uppercase letter.",
     "title": "Error in field:"
   },
-  "noListingCategoryInListingType": {
-    "message": "",
-    "title": "Invalid listing category value. 😐"
-  },
-  "noListingContractType": {
-    "message": "",
-    "title": "Invalid listing type value. 😐"
-  },
-  "noListingMinimumRentalDays": {
-    "message": "",
-    "title": "Invalid minimum rental days value. 😐"
-  },
-  "noListingPlotType": {
-    "message": "",
-    "title": "Invalid plot type value. 😐"
-  },
-  "noListingUnitType": {
-    "message": "",
-    "title": "Invalid unit type value. 😐"
+  "noListingContactMethod": {
+    "message": "Show a phone number, an e-mail address or both in the listing.",
+    "title": "Choose a contact method 😊"
   },
   "noNeedActiveFreeTrial": {
     "message": "To perform this action, you must have an active subscription.",
@@ -894,10 +758,6 @@
   "noPromotionCode": {
     "message": "",
     "title": "No promo code. 😓"
-  },
-  "noSelectedListingCondition": {
-    "message": "Condition required",
-    "title": "You must select a condition to create the listing."
   },
   "noSelectedPlan": {
     "message": "",
@@ -1419,7 +1279,6 @@
     "message": "Welcome!",
     "title": "Account has been created! �"
   },
-
   "userTimeoutBlocked": {
     "message": "Please wait a moment before performing the next action.",
     "title": "Wait 5 seconds. �"

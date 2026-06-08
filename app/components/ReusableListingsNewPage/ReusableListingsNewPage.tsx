@@ -1,41 +1,21 @@
 import { Box, Flex } from "@mantine/core";
 import { FormErrors, useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
-import dayjs from "dayjs";
-import {
-  SyntheticEvent,
-  useCallback,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import { SyntheticEvent, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { inputMaxLength } from "~/constants/input";
 import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
-import { globalClasses } from "~/constants/styles";
-import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useSubmitWithActions } from "~/hooks/useSubmitWithActions";
 import { useUser } from "~/hooks/useUser";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
-import {
-  allListingCategoryRent,
-  allListingCategorySale,
-  E_Country,
-  E_ListingCategory,
-  E_ListingContractType,
-  E_ListingType,
-  T_ListingCategory,
-  T_ListingContractType,
-  T_ListingType,
-} from "~/models/enums";
+import { E_Country } from "~/models/enums";
 import { AutocompleteAddress } from "~/ui/AutocompleteAddress";
 import { Button } from "~/ui/Button";
 import { ButtonArrowLeft } from "~/ui/ButtonArrowLeft";
 import { Checkbox } from "~/ui/Checkbox";
-import { Collapse } from "~/ui/Collapse";
 import { Fieldset } from "~/ui/Fieldset";
 import { Form } from "~/ui/Form";
 import { Input } from "~/ui/Input";
@@ -44,34 +24,11 @@ import { InputPhone } from "~/ui/InputPhone";
 import { InputWrapper } from "~/ui/InputWrapper";
 import { Link } from "~/ui/Link";
 import { Section } from "~/ui/Section";
-import {
-  SelectImages,
-  T_SelectImagesOnChange,
-  T_SelectImagesUploaded,
-} from "~/ui/SelectImages";
-import { SelectListingAccess } from "~/ui/SelectListingAccess";
+import { T_SelectImagesUploaded } from "~/ui/SelectImages";
 import { SelectListingCategory } from "~/ui/SelectListingCategory";
-import { SelectListingComfortOption } from "~/ui/SelectListingComfortOption";
-import { SelectListingCondition } from "~/ui/SelectListingCondition";
-import { SelectListingContainerType } from "~/ui/SelectListingContainerType";
-import { SelectListingContractType } from "~/ui/SelectListingContractType";
-import { SelectListingEntryOption } from "~/ui/SelectListingEntryOption";
-import { SelectListingFloorLevel } from "~/ui/SelectListingFloorLevel";
-import { SelectListingParkingType } from "~/ui/SelectListingParkingType";
-import { SelectListingPlotType } from "~/ui/SelectListingPlotType";
-import { SelectListingSecurityOption } from "~/ui/SelectListingSecurityOption";
-import { SelectListingType } from "~/ui/SelectListingType";
-import { SelectListingUnitType } from "~/ui/SelectListingUnitType";
-import { SelectListingUsageOption } from "~/ui/SelectListingUsageOption";
-import { SelectListingUtilityOption } from "~/ui/SelectListingUtilityOption";
-import { Textarea } from "~/ui/Textarea";
-import {
-  convertToFormData,
-  resetFormFieldsAndShowNotification,
-  showAllErrorsForm,
-} from "~/utilities/form";
-import { generateOptionsForListingCategory } from "~/utilities/listing";
-import { generateListingPriceFromTypeAndContractType } from "~/utilities/price";
+import { SelectWorkMode } from "~/ui/SelectWorkMode";
+import { TextEditor } from "~/ui/TextEditor";
+import { convertToFormData, showAllErrorsForm } from "~/utilities/form";
 
 type T_ReusableListingsNewPage = {
   isCompany: boolean;
@@ -81,24 +38,13 @@ export const ReusableListingsNewPage = ({
   isCompany,
 }: T_ReusableListingsNewPage) => {
   const [uploadImagesGroupId] = useState<string>(() => crypto.randomUUID());
-  const [updatedImages, setUpdatedImages] = useState<{
+  const [updatedImages] = useState<{
     removed: string[];
     uploaded: T_SelectImagesUploaded[];
   }>({
     removed: [],
     uploaded: [],
   });
-  const [selectedListingAvailableFrom, setSelectedListingAvailableFrom] =
-    useState<null | string>(null);
-  const [selectedListingAvailableTo, setSelectedListingAvailableTo] = useState<
-    null | string
-  >(null);
-  const [selectedListingType, setSelectedListingType] =
-    useState<null | T_ListingType>(null);
-  const [selectedListingContractType, setSelectedListingContractType] =
-    useState<null | T_ListingContractType>(E_ListingContractType.LONG_TERM);
-  const [selectedListingCategory, setSelectedListingCategory] =
-    useState<null | T_ListingCategory>(null);
 
   const { t } = useTranslation(
     isCompany ? namespaces.companyListingsNew : namespaces.accountListingsNew,
@@ -106,7 +52,6 @@ export const ReusableListingsNewPage = ({
   const { t: tCommon } = useTranslation(namespaces.common);
   const { t: tNotifications } = useTranslation(namespaces.notifications);
   const { user } = useUser();
-  const { platformColor } = useLayout();
   const submit = useSubmitWithActions();
   const { getLocalizedRoute } = useLocalizedRoute();
 
@@ -130,39 +75,29 @@ export const ReusableListingsNewPage = ({
     return user?.phone?.number ? Number(user.phone.number) : "";
   })();
 
+  const hasVerifiedPhone = isCompany
+    ? !!user?.company?.phone?.verifiedAt
+    : !!user?.phone?.verifiedAt;
+
   const form = useForm({
     clearInputErrorOnChange: true,
     initialValues: {
       [formNames.checkboxAcceptRegulations]: false,
       [formNames.checkboxCreateListing]: false,
-      [formNames.checkboxListingNegotiable]: false,
       [formNames.country]: E_Country.POLAND,
       [formNames.flatNumber]: "",
-      [formNames.listingAccess]: "",
-      [formNames.listingArea]: "",
-      [formNames.listingAvailableFrom]: dayjs().startOf("day").toDate(),
-      [formNames.listingAvailableTo]: "",
+      [formNames.listingAvailableFrom]: "",
       [formNames.listingCategory]: "",
       [formNames.listingCity]: "",
-      [formNames.listingComfortOption]: [],
-      [formNames.listingCondition]: "",
-      [formNames.listingContainerType]: "",
-      [formNames.listingContractType]: "",
       [formNames.listingDescription]: "",
       [formNames.listingDistrict]: "",
-      [formNames.listingEntryOption]: [],
-      [formNames.listingFloorLevel]: "",
       [formNames.listingHasAvailableDistricts]: false,
-      [formNames.listingMinimumRentalDays]: "",
-      [formNames.listingParkingType]: "",
-      [formNames.listingPlotType]: "",
-      [formNames.listingPrice]: "",
-      [formNames.listingSecurityOption]: [],
+      [formNames.listingSalaryFrom]: "",
+      [formNames.listingSalaryTo]: "",
+      [formNames.listingShowEmail]: !hasVerifiedPhone,
+      [formNames.listingShowPhone]: hasVerifiedPhone,
       [formNames.listingTitle]: "",
-      [formNames.listingType]: "",
-      [formNames.listingUnitType]: "",
-      [formNames.listingUsageOption]: [],
-      [formNames.listingUtilityOption]: [],
+      [formNames.listingWorkMode]: "",
       [formNames.phoneCountryCode]: phoneCountryCodeValue,
       [formNames.phoneNumber]: phoneNumberValue,
       [formNames.postalCode]: "",
@@ -170,33 +105,6 @@ export const ReusableListingsNewPage = ({
       [formNames.streetNumber]: "",
     },
     mode: "uncontrolled",
-    onValuesChange(values) {
-      const {
-        listingAvailableFrom,
-        listingAvailableTo,
-        listingCategory,
-        listingContractType,
-        listingType,
-      } = values;
-
-      setSelectedListingAvailableTo(
-        listingAvailableTo
-          ? dayjs(listingAvailableTo).format("YYYY-MM-DD")
-          : null,
-      );
-
-      setSelectedListingAvailableFrom(
-        dayjs(listingAvailableFrom).format("YYYY-MM-DD"),
-      );
-
-      setSelectedListingType((listingType as T_ListingType) || null);
-      setSelectedListingContractType(
-        (listingContractType as T_ListingContractType) || null,
-      );
-      setSelectedListingCategory(
-        (listingCategory as T_ListingCategory) || null,
-      );
-    },
     validate: {
       [formNames.checkboxAcceptRegulations]: value =>
         checkFormValidator({
@@ -208,329 +116,40 @@ export const ReusableListingsNewPage = ({
           formName: formNames.checkboxCreateListing,
           value,
         }),
-      [formNames.checkboxListingNegotiable]: value =>
-        checkFormValidator({
-          formName: formNames.checkboxListingNegotiable,
-          optional: true,
-          value,
-        }),
-      [formNames.country]: value =>
-        checkFormValidator({
-          formName: formNames.country,
-          value,
-        }),
-      [formNames.flatNumber]: value =>
-        checkFormValidator({
-          formName: formNames.flatNumber,
-          optional: true,
-          value,
-        }),
-      [formNames.listingAccess]: value =>
-        checkFormValidator({
-          formName: formNames.listingAccess,
-          optional: true,
-          value,
-        }),
-      [formNames.listingArea]: value =>
-        checkFormValidator({
-          formName: formNames.listingArea,
-          optional: true,
-          value,
-        }),
       [formNames.listingAvailableFrom]: value =>
         checkFormValidator({
           formName: formNames.listingAvailableFrom,
-          value,
-        }),
-      [formNames.listingAvailableTo]: value =>
-        checkFormValidator({
-          formName: formNames.listingAvailableTo,
           optional: true,
           value,
         }),
       [formNames.listingCategory]: value =>
-        checkFormValidator({
-          formName: formNames.listingCategory,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.listingCategory, value }),
       [formNames.listingCity]: value =>
-        checkFormValidator({
-          formName: formNames.listingCity,
-          value,
-        }),
-      [formNames.listingComfortOption]: value =>
-        checkFormValidator({
-          formName: formNames.listingComfortOption,
-          optional: true,
-          value,
-        }),
-      [formNames.listingCondition]: value =>
-        checkFormValidator({
-          formName: formNames.listingCondition,
-          optional: true,
-          value,
-        }),
-      [formNames.listingContainerType]: value =>
-        checkFormValidator({
-          formName: formNames.listingContainerType,
-          optional: true,
-          value,
-        }),
-      [formNames.listingContractType]: value =>
-        checkFormValidator({
-          formName: formNames.listingContractType,
-          optional: true,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.listingCity, value }),
       [formNames.listingDescription]: value =>
-        checkFormValidator({
-          formName: formNames.listingDescription,
-          optional: true,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.listingDescription, value }),
       [formNames.listingDistrict]: value =>
         checkFormValidator({
           formName: formNames.listingDistrict,
           optional: true,
           value,
         }),
-      [formNames.listingEntryOption]: value =>
-        checkFormValidator({
-          formName: formNames.listingEntryOption,
-          optional: true,
-          value,
-        }),
-      [formNames.listingFloorLevel]: value =>
-        checkFormValidator({
-          formName: formNames.listingFloorLevel,
-          optional: true,
-          value,
-        }),
-      [formNames.listingHasAvailableDistricts]: value =>
-        checkFormValidator({
-          formName: formNames.listingHasAvailableDistricts,
-          optional: true,
-          value,
-        }),
-      [formNames.listingMinimumRentalDays]: value =>
-        checkFormValidator({
-          formName: formNames.listingMinimumRentalDays,
-          optional: true,
-          value,
-        }),
-      [formNames.listingParkingType]: value =>
-        checkFormValidator({
-          formName: formNames.listingParkingType,
-          optional: true,
-          value,
-        }),
-      [formNames.listingPlotType]: value =>
-        checkFormValidator({
-          formName: formNames.listingPlotType,
-          optional: true,
-          value,
-        }),
-      [formNames.listingPrice]: value =>
-        checkFormValidator({
-          formName: formNames.listingPrice,
-          value,
-        }),
-      [formNames.listingSecurityOption]: value =>
-        checkFormValidator({
-          formName: formNames.listingSecurityOption,
-          optional: true,
-          value,
-        }),
+      [formNames.listingSalaryFrom]: value =>
+        checkFormValidator({ formName: formNames.listingSalaryFrom, value }),
+      [formNames.listingSalaryTo]: value =>
+        checkFormValidator({ formName: formNames.listingSalaryTo, value }),
       [formNames.listingTitle]: value =>
-        checkFormValidator({
-          formName: formNames.listingTitle,
-          value,
-        }),
-      [formNames.listingType]: value =>
-        checkFormValidator({
-          formName: formNames.listingType,
-          value,
-        }),
-      [formNames.listingUnitType]: value =>
-        checkFormValidator({
-          formName: formNames.listingUnitType,
-          optional: true,
-          value,
-        }),
-      [formNames.listingUsageOption]: value =>
-        checkFormValidator({
-          formName: formNames.listingUsageOption,
-          optional: true,
-          value,
-        }),
-      [formNames.listingUtilityOption]: value =>
-        checkFormValidator({
-          formName: formNames.listingUtilityOption,
-          optional: true,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.listingTitle, value }),
+      [formNames.listingWorkMode]: value =>
+        checkFormValidator({ formName: formNames.listingWorkMode, value }),
       [formNames.postalCode]: value =>
-        checkFormValidator({
-          formName: formNames.postalCode,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.postalCode, value }),
       [formNames.streetName]: value =>
-        checkFormValidator({
-          formName: formNames.streetName,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.streetName, value }),
       [formNames.streetNumber]: value =>
-        checkFormValidator({
-          formName: formNames.streetNumber,
-          value,
-        }),
+        checkFormValidator({ formName: formNames.streetNumber, value }),
     },
   });
-
-  const validContractTypeRent = selectedListingType === E_ListingType.RENT;
-
-  const validShortTermsRent =
-    validContractTypeRent &&
-    selectedListingContractType === E_ListingContractType.SHORT_TERM;
-
-  const validCategoryGarage =
-    selectedListingCategory === E_ListingCategory.PARKING;
-
-  const validCategoryContainer =
-    selectedListingCategory === E_ListingCategory.CONTAINER;
-
-  const validCategoryUnit = selectedListingCategory === E_ListingCategory.UNIT;
-
-  const validCategoryPlot = selectedListingCategory === E_ListingCategory.PLOT;
-
-  const validArea =
-    selectedListingCategory === E_ListingCategory.ATTIC ||
-    selectedListingCategory === E_ListingCategory.BASEMENT ||
-    selectedListingCategory === E_ListingCategory.ROOM ||
-    selectedListingCategory === E_ListingCategory.STORAGE_UNIT ||
-    selectedListingCategory === E_ListingCategory.BANQUET_HALL ||
-    selectedListingCategory === E_ListingCategory.CONTAINER ||
-    selectedListingCategory === E_ListingCategory.PLOT ||
-    selectedListingCategory === E_ListingCategory.UNIT ||
-    selectedListingCategory === E_ListingCategory.WAREHOUSE;
-
-  const validCondition =
-    selectedListingCategory === E_ListingCategory.ROOM ||
-    selectedListingCategory === E_ListingCategory.ATTIC ||
-    selectedListingCategory === E_ListingCategory.BASEMENT ||
-    selectedListingCategory === E_ListingCategory.WAREHOUSE ||
-    selectedListingCategory === E_ListingCategory.UNIT;
-
-  const {
-    accessOptions,
-    comfortOptions,
-    conditions,
-    entryOptions,
-    levels,
-    securityOptions,
-    usageOptions,
-    utilityOptions,
-  } = useMemo(
-    () =>
-      generateOptionsForListingCategory({
-        listingCategory: selectedListingCategory,
-      }),
-    [selectedListingCategory],
-  );
-
-  const validAccess = !!selectedListingCategory && accessOptions.length > 0;
-
-  useEffect(() => {
-    resetFormFieldsAndShowNotification({
-      fieldsToReset: [
-        formNames.listingParkingType,
-        formNames.listingContainerType,
-        formNames.listingFloorLevel,
-        formNames.listingAccess,
-        formNames.listingSecurityOption,
-        formNames.listingComfortOption,
-        formNames.listingUtilityOption,
-        formNames.listingEntryOption,
-        formNames.listingUsageOption,
-        formNames.listingMinimumRentalDays,
-        formNames.listingCondition,
-        formNames.listingPlotType,
-        formNames.listingUnitType,
-        formNames.listingCondition,
-      ],
-      form,
-      notification: () => {
-        notifications.show({
-          color: platformColor,
-          message: tNotifications("categoryChangeAlert.message"),
-          title: tNotifications("categoryChangeAlert.title"),
-        });
-      },
-    });
-  }, [selectedListingCategory]);
-
-  useEffect(() => {
-    resetFormFieldsAndShowNotification({
-      fieldsToReset: [
-        formNames.listingContractType,
-        formNames.listingPrice,
-        formNames.checkboxListingNegotiable,
-        formNames.listingMinimumRentalDays,
-      ],
-      form,
-      notification: () => {
-        notifications.show({
-          color: platformColor,
-          message: tNotifications("contractTypeChangeAlert.message"),
-          title: tNotifications("contractTypeChangeAlert.title"),
-        });
-      },
-    });
-  }, [selectedListingType]);
-
-  useEffect(() => {
-    resetFormFieldsAndShowNotification({
-      fieldsToReset: [
-        formNames.listingPrice,
-        formNames.checkboxListingNegotiable,
-        formNames.listingMinimumRentalDays,
-      ],
-      form,
-      notification: () => {
-        notifications.show({
-          color: platformColor,
-          message: tNotifications("listingTypeChangeAlert.message"),
-          title: tNotifications("listingTypeChangeAlert.title"),
-        });
-      },
-    });
-  }, [selectedListingContractType]);
-
-  useEffect(() => {
-    if (!selectedListingAvailableTo) {
-      return;
-    }
-
-    notifications.show({
-      color: platformColor,
-      message: tNotifications("listingChangeAvailableTo.message"),
-      title: tNotifications("listingChangeAvailableTo.title"),
-    });
-    form.setFieldValue(formNames.listingAvailableTo, "");
-  }, [selectedListingAvailableFrom]);
-
-  useEffect(() => {
-    if (!selectedListingCategory) {
-      return;
-    }
-
-    notifications.show({
-      color: platformColor,
-      message: tNotifications("listingTypeChangeAlert.message"),
-      title: tNotifications("listingTypeChangeAlert.title"),
-    });
-    form.setFieldValue(formNames.listingCategory, "");
-  }, [selectedListingType]);
 
   const handleSubmit = (
     values: typeof form.values,
@@ -540,78 +159,15 @@ export const ReusableListingsNewPage = ({
     const {
       checkboxAcceptRegulations,
       checkboxCreateListing,
-      listingCategory,
-      listingCondition,
-      listingContractType,
-      listingDistrict,
-      listingHasAvailableDistricts,
-      listingMinimumRentalDays,
-      listingPlotType,
-      listingType,
-      listingUnitType,
+      listingShowEmail,
+      listingShowPhone,
     } = values;
 
-    if (listingHasAvailableDistricts && !listingDistrict) {
+    if (!listingShowPhone && !listingShowEmail) {
       notifications.show({
         color: "red",
-        message: tNotifications(`districtMissing.message`),
-        title: tNotifications(`districtMissing.title`),
-      });
-      return;
-    }
-
-    const isListingCategoryInSelectedType = (() => {
-      if (!listingCategory) {
-        return false;
-      }
-      if (listingType === E_ListingType.RENT) {
-        return allListingCategoryRent.includes(
-          listingCategory as T_ListingCategory,
-        );
-      }
-      if (listingType === E_ListingType.SALE) {
-        return allListingCategorySale.includes(
-          listingCategory as T_ListingCategory,
-        );
-      }
-      return false;
-    })();
-
-    if (!isListingCategoryInSelectedType) {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`noListingCategoryInListingType.message`),
-        title: tNotifications(`noListingCategoryInListingType.title`),
-      });
-      return;
-    }
-
-    if (
-      listingContractType === E_ListingContractType.SHORT_TERM &&
-      !listingMinimumRentalDays
-    ) {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`noListingMinimumRentalDays.message`),
-        title: tNotifications(`noListingMinimumRentalDays.title`),
-      });
-      return;
-    }
-
-    if (listingCategory === E_ListingCategory.UNIT && !listingUnitType) {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`noListingUnitType.message`),
-        title: tNotifications(`noListingUnitType.title`),
-      });
-      return;
-    }
-
-    if (listingCategory === E_ListingCategory.PLOT && !listingPlotType) {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`noListingPlotType.message`),
-        title: tNotifications(`noListingPlotType.title`),
+        message: tNotifications(`noListingContactMethod.message`),
+        title: tNotifications(`noListingContactMethod.title`),
       });
       return;
     }
@@ -630,15 +186,6 @@ export const ReusableListingsNewPage = ({
         color: "red",
         message: "",
         title: tNotifications(`noCheckedCheckboxCreateListing.title`),
-      });
-      return;
-    }
-
-    if (validCondition && !listingCondition) {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`noSelectedListingCondition.message`),
-        title: tNotifications(`noSelectedListingCondition.title`),
       });
       return;
     }
@@ -682,17 +229,16 @@ export const ReusableListingsNewPage = ({
     showAllErrorsForm({ tNotifications, validationErrors });
   };
 
-  const handleUpdateImages = useCallback(
-    (dataImages: T_SelectImagesOnChange) => {
-      setUpdatedImages({
-        removed: dataImages.removed,
-        uploaded: dataImages.uploaded,
-      });
-    },
-    [],
-  );
-
-  const sectionInformation = t("information");
+  // TODO: image upload temporarily disabled
+  // const handleUpdateImages = useCallback(
+  //   (dataImages: T_SelectImagesOnChange) => {
+  //     setUpdatedImages({
+  //       removed: dataImages.removed,
+  //       uploaded: dataImages.uploaded,
+  //     });
+  //   },
+  //   [],
+  // );
 
   return (
     <Form onSubmit={form.onSubmit(handleSubmit, handleSubmitErrors)}>
@@ -722,7 +268,7 @@ export const ReusableListingsNewPage = ({
             <Button type="submit">{t("buttonAdd")}</Button>
           </>
         }
-        information={sectionInformation}
+        information={t("information")}
         pageMeta={{
           route: isCompany
             ? E_Routes.companyListingsNew
@@ -734,6 +280,18 @@ export const ReusableListingsNewPage = ({
         withTextsToUi
       >
         <InputWrapper>
+          {/* TODO: image upload temporarily disabled
+          <Fieldset legend={t("fieldsetImages")}>
+            <SelectImages
+              limit={3}
+              maxSizeMB={5}
+              maxWidthOrHeight={1920}
+              name={formNames.fileImages5MB}
+              onChange={handleUpdateImages}
+              uploadImagesGroupId={uploadImagesGroupId}
+            />
+          </Fieldset>
+          */}
           <AutocompleteAddress
             form={form}
             label={t("fieldsetLocation")}
@@ -748,280 +306,59 @@ export const ReusableListingsNewPage = ({
               clearable
               maxLength={100}
             />
-            <Textarea
-              key={form.key(formNames.listingDescription)}
-              {...form.getInputProps(formNames.listingDescription)}
-              maxLength={5000}
+            <TextEditor
+              defaultValue=""
+              error={form.getInputProps(formNames.listingDescription).error}
               name={formNames.listingDescription}
-              required={false}
-            />
-            <InputCalendar
-              key={form.key(formNames.listingAvailableFrom)}
-              {...form.getInputProps(formNames.listingAvailableFrom)}
-              disabledWithOpacity={false}
-              minDate={new Date()}
-              name={formNames.listingAvailableFrom}
+              onChange={htmlValue =>
+                form.setFieldValue(formNames.listingDescription, htmlValue)
+              }
               required
             />
-            <InputCalendar
-              key={form.key(formNames.listingAvailableTo)}
-              {...form.getInputProps(formNames.listingAvailableTo)}
-              clearable
-              disabledWithOpacity={false}
-              minDate={
-                selectedListingAvailableFrom
-                  ? new Date(selectedListingAvailableFrom)
-                  : new Date()
-              }
-              name={formNames.listingAvailableTo}
-              required={false}
-              withoutDescription
-            />
-            <SelectImages
-              limit={6}
-              maxSizeMB={5}
-              maxWidthOrHeight={1920}
-              name={formNames.fileImages5MB}
-              onChange={handleUpdateImages}
-              uploadImagesGroupId={uploadImagesGroupId}
-            />
-          </Fieldset>
-          <Fieldset
-            className={globalClasses.fadePage}
-            legend={t("fieldsetInformationFilters")}
-          >
             <Box w="100%">
-              <Flex align="center" gap={24} w="100%" wrap="wrap">
-                <Box
-                  w={{
-                    base: "100%",
-                    xs: "calc(50% - 14px)",
-                  }}
-                >
-                  <SelectListingType form={form} required />
+              <Flex align="flex-start" gap={24} w="100%" wrap="wrap">
+                <Box w={{ base: "100%", xs: "calc(50% - 14px)" }}>
+                  <SelectListingCategory form={form} required />
                 </Box>
-                <Box
-                  w={{
-                    base: "100%",
-                    xs: "calc(50% - 14px)",
-                  }}
-                >
-                  <SelectListingCategory
-                    form={form}
-                    listingType={selectedListingType}
+                <Box w={{ base: "100%", xs: "calc(50% - 14px)" }}>
+                  <SelectWorkMode form={form} required />
+                </Box>
+              </Flex>
+            </Box>
+            <Box w="100%">
+              <Flex align="flex-start" gap={24} w="100%" wrap="wrap">
+                <Box w={{ base: "100%", xs: "calc(50% - 14px)" }}>
+                  <Input
+                    key={form.key(formNames.listingSalaryFrom)}
+                    name={formNames.listingSalaryFrom}
                     required
+                    type="number"
+                    {...form.getInputProps(formNames.listingSalaryFrom)}
+                    max={inputMaxLength.listingSalary}
+                  />
+                </Box>
+                <Box w={{ base: "100%", xs: "calc(50% - 14px)" }}>
+                  <Input
+                    key={form.key(formNames.listingSalaryTo)}
+                    name={formNames.listingSalaryTo}
+                    required
+                    type="number"
+                    {...form.getInputProps(formNames.listingSalaryTo)}
+                    max={inputMaxLength.listingSalary}
                   />
                 </Box>
               </Flex>
-              <Collapse fullWith opened={validContractTypeRent}>
-                {validContractTypeRent && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingContractType
-                      disabledWithOpacity={false}
-                      form={form}
-                      required
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validShortTermsRent}>
-                {validShortTermsRent && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <Input
-                      key={form.key(formNames.listingMinimumRentalDays)}
-                      name={formNames.listingMinimumRentalDays}
-                      required
-                      {...form.getInputProps(
-                        formNames.listingMinimumRentalDays,
-                      )}
-                      clearable
-                      max={1000}
-                      min={1}
-                      type="number"
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validCategoryGarage}>
-                {validCategoryGarage && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingParkingType
-                      form={form}
-                      required={
-                        selectedListingCategory === E_ListingCategory.PARKING
-                      }
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validCategoryContainer}>
-                {validCategoryContainer && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingContainerType
-                      form={form}
-                      required={
-                        selectedListingCategory === E_ListingCategory.CONTAINER
-                      }
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validCategoryPlot}>
-                {validCategoryPlot && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingPlotType
-                      form={form}
-                      listingType={selectedListingType ?? undefined}
-                      required={
-                        selectedListingCategory === E_ListingCategory.PLOT
-                      }
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validCategoryUnit}>
-                {validCategoryUnit && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingUnitType
-                      form={form}
-                      required={
-                        selectedListingCategory === E_ListingCategory.UNIT
-                      }
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse
-                fullWith
-                opened={conditions.length > 0 && validCondition}
-              >
-                {conditions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingCondition
-                      form={form}
-                      options={conditions}
-                      required={validCondition}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validArea}>
-                {validArea && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <Input
-                      key={form.key(formNames.listingArea)}
-                      max={inputMaxLength.listingArea}
-                      name={formNames.listingArea}
-                      required={false}
-                      type="number"
-                      {...form.getInputProps(formNames.listingArea)}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={!!levels}>
-                {levels && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingFloorLevel
-                      form={form}
-                      levels={levels}
-                      required
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={validAccess}>
-                {validAccess && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingAccess
-                      form={form}
-                      options={accessOptions}
-                      required
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={securityOptions.length > 0}>
-                {securityOptions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingSecurityOption
-                      form={form}
-                      options={securityOptions}
-                      required={false}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={utilityOptions.length > 0}>
-                {utilityOptions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingUtilityOption
-                      form={form}
-                      options={utilityOptions}
-                      required={false}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={comfortOptions.length > 0}>
-                {comfortOptions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingComfortOption
-                      form={form}
-                      options={comfortOptions}
-                      required={false}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={entryOptions.length > 0}>
-                {entryOptions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingEntryOption
-                      form={form}
-                      options={entryOptions}
-                      required={false}
-                    />
-                  </Box>
-                )}
-              </Collapse>
-              <Collapse fullWith opened={usageOptions.length > 0}>
-                {usageOptions.length > 0 && (
-                  <Box className={globalClasses.fadePage} pt={16} w="100%">
-                    <SelectListingUsageOption
-                      form={form}
-                      options={usageOptions}
-                      required={false}
-                    />
-                  </Box>
-                )}
-              </Collapse>
             </Box>
-          </Fieldset>
-          <Fieldset legend={t("fieldsetPrice")}>
-            <Input
-              key={form.key(formNames.listingPrice)}
-              label={generateListingPriceFromTypeAndContractType({
-                contractType: selectedListingContractType,
-                tCommon,
-                type: selectedListingType,
-              })}
-              name={formNames.listingPrice}
-              required
-              type="number"
-              {...form.getInputProps(formNames.listingPrice)}
-              max={inputMaxLength.listingPrice}
+            <InputCalendar
+              key={form.key(formNames.listingAvailableFrom)}
+              {...form.getInputProps(formNames.listingAvailableFrom)}
+              clearable
+              disabledWithOpacity={false}
+              minDate={new Date()}
+              name={formNames.listingAvailableFrom}
+              required={false}
+              withoutDescription
             />
-            <Box className={globalClasses.fadePage} w="100%">
-              <Checkbox
-                key={form.key(formNames.checkboxListingNegotiable)}
-                name={formNames.checkboxListingNegotiable}
-                required={false}
-                {...form.getInputProps(formNames.checkboxListingNegotiable, {
-                  type: "checkbox",
-                })}
-              />
-            </Box>
           </Fieldset>
           <Fieldset
             description={t("fieldsetPhoneDescription")}
@@ -1033,6 +370,39 @@ export const ReusableListingsNewPage = ({
               isCompanyPhone={isCompany}
               required={false}
             />
+          </Fieldset>
+          <Fieldset
+            description={t("fieldsetContactDescription")}
+            legend={t("fieldsetContact")}
+          >
+            <Flex
+              align="flex-start"
+              direction="column"
+              gap={8}
+              justify="flex-start"
+              w="100%"
+            >
+              {hasVerifiedPhone && (
+                <Checkbox
+                  key={form.key(formNames.listingShowPhone)}
+                  label={tCommon("inputs.listingShowPhone")}
+                  name={formNames.listingShowPhone}
+                  required={false}
+                  {...form.getInputProps(formNames.listingShowPhone, {
+                    type: "checkbox",
+                  })}
+                />
+              )}
+              <Checkbox
+                key={form.key(formNames.listingShowEmail)}
+                label={tCommon("inputs.listingShowEmail")}
+                name={formNames.listingShowEmail}
+                required={false}
+                {...form.getInputProps(formNames.listingShowEmail, {
+                  type: "checkbox",
+                })}
+              />
+            </Flex>
           </Fieldset>
           <div>
             <Checkbox

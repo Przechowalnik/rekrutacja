@@ -218,3 +218,18 @@ export function hidePhoneNumbers({
   const phoneRegex = /\b(?:\d[ ._-]?){8}\d\b/g;
   return text.replaceAll(phoneRegex, replaceText);
 }
+
+// Strips HTML markup from a rich-text string and returns clean plain text
+// (e.g. for short previews in cards). Decodes the most common entities.
+export function stripHtmlTags(html: string) {
+  return html
+    .replaceAll(/<[^>]*>/g, " ")
+    .replaceAll("&nbsp;", " ")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">")
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#39;", "'")
+    .replaceAll(/\s+/g, " ")
+    .trim();
+}

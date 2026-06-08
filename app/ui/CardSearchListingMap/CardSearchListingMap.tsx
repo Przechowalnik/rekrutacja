@@ -11,11 +11,10 @@ import { E_Routes } from "~/constants/routes";
 import { globalIds } from "~/constants/styles";
 import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
-import { E_ListingType } from "~/models/enums";
 import { T_ListingsMap } from "~/models/listingsMap";
 import { Image } from "~/ui/Image";
 import { generateLocationAddress } from "~/utilities/functions";
-import { generateListingPriceToShowFromTypeAndContractType } from "~/utilities/price";
+import { generateSalaryRange } from "~/utilities/price";
 
 import { IconSeo } from "../IconSeo";
 import { Text } from "../Text";
@@ -194,27 +193,10 @@ const CardSearchListingMapToMemoize = ({
           }}
         >
           <Text c="white" fw="bold" size="xs" span>
-            {`${t(`listingType.${listingMap.type}`)}${listingMap.contractType && listingMap.type === E_ListingType.RENT ? ` ${t(`listingContractTypeSingle.${listingMap.contractType}`)}` : ""}`}
+            {t(`workMode.${listingMap.workMode}`)}
           </Text>
         </Box>
-        {listingMap?.area && (
-          <Box
-            bg={platformColor}
-            px={10}
-            py={2}
-            style={{
-              borderBottomLeftRadius: 10,
-              borderTopLeftRadius: 10,
-            }}
-          >
-            <Text c="white" fw="bold" size="xs" span>
-              {t("cardSearchListing.area", {
-                count: Number(listingMap.area),
-              })}
-            </Text>
-          </Box>
-        )}
-        {listingMap?.price && (
+        {(listingMap?.salaryFrom != null || listingMap?.salaryTo != null) && (
           <Box
             bg={platformColor}
             px={10}
@@ -225,13 +207,10 @@ const CardSearchListingMapToMemoize = ({
             }}
           >
             <Text c="white" fw="bold" lineClamp={1} m={0} size="xs" span>
-              {generateListingPriceToShowFromTypeAndContractType({
-                contractType: listingMap.contractType,
-                negotiable: listingMap.negotiable,
-                negotiableAsterisk: true,
-                price: listingMap.price,
+              {generateSalaryRange({
+                salaryFrom: listingMap.salaryFrom,
+                salaryTo: listingMap.salaryTo,
                 tCommon: t,
-                type: listingMap.type,
               })}
             </Text>
           </Box>

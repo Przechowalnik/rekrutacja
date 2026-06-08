@@ -1,4 +1,4 @@
-import { faMobileScreen } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faMobileScreen } from "@fortawesome/free-solid-svg-icons";
 import { Box, Flex } from "@mantine/core";
 import dayjs from "dayjs";
 import { memo, useCallback, useState } from "react";
@@ -28,6 +28,11 @@ type T_AvatarListing = {
 const AvatarListingToMemoize = ({ listing }: T_AvatarListing) => {
   const [incrementCountContact, setIncrementCountContact] = useState(false);
   const [showPhone, setShowPhone] = useState(false);
+  const [showEmail, setShowEmail] = useState(false);
+
+  const contactEmail = listing?.company
+    ? (listing.company.workers?.[0]?.email ?? null)
+    : (listing?.user?.email ?? null);
   const fetcher = useFetcherWithActions({
     disabledLoader: true,
   });
@@ -53,6 +58,25 @@ const AvatarListingToMemoize = ({ listing }: T_AvatarListing) => {
     }
     setShowPhone(previousState => !previousState);
   }, [showPhone, userCookie, listing]);
+
+  const handleShowEmail = useCallback(() => {
+    if (!showEmail && !incrementCountContact) {
+      setIncrementCountContact(true);
+      if (!userCookie || userCookie?.userId !== listing?.user?.id) {
+        fetcher.submit(
+          {},
+          {
+            action: getLocalizedRoute({
+              extraPath: `/${listing.slug ?? listing.id}`,
+              route: E_Routes.listings,
+            }),
+            method: "patch",
+          },
+        );
+      }
+    }
+    setShowEmail(previousState => !previousState);
+  }, [showEmail, incrementCountContact, userCookie, listing]);
 
   const handleGoToSms = useCallback(() => {
     if (!userCookie || userCookie?.userId !== listing?.user?.id) {
@@ -127,68 +151,106 @@ const AvatarListingToMemoize = ({ listing }: T_AvatarListing) => {
         }}
         w="100%"
       >
-        <Button
-          color="black"
-          leftSection={<IconSeo icon={faMobileScreen} size="lg" />}
-          maw={{
-            base: "auto",
-            xs: 240,
-          }}
-          onClick={handleShowPhone}
-          size="sm"
-          variant="filled"
-          w="100%"
-        >
-          {showPhone
-            ? t("avatarListing.buttonHidePhone")
-            : t("avatarListing.buttonShowPhone")}
-        </Button>
-        <Collapse opened={showPhone}>
-          <Link
-            c={`light-dark(${colorsMantine.black}, ${colorsMantine.white})`}
-            customHref={`tel:${generatePhoneToShow({
-              phone: listing?.company
-                ? listing.company.phone
-                : listing?.user?.phone,
-              safeReturn: false,
-              withCountryCode: false,
-            })}`}
-            onClick={handleGoToSms}
-          >
-            <Text center fw="bold" hiddenFrom="xs" pt={8} size="md">
-              {generatePhoneToShow({
-                phone: listing?.company
-                  ? listing.company.phone
-                  : listing?.user?.phone,
-              })}
-            </Text>
-            <Text fw="bold" pt={8} size="md" visibleFrom="xs">
-              {generatePhoneToShow({
-                phone: listing?.company
-                  ? listing.company.phone
-                  : listing?.user?.phone,
-              })}
-            </Text>
-          </Link>
-        </Collapse>
-        <Box hiddenFrom="xs" pt={12}>
-          <Link
-            customHref={`sms:+${listing?.user?.phone?.countryCode}${listing?.user?.phone?.number}`}
-          >
+        {listing.showPhone && (
+          <>
             <Button
+              color="black"
               leftSection={<IconSeo icon={faMobileScreen} size="lg" />}
               maw={{
                 base: "auto",
                 xs: 240,
               }}
+              onClick={handleShowPhone}
               size="sm"
-              variant="light"
+              variant="filled"
               w="100%"
             >
-              {t("avatarListing.buttonSendSms")}
+              {showPhone
+                ? t("avatarListing.buttonHidePhone")
+                : t("avatarListing.buttonShowPhone")}
             </Button>
-          </Link>
-        </Box>
+            <Collapse opened={showPhone}>
+              <Link
+                c={`light-dark(${colorsMantine.black}, ${colorsMantine.white})`}
+                customHref={`tel:${generatePhoneToShow({
+                  phone: listing?.company
+                    ? listing.company.phone
+                    : listing?.user?.phone,
+                  safeReturn: false,
+                  withCountryCode: false,
+                })}`}
+                onClick={handleGoToSms}
+              >
+                <Text center fw="bold" hiddenFrom="xs" pt={8} size="md">
+                  {generatePhoneToShow({
+                    phone: listing?.company
+                      ? listing.company.phone
+                      : listing?.user?.phone,
+                  })}
+                </Text>
+                <Text fw="bold" pt={8} size="md" visibleFrom="xs">
+                  {generatePhoneToShow({
+                    phone: listing?.company
+                      ? listing.company.phone
+                      : listing?.user?.phone,
+                  })}
+                </Text>
+              </Link>
+            </Collapse>
+            <Box hiddenFrom="xs" pt={12}>
+              <Link
+                customHref={`sms:+${listing?.user?.phone?.countryCode}${listing?.user?.phone?.number}`}
+              >
+                <Button
+                  leftSection={<IconSeo icon={faMobileScreen} size="lg" />}
+                  maw={{
+                    base: "auto",
+                    xs: 240,
+                  }}
+                  size="sm"
+                  variant="light"
+                  w="100%"
+                >
+                  {t("avatarListing.buttonSendSms")}
+                </Button>
+              </Link>
+            </Box>
+          </>
+        )}
+        {listing.showEmail && contactEmail && (
+          <Box pt={listing.showPhone ? 12 : 0}>
+            <Button
+              color="black"
+              leftSection={<IconSeo icon={faEnvelope} size="lg" />}
+              maw={{
+                base: "auto",
+                xs: 240,
+              }}
+              onClick={handleShowEmail}
+              size="sm"
+              variant="filled"
+              w="100%"
+            >
+              {showEmail
+                ? t("avatarListing.buttonHideEmail")
+                : t("avatarListing.buttonShowEmail")}
+            </Button>
+            <Collapse opened={showEmail}>
+              <Link
+                c={`light-dark(${colorsMantine.black}, ${colorsMantine.white})`}
+                customHref={`mailto:${contactEmail}`}
+                onClick={handleGoToSms}
+              >
+                <Text center fw="bold" hiddenFrom="xs" pt={8} size="md">
+                  {contactEmail}
+                </Text>
+                <Text fw="bold" pt={8} size="md" visibleFrom="xs">
+                  {contactEmail}
+                </Text>
+              </Link>
+            </Collapse>
+          </Box>
+        )}
       </Box>
     </Flex>
   );

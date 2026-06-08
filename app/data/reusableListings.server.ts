@@ -5,7 +5,6 @@ import dayjs from "dayjs";
 import { E_Routes } from "~/constants/routes";
 import { database } from "~/data/database.server";
 import { formNames } from "~/lib/zodFormValidator";
-import { allListingCategoryRent, allListingCategorySale } from "~/models/enums";
 
 import {
   checkListingCityWithDistrictAndNearestCity,
@@ -16,12 +15,9 @@ import { getGeolocation } from "./geolocation.server";
 import { manageFilesInStorage } from "./images.server";
 import {
   E_CompanyWorkerPermissionsServer,
-  E_ListingCategoryServer,
-  E_ListingContractTypeServer,
   E_ListingInteractionTypeServer,
   E_ListingPaymentStatusServer,
   E_ListingStatusServer,
-  E_ListingTypeServer,
   E_RolesServer,
   T_ListingStatusServer,
 } from "./models.server";
@@ -63,11 +59,6 @@ export const createListing = async ({
 
     const resultValidator = await checkZodValidator({
       arrayData: [
-        formNames.listingSecurityOption,
-        formNames.listingComfortOption,
-        formNames.listingEntryOption,
-        formNames.listingUsageOption,
-        formNames.listingUtilityOption,
         formNames.listingImagesNew,
         formNames.listingImagesToRemove,
       ],
@@ -75,50 +66,25 @@ export const createListing = async ({
       validator: {
         [formNames.checkboxAcceptRegulations]: zodValidator.checkboxChecked,
         [formNames.checkboxCreateListing]: zodValidator.checkboxChecked,
-        [formNames.checkboxListingNegotiable]: zodValidator.checkbox.optional(),
         [formNames.country]: zodValidator.country,
         [formNames.flatNumber]: zodValidator.flatNumber.optional(),
-        [formNames.listingAccess]: zodValidator.listingAccess.optional(),
-        [formNames.listingArea]: zodValidator.listingArea.optional(),
-        [formNames.listingAvailableFrom]: zodValidator.date,
-        [formNames.listingAvailableTo]: zodValidator.date.optional(),
+        [formNames.listingAvailableFrom]: zodValidator.date.optional(),
         [formNames.listingCategory]: zodValidator.listingCategory,
         [formNames.listingCity]: zodValidator.listingCity,
-        [formNames.listingComfortOption]:
-          zodValidator.listingComfortOption.optional(),
-        [formNames.listingCondition]: zodValidator.listingCondition.optional(),
-        [formNames.listingContainerType]:
-          zodValidator.listingContainerType.optional(),
-        [formNames.listingContractType]:
-          zodValidator.listingContractType.optional(),
-        [formNames.listingDescription]:
-          zodValidator.listingDescription.optional(),
+        [formNames.listingDescription]: zodValidator.listingDescription,
         [formNames.listingDistrict]: zodValidator.listingDistrict.optional(),
-        [formNames.listingEntryOption]:
-          zodValidator.listingEntryOption.optional(),
-        [formNames.listingFloorLevel]:
-          zodValidator.listingFloorLevel.optional(),
         [formNames.listingImagesNew]: zodValidator.listingImagesToRemove
           .array()
           .optional(),
         [formNames.listingImagesToRemove]: zodValidator.listingImagesToRemove
           .array()
           .optional(),
-        [formNames.listingMinimumRentalDays]:
-          zodValidator.listingMinimumRentalDays.optional(),
-        [formNames.listingParkingType]:
-          zodValidator.listingParkingType.optional(),
-        [formNames.listingPlotType]: zodValidator.listingPlotType.optional(),
-        [formNames.listingPrice]: zodValidator.listingPrice,
-        [formNames.listingSecurityOption]:
-          zodValidator.listingSecurityOption.optional(),
+        [formNames.listingSalaryFrom]: zodValidator.listingSalaryFrom,
+        [formNames.listingSalaryTo]: zodValidator.listingSalaryTo,
+        [formNames.listingShowEmail]: zodValidator.checkbox,
+        [formNames.listingShowPhone]: zodValidator.checkbox,
         [formNames.listingTitle]: zodValidator.listingTitle,
-        [formNames.listingType]: zodValidator.listingType,
-        [formNames.listingUnitType]: zodValidator.listingUnitType.optional(),
-        [formNames.listingUsageOption]:
-          zodValidator.listingUsageOption.optional(),
-        [formNames.listingUtilityOption]:
-          zodValidator.listingUtilityOption.optional(),
+        [formNames.listingWorkMode]: zodValidator.listingWorkMode,
         [formNames.postalCode]: zodValidator.postalCode,
         [formNames.streetName]: zodValidator.streetName,
         [formNames.streetNumber]: zodValidator.streetNumber,
@@ -172,7 +138,7 @@ export const createListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: isCompany,
+      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -191,55 +157,26 @@ export const createListing = async ({
     const {
       checkboxAcceptRegulations,
       checkboxCreateListing,
-      checkboxListingNegotiable = false,
       country,
       flatNumber,
-      listingAccess,
-      listingArea,
-      listingAvailableFrom = dayjs().startOf("day").toDate(),
-      listingAvailableTo,
+      listingAvailableFrom,
       listingCategory,
       listingCity,
-      listingComfortOption = [],
-      listingCondition,
-      listingContainerType,
-      listingContractType,
       listingDescription,
       listingDistrict,
-      listingEntryOption = [],
-      listingFloorLevel,
       listingImagesNew,
       listingImagesToRemove,
-      listingMinimumRentalDays,
-      listingParkingType,
-      listingPlotType,
-      listingPrice,
-      listingSecurityOption = [],
+      listingSalaryFrom,
+      listingSalaryTo,
+      listingShowEmail,
+      listingShowPhone,
       listingTitle,
-      listingType,
-      listingUnitType,
-      listingUsageOption = [],
-      listingUtilityOption = [],
+      listingWorkMode,
       postalCode,
       streetName,
       streetNumber,
       uploadImagesGroupId,
     } = resultValidator.data;
-
-    const validCondition =
-      listingCategory === E_ListingCategoryServer.ROOM ||
-      listingCategory === E_ListingCategoryServer.ATTIC ||
-      listingCategory === E_ListingCategoryServer.BASEMENT ||
-      listingCategory === E_ListingCategoryServer.WAREHOUSE ||
-      listingCategory === E_ListingCategoryServer.UNIT;
-
-    if (validCondition && !listingCondition) {
-      return await responseOnFailure({
-        message: "noSelectedListingCondition",
-        request,
-        status: 422,
-      });
-    }
 
     if (!checkboxAcceptRegulations || !checkboxCreateListing) {
       return await responseOnFailure({
@@ -249,55 +186,17 @@ export const createListing = async ({
       });
     }
 
-    let isListingCategoryInSelectedType = false;
-    if (listingCategory) {
-      if (listingType === E_ListingTypeServer.RENT) {
-        isListingCategoryInSelectedType =
-          allListingCategoryRent.includes(listingCategory);
-      } else if (listingType === E_ListingTypeServer.SALE) {
-        isListingCategoryInSelectedType =
-          allListingCategorySale.includes(listingCategory);
-      }
-    }
-
-    if (listingCategory === E_ListingCategoryServer.PLOT && !listingPlotType) {
+    if (listingSalaryFrom > listingSalaryTo) {
       return await responseOnFailure({
-        message: "noListingPlotType",
+        message: "badListingSalary",
         request,
         status: 422,
       });
     }
 
-    if (listingCategory === E_ListingCategoryServer.UNIT && !listingUnitType) {
+    if (!listingShowPhone && !listingShowEmail) {
       return await responseOnFailure({
-        message: "noListingUnitType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (!isListingCategoryInSelectedType) {
-      return await responseOnFailure({
-        message: "noListingCategoryInListingType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (listingType === E_ListingTypeServer.RENT && !listingContractType) {
-      return await responseOnFailure({
-        message: "noListingContractType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (
-      listingContractType === E_ListingContractTypeServer.SHORT_TERM &&
-      !listingMinimumRentalDays
-    ) {
-      return await responseOnFailure({
-        message: "noListingMinimumRentalDays",
+        message: "noListingContactMethod",
         request,
         status: 422,
       });
@@ -405,26 +304,11 @@ export const createListing = async ({
 
     const createdListing = await database.listing.create({
       data: {
-        access: listingAccess,
-        area: listingArea,
-        availableFrom: listingAvailableFrom,
-        availableTo: listingAvailableTo ?? null,
+        availableFrom: listingAvailableFrom ?? null,
         category: listingCategory,
-        comfortOptions: listingComfortOption,
         companyId: isCompany ? existingUser.company.id : null,
-        condition: listingCondition ?? null,
-        containerType:
-          listingCategory === E_ListingCategoryServer.CONTAINER
-            ? listingContainerType
-            : null,
-        contractType:
-          listingType === E_ListingTypeServer.RENT
-            ? (listingContractType ?? null)
-            : null,
         description: listingDescription,
-        entryOptions: listingEntryOption,
         expiresAt,
-        floorLevel: listingFloorLevel,
         images: {
           create: imageObjects,
         },
@@ -447,16 +331,6 @@ export const createListing = async ({
             streetNumber,
           },
         },
-        minimumRentalDays:
-          (listingType === E_ListingTypeServer.RENT && listingContractType) ===
-          E_ListingContractTypeServer.SHORT_TERM
-            ? (listingMinimumRentalDays ?? null)
-            : null,
-        negotiable: checkboxListingNegotiable,
-        parkingType:
-          listingCategory === E_ListingCategoryServer.PARKING
-            ? listingParkingType
-            : null,
         payments: {
           create: {
             expiresAtAfterAdd: expiresAt,
@@ -465,23 +339,15 @@ export const createListing = async ({
             status: E_ListingPaymentStatusServer.FREE,
           },
         },
-        plotType:
-          listingCategory === E_ListingCategoryServer.PLOT && listingPlotType
-            ? listingPlotType
-            : null,
-        price: BigInt(Math.round(listingPrice * 100)),
-        securityOptions: listingSecurityOption,
+        salaryFrom: listingSalaryFrom,
+        salaryTo: listingSalaryTo,
+        showEmail: listingShowEmail,
+        showPhone: listingShowPhone,
         slug: `temp-${randomUUID()}`,
         status,
         title: listingTitle,
-        type: listingType,
-        unitType:
-          listingCategory === E_ListingCategoryServer.UNIT && listingUnitType
-            ? listingUnitType
-            : null,
-        usageOptions: listingUsageOption,
         userId: isCompany ? undefined : existingUser.id,
-        utilityOptions: listingUtilityOption,
+        workMode: listingWorkMode,
       },
       select: { id: true, listingIndex: true },
     });
@@ -555,7 +421,7 @@ export const getReusableListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: isCompany,
+      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -667,58 +533,28 @@ export const updateListing = async ({
       arrayData: [
         formNames.listingImagesNew,
         formNames.listingImagesToRemove,
-        formNames.listingSecurityOption,
-        formNames.listingComfortOption,
-        formNames.listingEntryOption,
-        formNames.listingUsageOption,
-        formNames.listingUtilityOption,
       ],
       request,
       validator: {
-        [formNames.checkboxListingNegotiable]: zodValidator.checkbox.optional(),
         [formNames.country]: zodValidator.country.optional(),
         [formNames.flatNumber]: zodValidator.flatNumber.optional(),
-        [formNames.listingAccess]: zodValidator.listingAccess.optional(),
-        [formNames.listingArea]: zodValidator.listingArea.optional(),
-        [formNames.listingAvailableFrom]: zodValidator.date,
-        [formNames.listingAvailableTo]: zodValidator.date.optional(),
+        [formNames.listingAvailableFrom]: zodValidator.date.optional(),
         [formNames.listingCategory]: zodValidator.listingCategory,
         [formNames.listingCity]: zodValidator.listingCity.optional(),
-        [formNames.listingComfortOption]:
-          zodValidator.listingComfortOption.optional(),
-        [formNames.listingCondition]: zodValidator.listingCondition.optional(),
-        [formNames.listingContainerType]:
-          zodValidator.listingContainerType.optional(),
-        [formNames.listingContractType]:
-          zodValidator.listingContractType.optional(),
-        [formNames.listingDescription]:
-          zodValidator.listingDescription.optional(),
+        [formNames.listingDescription]: zodValidator.listingDescription,
         [formNames.listingDistrict]: zodValidator.listingDistrict.optional(),
-        [formNames.listingEntryOption]:
-          zodValidator.listingEntryOption.optional(),
-        [formNames.listingFloorLevel]:
-          zodValidator.listingFloorLevel.optional(),
         [formNames.listingImagesNew]: zodValidator.listingImagesToRemove
           .array()
           .optional(),
         [formNames.listingImagesToRemove]: zodValidator.listingImagesToRemove
           .array()
           .optional(),
-        [formNames.listingMinimumRentalDays]:
-          zodValidator.listingMinimumRentalDays.optional(),
-        [formNames.listingParkingType]:
-          zodValidator.listingParkingType.optional(),
-        [formNames.listingPlotType]: zodValidator.listingPlotType.optional(),
-        [formNames.listingPrice]: zodValidator.listingPrice,
-        [formNames.listingSecurityOption]:
-          zodValidator.listingSecurityOption.optional(),
+        [formNames.listingSalaryFrom]: zodValidator.listingSalaryFrom,
+        [formNames.listingSalaryTo]: zodValidator.listingSalaryTo,
+        [formNames.listingShowEmail]: zodValidator.checkbox,
+        [formNames.listingShowPhone]: zodValidator.checkbox,
         [formNames.listingTitle]: zodValidator.listingTitle,
-        [formNames.listingType]: zodValidator.listingType,
-        [formNames.listingUnitType]: zodValidator.listingUnitType.optional(),
-        [formNames.listingUsageOption]:
-          zodValidator.listingUsageOption.optional(),
-        [formNames.listingUtilityOption]:
-          zodValidator.listingUtilityOption.optional(),
+        [formNames.listingWorkMode]: zodValidator.listingWorkMode,
         [formNames.postalCode]: zodValidator.postalCode.optional(),
         [formNames.streetName]: zodValidator.streetName.optional(),
         [formNames.streetNumber]: zodValidator.streetNumber.optional(),
@@ -769,7 +605,7 @@ export const updateListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: isCompany,
+      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -834,104 +670,37 @@ export const updateListing = async ({
     }
 
     const {
-      checkboxListingNegotiable,
       country,
       flatNumber,
-      listingAccess,
-      listingArea,
       listingAvailableFrom,
-      listingAvailableTo,
       listingCategory,
       listingCity,
-      listingComfortOption,
-      listingCondition,
-      listingContainerType,
-      listingContractType,
       listingDescription,
       listingDistrict,
-      listingEntryOption,
-      listingFloorLevel,
       listingImagesNew,
       listingImagesToRemove,
-      listingMinimumRentalDays,
-      listingParkingType,
-      listingPlotType,
-      listingPrice,
-      listingSecurityOption,
+      listingSalaryFrom,
+      listingSalaryTo,
+      listingShowEmail,
+      listingShowPhone,
       listingTitle,
-      listingType,
-      listingUnitType,
-      listingUsageOption,
-      listingUtilityOption,
+      listingWorkMode,
       postalCode,
       streetName,
       streetNumber,
     } = resultValidator.data;
 
-    const validCondition =
-      listingCategory === E_ListingCategoryServer.ROOM ||
-      listingCategory === E_ListingCategoryServer.ATTIC ||
-      listingCategory === E_ListingCategoryServer.BASEMENT ||
-      listingCategory === E_ListingCategoryServer.WAREHOUSE ||
-      listingCategory === E_ListingCategoryServer.UNIT;
-
-    if (validCondition && !listingCondition) {
+    if (listingSalaryFrom > listingSalaryTo) {
       return await responseOnFailure({
-        message: "noSelectedListingCondition",
+        message: "badListingSalary",
         request,
         status: 422,
       });
     }
 
-    let isListingCategoryInSelectedType = false;
-    if (listingCategory) {
-      if (listingType === E_ListingTypeServer.RENT) {
-        isListingCategoryInSelectedType =
-          allListingCategoryRent.includes(listingCategory);
-      } else if (listingType === E_ListingTypeServer.SALE) {
-        isListingCategoryInSelectedType =
-          allListingCategorySale.includes(listingCategory);
-      }
-    }
-
-    if (!isListingCategoryInSelectedType) {
+    if (!listingShowPhone && !listingShowEmail) {
       return await responseOnFailure({
-        message: "noListingCategoryInListingType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (listingCategory === E_ListingCategoryServer.PLOT && !listingPlotType) {
-      return await responseOnFailure({
-        message: "noListingPlotType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (listingCategory === E_ListingCategoryServer.UNIT && !listingUnitType) {
-      return await responseOnFailure({
-        message: "noListingUnitType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (listingType === E_ListingTypeServer.RENT && !listingContractType) {
-      return await responseOnFailure({
-        message: "noListingContractType",
-        request,
-        status: 422,
-      });
-    }
-
-    if (
-      listingContractType === E_ListingContractTypeServer.SHORT_TERM &&
-      !listingMinimumRentalDays
-    ) {
-      return await responseOnFailure({
-        message: "noListingMinimumRentalDays",
+        message: "noListingContactMethod",
         request,
         status: 422,
       });
@@ -1053,24 +822,9 @@ export const updateListing = async ({
 
     await database.listing.update({
       data: {
-        access: listingAccess,
-        area: listingArea,
-        availableFrom: listingAvailableFrom,
-        availableTo: listingAvailableTo ?? null,
+        availableFrom: listingAvailableFrom ?? null,
         category: listingCategory,
-        comfortOptions: listingComfortOption,
-        condition: listingCondition ?? null,
-        containerType:
-          listingCategory === E_ListingCategoryServer.CONTAINER
-            ? listingContainerType
-            : null,
-        contractType:
-          listingType === E_ListingTypeServer.RENT
-            ? (listingContractType ?? null)
-            : null,
         description: listingDescription,
-        entryOptions: listingEntryOption,
-        floorLevel: listingFloorLevel,
         images:
           newImagesToCreate.length > 0
             ? {
@@ -1101,31 +855,13 @@ export const updateListing = async ({
                 },
               }
             : undefined,
-        minimumRentalDays:
-          listingType === E_ListingTypeServer.RENT &&
-          listingContractType === E_ListingContractTypeServer.SHORT_TERM
-            ? (listingMinimumRentalDays ?? null)
-            : null,
-        negotiable: checkboxListingNegotiable,
-        parkingType:
-          listingCategory === E_ListingCategoryServer.PARKING
-            ? listingParkingType
-            : null,
-        plotType:
-          listingCategory === E_ListingCategoryServer.PLOT && listingPlotType
-            ? listingPlotType
-            : null,
-        price: BigInt(Math.round(listingPrice * 100)),
-        securityOptions: listingSecurityOption,
+        salaryFrom: listingSalaryFrom,
+        salaryTo: listingSalaryTo,
+        showEmail: listingShowEmail,
+        showPhone: listingShowPhone,
         slug: `${convertToCorrectSlug(listingTitle)}-${foundListing.listingIndex}`,
         title: listingTitle,
-        type: listingType,
-        unitType:
-          listingCategory === E_ListingCategoryServer.UNIT && listingUnitType
-            ? listingUnitType
-            : null,
-        usageOptions: listingUsageOption,
-        utilityOptions: listingUtilityOption,
+        workMode: listingWorkMode,
       },
       where: { id: foundListing.id },
     });
@@ -1197,7 +933,7 @@ export const extensionFreeListingListing = async ({
             },
           },
           request,
-          respectCompanyPhoneVerification: isCompany,
+          respectCompanyPhoneVerification: false,
           userSessionVersion,
         })
       : await getAndCheckUser({
@@ -1383,7 +1119,7 @@ export const deleteListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: isCompany,
+      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 

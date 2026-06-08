@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { namespaces } from "~/constants/namespaces";
 import { formNames } from "~/lib/zodFormValidator";
 import {
-  allListingCategoryRent,
+  allListingCategory,
   E_ListingCategory,
   T_ListingCategory,
 } from "~/models/enums";
@@ -35,7 +35,7 @@ const SelectListingCategories = ({
 }: T_SelectListingCategories) => {
   const { t } = useTranslation(namespaces.common);
 
-  const mapListingCategories = [...allListingCategoryRent]
+  const mapListingCategories = [...allListingCategory]
     .sort((a, b) =>
       t(`listingCategory.${a}`).localeCompare(t(`listingCategory.${b}`), "pl", {
         sensitivity: "base",

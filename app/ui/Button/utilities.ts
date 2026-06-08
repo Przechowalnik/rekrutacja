@@ -37,7 +37,7 @@ export const generateButtonGradient = ({
     }
 
     case "violet": {
-      return { deg: 24, from: platformColor, to: "grape" };
+      return { deg: 24, from: platformColor, to: "cyan" };
     }
 
     case "cyan": {

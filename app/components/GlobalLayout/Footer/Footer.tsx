@@ -1,5 +1,4 @@
 import { Box, Button, Flex } from "@mantine/core";
-import dayjs from "dayjs";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router";
@@ -12,7 +11,6 @@ import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useUserCookie } from "~/hooks/useUserCookie";
 import { Link } from "~/ui/Link";
-import { Logo } from "~/ui/Logo";
 import { Text } from "~/ui/Text";
 
 import { generateFooter } from "./utilities";
@@ -146,38 +144,6 @@ const Footer = () => {
         wrap="wrap"
       >
         {mapGeneratedFooter}
-        <Flex
-          align="center"
-          direction={{
-            base: "column",
-            sm: "row",
-          }}
-          gap={{
-            base: 8,
-            sm: 24,
-          }}
-          justify="flex-start"
-          pt={{
-            base: 0,
-            xs: 48,
-          }}
-          w="100%"
-        >
-          <Link
-            forceCurrentLink
-            to={getLocalizedRoute({
-              route: E_Routes.home,
-            })}
-          >
-            <Logo light />
-          </Link>
-          <Text c="white" center size="sm">
-            {t("footer.allRightsReserved", {
-              companyName: t("company.name"),
-              date: dayjs().get("year"),
-            })}
-          </Text>
-        </Flex>
       </Flex>
     </Flex>
   );

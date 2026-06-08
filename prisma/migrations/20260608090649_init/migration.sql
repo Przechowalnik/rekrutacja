@@ -5,43 +5,7 @@ CREATE TYPE "ListingInteractionType" AS ENUM ('CONTACT', 'VIEW');
 CREATE TYPE "ReportType" AS ENUM ('ILLEGAL_CONTENT', 'SCAM_FRAUD', 'MISLEADING_INFO', 'SPAM', 'OFFENSIVE_CONTENT', 'WRONG_CATEGORY', 'OTHER');
 
 -- CreateEnum
-CREATE TYPE "ListingAccess" AS ENUM ('ACCESS_24H', 'LIMITED_HOURS');
-
--- CreateEnum
-CREATE TYPE "ListingSecurityOption" AS ENUM ('MONITORING', 'SECURITY', 'ELECTRONIC_LOCK', 'MANUAL_GATE', 'AUTOMATIC_GATE', 'PADLOCK', 'ALARM', 'DOOR_LOCK', 'BARRIER', 'REMOTE_CONTROL');
-
--- CreateEnum
-CREATE TYPE "ListingCondition" AS ENUM ('NEEDS_RENOVATION', 'PARTIALLY_FINISHED', 'FINISHED', 'NEW', 'RAW');
-
--- CreateEnum
-CREATE TYPE "ListingUtilityOption" AS ENUM ('ELECTRICITY', 'SEWAGE', 'WATER');
-
--- CreateEnum
-CREATE TYPE "ListingComfortOption" AS ENUM ('HEATED', 'LIGHTING', 'PARKING', 'VENTILATION');
-
--- CreateEnum
-CREATE TYPE "ListingEntryOption" AS ENUM ('ELEVATOR', 'STAIRCASE', 'STREET_ENTRANCE');
-
--- CreateEnum
-CREATE TYPE "ListingUsageOptions" AS ENUM ('CAR_ACCESS', 'TIR_ACCESS');
-
--- CreateEnum
-CREATE TYPE "ListingPlotType" AS ENUM ('FOREST', 'SERVICE', 'AGRICULTURAL', 'BUILDING', 'INVESTMENT', 'RECREATIONAL');
-
--- CreateEnum
-CREATE TYPE "ListingUnitType" AS ENUM ('WAREHOUSE', 'RETAIL', 'SERVICE', 'PRODUCTION', 'OFFICE', 'CONFERENCE_ROOM');
-
--- CreateEnum
-CREATE TYPE "ListingContainerType" AS ENUM ('MARINE', 'WAREHOUSE', 'OFFICE_SOCIAL', 'SANITARY', 'REFRIGERATED', 'MODULAR_RESIDENTIAL');
-
--- CreateEnum
-CREATE TYPE "ListingParkingType" AS ENUM ('DETACHED', 'UNDERGROUND', 'MULTILEVEL_LIFT', 'GROUND_PLACE');
-
--- CreateEnum
-CREATE TYPE "ListingType" AS ENUM ('SALE', 'RENT');
-
--- CreateEnum
-CREATE TYPE "ListingContractType" AS ENUM ('SHORT_TERM', 'LONG_TERM');
+CREATE TYPE "WorkMode" AS ENUM ('ONSITE', 'REMOTE', 'HYBRID');
 
 -- CreateEnum
 CREATE TYPE "ListingPaymentStatus" AS ENUM ('PAID', 'REJECTED', 'EXPIRED', 'UNPAID', 'FREE', 'PENDING');
@@ -50,10 +14,10 @@ CREATE TYPE "ListingPaymentStatus" AS ENUM ('PAID', 'REJECTED', 'EXPIRED', 'UNPA
 CREATE TYPE "ListingStatus" AS ENUM ('ACTIVE', 'INACTIVE', 'ARCHIVED', 'REJECTED', 'EXPIRED', 'DELETED', 'UNPAID');
 
 -- CreateEnum
-CREATE TYPE "ListingDeleteReason" AS ENUM ('SOLD', 'RENTED', 'NO_LONGER_AVAILABLE', 'CHANGED_MIND', 'DUPLICATE', 'OTHER');
+CREATE TYPE "ListingDeleteReason" AS ENUM ('POSITION_FILLED', 'NO_LONGER_AVAILABLE', 'CHANGED_MIND', 'DUPLICATE', 'OTHER');
 
 -- CreateEnum
-CREATE TYPE "ListingCategory" AS ENUM ('PARKING', 'STORAGE_UNIT', 'ATTIC', 'BASEMENT', 'WAREHOUSE', 'ROOM', 'PLOT', 'UNIT', 'CONTAINER', 'BANQUET_HALL');
+CREATE TYPE "ListingCategory" AS ENUM ('IT', 'SALES', 'MARKETING', 'FINANCE', 'HR', 'ADMINISTRATION', 'CUSTOMER_SERVICE', 'LOGISTICS', 'PRODUCTION', 'CONSTRUCTION', 'GASTRONOMY', 'HEALTHCARE', 'EDUCATION', 'ENGINEERING', 'LAW', 'OTHER');
 
 -- CreateEnum
 CREATE TYPE "Role" AS ENUM ('B2B_WORKER', 'B2B_OWNER', 'USER', 'ADMIN', 'ADMIN_SUPER');
@@ -306,22 +270,6 @@ CREATE TABLE "Bug" (
 );
 
 -- CreateTable
-CREATE TABLE "BlogPost" (
-    "id" TEXT NOT NULL,
-    "createdByUserId" TEXT,
-    "slug" TEXT NOT NULL,
-    "title" TEXT NOT NULL,
-    "titleSeo" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
-    "descriptionSeo" TEXT NOT NULL,
-    "content" TEXT NOT NULL,
-    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updatedAt" TIMESTAMP(3) NOT NULL,
-
-    CONSTRAINT "BlogPost_pkey" PRIMARY KEY ("id")
-);
-
--- CreateTable
 CREATE TABLE "ListingLocation" (
     "id" TEXT NOT NULL,
     "listingId" TEXT NOT NULL,
@@ -385,34 +333,18 @@ CREATE TABLE "Listing" (
     "slug" TEXT NOT NULL,
     "userId" TEXT,
     "companyId" TEXT,
-    "contractType" "ListingContractType",
-    "type" "ListingType" NOT NULL,
     "status" "ListingStatus" NOT NULL,
     "deleteReason" "ListingDeleteReason",
     "category" "ListingCategory" NOT NULL,
+    "workMode" "WorkMode" NOT NULL,
     "title" TEXT NOT NULL,
     "description" TEXT,
-    "price" BIGINT NOT NULL,
-    "area" DOUBLE PRECISION,
-    "negotiable" BOOLEAN NOT NULL,
-    "floorLevel" INTEGER,
-    "parkingType" "ListingParkingType",
-    "minimumRentalDays" INTEGER,
-    "access" "ListingAccess",
-    "securityOptions" "ListingSecurityOption"[],
-    "comfortOptions" "ListingComfortOption"[],
-    "entryOptions" "ListingEntryOption"[],
-    "usageOptions" "ListingUsageOptions"[],
+    "salaryFrom" INTEGER,
+    "salaryTo" INTEGER,
     "expiresAt" TIMESTAMP(3),
-    "availableFrom" TIMESTAMP(3) NOT NULL,
-    "availableTo" TIMESTAMP(3),
+    "availableFrom" TIMESTAMP(3),
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
-    "utilityOptions" "ListingUtilityOption"[],
-    "condition" "ListingCondition",
-    "plotType" "ListingPlotType",
-    "unitType" "ListingUnitType",
-    "containerType" "ListingContainerType",
 
     CONSTRAINT "Listing_pkey" PRIMARY KEY ("id")
 );
@@ -569,21 +501,6 @@ CREATE INDEX "Bug_userId_idx" ON "Bug"("userId");
 CREATE INDEX "Bug_companyId_idx" ON "Bug"("companyId");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "BlogPost_slug_key" ON "BlogPost"("slug");
-
--- CreateIndex
-CREATE UNIQUE INDEX "BlogPost_title_key" ON "BlogPost"("title");
-
--- CreateIndex
-CREATE UNIQUE INDEX "BlogPost_titleSeo_key" ON "BlogPost"("titleSeo");
-
--- CreateIndex
-CREATE INDEX "BlogPost_title_idx" ON "BlogPost"("title");
-
--- CreateIndex
-CREATE INDEX "BlogPost_titleSeo_idx" ON "BlogPost"("titleSeo");
-
--- CreateIndex
 CREATE UNIQUE INDEX "ListingLocation_listingId_key" ON "ListingLocation"("listingId");
 
 -- CreateIndex
@@ -644,22 +561,13 @@ CREATE INDEX "Listing_status_category_createdAt_idx" ON "Listing"("status", "cat
 CREATE INDEX "Listing_status_category_expiresAt_idx" ON "Listing"("status", "category", "expiresAt");
 
 -- CreateIndex
-CREATE INDEX "Listing_status_category_availableTo_idx" ON "Listing"("status", "category", "availableTo");
-
--- CreateIndex
-CREATE INDEX "Listing_status_category_type_createdAt_idx" ON "Listing"("status", "category", "type", "createdAt");
-
--- CreateIndex
-CREATE INDEX "Listing_status_category_type_expiresAt_idx" ON "Listing"("status", "category", "type", "expiresAt");
+CREATE INDEX "Listing_status_category_workMode_createdAt_idx" ON "Listing"("status", "category", "workMode", "createdAt");
 
 -- CreateIndex
 CREATE INDEX "Listing_userId_status_expiresAt_idx" ON "Listing"("userId", "status", "expiresAt");
 
 -- CreateIndex
 CREATE INDEX "Listing_companyId_status_expiresAt_idx" ON "Listing"("companyId", "status", "expiresAt");
-
--- CreateIndex
-CREATE INDEX "Listing_status_expiresAt_availableTo_idx" ON "Listing"("status", "expiresAt", "availableTo");
 
 -- CreateIndex
 CREATE INDEX "Listing_companyId_createdAt_idx" ON "Listing"("companyId", "createdAt");
@@ -759,9 +667,6 @@ ALTER TABLE "Bug" ADD CONSTRAINT "Bug_companyId_fkey" FOREIGN KEY ("companyId") 
 
 -- AddForeignKey
 ALTER TABLE "Bug" ADD CONSTRAINT "Bug_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE;
-
--- AddForeignKey
-ALTER TABLE "BlogPost" ADD CONSTRAINT "BlogPost_createdByUserId_fkey" FOREIGN KEY ("createdByUserId") REFERENCES "User"("id") ON DELETE SET NULL ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "ListingLocation" ADD CONSTRAINT "ListingLocation_cityId_fkey" FOREIGN KEY ("cityId") REFERENCES "City"("id") ON DELETE SET NULL ON UPDATE CASCADE;

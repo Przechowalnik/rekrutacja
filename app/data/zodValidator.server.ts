@@ -3,7 +3,6 @@ import type { infer as ZodInfer, ZodObject, ZodRawShape } from "zod";
 import { z } from "zod";
 
 import { formNames, type T_FormNames } from "~/lib/zodFormValidator";
-import { E_ListingUtilityOption } from "~/models/enums";
 
 import { isNumberOrBooleanAndConvert } from "./functions.server";
 import {
@@ -15,23 +14,12 @@ import {
   E_CountryCodeServer,
   E_CountryServer,
   E_LanguagesServer,
-  E_ListingAccessServer,
   E_ListingCategoryServer,
-  E_ListingComfortOptionServer,
-  E_ListingConditionServer,
-  E_ListingContainerTypeServer,
-  E_ListingContractTypeServer,
   E_ListingDeleteReasonServer,
-  E_ListingEntryOptionServer,
-  E_ListingParkingTypeServer,
-  E_ListingPlotTypeServer,
-  E_ListingSecurityOptionServer,
   E_ListingStatusServer,
-  E_ListingTypeServer,
-  E_ListingUnitTypeServer,
-  E_ListingUsageOptionServer,
   E_ReportTypeServer,
   E_TaxCountryServer,
+  E_WorkModeServer,
 } from "./models.server";
 import type { T_Messages, T_ResponseOnFailure } from "./response.server";
 
@@ -783,19 +771,6 @@ export const zodValidator = {
     .max(2, {
       message: "tooLong",
     }),
-  listingAccess: z.nativeEnum(E_ListingAccessServer, {
-    message: "badListingAccess",
-  }),
-  listingArea: z
-    .number({
-      message: "noNumber",
-    })
-    .min(0, {
-      message: "tooSmall",
-    })
-    .max(999_999_999, {
-      message: "tooLong",
-    }),
   listingCategory: z.nativeEnum(E_ListingCategoryServer, {
     message: "badListingCategory",
   }),
@@ -818,20 +793,6 @@ export const zodValidator = {
     .uuid({
       message: "badUserId",
     }),
-  listingComfortOption: z
-    .nativeEnum(E_ListingComfortOptionServer, {
-      message: "badListingComfortOptions",
-    })
-    .array(),
-  listingCondition: z.nativeEnum(E_ListingConditionServer, {
-    message: "badListingCondition",
-  }),
-  listingContainerType: z.nativeEnum(E_ListingContainerTypeServer, {
-    message: "badListingContainerType",
-  }),
-  listingContractType: z.nativeEnum(E_ListingContractTypeServer, {
-    message: "badListingContractType",
-  }),
   listingDeleteReason: z.nativeEnum(E_ListingDeleteReasonServer, {
     message: "badListingDeleteReason",
   }),
@@ -865,26 +826,11 @@ export const zodValidator = {
     .cuid({
       message: "badDistrictId",
     }),
-  listingEntryOption: z
-    .nativeEnum(E_ListingEntryOptionServer, {
-      message: "badListingEntryOptions",
-    })
-    .array(),
   listingExtension: z.coerce
     .number({
       message: "noNumber",
     })
     .min(0, {
-      message: "tooSmall",
-    })
-    .max(12, {
-      message: "tooLong",
-    }),
-  listingFloorLevel: z.coerce
-    .number({
-      message: "noNumber",
-    })
-    .min(-4, {
       message: "tooSmall",
     })
     .max(12, {
@@ -906,49 +852,26 @@ export const zodValidator = {
     .url({
       message: "noUrl",
     }),
-  listingMinimumRentalDays: z
-    .number({
-      message: "noNumber",
-    })
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(100, {
-      message: "tooLong",
-    }),
-  listingParkingType: z.nativeEnum(E_ListingParkingTypeServer, {
-    message: "badListingParkingType",
-  }),
-  listingPlotType: z.nativeEnum(E_ListingPlotTypeServer, {
-    message: "badListingPlotType",
-  }),
-  listingPrice: z
+  listingSalaryFrom: z.coerce
     .number({
       message: "noNumber",
     })
     .min(0, {
       message: "tooSmall",
     })
-    .max(100_000_000, {
+    .max(1_000_000, {
       message: "tooLong",
     }),
-  listingRentalDays: z
-    .string({
-      message: "noString",
+  listingSalaryTo: z.coerce
+    .number({
+      message: "noNumber",
     })
-    .trim()
-    .min(1, {
+    .min(0, {
       message: "tooSmall",
     })
-    .max(1000, {
+    .max(1_000_000, {
       message: "tooLong",
-    })
-    .transform(Number),
-  listingSecurityOption: z
-    .nativeEnum(E_ListingSecurityOptionServer, {
-      message: "badListingSecurityOptions",
-    })
-    .array(),
+    }),
   listingStatus: z.nativeEnum(E_ListingStatusServer, {
     message: "badListingStatus",
   }),
@@ -963,22 +886,9 @@ export const zodValidator = {
     .max(100, {
       message: "tooLong",
     }),
-  listingType: z.nativeEnum(E_ListingTypeServer, {
-    message: "badListingCity",
+  listingWorkMode: z.nativeEnum(E_WorkModeServer, {
+    message: "badListingWorkMode",
   }),
-  listingUnitType: z.nativeEnum(E_ListingUnitTypeServer, {
-    message: "badListingUnitType",
-  }),
-  listingUsageOption: z
-    .nativeEnum(E_ListingUsageOptionServer, {
-      message: "badListingUsageOptions",
-    })
-    .array(),
-  listingUtilityOption: z
-    .nativeEnum(E_ListingUtilityOption, {
-      message: "badListingUtilityOptions",
-    })
-    .array(),
   locationRadius: z
     .string({
       message: "noString",

@@ -11,12 +11,11 @@ import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
 import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
-import { E_ListingType } from "~/models/enums";
 import { T_Listings } from "~/models/listings";
 import { Image } from "~/ui/Image";
 import { replaceDateToYearMonthDay } from "~/utilities/date";
 import { generateLocationAddress } from "~/utilities/functions";
-import { generateListingPriceToShowFromTypeAndContractType } from "~/utilities/price";
+import { generateSalaryRange } from "~/utilities/price";
 
 import { IconSeo } from "../IconSeo";
 import { Text } from "../Text";
@@ -254,34 +253,10 @@ const CardSearchListingSmallToMemoize = ({
               userSelect: "none",
             }}
           >
-            {`${t(`listingType.${listing.type}`)}${listing.contractType && listing.type === E_ListingType.RENT ? ` ${t(`listingContractTypeSingle.${listing.contractType}`)}` : ""}`}
+            {t(`workMode.${listing.workMode}`)}
           </Text>
         </Box>
-        {listing?.area && (
-          <Box
-            bg={platformColor}
-            px={10}
-            py={2}
-            style={{
-              borderBottomLeftRadius: 10,
-              borderTopLeftRadius: 10,
-            }}
-          >
-            <Text
-              c="white"
-              fw="bold"
-              size="xs"
-              style={{
-                userSelect: "none",
-              }}
-            >
-              {t("cardSearchListing.area", {
-                count: Number(listing.area),
-              })}
-            </Text>
-          </Box>
-        )}
-        {listing?.price && (
+        {(listing?.salaryFrom != null || listing?.salaryTo != null) && (
           <Box
             bg={platformColor}
             px={10}
@@ -300,13 +275,10 @@ const CardSearchListingSmallToMemoize = ({
                 userSelect: "none",
               }}
             >
-              {generateListingPriceToShowFromTypeAndContractType({
-                contractType: listing.contractType,
-                negotiable: listing.negotiable,
-                negotiableAsterisk: true,
-                price: listing.price,
+              {generateSalaryRange({
+                salaryFrom: listing.salaryFrom,
+                salaryTo: listing.salaryTo,
                 tCommon: t,
-                type: listing.type,
               })}
             </Text>
           </Box>

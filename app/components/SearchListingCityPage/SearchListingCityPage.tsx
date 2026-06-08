@@ -10,7 +10,7 @@ import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { T_City } from "~/models/city";
 import { T_CityCategoryCounts } from "~/models/cityCategoryCounts";
 import { T_CityDistrict } from "~/models/cityNested";
-import { allListingCategoryRent, getCategorySlug } from "~/models/enums";
+import { allListingCategory, getCategorySlug } from "~/models/enums";
 import { CardListingCategory } from "~/ui/CardListingCategory";
 import { CardListingDistrict } from "~/ui/CardListingDistrict";
 import { SeoFaqSection } from "~/ui/PageMeta/SeoFaqSection";
@@ -123,7 +123,7 @@ export const SearchListingCityPage = ({
     return {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      itemListElement: allListingCategoryRent.map((category, index) => ({
+      itemListElement: allListingCategory.map((category, index) => ({
         "@type": "ListItem",
         position: index + 1,
         url: `${links.baseUrl}${getLocalizedRoute({
@@ -131,7 +131,7 @@ export const SearchListingCityPage = ({
           route: E_Routes.search,
         })}`,
       })),
-      numberOfItems: allListingCategoryRent.length,
+      numberOfItems: allListingCategory.length,
     };
   }, [district, city.nameSearch, getLocalizedRoute]);
 
@@ -154,7 +154,7 @@ export const SearchListingCityPage = ({
     }
   });
 
-  allListingCategoryRent?.sort((a, b) => {
+  allListingCategory?.sort((a, b) => {
     const firstItemToSort = tCommon(`listingCategory.${a}`);
     const secondItemToSort = tCommon(`listingCategory.${b}`);
     if (firstItemToSort && secondItemToSort) {
@@ -180,7 +180,7 @@ export const SearchListingCityPage = ({
     );
   });
 
-  const mapCategories = allListingCategoryRent.map(item => {
+  const mapCategories = allListingCategory.map(item => {
     return (
       <CardListingCategory
         category={item}

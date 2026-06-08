@@ -9,23 +9,11 @@ import {
   isInCountries,
   isInCountriesCode,
   isInLanguages,
-  isInListingAccess,
   isInListingCategory,
-  isInListingComfortOptions,
-  isInListingConditions,
-  isInListingContainerType,
-  isInListingContractType,
-  isInListingEntryOptions,
-  isInListingParkingType,
-  isInListingPlotTypes,
-  isInListingSecurityOptions,
   isInListingStatus,
-  isInListingTypes,
-  isInListingUnitTypes,
-  isInListingUsageOptions,
-  isInListingUtilityOptions,
   isInReportType,
   isInTaxCountries,
+  isInWorkMode,
 } from "~/models/enums";
 import { isDate } from "~/utilities/date";
 import { isNumber, isSocialMediaUrl, isValidUrl } from "~/utilities/functions";
@@ -149,47 +137,29 @@ export const formNames = {
   language: "language",
   lastId: "lastId",
   limit: "limit",
-  listingAccess: "listingAccess",
-  listingArea: "listingArea",
   listingAvailableFrom: "listingAvailableFrom",
-  listingAvailableTo: "listingAvailableTo",
   listingCategories: "listingCategories",
   listingCategory: "listingCategory",
   listingCity: "listingCity",
   listingCityId: "listingCityId",
-  listingComfortOption: "listingComfortOption",
-  listingCondition: "listingCondition",
-  listingContainerType: "listingContainerType",
-  listingContainerTypes: "listingContainerTypes",
-  listingContractType: "listingContractType",
   listingDeleteReason: "listingDeleteReason",
   listingDescription: "listingDescription",
   listingDistrict: "listingDistrict",
   listingDistrictId: "listingDistrictId",
-  listingEntryOption: "listingEntryOption",
   listingExtension: "listingExtension",
-  listingFloorLevel: "listingFloorLevel",
   listingHasAvailableDistricts: "listingHasAvailableDistricts",
   listingId: "listingId",
   listingImagesNew: "listingImagesNew",
   listingImagesToRemove: "listingImagesToRemove",
-  listingLongTerm: "listingLongTerm",
-  listingMinimumRentalDays: "listingMinimumRentalDays",
-  listingParkingType: "listingParkingType",
-  listingParkingTypes: "listingParkingTypes",
-  listingPlotType: "listingPlotType",
-  listingPlotTypes: "listingPlotTypes",
-  listingPrice: "listingPrice",
-  listingRentalDays: "listingRentalDays",
-  listingSecurityOption: "listingSecurityOption",
-  listingShortTerm: "listingShortTerm",
+  listingSalary: "listingSalary",
+  listingSalaryFrom: "listingSalaryFrom",
+  listingSalaryTo: "listingSalaryTo",
+  listingShowEmail: "listingShowEmail",
+  listingShowPhone: "listingShowPhone",
   listingStatus: "listingStatus",
   listingTitle: "listingTitle",
-  listingType: "listingType",
-  listingUnitType: "listingUnitType",
-  listingUnitTypes: "listingUnitTypes",
-  listingUsageOption: "listingUsageOption",
-  listingUtilityOption: "listingUtilityOption",
+  listingWorkMode: "listingWorkMode",
+  listingWorkModes: "listingWorkModes",
   locationRadius: "locationRadius",
   mapLocationEast: "mapLocationEast",
   mapLocationNorth: "mapLocationNorth",
@@ -932,25 +902,6 @@ export const checkFormValidator = ({
 
       if (!isValid) {
         return "badListingAvailableFrom";
-      }
-      return null;
-    }
-
-    case "listingAvailableTo": {
-      if (!value) {
-        return "noData";
-      }
-
-      let isValid = false;
-
-      if (typeof value === "string" || typeof value === "number") {
-        isValid = validDate(String(value));
-      } else if (value instanceof Date) {
-        isValid = validDate(value.toISOString());
-      }
-
-      if (!isValid) {
-        return "badListingAvailableTo";
       }
       return null;
     }
@@ -2528,86 +2479,6 @@ export const checkFormValidator = ({
       return null;
     }
 
-    case "listingMinimumRentalDays": {
-      if (optional && value === "") {
-        return null;
-      }
-      if (typeof value !== "number") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validNumberInRange({
-        max: 100,
-        min: 1,
-        value,
-      });
-
-      if (!isValid) {
-        return "badListingMinimumRentalDays";
-      }
-      return null;
-    }
-
-    case "listingRentalDays": {
-      if (optional && value === "") {
-        return null;
-      }
-      if (typeof value !== "number") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validNumberInRange({
-        max: 1000,
-        min: 1,
-        value,
-      });
-
-      if (!isValid) {
-        return "badListingRentalDays";
-      }
-      return null;
-    }
-
-    case "listingArea": {
-      if (optional && value === "") {
-        return null;
-      }
-      if (typeof value !== "number") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validNumberInRange({
-        max: 999_999_999,
-        min: 0,
-        value,
-      });
-
-      if (!isValid) {
-        return "badListingArea";
-      }
-      return null;
-    }
-
-    case "listingPrice": {
-      if (optional && value === "") {
-        return null;
-      }
-      if (typeof value !== "number") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validNumberInRange({
-        max: 100_000_000,
-        min: 0,
-        value,
-      });
-
-      if (!isValid) {
-        return "badListingPrice";
-      }
-      return null;
-    }
-
     case "listingCity": {
       if (
         !(typeof value === "object" || typeof value === "string") ||
@@ -2655,111 +2526,7 @@ export const checkFormValidator = ({
       return null;
     }
 
-    case "listingParkingTypes": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingParkingTypes";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingParkingType(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingParkingType(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingParkingTypes";
-        }
-      } else {
-        return "badListingParkingTypes";
-      }
-
-      return null;
-    }
-
-    case "listingContainerTypes": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingContainerTypes";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingContainerType(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingContainerType(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingContainerTypes";
-        }
-      } else {
-        return "badListingContainerTypes";
-      }
-
-      return null;
-    }
-
-    case "listingContainerType": {
+    case "listingWorkMode": {
       if (
         !(typeof value === "object" || typeof value === "string") ||
         Array.isArray(value) ||
@@ -2770,117 +2537,48 @@ export const checkFormValidator = ({
         return "somethingWentWrong";
       }
 
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
+      const validValue = typeof value === "string" ? value : value.value;
 
-      const isValid = isInListingContainerType(validValue);
+      if (!isInWorkMode(validValue)) {
+        return "badListingWorkMode";
+      }
+      return null;
+    }
+
+    case "listingWorkModes": {
+      if (!Array.isArray(value)) {
+        return optional ? null : "somethingWentWrong";
+      }
+
+      const hasInvalid = value.some(
+        item => typeof item !== "string" || !isInWorkMode(item),
+      );
+      if (hasInvalid) {
+        return "badListingWorkMode";
+      }
+      return null;
+    }
+
+    case "listingSalaryFrom":
+    case "listingSalaryTo": {
+      if (
+        optional &&
+        (value === "" || value === null || value === undefined)
+      ) {
+        return null;
+      }
+      if (!isNumber(value)) {
+        return "somethingWentWrong";
+      }
+
+      const isValid = validNumberInRange({
+        max: 1_000_000,
+        min: 0,
+        value: Number(value),
+      });
       if (!isValid) {
-        return "badListingContainerType";
+        return "badListingSalary";
       }
-      return null;
-    }
-
-    case "listingPlotTypes": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingPlotTypes";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingPlotTypes(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingPlotTypes(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingPlotTypes";
-        }
-      } else {
-        return "badListingPlotTypes";
-      }
-
-      return null;
-    }
-
-    case "listingUnitTypes": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingUnitTypes";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingUnitTypes(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingUnitTypes(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingUnitTypes";
-        }
-      } else {
-        return "badListingUnitTypes";
-      }
-
       return null;
     }
 
@@ -2983,453 +2681,6 @@ export const checkFormValidator = ({
       return null;
     }
 
-    case "listingType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingTypes(validValue);
-      if (!isValid) {
-        return "badListingType";
-      }
-      return null;
-    }
-
-    case "listingParkingType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingParkingType(validValue);
-      if (!isValid) {
-        return "badListingParkingType";
-      }
-      return null;
-    }
-
-    case "listingUsageOption": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingUsageOption";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingUsageOptions(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingUsageOptions(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingUsageOption";
-        }
-      } else {
-        return "badListingUsageOption";
-      }
-
-      return null;
-    }
-
-    case "listingEntryOption": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingEntryOption";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingEntryOptions(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingEntryOptions(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingEntryOption";
-        }
-      } else {
-        return "badListingEntryOption";
-      }
-
-      return null;
-    }
-
-    case "listingUtilityOption": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingUtilityOption";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingUtilityOptions(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingUtilityOptions(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingUtilityOption";
-        }
-      } else {
-        return "badListingUtilityOption";
-      }
-
-      return null;
-    }
-
-    case "listingComfortOption": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingComfortOption";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingComfortOptions(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingComfortOptions(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingComfortOption";
-        }
-      } else {
-        return "badListingComfortOption";
-      }
-
-      return null;
-    }
-
-    case "listingSecurityOption": {
-      if (Array.isArray(value)) {
-        if (value.length === 0) {
-          return optional ? null : "badListingSecurityOption";
-        }
-
-        const hasInvalidValue = value?.some(item => {
-          if (!item) {
-            return true;
-          }
-
-          if (typeof item === "boolean" || typeof item === "number") {
-            return true;
-          }
-
-          if (typeof item === "string") {
-            const isValid = isInListingSecurityOptions(item);
-
-            if (!isValid) {
-              return true;
-            }
-
-            return false;
-          }
-
-          if (!(typeof item === "string" || "value" in item)) {
-            return true;
-          }
-
-          if (!item?.value || !item.label) {
-            return true;
-          }
-
-          const isValid = isInListingSecurityOptions(item.value);
-
-          if (!isValid) {
-            return true;
-          }
-
-          return false;
-        });
-
-        if (hasInvalidValue) {
-          return "badListingSecurityOption";
-        }
-      } else {
-        return "badListingSecurityOption";
-      }
-
-      return null;
-    }
-
-    case "listingCondition": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingConditions(validValue);
-      if (!isValid) {
-        return "badListingCondition";
-      }
-      return null;
-    }
-
-    case "listingPlotType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingPlotTypes(validValue);
-      if (!isValid) {
-        return "badListingPlotType";
-      }
-      return null;
-    }
-
-    case "listingUnitType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingUnitTypes(validValue);
-      if (!isValid) {
-        return "badListingUnitType";
-      }
-      return null;
-    }
-
-    case "listingAccess": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingAccess(validValue);
-      if (!isValid) {
-        return "badListingAccess";
-      }
-      return null;
-    }
-
-    case "listingFloorLevel": {
-      if (
-        typeof value === "number" ||
-        typeof value === "boolean" ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "badListingFloorLevel";
-      }
-
-      let validValue: null | string = null;
-      if (typeof value === "string") {
-        validValue = value;
-      } else if (
-        value !== null &&
-        typeof value === "object" &&
-        "value" in value &&
-        typeof value.value === "string"
-      ) {
-        validValue = value.value;
-      }
-
-      if (!isNumber(validValue)) {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validNumberInRange({
-        max: 12,
-        min: -4,
-        value: Number(validValue),
-      });
-
-      if (!isValid) {
-        return "badListingFloorLevel";
-      }
-      return null;
-    }
-
-    case "listingContractType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInListingContractType(validValue);
-      if (!isValid) {
-        return "badListingContractType";
-      }
-      return null;
-    }
-
     case "listingDescription": {
       if (typeof value !== "string") {
         return "somethingWentWrong";
@@ -3493,8 +2744,8 @@ export const checkFormValidator = ({
     }
 
     case "listingHasAvailableDistricts":
-    case "listingLongTerm":
-    case "listingShortTerm":
+    case "listingShowEmail":
+    case "listingShowPhone":
     case "bugShowClosed":
     case "checkboxAcceptNewsletter":
     case "isMobile":

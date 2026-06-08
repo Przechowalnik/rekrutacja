@@ -1,8 +1,8 @@
 {
   "imagesAlt": {
-    "banner": "Banner promoting a real estate offer",
-    "bannerRent": "Banner promoting property rental",
-    "bannerRentHorizontally": "Banner promoting property rental in a horizontal layout",
+    "banner": "Banner promoting a job offer",
+    "bannerRent": "Banner promoting job offers",
+    "bannerRentHorizontally": "Banner promoting job offers in a horizontal layout",
     "burgerMenu": "Menu",
     "cardCode": {
       "button": "Copy referral code"
@@ -49,7 +49,7 @@
   },
   "jsonLdFaq": {
     "aboutUs": {
-      "description": "do-pracy.pl is the first platform in Poland that enables the rental and sale of small spaces - from garages and storage units to utility rooms. Our goal is to make online transactions fast and secure for both owners and tenants. With do-pracy.pl, you can easily add listings, manage payments, and monitor space availability. The platform combines innovative technology with an intuitive interface, ensuring a smooth and user-friendly experience. Discover how do-pracy.pl is transforming the rental market in Poland by enabling quick, safe, and transparent transactions."
+      "description": "do-pracy.pl is a modern job listings platform in Poland that connects employers with candidates - from IT and sales to production and logistics. Our goal is to make the job posting process fast and secure for both companies and job seekers. With do-pracy.pl, you can easily post job offers, manage applications, and monitor position availability. The platform combines innovative technology with an intuitive interface, ensuring a smooth and user-friendly experience. Discover how do-pracy.pl is transforming the job market in Poland by enabling quick, safe, and transparent job listings."
     },
     "accessibility": {
       "description": "At do-pracy.pl, we prioritize accessibility - our website and app meet the WCAG 2.1 AA standard, support screen readers, and maintain proper contrast. We make sure every user can use the platform comfortably and without barriers."
@@ -88,7 +88,7 @@
       "description": "Edit your listings to increase their appeal and visibility."
     },
     "accountListingsNew": {
-      "description": "Add a new listing on do-pracy.pl and start earning from your space."
+      "description": "Add a new job offer on do-pracy.pl and reach the best candidates."
     },
     "accountListingsPayments": {
       "description": "Manage payments associated with your do-pracy.pl listings."
@@ -210,8 +210,12 @@
     "apiCompanySubscriptionDelete": {
       "description": "API functions for deleting a company subscription."
     },
-    "apiLatestListings": { "description": "" },
-    "apiLogin": { "description": "API functions for user login." },
+    "apiLatestListings": {
+      "description": ""
+    },
+    "apiLogin": {
+      "description": "API functions for user login."
+    },
     "apiRecoveryAccount": {
       "description": "API functions for account recovery."
     },
@@ -233,9 +237,14 @@
     "apiResetFetcher": {
       "description": "API functions for resetting data fetchers."
     },
-    "apiSearch": { "description": "API functions related to search." },
+    "apiSearch": {
+      "description": "API functions related to search."
+    },
     "apiSearchMap": {
       "description": "API functions related to map-based search."
+    },
+    "archive": {
+      "description": "Archived job offers on do-pracy.pl - browse inactive listings from newest to oldest."
     },
     "authenticator": {
       "description": "User account authentication and login security."
@@ -349,13 +358,13 @@
       "description": "Find answers to frequently asked questions and contact support."
     },
     "home": {
-      "description": "Welcome to do-pracy.pl - an innovative platform for renting and selling small spaces in Poland. We offer fast and secure solutions for property owners who want to earn income and for tenants seeking available spaces. Our platform allows you to easily browse listings, add your own, manage payments, and monitor availability. With modern tools and an intuitive interface, do-pracy.pl ensures convenience and transaction security, whether you're looking for a garage, warehouse, or office space."
+      "description": "Welcome to do-pracy.pl - an innovative job listings platform in Poland. We offer fast and secure solutions for employers looking for staff and for candidates seeking work. Our platform allows you to easily browse job offers, post your own, manage applications, and monitor position availability. With modern tools and an intuitive interface, do-pracy.pl ensures convenience and a secure job posting process, whether you're looking for a job in IT, sales, or logistics."
     },
     "howToAddListing": {
       "description": "Learn how to add a listing by following the steps provided below."
     },
     "howToSearchListing": {
-      "description": "Learn how to search for listings on our platform and find the perfect space."
+      "description": "Learn how to search for job offers on our platform and find the perfect position."
     },
     "listings": {
       "description": "Browse all available listings on the do-pracy.pl platform."
@@ -411,7 +420,7 @@
   },
   "jsonLdReview": {},
   "jsonLdStructured": {
-    "description": "do-pracy.pl is the first platform in Poland dedicated specifically to the rental and sale of small spaces. A garage, parking spot, basement, storage unit, or small warehouse - each of these spaces can become an additional source of income. We created do-pracy.pl to connect owners of unused spaces with people who need them - simply, locally, and without unnecessary formalities. Our goal is for every do-pracy.pl user to feel safe and comfortable, which is why we ensure clear regulations, data protection, and transparent listing rules. By using the do-pracy.pl platform, you can earn money from what you already have - gain extra income of even several thousand PLN per year, help others - your basement can become a bike storage, and your garage a secure parking spot, and above all, it’s easy to use - posting a listing takes just 3 minutes. do-pracy.pl is a Polish platform created with local needs in mind, helping your unused space start working for you!",
+    "description": "do-pracy.pl is a modern job listings platform in Poland dedicated specifically to job offers. IT, sales, marketing, finance, logistics, or production - in each of these industries you'll find current job offers. We created do-pracy.pl to connect employers with candidates looking for work - simply, locally, and without unnecessary formalities. Our goal is for every do-pracy.pl user to feel safe and comfortable, which is why we ensure clear regulations, data protection, and transparent rules for publishing job offers. By using the do-pracy.pl platform, you can quickly find an employee or your dream position, reach thousands of candidates and employers across Poland, and above all, it’s easy to use - posting a job offer takes just 3 minutes. do-pracy.pl is a Polish platform created with the local job market in mind, making job posting fast and effective!",
     "isPartOfName": "do-pracy.pl",
     "name": "do-pracy.pl",
     "url": "https://do-pracy.pl"
@@ -677,6 +686,10 @@
       "description": "Find map-related search results via API. Integrate geolocation data easily.",
       "title": "API Map Search | {{companyName}}"
     },
+    "archive": {
+      "description": "Browse archived, inactive job offers on {{companyName}} - from newest to oldest.",
+      "title": "Archived job offers | {{companyName}}"
+    },
     "authenticator": {
       "description": "Log in and verify your identity using the authenticator. Strengthen your account security.",
       "title": "User Authentication | {{companyName}}"
@@ -794,7 +807,7 @@
       "title": "Contact | {{companyName}}"
     },
     "default": {
-      "description": "A platform for renting and selling spaces. Explore the offer from {{companyName}}.",
+      "description": "A platform for job offers and job listings. Explore the offer from {{companyName}}.",
       "title": "{{companyName}}"
     },
     "error": {
@@ -826,15 +839,15 @@
       "title": "Help & FAQ | {{companyName}}"
     },
     "home": {
-      "description": "Browse available rental and sales listings. Start using {{companyName}} today.",
-      "title": "Rent & Sell Spaces | {{companyName}}"
+      "description": "Browse current job offers and job listings listings. Start using {{companyName}} today.",
+      "title": "Job Offers & Listings | {{companyName}}"
     },
     "howToAddListing": {
       "description": "Learn how to add a listing by following our simple step-by-step guide. Create your listing quickly and start reaching new customers.",
       "title": "How to Add a Listing | {{companyName}}"
     },
     "howToSearchListing": {
-      "description": "Learn how to search for listings on our platform. Use filters and map to find the perfect space.",
+      "description": "Learn how to search for job offers on our platform. Use filters and map to find the perfect position.",
       "title": "How to Search for a Listing | {{companyName}}"
     },
     "listing": {
@@ -842,7 +855,7 @@
       "title": "Listing {{category}} {{city}} | {{companyName}}"
     },
     "listings": {
-      "description": "Explore all available listings on the platform. Find a space that fits your needs.",
+      "description": "Explore all available job offers on the platform. Find a position that fits your needs.",
       "title": "Listing List | {{companyName}}"
     },
     "login": {
@@ -906,36 +919,36 @@
       "title": "Listing Search | {{companyName}}"
     },
     "searchCategory": {
-      "description": "Current {{categoryPlural}} - spaces for rent or sale. Compare prices and locations of available offers.",
-      "title": "{{categoryPlural}} - spaces for rent or sale | {{companyName}}"
+      "description": "Current {{categoryPlural}} - job offers in this industry. Compare salaries and locations of available offers.",
+      "title": "{{categoryPlural}} - job offers | {{companyName}}"
     },
     "searchCategoryCity": {
-      "description": "Browse {{categoryPlural}} in {{city}} available for rent or sale. Current listings on {{companyName}}.",
-      "title": "Listings {{categoryPlural}} {{city}} | {{companyName}}"
+      "description": "Browse {{categoryPlural}} job offers in {{city}}. Current job listings on {{companyName}}.",
+      "title": "Job Offers {{categoryPlural}} {{city}} | {{companyName}}"
     },
     "searchCategoryCityDistrict": {
-      "description": "Browse {{categoryPlural}} in {{city}} {{district}} available for rent or sale. Current listings on {{companyName}}.",
-      "title": "Listings {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
+      "description": "Browse {{categoryPlural}} job offers in {{city}} {{district}}. Current job listings on {{companyName}}.",
+      "title": "Job Offers {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
     },
     "searchCategoryCityWithCount": {
-      "description": "Browse {{count}} current {{categoryPlural}} listings in {{city}} available for rent or sale. Compare prices and locations on {{companyName}}.",
-      "title": "{{categoryPlural}} {{city}} - {{count}} listings | {{companyName}}"
+      "description": "Browse {{count}} current {{categoryPlural}} job offers in {{city}}. Compare salaries and locations on {{companyName}}.",
+      "title": "{{categoryPlural}} {{city}} - {{count}} job offers | {{companyName}}"
     },
     "searchCities": {
-      "description": "List of cities with current listings of spaces for rent or sale across Poland.",
-      "title": "Cities - spaces for rent or sale | {{companyName}}"
+      "description": "List of cities with current job offers across Poland.",
+      "title": "Cities - job offers | {{companyName}}"
     },
     "searchCity": {
-      "description": "Browse listings in {{city}} including garages, units, plots, warehouses, containers and other spaces for rent or sale. Find current offers on {{companyName}}.",
-      "title": "{{city}} listings - garages, warehouses, units | {{companyName}}"
+      "description": "Browse job offers in {{city}} including IT, sales, marketing, logistics, production and other industries. Find current job offers on {{companyName}}.",
+      "title": "{{city}} job offers - IT, sales, logistics | {{companyName}}"
     },
     "searchCityDistrict": {
-      "description": "Browse listings in {{city}} {{district}} including garages, units, plots, warehouses, containers and other spaces for rent or sale. Find current offers on {{companyName}}.",
-      "title": "Listings {{city}} {{district}} - rent and sale | {{companyName}}"
+      "description": "Browse job offers in {{city}} {{district}} including IT, sales, marketing, logistics, production and other industries. Find current job offers on {{companyName}}.",
+      "title": "Job Offers {{city}} {{district}} | {{companyName}}"
     },
     "searchCityWithCount": {
-      "description": "Browse {{count}} current listings in {{city}} - garages, units, plots, warehouses, containers and other spaces for rent or sale. Compare offers on {{companyName}}.",
-      "title": "{{city}} - {{count}} rent and sale listings | {{companyName}}"
+      "description": "Browse {{count}} current job offers in {{city}} - IT, sales, marketing, logistics, production and other industries. Compare offers on {{companyName}}.",
+      "title": "{{city}} - {{count}} job offers | {{companyName}}"
     },
     "termsAndConditions": {
       "description": "Read the platform’s terms of service and the rules governing user activity.",

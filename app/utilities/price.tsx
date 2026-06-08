@@ -1,12 +1,5 @@
 import { TFunction } from "i18next";
 
-import {
-  E_ListingContractType,
-  E_ListingType,
-  T_ListingContractType,
-  T_ListingType,
-} from "~/models/enums";
-
 export const CURRENCY = "pln";
 
 export function formatAmountForDisplayWithElements(amount: bigint | number): {
@@ -100,99 +93,32 @@ export function calculateDiscount({
   return finalPrice;
 }
 
-export const generateListingPriceFromTypeAndContractType = ({
-  contractType,
-  tCommon,
-  type,
-}: {
-  contractType: null | T_ListingContractType | undefined;
-  tCommon: TFunction<"common", undefined>;
-  type: null | T_ListingType;
-}) => {
-  if (!type || !contractType) {
-    return tCommon("inputs.listingPrice");
-  }
-  if (type === E_ListingType.SALE) {
-    return tCommon("inputs.listingPrice");
-  }
-  if (contractType === E_ListingContractType.LONG_TERM) {
-    return tCommon("inputs.listingPriceMonthly");
-  }
-  return tCommon("inputs.listingPriceDaily");
+const formatPlainAmount = (amount: number): string => {
+  return new Intl.NumberFormat("pl-PL", {
+    maximumFractionDigits: 0,
+  }).format(amount);
 };
 
-export const generateListingPriceFromTypeAndContractTypeWithPrice = ({
-  contractType,
-  negotiable,
-  negotiableAsterisk,
-  price,
+// Salary range "od–do zł / mies." for job listings (gross monthly, PLN).
+export const generateSalaryRange = ({
+  salaryFrom,
+  salaryTo,
   tCommon,
-  type,
 }: {
-  contractType: null | T_ListingContractType | undefined;
-  negotiable: boolean;
-  negotiableAsterisk?: boolean;
-  price: bigint | number;
+  salaryFrom?: null | number;
+  salaryTo?: null | number;
   tCommon: TFunction<"common", undefined>;
-  type: T_ListingType;
-}) => {
-  return (
-    <>
-      {generateListingPriceFromTypeAndContractType({
-        contractType,
-        tCommon,
-        type,
-      })}
-      {": "}
-      <b>{`${formatAmountForDisplay(price)}${(() => {
-        if (!negotiable) {
-          return "";
-        }
-        if (negotiableAsterisk) {
-          return " (+/-)";
-        }
-        return ` (${tCommon("cardSearchListing.negotiable")})`;
-      })()}`}</b>
-    </>
-  );
-};
+}): null | string => {
+  if (salaryFrom == null && salaryTo == null) {
+    return null;
+  }
 
-export const generateListingPriceToShowFromTypeAndContractType = ({
-  contractType,
-  negotiable,
-  negotiableAsterisk,
-  price,
-  tCommon,
-  type,
-}: {
-  contractType: null | T_ListingContractType | undefined;
-  negotiable: boolean;
-  negotiableAsterisk?: boolean;
-  price: bigint | number;
-  tCommon: TFunction<"common", undefined>;
-  type: T_ListingType;
-}) => {
-  const translationKey = (() => {
-    if (type === E_ListingType.SALE || !contractType) {
-      return "cardSearchListing.price";
-    }
-    if (contractType === E_ListingContractType.LONG_TERM) {
-      return "cardSearchListing.priceMonthly";
-    }
-    return "cardSearchListing.priceDaily";
-  })();
+  const unit = tCommon("cardSearchListing.salaryUnit");
 
-  const negotiableSuffix = (() => {
-    if (!negotiable) {
-      return "";
-    }
-    if (negotiableAsterisk) {
-      return " (+/-)";
-    }
-    return ` (${tCommon("cardSearchListing.negotiable")})`;
-  })();
+  if (salaryFrom != null && salaryTo != null) {
+    return `${formatPlainAmount(salaryFrom)} – ${formatPlainAmount(salaryTo)} ${unit}`;
+  }
 
-  return `${tCommon(translationKey, {
-    price: formatAmountForDisplay(price),
-  })}${negotiableSuffix}`;
+  const value = salaryFrom ?? salaryTo ?? 0;
+  return `${formatPlainAmount(value)} ${unit}`;
 };

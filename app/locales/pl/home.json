@@ -3,19 +3,19 @@
     "title": "Sprecyzuj, czego szukasz!"
   },
   "homeLatestListings": {
-    "title": "Ostatnio dodane ogłoszenia"
+    "title": "Ostatnio dodane oferty pracy"
   },
-  "noData": "Brak ogłoszeń.",
-  "noDataToSearch": "Nie wybrano kategorii oraz lokalizacji.",
+  "noData": "Brak ofert pracy.",
+  "noDataToSearch": "Nie wybrano branży oraz lokalizacji.",
   "searchListingCategoryCity": {
     "buttonShowMap": "Pokaż na mapie"
   },
   "topCategories": {
-    "description": "Przeglądaj oferty według kategorii - garaże, magazyny, działki, lokale i inne.",
-    "title": "Kategorie powierzchni"
+    "description": "Przeglądaj oferty pracy według branży - IT, sprzedaż, marketing, finanse i inne.",
+    "title": "Branże"
   },
   "topCities": {
-    "description": "Sprawdź oferty w największych miastach z aktywnymi ogłoszeniami.",
+    "description": "Sprawdź oferty pracy w największych miastach z aktywnymi ogłoszeniami o pracę.",
     "title": "Popularne miasta"
   }
 }

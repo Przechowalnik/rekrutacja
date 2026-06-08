@@ -17,18 +17,10 @@ import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { T_City } from "~/models/city";
 import { T_CityDistrictName, T_CityName } from "~/models/cityNested";
 import {
-  E_ListingType,
   getCategorySlug,
-  T_ListingAccess,
   T_ListingCategory,
-  T_ListingCondition,
-  T_ListingContainerType,
-  T_ListingContractType,
-  T_ListingParkingType,
-  T_ListingPlotType,
-  T_ListingType,
-  T_ListingUnitType,
   T_LocationRadius,
+  T_WorkMode,
 } from "~/models/enums";
 import { compareObjects } from "~/utilities/functions";
 import { generateExtraQueryToSearch } from "~/utilities/listing";
@@ -40,16 +32,7 @@ import {
 } from "./utilities";
 
 export type T_SearchListingsExtraFilters = {
-  access?: null | T_ListingAccess;
-  contractType?: null | T_ListingContractType;
-  type: null | T_ListingType;
-};
-
-export type T_SearchListingsCalendar = {
-  availableFrom: null | string;
-  longTerm: boolean;
-  rentalDays: null | number;
-  shortTerm: boolean;
+  workModes: T_WorkMode[];
 };
 
 export type T_SearchListingsLocation = {
@@ -60,30 +43,16 @@ export type T_SearchListingsLocation = {
 
 export type T_SearchListingsCategoryAndFilters = {
   category: null | T_ListingCategory;
-  condition: null | T_ListingCondition;
-  containerTypes: T_ListingContainerType[];
-  parkingTypes: T_ListingParkingType[];
-  plotTypes: T_ListingPlotType[];
-  unitTypes: T_ListingUnitType[];
 };
 
 export type T_SearchListingLive = {
-  listingAccess?: T_ListingAccess;
-  listingAvailableFrom?: string;
   listingCategory?: T_ListingCategory;
   listingCity?: T_CityName;
-  listingCondition?: T_ListingCondition;
-  listingContainerTypes?: T_ListingContainerType[];
-  listingContractType?: T_ListingContractType;
   listingDistrict?: T_CityDistrictName;
-  listingParkingTypes?: T_ListingParkingType[];
-  listingPlotTypes?: T_ListingPlotType[];
-  listingType?: T_ListingType;
-  listingUnitTypes?: T_ListingUnitType[];
+  listingWorkModes?: T_WorkMode[];
 };
 
 export type T_SearchListingProperties = {
-  calendar: T_SearchListingsCalendar;
   categoryAndFilters: T_SearchListingsCategoryAndFilters;
   extraFilters: T_SearchListingsExtraFilters;
   location: T_SearchListingsLocation;
@@ -160,20 +129,14 @@ export const SearchListingsContextProvider = ({
 
   const onChangeSearchListing = useCallback(
     ({
-      calendar,
       categoryAndFilters,
       extraFilters,
       location,
     }: T_OnChangeSearchListing) => {
-      if (calendar || categoryAndFilters || extraFilters || location) {
+      if (categoryAndFilters || extraFilters || location) {
         setSearchListing(previousState => {
           return {
             ...previousState,
-            ...(calendar
-              ? {
-                  calendar,
-                }
-              : {}),
             ...(categoryAndFilters
               ? {
                   categoryAndFilters,
@@ -181,17 +144,7 @@ export const SearchListingsContextProvider = ({
               : {}),
             ...(extraFilters
               ? {
-                  extraFilters: extraFilters,
-                  ...(extraFilters.type === E_ListingType.SALE
-                    ? {
-                        calendar: {
-                          ...previousState.calendar,
-                          longTerm: false,
-                          rentalDays: null,
-                          shortTerm: false,
-                        },
-                      }
-                    : {}),
+                  extraFilters,
                 }
               : {}),
             ...(location

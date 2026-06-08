@@ -203,23 +203,11 @@
     "fallbackSrcSet": "/img-gen/images/flagPoland@320w.webp 320w, /img-gen/images/flagPoland@480w.webp 480w, /img-gen/images/flagPoland@640w.webp 640w, /img-gen/images/flagPoland@768w.webp 768w, /img-gen/images/flagPoland@1024w.webp 1024w, /img-gen/images/flagPoland@1280w.webp 1280w, /img-gen/images/flagPoland@1600w.webp 1600w",
     "webpSrcSet": "/img-gen/images/flagPoland@320w.webp 320w, /img-gen/images/flagPoland@480w.webp 480w, /img-gen/images/flagPoland@640w.webp 640w, /img-gen/images/flagPoland@768w.webp 768w, /img-gen/images/flagPoland@1024w.webp 1024w, /img-gen/images/flagPoland@1280w.webp 1280w, /img-gen/images/flagPoland@1600w.webp 1600w"
   },
-  "/logo/logo-dark.png": {
-    "avifSrcSet": "/img-gen/logo/logo-dark@320w.avif 320w, /img-gen/logo/logo-dark@480w.avif 480w, /img-gen/logo/logo-dark@640w.avif 640w, /img-gen/logo/logo-dark@768w.avif 768w, /img-gen/logo/logo-dark@1024w.avif 1024w, /img-gen/logo/logo-dark@1280w.avif 1280w, /img-gen/logo/logo-dark@1600w.avif 1600w",
-    "fallbackSrc": "/img-gen/logo/logo-dark@1024w.png",
-    "fallbackSrcSet": "/img-gen/logo/logo-dark@320w.png 320w, /img-gen/logo/logo-dark@480w.png 480w, /img-gen/logo/logo-dark@640w.png 640w, /img-gen/logo/logo-dark@768w.png 768w, /img-gen/logo/logo-dark@1024w.png 1024w, /img-gen/logo/logo-dark@1280w.png 1280w, /img-gen/logo/logo-dark@1600w.png 1600w",
-    "webpSrcSet": "/img-gen/logo/logo-dark@320w.webp 320w, /img-gen/logo/logo-dark@480w.webp 480w, /img-gen/logo/logo-dark@640w.webp 640w, /img-gen/logo/logo-dark@768w.webp 768w, /img-gen/logo/logo-dark@1024w.webp 1024w, /img-gen/logo/logo-dark@1280w.webp 1280w, /img-gen/logo/logo-dark@1600w.webp 1600w"
-  },
-  "/logo/logo-light.png": {
-    "avifSrcSet": "/img-gen/logo/logo-light@320w.avif 320w, /img-gen/logo/logo-light@480w.avif 480w, /img-gen/logo/logo-light@640w.avif 640w, /img-gen/logo/logo-light@768w.avif 768w, /img-gen/logo/logo-light@1024w.avif 1024w, /img-gen/logo/logo-light@1280w.avif 1280w, /img-gen/logo/logo-light@1600w.avif 1600w",
-    "fallbackSrc": "/img-gen/logo/logo-light@1024w.png",
-    "fallbackSrcSet": "/img-gen/logo/logo-light@320w.png 320w, /img-gen/logo/logo-light@480w.png 480w, /img-gen/logo/logo-light@640w.png 640w, /img-gen/logo/logo-light@768w.png 768w, /img-gen/logo/logo-light@1024w.png 1024w, /img-gen/logo/logo-light@1280w.png 1280w, /img-gen/logo/logo-light@1600w.png 1600w",
-    "webpSrcSet": "/img-gen/logo/logo-light@320w.webp 320w, /img-gen/logo/logo-light@480w.webp 480w, /img-gen/logo/logo-light@640w.webp 640w, /img-gen/logo/logo-light@768w.webp 768w, /img-gen/logo/logo-light@1024w.webp 1024w, /img-gen/logo/logo-light@1280w.webp 1280w, /img-gen/logo/logo-light@1600w.webp 1600w"
-  },
-  "/logo/logo-purple-social.png": {
-    "avifSrcSet": "/img-gen/logo/logo-purple-social@320w.avif 320w, /img-gen/logo/logo-purple-social@480w.avif 480w, /img-gen/logo/logo-purple-social@640w.avif 640w, /img-gen/logo/logo-purple-social@768w.avif 768w, /img-gen/logo/logo-purple-social@1024w.avif 1024w, /img-gen/logo/logo-purple-social@1280w.avif 1280w, /img-gen/logo/logo-purple-social@1600w.avif 1600w",
-    "fallbackSrc": "/img-gen/logo/logo-purple-social@1024w.png",
-    "fallbackSrcSet": "/img-gen/logo/logo-purple-social@320w.png 320w, /img-gen/logo/logo-purple-social@480w.png 480w, /img-gen/logo/logo-purple-social@640w.png 640w, /img-gen/logo/logo-purple-social@768w.png 768w, /img-gen/logo/logo-purple-social@1024w.png 1024w, /img-gen/logo/logo-purple-social@1280w.png 1280w, /img-gen/logo/logo-purple-social@1600w.png 1600w",
-    "webpSrcSet": "/img-gen/logo/logo-purple-social@320w.webp 320w, /img-gen/logo/logo-purple-social@480w.webp 480w, /img-gen/logo/logo-purple-social@640w.webp 640w, /img-gen/logo/logo-purple-social@768w.webp 768w, /img-gen/logo/logo-purple-social@1024w.webp 1024w, /img-gen/logo/logo-purple-social@1280w.webp 1280w, /img-gen/logo/logo-purple-social@1600w.webp 1600w"
+  "/og-image.png": {
+    "avifSrcSet": "/img-gen/og-image@320w.avif 320w, /img-gen/og-image@480w.avif 480w, /img-gen/og-image@640w.avif 640w, /img-gen/og-image@768w.avif 768w, /img-gen/og-image@1024w.avif 1024w, /img-gen/og-image@1280w.avif 1280w, /img-gen/og-image@1600w.avif 1600w",
+    "fallbackSrc": "/img-gen/og-image@1024w.png",
+    "fallbackSrcSet": "/img-gen/og-image@320w.png 320w, /img-gen/og-image@480w.png 480w, /img-gen/og-image@640w.png 640w, /img-gen/og-image@768w.png 768w, /img-gen/og-image@1024w.png 1024w, /img-gen/og-image@1280w.png 1280w, /img-gen/og-image@1600w.png 1600w",
+    "webpSrcSet": "/img-gen/og-image@320w.webp 320w, /img-gen/og-image@480w.webp 480w, /img-gen/og-image@640w.webp 640w, /img-gen/og-image@768w.webp 768w, /img-gen/og-image@1024w.webp 1024w, /img-gen/og-image@1280w.webp 1280w, /img-gen/og-image@1600w.webp 1600w"
   },
   "/screenshots/home-mobile.png": {
     "avifSrcSet": "/img-gen/screenshots/home-mobile@320w.avif 320w, /img-gen/screenshots/home-mobile@480w.avif 480w, /img-gen/screenshots/home-mobile@640w.avif 640w, /img-gen/screenshots/home-mobile@768w.avif 768w, /img-gen/screenshots/home-mobile@1024w.avif 1024w, /img-gen/screenshots/home-mobile@1280w.avif 1280w, /img-gen/screenshots/home-mobile@1600w.avif 1600w",

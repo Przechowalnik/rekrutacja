@@ -100,12 +100,8 @@ export const prismaSelectWorkers = {
 } as const;
 
 const prismaSelectListingNested = {
-  access: true,
-  area: true,
   availableFrom: true,
-  availableTo: true,
   category: true,
-  comfortOptions: true,
   company: {
     select: {
       avatar: true,
@@ -119,16 +115,20 @@ const prismaSelectListingNested = {
         },
       },
       slug: true,
+      workers: {
+        select: {
+          email: true,
+        },
+        take: 1,
+        where: {
+          role: "B2B_OWNER",
+        },
+      },
     },
   },
-  condition: true,
-  containerType: true,
-  contractType: true,
   createdAt: true,
   description: true,
-  entryOptions: true,
   expiresAt: true,
-  floorLevel: true,
   id: true,
   images: {
     orderBy: {
@@ -173,22 +173,18 @@ const prismaSelectListingNested = {
       streetNumber: true,
     },
   },
-  minimumRentalDays: true,
-  negotiable: true,
-  parkingType: true,
-  plotType: true,
-  price: true,
-  securityOptions: true,
+  salaryFrom: true,
+  salaryTo: true,
+  showEmail: true,
+  showPhone: true,
   slug: true,
   status: true,
   title: true,
-  type: true,
-  unitType: true,
   updatedAt: true,
-  usageOptions: true,
   user: {
     select: {
       avatar: true,
+      email: true,
       firstName: true,
       id: true,
       phone: {
@@ -200,16 +196,12 @@ const prismaSelectListingNested = {
       },
     },
   },
-  utilityOptions: true,
+  workMode: true,
 } as const;
 
 const prismaSelectListingOwnerNested = {
-  access: true,
-  area: true,
   availableFrom: true,
-  availableTo: true,
   category: true,
-  comfortOptions: true,
   company: {
     select: {
       avatar: true,
@@ -225,14 +217,9 @@ const prismaSelectListingOwnerNested = {
       slug: true,
     },
   },
-  condition: true,
-  containerType: true,
-  contractType: true,
   createdAt: true,
   description: true,
-  entryOptions: true,
   expiresAt: true,
-  floorLevel: true,
   id: true,
   images: {
     orderBy: {
@@ -277,22 +264,18 @@ const prismaSelectListingOwnerNested = {
       streetNumber: true,
     },
   },
-  minimumRentalDays: true,
-  negotiable: true,
-  parkingType: true,
-  plotType: true,
-  price: true,
-  securityOptions: true,
+  salaryFrom: true,
+  salaryTo: true,
+  showEmail: true,
+  showPhone: true,
   slug: true,
   status: true,
   title: true,
-  type: true,
-  unitType: true,
   updatedAt: true,
-  usageOptions: true,
   user: {
     select: {
       avatar: true,
+      email: true,
       firstName: true,
       id: true,
       lastName: true,
@@ -305,7 +288,7 @@ const prismaSelectListingOwnerNested = {
       },
     },
   },
-  utilityOptions: true,
+  workMode: true,
 } as const;
 
 export const prismaSelectCityNested = {
@@ -362,8 +345,7 @@ export const prismaSelectListings = {
 } as const;
 
 const prismaSelectListingMapNested = {
-  area: true,
-  contractType: true,
+  category: true,
   id: true,
   images: {
     orderBy: {
@@ -402,11 +384,11 @@ const prismaSelectListingMapNested = {
       streetNumber: true,
     },
   },
-  negotiable: true,
-  price: true,
+  salaryFrom: true,
+  salaryTo: true,
   slug: true,
   title: true,
-  type: true,
+  workMode: true,
 } as const;
 
 export const prismaSelectListingsMap = {

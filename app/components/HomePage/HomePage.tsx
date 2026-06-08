@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -42,6 +42,11 @@ export const HomePage = ({ latestListings }: T_HomePage) => {
 
   return (
     <>
+      <Box bg="red.7" px={16} py={10} style={{ textAlign: "center" }} w="100%">
+        <Text c="white" fw={700} size="sm">
+          {tCommon("homeShutdownAlert")}
+        </Text>
+      </Box>
       <SearchListingsFiltersSection
         pageMeta={{
           customJsonLd,

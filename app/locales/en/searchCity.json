@@ -1,12 +1,12 @@
 {
   "contentBlock": {
-    "description": "In {{city}} ({{voivodeship}} voivodeship) you'll find {{count}} current listings - from garages and parking spots through warehouses, units and plots, to storage units and attics. Compare prices, check locations and find the space that fits your needs. The offers also cover selected districts of {{city}}.",
-    "descriptionEmpty": "There are no active listings in {{city}} ({{voivodeship}} voivodeship) on do-pracy.pl yet. If you have an unused space - a garage, warehouse, plot or storage unit - add your listing and be the first to reach people looking for space in {{city}}.",
-    "titleNoListings": "Rent and sale of spaces in {{city}}",
-    "titleWithListings": "Rent and sale of spaces in {{city}} - {{count}} current listings"
+    "description": "In {{city}} ({{voivodeship}} voivodeship) you'll find {{count}} current job offers across many categories - from IT, sales and marketing, through finance, logistics and production, to hospitality, healthcare and education. Compare positions, check salaries and find the job that fits your needs. The offers include on-site, remote and hybrid work in {{city}}.",
+    "descriptionEmpty": "There are no active job offers in {{city}} ({{voivodeship}} voivodeship) on do-pracy.pl yet. If you are looking for employees - for positions in IT, sales, production or administration - add your job offer and be the first to reach candidates looking for work in {{city}}.",
+    "titleNoListings": "Job offers in {{city}}",
+    "titleWithListings": "Job offers in {{city}} - {{count}} current offers"
   },
-  "description": "Select the listing category that interests you. This way, we’ll show you only the offers that best match your needs.",
-  "descriptionDistrict": "Select the listing category you're interested in. We'll show only the offers that best match your needs.",
+  "description": "Select the job category that interests you. This way, we’ll show you only the offers that best match your needs.",
+  "descriptionDistrict": "Select the districts you're interested in. We'll show only job offers from the selected areas.",
   "title": "Choose a category or select a district below",
   "titleCategory": "Select a category",
   "titleDistrict": "Or maybe a district?"

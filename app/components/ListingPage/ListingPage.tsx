@@ -18,9 +18,8 @@ import { useUserCookie } from "~/hooks/useUserCookie";
 import { formNames } from "~/lib/zodFormValidator";
 import {
   allLocationRadius,
-  E_ListingCategory,
-  E_ListingContractType,
-  E_ListingType,
+  E_ListingStatus,
+  E_WorkMode,
   getCategorySlug,
 } from "~/models/enums";
 import { T_Listing } from "~/models/listing";
@@ -42,10 +41,7 @@ import {
   generateLocationAddress,
   normalizeSearch,
 } from "~/utilities/functions";
-import {
-  formatAmountToNumber,
-  generateListingPriceToShowFromTypeAndContractType,
-} from "~/utilities/price";
+import { generateSalaryRange } from "~/utilities/price";
 
 const ModalReport = dynamic(() =>
   import("~/ui/ModalReport").then(module => ({
@@ -71,6 +67,10 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
 
   const { isMobile } = useLayout();
   const { userCookie } = useUserCookie();
+
+  const isArchived =
+    listing.status !== E_ListingStatus.ACTIVE ||
+    (listing.expiresAt ? dayjs(listing.expiresAt).isBefore(dayjs()) : false);
 
   const fetcher = useFetcherWithActions({
     disabledLoader: true,
@@ -142,130 +142,12 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
     route: E_Routes.listings,
   })}`;
 
-  const priceNumber = formatAmountToNumber(listing.price ?? 0);
   const street =
     [listing.location?.streetName, listing.location?.streetNumber]
       .filter(Boolean)
       .join(" ") || undefined;
 
-  const itemConditionMap: Record<string, string> = {
-    FINISHED: "https://schema.org/UsedCondition",
-    NEEDS_RENOVATION: "https://schema.org/UsedCondition",
-    NEW: "https://schema.org/NewCondition",
-    PARTIALLY_FINISHED: "https://schema.org/UsedCondition",
-    RAW: "https://schema.org/UsedCondition",
-  };
-  const itemCondition = listing.condition
-    ? itemConditionMap[listing.condition]
-    : undefined;
-
-  const isRent = listing.type === E_ListingType.RENT;
-  const unitCode = isRent
-    ? listing.contractType === E_ListingContractType.SHORT_TERM
-      ? "DAY"
-      : "MON"
-    : undefined;
-
-  const offerPriceSpecification = unitCode
-    ? {
-        "@type": "UnitPriceSpecification",
-        price: priceNumber,
-        priceCurrency: "PLN",
-        referenceQuantity: {
-          "@type": "QuantitativeValue",
-          unitCode,
-          value: 1,
-        },
-      }
-    : undefined;
-
-  const additionalProperties: Array<Record<string, unknown>> = [];
-  if (typeof listing.area === "number" && listing.area > 0) {
-    additionalProperties.push({
-      "@type": "PropertyValue",
-      name: "area",
-      unitCode: "MTK",
-      unitText: "m²",
-      value: listing.area,
-    });
-  }
-  if (listing.floorLevel != null) {
-    additionalProperties.push({
-      "@type": "PropertyValue",
-      name: "floorLevel",
-      value: listing.floorLevel,
-    });
-  }
-
-  const customJsonLd: Array<Record<string, unknown>> = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Product",
-      ...(additionalProperties.length > 0
-        ? { additionalProperty: additionalProperties }
-        : {}),
-      ...(listing.images && listing.images.length > 0
-        ? {
-            image: listing.images
-              .map(image => image.url)
-              .filter((url): url is string => typeof url === "string"),
-          }
-        : {}),
-      category: tCommon(`listingCategory.${listing.category}`),
-      description: validDescription || validTitle,
-      ...(itemCondition ? { itemCondition } : {}),
-      name: validTitle,
-      offers: {
-        "@type": "Offer",
-        availability: "https://schema.org/InStock",
-        ...(itemCondition ? { itemCondition } : {}),
-        price: priceNumber,
-        priceCurrency: "PLN",
-        ...(offerPriceSpecification
-          ? { priceSpecification: offerPriceSpecification }
-          : {}),
-        ...(listing.expiresAt
-          ? {
-              priceValidUntil: dayjs(listing.expiresAt).format("YYYY-MM-DD"),
-            }
-          : {}),
-        url: fullListingUrl,
-        ...(listing.availableFrom
-          ? { validFrom: dayjs(listing.availableFrom).toISOString() }
-          : {}),
-        ...(listing.availableTo
-          ? { validThrough: dayjs(listing.availableTo).toISOString() }
-          : {}),
-      },
-      url: fullListingUrl,
-    },
-  ];
-
-  if (listing.location?.lat && listing.location?.lng) {
-    customJsonLd.push({
-      "@context": "https://schema.org",
-      "@type": "Place",
-      address: {
-        "@type": "PostalAddress",
-        addressCountry: "PL",
-        ...(validCitySearchName
-          ? { addressLocality: validCitySearchName }
-          : {}),
-        ...(listing.location?.postalCode
-          ? { postalCode: listing.location.postalCode }
-          : {}),
-        ...(street ? { streetAddress: street } : {}),
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: listing.location.lat,
-        longitude: listing.location.lng,
-      },
-      name: validTitle,
-    });
-  }
-
-  const realEstateAddress = {
+  const jobAddress = {
     "@type": "PostalAddress",
     addressCountry: "PL",
     ...(validCitySearchName ? { addressLocality: validCitySearchName } : {}),
@@ -275,49 +157,60 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
     ...(street ? { streetAddress: street } : {}),
   };
 
-  customJsonLd.push({
-    "@context": "https://schema.org",
-    "@type": "RealEstateListing",
-    ...(additionalProperties.length > 0
-      ? { additionalProperty: additionalProperties }
-      : {}),
-    address: realEstateAddress,
-    datePosted: listing.createdAt
-      ? dayjs(listing.createdAt).toISOString()
-      : undefined,
-    description: validDescription || validTitle,
-    ...(listing.images && listing.images.length > 0
-      ? {
-          image: listing.images
-            .map(image => image.url)
-            .filter((url): url is string => typeof url === "string"),
-        }
-      : {}),
-    ...(typeof listing.area === "number" && listing.area > 0
-      ? {
-          floorSize: {
-            "@type": "QuantitativeValue",
-            unitCode: "MTK",
-            value: listing.area,
-          },
-        }
-      : {}),
-    ...(listing.expiresAt
-      ? { leaseLength: dayjs(listing.expiresAt).format("YYYY-MM-DD") }
-      : {}),
-    name: validTitle,
-    offers: {
-      "@type": "Offer",
-      availability: "https://schema.org/InStock",
-      price: priceNumber,
-      priceCurrency: "PLN",
-      ...(offerPriceSpecification
-        ? { priceSpecification: offerPriceSpecification }
+  const customJsonLd: Array<Record<string, unknown>> = [
+    {
+      "@context": "https://schema.org",
+      "@type": "JobPosting",
+      ...(listing.salaryFrom != null || listing.salaryTo != null
+        ? {
+            baseSalary: {
+              "@type": "MonetaryAmount",
+              currency: "PLN",
+              value: {
+                "@type": "QuantitativeValue",
+                ...(listing.salaryFrom == null
+                  ? {}
+                  : { minValue: listing.salaryFrom }),
+                ...(listing.salaryTo == null
+                  ? {}
+                  : { maxValue: listing.salaryTo }),
+                unitText: "MONTH",
+              },
+            },
+          }
         : {}),
+      datePosted: listing.createdAt
+        ? dayjs(listing.createdAt).toISOString()
+        : undefined,
+      description: validDescription || validTitle,
+      hiringOrganization: {
+        "@type": "Organization",
+        name: listing.company?.name ?? tCommon("company.name"),
+      },
+      industry: tCommon(`listingCategory.${listing.category}`),
+      jobLocation: {
+        "@type": "Place",
+        address: jobAddress,
+        ...(listing.location?.lat && listing.location?.lng
+          ? {
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: listing.location.lat,
+                longitude: listing.location.lng,
+              },
+            }
+          : {}),
+      },
+      ...(listing.workMode === E_WorkMode.REMOTE
+        ? { jobLocationType: "TELECOMMUTE" }
+        : {}),
+      title: validTitle,
       url: fullListingUrl,
+      ...(listing.expiresAt
+        ? { validThrough: dayjs(listing.expiresAt).toISOString() }
+        : {}),
     },
-    url: fullListingUrl,
-  });
+  ];
 
   useEffect(() => {
     if (firedReference.current || userCookie?.userId === listing?.user?.id) {
@@ -346,15 +239,7 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
       if (navigator.share) {
         await navigator.share({
           text: t("share.text"),
-          title: `${validTitle} - ${generateListingPriceToShowFromTypeAndContractType(
-            {
-              contractType: listing.contractType,
-              negotiable: listing.negotiable,
-              price: listing.price,
-              tCommon,
-              type: listing.type,
-            },
-          )}`,
+          title: validTitle,
           url: `${globalThis.location.origin}${getLocalizedRoute({
             extraPath: `/${listing.slug ?? listing.id}`,
             route: E_Routes.listings,
@@ -389,38 +274,6 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
   const handleCloseOpenedMobileMap = useCallback(() => {
     setOpenedMobileMap(false);
   }, []);
-
-  const mapSecurityOptions = listing?.securityOptions?.map(item => {
-    return (
-      <Badge key={`securityOption_${item}`}>
-        {tCommon(`listingSecurityOption.${item}`)}
-      </Badge>
-    );
-  });
-
-  const mapComfortOptions = listing?.comfortOptions?.map(item => {
-    return (
-      <Badge key={`comfortOption_${item}`}>
-        {tCommon(`listingComfortOption.${item}`)}
-      </Badge>
-    );
-  });
-
-  const mapUtilityOptions = listing?.utilityOptions?.map(item => {
-    return (
-      <Badge key={`utilityOption_${item}`}>
-        {tCommon(`listingUtilityOption.${item}`)}
-      </Badge>
-    );
-  });
-
-  const mapUsageOptions = listing?.usageOptions?.map(item => {
-    return (
-      <Badge key={`usageOption_${item}`}>
-        {tCommon(`listingUsageOptions.${item}`)}
-      </Badge>
-    );
-  });
 
   const selectedMap = listing?.location && (
     <Map
@@ -458,21 +311,15 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
       <Box>
         <Title>{validTitle}</Title>
         <Flex direction="column" gap={8} pt={12}>
-          {listing?.area && (
-            <Badge size="lg" variant="dot">
-              {tCommon("cardSearchListing.area", {
-                count: Number(listing.area),
-              })}
-            </Badge>
-          )}
-          {listing?.price && (
+          <Badge size="lg" variant="dot">
+            {tCommon(`workMode.${listing.workMode}`)}
+          </Badge>
+          {(listing?.salaryFrom != null || listing?.salaryTo != null) && (
             <Badge color="teal" size="lg">
-              {generateListingPriceToShowFromTypeAndContractType({
-                contractType: listing.contractType,
-                negotiable: listing.negotiable,
-                price: listing.price,
+              {generateSalaryRange({
+                salaryFrom: listing.salaryFrom,
+                salaryTo: listing.salaryTo,
                 tCommon,
-                type: listing.type,
               })}
             </Badge>
           )}
@@ -548,40 +395,66 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
         onClose={handleOpenedModalReport}
         opened={openedModalReport}
       />
+      {isArchived && (
+        <Box bg="red.7" px={16} py={10} style={{ textAlign: "center" }} w="100%">
+          <Text c="white" fw={700} size="sm">
+            {tCommon("listingArchivedNotice")}
+            {listing.expiresAt
+              ? ` ${tCommon("listingArchivedExpiredAt", {
+                  date: dayjs(listing.expiresAt).format("DD.MM.YYYY"),
+                })}`
+              : ""}
+          </Text>
+        </Box>
+      )}
       <Section
-        breadcrumbs={[
-          E_Routes.home,
-          E_Routes.search,
-          {
-            customHref: getLocalizedRoute({
-              extraPath: `/${getCategorySlug(listing?.category)}`,
-              route: E_Routes.search,
-              ...(isSameCityNearest
-                ? {}
-                : {
-                    extraQuery: {
-                      [formNames.locationRadius]: (
-                        allLocationRadius.at(-1) ?? ""
-                      )?.toString(),
-                    },
+        breadcrumbs={
+          isArchived
+            ? [
+                E_Routes.home,
+                E_Routes.archive,
+                {
+                  customHref: getLocalizedRoute({
+                    extraPath: `/${listing.slug}`,
+                    route: E_Routes.listings,
                   }),
-            }),
-            customTitle: listing?.category
-              ? tCommon(`listingCategoryPlural.${listing.category}`)
-              : "",
-          },
-          {
-            customHref: linkCurrent,
-            customTitle: validCitySearchName,
-          },
-          {
-            customHref: getLocalizedRoute({
-              extraPath: `/${listing.slug}`,
-              route: E_Routes.listings,
-            }),
-            customTitle: t("title"),
-          },
-        ]}
+                  customTitle: t("title"),
+                },
+              ]
+            : [
+                E_Routes.home,
+                E_Routes.search,
+                {
+                  customHref: getLocalizedRoute({
+                    extraPath: `/${getCategorySlug(listing?.category)}`,
+                    route: E_Routes.search,
+                    ...(isSameCityNearest
+                      ? {}
+                      : {
+                          extraQuery: {
+                            [formNames.locationRadius]: (
+                              allLocationRadius.at(-1) ?? ""
+                            )?.toString(),
+                          },
+                        }),
+                  }),
+                  customTitle: listing?.category
+                    ? tCommon(`listingCategoryPlural.${listing.category}`)
+                    : "",
+                },
+                {
+                  customHref: linkCurrent,
+                  customTitle: validCitySearchName,
+                },
+                {
+                  customHref: getLocalizedRoute({
+                    extraPath: `/${listing.slug}`,
+                    route: E_Routes.listings,
+                  }),
+                  customTitle: t("title"),
+                },
+              ]
+        }
         pageMeta={{
           customDescription: validDescription,
           customJsonLd,
@@ -669,83 +542,9 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
                   </Badge>
                 </Flex>
               </Box>
-              {listing.category === E_ListingCategory.PARKING &&
-                listing?.parkingType && (
-                  <Box>
-                    <Text fw="bold" pb={4} size="lg">
-                      {tCommon("inputs.listingParkingType")}
-                    </Text>
-                    <Flex
-                      align="flex-start"
-                      gap={8}
-                      justify="flex-start"
-                      wrap="wrap"
-                    >
-                      <Badge>
-                        {tCommon(`listingParkingType.${listing.parkingType}`)}
-                      </Badge>
-                    </Flex>
-                  </Box>
-                )}
-              {listing.category === E_ListingCategory.CONTAINER &&
-                listing?.containerType && (
-                  <Box>
-                    <Text fw="bold" pb={4} size="lg">
-                      {tCommon("inputs.listingContainerType")}
-                    </Text>
-                    <Flex
-                      align="flex-start"
-                      gap={8}
-                      justify="flex-start"
-                      wrap="wrap"
-                    >
-                      <Badge>
-                        {tCommon(
-                          `listingContainerType.${listing.containerType}`,
-                        )}
-                      </Badge>
-                    </Flex>
-                  </Box>
-                )}
-              {listing.category === E_ListingCategory.UNIT &&
-                listing?.unitType && (
-                  <Box>
-                    <Text fw="bold" pb={4} size="lg">
-                      {tCommon("inputs.listingUnitType")}
-                    </Text>
-                    <Flex
-                      align="flex-start"
-                      gap={8}
-                      justify="flex-start"
-                      wrap="wrap"
-                    >
-                      <Badge>
-                        {tCommon(`listingUnitType.${listing.unitType}`)}
-                      </Badge>
-                    </Flex>
-                  </Box>
-                )}
-              {listing.category === E_ListingCategory.PLOT &&
-                listing?.plotType && (
-                  <Box>
-                    <Text fw="bold" pb={4} size="lg">
-                      {tCommon("inputs.listingPlotType")}
-                    </Text>
-                    <Flex
-                      align="flex-start"
-                      gap={8}
-                      justify="flex-start"
-                      wrap="wrap"
-                    >
-                      <Badge>
-                        {tCommon(`listingPlotType.${listing.plotType}`)}
-                      </Badge>
-                    </Flex>
-                  </Box>
-                )}
               <Box>
                 <Text fw="bold" pb={4} size="lg">
-                  {tCommon("inputs.listingType")}
+                  {tCommon("inputs.listingWorkMode")}
                 </Text>
                 <Flex
                   align="flex-start"
@@ -753,13 +552,13 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
                   justify="flex-start"
                   wrap="wrap"
                 >
-                  <Badge>{tCommon(`listingType.${listing.type}`)}</Badge>
+                  <Badge>{tCommon(`workMode.${listing.workMode}`)}</Badge>
                 </Flex>
               </Box>
-              {listing.contractType && listing.type === E_ListingType.RENT && (
+              {(listing?.salaryFrom != null || listing?.salaryTo != null) && (
                 <Box>
                   <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingContractType")}
+                    {tCommon("inputs.listingSalary")}
                   </Text>
                   <Flex
                     align="flex-start"
@@ -767,116 +566,13 @@ export const ListingPage = ({ listing }: T_ListingPage) => {
                     justify="flex-start"
                     wrap="wrap"
                   >
-                    <Badge>
-                      {tCommon(`listingContractType.${listing.contractType}`)}
+                    <Badge color="teal">
+                      {generateSalaryRange({
+                        salaryFrom: listing.salaryFrom,
+                        salaryTo: listing.salaryTo,
+                        tCommon,
+                      })}
                     </Badge>
-                  </Flex>
-                </Box>
-              )}
-              {listing.contractType === E_ListingContractType.SHORT_TERM && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingMinimumRentalDays")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    <Badge>{listing.minimumRentalDays}</Badge>
-                  </Flex>
-                </Box>
-              )}
-              {listing?.condition && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingCondition")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    <Badge>
-                      {tCommon(`listingCondition.${listing.condition}`)}
-                    </Badge>
-                  </Flex>
-                </Box>
-              )}
-              {listing?.access && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingAccess")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    <Badge>{tCommon(`listingAccess.${listing.access}`)}</Badge>
-                  </Flex>
-                </Box>
-              )}
-              {(listing?.securityOptions ?? [])?.length > 0 && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingSecurityOption")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    {mapSecurityOptions}
-                  </Flex>
-                </Box>
-              )}
-              {(listing?.utilityOptions ?? [])?.length > 0 && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingUtilityOption")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    {mapUtilityOptions}
-                  </Flex>
-                </Box>
-              )}
-              {(listing?.comfortOptions ?? [])?.length > 0 && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingComfortOption")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    {mapComfortOptions}
-                  </Flex>
-                </Box>
-              )}
-              {(listing?.usageOptions ?? [])?.length > 0 && (
-                <Box>
-                  <Text fw="bold" pb={4} size="lg">
-                    {tCommon("inputs.listingUsageOption")}
-                  </Text>
-                  <Flex
-                    align="flex-start"
-                    gap={8}
-                    justify="flex-start"
-                    wrap="wrap"
-                  >
-                    {mapUsageOptions}
                   </Flex>
                 </Box>
               )}

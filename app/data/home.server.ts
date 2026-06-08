@@ -26,9 +26,7 @@ import {
 } from "./listingCounts.server";
 import {
   E_ListingCategoryServer,
-  E_ListingContractTypeServer,
   E_ListingStatusServer,
-  E_ListingTypeServer,
   T_ListingCategoryServer,
 } from "./models.server";
 import {
@@ -82,61 +80,24 @@ export const getListingsSearch = async ({
 
   try {
     const resultValidator = await checkZodValidator({
-      arrayData: [
-        formNames.listingParkingTypes,
-        formNames.listingContainerTypes,
-        formNames.listingPlotTypes,
-        formNames.listingUnitTypes,
-      ],
+      arrayData: [formNames.listingWorkModes],
       queryData: [
         formNames.limit,
         formNames.page,
-        formNames.listingCondition,
-        formNames.listingParkingTypes,
-        formNames.listingContainerTypes,
-        formNames.listingPlotTypes,
-        formNames.listingUnitTypes,
         formNames.listingDistrict,
         formNames.listingDistrictId,
         formNames.listingCityId,
-        formNames.listingAvailableFrom,
-        formNames.listingType,
-        formNames.listingContractType,
-        formNames.listingAccess,
-        formNames.listingRentalDays,
-        formNames.checkboxListingShortTerm,
-        formNames.checkboxListingLongTerm,
+        formNames.listingWorkModes,
         formNames.locationRadius,
       ],
       request,
       validator: {
-        [formNames.checkboxListingLongTerm]:
-          zodValidator.checkboxQuery.optional(),
-        [formNames.checkboxListingShortTerm]:
-          zodValidator.checkboxQuery.optional(),
         [formNames.limit]: zodValidator.limit.optional(),
-        [formNames.listingAccess]: zodValidator.listingAccess.optional(),
-        [formNames.listingAvailableFrom]: zodValidator.date.optional(),
         [formNames.listingCityId]: zodValidator.listingCityId.optional(),
-        [formNames.listingCondition]: zodValidator.listingCondition.optional(),
-        [formNames.listingContainerTypes]: zodValidator.listingContainerType
-          .array()
-          .optional(),
-        [formNames.listingContractType]:
-          zodValidator.listingContractType.optional(),
         [formNames.listingDistrict]: zodValidator.listingDistrict.optional(),
         [formNames.listingDistrictId]:
           zodValidator.listingDistrictId.optional(),
-        [formNames.listingParkingTypes]: zodValidator.listingParkingType
-          .array()
-          .optional(),
-        [formNames.listingPlotTypes]: zodValidator.listingPlotType
-          .array()
-          .optional(),
-        [formNames.listingRentalDays]:
-          zodValidator.listingRentalDays.optional(),
-        [formNames.listingType]: zodValidator.listingType.optional(),
-        [formNames.listingUnitTypes]: zodValidator.listingUnitType
+        [formNames.listingWorkModes]: zodValidator.listingWorkMode
           .array()
           .optional(),
         [formNames.locationRadius]: zodValidator.locationRadius.optional(),
@@ -153,22 +114,11 @@ export const getListingsSearch = async ({
     }
 
     const {
-      checkboxListingLongTerm,
-      checkboxListingShortTerm,
       limit = 10,
-      listingAccess,
-      listingAvailableFrom,
       listingCityId,
-      listingCondition,
-      listingContainerTypes = [],
-      listingContractType,
       listingDistrict,
       listingDistrictId,
-      listingParkingTypes = [],
-      listingPlotTypes = [],
-      listingRentalDays,
-      listingType,
-      listingUnitTypes = [],
+      listingWorkModes = [],
       locationRadius,
       page = 1,
     } = resultValidator.data;
@@ -214,14 +164,6 @@ export const getListingsSearch = async ({
       resolvedDistrictId = foundDistrict?.id;
     }
 
-    let contractType = listingContractType;
-
-    if (checkboxListingShortTerm) {
-      contractType = E_ListingContractTypeServer.SHORT_TERM;
-    } else if (checkboxListingLongTerm) {
-      contractType = E_ListingContractTypeServer.LONG_TERM;
-    }
-
     const searchListings = {
       category: listingCategory,
       expiresAt: {
@@ -245,78 +187,11 @@ export const getListingsSearch = async ({
                   : {}),
               },
       },
-      OR: [{ availableTo: null }, { availableTo: { gt: now } }],
       status: E_ListingStatusServer.ACTIVE,
-      ...(listingCategory && listingCondition
+      ...(listingWorkModes && listingWorkModes.length > 0
         ? {
-            condition: listingCondition,
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.PARKING &&
-      listingParkingTypes &&
-      listingParkingTypes.length > 0
-        ? {
-            parkingType: {
-              in: listingParkingTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.CONTAINER &&
-      listingContainerTypes &&
-      listingContainerTypes.length > 0
-        ? {
-            containerType: {
-              in: listingContainerTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.PLOT &&
-      listingPlotTypes &&
-      listingPlotTypes.length > 0
-        ? {
-            plotType: {
-              in: listingPlotTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.UNIT &&
-      listingUnitTypes &&
-      listingUnitTypes.length > 0
-        ? {
-            unitType: {
-              in: listingUnitTypes,
-            },
-          }
-        : {}),
-      ...(listingAvailableFrom
-        ? {
-            availableFrom: {
-              lte: listingAvailableFrom,
-            },
-          }
-        : {}),
-      ...(listingAccess
-        ? {
-            access: listingAccess,
-          }
-        : {}),
-      ...((listingContractType ||
-        checkboxListingShortTerm ||
-        checkboxListingLongTerm) &&
-      listingType === E_ListingTypeServer.RENT
-        ? {
-            contractType,
-          }
-        : {}),
-      ...(listingType
-        ? {
-            type: listingType,
-          }
-        : {}),
-      ...(listingType === E_ListingTypeServer.RENT && listingRentalDays
-        ? {
-            minimumRentalDays: {
-              lte: listingRentalDays,
+            workMode: {
+              in: listingWorkModes,
             },
           }
         : {}),
@@ -325,7 +200,6 @@ export const getListingsSearch = async ({
     const redisFilters = {
       ...omitNested(searchListings, {
         expiresAt: false,
-        OR: false,
       }),
       lastId,
       skip,
@@ -428,12 +302,7 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
 
   try {
     const resultValidator = await checkZodValidator({
-      arrayData: [
-        formNames.listingParkingTypes,
-        formNames.listingContainerTypes,
-        formNames.listingPlotTypes,
-        formNames.listingUnitTypes,
-      ],
+      arrayData: [formNames.listingWorkModes],
       queryData: [
         formNames.mapLocationEast,
         formNames.mapLocationNorth,
@@ -441,55 +310,23 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
         formNames.mapLocationWest,
         formNames.mapZoom,
         formNames.listingCategory,
-        formNames.listingCondition,
-        formNames.listingParkingTypes,
-        formNames.listingContainerTypes,
-        formNames.listingPlotTypes,
-        formNames.listingUnitTypes,
+        formNames.listingWorkModes,
         formNames.listingCity,
         formNames.listingCityId,
         formNames.listingDistrict,
         formNames.listingDistrictId,
-        formNames.listingAvailableFrom,
-        formNames.listingType,
-        formNames.listingContractType,
-        formNames.listingAccess,
         formNames.isMobile,
-        formNames.listingRentalDays,
-        formNames.checkboxListingShortTerm,
-        formNames.checkboxListingLongTerm,
       ],
       request,
       validator: {
-        [formNames.checkboxListingLongTerm]:
-          zodValidator.checkboxQuery.optional(),
-        [formNames.checkboxListingShortTerm]:
-          zodValidator.checkboxQuery.optional(),
         [formNames.isMobile]: zodValidator.isMobileQuery,
-        [formNames.listingAccess]: zodValidator.listingAccess.optional(),
-        [formNames.listingAvailableFrom]: zodValidator.date.optional(),
         [formNames.listingCategory]: zodValidator.listingCategory,
         [formNames.listingCity]: zodValidator.listingCity,
         [formNames.listingCityId]: zodValidator.listingCityId.optional(),
-        [formNames.listingCondition]: zodValidator.listingCondition.optional(),
-        [formNames.listingContainerTypes]: zodValidator.listingContainerType
-          .array()
-          .optional(),
-        [formNames.listingContractType]:
-          zodValidator.listingContractType.optional(),
         [formNames.listingDistrict]: zodValidator.listingDistrict.optional(),
         [formNames.listingDistrictId]:
           zodValidator.listingDistrictId.optional(),
-        [formNames.listingParkingTypes]: zodValidator.listingParkingType
-          .array()
-          .optional(),
-        [formNames.listingPlotTypes]: zodValidator.listingPlotType
-          .array()
-          .optional(),
-        [formNames.listingRentalDays]:
-          zodValidator.listingRentalDays.optional(),
-        [formNames.listingType]: zodValidator.listingType.optional(),
-        [formNames.listingUnitTypes]: zodValidator.listingUnitType
+        [formNames.listingWorkModes]: zodValidator.listingWorkMode
           .array()
           .optional(),
         [formNames.mapLocationEast]: zodValidator.mapLocationEast,
@@ -509,24 +346,13 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
     }
 
     const {
-      checkboxListingLongTerm,
-      checkboxListingShortTerm,
       isMobile,
-      listingAccess,
-      listingAvailableFrom,
       listingCategory,
       listingCity,
       listingCityId,
-      listingCondition,
-      listingContainerTypes = [],
-      listingContractType,
       listingDistrict,
       listingDistrictId,
-      listingParkingTypes = [],
-      listingPlotTypes = [],
-      listingRentalDays,
-      listingType,
-      listingUnitTypes = [],
+      listingWorkModes = [],
       mapLocationEast,
       mapLocationNorth,
       mapLocationSouth,
@@ -552,14 +378,6 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
         d => d.nameSearch === listingDistrict.toLowerCase(),
       );
       resolvedDistrictIdMap = foundDistrict?.id;
-    }
-
-    let contractType = listingContractType;
-
-    if (checkboxListingShortTerm) {
-      contractType = E_ListingContractTypeServer.SHORT_TERM;
-    } else if (checkboxListingLongTerm) {
-      contractType = E_ListingContractTypeServer.LONG_TERM;
     }
 
     const searchListingsMap = {
@@ -590,78 +408,11 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
                   : {}),
               },
       },
-      OR: [{ availableTo: null }, { availableTo: { gt: now } }],
-      ...(listingCategory && listingCondition
-        ? {
-            condition: listingCondition,
-          }
-        : {}),
       status: E_ListingStatusServer.ACTIVE,
-      ...(listingCategory === E_ListingCategoryServer.PARKING &&
-      listingParkingTypes &&
-      listingParkingTypes.length > 0
+      ...(listingWorkModes && listingWorkModes.length > 0
         ? {
-            parkingType: {
-              in: listingParkingTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.CONTAINER &&
-      listingContainerTypes &&
-      listingContainerTypes.length > 0
-        ? {
-            containerType: {
-              in: listingContainerTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.PLOT &&
-      listingPlotTypes &&
-      listingPlotTypes.length > 0
-        ? {
-            plotType: {
-              in: listingPlotTypes,
-            },
-          }
-        : {}),
-      ...(listingCategory === E_ListingCategoryServer.UNIT &&
-      listingUnitTypes &&
-      listingUnitTypes.length > 0
-        ? {
-            unitType: {
-              in: listingUnitTypes,
-            },
-          }
-        : {}),
-      ...(listingAvailableFrom
-        ? {
-            availableFrom: {
-              lte: listingAvailableFrom,
-            },
-          }
-        : {}),
-      ...(listingAccess
-        ? {
-            access: listingAccess,
-          }
-        : {}),
-      ...((listingContractType ||
-        checkboxListingShortTerm ||
-        checkboxListingLongTerm) &&
-      listingType === E_ListingTypeServer.RENT
-        ? {
-            contractType,
-          }
-        : {}),
-      ...(listingType
-        ? {
-            type: listingType,
-          }
-        : {}),
-      ...(listingType === E_ListingTypeServer.RENT && listingRentalDays
-        ? {
-            minimumRentalDays: {
-              lte: listingRentalDays,
+            workMode: {
+              in: listingWorkModes,
             },
           }
         : {}),
@@ -672,7 +423,6 @@ export const getListingsMap = async ({ request }: { request: Request }) => {
     const redisFilters = {
       ...omitNested(searchListingsMap, {
         expiresAt: false,
-        OR: false,
       }),
       take: maxTakePoints,
     };
@@ -773,7 +523,6 @@ export const getLatestListings = async ({ request }: { request: Request }) => {
         expiresAt: {
           gt: now,
         },
-        OR: [{ availableTo: null }, { availableTo: { gt: now } }],
         status: E_ListingStatusServer.ACTIVE,
       },
     });

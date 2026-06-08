@@ -1,12 +1,10 @@
 {
   "company": {
-    "address": "ul. Sienkiewicza 36/5, 26-600 Radom",
     "link": "https://do-pracy.pl",
-    "name": "do-pracy.pl",
-    "taxId": "9482656317"
+    "name": "do-pracy.pl"
   },
   "footer": {
-    "content": "{{companyName}}<br/>{{companyAddress}}<br/>Tax ID: {{companyTaxId}}<br/><br/>©{{currentYear}} {{companyName}} - thank you for being with us",
+    "content": "{{companyName}}",
     "faq": "<b>Have questions?</b> We have prepared a [Questions and Answers](https://do-pracy.pl/pomoc) section.<br/>If needed, please visit our [Contact](https://do-pracy.pl/kontakt) page.<br/><br/>Kind regards,<br/>The do-pracy.pl Team",
     "policyPrivacy": "Privacy Policy",
     "termsAndCondition": "Terms and Conditions",

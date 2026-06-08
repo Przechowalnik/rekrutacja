@@ -59,11 +59,6 @@ export const E_BugStatus = {
   RESOLVED: "RESOLVED",
 } as const;
 
-export const E_ListingType = {
-  RENT: "RENT",
-  SALE: "SALE",
-} as const;
-
 export const E_ListingStatus = {
   ACTIVE: "ACTIVE",
   ARCHIVED: "ARCHIVED",
@@ -79,8 +74,7 @@ export const E_ListingDeleteReason = {
   DUPLICATE: "DUPLICATE",
   NO_LONGER_AVAILABLE: "NO_LONGER_AVAILABLE",
   OTHER: "OTHER",
-  RENTED: "RENTED",
-  SOLD: "SOLD",
+  POSITION_FILLED: "POSITION_FILLED",
 } as const;
 
 export const E_ListingPaymentStatus = {
@@ -92,119 +86,50 @@ export const E_ListingPaymentStatus = {
   UNPAID: "UNPAID",
 } as const;
 
-export const E_ListingSecurityOption = {
-  ALARM: "ALARM",
-  AUTOMATIC_GATE: "AUTOMATIC_GATE",
-  BARRIER: "BARRIER",
-  DOOR_LOCK: "DOOR_LOCK",
-  ELECTRONIC_LOCK: "ELECTRONIC_LOCK",
-  MANUAL_GATE: "MANUAL_GATE",
-  MONITORING: "MONITORING",
-  PADLOCK: "PADLOCK",
-  REMOTE_CONTROL: "REMOTE_CONTROL",
-  SECURITY: "SECURITY",
-} as const;
-
-export const E_ListingAccess = {
-  ACCESS_24H: "ACCESS_24H",
-  LIMITED_HOURS: "LIMITED_HOURS",
-} as const;
-
-export const E_ListingUtilityOption = {
-  ELECTRICITY: "ELECTRICITY",
-  SEWAGE: "SEWAGE",
-  WATER: "WATER",
-} as const;
-
-export const E_ListingCondition = {
-  FINISHED: "FINISHED",
-  NEEDS_RENOVATION: "NEEDS_RENOVATION",
-  NEW: "NEW",
-  PARTIALLY_FINISHED: "PARTIALLY_FINISHED",
-  RAW: "RAW",
-} as const;
-
-export const E_ListingPlotType = {
-  AGRICULTURAL: "AGRICULTURAL",
-  BUILDING: "BUILDING",
-  FOREST: "FOREST",
-  INVESTMENT: "INVESTMENT",
-  RECREATIONAL: "RECREATIONAL",
-  SERVICE: "SERVICE",
-} as const;
-
-export const E_ListingUnitType = {
-  CONFERENCE_ROOM: "CONFERENCE_ROOM",
-  OFFICE: "OFFICE",
-  PRODUCTION: "PRODUCTION",
-  RETAIL: "RETAIL",
-  SERVICE: "SERVICE",
-  WAREHOUSE: "WAREHOUSE",
-} as const;
-
-export const E_ListingComfortOption = {
-  HEATED: "HEATED",
-  LIGHTING: "LIGHTING",
-  PARKING: "PARKING",
-  VENTILATION: "VENTILATION",
-} as const;
-
-export const E_ListingEntryOption = {
-  ELEVATOR: "ELEVATOR",
-  STAIRCASE: "STAIRCASE",
-  STREET_ENTRANCE: "STREET_ENTRANCE",
-} as const;
-
+// Job categories (branże) — recruitment board.
 export const E_ListingCategory = {
-  ATTIC: "ATTIC",
-  BANQUET_HALL: "BANQUET_HALL",
-  BASEMENT: "BASEMENT",
-  CONTAINER: "CONTAINER",
-  PARKING: "PARKING",
-  PLOT: "PLOT",
-  ROOM: "ROOM",
-  STORAGE_UNIT: "STORAGE_UNIT",
-  UNIT: "UNIT",
-  WAREHOUSE: "WAREHOUSE",
+  ADMINISTRATION: "ADMINISTRATION",
+  CONSTRUCTION: "CONSTRUCTION",
+  CUSTOMER_SERVICE: "CUSTOMER_SERVICE",
+  EDUCATION: "EDUCATION",
+  ENGINEERING: "ENGINEERING",
+  FINANCE: "FINANCE",
+  GASTRONOMY: "GASTRONOMY",
+  HEALTHCARE: "HEALTHCARE",
+  HR: "HR",
+  IT: "IT",
+  LAW: "LAW",
+  LOGISTICS: "LOGISTICS",
+  MARKETING: "MARKETING",
+  OTHER: "OTHER",
+  PRODUCTION: "PRODUCTION",
+  SALES: "SALES",
 } as const;
 
 export const E_ListingCategorySlug = {
-  ATTIC: "strychy",
-  BANQUET_HALL: "sala-bankietowa-weselna",
-  BASEMENT: "piwnice",
-  CONTAINER: "kontenery",
-  PARKING: "garaze-miejsca-postojowe",
-  PLOT: "dzialki",
-  ROOM: "pokoje",
-  STORAGE_UNIT: "komorki-lokatorskie",
-  UNIT: "lokale",
-  WAREHOUSE: "magazyny",
+  ADMINISTRATION: "administracja",
+  CONSTRUCTION: "budownictwo",
+  CUSTOMER_SERVICE: "obsluga-klienta",
+  EDUCATION: "edukacja",
+  ENGINEERING: "inzynieria",
+  FINANCE: "finanse-ksiegowosc",
+  GASTRONOMY: "gastronomia-hotelarstwo",
+  HEALTHCARE: "zdrowie-medycyna",
+  HR: "hr",
+  IT: "it",
+  LAW: "prawo",
+  LOGISTICS: "logistyka-transport",
+  MARKETING: "marketing",
+  OTHER: "inne",
+  PRODUCTION: "produkcja",
+  SALES: "sprzedaz",
 } as const;
 
-export const E_ListingUsageOptions = {
-  CAR_ACCESS: "CAR_ACCESS",
-  TIR_ACCESS: "TIR_ACCESS",
-} as const;
-
-export const E_ListingParkingType = {
-  DETACHED: "DETACHED",
-  GROUND_PLACE: "GROUND_PLACE",
-  MULTILEVEL_LIFT: "MULTILEVEL_LIFT",
-  UNDERGROUND: "UNDERGROUND",
-} as const;
-
-export const E_ListingContainerType = {
-  MARINE: "MARINE",
-  MODULAR_RESIDENTIAL: "MODULAR_RESIDENTIAL",
-  OFFICE_SOCIAL: "OFFICE_SOCIAL",
-  REFRIGERATED: "REFRIGERATED",
-  SANITARY: "SANITARY",
-  WAREHOUSE: "WAREHOUSE",
-} as const;
-
-export const E_ListingContractType = {
-  LONG_TERM: "LONG_TERM",
-  SHORT_TERM: "SHORT_TERM",
+// Work mode (tryb pracy).
+export const E_WorkMode = {
+  HYBRID: "HYBRID",
+  ONSITE: "ONSITE",
+  REMOTE: "REMOTE",
 } as const;
 
 export const E_ReportType = {
@@ -261,23 +186,11 @@ export const Z_CompanyWorkerPermissions = z.enum([
 export const Z_BugPriority = z.nativeEnum(E_BugPriority);
 export const Z_BugEnvironment = z.nativeEnum(E_BugEnvironment);
 export const Z_BugStatus = z.nativeEnum(E_BugStatus);
-export const Z_ListingType = z.nativeEnum(E_ListingType);
 export const Z_ListingStatus = z.nativeEnum(E_ListingStatus);
 export const Z_ListingDeleteReason = z.nativeEnum(E_ListingDeleteReason);
 export const Z_ListingPaymentStatus = z.nativeEnum(E_ListingPaymentStatus);
-export const Z_ListingAccess = z.nativeEnum(E_ListingAccess);
-export const Z_ListingSecurityOption = z.nativeEnum(E_ListingSecurityOption);
-export const Z_ListingUtilityOption = z.nativeEnum(E_ListingUtilityOption);
-export const Z_ListingCondition = z.nativeEnum(E_ListingCondition);
-export const Z_ListingComfortOption = z.nativeEnum(E_ListingComfortOption);
-export const Z_ListingPlotType = z.nativeEnum(E_ListingPlotType);
-export const Z_ListingUnitType = z.nativeEnum(E_ListingUnitType);
 export const Z_ListingCategory = z.nativeEnum(E_ListingCategory);
-export const Z_ListingEntryOption = z.nativeEnum(E_ListingEntryOption);
-export const Z_ListingUsageOptions = z.nativeEnum(E_ListingUsageOptions);
-export const Z_ListingParkingType = z.nativeEnum(E_ListingParkingType);
-export const Z_ListingContainerType = z.nativeEnum(E_ListingContainerType);
-export const Z_ListingContractType = z.nativeEnum(E_ListingContractType);
+export const Z_WorkMode = z.nativeEnum(E_WorkMode);
 export const Z_ReportType = z.nativeEnum(E_ReportType);
 
 // types
@@ -297,23 +210,11 @@ export type T_CompanyWorkerPermissions = z.infer<
 export type T_BugPriority = z.infer<typeof Z_BugPriority>;
 export type T_BugEnvironment = z.infer<typeof Z_BugEnvironment>;
 export type T_BugStatus = z.infer<typeof Z_BugStatus>;
-export type T_ListingType = z.infer<typeof Z_ListingType>;
 export type T_ListingPaymentStatus = z.infer<typeof Z_ListingPaymentStatus>;
 export type T_ListingStatus = z.infer<typeof Z_ListingStatus>;
 export type T_ListingDeleteReason = z.infer<typeof Z_ListingDeleteReason>;
 export type T_ListingCategory = z.infer<typeof Z_ListingCategory>;
-export type T_ListingAccess = z.infer<typeof Z_ListingAccess>;
-export type T_ListingSecurityOption = z.infer<typeof Z_ListingSecurityOption>;
-export type T_ListingUtilityOption = z.infer<typeof Z_ListingUtilityOption>;
-export type T_ListingCondition = z.infer<typeof Z_ListingCondition>;
-export type T_ListingComfortOption = z.infer<typeof Z_ListingComfortOption>;
-export type T_ListingPlotType = z.infer<typeof Z_ListingPlotType>;
-export type T_ListingUnitType = z.infer<typeof Z_ListingUnitType>;
-export type T_ListingEntryOption = z.infer<typeof Z_ListingEntryOption>;
-export type T_ListingUsageOptions = z.infer<typeof Z_ListingUsageOptions>;
-export type T_ListingParkingType = z.infer<typeof Z_ListingParkingType>;
-export type T_ListingContainerType = z.infer<typeof Z_ListingContainerType>;
-export type T_ListingContractType = z.infer<typeof Z_ListingContractType>;
+export type T_WorkMode = z.infer<typeof Z_WorkMode>;
 export type T_ReportType = z.infer<typeof Z_ReportType>;
 export type T_LocationRadius = 0 | 10 | 15 | 2 | 30 | 5;
 
@@ -382,11 +283,6 @@ export const allBugEnvironment: T_BugEnvironment[] = [
 
 export const allLanguages: T_Language[] = [E_Language.PL, E_Language.EN];
 
-export const allListingType: T_ListingType[] = [
-  E_ListingType.RENT,
-  E_ListingType.SALE,
-];
-
 export const allListingStatus: T_ListingStatus[] = [
   E_ListingStatus.ACTIVE,
   E_ListingStatus.INACTIVE,
@@ -398,8 +294,7 @@ export const allListingStatus: T_ListingStatus[] = [
 ];
 
 export const allListingDeleteReason: T_ListingDeleteReason[] = [
-  E_ListingDeleteReason.SOLD,
-  E_ListingDeleteReason.RENTED,
+  E_ListingDeleteReason.POSITION_FILLED,
   E_ListingDeleteReason.NO_LONGER_AVAILABLE,
   E_ListingDeleteReason.CHANGED_MIND,
   E_ListingDeleteReason.DUPLICATE,
@@ -416,142 +311,28 @@ export const allListingPaymentStatus: T_ListingPaymentStatus[] = [
 ];
 
 export const allListingCategory: T_ListingCategory[] = [
-  E_ListingCategory.ATTIC,
-  E_ListingCategory.BASEMENT,
-  E_ListingCategory.PARKING,
-  E_ListingCategory.ROOM,
-  E_ListingCategory.STORAGE_UNIT,
-  E_ListingCategory.BANQUET_HALL,
-  E_ListingCategory.WAREHOUSE,
-  E_ListingCategory.PLOT,
-  E_ListingCategory.UNIT,
-  E_ListingCategory.CONTAINER,
+  E_ListingCategory.IT,
+  E_ListingCategory.SALES,
+  E_ListingCategory.MARKETING,
+  E_ListingCategory.FINANCE,
+  E_ListingCategory.HR,
+  E_ListingCategory.ADMINISTRATION,
+  E_ListingCategory.CUSTOMER_SERVICE,
+  E_ListingCategory.LOGISTICS,
+  E_ListingCategory.PRODUCTION,
+  E_ListingCategory.CONSTRUCTION,
+  E_ListingCategory.GASTRONOMY,
+  E_ListingCategory.HEALTHCARE,
+  E_ListingCategory.EDUCATION,
+  E_ListingCategory.ENGINEERING,
+  E_ListingCategory.LAW,
+  E_ListingCategory.OTHER,
 ];
 
-export const allListingCategoryRent: T_ListingCategory[] = [
-  E_ListingCategory.ATTIC,
-  E_ListingCategory.BASEMENT,
-  E_ListingCategory.PARKING,
-  E_ListingCategory.ROOM,
-  E_ListingCategory.STORAGE_UNIT,
-  E_ListingCategory.BANQUET_HALL,
-  E_ListingCategory.WAREHOUSE,
-  E_ListingCategory.PLOT,
-  E_ListingCategory.UNIT,
-  E_ListingCategory.CONTAINER,
-];
-
-export const allListingCategorySale: T_ListingCategory[] = [
-  E_ListingCategory.PARKING,
-  E_ListingCategory.STORAGE_UNIT,
-  E_ListingCategory.BANQUET_HALL,
-  E_ListingCategory.WAREHOUSE,
-  E_ListingCategory.PLOT,
-  E_ListingCategory.UNIT,
-  E_ListingCategory.CONTAINER,
-];
-
-export const allListingAccess: T_ListingAccess[] = [
-  E_ListingAccess.ACCESS_24H,
-  E_ListingAccess.LIMITED_HOURS,
-];
-
-export const allListingSecurityOptions: T_ListingSecurityOption[] = [
-  E_ListingSecurityOption.ALARM,
-  E_ListingSecurityOption.AUTOMATIC_GATE,
-  E_ListingSecurityOption.ELECTRONIC_LOCK,
-  E_ListingSecurityOption.MANUAL_GATE,
-  E_ListingSecurityOption.MONITORING,
-  E_ListingSecurityOption.PADLOCK,
-  E_ListingSecurityOption.DOOR_LOCK,
-  E_ListingSecurityOption.SECURITY,
-  E_ListingSecurityOption.BARRIER,
-  E_ListingSecurityOption.REMOTE_CONTROL,
-];
-
-export const allListingUtilityOptions: T_ListingUtilityOption[] = [
-  E_ListingUtilityOption.ELECTRICITY,
-  E_ListingUtilityOption.SEWAGE,
-  E_ListingUtilityOption.WATER,
-];
-
-export const allListingConditions: T_ListingCondition[] = [
-  E_ListingCondition.FINISHED,
-  E_ListingCondition.NEEDS_RENOVATION,
-  E_ListingCondition.NEW,
-  E_ListingCondition.PARTIALLY_FINISHED,
-  E_ListingCondition.RAW,
-];
-
-export const allListingComfortOptions: T_ListingComfortOption[] = [
-  E_ListingComfortOption.HEATED,
-  E_ListingComfortOption.LIGHTING,
-  E_ListingComfortOption.PARKING,
-  E_ListingComfortOption.VENTILATION,
-];
-
-export const allListingPlotTypes: T_ListingPlotType[] = [
-  E_ListingPlotType.BUILDING,
-  E_ListingPlotType.INVESTMENT,
-  E_ListingPlotType.RECREATIONAL,
-  E_ListingPlotType.AGRICULTURAL,
-  E_ListingPlotType.SERVICE,
-  E_ListingPlotType.FOREST,
-];
-
-export const allListingPlotTypesSale: T_ListingPlotType[] = [
-  E_ListingPlotType.BUILDING,
-  E_ListingPlotType.INVESTMENT,
-  E_ListingPlotType.RECREATIONAL,
-  E_ListingPlotType.AGRICULTURAL,
-  E_ListingPlotType.FOREST,
-];
-
-export const allListingPlotTypesRent: T_ListingPlotType[] = [
-  E_ListingPlotType.SERVICE,
-  E_ListingPlotType.FOREST,
-  E_ListingPlotType.AGRICULTURAL,
-];
-
-export const allListingUnitTypes: T_ListingUnitType[] = [
-  E_ListingUnitType.CONFERENCE_ROOM,
-  E_ListingUnitType.OFFICE,
-  E_ListingUnitType.PRODUCTION,
-  E_ListingUnitType.RETAIL,
-  E_ListingUnitType.SERVICE,
-  E_ListingUnitType.WAREHOUSE,
-];
-
-export const allListingEntryOptions: T_ListingEntryOption[] = [
-  E_ListingEntryOption.ELEVATOR,
-  E_ListingEntryOption.STAIRCASE,
-  E_ListingEntryOption.STREET_ENTRANCE,
-];
-
-export const allListingUsageOptions: T_ListingUsageOptions[] = [
-  E_ListingUsageOptions.CAR_ACCESS,
-  E_ListingUsageOptions.TIR_ACCESS,
-];
-
-export const allListingParkingType: T_ListingParkingType[] = [
-  E_ListingParkingType.DETACHED,
-  E_ListingParkingType.MULTILEVEL_LIFT,
-  E_ListingParkingType.UNDERGROUND,
-  E_ListingParkingType.GROUND_PLACE,
-];
-
-export const allListingContainerType: T_ListingContainerType[] = [
-  E_ListingContainerType.MARINE,
-  E_ListingContainerType.MODULAR_RESIDENTIAL,
-  E_ListingContainerType.OFFICE_SOCIAL,
-  E_ListingContainerType.REFRIGERATED,
-  E_ListingContainerType.SANITARY,
-  E_ListingContainerType.WAREHOUSE,
-];
-
-export const allListingContractType: T_ListingContractType[] = [
-  E_ListingContractType.SHORT_TERM,
-  E_ListingContractType.LONG_TERM,
+export const allWorkMode: T_WorkMode[] = [
+  E_WorkMode.ONSITE,
+  E_WorkMode.REMOTE,
+  E_WorkMode.HYBRID,
 ];
 
 export const allReportType: T_ReportType[] = [
@@ -609,10 +390,6 @@ export const isInLanguages = (value: string) => {
   return allLanguages.includes(value as T_Language);
 };
 
-export const isInListingTypes = (value: string) => {
-  return allListingType.includes(value as T_ListingType);
-};
-
 export const isInListingDeleteReason = (value: string) => {
   return allListingDeleteReason.includes(value as T_ListingDeleteReason);
 };
@@ -626,63 +403,11 @@ export const isInListingPaymentStatus = (value: string) => {
 };
 
 export const isInListingCategory = (value: string) => {
-  return allListingCategoryRent.includes(value as T_ListingCategory);
+  return allListingCategory.includes(value as T_ListingCategory);
 };
 
-export const isInListingAccess = (value: string) => {
-  return allListingAccess.includes(value as T_ListingAccess);
-};
-
-export const isInListingSecurityOptions = (value: string) => {
-  return allListingSecurityOptions.includes(value as T_ListingSecurityOption);
-};
-
-export const isInListingComfortOptions = (value: string) => {
-  return allListingComfortOptions.includes(value as T_ListingComfortOption);
-};
-
-export const isInListingPlotTypes = (value: string) => {
-  return allListingPlotTypes.includes(value as T_ListingPlotType);
-};
-
-export const isInListingPlotTypesRent = (value: string) => {
-  return allListingPlotTypesRent.includes(value as T_ListingPlotType);
-};
-
-export const isInListingPlotTypesSale = (value: string) => {
-  return allListingPlotTypesSale.includes(value as T_ListingPlotType);
-};
-
-export const isInListingUnitTypes = (value: string) => {
-  return allListingUnitTypes.includes(value as T_ListingUnitType);
-};
-
-export const isInListingUtilityOptions = (value: string) => {
-  return allListingUtilityOptions.includes(value as T_ListingUtilityOption);
-};
-
-export const isInListingConditions = (value: string) => {
-  return allListingConditions.includes(value as T_ListingCondition);
-};
-
-export const isInListingEntryOptions = (value: string) => {
-  return allListingEntryOptions.includes(value as T_ListingEntryOption);
-};
-
-export const isInListingUsageOptions = (value: string) => {
-  return allListingUsageOptions.includes(value as T_ListingUsageOptions);
-};
-
-export const isInListingParkingType = (value: string) => {
-  return allListingParkingType.includes(value as T_ListingParkingType);
-};
-
-export const isInListingContainerType = (value: string) => {
-  return allListingContainerType.includes(value as T_ListingContainerType);
-};
-
-export const isInListingContractType = (value: string) => {
-  return allListingContractType.includes(value as T_ListingContractType);
+export const isInWorkMode = (value: string) => {
+  return allWorkMode.includes(value as T_WorkMode);
 };
 
 export const isInReportType = (value: string) => {

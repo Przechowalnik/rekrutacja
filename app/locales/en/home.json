@@ -3,19 +3,19 @@
     "title": "Refine your search!"
   },
   "homeLatestListings": {
-    "title": "Recently added listings"
+    "title": "Recently added job offers"
   },
-  "noData": "No listings available.",
-  "noDataToSearch": "No category or location selected.",
+  "noData": "No job offers available.",
+  "noDataToSearch": "No industry or location selected.",
   "searchListingCategoryCity": {
     "buttonShowMap": "Show on map"
   },
   "topCategories": {
-    "description": "Explore listings by category - garages, warehouses, plots, units and more.",
-    "title": "Categories of spaces"
+    "description": "Explore job offers by industry - IT, sales, marketing, finance and more.",
+    "title": "Industries"
   },
   "topCities": {
-    "description": "Browse listings in the biggest Polish cities with active offers.",
+    "description": "Browse job offers in the biggest Polish cities with active job offers.",
     "title": "Popular cities"
   }
 }

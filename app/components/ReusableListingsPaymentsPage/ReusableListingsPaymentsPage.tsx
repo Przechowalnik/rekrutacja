@@ -65,9 +65,7 @@ export const ReusableListingsPaymentsPage = ({
       }) && isActive
     : false;
 
-  const isHidden = listing.availableTo
-    ? new Date(listing.availableTo) <= new Date()
-    : false;
+  const isHidden = false;
 
   const linkGoBack = getLocalizedRoute({
     extraPath: `/${listing.slug ?? listing.id}`,

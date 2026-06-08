@@ -1,5 +1,5 @@
 export const head = {
-  backgroundColor: "#6741D9",
+  backgroundColor: "#2563eb",
   height: "76px",
 };
 
@@ -53,7 +53,7 @@ export const hr = {
 };
 
 export const link = {
-  color: "#9775fa",
+  color: "#2563eb",
   fontSize: "14px",
 };
 

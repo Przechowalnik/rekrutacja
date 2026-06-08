@@ -1,54 +1,54 @@
 {
   "categoryCityContent": {
-    "description": "Sprawdź {{count}} aktualnych ofert {{categoryPlural}} w {{city}} (województwo {{voivodeship}}) dostępnych na wynajem lub sprzedaż. Porównaj ceny, lokalizacje i wybierz powierzchnię dopasowaną do Twoich potrzeb. Możesz też przejść do innych kategorii w {{city}}.",
-    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze ofert w kategorii {{categoryPlural}}. Sprawdź inne dostępne kategorie w {{city}} lub dodaj swoje ogłoszenie i jako pierwszy dotrzyj do osób szukających {{categoryPlural}} w tej okolicy.",
-    "titleNoListings": "{{categoryPlural}} w {{city}} - przeglądaj kategorię",
-    "titleWithListings": "{{categoryPlural}} w {{city}} - {{count}} aktualnych ofert"
+    "description": "Sprawdź {{count}} aktualnych ofert pracy w branży {{categoryPlural}} w {{city}} (województwo {{voivodeship}}). Porównaj stanowiska, wynagrodzenia i tryb pracy, aby wybrać ofertę dopasowaną do Twoich potrzeb. Możesz też przejść do innych branż w {{city}}.",
+    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze ofert pracy w branży {{categoryPlural}}. Sprawdź inne dostępne branże w {{city}} lub dodaj swoje ogłoszenie o pracę i jako pierwszy dotrzyj do kandydatów szukających pracy w branży {{categoryPlural}} w tej okolicy.",
+    "titleNoListings": "Praca {{categoryPlural}} w {{city}} - przeglądaj branżę",
+    "titleWithListings": "Praca {{categoryPlural}} w {{city}} - {{count}} aktualnych ofert"
   },
   "categoryCityFaq": {
     "q1": {
-      "answer": "Ceny {{categoryPlural}} w {{city}} zależą od lokalizacji, metrażu, standardu i długości wynajmu. Sprawdź {{count}} aktualnych ofert na do-pracy.pl, aby porównać ceny i wybrać najlepszą dla siebie. Wiele ofert pozwala na negocjację ceny bezpośrednio z właścicielem.",
-      "question": "Ile kosztuje wynajem {{categoryPlural}} w {{city}}?"
+      "answer": "Wynagrodzenia w branży {{categoryPlural}} w {{city}} zależą od stanowiska, doświadczenia, zakresu obowiązków i trybu pracy. Sprawdź {{count}} aktualnych ofert pracy na do-pracy.pl, aby porównać widełki płacowe i wybrać najlepszą dla siebie. Wiele ofert pozwala negocjować wynagrodzenie bezpośrednio z pracodawcą.",
+      "question": "Ile można zarobić w branży {{categoryPlural}} w {{city}}?"
     },
     "q2": {
-      "answer": "Aktualnie w {{city}} dostępnych jest {{count}} ofert {{categoryPlural}} - od małych przestrzeni do dużych. Oferty obejmują różne dzielnice {{city}} i okolice. Możesz filtrować wyniki po cenie, metrażu, dzielnicy i innych parametrach.",
-      "question": "Ile jest dostępnych ofert {{categoryPlural}} w {{city}}?"
+      "answer": "Aktualnie w {{city}} dostępnych jest {{count}} ofert pracy w branży {{categoryPlural}} - od stanowisk juniorskich po seniorskie. Oferty obejmują różne firmy w {{city}} i okolicach. Możesz filtrować wyniki po mieście, branży i trybie pracy (stacjonarna, zdalna, hybrydowa).",
+      "question": "Ile jest dostępnych ofert pracy w branży {{categoryPlural}} w {{city}}?"
     },
     "q3": {
-      "answer": "Wynajem krótkoterminowy ({{categoryPlural}} na dni lub tygodnie) jest dostępny dla wybranych ofert oznaczonych jako krótkoterminowe. Standardowo {{categoryPlural}} w {{city}} są oferowane na wynajem długoterminowy (miesięczny). Sprawdź filtry na liście ofert.",
-      "question": "Czy mogę wynająć {{categoryPlural}} w {{city}} na krótki termin?"
+      "answer": "Praca zdalna i hybrydowa ({{categoryPlural}}) jest dostępna dla wybranych ofert oznaczonych odpowiednim trybem pracy. Część stanowisk w branży {{categoryPlural}} w {{city}} oferowana jest w trybie stacjonarnym. Sprawdź filtr trybu pracy na liście ofert.",
+      "question": "Czy mogę pracować zdalnie w branży {{categoryPlural}} w {{city}}?"
     },
     "q4": {
-      "answer": "Tak. do-pracy.pl to platforma ogłoszeniowa, na której zarówno osoby prywatne, jak i firmy mogą dodawać oferty {{categoryPlural}} w {{city}} i innych miastach. Załóż konto i dodaj ogłoszenie - dotrzesz do osób aktywnie szukających powierzchni do wynajmu lub kupna.",
-      "question": "Czy mogę dodać własne ogłoszenie {{categoryPlural}} w {{city}}?"
+      "answer": "Tak. do-pracy.pl to platforma z ogłoszeniami o pracę, na której zarówno firmy, jak i rekruterzy mogą dodawać oferty pracy w branży {{categoryPlural}} w {{city}} i innych miastach. Załóż konto i dodaj ogłoszenie o pracę - dotrzesz do kandydatów aktywnie szukających zatrudnienia.",
+      "question": "Czy mogę dodać własne ogłoszenie o pracę w branży {{categoryPlural}} w {{city}}?"
     },
     "q5": {
-      "answer": "Aby skontaktować się z właścicielem oferty {{categoryPlural}} w {{city}}, wejdź w wybrane ogłoszenie i kliknij przycisk pokazujący numer telefonu. Kontakt jest bezpłatny dla osób szukających - bez prowizji i ukrytych opłat.",
-      "question": "Jak skontaktować się z właścicielem oferty {{categoryPlural}} w {{city}}?"
+      "answer": "Aby skontaktować się z pracodawcą oferty pracy w branży {{categoryPlural}} w {{city}}, wejdź w wybrane ogłoszenie o pracę i kliknij przycisk umożliwiający aplikowanie lub pokazujący dane kontaktowe. Kontakt jest bezpłatny dla kandydatów - bez prowizji i ukrytych opłat.",
+      "question": "Jak skontaktować się z pracodawcą oferty pracy w branży {{categoryPlural}} w {{city}}?"
     }
   },
   "categoryContent": {
-    "description": "Sprawdź {{count}} aktualnych ofert w kategorii {{categoryPlural}} dostępnych w {{cityCount}} miastach w całej Polsce. Wybierz miasto, które Cię interesuje, aby zobaczyć szczegółowe oferty wynajmu i sprzedaży.",
-    "titleWithListings": "{{categoryPlural}} w Polsce - {{count}} aktualnych ofert"
+    "description": "Sprawdź {{count}} aktualnych ofert pracy w branży {{categoryPlural}} dostępnych w {{cityCount}} miastach w całej Polsce. Wybierz miasto, które Cię interesuje, aby zobaczyć szczegółowe oferty pracy i stanowiska.",
+    "titleWithListings": "Praca {{categoryPlural}} w Polsce - {{count}} aktualnych ofert"
   },
   "cityFaq": {
     "q1": {
-      "answer": "W {{city}} dostępnych jest {{count}} aktualnych ofert wynajmu i sprzedaży powierzchni: garaży i miejsc postojowych, magazynów, lokali, działek, komórek lokatorskich, piwnic, kontenerów, strychów oraz pokoi. Sprawdź wszystkie kategorie i wybierz tę, która Cię interesuje.",
-      "question": "Jakie powierzchnie można wynająć lub kupić w {{city}}?"
+      "answer": "W {{city}} dostępnych jest {{count}} aktualnych ofert pracy w wielu branżach: IT, sprzedaż, marketing, finanse i księgowość, HR, administracja, obsługa klienta, logistyka i transport, produkcja, budownictwo, gastronomia i hotelarstwo, zdrowie i medycyna, edukacja, inżynieria oraz prawo. Sprawdź wszystkie branże i wybierz tę, która Cię interesuje.",
+      "question": "Jakiej pracy można szukać w {{city}}?"
     },
     "q2": {
-      "answer": "Ceny w {{city}} (województwo {{voivodeship}}) zależą od kategorii, metrażu i lokalizacji. Najtańsze są zazwyczaj komórki lokatorskie i piwnice, najdroższe - lokale komercyjne i magazyny w centrum. Porównaj aktualne {{count}} ofert na do-pracy.pl.",
-      "question": "Ile kosztuje wynajem powierzchni w {{city}}?"
+      "answer": "Wynagrodzenia w {{city}} (województwo {{voivodeship}}) zależą od branży, stanowiska i doświadczenia. Najwyższe widełki płacowe oferują zazwyczaj stanowiska w IT, inżynierii i finansach. Porównaj aktualne {{count}} ofert pracy na do-pracy.pl.",
+      "question": "Ile można zarobić, pracując w {{city}}?"
     },
     "q3": {
-      "answer": "Tak. do-pracy.pl to platforma ogłoszeniowa - możesz dodać własną ofertę wynajmu lub sprzedaży powierzchni w {{city}}. Załóż konto, opisz ofertę, dodaj zdjęcia i opublikuj. Twoje ogłoszenie trafi do osób aktywnie szukających powierzchni w {{city}}.",
-      "question": "Czy mogę dodać własną ofertę w {{city}}?"
+      "answer": "Tak. do-pracy.pl to platforma z ogłoszeniami o pracę - możesz dodać własną ofertę pracy w {{city}}. Załóż konto, opisz stanowisko, dodaj wymagania i opublikuj. Twoje ogłoszenie o pracę trafi do kandydatów aktywnie szukających zatrudnienia w {{city}}.",
+      "question": "Czy mogę dodać własną ofertę pracy w {{city}}?"
     },
     "q4": {
-      "answer": "Tak. Oferty w {{city}} obejmują wszystkie dzielnice oraz okolice. Możesz filtrować wyniki po konkretnej dzielnicy lub po promieniu od centrum. Wybierz tę opcję, która najlepiej pasuje do Twoich potrzeb.",
-      "question": "Czy mogę filtrować oferty po dzielnicy {{city}}?"
+      "answer": "Tak. Oferty pracy w {{city}} obejmują wszystkie dzielnice oraz okolice. Możesz zawęzić wyniki do konkretnej dzielnicy lub ustawić promień od centrum. Wybierz opcję, która najlepiej pasuje do Twoich potrzeb.",
+      "question": "Czy mogę filtrować oferty pracy po dzielnicy w {{city}}?"
     }
   },
-  "description": "Wybierz miasto, które Cię interesuje, aby zobaczyć ogłoszenia dostępne w wybranej lokalizacji. Dzięki temu łatwiej znajdziesz oferty dopasowane do Twojego regionu.",
+  "description": "Wybierz miasto, które Cię interesuje, aby zobaczyć oferty pracy dostępne w wybranej lokalizacji. Dzięki temu łatwiej znajdziesz stanowiska dopasowane do Twojego regionu.",
   "inputPlaceholder": "Znajdź miasto"
 }

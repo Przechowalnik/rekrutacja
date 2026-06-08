@@ -1,8 +1,8 @@
 {
   "imagesAlt": {
-    "banner": "Baner promujący ofertę nieruchomości",
-    "bannerRent": "Baner promujący wynajem nieruchomości",
-    "bannerRentHorizontally": "Baner promujący wynajem nieruchomości w układzie poziomym",
+    "banner": "Baner promujący ofertę pracy",
+    "bannerRent": "Baner promujący oferty pracy",
+    "bannerRentHorizontally": "Baner promujący oferty pracy w układzie poziomym",
     "burgerMenu": "Menu",
     "cardCode": {
       "button": "Skopiuj polecenie"
@@ -49,7 +49,7 @@
   },
   "jsonLdFaq": {
     "aboutUs": {
-      "description": "do-pracy.pl to pierwsza w Polsce platforma umożliwiająca wynajem i sprzedaż małych powierzchni - od garaży, magazynów, aż po komórki lokatorskie. Naszym celem jest ułatwienie zarówno właścicielom, jak i najemcom, szybkiego i bezpiecznego zawierania transakcji online. Dzięki do-pracy.pl możesz w prosty sposób dodać ogłoszenie, zarządzać płatnościami oraz monitorować dostępność powierzchni. Platforma łączy innowacyjne technologie z intuicyjnym interfejsem, co sprawia, że korzystanie z niej jest wygodne i bezproblemowe. Dowiedz się, jak do-pracy.pl zmienia rynek wynajmu w Polsce, umożliwiając szybkie, bezpieczne i transparentne transakcje."
+      "description": "do-pracy.pl to nowoczesna platforma ogłoszeniowa w Polsce, która łączy pracodawców z kandydatami - od IT i sprzedaży, aż po produkcję i logistykę. Naszym celem jest ułatwienie zarówno firmom, jak i osobom szukającym pracy, szybkiego i bezpiecznego publikowania ogłoszeń o pracę online. Dzięki do-pracy.pl możesz w prosty sposób dodać ofertę pracy, zarządzać aplikacjami oraz monitorować dostępność stanowisk. Platforma łączy innowacyjne technologie z intuicyjnym interfejsem, co sprawia, że korzystanie z niej jest wygodne i bezproblemowe. Dowiedz się, jak do-pracy.pl zmienia rynek pracy w Polsce, umożliwiając szybkie, bezpieczne i przejrzyste ogłoszenia o pracę."
     },
     "accessibility": {
       "description": "W do-pracy.pl stawiamy na dostępność - nasza strona i aplikacja spełniają standard WCAG 2.1 AA, wspierają czytniki ekranu i zapewniają odpowiedni kontrast. Dbamy, aby każdy użytkownik mógł wygodnie i bez przeszkód korzystać z platformy."
@@ -88,7 +88,7 @@
       "description": "Edytuj swoje ogłoszenia, aby zwiększyć ich atrakcyjność i widoczność."
     },
     "accountListingsNew": {
-      "description": "Dodaj nowe ogłoszenie na do-pracy.pl i zacznij zarabiać na swojej przestrzeni."
+      "description": "Dodaj nową ofertę pracy na do-pracy.pl i dotrzyj do najlepszych kandydatów."
     },
     "accountListingsPayments": {
       "description": "Zarządzaj płatnościami powiązanymi z ogłoszeniami na platformie do-pracy.pl."
@@ -210,8 +210,12 @@
     "apiCompanySubscriptionDelete": {
       "description": "Funkcje API do usuwania subskrypcji firmowej."
     },
-    "apiLatestListings": { "description": "" },
-    "apiLogin": { "description": "Funkcje API logowania użytkownika." },
+    "apiLatestListings": {
+      "description": ""
+    },
+    "apiLogin": {
+      "description": "Funkcje API logowania użytkownika."
+    },
     "apiRecoveryAccount": {
       "description": "Funkcje API do odzyskiwania konta użytkownika."
     },
@@ -233,9 +237,14 @@
     "apiResetFetcher": {
       "description": "Funkcje API do resetowania fetchera danych."
     },
-    "apiSearch": { "description": "Funkcje API związane z wyszukiwaniem." },
+    "apiSearch": {
+      "description": "Funkcje API związane z wyszukiwaniem."
+    },
     "apiSearchMap": {
       "description": "Funkcje API związane z wyszukiwaniem na mapie."
+    },
+    "archive": {
+      "description": "Archiwalne ogłoszenia o pracę na do-pracy.pl - przeglądaj nieaktywne oferty od najnowszych do najstarszych."
     },
     "authenticator": {
       "description": "Autoryzacja konta użytkownika i bezpieczeństwo logowania."
@@ -349,13 +358,13 @@
       "description": "Znajdź odpowiedzi na najczęściej zadawane pytania i skontaktuj się z obsługą."
     },
     "home": {
-      "description": "Witamy na do-pracy.pl - innowacyjnej platformie do wynajmu i sprzedaży małych powierzchni w Polsce. Oferujemy szybkie i bezpieczne rozwiązania dla właścicieli przestrzeni, którzy chcą zarabiać, oraz dla najemców szukających dostępnych miejsc. Nasza platforma pozwala w prosty sposób przeglądać ogłoszenia, dodawać własne, zarządzać płatnościami i monitorować dostępność powierzchni. Dzięki nowoczesnym narzędziom i intuicyjnemu interfejsowi do-pracy.pl zapewnia komfort użytkowania oraz bezpieczeństwo transakcji, niezależnie od tego, czy szukasz garażu, magazynu czy powierzchni biurowej."
+      "description": "Witamy na do-pracy.pl - innowacyjnej platformie ogłoszeniowej w Polsce. Oferujemy szybkie i bezpieczne rozwiązania dla pracodawców, którzy szukają pracowników, oraz dla kandydatów szukających pracy. Nasza platforma pozwala w prosty sposób przeglądać oferty pracy, dodawać własne, zarządzać aplikacjami i monitorować dostępność stanowisk. Dzięki nowoczesnym narzędziom i intuicyjnemu interfejsowi do-pracy.pl zapewnia komfort użytkowania oraz bezpieczeństwo procesu publikowania ogłoszeń, niezależnie od tego, czy szukasz pracy w IT, sprzedaży czy logistyce."
     },
     "howToAddListing": {
       "description": "Dowiedz się, jak dodać ogłoszenie, postępując zgodnie z poniższymi krokami."
     },
     "howToSearchListing": {
-      "description": "Dowiedz się, jak szukać ogłoszeń na naszej platformie i znaleźć idealną przestrzeń."
+      "description": "Dowiedz się, jak szukać ofert pracy na naszej platformie i znaleźć idealne stanowisko."
     },
     "listings": {
       "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie do-pracy.pl."
@@ -369,8 +378,12 @@
     "loginFromCreateListing": {
       "description": "Zaloguj się, aby w pełni korzystać z funkcji do-pracy.pl."
     },
-    "loginGoogle": { "description": "Zaloguj się przy pomocy konta Google." },
-    "logout": { "description": "Wyloguj się bezpiecznie ze swojego konta." },
+    "loginGoogle": {
+      "description": "Zaloguj się przy pomocy konta Google."
+    },
+    "logout": {
+      "description": "Wyloguj się bezpiecznie ze swojego konta."
+    },
     "newsletter": {
       "description": "Zapoznaj się z newsletterem."
     },
@@ -407,7 +420,7 @@
   },
   "jsonLdReview": {},
   "jsonLdStructured": {
-    "description": "do-pracy.pl to pierwsza w Polsce platforma ogłoszeniowa stworzona specjalnie do wynajmu i sprzedaży małych powierzchni. Garaż, miejsce parkingowe, piwnica, komórka lokatorska czy niewielki magazyn - każda z tych przestrzeni może być źródłem dodatkowego dochodu. Założyliśmy do-pracy.pl, aby połączyć właścicieli wolnych przestrzeni z osobami, które ich potrzebują - prosto, lokalnie i bez zbędnych formalności. Naszym celem jest, aby każdy użytkownik do-pracy.pl czuł się bezpiecznie i komfortowo, dlatego dbamy o regulaminy, ochronę danych i przejrzyste zasady publikacji ogłoszeń. Korzystając z platformy do-pracy.pl, możesz zarabiać na tym, co masz - dodatkowy dochód nawet kilka tysięcy zł rocznie, pomagasz innym - Twoja piwnica może stać się miejscem na rower, a garaż bezpiecznym parkingiem, a do tego wszystko jest proste w obsłudze - dodanie ogłoszenia zajmuje tylko 3 minuty. do-pracy.pl to polska platforma stworzona z myślą o lokalnych potrzebach, dzięki której Twoja wolna przestrzeń zaczyna pracować dla Ciebie!",
+    "description": "do-pracy.pl to nowoczesna platforma ogłoszeniowa w Polsce stworzona specjalnie z myślą o ofertach pracy. IT, sprzedaż, marketing, finanse, logistyka czy produkcja - w każdej z tych branż znajdziesz aktualne oferty pracy. Założyliśmy do-pracy.pl, aby połączyć pracodawców z kandydatami, którzy szukają pracy - prosto, lokalnie i bez zbędnych formalności. Naszym celem jest, aby każdy użytkownik do-pracy.pl czuł się bezpiecznie i komfortowo, dlatego dbamy o regulaminy, ochronę danych i przejrzyste zasady publikacji ofert pracy. Korzystając z platformy do-pracy.pl, możesz szybko znaleźć pracownika lub wymarzone stanowisko, docierasz do tysięcy kandydatów i pracodawców w całej Polsce, a do tego wszystko jest proste w obsłudze - dodanie oferty pracy zajmuje tylko 3 minuty. do-pracy.pl to polska platforma stworzona z myślą o lokalnym rynku pracy, dzięki której publikowanie ogłoszeń o pracę staje się szybkie i skuteczne!",
     "isPartOfName": "do-pracy.pl",
     "name": "do-pracy.pl",
     "url": "https://do-pracy.pl"
@@ -673,6 +686,10 @@
       "description": "Znajduj wyniki wyszukiwania powiązane z mapą poprzez API. Integruj dane z lokalizacjami.",
       "title": "Wyszukiwanie mapy API | {{companyName}}"
     },
+    "archive": {
+      "description": "Przeglądaj archiwalne, nieaktywne ogłoszenia o pracę na {{companyName}} - od najnowszych do najstarszych.",
+      "title": "Archiwalne ogłoszenia o pracę | {{companyName}}"
+    },
     "authenticator": {
       "description": "Zaloguj się i potwierdź swoją tożsamość korzystając z autoryzatora. Zwiększ bezpieczeństwo konta.",
       "title": "Autoryzacja użytkownika | {{companyName}}"
@@ -794,7 +811,7 @@
       "title": "Kontakt | {{companyName}}"
     },
     "default": {
-      "description": "Platforma do wynajmu i sprzedaży powierzchni. Sprawdź ofertę {{companyName}}.",
+      "description": "Platforma z ofertami pracy i ogłoszeniami o pracę. Sprawdź ofertę {{companyName}}.",
       "title": "{{companyName}}"
     },
     "error": {
@@ -826,15 +843,15 @@
       "title": "Pomoc i FAQ | {{companyName}}"
     },
     "home": {
-      "description": "Sprawdź ofertę wynajmu i sprzedaży powierzchni. Skorzystaj z platformy {{companyName}} już teraz.",
-      "title": "Wynajem i sprzedaż powierzchni | {{companyName}}"
+      "description": "Sprawdź aktualne oferty pracy i ogłoszenia o pracę. Skorzystaj z platformy {{companyName}} już teraz.",
+      "title": "Oferty i ogłoszenia o pracę | {{companyName}}"
     },
     "howToAddListing": {
       "description": "Dowiedz się, jak dodać ogłoszenie, korzystając z naszego prostego przewodnika krok po kroku. Utwórz swoją ofertę szybko i dotrzyj do nowych klientów.",
       "title": "Jak dodać ogłoszenie | {{companyName}}"
     },
     "howToSearchListing": {
-      "description": "Dowiedz się, jak szukać ogłoszeń na naszej platformie. Skorzystaj z filtrów i mapy, aby znaleźć idealną przestrzeń.",
+      "description": "Dowiedz się, jak szukać ofert pracy na naszej platformie. Skorzystaj z filtrów i mapy, aby znaleźć idealne stanowisko.",
       "title": "Jak szukać ogłoszenia | {{companyName}}"
     },
     "listing": {
@@ -842,7 +859,7 @@
       "title": "Ogłoszenie {{category}} {{city}} | {{companyName}}"
     },
     "listings": {
-      "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie. Znajdź powierzchnię dopasowaną do potrzeb.",
+      "description": "Przeglądaj wszystkie dostępne oferty pracy na platformie. Znajdź stanowisko dopasowane do potrzeb.",
       "title": "Lista ogłoszeń | {{companyName}}"
     },
     "login": {
@@ -906,36 +923,36 @@
       "title": "Wyszukiwarka ogłoszeń | {{companyName}}"
     },
     "searchCategory": {
-      "description": "Aktualne {{categoryPlural}} - przestrzenie do wynajmu lub sprzedaży. Porównaj ceny i lokalizacje ofert.",
-      "title": "{{categoryPlural}} - przestrzenie do wynajmu lub sprzedaży | {{companyName}}"
+      "description": "Aktualne {{categoryPlural}} - oferty pracy w tej branży. Porównaj wynagrodzenia i lokalizacje ofert.",
+      "title": "{{categoryPlural}} - oferty pracy | {{companyName}}"
     },
     "searchCategoryCity": {
-      "description": "Sprawdź ogłoszenia {{categoryPlural}} {{city}} dostępne na wynajem lub sprzedaż. Aktualne oferty na {{companyName}}.",
-      "title": "Ogłoszenia {{categoryPlural}} {{city}} | {{companyName}}"
+      "description": "Sprawdź oferty pracy {{categoryPlural}} {{city}}. Aktualne ogłoszenia o pracę na {{companyName}}.",
+      "title": "Oferty pracy {{categoryPlural}} {{city}} | {{companyName}}"
     },
     "searchCategoryCityDistrict": {
-      "description": "Sprawdź ogłoszenia {{categoryPlural}} {{city}} {{district}} dostępne na wynajem lub sprzedaż. Aktualne oferty na {{companyName}}.",
-      "title": "Ogłoszenia {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
+      "description": "Sprawdź oferty pracy {{categoryPlural}} {{city}} {{district}}. Aktualne ogłoszenia o pracę na {{companyName}}.",
+      "title": "Oferty pracy {{categoryPlural}} {{city}} {{district}} | {{companyName}}"
     },
     "searchCategoryCityWithCount": {
-      "description": "Sprawdź {{count}} aktualnych ogłoszeń {{categoryPlural}} {{city}} dostępnych na wynajem lub sprzedaż. Porównaj ceny i lokalizacje na {{companyName}}.",
-      "title": "{{categoryPlural}} {{city}} - {{count}} ofert | {{companyName}}"
+      "description": "Sprawdź {{count}} aktualnych ofert pracy {{categoryPlural}} {{city}}. Porównaj wynagrodzenia i lokalizacje na {{companyName}}.",
+      "title": "{{categoryPlural}} {{city}} - {{count}} ofert pracy | {{companyName}}"
     },
     "searchCities": {
-      "description": "Lista miast z aktualnymi ogłoszeniami przestrzeni do wynajmu lub sprzedaży w całej Polsce.",
-      "title": "Miasta - przestrzenie do wynajmu lub sprzedaży | {{companyName}}"
+      "description": "Lista miast z aktualnymi ofertami pracy w całej Polsce.",
+      "title": "Miasta - oferty pracy | {{companyName}}"
     },
     "searchCity": {
-      "description": "Sprawdź ogłoszenia w {{city}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Aktualne oferty na {{companyName}}.",
-      "title": "Ogłoszenia {{city}} - garaże, magazyny, lokale | {{companyName}}"
+      "description": "Sprawdź oferty pracy w {{city}}: IT, sprzedaż, marketing, logistyka, produkcja i inne branże. Aktualne ogłoszenia o pracę na {{companyName}}.",
+      "title": "Oferty pracy {{city}} - IT, sprzedaż, logistyka | {{companyName}}"
     },
     "searchCityDistrict": {
-      "description": "Sprawdź ogłoszenia w {{city}} {{district}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Aktualne oferty na {{companyName}}.",
-      "title": "Ogłoszenia {{city}} {{district}} - wynajem i sprzedaż | {{companyName}}"
+      "description": "Sprawdź oferty pracy w {{city}} {{district}}: IT, sprzedaż, marketing, logistyka, produkcja i inne branże. Aktualne ogłoszenia o pracę na {{companyName}}.",
+      "title": "Oferty pracy {{city}} {{district}} | {{companyName}}"
     },
     "searchCityWithCount": {
-      "description": "Sprawdź {{count}} aktualnych ogłoszeń w {{city}}: garaże, lokale, działki, magazyny, kontenery i inne przestrzenie do wynajmu lub sprzedaży. Porównaj oferty na {{companyName}}.",
-      "title": "{{city}} - {{count}} ofert wynajmu i sprzedaży | {{companyName}}"
+      "description": "Sprawdź {{count}} aktualnych ofert pracy w {{city}}: IT, sprzedaż, marketing, logistyka, produkcja i inne branże. Porównaj oferty na {{companyName}}.",
+      "title": "{{city}} - {{count}} ofert pracy | {{companyName}}"
     },
     "termsAndConditions": {
       "description": "Zapoznaj się z regulaminem korzystania z platformy oraz zasadami obowiązującymi użytkowników.",

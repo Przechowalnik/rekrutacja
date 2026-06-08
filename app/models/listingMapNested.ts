@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-import { Z_Country, Z_ListingContractType, Z_ListingType } from "./enums";
+import { Z_Country, Z_ListingCategory, Z_WorkMode } from "./enums";
 
 const Z_ListingMapLocationCity = z.object({
   id: z.string(),
@@ -34,16 +34,15 @@ const Z_ListingMapImage = z.object({
 });
 
 export const Z_ListingMapNested = z.object({
-  area: z.bigint().or(z.number()).nullable().optional(),
-  contractType: Z_ListingContractType.nullable().optional(),
+  category: Z_ListingCategory,
   id: z.string().uuid(),
   images: Z_ListingMapImage.array(),
   location: Z_ListingMapNestedLocation.nullable().optional(),
-  negotiable: z.boolean(),
-  price: z.bigint().or(z.number()),
+  salaryFrom: z.number().nullable().optional(),
+  salaryTo: z.number().nullable().optional(),
   slug: z.string().nullable().optional(),
   title: z.string(),
-  type: Z_ListingType,
+  workMode: Z_WorkMode,
 });
 
 export type T_ListingMapNested = z.infer<typeof Z_ListingMapNested>;

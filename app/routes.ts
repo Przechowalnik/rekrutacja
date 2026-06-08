@@ -91,6 +91,7 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
     route("handle-protocol", "./pages/handle-protocol.tsx", {
       id: id("handle-protocol"),
     }),
+    route("archiwum", "./pages/archive.tsx", { id: id("archive") }),
     route("newsletter", "./pages/newsletter.ts", { id: id("newsletter") }),
     route("polityka-prywatnosci", "./pages/privacy-policy.ts", {
       id: id("privacy-policy"),

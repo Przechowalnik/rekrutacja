@@ -1,1 +1,0 @@
-export { SearchListingsFiltersCategories } from "./SearchListingsFiltersCategories";

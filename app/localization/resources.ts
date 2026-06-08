@@ -23,6 +23,7 @@ import adminBlogPostsEn from "~/locales/en/adminBlogPosts.json";
 import adminBugEditEn from "~/locales/en/adminBugEdit.json";
 import adminBugsEn from "~/locales/en/adminBugs.json";
 import adminReportsEn from "~/locales/en/adminReports.json";
+import archiveEn from "~/locales/en/archive.json";
 import commonEn from "~/locales/en/common.json";
 import companyEn from "~/locales/en/company.json";
 import companyBugsEn from "~/locales/en/companyBugs.json";
@@ -87,6 +88,7 @@ import adminBlogPostsPl from "~/locales/pl/adminBlogPosts.json";
 import adminBugEditPl from "~/locales/pl/adminBugEdit.json";
 import adminBugsPl from "~/locales/pl/adminBugs.json";
 import adminReportsPl from "~/locales/pl/adminReports.json";
+import archivePl from "~/locales/pl/archive.json";
 import commonPl from "~/locales/pl/common.json";
 import companyPl from "~/locales/pl/company.json";
 import companyBugsPl from "~/locales/pl/companyBugs.json";
@@ -154,6 +156,7 @@ export const resources = {
     adminBugEdit: adminBugEditEn,
     adminBugs: adminBugsEn,
     adminReports: adminReportsEn,
+    archive: archiveEn,
     common: commonEn,
     company: companyEn,
     companyBugs: companyBugsEn,
@@ -220,6 +223,7 @@ export const resources = {
     adminBugEdit: adminBugEditPl,
     adminBugs: adminBugsPl,
     adminReports: adminReportsPl,
+    archive: archivePl,
     common: commonPl,
     company: companyPl,
     companyBugs: companyBugsPl,

@@ -344,55 +344,38 @@ model ListingImage {
 }
 
 model Listing {
-  id                String                  @id @default(uuid())
-  listingIndex      Int                     @unique @default(autoincrement())
-  slug              String                  @unique
-  userId            String?
-  companyId         String?
-  contractType      ListingContractType?
-  type              ListingType
-  status            ListingStatus
-  deleteReason      ListingDeleteReason?
-  category          ListingCategory
-  title             String
-  description       String?
-  price             BigInt
-  area              Float?
-  negotiable        Boolean
-  interactions      ListingInteraction[]
-  floorLevel        Int?
-  parkingType       ListingParkingType?
-  minimumRentalDays Int?
-  access            ListingAccess?
-  securityOptions   ListingSecurityOption[]
-  comfortOptions    ListingComfortOption[]
-  entryOptions      ListingEntryOption[]
-  usageOptions      ListingUsageOptions[]
-  expiresAt         DateTime?
-  availableFrom     DateTime
-  availableTo       DateTime?
-  createdAt         DateTime                @default(now())
-  updatedAt         DateTime                @updatedAt
-  utilityOptions    ListingUtilityOption[]
-  condition         ListingCondition?
-  plotType          ListingPlotType?
-  unitType          ListingUnitType?
-  containerType     ListingContainerType?
-  company           Company?                @relation(fields: [companyId], references: [id], onDelete: NoAction)
-  user              User?                   @relation(fields: [userId], references: [id], onDelete: NoAction)
-  location          ListingLocation?
-  payments          ListingPayment[]
-  reports           Report[]                @relation("ReportListing")
-  images            ListingImage[]
+  id            String               @id @default(uuid())
+  listingIndex  Int                  @unique @default(autoincrement())
+  slug          String               @unique
+  userId        String?
+  companyId     String?
+  status        ListingStatus
+  deleteReason  ListingDeleteReason?
+  category      ListingCategory
+  workMode      WorkMode
+  title         String
+  description   String?
+  salaryFrom    Int?
+  salaryTo      Int?
+  showPhone     Boolean              @default(true)
+  showEmail     Boolean              @default(false)
+  interactions  ListingInteraction[]
+  expiresAt     DateTime?
+  availableFrom DateTime?
+  createdAt     DateTime             @default(now())
+  updatedAt     DateTime             @updatedAt
+  company       Company?             @relation(fields: [companyId], references: [id], onDelete: NoAction)
+  user          User?                @relation(fields: [userId], references: [id], onDelete: NoAction)
+  location      ListingLocation?
+  payments      ListingPayment[]
+  reports       Report[]             @relation("ReportListing")
+  images        ListingImage[]
 
   @@index([status, category, createdAt])
   @@index([status, category, expiresAt])
-  @@index([status, category, availableTo])
-  @@index([status, category, type, createdAt])
-  @@index([status, category, type, expiresAt])
+  @@index([status, category, workMode, createdAt])
   @@index([userId, status, expiresAt])
   @@index([companyId, status, expiresAt])
-  @@index([status, expiresAt, availableTo])
   @@index([companyId, createdAt])
   @@index([userId, createdAt])
 }
@@ -474,98 +457,10 @@ enum ReportType {
   OTHER
 }
 
-enum ListingAccess {
-  ACCESS_24H
-  LIMITED_HOURS
-}
-
-enum ListingSecurityOption {
-  MONITORING
-  SECURITY
-  ELECTRONIC_LOCK
-  MANUAL_GATE
-  AUTOMATIC_GATE
-  PADLOCK
-  ALARM
-  DOOR_LOCK
-  BARRIER
-  REMOTE_CONTROL
-}
-
-enum ListingCondition {
-  NEEDS_RENOVATION
-  PARTIALLY_FINISHED
-  FINISHED
-  NEW
-  RAW
-}
-
-enum ListingUtilityOption {
-  ELECTRICITY
-  SEWAGE
-  WATER
-}
-
-enum ListingComfortOption {
-  HEATED
-  LIGHTING
-  PARKING
-  VENTILATION
-}
-
-enum ListingEntryOption {
-  ELEVATOR
-  STAIRCASE
-  STREET_ENTRANCE
-}
-
-enum ListingUsageOptions {
-  CAR_ACCESS
-  TIR_ACCESS
-}
-
-enum ListingPlotType {
-  FOREST
-  SERVICE
-  AGRICULTURAL
-  BUILDING
-  INVESTMENT
-  RECREATIONAL
-}
-
-enum ListingUnitType {
-  WAREHOUSE
-  RETAIL
-  SERVICE
-  PRODUCTION
-  OFFICE
-  CONFERENCE_ROOM
-}
-
-enum ListingContainerType {
-  MARINE
-  WAREHOUSE
-  OFFICE_SOCIAL
-  SANITARY
-  REFRIGERATED
-  MODULAR_RESIDENTIAL
-}
-
-enum ListingParkingType {
-  DETACHED
-  UNDERGROUND
-  MULTILEVEL_LIFT
-  GROUND_PLACE
-}
-
-enum ListingType {
-  SALE
-  RENT
-}
-
-enum ListingContractType {
-  SHORT_TERM
-  LONG_TERM
+enum WorkMode {
+  ONSITE
+  REMOTE
+  HYBRID
 }
 
 enum ListingPaymentStatus {
@@ -588,8 +483,7 @@ enum ListingStatus {
 }
 
 enum ListingDeleteReason {
-  SOLD
-  RENTED
+  POSITION_FILLED
   NO_LONGER_AVAILABLE
   CHANGED_MIND
   DUPLICATE
@@ -597,16 +491,22 @@ enum ListingDeleteReason {
 }
 
 enum ListingCategory {
-  PARKING
-  STORAGE_UNIT
-  ATTIC
-  BASEMENT
-  WAREHOUSE
-  ROOM
-  PLOT
-  UNIT
-  CONTAINER
-  BANQUET_HALL
+  IT
+  SALES
+  MARKETING
+  FINANCE
+  HR
+  ADMINISTRATION
+  CUSTOMER_SERVICE
+  LOGISTICS
+  PRODUCTION
+  CONSTRUCTION
+  GASTRONOMY
+  HEALTHCARE
+  EDUCATION
+  ENGINEERING
+  LAW
+  OTHER
 }
 
 enum Role {

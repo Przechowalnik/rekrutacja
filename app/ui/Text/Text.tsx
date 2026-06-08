@@ -13,6 +13,7 @@ import { safeHtml } from "~/utilities/functions";
 import { generateTextGradient } from "./utilities";
 
 export type T_TextComponent =
+  | "div"
   | "h1"
   | "h2"
   | "h3"
@@ -98,6 +99,8 @@ const TextToMemoize = ({
     element: typeof htmlToClear === "string" ? htmlToClear : "",
   });
 
+  const resolvedComponent = withHTML ? (component ?? "div") : component;
+
   const align = (() => {
     if (center) {
       return "center";
@@ -128,7 +131,7 @@ const TextToMemoize = ({
       {...restProps}
       align={align}
       c={primaryColor ? platformColor : c}
-      component={component}
+      component={resolvedComponent}
       fw={fw}
       id={id}
       // @ts-ignore

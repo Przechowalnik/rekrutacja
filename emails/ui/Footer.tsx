@@ -1,12 +1,4 @@
-import {
-  Column,
-  Container,
-  Img,
-  Link,
-  Markdown,
-  Row,
-} from "@react-email/components";
-import dayjs from "dayjs";
+import { Column, Container, Link, Markdown, Row } from "@react-email/components";
 import { TFunction } from "i18next";
 
 import { linkTerms } from "./styles.server";
@@ -16,8 +8,6 @@ export type T_Footer = {
 };
 
 export const Footer = ({ t }: T_Footer) => {
-  const currentYear = dayjs().get("year");
-
   return (
     <>
       <Markdown
@@ -28,7 +18,7 @@ export const Footer = ({ t }: T_Footer) => {
         markdownCustomStyles={{
           codeInline: { fontWeight: "bold" },
           link: {
-            color: "#4422aa",
+            color: "#2563eb",
             display: "inline",
             fontSize: "18px",
             fontWeight: 700,
@@ -47,7 +37,7 @@ export const Footer = ({ t }: T_Footer) => {
       <Container
         align="center"
         style={{
-          backgroundColor: "#F1EEFC",
+          backgroundColor: "#eff6ff",
           maxWidth: "100%",
           padding: "32px",
           width: "100%",
@@ -60,11 +50,18 @@ export const Footer = ({ t }: T_Footer) => {
               paddingBottom: "24px",
             }}
           >
-            <Img
-              alt="do-pracy.pl logo"
-              height={32}
-              src={`${t("company.link")}/icons/pwa-512x512.png`}
-            />
+            <Link
+              href={t("company.link")}
+              style={{
+                color: "#2563eb",
+                fontSize: "24px",
+                fontWeight: 800,
+                letterSpacing: "-0.5px",
+                textDecoration: "none",
+              }}
+            >
+              do-pracy.pl
+            </Link>
           </Column>
         </Row>
         <Row>
@@ -81,10 +78,7 @@ export const Footer = ({ t }: T_Footer) => {
             }}
           >
             {t("footer.content", {
-              companyAddress: t("company.address"),
               companyName: t("company.name"),
-              companyTaxId: t("company.taxId"),
-              currentYear: currentYear,
             })}
           </Markdown>
         </Row>
@@ -106,9 +100,6 @@ export const Footer = ({ t }: T_Footer) => {
               style={linkTerms}
             >
               {t("footer.policyPrivacy")}
-            </Link>
-            <Link href={`${t("company.link")}/konto/zgody`} style={linkTerms}>
-              {t("footer.unsubscribe")}
             </Link>
           </Column>
         </Row>

@@ -21,19 +21,13 @@ import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useSearchListings } from "~/hooks/useSearchListings";
 import { T_City } from "~/models/city";
 import { T_CityDistrict } from "~/models/cityNested";
-import {
-  allListingCategoryRent,
-  allListingCategorySale,
-  E_ListingCategory,
-  E_ListingType,
-} from "~/models/enums";
+import { allListingCategory } from "~/models/enums";
 import { AutocompleteCity } from "~/ui/AutocompleteCity";
 import { Bar } from "~/ui/Bar";
 import { T_BreadcrumbsRoute } from "~/ui/Breadcrumbs";
 import { Button } from "~/ui/Button";
 import { Fieldset } from "~/ui/Fieldset";
 import { IconSeo } from "~/ui/IconSeo";
-import { Image } from "~/ui/Image";
 import { Section } from "~/ui/Section";
 import { T_SectionPageMeta } from "~/ui/Section/Section";
 import { generateIconForListingCategory } from "~/utilities/listing";
@@ -41,12 +35,6 @@ import { generateIconForListingCategory } from "~/utilities/listing";
 const SearchListingsFiltersExtraFilters = dynamic(() =>
   import("./SearchListingsFiltersExtraFilters").then(module => ({
     default: module.SearchListingsFiltersExtraFilters,
-  })),
-);
-
-const SearchListingsFiltersCategories = dynamic(() =>
-  import("./SearchListingsFiltersCategories").then(module => ({
-    default: module.SearchListingsFiltersCategories,
   })),
 );
 
@@ -80,9 +68,7 @@ const SearchListingsFiltersContent = ({
   handleSaveNewLocation,
   haveChangesInSearchToSave,
   searchListing,
-  searchListingLive,
 }: T_SearchListingsFiltersContent) => {
-  const { t: tSeo } = useTranslation(namespaces.seo);
   const { t: tCommon } = useTranslation(namespaces.common);
   const { platformColor } = useLayout();
 
@@ -106,19 +92,11 @@ const SearchListingsFiltersContent = ({
     return;
   })();
 
-  const counterExtraFilters = [
-    searchListing.categoryAndFilters?.condition,
-    searchListing.extraFilters?.access,
-    searchListing.extraFilters?.contractType,
-    searchListing.location?.radius,
-    searchListing.extraFilters?.type,
-  ].filter(Boolean).length;
+  const counterExtraFilters =
+    (searchListing.location?.radius ? 1 : 0) +
+    searchListing.extraFilters.workModes.length;
 
-  const mapCategories = (
-    searchListing.extraFilters.type === E_ListingType.SALE
-      ? allListingCategorySale
-      : allListingCategoryRent
-  )
+  const mapCategories = [...allListingCategory]
     .sort((a, b) =>
       tCommon(`listingCategory.${a}`).localeCompare(
         tCommon(`listingCategory.${b}`),
@@ -129,50 +107,9 @@ const SearchListingsFiltersContent = ({
     .map(item => {
       const isActive = searchListing.categoryAndFilters.category === item;
 
-      const parkingTypesFromQuery =
-        searchListingLive?.listingCategory === E_ListingCategory.PARKING
-          ? (searchListingLive?.listingParkingTypes ?? [])
-          : [];
-
-      const containerTypesFromQuery =
-        searchListingLive?.listingCategory === E_ListingCategory.CONTAINER
-          ? (searchListingLive?.listingContainerTypes ?? [])
-          : [];
-
-      const plotTypesFromQuery =
-        searchListingLive?.listingCategory === E_ListingCategory.PLOT
-          ? (searchListingLive?.listingPlotTypes ?? [])
-          : [];
-
-      const unitTypesFromQuery =
-        searchListingLive?.listingCategory === E_ListingCategory.UNIT
-          ? (searchListingLive?.listingUnitTypes ?? [])
-          : [];
-
       const generatedIcon = generateIconForListingCategory({
-        category: item,
-        t: tSeo,
+        listingCategory: item,
       });
-
-      let leftSection: React.ReactNode;
-
-      if (generatedIcon?.icon) {
-        leftSection = <IconSeo icon={generatedIcon.icon} size="lg" />;
-      } else if (generatedIcon?.src) {
-        leftSection = (
-          <Image
-            alt={generatedIcon.alt}
-            h={19}
-            miw={21}
-            path={{
-              forceDarkMode: isActive,
-              format: "webp",
-              pathWithColorMode: true,
-              src: generatedIcon.src,
-            }}
-          />
-        );
-      }
 
       return (
         <Button
@@ -187,39 +124,10 @@ const SearchListingsFiltersContent = ({
               : `light-dark(${colorsMantine.black}, ${colorsMantine.white})`
           }
           key={`category_${item}`}
-          leftSection={leftSection}
+          leftSection={<IconSeo icon={generatedIcon} size="lg" />}
           onClick={() => {
-            handleSaveNewExtraFilters({
-              access: null,
-              contractType: null,
-              type: searchListing.extraFilters.type,
-            });
-
-            if (isActive) {
-              handleSaveNewCategoryAndFilters({
-                category: null,
-                condition: null,
-                containerTypes: [],
-                parkingTypes: [],
-                plotTypes: [],
-                unitTypes: [],
-              });
-              return;
-            }
-
             handleSaveNewCategoryAndFilters({
-              category: item,
-              condition: null,
-              containerTypes:
-                item === E_ListingCategory.CONTAINER
-                  ? containerTypesFromQuery
-                  : [],
-              parkingTypes:
-                item === E_ListingCategory.PARKING ? parkingTypesFromQuery : [],
-              plotTypes:
-                item === E_ListingCategory.PLOT ? plotTypesFromQuery : [],
-              unitTypes:
-                item === E_ListingCategory.UNIT ? unitTypesFromQuery : [],
+              category: isActive ? null : item,
             });
           }}
           size="sm"
@@ -304,11 +212,6 @@ const SearchListingsFiltersContent = ({
               {mapCategories}
             </Flex>
           </Fieldset>
-          <SearchListingsFiltersCategories
-            handleSaveNewCategoryAndFilters={handleSaveNewCategoryAndFilters}
-            platformColor={platformColor}
-            searchListing={searchListing}
-          />
         </Box>
       </Flex>
       <Box pb={12} pt={12}>
@@ -324,8 +227,6 @@ const SearchListingsFiltersContent = ({
           textCenter
         >
           <SearchListingsFiltersExtraFilters
-            barExtraFiltersOpened={barExtraFiltersOpened}
-            handleSaveNewCategoryAndFilters={handleSaveNewCategoryAndFilters}
             handleSaveNewExtraFilters={handleSaveNewExtraFilters}
             handleSaveNewLocation={handleSaveNewLocation}
             platformColor={platformColor}

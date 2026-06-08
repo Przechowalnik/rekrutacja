@@ -54,6 +54,7 @@ const TextEditor = ({
 
   const editor = useEditor({
     content: defaultValue,
+    editable: !onlyShow,
     extensions: [
       StarterKit,
       Underline,
@@ -63,8 +64,9 @@ const TextEditor = ({
       Highlight,
       TextAlign.configure({ types: ["heading", "paragraph"] }),
     ],
-    onUpdate: () => {
-      const valueEditor = editor?.getHTML();
+    immediatelyRender: false,
+    onUpdate: ({ editor: currentEditor }) => {
+      const valueEditor = currentEditor.getHTML();
       if (valueEditor === "<p></p>") {
         onChange?.("");
       } else {
@@ -154,6 +156,7 @@ const TextEditor = ({
                   : "2px solid var(--mantine-color-gray-4)"
               }
               editor={editor}
+              mih={240}
               w="100%"
             >
               <RichTextEditor.Toolbar sticky stickyOffset={60}>

@@ -24,6 +24,7 @@ export const namespaces = {
   adminBugEdit: "adminBugEdit",
   adminBugs: "adminBugs",
   adminReports: "adminReports",
+  archive: "archive",
   common: "common",
   company: "company",
   companyBugs: "companyBugs",

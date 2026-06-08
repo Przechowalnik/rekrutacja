@@ -1,54 +1,54 @@
 {
   "categoryCityContent": {
-    "description": "Check {{count}} current {{categoryPlural}} listings in {{city}} ({{voivodeship}} voivodeship) available for rent or sale. Compare prices, locations and choose the space that fits your needs. You can also browse other categories in {{city}}.",
-    "descriptionEmpty": "There are no {{categoryPlural}} listings in {{city}} ({{voivodeship}} voivodeship) yet. Browse other categories in {{city}} or add your own listing - be the first to reach people looking for {{categoryPlural}} in this area.",
-    "titleNoListings": "{{categoryPlural}} in {{city}} - browse category",
-    "titleWithListings": "{{categoryPlural}} in {{city}} - {{count}} current listings"
+    "description": "Check {{count}} current {{categoryPlural}} job offers in {{city}} ({{voivodeship}} voivodeship). Compare positions, salaries and work mode to choose the offer that fits your needs. You can also browse other job categories in {{city}}.",
+    "descriptionEmpty": "There are no {{categoryPlural}} job offers in {{city}} ({{voivodeship}} voivodeship) yet. Browse other job categories in {{city}} or add your own job offer - be the first to reach candidates looking for {{categoryPlural}} work in this area.",
+    "titleNoListings": "{{categoryPlural}} jobs in {{city}} - browse category",
+    "titleWithListings": "{{categoryPlural}} jobs in {{city}} - {{count}} current offers"
   },
   "categoryCityFaq": {
     "q1": {
-      "answer": "Prices of {{categoryPlural}} in {{city}} depend on location, area, standard and rental length. Check {{count}} current listings on do-pracy.pl to compare prices and find the best option. Many listings allow price negotiation directly with the owner.",
-      "question": "How much does it cost to rent {{categoryPlural}} in {{city}}?"
+      "answer": "Salaries in {{categoryPlural}} in {{city}} depend on the position, experience, scope of duties and work mode. Check {{count}} current job offers on do-pracy.pl to compare salary ranges and find the best option. Many offers allow salary negotiation directly with the employer.",
+      "question": "How much can you earn in {{categoryPlural}} in {{city}}?"
     },
     "q2": {
-      "answer": "Currently in {{city}} there are {{count}} {{categoryPlural}} listings available - from small to large spaces. Offers cover various districts of {{city}} and surrounding areas. You can filter results by price, area, district and other parameters.",
-      "question": "How many {{categoryPlural}} listings are available in {{city}}?"
+      "answer": "Currently in {{city}} there are {{count}} {{categoryPlural}} job offers available - from junior to senior positions. The offers cover various companies in {{city}} and surrounding areas. You can filter results by city, job category and work mode (on-site, remote, hybrid).",
+      "question": "How many {{categoryPlural}} job offers are available in {{city}}?"
     },
     "q3": {
-      "answer": "Short-term rental ({{categoryPlural}} for days or weeks) is available for selected listings marked as short-term. By default, {{categoryPlural}} in {{city}} are offered for long-term rental (monthly). Check the filters on the listings page.",
-      "question": "Can I rent {{categoryPlural}} in {{city}} short-term?"
+      "answer": "Remote and hybrid work ({{categoryPlural}}) is available for selected offers marked with the relevant work mode. Some positions in {{categoryPlural}} in {{city}} are offered on-site. Check the work mode filter on the offers page.",
+      "question": "Can I work remotely in {{categoryPlural}} in {{city}}?"
     },
     "q4": {
-      "answer": "Yes. do-pracy.pl is a listings platform where both individuals and companies can add {{categoryPlural}} listings in {{city}} and other cities. Create an account and add a listing - you will reach people actively looking for spaces to rent or buy.",
-      "question": "Can I add my own {{categoryPlural}} listing in {{city}}?"
+      "answer": "Yes. do-pracy.pl is a job board where both companies and recruiters can add {{categoryPlural}} job offers in {{city}} and other cities. Create an account and add a job offer - you will reach candidates actively looking for employment.",
+      "question": "Can I add my own {{categoryPlural}} job offer in {{city}}?"
     },
     "q5": {
-      "answer": "To contact the owner of a {{categoryPlural}} listing in {{city}}, open the selected listing and click the button revealing the phone number. Contacting owners is free for people searching - no commission or hidden fees.",
-      "question": "How do I contact the owner of a {{categoryPlural}} listing in {{city}}?"
+      "answer": "To contact the employer of a {{categoryPlural}} job offer in {{city}}, open the selected job offer and click the button to apply or reveal the contact details. Contacting employers is free for candidates - no commission or hidden fees.",
+      "question": "How do I contact the employer of a {{categoryPlural}} job offer in {{city}}?"
     }
   },
   "categoryContent": {
-    "description": "Check {{count}} current {{categoryPlural}} listings available across {{cityCount}} cities in Poland. Pick a city to see detailed rent and sale offers.",
-    "titleWithListings": "{{categoryPlural}} in Poland - {{count}} current listings"
+    "description": "Check {{count}} current {{categoryPlural}} job offers available across {{cityCount}} cities in Poland. Pick a city to see detailed job offers and positions.",
+    "titleWithListings": "{{categoryPlural}} jobs in Poland - {{count}} current offers"
   },
   "cityFaq": {
     "q1": {
-      "answer": "In {{city}} there are {{count}} current listings for rent and sale of spaces: garages and parking spots, warehouses, units, plots, storage units, basements, containers, attics and rooms. Check all categories and choose the one you are interested in.",
-      "question": "What spaces can I rent or buy in {{city}}?"
+      "answer": "In {{city}} there are {{count}} current job offers across many categories: IT, sales, marketing, finance and accounting, HR, administration, customer service, logistics and transport, production, construction, hospitality, healthcare, education, engineering and law. Check all categories and choose the one you are interested in.",
+      "question": "What kind of work can I look for in {{city}}?"
     },
     "q2": {
-      "answer": "Prices in {{city}} ({{voivodeship}} voivodeship) depend on category, area and location. Storage units and basements are usually cheapest, commercial units and warehouses in the center are most expensive. Compare {{count}} current listings on do-pracy.pl.",
-      "question": "How much does it cost to rent a space in {{city}}?"
+      "answer": "Salaries in {{city}} ({{voivodeship}} voivodeship) depend on the job category, position and experience. The highest salary ranges are usually offered by positions in IT, engineering and finance. Compare {{count}} current job offers on do-pracy.pl.",
+      "question": "How much can you earn working in {{city}}?"
     },
     "q3": {
-      "answer": "Yes. do-pracy.pl is a listings platform - you can add your own offer for rent or sale of spaces in {{city}}. Create an account, describe your offer, add photos and publish. Your listing will reach people actively searching for spaces in {{city}}.",
-      "question": "Can I add my own listing in {{city}}?"
+      "answer": "Yes. do-pracy.pl is a job board - you can add your own job offer in {{city}}. Create an account, describe the position, add the requirements and publish. Your job offer will reach candidates actively searching for employment in {{city}}.",
+      "question": "Can I add my own job offer in {{city}}?"
     },
     "q4": {
-      "answer": "Yes. Listings in {{city}} cover all districts and surrounding areas. You can filter results by a specific district or by radius from the center. Choose the option that best fits your needs.",
-      "question": "Can I filter listings by district of {{city}}?"
+      "answer": "Yes. Job offers in {{city}} cover all districts and the surrounding area. You can narrow the results to a specific district or set a radius from the centre. Choose the option that best fits your needs.",
+      "question": "Can I filter job offers by district in {{city}}?"
     }
   },
-  "description": "Select the city you're interested in to view listings available in that location. This will help you find offers tailored to your region more easily.",
+  "description": "Select the city you're interested in to view job offers available in that location. This will help you find positions tailored to your region more easily.",
   "inputPlaceholder": "Find a city"
 }

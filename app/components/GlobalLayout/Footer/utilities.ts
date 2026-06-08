@@ -96,6 +96,12 @@ export const generateFooter = ({
             route: E_Routes.search,
           }),
         },
+        {
+          title: t(`breadcrumbs.${E_Routes.archive}`),
+          url: getLocalizedRoute({
+            route: E_Routes.archive,
+          }),
+        },
         ...(userCookie
           ? [
               {

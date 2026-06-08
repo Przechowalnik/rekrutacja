@@ -37,7 +37,7 @@ export const generateTextGradient = ({
     }
 
     case "violet": {
-      return { deg: 90, from: platformColor, to: "grape" };
+      return { deg: 90, from: platformColor, to: "cyan" };
     }
 
     case "cyan": {

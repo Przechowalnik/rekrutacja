@@ -10,7 +10,6 @@ import { showPhoneNumber } from "~/lib/validations";
 import {
   E_CompanyWorkerPermissions,
   E_ListingStatus,
-  E_ListingType,
   E_Roles,
   T_ListingStatus,
 } from "~/models/enums";
@@ -23,7 +22,7 @@ import {
   checkCompanyUserPermissions,
   generateLocationAddress,
 } from "~/utilities/functions";
-import { generateListingPriceFromTypeAndContractTypeWithPrice } from "~/utilities/price";
+import { generateSalaryRange } from "~/utilities/price";
 
 import type { T_CardBadge } from "../Card";
 import { Card } from "../Card";
@@ -61,9 +60,7 @@ const CardListingToMemoize = ({ isCompany, listing }: T_CardListing) => {
     ? hasDateExpired(listing.expiresAt.toString())
     : false;
 
-  const isHidden = listing.availableTo
-    ? new Date(listing.availableTo) <= new Date()
-    : false;
+  const isHidden = false;
 
   let phoneNumber: bigint | null | number = null;
   let phoneCountryCode: bigint | null | number = null;
@@ -164,64 +161,32 @@ const CardListingToMemoize = ({ isCompany, listing }: T_CardListing) => {
             </Text>
           </List.Item>
         )}
-        {listing.availableTo && (
-          <List.Item>
-            <Text c="white" size="sm">
-              {t("cardListing.availableTo")}:{" "}
-              <b>
-                {replaceDateToYearMonthHoursMinutesInWordsDay({
-                  date: listing.availableTo.toString(),
-                  withNbsp: false,
-                })}
-              </b>
-            </Text>
-          </List.Item>
-        )}
         <List.Item>
           <Text c="white" size="sm">
-            {t("inputs.listingType")}: <b>{t(`listingType.${listing.type}`)}</b>
+            {t("inputs.listingWorkMode")}:{" "}
+            <b>{t(`workMode.${listing.workMode}`)}</b>
           </Text>
         </List.Item>
-        {listing.contractType && listing.type === E_ListingType.RENT && (
-          <List.Item>
-            <Text c="white" size="sm">
-              {t("inputs.listingContractType")}:{" "}
-              <b>{t(`listingContractType.${listing.contractType}`)}</b>
-            </Text>
-          </List.Item>
-        )}
-        {listing?.minimumRentalDays && (
-          <List.Item>
-            <Text c="white" size="sm">
-              {t("inputs.listingMinimumRentalDays")}:{" "}
-              <b>{listing?.minimumRentalDays}</b>
-            </Text>
-          </List.Item>
-        )}
         <List.Item>
           <Text c="white" size="sm">
             {t("inputs.listingCategory")}:{" "}
             <b>{t(`listingCategory.${listing.category}`)}</b>
           </Text>
         </List.Item>
-        {listing?.area && (
+        {(listing?.salaryFrom != null || listing?.salaryTo != null) && (
           <List.Item>
             <Text c="white" size="sm">
-              {t("inputs.listingArea")}: <b>{listing.area}</b>
+              {t("inputs.listingSalary")}:{" "}
+              <b>
+                {generateSalaryRange({
+                  salaryFrom: listing.salaryFrom,
+                  salaryTo: listing.salaryTo,
+                  tCommon: t,
+                })}
+              </b>
             </Text>
           </List.Item>
         )}
-        <List.Item>
-          <Text c="white" size="sm">
-            {generateListingPriceFromTypeAndContractTypeWithPrice({
-              contractType: listing.contractType,
-              negotiable: listing.negotiable,
-              price: listing.price,
-              tCommon: t,
-              type: listing.type,
-            })}
-          </Text>
-        </List.Item>
         <List.Item>
           <Text c="white" size="sm">
             {t("cardListing.countImages")}: <b>{listing.images.length}</b>

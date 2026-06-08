@@ -4,7 +4,7 @@ import {
   Container,
   Head,
   Html,
-  Img,
+  Link,
   Preview,
   Row,
   Section,
@@ -39,11 +39,18 @@ export default function Layout({
                 paddingTop: "22px",
               }}
             >
-              <Img
-                alt="do-pracy.pl logo"
-                height={32}
-                src={`${footer.t("company.link")}/icons/pwa-512x512.png`}
-              />
+              <Link
+                href={footer.t("company.link")}
+                style={{
+                  color: "#ffffff",
+                  fontSize: "26px",
+                  fontWeight: 800,
+                  letterSpacing: "-0.5px",
+                  textDecoration: "none",
+                }}
+              >
+                do-pracy.pl
+              </Link>
             </Column>
           </Row>
         </Section>

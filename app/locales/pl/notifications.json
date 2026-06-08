@@ -207,20 +207,8 @@
     "message": "Coś jest nie tak z językiem użytkownika.",
     "title": "Błąd w polu:"
   },
-  "badListingAccess": {
-    "message": "Nieprawidłowy dostęp. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingArea": {
-    "message": "Podana powierzchnia jest nieprawidłowa.",
-    "title": "Błąd w polu:"
-  },
   "badListingAvailableFrom": {
     "message": "Podana data dostępności od jest nieprawidłowa.",
-    "title": "Błąd w polu:"
-  },
-  "badListingAvailableTo": {
-    "message": "Podana data dostępności do jest nieprawidłowa.",
     "title": "Błąd w polu:"
   },
   "badListingCategories": {
@@ -235,30 +223,6 @@
     "message": "Złe miasto dla ogłoszenia",
     "title": "Błąd w polu:"
   },
-  "badListingComfortOption": {
-    "message": "Nieprawidłowa opcja komfortu.",
-    "title": "Błąd w polu:"
-  },
-  "badListingComfortOptions": {
-    "message": "Nieprawidłowe opcje komfortu. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingCondition": {
-    "message": "Nieprawidłowy stan. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingContainerType": {
-    "message": "Nieprawidłowy typ konteneru. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingContainerTypes": {
-    "message": "Nieprawidłowe typy kontenerów.",
-    "title": "Błąd w polu:"
-  },
-  "badListingContractType": {
-    "message": "Nieprawidłowy rodzaj ogłoszenia. 😫",
-    "title": "Błąd w polu:"
-  },
   "badListingDeleteReason": {
     "message": "Nieprawidłowy powód usunięcia ogłoszenia. 😫",
     "title": "Błąd w polu:"
@@ -271,60 +235,16 @@
     "message": "Nieprawidłowa nazwa dzielnicy",
     "title": "Błąd w polu:"
   },
-  "badListingEntryOption": {
-    "message": "Nieprawidłowa opcja wejścia.",
-    "title": "Błąd w polu:"
-  },
-  "badListingEntryOptions": {
-    "message": "Nieprawidłowe opcje wejścia. 😫",
-    "title": "Błąd w polu:"
-  },
   "badListingExtension": {
     "message": "Nieprawidłowa liczba miesięcy przedłużenia.",
-    "title": "Błąd w polu:"
-  },
-  "badListingFloorLevel": {
-    "message": "Nieprawidłowe piętro.",
     "title": "Błąd w polu:"
   },
   "badListingId": {
     "message": "Nie znaleziono takiego ogłoszenia.",
     "title": "Błąd w polu:"
   },
-  "badListingMinimumRentalDays": {
-    "message": "Nieprawidłowa minimalna liczba dni wynajmu.",
-    "title": "Błąd w polu:"
-  },
-  "badListingParkingType": {
-    "message": "Nieprawidłowy typ miejsca postojowego. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingParkingTypes": {
-    "message": "Nieprawidłowe typy miejsc parkingowych.",
-    "title": "Błąd w polu:"
-  },
-  "badListingPlotType": {
-    "message": "Nieprawidłowy typ działki. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingPlotTypes": {
-    "message": "Nieprawidłowe typy działek.",
-    "title": "Błąd w polu:"
-  },
-  "badListingPrice": {
-    "message": "Podana cena jest nieprawidłowa.",
-    "title": "Błąd w polu:"
-  },
-  "badListingRentalDays": {
-    "message": "Nieprawidłowa liczba dni wynajmu.",
-    "title": "Błąd w polu:"
-  },
-  "badListingSecurityOption": {
-    "message": "Nieprawidłowa opcja zabezpieczeń.",
-    "title": "Błąd w polu:"
-  },
-  "badListingSecurityOptions": {
-    "message": "Nieprawidłowe opcje bezpieczeństwa. 😫",
+  "badListingSalary": {
+    "message": "Widełki wynagrodzenia są nieprawidłowe (kwota „od” nie może być większa niż „do”)",
     "title": "Błąd w polu:"
   },
   "badListingStatus": {
@@ -335,32 +255,8 @@
     "message": "Sprawdź tytuł ogłoszenia i spróbuj ponownie.",
     "title": "Coś jest nie tak z tytułem ogłoszenia 😓"
   },
-  "badListingType": {
-    "message": "Zły typ ogłoszenia",
-    "title": "Błąd w polu:"
-  },
-  "badListingUnitType": {
-    "message": "Nieprawidłowy typ lokalu. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingUnitTypes": {
-    "message": "Nieprawidłowe typy lokali.",
-    "title": "Błąd w polu:"
-  },
-  "badListingUsageOption": {
-    "message": "Nieprawidłowa opcja użytkowania.",
-    "title": "Błąd w polu:"
-  },
-  "badListingUsageOptions": {
-    "message": "Nieprawidłowe opcje użytkowania. 😫",
-    "title": "Błąd w polu:"
-  },
-  "badListingUtilityOption": {
-    "message": "Nieprawidłowa opcja mediów.",
-    "title": "Błąd w polu:"
-  },
-  "badListingUtilityOptions": {
-    "message": "Nieprawidłowe opcje mediów. 😫",
+  "badListingWorkMode": {
+    "message": "Nieprawidłowy tryb pracy",
     "title": "Błąd w polu:"
   },
   "badLocationId": {
@@ -503,10 +399,6 @@
     "message": "Twoja karta wymaga dodatkowego uwierzytelnienia (3D Secure), którego nie udało się przeprowadzić. Spróbuj ponownie lub użyj innej metody płatności.",
     "title": "Nie można dokończyć płatności. 😭"
   },
-  "categoryChangeAlert": {
-    "message": "Zmiana kategorii ogłoszenia spowodowała zresetowanie pól z informacjami szczegółowymi.",
-    "title": "Zmieniono informacje szczegółowe. 😊"
-  },
   "cityChangeAlert": {
     "message": "Zmiana miasta spowodowała zresetowanie pól związanych z lokalizacją.",
     "title": "Zmieniono miasto. 😊"
@@ -558,10 +450,6 @@
   "companyWorkerNonStandardDatesIsNotUnique": {
     "message": "Sprawdź niestandardowe dni.",
     "title": "Niektóre niestandardowe dni nakładają się na siebie. 😐"
-  },
-  "contractTypeChangeAlert": {
-    "message": "Zmiana typu ogłoszenia spowodowała zresetowanie pól rodzaj ogłoszenia oraz cene.",
-    "title": "Zmieniono kategorię. 😊"
   },
   "couponCodeExists": {
     "message": "",
@@ -719,17 +607,9 @@
     "message": "Osiągnięto dzienny limit zmiany numeru telefonu.",
     "title": "Błąd podczas zmiany numeru telefonu. 😓"
   },
-  "listingChangeAvailableTo": {
-    "message": "Zmiana date początku dostępności ogłoszenia spowodowała zresetowanie pola dostępności końca ogłoszenia.",
-    "title": "Zmieniono date dostępności ogłoszenia. 😊"
-  },
   "listingNotFound": {
     "message": "Ogłoszenie, którego szukasz, nie istnieje lub zostało usunięte.",
     "title": "Nie znaleziono ogłoszenia. 😓"
-  },
-  "listingTypeChangeAlert": {
-    "message": "Zmiana typu ogłoszenia spowodowała zresetowanie pola z kategorią ogłoszenia.",
-    "title": "Zmieniono typ ogłoszenia. 😊"
   },
   "listingsImagesMax5": {
     "message": "",
@@ -859,25 +739,9 @@
     "message": "Musi zawierać chociaż 1 dużą literę.",
     "title": "Błąd w polu:"
   },
-  "noListingCategoryInListingType": {
-    "message": "",
-    "title": "Nieprawidłowa wartość kategorii ogłoszenia. 😐"
-  },
-  "noListingContractType": {
-    "message": "",
-    "title": "Nieprawidłowa wartość rodzaju ogłoszenia. 😐"
-  },
-  "noListingMinimumRentalDays": {
-    "message": "",
-    "title": "Nieprawidłowa wartość minimalnych ilości dni do wynajęcia. 😐"
-  },
-  "noListingPlotType": {
-    "message": "",
-    "title": "Nieprawidłowa wartość typu działki. 😐"
-  },
-  "noListingUnitType": {
-    "message": "",
-    "title": "Nieprawidłowa wartość typu lokalu. 😐"
+  "noListingContactMethod": {
+    "message": "Pokaż w ogłoszeniu numer telefonu, adres e-mail lub oba.",
+    "title": "Wybierz sposób kontaktu 😊"
   },
   "noNeedActiveFreeTrial": {
     "message": "Aby ją wykonać, musisz posiadać aktywną subskrypcję.",
@@ -894,10 +758,6 @@
   "noPromotionCode": {
     "message": "",
     "title": "Brak kodu promocyjnego. 😓"
-  },
-  "noSelectedListingCondition": {
-    "message": "Wymagany stan",
-    "title": "Musisz wybrać stan, aby utworzyć ogłoszenie."
   },
   "noSelectedPlan": {
     "message": "",

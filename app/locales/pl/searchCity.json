@@ -1,13 +1,13 @@
 {
   "contentBlock": {
-    "description": "W {{city}} (województwo {{voivodeship}}) znajdziesz {{count}} aktualnych ofert wynajmu i sprzedaży powierzchni - od garaży i miejsc postojowych, przez magazyny, lokale i działki, po komórki lokatorskie i strychy. Porównaj ceny, sprawdź lokalizacje i znajdź przestrzeń dopasowaną do Twoich potrzeb. Oferty obejmują również wybrane dzielnice {{city}}.",
-    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze aktualnych ofert na do-pracy.pl. Jeśli posiadasz wolną powierzchnię - garaż, magazyn, działkę lub komórkę lokatorską - dodaj ogłoszenie i jako pierwszy dotrzyj do osób szukających przestrzeni w {{city}}.",
-    "titleNoListings": "Wynajem i sprzedaż powierzchni w {{city}}",
-    "titleWithListings": "Wynajem i sprzedaż powierzchni w {{city}} - {{count}} aktualnych ofert"
+    "description": "W {{city}} (województwo {{voivodeship}}) znajdziesz {{count}} aktualnych ofert pracy w wielu branżach - od IT, sprzedaży i marketingu, przez finanse, logistykę i produkcję, po gastronomię, zdrowie i edukację. Porównaj stanowiska, sprawdź wynagrodzenia i znajdź pracę dopasowaną do Twoich potrzeb. Oferty obejmują pracę stacjonarną, zdalną i hybrydową w {{city}}.",
+    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze aktualnych ofert pracy na do-pracy.pl. Jeśli szukasz pracowników - na stanowiska w IT, sprzedaży, produkcji czy administracji - dodaj ogłoszenie o pracę i jako pierwszy dotrzyj do kandydatów szukających zatrudnienia w {{city}}.",
+    "titleNoListings": "Oferty pracy w {{city}}",
+    "titleWithListings": "Oferty pracy w {{city}} - {{count}} aktualnych ofert"
   },
-  "description": "Wybierz kategorię ogłoszenia, które Cię interesuje. Dzięki temu pokażemy tylko te oferty, które najlepiej odpowiadają Twoim potrzebom.",
-  "descriptionDistrict": "Wybierz dzielnice, które Cię interesują. Pokażemy tylko oferty z wybranych obszarów.",
-  "title": "Wybierz kategorię albo przejdź niżej, aby wybrać dzielnicę",
-  "titleCategory": "Wybierz kategorię",
+  "description": "Wybierz branżę oferty pracy, która Cię interesuje. Dzięki temu pokażemy tylko te oferty, które najlepiej odpowiadają Twoim potrzebom.",
+  "descriptionDistrict": "Wybierz dzielnice, które Cię interesują. Pokażemy tylko oferty pracy z wybranych obszarów.",
+  "title": "Wybierz branżę albo przejdź niżej, aby wybrać dzielnicę",
+  "titleCategory": "Wybierz branżę",
   "titleDistrict": "A może dzielnica?"
 }

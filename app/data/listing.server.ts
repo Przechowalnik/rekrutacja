@@ -49,19 +49,17 @@ export const getListing = async ({
       });
     }
 
-    const currentDate = dayjs().toDate();
-
     const foundListing = await database.listing.findFirst({
       select: prismaSelectListing,
       where: {
-        AND: [
-          { OR: [{ slug: listingIdOrSlug }, { id: listingIdOrSlug }] },
-          { OR: [{ availableTo: null }, { availableTo: { gt: currentDate } }] },
-        ],
-        expiresAt: {
-          gt: currentDate,
+        AND: [{ OR: [{ slug: listingIdOrSlug }, { id: listingIdOrSlug }] }],
+        status: {
+          notIn: [
+            E_ListingStatusServer.DELETED,
+            E_ListingStatusServer.REJECTED,
+            E_ListingStatusServer.UNPAID,
+          ],
         },
-        status: E_ListingStatusServer.ACTIVE,
       },
     });
 

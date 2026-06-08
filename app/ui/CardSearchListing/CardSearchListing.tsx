@@ -8,10 +8,10 @@ import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
 import { globalClasses } from "~/constants/styles";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
-import { E_ListingType } from "~/models/enums";
 import { T_Listings } from "~/models/listings";
+import { stripHtmlTags } from "~/utilities/converter";
 import { generateLocationAddress } from "~/utilities/functions";
-import { generateListingPriceToShowFromTypeAndContractType } from "~/utilities/price";
+import { generateSalaryRange } from "~/utilities/price";
 
 import { Badge } from "../Badge";
 import { Button } from "../Button";
@@ -172,7 +172,7 @@ const CardSearchListingToMemoize = ({
             )}
             {listing?.description && (
               <Text lineClamp={2} pt={12} size="sm">
-                {listing.description}
+                {stripHtmlTags(listing.description)}
               </Text>
             )}
           </Box>
@@ -187,24 +187,14 @@ const CardSearchListingToMemoize = ({
               {t(`listingCategory.${listing.category}`)}
             </Badge>
             <Badge size="md" variant="dot">
-              {`${t(`listingType.${listing.type}`)}${listing.contractType && listing.type === E_ListingType.RENT ? ` ${t(`listingContractTypeSingle.${listing.contractType}`)}` : ""}`}
+              {t(`workMode.${listing.workMode}`)}
             </Badge>
-            {listing?.area && (
-              <Badge size="md" variant="dot">
-                {t("cardSearchListing.area", {
-                  count: Number(listing.area),
-                })}
-              </Badge>
-            )}
-            {listing?.price && (
+            {(listing?.salaryFrom != null || listing?.salaryTo != null) && (
               <Badge color="teal" size="md" variant="dot">
-                {generateListingPriceToShowFromTypeAndContractType({
-                  contractType: listing.contractType,
-                  negotiable: listing.negotiable,
-                  negotiableAsterisk: true,
-                  price: listing.price,
+                {generateSalaryRange({
+                  salaryFrom: listing.salaryFrom,
+                  salaryTo: listing.salaryTo,
                   tCommon: t,
-                  type: listing.type,
                 })}
               </Badge>
             )}
@@ -223,18 +213,6 @@ const CardSearchListingToMemoize = ({
           }}
         >
           <div></div>
-          {/* <Button
-            color="dark"
-            rightSection={<IconSeo icon={faBookmark} size="lg" variant="regular" />}
-            size="sm"
-            variant="default"
-            w={{
-              base: "100%",
-              xs: "auto",
-            }}
-          >
-            {t("cardSearchListing.buttonAddToFavorite")}
-          </Button> */}
           <Box
             w={{
               base: "100%",
