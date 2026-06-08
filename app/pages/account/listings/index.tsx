@@ -38,7 +38,6 @@ export default function Page() {
         {data => (
           <RespectUser
             redirectOnError={E_Routes.accountPhone}
-            respectUserPhoneVerification
             userRoles={[E_Roles.USER]}
           >
             <ReusableListingsPage

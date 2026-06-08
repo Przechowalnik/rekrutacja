@@ -43,10 +43,6 @@ export const ReusableListingsPage = ({
   const { t: tCommon } = useTranslation(namespaces.common);
   const { user } = useUser();
 
-  const disabledButtonNew = isCompany
-    ? !user?.company?.phone?.verifiedAt
-    : !user?.phone?.verifiedAt;
-
   const handleUpdateListingStatus = useCallback(
     (newValue: ComboboxItem | null | string) => {
       setSelectedListingStatus(
@@ -84,7 +80,6 @@ export const ReusableListingsPage = ({
           />
           {!isCompany && (
             <Button
-              disabled={disabledButtonNew}
               routeTo={E_Routes.accountListingsNew}
               tooltip={{
                 label: tCommon("navigation.tooltipNewListingDisabledAccount"),
@@ -99,7 +94,6 @@ export const ReusableListingsPage = ({
               user,
             }) && (
               <Button
-                disabled={disabledButtonNew}
                 routeTo={E_Routes.companyListingsNew}
                 tooltip={{
                   label: tCommon("navigation.tooltipNewListingDisabledCompany"),

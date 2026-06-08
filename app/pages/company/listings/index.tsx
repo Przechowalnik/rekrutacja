@@ -37,7 +37,6 @@ export default function Page() {
         {data => (
           <RespectUser
             respectCompany
-            respectCompanyPhoneVerification
             userRoles={[E_Roles.B2B_OWNER, E_Roles.B2B_WORKER]}
           >
             <ReusableListingsPage

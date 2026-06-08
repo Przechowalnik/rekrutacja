@@ -20,9 +20,7 @@ export const AccountPage = () => {
 
   const userHasEmailVerified = user?.emailVerification?.verifiedAt;
 
-  const disabledButtonListing = user?.company
-    ? !user?.company?.phone?.verifiedAt
-    : !user?.phone?.verifiedAt;
+  const disabledButtonListing = !user?.emailVerification?.verifiedAt;
 
   const handleLogout = useCallback(async () => {
     await logout();

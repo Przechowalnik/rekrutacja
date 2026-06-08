@@ -28,7 +28,6 @@ export default function Page() {
     <RespectLocalization namespaces={handle.i18n}>
       <RespectUser
         redirectOnError={E_Routes.accountPhone}
-        respectUserPhoneVerification
         userRoles={[E_Roles.USER]}
       >
         <ReusableListingsNewPage isCompany={false} />

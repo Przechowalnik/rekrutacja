@@ -58,10 +58,7 @@ export const createListing = async ({
     }
 
     const resultValidator = await checkZodValidator({
-      arrayData: [
-        formNames.listingImagesNew,
-        formNames.listingImagesToRemove,
-      ],
+      arrayData: [formNames.listingImagesNew, formNames.listingImagesToRemove],
       request,
       validator: {
         [formNames.checkboxAcceptRegulations]: zodValidator.checkboxChecked,
@@ -138,7 +135,6 @@ export const createListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -421,7 +417,6 @@ export const getReusableListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -530,10 +525,7 @@ export const updateListing = async ({
     }
 
     const resultValidator = await checkZodValidator({
-      arrayData: [
-        formNames.listingImagesNew,
-        formNames.listingImagesToRemove,
-      ],
+      arrayData: [formNames.listingImagesNew, formNames.listingImagesToRemove],
       request,
       validator: {
         [formNames.country]: zodValidator.country.optional(),
@@ -605,7 +597,6 @@ export const updateListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 
@@ -933,7 +924,6 @@ export const extensionFreeListingListing = async ({
             },
           },
           request,
-          respectCompanyPhoneVerification: false,
           userSessionVersion,
         })
       : await getAndCheckUser({
@@ -1119,7 +1109,6 @@ export const deleteListing = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: false,
       userSessionVersion,
     });
 

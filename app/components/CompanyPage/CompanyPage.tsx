@@ -22,9 +22,7 @@ export const CompanyPage = () => {
   const userHasEmailVerified = user?.emailVerification?.verifiedAt;
   const companyHasPhoneVerified = user?.company?.phone?.verifiedAt;
 
-  const disabledButtonListingNew = user?.company
-    ? !user?.company?.phone?.verifiedAt
-    : !user?.phone?.verifiedAt;
+  const disabledButtonListingNew = !user?.emailVerification?.verifiedAt;
 
   const handleOpenConfirmEmail = useCallback(() => {
     refreshData();
@@ -43,10 +41,6 @@ export const CompanyPage = () => {
       return tCommon("alertVerifyEmailToUnlockFeatures");
     }
 
-    if (!companyHasPhoneVerified) {
-      return tCommon("alertVerifyPhoneToUnlockCompanyFeatures");
-    }
-
     return;
   })();
 
@@ -63,7 +57,7 @@ export const CompanyPage = () => {
       title={user?.company?.name}
     >
       <ButtonWrapper withMobileReverse={false} withTopPadding={false}>
-        {userHasEmailVerified && companyHasPhoneVerified ? (
+        {userHasEmailVerified ? (
           <>
             <Fieldset legend={t("fieldsetListings")} p={PADDING_FIELDSET}>
               {(user?.workerSettings?.permissions?.includes(

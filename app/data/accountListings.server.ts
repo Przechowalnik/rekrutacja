@@ -74,7 +74,6 @@ export const getListingsAccount = async ({
         },
       },
       request,
-      respectCompanyPhoneVerification: true,
       userSessionVersion,
     });
 
@@ -89,14 +88,6 @@ export const getListingsAccount = async ({
     }
 
     if (!existingUser) {
-      return redirectOnError;
-    }
-
-    if (
-      !existingUser?.phone?.verifiedAt ||
-      !existingUser?.phone?.countryCode ||
-      !existingUser?.phone?.number
-    ) {
       return redirectOnError;
     }
 

@@ -258,10 +258,10 @@ const NavigationToMemoize = () => {
     }
 
     if (userCookie.userCompanyId) {
-      return E_Routes.companyPhone;
+      return E_Routes.companyListingsNew;
     }
 
-    return E_Routes.accountPhone;
+    return E_Routes.accountListingsNew;
   })();
 
   const tooltipLabel: string = (() => {

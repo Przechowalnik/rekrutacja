@@ -30,7 +30,6 @@ export default function Page() {
     <RespectLocalization namespaces={handle.i18n}>
       <RespectUser
         respectCompany
-        respectCompanyPhoneVerification
         userCompanyPermissions={[E_CompanyWorkerPermissions.MANAGE_LISTINGS]}
         userRoles={[E_Roles.B2B_OWNER, E_Roles.B2B_WORKER]}
       >

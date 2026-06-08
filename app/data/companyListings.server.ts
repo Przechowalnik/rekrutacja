@@ -104,15 +104,7 @@ export const getListingsCompany = async ({
       return redirectOnError;
     }
 
-    if (!existingUser) {
-      return redirectOnError;
-    }
-
-    if (
-      !existingUser?.company?.phone?.verifiedAt ||
-      !existingUser?.company?.phone?.number ||
-      !existingUser?.company?.phone?.countryCode
-    ) {
+    if (!existingUser?.company) {
       return redirectOnError;
     }
 
@@ -272,27 +264,11 @@ export const extendListingCompany = async ({
       return await responseOnFailure(responseError);
     }
 
-    if (!existingUser) {
+    if (!existingUser?.company) {
       return await responseOnFailure({
         message: "somethingWentWrong",
         request,
         status: 401,
-      });
-    }
-
-    if (isCompany) {
-      if (!existingUser?.company?.phone?.verifiedAt) {
-        return await responseOnFailure({
-          message: "noActivePhoneNumberCompany",
-          request,
-          status: 422,
-        });
-      }
-    } else if (!existingUser?.phone?.verifiedAt) {
-      return await responseOnFailure({
-        message: "noActivePhoneNumber",
-        request,
-        status: 422,
       });
     }
 

@@ -43,7 +43,6 @@ export default function Page() {
         {data => (
           <RespectUser
             respectCompany
-            respectCompanyPhoneVerification
             userCompanyPermissions={[
               E_CompanyWorkerPermissions.MANAGE_LISTINGS,
             ]}

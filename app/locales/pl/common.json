@@ -978,10 +978,10 @@
   },
   "listingExtension": {
     "1": "1 miesiąc",
+    "12": "12 miesięcy",
     "3": "3 miesiące",
     "6": "6 miesięcy",
-    "9": "9 miesięcy",
-    "12": "12 miesięcy"
+    "9": "9 miesięcy"
   },
   "listingPaymentStatus": {
     "EXPIRED": "Zakończone",
