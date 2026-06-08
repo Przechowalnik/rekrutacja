@@ -6,10 +6,6 @@ import { database } from "./database.server";
 import { E_RolesServer } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import {
-  prismaSelectCompanyFreeTrial,
-  prismaSelectSubscription,
-} from "./prismaSelect.server";
-import {
   responseOnFailure,
   responseOnFailureServer,
   responseOnSuccess,
@@ -67,12 +63,7 @@ export const updateCompanyWorkerPermissions = async ({
         select: {
           company: {
             select: {
-              freeTrial: {
-                select: prismaSelectCompanyFreeTrial,
-              },
-              subscriptions: {
-                select: prismaSelectSubscription,
-              },
+              id: true,
             },
           },
         },

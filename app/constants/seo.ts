@@ -17,7 +17,7 @@ export const getCompanySeoImage = ({
     }),
     height: "630px",
     type: "image/png",
-    url: `${links.baseUrl}/logo/logo-purple-social.png`,
+    url: `${links.baseUrl}/og-image.png`,
     width: "1200px",
   };
 };

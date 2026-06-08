@@ -1,1 +1,0 @@
-export { CardAdminProduct } from "./CardAdminProduct";

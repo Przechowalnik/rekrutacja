@@ -376,8 +376,6 @@ export const SearchListingCategoryCityPage = ({
               tSeo,
             }),
             title,
-            twitterCreator: links.twitter.creator,
-            twitterSite: links.twitter.site,
             type: "website",
             url: `${links.baseUrl}${linkCurrent}`,
           },

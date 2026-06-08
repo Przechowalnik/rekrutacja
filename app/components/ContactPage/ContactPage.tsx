@@ -6,7 +6,7 @@ import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
 import { Section } from "~/ui/Section";
 
-const CONTACT_EMAIL = "kontakt@maszbox.pl";
+const CONTACT_EMAIL = "informacja@do-pracy.pl";
 
 export const ContactPage = () => {
   const { t } = useTranslation(namespaces.contact);
@@ -28,14 +28,7 @@ export const ContactPage = () => {
           },
           email: CONTACT_EMAIL,
           name: tCommon("company.name"),
-          sameAs: [
-            links.facebook.url,
-            links.instagram,
-            links.linkedin,
-            links.youtube,
-            links.tiktok,
-            links.twitter.site,
-          ],
+          sameAs: [],
           url: links.baseUrl,
         },
         name: t("title"),

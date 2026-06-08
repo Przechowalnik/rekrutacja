@@ -7,16 +7,8 @@ import DOMPurify from "dompurify";
 import slugify from "slugify";
 
 import { convertToValidString } from "~/lib/validations";
-import {
-  E_Roles,
-  T_CompanyWorkerPermissions,
-  type T_PlanType,
-} from "~/models/enums";
-import { T_Product } from "~/models/product";
+import { E_Roles, T_CompanyWorkerPermissions } from "~/models/enums";
 import type { T_UserSession } from "~/models/userSession";
-import { T_Company } from "~/models/userSession/company";
-
-import { isFreeListings } from "./flags";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export const countSpaces = (text: string): number => {
@@ -181,26 +173,6 @@ export function formatReferralCode(code: string): string {
     return `${code.slice(0, 4)} ${code.slice(4, 8)} ${code.slice(8)}`;
   }
   return code;
-}
-
-type T_CheckIfUserHasActivePlanTypes = {
-  planTypes: T_PlanType[];
-  user: null | T_UserSession;
-};
-
-export function checkIfUserHasActivePlanTypes({
-  planTypes,
-  user,
-}: T_CheckIfUserHasActivePlanTypes): boolean {
-  if (isFreeListings()) {
-    return true;
-  }
-
-  return user?.company?.activePlanInSubscriptionOrFreeTrial?.type
-    ? planTypes.includes(
-        user?.company?.activePlanInSubscriptionOrFreeTrial?.type,
-      )
-    : false;
 }
 
 export function findFirstFreeIndex({
@@ -399,57 +371,6 @@ export const isNumber = (value: any): boolean => {
   return value === null || value === undefined || value === ""
     ? false
     : !Number.isNaN(Number(value));
-};
-
-const toNumber = (value: bigint | number): number =>
-  typeof value === "bigint" ? Number(value) : value;
-
-export const calculatePointsFromMonths = ({
-  months,
-  product,
-}: {
-  months: number;
-  product: T_Product;
-}) => {
-  if (months <= 0) {
-    return 0;
-  }
-
-  let pointsPerMonth: number;
-
-  if (months === 1) {
-    pointsPerMonth = toNumber(product.points_1);
-  } else if (months >= 2 && months <= 5) {
-    pointsPerMonth = toNumber(product.points_2_5);
-  } else {
-    pointsPerMonth = toNumber(product.points_6_plus);
-  }
-
-  return months * pointsPerMonth;
-};
-
-export const calculatePriceFromMonths = ({
-  months,
-  product,
-}: {
-  months: number;
-  product: T_Product;
-}) => {
-  if (months <= 0) {
-    return 0;
-  }
-
-  let pointsPerMonth: number;
-
-  if (months === 1) {
-    pointsPerMonth = toNumber(product.price_1);
-  } else if (months >= 2 && months <= 5) {
-    pointsPerMonth = toNumber(product.price_2_5);
-  } else {
-    pointsPerMonth = toNumber(product.price_6_plus);
-  }
-
-  return months * pointsPerMonth;
 };
 
 const getScrollPosition = () => {
@@ -676,16 +597,4 @@ export const checkCompanyUserPermissions = ({
   return permissions.some(permission =>
     user?.workerSettings?.permissions?.includes(permission),
   );
-};
-
-export const checkCompanySubscriptionIsActive = ({
-  company,
-}: {
-  company: null | T_Company | undefined;
-}) => {
-  if (company?.activePlanInSubscriptionOrFreeTrial || isFreeListings()) {
-    return true;
-  }
-
-  return false;
 };

@@ -1,1 +1,0 @@
-export { CompanyPointsPage } from "./CompanyPointsPage";

@@ -40,9 +40,9 @@ export default function Layout({
               }}
             >
               <Img
-                alt="Maszbox logo"
+                alt="do-pracy.pl logo"
                 height={32}
-                src={`${footer.t("company.link")}/logo/logo-dark.png`}
+                src={`${footer.t("company.link")}/icons/pwa-512x512.png`}
               />
             </Column>
           </Row>

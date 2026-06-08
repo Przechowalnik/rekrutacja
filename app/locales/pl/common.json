@@ -31,48 +31,6 @@
   "avatarWorker": {
     "anyPerson": "Dowolna osoba"
   },
-  "bannerIntroRent": {
-    "buttonAddListing": "Dodaj ogłoszenie",
-    "informationFreeListings": "Zacznij zarabiać na swojej przestrzeni już dziś – dodaj ogłoszenie za darmo!",
-    "list1": {
-      "paragraph": "Rozpocznij od zalogowania się na swoje konto lub szybkiej rejestracji, jeśli jeszcze go nie masz.",
-      "title": "Zacznij od konta"
-    },
-    "list2": {
-      "paragraph": "Wybierz kategorię, lokalizację oraz uzupełnij szczegóły dotyczące przestrzeni, którą chcesz wynająć.",
-      "title": "Stwórz ogłoszenie"
-    },
-    "list3": {
-      "paragraph": "Wybierz dogodną dla siebie formę płatności i opłać ogłoszenie, aby zostało opublikowane.",
-      "title": "Opłać ogłoszenie"
-    },
-    "list4": {
-      "paragraph": "Po aktywacji ogłoszenia najemcy będą mogli kontaktować się z Tobą telefonicznie.",
-      "title": "Oczekuj na kontakt"
-    },
-    "paragraph1": "Jak wynająć swoją przestrzeń?",
-    "title1": "Masz wolne miejsce? Zamień je w dodatkowy dochód",
-    "title2": "Dodaj ogłoszenie i znajdź najemcę!"
-  },
-  "bannerIntroSearch": {
-    "button": "Przejdż do filtrów",
-    "buttonSearch": "Skorzystaj z ręcznej wyszukiwarki",
-    "list1": {
-      "paragraph": "Określ, jakiego typu ogłoszenia szukasz",
-      "title": "Wybierz kategorię"
-    },
-    "list2": {
-      "paragraph": "Wybierz miasto, a następnie dzielnicę, aby zawęzić wyniki do interesującego Cię obszaru.",
-      "title": "Ustaw lokalizację"
-    },
-    "list3": {
-      "paragraph": "Po chwili zobaczysz dopasowane ogłoszenia — na interaktywnej mapie oraz w formie czytelnej listy poniżej.",
-      "title": "Kliknij przycisk „{{buttonName}}”"
-    },
-    "paragraph1": "Jak znaleźć interesujące Cię ogłoszenia?",
-    "title1": "Znajdź wolne miejsce w swojej okolicy",
-    "title2": "Skorzystaj z filtrów powyżej!"
-  },
   "breadcrumbs": {
     "aboutUs": "Poznaj nas bliżej",
     "accessibility": "Dostępność dla wszystkich",
@@ -395,8 +353,8 @@
     "required": "*"
   },
   "company": {
-    "link": "https://maszbox.pl",
-    "name": "MaszBox"
+    "link": "https://do-pracy.pl",
+    "name": "do-pracy.pl"
   },
   "companyAvatar": {
     "buttonAddImage": "Dodaj nowe logo",
@@ -426,6 +384,18 @@
   "companyWorkers": {
     "title": "NASI PRACOWNICY"
   },
+  "cookieConsent": {
+    "acceptAll": "Akceptuj wszystkie",
+    "bannerText": "Używamy niezbędnych plików cookie, aby strona działała poprawnie. Za Twoją zgodą korzystamy też z plików analitycznych, które pomagają nam ulepszać serwis.",
+    "bannerTitle": "Pliki cookie",
+    "categoryAnalyticsText": "Pomagają nam zrozumieć, jak korzystasz ze strony, abyśmy mogli ją ulepszać.",
+    "categoryAnalyticsTitle": "Analityczne",
+    "categoryNecessaryText": "Niezbędne do działania strony. Nie można ich wyłączyć.",
+    "categoryNecessaryTitle": "Niezbędne (zawsze aktywne)",
+    "rejectAll": "Tylko niezbędne",
+    "save": "Zapisz ustawienia",
+    "settingsTitle": "Ustawienia plików cookie"
+  },
   "countriesCode": {
     "POLAND": "Polska"
   },
@@ -439,7 +409,7 @@
     "testSMS": "Wyłączone SMS-y"
   },
   "footer": {
-    "allRightsReserved": "©{{date}} {{companyName}} Sp. z o. o. Wszelkie prawa zastrzeżone.",
+    "allRightsReserved": "©{{date}} {{companyName}}. Wszelkie prawa zastrzeżone.",
     "categories": "Kategorie",
     "cities": "Miasta",
     "cookiebot": "Zmień ustawienia cookies",
@@ -625,7 +595,7 @@
     "bugStatus": "Status błędu",
     "bugTimestamp": "Czas wystąpienia błędu",
     "bugVideo": "Video przedstawiające błąd",
-    "checkboxAcceptNewsletter": "Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych w Serwisie „MaszBox”, przesyłanych przez MASZBOX spółka z o.o. pod podany przeze mnie adres poczty elektronicznej. Oświadczam, że zapoznałem/-am się i akceptuję",
+    "checkboxAcceptNewsletter": "Wyrażam zgodę na otrzymywanie informacji handlowych i marketingowych w Serwisie do-pracy.pl. Oświadczam, że zapoznałem/-am się i akceptuję",
     "checkboxAcceptPrivacyPolicyLink": "Politykę prywatności",
     "checkboxAcceptPrivacyPolicySingleLink": "Polityka prywatności",
     "checkboxAcceptRegulations": "Akceptuję regulamin oraz politykę prywatności",

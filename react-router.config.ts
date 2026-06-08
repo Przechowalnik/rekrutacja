@@ -18,26 +18,6 @@ const isPreview = () => {
   return localEnvironment === "preview";
 };
 
-const getAllBlogPostsSlug = async () => {
-  try {
-    const { database } = await import("./app/data/database.server"); // no create new connections to db, when is not used
-
-    const blogPosts = await database.blogPost.findMany({
-      orderBy: {
-        title: "desc",
-      },
-      select: {
-        slug: true,
-      },
-    });
-
-    return blogPosts.map(item => item.slug);
-  } catch (error) {
-    console.error(error);
-    return [];
-  }
-};
-
 const getAllCitiesSlug = async () => {
   try {
     const { database } = await import("./app/data/database.server"); // no create new connections to db, when is not used
@@ -100,7 +80,6 @@ export default {
       return [];
     }
 
-    const blogSlugs = await getAllBlogPostsSlug();
     const citiesSlugs = await getAllCitiesSlug();
     const cityDistrictSlugs = await getAllCityDistrictSlugs();
 
@@ -135,9 +114,7 @@ export default {
       "/szukaj/lokale",
       "/szukaj/magazyn",
       "/miasta",
-      "/blog",
       "/jak-dodac-ogloszenie",
-      ...blogSlugs.map(slug => `/blog/${slug}`),
       ...citiesSlugs.map(slug => `/miasta/${slug}`),
       ...cityDistrictSlugs.map(slug => `/miasta/${slug}`),
     ];

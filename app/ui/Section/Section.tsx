@@ -19,7 +19,6 @@ import { namespaces } from "~/constants/namespaces";
 import { T_RouteName } from "~/constants/routes";
 import { globalClasses } from "~/constants/styles";
 import { useLayout } from "~/hooks/useLayout";
-import { T_BlogPost } from "~/models/blogPost";
 import { Text } from "~/ui/Text";
 import { Title } from "~/ui/Title";
 
@@ -58,7 +57,6 @@ export type T_SectionPageMeta = {
   robotsNoIndex?: boolean;
   // withJsonLdReview?: boolean;
   route: "default" | T_RouteName;
-  seoBlog?: T_BlogPost;
   seoFaq?: T_SeoFaq;
   socials?: T_SeoSocials;
   withJsonLdStructured?: boolean;

@@ -1,8 +1,0 @@
-{
-  "buttonRegisterInStripe": "Rozpocznij płatności",
-  "description": "Na tej stronie możesz dodać konto w<tooltipicon label='{{tooltipStripe}}'>Stripe</tooltipicon/>, które będzie odpowiedzialne za <b>pobieranie płatności od klientów</b>. Konto Stripe jest wymagane w przypadku, gdy w usłudze została zaznaczona opcja przedpłaty lub innej formy płatności online. Po podłączeniu konta Stripe, wszystkie płatności klientów będą przetwarzane za jego pośrednictwem, co zapewnia wygodę i bezpieczeństwo transakcji.",
-  "information": "Jeśli jeszcze nie masz konta w Stripe, kliknij przycisk <b>{{buttonRegisterInStripe}}</b>, aby skonfigurować konto i połączyć je z systemem.",
-  "noActiveStripePayments": "Nie masz aktywnych płatności.",
-  "title": "Płatności od klientów",
-  "warning": "Stripe <b>pobiera prowizję od każdej dokonanej transakcji</b>, a stawki prowizji są podane poniżej. Należy jednak pamiętać, że te opłaty mogą się zmieniać w przypadku, gdy Stripe wprowadzi nowe stawki lub zmiany w swoich zasadach opłat. Opłata jest automatycznie odliczana od każdej płatności, a pozostała kwota trafia na konto powiązane z Stripe. Prowizje mogą obejmować zarówno transakcje krajowe, jak i międzynarodowe, dlatego warto regularnie sprawdzać aktualne stawki.<br/><br/>Prowizje w Stripe od każdej płatności dla kart europejskich: 1.5% + 1.00zł"
-}

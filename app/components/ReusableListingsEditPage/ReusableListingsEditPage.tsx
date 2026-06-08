@@ -76,7 +76,6 @@ import {
   isExpiringIn,
   replaceDateToYearMonthHoursMinutesInWordsDay,
 } from "~/utilities/date";
-import { isFreeListings } from "~/utilities/flags";
 import {
   convertToFormData,
   resetFormFieldsAndShowNotification,
@@ -444,8 +443,6 @@ export const ReusableListingsEditPage = ({
         }),
     },
   });
-
-  const isFreeListingConfiguration = isFreeListings();
 
   const validHaveChanges =
     haveChanges ||
@@ -892,25 +889,13 @@ export const ReusableListingsEditPage = ({
       !isActiveAndExpiresInThreeDays &&
       !isActiveAndExpiresInOneMonth
     ) {
-      if (isFreeListingConfiguration) {
-        return t("informationFreeListing", {
-          contactInteractions: listing?._count?.contacts ?? 0,
-          date: listing?.expiresAt
-            ? replaceDateToYearMonthHoursMinutesInWordsDay({
-                date: listing?.expiresAt?.toString(),
-              })
-            : "-",
-          viewsInteractions: listing?._count?.views ?? 0,
-        });
-      }
-      return t("information", {
+      return t("informationFreeListing", {
         contactInteractions: listing?._count?.contacts ?? 0,
         date: listing?.expiresAt
           ? replaceDateToYearMonthHoursMinutesInWordsDay({
               date: listing?.expiresAt?.toString(),
             })
           : "-",
-        link: linkPayment,
         viewsInteractions: listing?._count?.views ?? 0,
       });
     }

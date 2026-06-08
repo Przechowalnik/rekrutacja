@@ -56,16 +56,6 @@ const CardBugToMemoize = ({ bug, index, isAdmin, isCompany }: T_CardBug) => {
         {t("cardBug.date")}:{" "}
         <b>{replaceDateToYearMonthInWordsDay(bug.timestamp.toString())}</b>
       </Text>
-      {isCompany && bug.companyId && (
-        <Text c="white">
-          {t("cardBug.prize")}:{" "}
-          <b>
-            {t(
-              bug.pointsPaidAt ? "cardBug.pointsPaid" : "cardBug.pointsNoPaid",
-            )}
-          </b>
-        </Text>
-      )}
     </Card>
   );
 };

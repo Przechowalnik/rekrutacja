@@ -9,8 +9,6 @@ const Z_ListingPayment = z.object({
   createdAt: zodDateValidator().nullable().optional(),
   free: z.boolean(),
   status: Z_ListingPaymentStatus,
-  stripeCheckoutId: z.string().optional().nullable(),
-  stripeCheckoutUrl: z.string().optional().nullable(),
   updatedAt: zodDateValidator().nullable().optional(),
 });
 

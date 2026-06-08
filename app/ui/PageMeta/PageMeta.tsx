@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import { memo, type PropsWithChildren, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router";
@@ -9,7 +8,6 @@ import { E_Routes, routes, T_RouteName } from "~/constants/routes";
 import { getCompanySeoImage } from "~/constants/seo";
 import { useNonce } from "~/context/NonceContext";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
-import { T_BlogPost } from "~/models/blogPost";
 import { E_Language } from "~/models/enums";
 import { safeHtml } from "~/utilities/functions";
 
@@ -153,7 +151,6 @@ type T_PageMeta = {
   customTitle?: string;
   robotsNoIndex?: boolean;
   route: "default" | T_RouteName;
-  seoBlog?: T_BlogPost;
   seoBreadcrumbs?: T_BreadcrumbsRoute[];
   seoFaq?: T_SeoFaq;
   socials?: T_SeoSocials;
@@ -168,7 +165,6 @@ const PageMeta = ({
   customTitle,
   robotsNoIndex,
   route,
-  seoBlog,
   seoBreadcrumbs,
   seoFaq,
   socials,
@@ -228,8 +224,6 @@ const PageMeta = ({
       tSeo: t,
     }),
     title,
-    twitterCreator: links.twitter.creator,
-    twitterSite: links.twitter.site,
     type: "website",
     url: `${links.baseUrl}${getLocalizedRoute({
       route: validRouteSeo,
@@ -239,16 +233,9 @@ const PageMeta = ({
   const organizationSchema: T_JsonLdOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    logo: `${tCommon("company.link")}/logo/logo-purple-social.png`,
+    logo: `${tCommon("company.link")}/icons/pwa-512x512.png`,
     name: tCommon("company.name"),
-    sameAs: [
-      links.facebook.url,
-      links.instagram,
-      links.linkedin,
-      links.youtube,
-      links.tiktok,
-      links.twitter.site,
-    ],
+    sameAs: [],
     url: tCommon("company.link"),
   };
 
@@ -317,42 +304,6 @@ const PageMeta = ({
     };
 
     jsonLd.push(jsonLdBreadcrumbsRoutes);
-  }
-
-  if (seoBlog) {
-    const blogPageUrl = `${links.baseUrl}${canonicalPath}`;
-    const companyName = tCommon("company.name");
-    const jsonLdBlog: T_JsonLdBlog = {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      articleBody: seoBlog.descriptionSeo ?? "",
-      author: [
-        {
-          "@type": "Organization",
-          name: companyName,
-          url: links.baseUrl,
-        },
-      ],
-      dateModified: dayjs(seoBlog.updatedAt).toISOString(),
-      datePublished: dayjs(seoBlog.createdAt).toISOString(),
-      description: seoBlog.descriptionSeo ?? "",
-      headline: seoBlog?.titleSeo ?? "",
-      inLanguage: isEnglish ? "en" : "pl-PL",
-      mainEntityOfPage: {
-        "@id": blogPageUrl,
-        "@type": "WebPage",
-      },
-      publisher: {
-        "@type": "Organization",
-        logo: {
-          "@type": "ImageObject",
-          url: `${links.baseUrl}/logo/logo-purple-social.png`,
-        },
-        name: companyName,
-      },
-    };
-
-    jsonLd.push(jsonLdBlog);
   }
 
   if (seoFaq && seoFaq.faq.length > 0) {
@@ -499,15 +450,6 @@ const PageMeta = ({
           {validSocials?.type && (
             <meta content={validSocials.type} property="og:type" />
           )}
-          {validSocials?.twitterSite && (
-            <meta content={validSocials.twitterSite} name="twitter:site" />
-          )}
-          {validSocials?.twitterCreator && (
-            <meta
-              content={validSocials.twitterCreator}
-              name="twitter:creator"
-            />
-          )}
           {validSocials?.updatedTime && (
             <meta
               content={validSocials.updatedTime}
@@ -532,7 +474,6 @@ const PageMeta = ({
               property="article:published_time"
             />
           )}
-          <meta content={links.facebook.appId} property="fb:app_id" />
           <meta content={tCommon("company.name")} name="author" />
           <meta content={isEnglish ? "en_US" : "pl_PL"} property="og:locale" />
           <meta

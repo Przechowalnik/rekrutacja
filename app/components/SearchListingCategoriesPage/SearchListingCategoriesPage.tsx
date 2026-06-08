@@ -8,7 +8,6 @@ import { E_Routes } from "~/constants/routes";
 import { getCompanySeoImage } from "~/constants/seo";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { allListingCategory } from "~/models/enums";
-import { BannerIntroRent } from "~/ui/BannerIntroRent";
 import { CardListingCategory } from "~/ui/CardListingCategory";
 import { Section } from "~/ui/Section";
 
@@ -53,8 +52,6 @@ export const SearchListingCategoriesPage = () => {
             title: tSeo("meta.search.title", {
               companyName: tCommon("company.name"),
             }),
-            twitterCreator: links.twitter.creator,
-            twitterSite: links.twitter.site,
             type: "website",
             url: `${links.baseUrl}${getLocalizedRoute({ route: E_Routes.search })}`,
           },
@@ -70,15 +67,6 @@ export const SearchListingCategoriesPage = () => {
             {mapCategories}
           </Flex>
         </Box>
-      </Section>
-      <Section
-        backgroundSecondary
-        size="lg"
-        withBottomPadding={false}
-        withPageMeta={false}
-        withTopPadding={false}
-      >
-        <BannerIntroRent />
       </Section>
     </>
   );

@@ -11,7 +11,6 @@ import type { T_GetRouteExtraQuery, T_RouteName } from "~/constants/routes";
 import { E_Routes } from "~/constants/routes";
 import type localesNotificationsPL from "~/locales/pl/notifications.json";
 import { omitNested, reduceToUniqueFields } from "~/utilities/functions";
-import { trackByMessage } from "~/utilities/tracking";
 
 import { useGlobalGeneratedModalContext } from "./useGlobalGeneratedModalContext";
 import { useLoading } from "./useLoading";
@@ -141,10 +140,6 @@ export const useFetcherWithActions = <
         properties?.onSuccessRefetchUserData
       ) {
         forceRefreshData();
-      }
-
-      if (!isErrorStatus && fetcherData?.message) {
-        trackByMessage(fetcherData.message);
       }
 
       if (fetcherData?.redirectTo) {

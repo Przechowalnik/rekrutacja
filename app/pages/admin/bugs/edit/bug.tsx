@@ -2,11 +2,7 @@ import type { ActionFunctionArgs, LoaderFunctionArgs } from "react-router";
 import { z } from "zod";
 
 import { namespaces } from "~/constants/namespaces";
-import {
-  bugPointsPay,
-  getBugAdmin,
-  updateBugAdmin,
-} from "~/data/adminBug.server";
+import { getBugAdmin, updateBugAdmin } from "~/data/adminBug.server";
 import { requireAdminSession } from "~/data/auth.server";
 import { E_Requests } from "~/data/formRequests.server";
 import { responseOnFailure, responseThrowError } from "~/data/response.server";
@@ -14,7 +10,6 @@ import { dynamic } from "~/hoc/dynamic";
 import { getI18nextNamespaces } from "~/lib/i18nextNamespaces";
 import { Z_Bug } from "~/models/bug";
 import { E_Roles } from "~/models/enums";
-import { Z_PlatformSetting } from "~/models/platformSetting";
 import { RespectLocalization } from "~/ui/RespectLocalization";
 import { RespectSchema } from "~/ui/RespectSchema";
 import { RespectUser } from "~/ui/RespectUser";
@@ -35,15 +30,11 @@ export default function Page() {
       <RespectSchema
         schema={z.object({
           bug: Z_Bug,
-          platformSetting: Z_PlatformSetting,
         })}
       >
         {data => (
           <RespectUser userRoles={[E_Roles.ADMIN, E_Roles.ADMIN_SUPER]}>
-            <AdminBugEditPage
-              bug={data.bug}
-              platformSetting={data.platformSetting}
-            />
+            <AdminBugEditPage bug={data.bug} />
           </RespectUser>
         )}
       </RespectSchema>
@@ -60,10 +51,6 @@ export async function action({ request }: ActionFunctionArgs) {
     switch (request.method) {
       case E_Requests.patch: {
         return await updateBugAdmin({ request, userId, userSessionVersion });
-      }
-
-      case E_Requests.post: {
-        return await bugPointsPay({ request, userId, userSessionVersion });
       }
     }
 

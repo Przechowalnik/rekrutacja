@@ -1,8 +1,0 @@
-{
-  "alert": "W <tooltipicon label='Okres rozliczeniowy to jednostka czasu odpowiadająca jednemu miesiącowi korzystania z subskrypcji, niezależnie od jej rodzaju czy długości trwania.'>obecnym okresie rozliczeniowym</tooltipicon> wykorzystałeś już możliwość zdobycia dodatkowych dni subskrypcji.",
-  "buttonNew": "Nowa subskrypcja",
-  "description": "Na tej stronie możesz znaleźć wszystkie Twoje subskrypcje oraz ich szczegóły, w tym okresy próbne.",
-  "existingSubscription": "Masz już aktywną subskrypcję",
-  "noSubscriptions": "Brak subskrypcji",
-  "title": "Subskrypcje"
-}

@@ -108,40 +108,6 @@ export const AccountPage = () => {
                 </Button>
               </Fieldset>
             )}
-            {user?.role === E_Roles.USER && (
-              <Fieldset legend={t("fieldsetPayments")} p={PADDING_FIELDSET}>
-                <Button
-                  disabled={disabledButtonListing}
-                  fullWidth
-                  px={PADDING_BUTTONS}
-                  routeTo={E_Routes.accountPoints}
-                  size="lg"
-                  tooltip={{
-                    label: user?.company
-                      ? tCommon("navigation.tooltipCompanyNoPhone")
-                      : tCommon("navigation.tooltipAccountNoPhone"),
-                  }}
-                  variant="light"
-                >
-                  {t("buttonPoints")}
-                </Button>
-                <Button
-                  disabled={disabledButtonListing}
-                  fullWidth
-                  px={PADDING_BUTTONS}
-                  routeTo={E_Routes.accountInvoices}
-                  size="lg"
-                  tooltip={{
-                    label: user?.company
-                      ? tCommon("navigation.tooltipCompanyNoPhone")
-                      : tCommon("navigation.tooltipAccountNoPhone"),
-                  }}
-                  variant="light"
-                >
-                  {t("buttonInvoices")}
-                </Button>
-              </Fieldset>
-            )}
             <Fieldset
               legend={t("fieldsetSettings")}
               maw="100%"
@@ -205,17 +171,6 @@ export const AccountPage = () => {
               </Button>
             </Fieldset>
             <Fieldset legend={t("fieldsetOthers")} p={PADDING_FIELDSET}>
-              {user?.role === E_Roles.USER && (
-                <Button
-                  fullWidth
-                  px={PADDING_BUTTONS}
-                  routeTo={E_Routes.accountReferral}
-                  size="lg"
-                  variant="light"
-                >
-                  {t("buttonReferral")}
-                </Button>
-              )}
               <Button
                 color="orange"
                 fullWidth

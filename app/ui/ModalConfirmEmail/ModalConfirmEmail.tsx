@@ -12,13 +12,10 @@ import { useCookies } from "~/hooks/useCookies";
 import { useFetcherWithActions } from "~/hooks/useFetcherWithActions";
 import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
-import { useUserCookie } from "~/hooks/useUserCookie";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
 import { Z_CodeString } from "~/models/code";
-import { E_Roles } from "~/models/enums";
 import { Form } from "~/ui/Form";
 import { convertToFormData, showAllErrorsForm } from "~/utilities/form";
-import { trackCompleteRegistration } from "~/utilities/tracking";
 
 import { Button } from "../Button";
 import { ButtonArrowLeft } from "../ButtonArrowLeft";
@@ -49,7 +46,6 @@ export const ModalConfirmEmail = ({
   const { isOtpCodeDisabled } = useCookies();
   const { getLocalizedRoute } = useLocalizedRoute();
   const { platformColor } = useLayout();
-  const { userCookie } = useUserCookie();
   const fetcher = useFetcherWithActions({
     schema: z.object({
       code: Z_CodeString.nullable().optional(),
@@ -75,14 +71,6 @@ export const ModalConfirmEmail = ({
     if (fetcher.data?.message !== "successConfirmEmail") {
       return;
     }
-
-    trackCompleteRegistration({
-      registrationType: userCookie?.userCompanyId
-        ? userCookie?.userRole === E_Roles.B2B_OWNER
-          ? "company"
-          : "companyWorker"
-        : "user",
-    });
 
     if (onSuccess) {
       onSuccess();

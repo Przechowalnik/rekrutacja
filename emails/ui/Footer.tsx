@@ -9,8 +9,7 @@ import {
 import dayjs from "dayjs";
 import { TFunction } from "i18next";
 
-import { links } from "../links";
-import { linkSocials, linkTerms } from "./styles.server";
+import { linkTerms } from "./styles.server";
 
 export type T_Footer = {
   t: TFunction<"emails", undefined>;
@@ -62,9 +61,9 @@ export const Footer = ({ t }: T_Footer) => {
             }}
           >
             <Img
-              alt="Maszbox logo"
+              alt="do-pracy.pl logo"
               height={32}
-              src={`${t("company.link")}/logo/logo-light.png`}
+              src={`${t("company.link")}/icons/pwa-512x512.png`}
             />
           </Column>
         </Row>
@@ -88,43 +87,6 @@ export const Footer = ({ t }: T_Footer) => {
               currentYear: currentYear,
             })}
           </Markdown>
-        </Row>
-        <Row>
-          <Column
-            align="center"
-            style={{
-              paddingBottom: "12px",
-            }}
-          >
-            <Link href={links.facebook.url} style={linkSocials}>
-              <Img
-                alt="Facebook logo"
-                height={32}
-                src={`${t("company.link")}/icons/fb.png`}
-              />
-            </Link>
-            <Link href={links.instagram} style={linkSocials}>
-              <Img
-                alt="Instagram logo"
-                height={32}
-                src={`${t("company.link")}/icons/instagram.png`}
-              />
-            </Link>
-            <Link href={links.tiktok} style={linkSocials}>
-              <Img
-                alt="Tiktok logo"
-                height={32}
-                src={`${t("company.link")}/icons/tiktok.png`}
-              />
-            </Link>
-            <Link href={t("company.link")} style={linkSocials}>
-              <Img
-                alt="X logo"
-                height={32}
-                src={`${t("company.link")}/icons/website.png`}
-              />
-            </Link>
-          </Column>
         </Row>
         <Row>
           <Column

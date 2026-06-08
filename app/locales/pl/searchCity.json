@@ -1,7 +1,7 @@
 {
   "contentBlock": {
     "description": "W {{city}} (województwo {{voivodeship}}) znajdziesz {{count}} aktualnych ofert wynajmu i sprzedaży powierzchni - od garaży i miejsc postojowych, przez magazyny, lokale i działki, po komórki lokatorskie i strychy. Porównaj ceny, sprawdź lokalizacje i znajdź przestrzeń dopasowaną do Twoich potrzeb. Oferty obejmują również wybrane dzielnice {{city}}.",
-    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze aktualnych ofert na MaszBox. Jeśli posiadasz wolną powierzchnię - garaż, magazyn, działkę lub komórkę lokatorską - dodaj ogłoszenie i jako pierwszy dotrzyj do osób szukających przestrzeni w {{city}}.",
+    "descriptionEmpty": "W {{city}} (województwo {{voivodeship}}) nie ma jeszcze aktualnych ofert na do-pracy.pl. Jeśli posiadasz wolną powierzchnię - garaż, magazyn, działkę lub komórkę lokatorską - dodaj ogłoszenie i jako pierwszy dotrzyj do osób szukających przestrzeni w {{city}}.",
     "titleNoListings": "Wynajem i sprzedaż powierzchni w {{city}}",
     "titleWithListings": "Wynajem i sprzedaż powierzchni w {{city}} - {{count}} aktualnych ofert"
   },

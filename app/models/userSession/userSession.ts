@@ -5,7 +5,6 @@ import { zodDateValidator } from "~/utilities/date";
 import { Z_Language, Z_Roles } from "../enums";
 import { Z_Company } from "./company";
 import { Z_CompanyWorkerSettings } from "./companyWorkerSettings";
-import { Z_Points } from "./points";
 import { Z_UserAuthenticator2Fa } from "./userAuthenticator2Fa";
 import { Z_UserAuthenticatorEmailOtp } from "./userAuthenticatorEmailOtp";
 import { Z_UserEmailVerification } from "./userEmailVerification";
@@ -25,7 +24,6 @@ export const Z_UserSession = z.object({
   lang: Z_Language,
   lastName: z.string().nullable().optional(),
   phone: Z_UserPhone.nullable().optional(),
-  points: Z_Points.nullable().optional(),
   role: Z_Roles,
   workerSettings: Z_CompanyWorkerSettings.nullable().optional(),
 });

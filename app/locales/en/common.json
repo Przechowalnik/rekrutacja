@@ -31,48 +31,6 @@
   "avatarWorker": {
     "anyPerson": "Any person"
   },
-  "bannerIntroRent": {
-    "buttonAddListing": "Add a listing",
-    "informationFreeListings": "Start earning from your space today – add a listing for free!",
-    "list1": {
-      "paragraph": "Start by logging into your account or quickly registering if you don’t have one yet.",
-      "title": "Start with an account"
-    },
-    "list2": {
-      "paragraph": "Choose a category, location, and fill in the details about the space you want to rent out.",
-      "title": "Create a listing"
-    },
-    "list3": {
-      "paragraph": "Choose a convenient payment method and pay for the listing so it can be published.",
-      "title": "Pay for your listing"
-    },
-    "list4": {
-      "paragraph": "Once your listing is active, tenants will be able to contact you by phone.",
-      "title": "Wait for contact"
-    },
-    "paragraph1": "How to rent out your space?",
-    "title1": "Do you have unused space? Turn it into extra income.",
-    "title2": "Add a listing and find a tenant!"
-  },
-  "bannerIntroSearch": {
-    "button": "Go to filters",
-    "buttonSearch": "Use manual search",
-    "list1": {
-      "paragraph": "Specify what type of listings you’re looking for.",
-      "title": "Choose a category"
-    },
-    "list2": {
-      "paragraph": "Select a city and then a district to narrow results to your desired area.",
-      "title": "Set the location"
-    },
-    "list3": {
-      "paragraph": "In a moment, you’ll see matching listings — on an interactive map and as a clear list below.",
-      "title": "Click the “{{buttonName}}” button"
-    },
-    "paragraph1": "How to find listings that interest you?",
-    "title1": "**Find available space in your area.",
-    "title2": "Use the filters above!"
-  },
   "breadcrumbs": {
     "aboutUs": "About us",
     "accessibility": "Accessibility for all",
@@ -395,8 +353,8 @@
     "required": "*"
   },
   "company": {
-    "link": "https://maszbox.pl",
-    "name": "MaszBox"
+    "link": "https://do-pracy.pl",
+    "name": "do-pracy.pl"
   },
   "companyAvatar": {
     "buttonAddImage": "Add new logo",
@@ -426,6 +384,18 @@
   "companyWorkers": {
     "title": "OUR EMPLOYEES"
   },
+  "cookieConsent": {
+    "acceptAll": "Accept all",
+    "bannerText": "We use necessary cookies to make the site work. With your consent we also use analytics cookies that help us improve the service.",
+    "bannerTitle": "Cookies",
+    "categoryAnalyticsText": "Help us understand how you use the site so we can improve it.",
+    "categoryAnalyticsTitle": "Analytics",
+    "categoryNecessaryText": "Required for the site to work. These cannot be turned off.",
+    "categoryNecessaryTitle": "Necessary (always active)",
+    "rejectAll": "Necessary only",
+    "save": "Save settings",
+    "settingsTitle": "Cookie settings"
+  },
   "countriesCode": {
     "POLAND": "Poland"
   },
@@ -439,7 +409,7 @@
     "testSMS": "SMS disabled"
   },
   "footer": {
-    "allRightsReserved": "©{{date}} {{companyName}} Sp. z o. o. All rights reserved.",
+    "allRightsReserved": "©{{date}} {{companyName}}. All rights reserved.",
     "categories": "Categories",
     "cities": "Cities",
     "cookiebot": "Change cookie settings",
@@ -625,7 +595,7 @@
     "bugStatus": "Bug status",
     "bugTimestamp": "Bug occurrence time",
     "bugVideo": "Video showing the bug",
-    "checkboxAcceptNewsletter": "I consent to receiving commercial and marketing information on the “MaszBox” platform, sent by MASZBOX spółka z o.o. to the email address I provided. I declare that I have read and accept the",
+    "checkboxAcceptNewsletter": "I consent to receiving commercial and marketing information on the do-pracy.pl platform. I declare that I have read and accept the",
     "checkboxAcceptPrivacyPolicyLink": "Privacy Policy",
     "checkboxAcceptPrivacyPolicySingleLink": "Privacy Policy",
     "checkboxAcceptRegulations": "I accept the Terms and Privacy Policy",

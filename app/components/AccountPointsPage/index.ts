@@ -1,1 +1,0 @@
-export { AccountPointsPage } from "./AccountPointsPage";

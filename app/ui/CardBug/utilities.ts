@@ -1,6 +1,5 @@
 import type { T_Bug } from "~/models/bug";
-import { E_BugPriority, E_BugStatus } from "~/models/enums";
-import type { T_PlatformSetting } from "~/models/platformSetting";
+import { E_BugStatus } from "~/models/enums";
 
 export const generateColor = (bug: T_Bug) => {
   switch (bug.status) {
@@ -26,31 +25,6 @@ export const generateColor = (bug: T_Bug) => {
 
     default: {
       return "gray";
-    }
-  }
-};
-
-export const generatePointsFromStatus = ({
-  bug,
-  platformSetting,
-}: {
-  bug: T_Bug;
-  platformSetting: T_PlatformSetting;
-}) => {
-  switch (bug.priority) {
-    case E_BugPriority.BIG: {
-      return platformSetting.pointsBigBug;
-    }
-
-    case E_BugPriority.MEDIUM: {
-      return platformSetting.pointsMediumBug;
-    }
-    case E_BugPriority.SMALL: {
-      return platformSetting.pointsSmallBug;
-    }
-
-    default: {
-      return 0;
     }
   }
 };

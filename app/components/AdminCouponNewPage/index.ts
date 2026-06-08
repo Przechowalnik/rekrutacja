@@ -1,1 +1,0 @@
-export { AdminCouponNewPage } from "./AdminCouponNewPage";

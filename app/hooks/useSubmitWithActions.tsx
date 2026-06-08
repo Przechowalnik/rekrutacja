@@ -15,7 +15,6 @@ import { namespaces } from "~/constants/namespaces";
 import type { T_GetRouteExtraQuery, T_RouteName } from "~/constants/routes";
 import type localesNotificationsPL from "~/locales/pl/notifications.json";
 import { reduceToUniqueFields } from "~/utilities/functions";
-import { trackByMessage } from "~/utilities/tracking";
 
 import { useGlobalGeneratedModalContext } from "./useGlobalGeneratedModalContext";
 import { useLoading } from "./useLoading";
@@ -98,10 +97,6 @@ export const useSubmitWithActions = (properties?: {
           await logout();
           return;
         }
-      }
-
-      if (!isErrorStatus && actionData?.message) {
-        trackByMessage(actionData.message);
       }
 
       if (

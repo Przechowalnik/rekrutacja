@@ -1,7 +1,7 @@
 {
   "contentBlock": {
     "description": "In {{city}} ({{voivodeship}} voivodeship) you'll find {{count}} current listings - from garages and parking spots through warehouses, units and plots, to storage units and attics. Compare prices, check locations and find the space that fits your needs. The offers also cover selected districts of {{city}}.",
-    "descriptionEmpty": "There are no active listings in {{city}} ({{voivodeship}} voivodeship) on MaszBox yet. If you have an unused space - a garage, warehouse, plot or storage unit - add your listing and be the first to reach people looking for space in {{city}}.",
+    "descriptionEmpty": "There are no active listings in {{city}} ({{voivodeship}} voivodeship) on do-pracy.pl yet. If you have an unused space - a garage, warehouse, plot or storage unit - add your listing and be the first to reach people looking for space in {{city}}.",
     "titleNoListings": "Rent and sale of spaces in {{city}}",
     "titleWithListings": "Rent and sale of spaces in {{city}} - {{count}} current listings"
   },

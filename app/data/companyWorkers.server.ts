@@ -6,17 +6,12 @@ import {
   E_RolesServer,
 } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
-import {
-  prismaSelectCompanyFreeTrial,
-  prismaSelectSubscription,
-  prismaSelectWorker,
-} from "./prismaSelect.server";
+import { prismaSelectWorker } from "./prismaSelect.server";
 import {
   responseGetOnFailure,
   responseGetOnFailureLogout,
   responseOnSuccess,
 } from "./response.server";
-import { getCompanyActivePlan } from "./subscription.server";
 
 type T_GetDataCompanyWorkerResult = {
   companyWorker: null | T_CompanyWorker;
@@ -291,12 +286,7 @@ export const checkIfUserCanCreateWorkerAccount = async ({
         select: {
           company: {
             select: {
-              freeTrial: {
-                select: prismaSelectCompanyFreeTrial,
-              },
-              subscriptions: {
-                select: prismaSelectSubscription,
-              },
+              id: true,
             },
           },
         },
@@ -311,15 +301,6 @@ export const checkIfUserCanCreateWorkerAccount = async ({
 
     if (responseError || !existingUser) {
       return redirectOnError;
-    }
-
-    const foundActivePlan = getCompanyActivePlan({
-      freeTrial: existingUser.company.freeTrial,
-      subscriptions: existingUser.company.subscriptions,
-    });
-
-    if (!foundActivePlan) {
-      return null;
     }
 
     return null;

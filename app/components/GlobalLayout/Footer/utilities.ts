@@ -152,12 +152,6 @@ export const generateFooter = ({
                 : []),
             ]),
         {
-          title: t(`breadcrumbs.${E_Routes.blogPosts}`),
-          url: getLocalizedRoute({
-            route: E_Routes.blogPosts,
-          }),
-        },
-        {
           title: t(`breadcrumbs.${E_Routes.help}`),
           url: getLocalizedRoute({
             route: E_Routes.help,

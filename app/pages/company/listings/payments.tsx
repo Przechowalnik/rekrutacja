@@ -4,7 +4,6 @@ import z from "zod";
 import { namespaces } from "~/constants/namespaces";
 import { requireUserSession } from "~/data/auth.server";
 import { extendListingCompany } from "~/data/companyListings.server";
-import { isFreeListingsServer } from "~/data/flags.server";
 import { E_Requests } from "~/data/formRequests.server";
 import {
   E_CompanyWorkerPermissionsServer,
@@ -14,14 +13,12 @@ import {
 import { responseOnFailure, responseThrowError } from "~/data/response.server";
 import {
   extensionFreeListingListing,
-  extensionListing,
   getReusableListing,
 } from "~/data/reusableListings.server";
 import { dynamic } from "~/hoc/dynamic";
 import { getI18nextNamespaces } from "~/lib/i18nextNamespaces";
 import { E_CompanyWorkerPermissions, E_Roles } from "~/models/enums";
 import { Z_Listing } from "~/models/listing";
-import { Z_Product } from "~/models/product";
 import { RespectLocalization } from "~/ui/RespectLocalization";
 import { RespectSchema } from "~/ui/RespectSchema";
 import { RespectUser } from "~/ui/RespectUser";
@@ -42,7 +39,6 @@ export default function Page() {
       <RespectSchema
         schema={z.object({
           listing: Z_Listing,
-          product: Z_Product,
         })}
       >
         {data => (
@@ -54,11 +50,7 @@ export default function Page() {
             ]}
             userRoles={[E_Roles.B2B_OWNER, E_Roles.B2B_WORKER]}
           >
-            <ReusableListingsPaymentsPage
-              isCompany
-              listing={data.listing}
-              product={data.product}
-            />
+            <ReusableListingsPaymentsPage isCompany listing={data.listing} />
           </RespectUser>
         )}
       </RespectSchema>
@@ -91,7 +83,6 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       userCompanyId,
       userId,
       userSessionVersion,
-      withPlatformProduct: true,
     });
   } catch (error) {
     return responseThrowError({ error });
@@ -122,23 +113,14 @@ export async function action({ params, request }: ActionFunctionArgs) {
         });
       }
       case E_Requests.post: {
-        return isFreeListingsServer()
-          ? await extensionFreeListingListing({
-              isCompany: true,
-              listingIdOrSlug: params?.listingIdOrSlug,
-              request,
-              userCompanyId,
-              userId,
-              userSessionVersion,
-            })
-          : await extensionListing({
-              isCompany: true,
-              listingIdOrSlug: params?.listingIdOrSlug,
-              request,
-              userCompanyId,
-              userId,
-              userSessionVersion,
-            });
+        return await extensionFreeListingListing({
+          isCompany: true,
+          listingIdOrSlug: params?.listingIdOrSlug,
+          request,
+          userCompanyId,
+          userId,
+          userSessionVersion,
+        });
       }
     }
 

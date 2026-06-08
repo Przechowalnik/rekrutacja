@@ -3,15 +3,8 @@ import dayjs from "dayjs";
 import { database } from "~/data/database.server";
 import { serializeBigInt } from "~/utilities/converter";
 
-import { getUserFromSession } from "./authSession.server";
 import { cacheTimeServer } from "./cacheTime.server";
 import { getEncryptedIp } from "./ip.server";
-import {
-  fireMetaLeadEvent,
-  fireMetaListingViewEvent,
-  T_MetaCapiListing,
-  T_MetaCapiUserData,
-} from "./metaCapi.server";
 import {
   E_ListingInteractionTypeServer,
   E_ListingStatusServer,
@@ -37,39 +30,16 @@ export const getListing = async ({
   }
 
   try {
-    const sessionUser = await getUserFromSession({ request });
-    const metaUserData: T_MetaCapiUserData | undefined = sessionUser.userId
-      ? {
-          externalId: sessionUser.userId,
-          ...(sessionUser.userFirstName
-            ? { firstName: sessionUser.userFirstName }
-            : {}),
-          ...(sessionUser.userLastName
-            ? { lastName: sessionUser.userLastName }
-            : {}),
-        }
-      : undefined;
-
     const key = `listing:${listingIdOrSlug}`;
     const cached = await client.get(key);
-    const cachedListing = (cached as { listing?: T_MetaCapiListing } | null)
-      ?.listing;
+    const cachedListing = (cached as { listing?: unknown } | null)?.listing;
 
     if (cachedListing) {
-      const metaCapiEventId = fireMetaListingViewEvent({
-        listing: cachedListing,
-        request,
-        userData: metaUserData,
-      });
-
       return await responseOnSuccess({
         cacheResponse: {
           maxAge: cacheTimeServer.listing,
         },
-        data: {
-          ...(cached as object),
-          ...(metaCapiEventId ? { metaCapiEventId } : {}),
-        } as never,
+        data: cached as never,
         extraHeaders: {
           "Cache-Control": "no-store",
           "X-Cache": "HIT",
@@ -107,20 +77,11 @@ export const getListing = async ({
       ex: cacheTimeServer.listing,
     });
 
-    const metaCapiEventId = fireMetaListingViewEvent({
-      listing: foundListing,
-      request,
-      userData: metaUserData,
-    });
-
     return await responseOnSuccess({
       cacheResponse: {
         maxAge: cacheTimeServer.listing,
       },
-      data: {
-        ...result,
-        ...(metaCapiEventId ? { metaCapiEventId } : {}),
-      },
+      data: result,
       extraHeaders: {
         "Cache-Control": "no-store",
         "X-Cache": "MISS",
@@ -203,14 +164,6 @@ export const incrementListing = async ({
         },
       });
 
-      if (type === E_ListingInteractionTypeServer.CONTACT) {
-        fireMetaLeadEvent({
-          listingId: foundListing.id,
-          request,
-          userId,
-        });
-      }
-
       return await responseOnSuccess({ request, status: 200 });
     }
 
@@ -234,13 +187,6 @@ export const incrementListing = async ({
     await client.set(key, serializeBigInt(true), {
       ex: cacheTimeServer.listingContactInteraction,
     });
-
-    if (type === E_ListingInteractionTypeServer.CONTACT) {
-      fireMetaLeadEvent({
-        listingId: foundListing.id,
-        request,
-      });
-    }
 
     return await responseOnSuccess({ request, status: 200 });
   } catch (error) {

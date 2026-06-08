@@ -1,18 +1,15 @@
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { Alert, Box, Flex } from "@mantine/core";
+import { Box, Flex } from "@mantine/core";
 import type { FormErrors } from "@mantine/form";
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 import type { Dispatch, SetStateAction, SyntheticEvent } from "react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useSearchParams } from "react-router";
+import { useNavigate } from "react-router";
 
 import { namespaces } from "~/constants/namespaces";
-import { queryKey } from "~/constants/queryAndHashes";
 import { E_Routes } from "~/constants/routes";
 import { useFetcherWithActions } from "~/hooks/useFetcherWithActions";
-import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useRecaptcha } from "~/hooks/useRecaptcha";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
@@ -20,33 +17,24 @@ import { E_CountryCode } from "~/models/enums";
 import { Button } from "~/ui/Button";
 import { ButtonArrowLeft } from "~/ui/ButtonArrowLeft";
 import { Checkbox } from "~/ui/Checkbox";
-import { Collapse } from "~/ui/Collapse";
 import { Fieldset } from "~/ui/Fieldset";
 import { Form } from "~/ui/Form";
-import { IconSeo } from "~/ui/IconSeo";
 import { Input } from "~/ui/Input";
 import { InputWrapper } from "~/ui/InputWrapper";
 import { Link } from "~/ui/Link";
 import { PasswordSafeVisualization } from "~/ui/PasswordSafeVisualization";
 import { Section } from "~/ui/Section";
 import { SegmentControl } from "~/ui/SegmentControl";
-import { Text } from "~/ui/Text";
 import { isEnableCreateOrLoginCompany } from "~/utilities/flags";
 import { convertToFormData, showAllErrorsForm } from "~/utilities/form";
 
 export const RegistrationAccountPage = () => {
-  const [addedReferralCode, setAddedReferralCode] = useState<null | string>(
-    null,
-  );
-  const [queryCompanyId, setQueryCompanyId] = useState<null | string>(null);
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
   const [isLoadingButton, setIsLoadingButton] = useState(false);
 
-  const { platformColor } = useLayout();
   const { executeV3 } = useRecaptcha();
   const navigate = useNavigate();
-  const [searchParameters] = useSearchParams();
   const fetcher = useFetcherWithActions({});
   const { i18n, t: tCommon } = useTranslation(namespaces.common);
   const { t: tRegistration } = useTranslation(namespaces.registrationAccount);
@@ -62,18 +50,10 @@ export const RegistrationAccountPage = () => {
       [formNames.language]: i18n.language.toUpperCase(),
       [formNames.phoneCountryCode]: E_CountryCode.POLAND,
       [formNames.phoneNumber]: "",
-      //referral
-      [formNames.referralCode]:
-        searchParameters.get(queryKey.referralCode) ?? "",
       [formNames.userFirstName]: "",
       [formNames.userLastName]: "",
     },
     mode: "uncontrolled",
-    onValuesChange(values) {
-      const { referralCode } = values;
-
-      setAddedReferralCode(referralCode ?? null);
-    },
     validate: {
       [formNames.checkboxAcceptNewsletter]: value =>
         checkFormValidator({
@@ -105,13 +85,6 @@ export const RegistrationAccountPage = () => {
           optional: true,
           value,
         }),
-      //referral
-      [formNames.referralCode]: value =>
-        checkFormValidator({
-          formName: formNames.referralCode,
-          optional: true,
-          value,
-        }),
       [formNames.userFirstName]: value =>
         checkFormValidator({ formName: formNames.userFirstName, value }),
       [formNames.userLastName]: value =>
@@ -122,24 +95,6 @@ export const RegistrationAccountPage = () => {
         }),
     },
   });
-
-  useEffect(() => {
-    const companyId = searchParameters.get(queryKey.companyId);
-    const newReferralCode = searchParameters.get(queryKey.referralCode);
-
-    const errorCheckCompanyId = checkFormValidator({
-      formName: formNames.companyId,
-      value: companyId,
-    });
-
-    const errorCheckReferralCode = checkFormValidator({
-      formName: formNames.referralCode,
-      value: companyId,
-    });
-
-    setAddedReferralCode(errorCheckReferralCode ? null : newReferralCode);
-    setQueryCompanyId(errorCheckCompanyId ? null : companyId);
-  }, []);
 
   const handleSubmit = async (
     values: typeof form.values,
@@ -175,7 +130,6 @@ export const RegistrationAccountPage = () => {
       email,
       phoneCountryCode,
       phoneNumber,
-      referralCode,
       userFirstName,
       userLastName,
     } = values;
@@ -230,13 +184,11 @@ export const RegistrationAccountPage = () => {
       convertToFormData({
         [formNames.checkboxAcceptNewsletter]: checkboxAcceptNewsletter,
         [formNames.checkboxAcceptRegulations]: checkboxAcceptRegulations,
-        [formNames.companyId]: queryCompanyId,
         [formNames.email]: email,
         [formNames.language]: i18n.language.toUpperCase(),
         [formNames.password]: password,
         [formNames.passwordRepeat]: passwordRepeat,
         [formNames.recaptcha]: newRecaptchaToken,
-        [formNames.referralCode]: queryCompanyId ? null : referralCode,
         [formNames.userFirstName]: userFirstName,
         [formNames.userLastName]: userLastName,
         ...(phoneCountryCode && phoneNumber
@@ -282,9 +234,6 @@ export const RegistrationAccountPage = () => {
   return (
     <Form onSubmit={form.onSubmit(handleSubmit, handleSubmitErrors)}>
       <Section
-        alert={
-          queryCompanyId ? tRegistration("createdWorkerAccount") : undefined
-        }
         breadcrumbs={[
           E_Routes.home,
           E_Routes.registration,
@@ -504,29 +453,6 @@ export const RegistrationAccountPage = () => {
               })}
             />
           </Fieldset>
-          {!queryCompanyId && (
-            <>
-              <Input
-                clearable
-                form={form}
-                key={form.key(formNames.referralCode)}
-                name={formNames.referralCode}
-                required={false}
-                type="text"
-                {...form.getInputProps(formNames.referralCode)}
-              />
-              <Collapse fullWith opened={!!addedReferralCode}>
-                <Alert
-                  color={platformColor}
-                  icon={<IconSeo icon={faCircleInfo} size="xl" />}
-                >
-                  <Text c={platformColor} fw="bold" size="md">
-                    {tRegistration("informationReferral")}
-                  </Text>
-                </Alert>
-              </Collapse>
-            </>
-          )}
         </InputWrapper>
       </Section>
     </Form>

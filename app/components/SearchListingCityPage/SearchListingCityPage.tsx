@@ -11,7 +11,6 @@ import { T_City } from "~/models/city";
 import { T_CityCategoryCounts } from "~/models/cityCategoryCounts";
 import { T_CityDistrict } from "~/models/cityNested";
 import { allListingCategoryRent, getCategorySlug } from "~/models/enums";
-import { BannerIntroRent } from "~/ui/BannerIntroRent";
 import { CardListingCategory } from "~/ui/CardListingCategory";
 import { CardListingDistrict } from "~/ui/CardListingDistrict";
 import { SeoFaqSection } from "~/ui/PageMeta/SeoFaqSection";
@@ -246,8 +245,6 @@ export const SearchListingCityPage = ({
               tSeo,
             }),
             title,
-            twitterCreator: links.twitter.creator,
-            twitterSite: links.twitter.site,
             type: "website",
             url: `${links.baseUrl}${linkCurrent}`,
           },
@@ -277,15 +274,6 @@ export const SearchListingCityPage = ({
           </Box>
         </Section>
       )}
-      <Section
-        backgroundSecondary
-        size="lg"
-        withBottomPadding={false}
-        withPageMeta={false}
-        withTopPadding={false}
-      >
-        <BannerIntroRent />
-      </Section>
       {cityCategoryCounts && !district && (
         <Section size="lg" withPageMeta={false}>
           <Box pb={32} w="100%">

@@ -76,7 +76,6 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       userCompanyId,
       userId,
       userSessionVersion,
-      withPlatformProduct: false,
     });
   } catch (error) {
     return responseThrowError({ error });

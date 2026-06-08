@@ -8,7 +8,6 @@ import { responseThrowError } from "~/data/response.server";
 import { dynamic } from "~/hoc/dynamic";
 import { getI18nextNamespaces } from "~/lib/i18nextNamespaces";
 import { Z_Bug } from "~/models/bug";
-import { Z_PlatformSetting } from "~/models/platformSetting";
 import { RespectLocalization } from "~/ui/RespectLocalization";
 import { RespectSchema } from "~/ui/RespectSchema";
 import { RespectUser } from "~/ui/RespectUser";
@@ -29,16 +28,11 @@ export default function Page() {
       <RespectSchema
         schema={z.object({
           bug: Z_Bug,
-          platformSetting: Z_PlatformSetting,
         })}
       >
         {data => (
           <RespectUser respectCompany>
-            <ReusableBugDetailsPage
-              bug={data.bug}
-              isCompany
-              platformSetting={data.platformSetting}
-            />
+            <ReusableBugDetailsPage bug={data.bug} isCompany />
           </RespectUser>
         )}
       </RespectSchema>

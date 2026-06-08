@@ -24,15 +24,9 @@ export default function Page() {
       <RespectSchema
         schema={z.object({
           listing: Z_Listing,
-          metaCapiEventId: z.string().optional(),
         })}
       >
-        {data => (
-          <ListingPage
-            listing={data.listing}
-            metaCapiEventId={data.metaCapiEventId}
-          />
-        )}
+        {data => <ListingPage listing={data.listing} />}
       </RespectSchema>
     </RespectLocalization>
   );

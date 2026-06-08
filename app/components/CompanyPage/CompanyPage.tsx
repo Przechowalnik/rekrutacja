@@ -10,7 +10,6 @@ import { ButtonRefreshUserSession } from "~/ui/ButtonRefreshUserSession";
 import { ButtonWrapper } from "~/ui/ButtonWrapper";
 import { Fieldset } from "~/ui/Fieldset";
 import { Section } from "~/ui/Section";
-import { isFreeListings } from "~/utilities/flags";
 
 const PADDING_BUTTONS = 8;
 const PADDING_FIELDSET = 10;
@@ -19,8 +18,6 @@ export const CompanyPage = () => {
   const { t } = useTranslation(namespaces.company);
   const { t: tCommon } = useTranslation(namespaces.common);
   const { logout, refreshData, user } = useUser();
-
-  const isFreeListingConfiguration = isFreeListings();
 
   const userHasEmailVerified = user?.emailVerification?.verifiedAt;
   const companyHasPhoneVerified = user?.company?.phone?.verifiedAt;
@@ -99,52 +96,6 @@ export const CompanyPage = () => {
                 {t("buttonListings")}
               </Button>
             </Fieldset>
-            {user?.role === E_Roles.B2B_OWNER && (
-              <Fieldset legend={t("fieldsetPayments")} p={PADDING_FIELDSET}>
-                {!isFreeListingConfiguration && (
-                  <Button
-                    fullWidth
-                    px={PADDING_BUTTONS}
-                    routeTo={E_Routes.companySubscriptions}
-                    size="lg"
-                    variant="light"
-                  >
-                    {t("buttonSubscriptions")}
-                  </Button>
-                )}
-                <Button
-                  fullWidth
-                  px={PADDING_BUTTONS}
-                  routeTo={E_Routes.companyInvoices}
-                  size="lg"
-                  variant="light"
-                >
-                  {t("buttonInvoices")}
-                </Button>
-                <Button
-                  fullWidth
-                  px={PADDING_BUTTONS}
-                  routeTo={E_Routes.companyPoints}
-                  size="lg"
-                  variant="light"
-                >
-                  {t("buttonPoints")}
-                </Button>
-                {!isFreeListingConfiguration && (
-                  <Button
-                    fullWidth
-                    px={PADDING_BUTTONS}
-                    routeTo={E_Routes.companyCard}
-                    size="lg"
-                    variant="light"
-                  >
-                    {user?.company?.stripe?.customerHasCard
-                      ? t("buttonCardUpdate")
-                      : t("buttonAddCard")}
-                  </Button>
-                )}
-              </Fieldset>
-            )}
             <Fieldset legend={t("fieldsetSettings")} p={PADDING_FIELDSET}>
               <Button
                 fullWidth
@@ -188,15 +139,6 @@ export const CompanyPage = () => {
               )}
             </Fieldset>
             <Fieldset legend={t("fieldsetOthers")} p={PADDING_FIELDSET}>
-              <Button
-                fullWidth
-                px={PADDING_BUTTONS}
-                routeTo={E_Routes.companyReferral}
-                size="lg"
-                variant="light"
-              >
-                {t("buttonReferral")}
-              </Button>
               {user?.role === E_Roles.B2B_OWNER && (
                 <Button
                   color="orange"

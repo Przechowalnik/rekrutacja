@@ -102,35 +102,6 @@ model UserNotifications {
   @@index([userId])
 }
 
-model UserSocials {
-  id                           String    @id @default(uuid())
-  userId                       String    @unique
-  googleId                     String?
-  googleAccessToken            String?
-  googleAccessTokenExpiresAt   DateTime?
-  facebookId                   String?
-  facebookAccessToken          String?
-  facebookAccessTokenExpiresAt DateTime?
-  user                         User      @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-}
-
-model Referral {
-  id             String   @id @default(uuid())
-  userId         String?  @unique
-  companyId      String?  @unique
-  code           String   @unique
-  countCompanies Int      @default(0)
-  countUsers     Int      @default(0)
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
-  company        Company? @relation(fields: [companyId], references: [id], onDelete: Cascade)
-  user           User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@index([userId])
-  @@index([companyId])
-}
 
 model UserIp {
   id        String   @id @default(uuid())
@@ -157,8 +128,6 @@ model User {
   avatar                   String?
   lang                     Languages              @default(PL)
   role                     Role                   @default(USER)
-  createdFromReferralCode  String?
-  stripeCustomerId         String?                @unique
   companyId                String?
   createdAt                DateTime               @default(now())
   updatedAt                DateTime               @updatedAt
@@ -169,15 +138,10 @@ model User {
   workerSettings           CompanyWorkerSettings?
   consent                  Consent?
   emailVerification        EmailVerification?
-  invoices                 Invoice[]
   listings                 Listing[]
-  points                   Points?
-  referral                 Referral?
   company                  Company?               @relation("WorkerCompany", fields: [companyId], references: [id], onDelete: NoAction)
   notifications            UserNotifications?
   phone                    UserPhone?
-  socials                  UserSocials?
-  createdBlogPosts         BlogPost[]
   reportsAsTarget          Report[]               @relation("ReportTargetUser")
   reportsAsReporter        Report[]               @relation("ReportReporter")
   loginIps                 UserIp[]
@@ -211,25 +175,6 @@ model CompanyRegistry {
   @@index([number, country])
 }
 
-model CompanyInvoiceData {
-  id           String     @id @default(uuid())
-  companyId    String     @unique
-  companyName  String
-  taxNumber    String
-  taxCountry   TaxCountry @default(PL)
-  country      Country    @default(POLAND)
-  postalCode   String
-  city         String
-  streetName   String
-  streetNumber String
-  flatNumber   String?
-  createdAt    DateTime   @default(now())
-  updatedAt    DateTime   @updatedAt
-  company      Company    @relation(fields: [companyId], references: [id], onDelete: Cascade)
-
-  @@index([companyId])
-}
-
 model CompanyPhone {
   id                   String    @id @default(uuid())
   verifiedAt           DateTime?
@@ -247,66 +192,9 @@ model CompanyPhone {
   @@index([companyId])
 }
 
-model CompanyFreeTrial {
-  id        String   @id @default(uuid())
-  companyId String   @unique
-  startDate DateTime
-  endDate   DateTime
-  planId    String
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
-  plan      Plan     @relation(fields: [planId], references: [id])
-
-  @@index([companyId])
-}
-
-model PointsHistory {
-  id                     String   @id @default(uuid())
-  pointsId               String
-  balanceAfterOperation  Int
-  balanceBeforeOperation Int
-  amount                 Int
-  createdAt              DateTime @default(now())
-  updatedAt              DateTime @updatedAt
-  points                 Points   @relation(fields: [pointsId], references: [id], onDelete: Cascade)
-
-  @@index([pointsId, createdAt])
-}
-
-model Points {
-  id        String          @id @default(uuid())
-  companyId String?         @unique
-  userId    String?         @unique
-  balance   Int
-  createdAt DateTime        @default(now())
-  updatedAt DateTime        @updatedAt
-  company   Company?        @relation(fields: [companyId], references: [id], onDelete: Cascade)
-  user      User?           @relation(fields: [userId], references: [id], onDelete: Cascade)
-  history   PointsHistory[]
-
-  @@index([userId])
-  @@index([companyId])
-}
-
-model CompanyStripe {
-  id                        String    @id @default(uuid())
-  companyId                 String    @unique
-  accountId                 String?   @unique
-  accountOnboardingActiveAt DateTime?
-  customerId                String?   @unique
-  customerCardId            String?
-  costumerCardLast4Numbers  String?
-  company                   Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
-
-  @@index([companyId])
-}
-
 model CompanySettings {
   id                               String    @id @default(uuid())
   companyId                        String    @unique
-  loginGoogleAt                    DateTime?
-  loginFacebookAt                  DateTime?
   loginPasswordAt                  DateTime?
   twoFactorAuthenticationEnabledAt DateTime?
   company                          Company   @relation(fields: [companyId], references: [id], onDelete: Cascade)
@@ -328,19 +216,11 @@ model Company {
   description             String?
   createdAt               DateTime                @default(now())
   updatedAt               DateTime                @updatedAt
-  createdFromReferralCode String?
   bugs                    Bug[]
-  freeTrial               CompanyFreeTrial?
-  invoiceData             CompanyInvoiceData?
   phone                   CompanyPhone?
   settings                CompanySettings?
-  stripe                  CompanyStripe?
   workersSettings         CompanyWorkerSettings[]
-  invoices                Invoice[]
   listings                Listing[]
-  points                  Points?
-  referral                Referral?
-  subscriptions           Subscription[]
   workers                 User[]                  @relation("WorkerCompany")
   reportsAsTarget         Report[]                @relation("ReportTargetCompany")
   listingInteractions     ListingInteraction[]
@@ -356,133 +236,6 @@ model Geolocation {
   lng     Float
 
   @@index([lat, lng])
-}
-
-model Product {
-  id                       String    @id @default(uuid())
-  isDeletedAt              DateTime?
-  name                     String
-  price_1                  BigInt
-  price_2_5                BigInt
-  price_6_plus             BigInt
-  points_1                 BigInt
-  points_2_5               BigInt
-  points_6_plus            BigInt
-  stripeProductId          String?   @unique
-  stripeSessionCheckoutId  String?
-  stripeSessionCheckoutUrl String?
-  createdAt                DateTime  @default(now())
-  updatedAt                DateTime  @updatedAt
-}
-
-model Plan {
-  id                     String             @id @default(uuid())
-  type                   PlanType
-  isDeletedAt            DateTime?
-  price                  BigInt
-  name                   String
-  description            String
-  enabledAt              DateTime?
-  stripePlanId           String?            @unique
-  stripeProductId        String?            @unique
-  interval               PlanInterval?
-  intervalCount          Int?
-  maximumListingsInMonth Int
-  listingDurationMonths  Int
-  createdAt              DateTime           @default(now())
-  updatedAt              DateTime           @updatedAt
-  companyFreeTrial       CompanyFreeTrial[]
-  platformSetting        PlatformSetting[]
-  subscriptions          Subscription[]
-  coupons                Coupon[]           @relation("CouponToPlan")
-}
-
-model Coupon {
-  id                    String         @id @default(uuid())
-  enabledAt             DateTime?
-  name                  String
-  percentOff            Int?
-  amountOff             BigInt?
-  minimumAmount         BigInt?
-  endDate               DateTime
-  promotionCode         String         @unique
-  stripeCouponId        String
-  stripePromotionCodeId String
-  durationInMonths      Int            @default(1)
-  maxRedemptions        BigInt?
-  firstTimeTransaction  Boolean
-  createdAt             DateTime       @default(now())
-  updatedAt             DateTime       @updatedAt
-  subscription          Subscription[]
-  plans                 Plan[]         @relation("CouponToPlan")
-
-  @@index([endDate])
-}
-
-model Exchange {
-  id                   String    @id @default(uuid())
-  name                 String
-  subscriptionFreeDays Int?
-  points               Int
-  enabledAt            DateTime?
-  createdAt            DateTime  @default(now())
-  updatedAt            DateTime  @updatedAt
-}
-
-model Invoice {
-  id                    String           @id @default(uuid())
-  stripePaymentIntentId String?          @unique
-  stripeCheckoutId      String?          @unique
-  fakturowniaInvoiceId  String?          @unique
-  subscriptionId        String?
-  companyId             String?
-  userId                String?
-  createdAt             DateTime         @default(now())
-  updatedAt             DateTime         @updatedAt
-  company               Company?         @relation(fields: [companyId], references: [id])
-  subscription          Subscription?    @relation(fields: [subscriptionId], references: [id])
-  user                  User?            @relation(fields: [userId], references: [id])
-  listingPayments       ListingPayment[]
-
-  @@index([companyId])
-}
-
-model Subscription {
-  id                           String             @id @default(uuid())
-  stripeSubscriptionId         String?            @unique
-  startDate                    DateTime
-  endDate                      DateTime?
-  status                       SubscriptionStatus
-  companyId                    String?
-  planId                       String
-  couponId                     String?
-  createdAt                    DateTime           @default(now())
-  updatedAt                    DateTime           @updatedAt
-  nextPaymentAttempt           DateTime?
-  endDateExchangeFreeDays      DateTime?
-  extraFreeDaysInCurrentPeriod Int?               @default(0)
-  invoices                     Invoice[]
-  company                      Company?           @relation(fields: [companyId], references: [id])
-  coupon                       Coupon?            @relation(fields: [couponId], references: [id])
-  plan                         Plan               @relation(fields: [planId], references: [id])
-
-  @@index([companyId, status])
-  @@index([companyId, startDate, endDate, status])
-}
-
-model PlatformSetting {
-  id                          String   @id @default(uuid())
-  pointsReferralCompany       Int
-  pointsReferralUser          Int
-  pointsSmallBug              Int
-  pointsMediumBug             Int
-  pointsBigBug                Int
-  planIdFreeTrialCompany      String
-  freeTrialCompanyMonthsCount Int
-  freeTrialMaxListings        Int      @default(1)
-  createdAt                   DateTime @default(now())
-  updatedAt                   DateTime @updatedAt
-  planFreeTrialCompany        Plan     @relation(fields: [planIdFreeTrialCompany], references: [id])
 }
 
 model Bug {
@@ -501,7 +254,6 @@ model Bug {
   isReproducible     Boolean
   priority           BugPriority?
   answer             String?
-  pointsPaidAt       DateTime?
   createdAt          DateTime       @default(now())
   updatedAt          DateTime       @updatedAt
   company            Company?       @relation(fields: [companyId], references: [id], onDelete: Cascade)
@@ -509,23 +261,6 @@ model Bug {
 
   @@index([userId])
   @@index([companyId])
-}
-
-model BlogPost {
-  id              String   @id @default(uuid())
-  createdByUserId String?
-  slug            String   @unique
-  title           String   @unique
-  titleSeo        String   @unique
-  description     String
-  descriptionSeo  String
-  content         String
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  createdByUser   User?    @relation(fields: [createdByUserId], references: [id], onDelete: SetNull)
-
-  @@index([title])
-  @@index([titleSeo])
 }
 
 model ListingLocation {
@@ -554,23 +289,16 @@ model ListingLocation {
 }
 
 model ListingPayment {
-  id                    String               @id @default(uuid())
-  listingId             String
-  status                ListingPaymentStatus
-  free                  Boolean
-  monthsToAdd           Int?
-  points                BigInt?
-  amount                BigInt?
-  stripePaymentIntentId String?
-  stripeCheckoutId      String?
-  stripeCheckoutUrl     String?
-  expiresAtBeforeAdd    DateTime?
-  expiresAtAfterAdd     DateTime?
-  invoiceId             String?
-  createdAt             DateTime             @default(now())
-  updatedAt             DateTime             @updatedAt
-  invoice               Invoice?             @relation(fields: [invoiceId], references: [id])
-  listing               Listing              @relation(fields: [listingId], references: [id], onDelete: Cascade)
+  id                 String               @id @default(uuid())
+  listingId          String
+  status             ListingPaymentStatus
+  free               Boolean
+  monthsToAdd        Int?
+  expiresAtBeforeAdd DateTime?
+  expiresAtAfterAdd  DateTime?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  listing            Listing              @relation(fields: [listingId], references: [id], onDelete: Cascade)
 
   @@index([listingId])
   @@index([listingId, status])
@@ -881,23 +609,6 @@ enum ListingCategory {
   BANQUET_HALL
 }
 
-enum SubscriptionStatus {
-  ACTIVE
-  PENDING
-  CANCELLED
-  TRIALING
-  UNPAID
-  TO_BE_CANCELLED
-}
-
-enum PlanType {
-  TRIAL
-  BASIC
-  STANDARD
-  PREMIUM
-  ULTIMATE
-}
-
 enum Role {
   B2B_WORKER
   B2B_OWNER
@@ -922,13 +633,6 @@ enum Country {
 
 enum TaxCountry {
   PL
-}
-
-enum PlanInterval {
-  DAY
-  WEEK
-  MONTH
-  YEAR
 }
 
 enum BugPriority {

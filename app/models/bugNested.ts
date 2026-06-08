@@ -15,7 +15,6 @@ export const Z_BugNested = z.object({
   id: z.string().uuid(),
   images: z.string().array().nullable().optional(),
   isReproducible: z.boolean(),
-  pointsPaidAt: zodDateValidator().nullable().optional(),
   priority: Z_BugPriority.nullable().optional(),
   status: Z_BugStatus,
   timestamp: zodDateValidator(),

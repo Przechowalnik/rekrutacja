@@ -11,19 +11,9 @@ import { formNames } from "~/lib/zodFormValidator";
 import { sendVerifiedEmail } from "./emailsGenerator.server";
 import { isEnableCreateOrLoginCompanyServer } from "./flags.server";
 import { convertToCorrectSlug, generateRandomDigits } from "./functions.server";
-import { getGUSCompanyInfo } from "./gus.server";
 import { getEncryptedIp } from "./ip.server";
-import { fireMetaRegistrationEvent } from "./metaCapi.server";
-import {
-  E_CountryServer,
-  E_RolesServer,
-  E_TaxCountryServer,
-} from "./models.server";
+import { E_RolesServer, E_TaxCountryServer } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
-import {
-  prismaSelectCompanyFreeTrial,
-  prismaSelectSubscription,
-} from "./prismaSelect.server";
 import {
   responseGetOnFailure,
   responseOnFailure,
@@ -58,7 +48,6 @@ export const signUp = async ({
         [formNames.authenticator]: zodValidator.authenticator.optional(),
         [formNames.checkboxAcceptNewsletter]: zodValidator.checkbox,
         [formNames.checkboxAcceptRegulations]: zodValidator.checkboxChecked,
-        [formNames.companyId]: zodValidator.companyId.optional(),
         [formNames.email]: zodValidator.email,
         [formNames.language]: zodValidator.language,
         [formNames.password]: zodValidator.password,
@@ -66,7 +55,6 @@ export const signUp = async ({
         [formNames.phoneCountryCode]: zodValidator.phoneCountryCode.optional(),
         [formNames.phoneNumber]: zodValidator.phoneNumber.optional(),
         [formNames.recaptcha]: zodValidator.recaptcha.optional(),
-        [formNames.referralCode]: zodValidator.referralCode.optional(),
         [formNames.userFirstName]: zodValidator.userFirstName,
         [formNames.userLastName]: zodValidator.userLastName.optional(),
       },
@@ -88,7 +76,6 @@ export const signUp = async ({
       authenticator,
       checkboxAcceptNewsletter,
       checkboxAcceptRegulations,
-      companyId,
       email,
       language,
       password,
@@ -96,19 +83,12 @@ export const signUp = async ({
       phoneCountryCode,
       phoneNumber,
       recaptcha,
-      referralCode,
       userFirstName,
       userLastName = null,
     } = resultValidator.data;
 
     if (isCompanyWorkerRegistration) {
-      if (
-        !authenticator ||
-        recaptcha ||
-        referralCode ||
-        !userCompanyId ||
-        !userId
-      ) {
+      if (!authenticator || recaptcha || !userCompanyId || !userId) {
         return await responseOnFailure({
           message: "somethingWentWrong",
           request,
@@ -124,12 +104,7 @@ export const signUp = async ({
           select: {
             company: {
               select: {
-                freeTrial: {
-                  select: prismaSelectCompanyFreeTrial,
-                },
-                subscriptions: {
-                  select: prismaSelectSubscription,
-                },
+                id: true,
               },
             },
           },
@@ -178,22 +153,6 @@ export const signUp = async ({
           status: 422,
         });
       }
-
-      if (companyId) {
-        const foundCompany = await database.company.count({
-          where: {
-            id: companyId,
-          },
-        });
-
-        if (foundCompany === 0) {
-          return await responseOnFailure({
-            message: "notFoundCompanyId",
-            request,
-            status: 422,
-          });
-        }
-      }
     }
 
     if (password !== passwordRepeat) {
@@ -224,31 +183,6 @@ export const signUp = async ({
       });
     }
 
-    const foundCompanyReferral =
-      referralCode && !isCompanyWorkerRegistration && !companyId
-        ? await database.referral.findUnique({
-            select: {
-              companyId: true,
-            },
-            where: {
-              code: referralCode.toUpperCase(),
-            },
-          })
-        : null;
-
-    if (
-      referralCode &&
-      !isCompanyWorkerRegistration &&
-      !companyId &&
-      !foundCompanyReferral
-    ) {
-      return await responseOnFailure({
-        message: "notFoundReferral",
-        request,
-        status: 422,
-      });
-    }
-
     const newEncryptedIp = getEncryptedIp({
       request,
     });
@@ -258,9 +192,7 @@ export const signUp = async ({
     const newUser = await database.user.create({
       data: {
         blockedAt: null,
-        companyId: isCompanyWorkerRegistration
-          ? userCompanyId
-          : (companyId ?? null),
+        companyId: isCompanyWorkerRegistration ? userCompanyId : null,
         consent: {
           create: {
             newsletterAt: checkboxAcceptNewsletter ? currentDate : undefined,
@@ -268,10 +200,6 @@ export const signUp = async ({
             regulationAt: checkboxAcceptRegulations ? currentDate : undefined,
           },
         },
-        createdFromReferralCode:
-          referralCode && foundCompanyReferral
-            ? referralCode.toUpperCase()
-            : null,
         email: email.toLowerCase(),
         emailVerification: {
           create: {
@@ -289,33 +217,14 @@ export const signUp = async ({
           },
         },
         password: passwordHash,
-        points: {
-          create: {
-            balance: 0,
-          },
-        },
-        role:
-          isCompanyWorkerRegistration || companyId
-            ? E_RolesServer.B2B_WORKER
-            : E_RolesServer.USER,
-        socials: {
-          create: {},
-        },
+        role: isCompanyWorkerRegistration
+          ? E_RolesServer.B2B_WORKER
+          : E_RolesServer.USER,
         ...(isCompanyWorkerRegistration && userCompanyId
           ? {
               workerSettings: {
                 create: {
                   companyId: userCompanyId,
-                  permissions: [],
-                },
-              },
-            }
-          : {}),
-        ...(companyId
-          ? {
-              workerSettings: {
-                create: {
-                  companyId: companyId,
                   permissions: [],
                 },
               },
@@ -366,15 +275,6 @@ export const signUp = async ({
       request,
       toEmail: newUser.email,
       userLanguage: newUser.lang,
-    });
-
-    fireMetaRegistrationEvent({
-      email: newUser.email,
-      firstName: newUser.firstName,
-      lastName: newUser.lastName,
-      registrationType: isCompanyWorkerRegistration ? "companyWorker" : "user",
-      request,
-      userId: newUser.id,
     });
 
     return isCompanyWorkerRegistration
@@ -437,7 +337,6 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
         [formNames.phoneCountryCode]: zodValidator.phoneCountryCode.optional(),
         [formNames.phoneNumber]: zodValidator.phoneNumber.optional(),
         [formNames.recaptcha]: zodValidator.recaptcha,
-        [formNames.referralCode]: zodValidator.referralCode.optional(),
         [formNames.taxCountry]: zodValidator.taxCountry,
         [formNames.taxNumber]: zodValidator.taxNumber,
         [formNames.userFirstName]: zodValidator.userFirstName,
@@ -470,7 +369,6 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
       phoneCountryCode,
       phoneNumber,
       recaptcha,
-      referralCode,
       taxCountry,
       taxNumber,
       userFirstName,
@@ -551,53 +449,6 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
       });
     }
 
-    const gusInfo = await getGUSCompanyInfo({
-      companyNip: taxNumber,
-    });
-
-    if (!gusInfo?.Nip) {
-      return await responseOnFailure({
-        message: "notFoundCompanyTaxNumber",
-        request,
-        status: 422,
-      });
-    }
-
-    const foundPlatformSettings = await database.platformSetting.findFirst({
-      select: {
-        freeTrialCompanyMonthsCount: true,
-        planIdFreeTrialCompany: true,
-      },
-    });
-
-    if (!foundPlatformSettings) {
-      console.error("No detected platform settings");
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 500,
-      });
-    }
-
-    const foundCompanyReferral = referralCode
-      ? await database.referral.findUnique({
-          select: {
-            companyId: true,
-          },
-          where: {
-            code: referralCode.toUpperCase(),
-          },
-        })
-      : null;
-
-    if (referralCode && !foundCompanyReferral) {
-      return await responseOnFailure({
-        message: "notFoundReferral",
-        request,
-        status: 422,
-      });
-    }
-
     const countCompanyTax = await database.companyRegistry.count({
       where: {
         country: taxCountry,
@@ -617,38 +468,6 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
         company: {
           create: {
             blockedAt: null,
-            createdFromReferralCode:
-              referralCode && foundCompanyReferral
-                ? referralCode.toUpperCase()
-                : null,
-            freeTrial:
-              foundPlatformSettings && countCompanyTax === 0
-                ? {
-                    create: {
-                      endDate: dayjs()
-                        .add(
-                          foundPlatformSettings.freeTrialCompanyMonthsCount,
-                          "month",
-                        )
-                        .toDate(),
-                      planId: foundPlatformSettings?.planIdFreeTrialCompany,
-                      startDate: dayjs().toDate(),
-                    },
-                  }
-                : undefined,
-            invoiceData: {
-              create: {
-                city: gusInfo.Miejscowosc,
-                companyName: gusInfo.Nazwa,
-                country: E_CountryServer.POLAND,
-                flatNumber: gusInfo.NrLokalu,
-                postalCode: gusInfo.KodPocztowy,
-                streetName: gusInfo.Ulica,
-                streetNumber: gusInfo.NrNieruchomosci,
-                taxCountry: taxCountry,
-                taxNumber: taxNumber.toString(),
-              },
-            },
             name: companyName,
             phone: {
               create: {
@@ -658,25 +477,9 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
                 verifiedAt: null,
               },
             },
-            points: {
-              create: {
-                balance: 0,
-              },
-            },
             settings: {
               create: {
-                loginFacebookAt: currentDate,
-                loginGoogleAt: currentDate,
                 loginPasswordAt: currentDate,
-              },
-            },
-            stripe: {
-              create: {
-                accountId: null,
-                accountOnboardingActiveAt: null,
-                costumerCardLast4Numbers: null,
-                customerCardId: null,
-                customerId: null,
               },
             },
           },
@@ -705,15 +508,7 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
           },
         },
         password: passwordHash,
-        points: {
-          create: {
-            balance: 0,
-          },
-        },
         role: E_RolesServer.B2B_OWNER,
-        socials: {
-          create: {},
-        },
         ...(phoneCountryCode && phoneNumber
           ? {
               phone: {
@@ -805,15 +600,6 @@ export const signUpCompany = async ({ request }: { request: Request }) => {
       request,
       toEmail: newCompanyAndUser.email,
       userLanguage: newCompanyAndUser.lang,
-    });
-
-    fireMetaRegistrationEvent({
-      email: newCompanyAndUser.email,
-      firstName: newCompanyAndUser.firstName,
-      lastName: newCompanyAndUser.lastName,
-      registrationType: "company",
-      request,
-      userId: newCompanyAndUser.id,
     });
 
     return responseOnSuccess({

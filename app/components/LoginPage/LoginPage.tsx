@@ -1,4 +1,4 @@
-import { Box, Flex } from "@mantine/core";
+import { Box } from "@mantine/core";
 import type { FormErrors } from "@mantine/form";
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
@@ -17,8 +17,6 @@ import { useRecaptcha } from "~/hooks/useRecaptcha";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
 import { Z_Login } from "~/models/login";
 import { Button } from "~/ui/Button";
-import { ButtonLoginFacebook } from "~/ui/ButtonLoginFacebook";
-import { ButtonLoginGoogle } from "~/ui/ButtonLoginGoogle";
 import { ButtonWrapper } from "~/ui/ButtonWrapper";
 import { Form } from "~/ui/Form";
 import { Input } from "~/ui/Input";
@@ -265,17 +263,6 @@ export const LoginPage = () => {
               </Button>
             </ButtonWrapper>
           </Box>
-          <Flex
-            align="center"
-            direction="column"
-            gap={8}
-            justify="center"
-            mb={-24}
-            mt={48}
-          >
-            <ButtonLoginGoogle />
-            <ButtonLoginFacebook />
-          </Flex>
         </Section>
       </Form>
     </>

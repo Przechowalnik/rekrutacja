@@ -33,7 +33,6 @@ export const HomeLatestListingsSection = ({
 
   return (
     <Section
-      backgroundSecondary
       title={t("homeLatestListings.title")}
       withLeftRightPadding={false}
       withPaddingUnderTitle={false}

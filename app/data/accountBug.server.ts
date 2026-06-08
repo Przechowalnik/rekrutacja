@@ -5,7 +5,6 @@ import { formNames } from "~/lib/zodFormValidator";
 import type { T_ResultUploadOrGetImage } from "./images.server";
 import { uploadImageOrVideo, uploadImagesOrVideos } from "./images.server";
 import { E_BugStatusServer } from "./models.server";
-import { getPlatformSettingsToReturn } from "./platformSettings.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import { prismaSelectBug } from "./prismaSelect.server";
 import {
@@ -73,22 +72,9 @@ export const getBugAccount = async ({
       return redirectOnError;
     }
 
-    const platformSettingResult = await getPlatformSettingsToReturn({
-      request,
-    });
-
-    if (platformSettingResult.responseError) {
-      return redirectOnError;
-    }
-
-    if (!platformSettingResult.platformSetting) {
-      return redirectOnError;
-    }
-
     return await responseOnSuccess({
       data: {
         bug: foundBug,
-        platformSetting: platformSettingResult.platformSetting,
       },
       request,
       status: 200,

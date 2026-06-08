@@ -1,5 +1,3 @@
-import dayjs from "dayjs";
-
 import { E_Routes } from "~/constants/routes";
 import { database } from "~/data/database.server";
 import { formNames } from "~/lib/zodFormValidator";
@@ -7,13 +5,7 @@ import { formNames } from "~/lib/zodFormValidator";
 import { verifyUserAuthenticators } from "./checkAuthenticator.server";
 import { getCookieValue, getLastIdCookieName } from "./cookies.server";
 import { manageFilesInStorage } from "./images.server";
-import {
-  E_BugPriorityServer,
-  E_BugStatusServer,
-  E_RolesServer,
-} from "./models.server";
-import { getPlatformSettingsToReturn } from "./platformSettings.server";
-import { addPoints } from "./points.server";
+import { E_BugStatusServer, E_RolesServer } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import { prismaSelectBug } from "./prismaSelect.server";
 import {
@@ -84,22 +76,9 @@ export const getBugAdmin = async ({
       return redirectOnError;
     }
 
-    const platformSettingResult = await getPlatformSettingsToReturn({
-      request,
-    });
-
-    if (platformSettingResult.responseError) {
-      return redirectOnError;
-    }
-
-    if (!platformSettingResult.platformSetting) {
-      return redirectOnError;
-    }
-
     return await responseOnSuccess({
       data: {
         bug: foundBug,
-        platformSetting: platformSettingResult.platformSetting,
       },
       request,
       status: 200,
@@ -209,8 +188,8 @@ export const getBugsAdmin = async ({
       where: searchBug,
     });
 
-    const total = await database.blogPost.count({
-      where: {},
+    const total = await database.bug.count({
+      where: searchBug,
     });
 
     const nextPage = skip + limit < total ? page + 1 : null;
@@ -229,176 +208,6 @@ export const getBugsAdmin = async ({
   } catch (error) {
     console.error(error);
     return redirectOnError;
-  }
-};
-
-export const bugPointsPay = async ({
-  request,
-  userId,
-  userSessionVersion,
-}: {
-  request: Request;
-  userId: string;
-  userSessionVersion: null | number;
-}) => {
-  try {
-    const resultValidator = await checkZodValidator({
-      request,
-      validator: {
-        [formNames.authenticator]: zodValidator.authenticator,
-        [formNames.bugId]: zodValidator.bugId,
-      },
-    });
-
-    if (resultValidator?.responseError) {
-      return await responseOnFailure(resultValidator.responseError);
-    }
-
-    if (!resultValidator?.data) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    const { existingUser, responseError } = await getAndCheckUser({
-      authenticator: true,
-      prismaArguments: {
-        select: {
-          role: true,
-        },
-        where: {
-          id: userId,
-          role: {
-            in: [E_RolesServer.ADMIN, E_RolesServer.ADMIN_SUPER],
-          },
-        },
-      },
-      request,
-      userSessionVersion,
-    });
-
-    if (responseError) {
-      return await responseOnFailure(responseError);
-    }
-
-    if (!existingUser) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 401,
-      });
-    }
-
-    const { authenticator, bugId } = resultValidator.data;
-
-    const resultVerifyUser2FACode = await verifyUserAuthenticators({
-      authenticator: authenticator,
-      authenticator2FA: existingUser.authenticator2FA,
-      authenticatorEmailOTP: existingUser.authenticatorEmailOTP,
-      password: existingUser.password,
-      request,
-      userId: existingUser.id,
-    });
-
-    if (resultVerifyUser2FACode?.responseError) {
-      return await responseOnFailure(resultVerifyUser2FACode.responseError);
-    }
-
-    const platformSettingResult = await getPlatformSettingsToReturn({
-      request,
-    });
-
-    if (platformSettingResult.responseError) {
-      return await responseOnFailure(platformSettingResult.responseError);
-    }
-
-    if (!platformSettingResult.platformSetting) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    const updatedBug = await database.bug.update({
-      data: {
-        pointsPaidAt: dayjs().toDate(),
-      },
-      select: {
-        companyId: true,
-        priority: true,
-        userId: true,
-      },
-      where: {
-        id: bugId,
-        NOT: {
-          companyId: null,
-          pointsPaidAt: null,
-        },
-      },
-    });
-
-    let pointsToPay = null;
-    if (updatedBug.priority && updatedBug.companyId) {
-      switch (updatedBug.priority) {
-        case E_BugPriorityServer.BIG: {
-          pointsToPay = platformSettingResult.platformSetting.pointsBigBug;
-
-          break;
-        }
-        case E_BugPriorityServer.MEDIUM: {
-          pointsToPay = platformSettingResult.platformSetting.pointsMediumBug;
-
-          break;
-        }
-        case E_BugPriorityServer.SMALL: {
-          pointsToPay = platformSettingResult.platformSetting.pointsSmallBug;
-
-          break;
-        }
-      }
-    }
-
-    if (!updatedBug.companyId && !updatedBug.userId) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    if (updatedBug.companyId && updatedBug.userId) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    if (pointsToPay && updatedBug.companyId) {
-      const resultAddPoints = await addPoints({
-        companyIdAddPoints: updatedBug.companyId ?? null,
-        pointsToAdd: pointsToPay,
-        request,
-        userIdAddPoints: updatedBug.userId ?? null,
-      });
-
-      if (resultAddPoints?.responseError) {
-        return await responseOnFailure(resultAddPoints?.responseError);
-      }
-    }
-
-    return await responseOnSuccess({
-      flashData: {
-        message: "successBugPointsPaid",
-      },
-      request,
-      status: 200,
-    });
-  } catch (error) {
-    return await responseOnFailureServer({ error, request });
   }
 };
 

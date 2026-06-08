@@ -1,124 +1,3 @@
-import { E_SubscriptionStatusServer } from "./models.server";
-
-export const prismaSelectProductNested = {
-  id: true,
-  name: true,
-  points_1: true,
-  points_2_5: true,
-  points_6_plus: true,
-  price_1: true,
-  price_2_5: true,
-  price_6_plus: true,
-} as const;
-
-export const prismaSelectProduct = {
-  ...prismaSelectProductNested,
-} as const;
-
-export const prismaSelectProducts = {
-  ...prismaSelectProductNested,
-} as const;
-
-export const prismaSelectPlanNested = {
-  description: true,
-  enabledAt: true,
-  id: true,
-  interval: true,
-  intervalCount: true,
-  listingDurationMonths: true,
-  maximumListingsInMonth: true,
-  name: true,
-  price: true,
-  type: true,
-} as const;
-
-export const prismaSelectExchange = {
-  enabledAt: true,
-  id: true,
-  name: true,
-  points: true,
-  subscriptionFreeDays: true,
-} as const;
-
-export const prismaSelectCompanyFreeTrial = {
-  endDate: true,
-  id: true,
-  plan: {
-    select: prismaSelectPlanNested,
-  },
-  startDate: true,
-} as const;
-
-const prismaSelectCouponNested = {
-  amountOff: true,
-  createdAt: true,
-  durationInMonths: true,
-  enabledAt: true,
-  endDate: true,
-  firstTimeTransaction: true,
-  id: true,
-  maxRedemptions: true,
-  minimumAmount: true,
-  name: true,
-  percentOff: true,
-  promotionCode: true,
-  updatedAt: true,
-} as const;
-
-export const prismaSelectCoupon = {
-  ...prismaSelectCouponNested,
-  plans: {
-    select: prismaSelectPlanNested,
-  },
-} as const;
-
-export const prismaSelectCoupons = {
-  ...prismaSelectCouponNested,
-  plans: {
-    select: prismaSelectPlanNested,
-  },
-} as const;
-
-export const prismaSelectPlans = {
-  ...prismaSelectPlanNested,
-} as const;
-
-export const prismaSelectPlan = {
-  ...prismaSelectPlanNested,
-  coupons: {
-    select: prismaSelectCouponNested,
-  },
-} as const;
-
-export const prismaSelectSubscription = {
-  coupon: {
-    select: prismaSelectCoupon,
-  },
-  endDate: true,
-  endDateExchangeFreeDays: true,
-  extraFreeDaysInCurrentPeriod: true,
-  id: true,
-  nextPaymentAttempt: true,
-  plan: {
-    select: prismaSelectPlanNested,
-  },
-  startDate: true,
-  status: true,
-} as const;
-
-export const prismaSelectPlatformSetting = {
-  freeTrialCompanyMonthsCount: true,
-  freeTrialMaxListings: true,
-  planFreeTrialCompany: {
-    select: prismaSelectPlanNested,
-  },
-  pointsBigBug: true,
-  pointsMediumBug: true,
-  pointsReferralCompany: true,
-  pointsReferralUser: true,
-  pointsSmallBug: true,
-} as const;
-
 export const prismaSelectBug = {
   actionsBeforeError: true,
   answer: true,
@@ -130,7 +9,6 @@ export const prismaSelectBug = {
   id: true,
   images: true,
   isReproducible: true,
-  pointsPaidAt: true,
   priority: true,
   status: true,
   timestamp: true,
@@ -461,8 +339,6 @@ export const prismaSelectListingPaymentNested = {
   createdAt: true,
   free: true,
   status: true,
-  stripeCheckoutId: true,
-  stripeCheckoutUrl: true,
   updatedAt: true,
 };
 
@@ -547,22 +423,8 @@ export const prismaSelectListingsMap = {
 //////////////////// USER SESSION
 
 const prismaSelectCompanySettings = {
-  loginFacebookAt: true,
-  loginGoogleAt: true,
   loginPasswordAt: true,
   twoFactorAuthenticationEnabledAt: true,
-} as const;
-
-export const prismaSelectCompanyInvoiceData = {
-  city: true,
-  companyName: true,
-  country: true,
-  flatNumber: true,
-  postalCode: true,
-  streetName: true,
-  streetNumber: true,
-  taxCountry: true,
-  taxNumber: true,
 } as const;
 
 const prismaSelectCompanyPhone = {
@@ -571,24 +433,6 @@ const prismaSelectCompanyPhone = {
   number: true,
   numberToConfirm: true,
   verifiedAt: true,
-} as const;
-
-const prismaSelectPoints = {
-  balance: true,
-} as const;
-
-export const prismaSelectReferral = {
-  code: true,
-  countCompanies: true,
-  countUsers: true,
-} as const;
-
-const prismaSelectCompanyStripe = {
-  accountId: true,
-  accountOnboardingActiveAt: true,
-  costumerCardLast4Numbers: true,
-  customerCardId: true,
-  customerId: true,
 } as const;
 
 export const prismaSelectUserConsents = {
@@ -628,35 +472,15 @@ export const prismaSelectUserSession = {
       bannerHero: true,
       blockedAt: true,
       createdAt: true,
-      freeTrial: {
-        select: prismaSelectCompanyFreeTrial,
-      },
       id: true,
       name: true,
       phone: {
         select: prismaSelectCompanyPhone,
       },
-      points: {
-        select: prismaSelectPoints,
-      },
       settings: {
         select: prismaSelectCompanySettings,
       },
       slug: true,
-      stripe: {
-        select: prismaSelectCompanyStripe,
-      },
-      subscriptions: {
-        orderBy: {
-          createdAt: "asc",
-        },
-        select: prismaSelectSubscription,
-        where: {
-          status: {
-            not: E_SubscriptionStatusServer.CANCELLED,
-          },
-        },
-      },
     },
   },
   createdAt: true,
@@ -680,9 +504,6 @@ export const prismaSelectUserSession = {
       verifiedAt: true,
     },
   },
-  points: {
-    select: prismaSelectPoints,
-  },
   role: true,
   sessionVersion: true,
   workerSettings: {
@@ -690,14 +511,5 @@ export const prismaSelectUserSession = {
       id: true,
       permissions: true,
     },
-  },
-} as const;
-
-export const prismaSelectInvoice = {
-  company: true,
-  createdAt: true,
-  id: true,
-  subscription: {
-    select: prismaSelectSubscription,
   },
 } as const;

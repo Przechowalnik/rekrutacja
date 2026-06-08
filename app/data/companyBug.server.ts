@@ -1,6 +1,5 @@
 import { database } from "~/data/database.server";
 
-import { getPlatformSettingsToReturn } from "./platformSettings.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import { prismaSelectBug } from "./prismaSelect.server";
 import {
@@ -69,22 +68,9 @@ export const getBugCompany = async ({
       return redirectOnError;
     }
 
-    const platformSettingResult = await getPlatformSettingsToReturn({
-      request,
-    });
-
-    if (platformSettingResult.responseError) {
-      return redirectOnError;
-    }
-
-    if (!platformSettingResult.platformSetting?.id) {
-      return redirectOnError;
-    }
-
     return await responseOnSuccess({
       data: {
         bug: foundBug,
-        platformSetting: platformSettingResult.platformSetting,
       },
       request,
       status: 200,

@@ -65,13 +65,11 @@ import { SelectListingUnitType } from "~/ui/SelectListingUnitType";
 import { SelectListingUsageOption } from "~/ui/SelectListingUsageOption";
 import { SelectListingUtilityOption } from "~/ui/SelectListingUtilityOption";
 import { Textarea } from "~/ui/Textarea";
-import { isFreeListings } from "~/utilities/flags";
 import {
   convertToFormData,
   resetFormFieldsAndShowNotification,
   showAllErrorsForm,
 } from "~/utilities/form";
-import { checkCompanySubscriptionIsActive } from "~/utilities/functions";
 import { generateOptionsForListingCategory } from "~/utilities/listing";
 import { generateListingPriceFromTypeAndContractType } from "~/utilities/price";
 
@@ -389,12 +387,6 @@ export const ReusableListingsNewPage = ({
     },
   });
 
-  const isFreeListingConfiguration = isFreeListings();
-
-  const availableToCreateFreeListing =
-    user?.company?.isAvailableSlotsToCreateNewListing &&
-    checkCompanySubscriptionIsActive({ company: user?.company });
-
   const validContractTypeRent = selectedListingType === E_ListingType.RENT;
 
   const validShortTermsRent =
@@ -700,35 +692,7 @@ export const ReusableListingsNewPage = ({
     [],
   );
 
-  const sectionInformation = (() => {
-    if (isFreeListingConfiguration) {
-      return t("information");
-    }
-    if (user?.company && isCompany) {
-      return t("informationCompany", {
-        countMonths:
-          user?.company?.activePlanInSubscriptionOrFreeTrial
-            ?.listingDurationMonths ?? 0,
-      });
-    }
-  })();
-
-  const sectionWarning = (() => {
-    if (isFreeListingConfiguration) {
-      return;
-    }
-    if (isCompany && user?.company?.isAvailableSlotsToCreateNewListing) {
-      return t("warning", {
-        countPlanLimit:
-          user?.company?.activePlanInSubscriptionOrFreeTrial
-            ?.maximumListingsInMonth || "",
-        countUsed:
-          typeof user?.company?.createdListingsInCurrentMonth === "number"
-            ? user?.company?.createdListingsInCurrentMonth
-            : "",
-      });
-    }
-  })();
+  const sectionInformation = t("information");
 
   return (
     <Form onSubmit={form.onSubmit(handleSubmit, handleSubmitErrors)}>
@@ -755,11 +719,7 @@ export const ReusableListingsNewPage = ({
                 isCompany ? E_Routes.companyListings : E_Routes.accountListings
               }
             />
-            <Button type="submit">
-              {availableToCreateFreeListing || isFreeListingConfiguration
-                ? t("buttonAdd")
-                : t("buttonPay")}
-            </Button>
+            <Button type="submit">{t("buttonAdd")}</Button>
           </>
         }
         information={sectionInformation}
@@ -770,7 +730,6 @@ export const ReusableListingsNewPage = ({
         }}
         size="md"
         title={t("title")}
-        warning={sectionWarning}
         withHTML={false}
         withTextsToUi
       >

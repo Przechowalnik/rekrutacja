@@ -7,10 +7,6 @@ export const isShowDevelopmentHelpers = () => {
   return import.meta.env.VITE_SHOW_DEVELOPMENT_HELPERS === "true";
 };
 
-export const isFreeListings = () => {
-  return import.meta.env.VITE_FREE_LISTINGS === "true";
-};
-
 export const isEnableCreateOrLoginCompany = () => {
   return import.meta.env.VITE_CREATE_OR_LOGIN_COMPANY === "true";
 };

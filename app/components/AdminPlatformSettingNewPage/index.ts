@@ -1,1 +1,0 @@
-export { AdminPlatformSettingNewPage } from "./AdminPlatformSettingNewPage";

@@ -1,24 +1,16 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-import {
-  faFacebook,
-  faInstagram,
-  faTiktok,
-} from "@fortawesome/free-brands-svg-icons";
 import { Box, Button, Flex } from "@mantine/core";
-import { notifications } from "@mantine/notifications";
 import dayjs from "dayjs";
 import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router";
 
 import { colorsMantine } from "~/constants/colorsMantine";
-import { links } from "~/constants/links";
 import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
+import { useCookieConsent } from "~/hooks/useCookieConsent";
 import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useUserCookie } from "~/hooks/useUserCookie";
-import { IconSeo } from "~/ui/IconSeo";
 import { Link } from "~/ui/Link";
 import { Logo } from "~/ui/Logo";
 import { Text } from "~/ui/Text";
@@ -27,11 +19,11 @@ import { generateFooter } from "./utilities";
 
 const Footer = () => {
   const { t } = useTranslation(namespaces.common);
-  const { t: tNotifications } = useTranslation(namespaces.notifications);
   const location = useLocation();
   const { userCookie } = useUserCookie();
   const { isMobile } = useLayout();
   const { getLocalizedRoute } = useLocalizedRoute();
+  const { openSettings } = useCookieConsent();
 
   const isAdminPages = location.pathname.includes(
     getLocalizedRoute({
@@ -54,26 +46,8 @@ const Footer = () => {
   const isValidPage = !isAdminPages && !isAccountPages && !isCompanyPages;
 
   const handleClickConsents = useCallback(() => {
-    try {
-      //@ts-ignore
-      if (globalThis.Cookiebot) {
-        //@ts-ignore
-        globalThis.Cookiebot.show();
-      } else {
-        notifications.show({
-          color: "red",
-          message: tNotifications(`somethingWentWrong.message`),
-          title: tNotifications(`somethingWentWrong.title`),
-        });
-      }
-    } catch {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`somethingWentWrong.message`),
-        title: tNotifications(`somethingWentWrong.title`),
-      });
-    }
-  }, []);
+    openSettings();
+  }, [openSettings]);
 
   const generatedFooter = generateFooter({
     getLocalizedRoute,
@@ -172,72 +146,6 @@ const Footer = () => {
         wrap="wrap"
       >
         {mapGeneratedFooter}
-        <Flex
-          align="center"
-          direction="row"
-          gap={{
-            base: 8,
-            sm: 24,
-          }}
-          justify={{
-            base: "center",
-            sm: "flex-start",
-          }}
-          pt={{
-            base: 0,
-            xs: 48,
-          }}
-          w="100%"
-        >
-          <Link
-            ariaLabel="tiktok"
-            c={colorsMantine.gray4}
-            customHref={links.tiktok}
-            display="block"
-            fullWidth={false}
-            fullWidthOnMobile={false}
-            fw="normal"
-            p={8}
-            size="md"
-            target="_blank"
-            w={40}
-            withUnderline
-          >
-            <IconSeo aria-hidden="true" icon={faTiktok} size="xl" />
-          </Link>
-          <Link
-            ariaLabel="instagram"
-            c={colorsMantine.gray4}
-            customHref={links.instagram}
-            display="block"
-            fullWidth={false}
-            fullWidthOnMobile={false}
-            fw="normal"
-            p={8}
-            size="md"
-            target="_blank"
-            w={40}
-            withUnderline
-          >
-            <IconSeo aria-hidden="true" icon={faInstagram} size="xl" />
-          </Link>
-          <Link
-            ariaLabel="facebook"
-            c={colorsMantine.gray4}
-            customHref={links.facebook.url}
-            display="block"
-            fullWidth={false}
-            fullWidthOnMobile={false}
-            fw="normal"
-            p={8}
-            size="md"
-            target="_blank"
-            w={40}
-            withUnderline
-          >
-            <IconSeo aria-hidden="true" icon={faFacebook} size="xl" />
-          </Link>
-        </Flex>
         <Flex
           align="center"
           direction={{

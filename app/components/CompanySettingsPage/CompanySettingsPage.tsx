@@ -39,10 +39,6 @@ export const CompanySettingsPage = () => {
   const { getLocalizedRoute } = useLocalizedRoute();
 
   const formDefaultValues = {
-    [formNames.companySettingsLoginFacebook]:
-      !!user?.company?.settings?.loginFacebookAt,
-    [formNames.companySettingsLoginGoogle]:
-      !!user?.company?.settings?.loginGoogleAt,
     [formNames.companySettingsLoginPassword]:
       !!user?.company?.settings?.loginPasswordAt,
     [formNames.companySettingsTwoFactorAuthenticationEnabled]:
@@ -61,12 +57,6 @@ export const CompanySettingsPage = () => {
       setHaveChanges(!isDataTheSame);
     },
     validate: {
-      [formNames.companySettingsLoginGoogle]: value =>
-        checkFormValidator({
-          formName: formNames.companySettingsLoginGoogle,
-          optional: true,
-          value,
-        }),
       [formNames.companySettingsLoginPassword]: value =>
         checkFormValidator({
           formName: formNames.companySettingsLoginPassword,
@@ -101,17 +91,9 @@ export const CompanySettingsPage = () => {
   ) => {
     event?.preventDefault();
 
-    const {
-      companySettingsLoginFacebook,
-      companySettingsLoginGoogle,
-      companySettingsLoginPassword,
-    } = values;
+    const { companySettingsLoginPassword } = values;
 
-    if (
-      !companySettingsLoginFacebook &&
-      !companySettingsLoginGoogle &&
-      !companySettingsLoginPassword
-    ) {
+    if (!companySettingsLoginPassword) {
       notifications.show({
         color: "red",
         message: tNotifications(`companySettingsRequireLoginForm.message`),
@@ -133,17 +115,9 @@ export const CompanySettingsPage = () => {
         return;
       }
 
-      const {
-        companySettingsLoginFacebook,
-        companySettingsLoginGoogle,
-        companySettingsLoginPassword,
-      } = formData;
+      const { companySettingsLoginPassword } = formData;
 
-      if (
-        !companySettingsLoginFacebook &&
-        !companySettingsLoginGoogle &&
-        !companySettingsLoginPassword
-      ) {
+      if (!companySettingsLoginPassword) {
         notifications.show({
           color: "red",
           message: tNotifications(`companySettingsRequireLoginForm.message`),
@@ -202,22 +176,6 @@ export const CompanySettingsPage = () => {
           title={t("title")}
         >
           <InputWrapper>
-            <Checkbox
-              key={form.key(formNames.companySettingsLoginGoogle)}
-              name={formNames.companySettingsLoginGoogle}
-              required={false}
-              {...form.getInputProps(formNames.companySettingsLoginGoogle, {
-                type: "checkbox",
-              })}
-            />
-            <Checkbox
-              key={form.key(formNames.companySettingsLoginFacebook)}
-              name={formNames.companySettingsLoginFacebook}
-              required={false}
-              {...form.getInputProps(formNames.companySettingsLoginFacebook, {
-                type: "checkbox",
-              })}
-            />
             <Checkbox
               key={form.key(formNames.companySettingsLoginPassword)}
               name={formNames.companySettingsLoginPassword}

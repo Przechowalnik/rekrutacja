@@ -1,10 +1,8 @@
-import { PrismaPromise } from "@prisma/client/runtime/client";
 import dayjs from "dayjs";
 
 import { E_Routes, getRoute } from "~/constants/routes";
 import { database } from "~/data/database.server";
 import { formNames } from "~/lib/zodFormValidator";
-import { E_SubscriptionStatus } from "~/models/enums";
 
 import { createUserSession } from "./authSession.server";
 import { verifyUserAuthenticators } from "./checkAuthenticator.server";
@@ -12,7 +10,6 @@ import { manageFilesInStorage } from "./images.server";
 import { E_ListingStatusServer, E_RolesServer } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import { responseOnFailure, responseOnFailureServer } from "./response.server";
-import { stripe } from "./stripe.server";
 import { checkZodValidator, zodValidator } from "./zodValidator.server";
 
 export const deleteCompanyAccount = async ({
@@ -65,17 +62,7 @@ export const deleteCompanyAccount = async ({
             select: {
               avatar: true,
               bannerHero: true,
-              referral: {
-                select: {
-                  code: true,
-                },
-              },
-              stripe: {
-                select: {
-                  accountId: true,
-                  customerId: true,
-                },
-              },
+              id: true,
             },
           },
           firstName: true,
@@ -121,29 +108,6 @@ export const deleteCompanyAccount = async ({
     ) {
       return await responseOnFailure({
         message: "badUserName",
-        request,
-        status: 422,
-      });
-    }
-
-    const foundSubscriptions = await database.subscription.findMany({
-      select: {
-        id: true,
-      },
-      where: {
-        companyId: existingUser.company.id,
-        status: {
-          notIn: [
-            E_SubscriptionStatus.CANCELLED,
-            E_SubscriptionStatus.TO_BE_CANCELLED,
-          ],
-        },
-      },
-    });
-
-    if (foundSubscriptions.length > 0) {
-      return await responseOnFailure({
-        message: "accountHaveActiveSubscriptions",
         request,
         status: 422,
       });
@@ -198,48 +162,6 @@ export const deleteCompanyAccount = async ({
         },
       },
     });
-
-    const queries: PrismaPromise<unknown>[] = [
-      database.invoice.updateMany({
-        data: {
-          companyId: null,
-        },
-        where: {
-          companyId: existingUser.company.id,
-        },
-      }),
-      database.subscription.updateMany({
-        data: {
-          companyId: null,
-        },
-        where: {
-          companyId: existingUser.company.id,
-        },
-      }),
-    ];
-
-    if (existingUser?.company?.referral?.code) {
-      queries.push(
-        database.user.updateMany({
-          data: {
-            createdFromReferralCode: null,
-          },
-          where: {
-            createdFromReferralCode: existingUser?.company?.referral?.code,
-          },
-        }),
-        database.company.updateMany({
-          data: {
-            createdFromReferralCode: null,
-          },
-          where: {
-            createdFromReferralCode: existingUser?.company?.referral?.code,
-          },
-        }),
-      );
-    }
-
-    await database.$transaction(queries);
 
     const resultUpdatedUser = await database.user.update({
       data: {
@@ -310,20 +232,6 @@ export const deleteCompanyAccount = async ({
         id: userCompanyId,
       },
     });
-
-    const promises: Promise<unknown>[] = [];
-
-    if (existingUser?.company?.stripe?.customerId) {
-      promises.push(
-        stripe.customers.del(existingUser.company.stripe.customerId),
-      );
-    }
-
-    if (existingUser?.company?.stripe?.accountId) {
-      promises.push(stripe.accounts.del(existingUser.company.stripe.accountId));
-    }
-
-    await Promise.all(promises);
 
     return createUserSession({
       flashData: {

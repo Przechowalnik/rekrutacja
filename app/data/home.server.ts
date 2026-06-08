@@ -14,7 +14,6 @@ import {
 import { T_LocationRadius } from "~/models/enums";
 import { serializeBigInt } from "~/utilities/converter";
 
-import { getUserFromSession } from "./authSession.server";
 import { cacheTimeServer } from "./cacheTime.server";
 import { getCityFromNameSearch } from "./city.server";
 import { getCookieValue, getLastIdCookieName } from "./cookies.server";
@@ -25,7 +24,6 @@ import {
   getCategoryCityCounts,
   getCityListingCountsByCategory,
 } from "./listingCounts.server";
-import { fireMetaSearchEvent, T_MetaCapiUserData } from "./metaCapi.server";
 import {
   E_ListingCategoryServer,
   E_ListingContractTypeServer,
@@ -83,19 +81,6 @@ export const getListingsSearch = async ({
   }
 
   try {
-    const sessionUser = await getUserFromSession({ request });
-    const metaUserData: T_MetaCapiUserData | undefined = sessionUser.userId
-      ? {
-          externalId: sessionUser.userId,
-          ...(sessionUser.userFirstName
-            ? { firstName: sessionUser.userFirstName }
-            : {}),
-          ...(sessionUser.userLastName
-            ? { lastName: sessionUser.userLastName }
-            : {}),
-        }
-      : undefined;
-
     const resultValidator = await checkZodValidator({
       arrayData: [
         formNames.listingParkingTypes,
@@ -357,15 +342,6 @@ export const getListingsSearch = async ({
         cityId: foundCity.id,
       });
 
-      const cachedTotal = (cached as { totalResults?: number })?.totalResults;
-      fireMetaSearchEvent({
-        category: listingCategory,
-        city: foundCity.name,
-        numResults: cachedTotal,
-        request,
-        userData: metaUserData,
-      });
-
       return await responseOnSuccess({
         cacheResponse: {
           maxAge: cacheTimeServer.listing,
@@ -424,14 +400,6 @@ export const getListingsSearch = async ({
 
     const cityCategoryCounts = await getCityListingCountsByCategory({
       cityId: foundCity.id,
-    });
-
-    fireMetaSearchEvent({
-      category: listingCategory,
-      city: foundCity.name,
-      numResults: total,
-      request,
-      userData: metaUserData,
     });
 
     return await responseOnSuccess({

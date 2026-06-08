@@ -7,7 +7,7 @@
   },
   "categoryCityFaq": {
     "q1": {
-      "answer": "Ceny {{categoryPlural}} w {{city}} zależą od lokalizacji, metrażu, standardu i długości wynajmu. Sprawdź {{count}} aktualnych ofert na MaszBox, aby porównać ceny i wybrać najlepszą dla siebie. Wiele ofert pozwala na negocjację ceny bezpośrednio z właścicielem.",
+      "answer": "Ceny {{categoryPlural}} w {{city}} zależą od lokalizacji, metrażu, standardu i długości wynajmu. Sprawdź {{count}} aktualnych ofert na do-pracy.pl, aby porównać ceny i wybrać najlepszą dla siebie. Wiele ofert pozwala na negocjację ceny bezpośrednio z właścicielem.",
       "question": "Ile kosztuje wynajem {{categoryPlural}} w {{city}}?"
     },
     "q2": {
@@ -19,7 +19,7 @@
       "question": "Czy mogę wynająć {{categoryPlural}} w {{city}} na krótki termin?"
     },
     "q4": {
-      "answer": "Tak. MaszBox to platforma ogłoszeniowa, na której zarówno osoby prywatne, jak i firmy mogą dodawać oferty {{categoryPlural}} w {{city}} i innych miastach. Załóż konto i dodaj ogłoszenie - dotrzesz do osób aktywnie szukających powierzchni do wynajmu lub kupna.",
+      "answer": "Tak. do-pracy.pl to platforma ogłoszeniowa, na której zarówno osoby prywatne, jak i firmy mogą dodawać oferty {{categoryPlural}} w {{city}} i innych miastach. Załóż konto i dodaj ogłoszenie - dotrzesz do osób aktywnie szukających powierzchni do wynajmu lub kupna.",
       "question": "Czy mogę dodać własne ogłoszenie {{categoryPlural}} w {{city}}?"
     },
     "q5": {
@@ -37,11 +37,11 @@
       "question": "Jakie powierzchnie można wynająć lub kupić w {{city}}?"
     },
     "q2": {
-      "answer": "Ceny w {{city}} (województwo {{voivodeship}}) zależą od kategorii, metrażu i lokalizacji. Najtańsze są zazwyczaj komórki lokatorskie i piwnice, najdroższe - lokale komercyjne i magazyny w centrum. Porównaj aktualne {{count}} ofert na MaszBox.",
+      "answer": "Ceny w {{city}} (województwo {{voivodeship}}) zależą od kategorii, metrażu i lokalizacji. Najtańsze są zazwyczaj komórki lokatorskie i piwnice, najdroższe - lokale komercyjne i magazyny w centrum. Porównaj aktualne {{count}} ofert na do-pracy.pl.",
       "question": "Ile kosztuje wynajem powierzchni w {{city}}?"
     },
     "q3": {
-      "answer": "Tak. MaszBox to platforma ogłoszeniowa - możesz dodać własną ofertę wynajmu lub sprzedaży powierzchni w {{city}}. Załóż konto, opisz ofertę, dodaj zdjęcia i opublikuj. Twoje ogłoszenie trafi do osób aktywnie szukających powierzchni w {{city}}.",
+      "answer": "Tak. do-pracy.pl to platforma ogłoszeniowa - możesz dodać własną ofertę wynajmu lub sprzedaży powierzchni w {{city}}. Załóż konto, opisz ofertę, dodaj zdjęcia i opublikuj. Twoje ogłoszenie trafi do osób aktywnie szukających powierzchni w {{city}}.",
       "question": "Czy mogę dodać własną ofertę w {{city}}?"
     },
     "q4": {

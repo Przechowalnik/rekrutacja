@@ -43,11 +43,6 @@ const userData: (Omit<Prisma.UserCreateInput, "password"> & {
         verifiedAt: seedDate,
       },
     },
-    points: {
-      create: {
-        balance: 0,
-      },
-    },
     rawPassword: "Algorytm123!",
     role: "ADMIN",
     sessionVersion: 1,

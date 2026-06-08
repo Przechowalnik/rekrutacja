@@ -20,10 +20,7 @@ import { Link } from "~/ui/Link";
 import { Section } from "~/ui/Section";
 import { SelectMultipleWorkerPermissions } from "~/ui/SelectMultipleWorkerPermissions";
 import { convertToFormData, showAllErrorsForm } from "~/utilities/form";
-import {
-  arraysEqual,
-  checkCompanySubscriptionIsActive,
-} from "~/utilities/functions";
+import { arraysEqual } from "~/utilities/functions";
 
 const ModalAuthenticator = dynamic(() =>
   import("~/ui/ModalAuthenticator").then(module => ({
@@ -166,11 +163,6 @@ export const CompanyWorkerPermissionsPage = () => {
             </>
           }
           description={t("description")}
-          information={
-            checkCompanySubscriptionIsActive({ company: user?.company })
-              ? undefined
-              : t("information")
-          }
           pageMeta={{
             route: E_Routes.companyWorkerEdit,
           }}

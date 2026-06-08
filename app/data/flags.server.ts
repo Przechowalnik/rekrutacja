@@ -6,14 +6,6 @@ export const isShowDevelopmentHelpersServer = () => {
   return import.meta.env.VITE_SHOW_DEVELOPMENT_HELPERS === "true";
 };
 
-export const isTestInvoicesServer = () => {
-  return import.meta.env.VITE_TEST_INVOICES === "true";
-};
-
-export const isFreeListingsServer = () => {
-  return import.meta.env.VITE_FREE_LISTINGS === "true";
-};
-
 export const isEnableCreateOrLoginCompanyServer = () => {
   return import.meta.env.VITE_CREATE_OR_LOGIN_COMPANY === "true";
 };

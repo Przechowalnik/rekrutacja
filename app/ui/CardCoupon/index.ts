@@ -1,1 +1,0 @@
-export { CardCoupon } from "./CardCoupon";

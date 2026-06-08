@@ -7,12 +7,10 @@ import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { namespaces } from "~/constants/namespaces";
-import { queryKey } from "~/constants/queryAndHashes";
 import { E_Routes } from "~/constants/routes";
 import { dynamic } from "~/hoc/dynamic";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useSubmitWithActions } from "~/hooks/useSubmitWithActions";
-import { useUser } from "~/hooks/useUser";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
 import { E_Language } from "~/models/enums";
 import { Button } from "~/ui/Button";
@@ -38,7 +36,6 @@ export const CompanyWorkerNewPage = () => {
   const [passwordRepeat, setPasswordRepeat] = useState("");
   const [authenticatorOpen, setAuthenticatorOpen] = useState(false);
 
-  const { user } = useUser();
   const { t } = useTranslation(namespaces.companyWorkerNew);
   const { t: tCommon } = useTranslation(namespaces.common);
   const { t: tRegistration } = useTranslation(namespaces.registrationAccount);
@@ -268,36 +265,6 @@ export const CompanyWorkerNewPage = () => {
     [form],
   );
 
-  const handleCopyLinkToRegistration = useCallback(async () => {
-    if (!user?.company?.id) {
-      return;
-    }
-
-    const link = `${globalThis.location.origin}${getLocalizedRoute({
-      extraQuery: {
-        [queryKey.companyId]: user?.company?.id,
-      },
-      route: E_Routes.registrationAccount,
-    })}`;
-
-    try {
-      await globalThis.navigator.clipboard.writeText(link);
-      notifications.show({
-        color: "green",
-        message: tNotifications(`successCopyCode.message`),
-        title: tNotifications(`successCopyCode.title`),
-      });
-      return;
-    } catch {
-      notifications.show({
-        color: "red",
-        message: tNotifications(`somethingWentWrong.message`),
-        title: tNotifications(`somethingWentWrong.title`),
-      });
-      return;
-    }
-  }, [user]);
-
   return (
     <>
       <ModalAuthenticator
@@ -326,9 +293,6 @@ export const CompanyWorkerNewPage = () => {
           size="md"
           title={t("title")}
         >
-          <Button fullWidth mb={48} onClick={handleCopyLinkToRegistration}>
-            {t("buttonLinkToRegistration")}
-          </Button>
           <InputWrapper>
             <Fieldset legend={tRegistration("companyFields")} mt={12}>
               <Input

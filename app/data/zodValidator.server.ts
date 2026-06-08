@@ -30,8 +30,6 @@ import {
   E_ListingTypeServer,
   E_ListingUnitTypeServer,
   E_ListingUsageOptionServer,
-  E_PlanIntervalServer,
-  E_PlanTypeServer,
   E_ReportTypeServer,
   E_TaxCountryServer,
 } from "./models.server";
@@ -247,80 +245,6 @@ export const zodValidator = {
     })
     .trim()
     .uuid({
-      message: "tooLong",
-    }),
-  blogPostContent: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(10_000, {
-      message: "tooLong",
-    }),
-  blogPostDescription: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(200, {
-      message: "tooLong",
-    }),
-  blogPostDescriptionSeo: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(155, {
-      message: "tooLong",
-    }),
-  blogPostId: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .uuid({
-      message: "badBlogId",
-    }),
-  blogPostSlug: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(100, {
-      message: "tooLong",
-    }),
-  blogPostTitle: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(100, {
-      message: "tooLong",
-    }),
-  blogPostTitleSeo: z
-    .string({
-      message: "noString",
-    })
-    .trim()
-    .min(1, {
-      message: "tooSmall",
-    })
-    .max(55, {
       message: "tooLong",
     }),
   bugActionsBeforeError: z
@@ -1219,9 +1143,6 @@ export const zodValidator = {
     .uuid({
       message: "badPlanId",
     }),
-  planInterval: z.nativeEnum(E_PlanIntervalServer, {
-    message: "badPlanInterval",
-  }),
   planIntervalCount: z
     .number({
       message: "noNumber",
@@ -1273,9 +1194,6 @@ export const zodValidator = {
     .max(999, {
       message: "tooLong",
     }),
-  planType: z.nativeEnum(E_PlanTypeServer, {
-    message: "badPlanType",
-  }),
   pointsBigBug: z
     .number({
       message: "noNumber",

@@ -1,7 +1,0 @@
-{
-  "alert": "In the <tooltipicon label='{{tooltipBillingPeriod}}'>current billing period</tooltipicon>, you’ve already used the option to gain additional subscription days.",
-  "buttonAdd": "Exchange",
-  "description": "To exchange your <gradient>points</gradient>, first select one of the available exchange options that best suits your needs. Then click the confirm button to complete the process. Make sure you have enough points before confirming the exchange.<br/><br/><b>Note that the exchange process is irreversible — once confirmed, the points cannot be refunded.</b>",
-  "information": "Available points balance: {{pointsBalance}}",
-  "title": "Exchange points"
-}

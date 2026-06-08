@@ -46,7 +46,6 @@ import {
   formatAmountToNumber,
   generateListingPriceToShowFromTypeAndContractType,
 } from "~/utilities/price";
-import { trackViewContent } from "~/utilities/tracking";
 
 const ModalReport = dynamic(() =>
   import("~/ui/ModalReport").then(module => ({
@@ -56,10 +55,9 @@ const ModalReport = dynamic(() =>
 
 type T_ListingPage = {
   listing: T_Listing;
-  metaCapiEventId?: string;
 };
 
-export const ListingPage = ({ listing, metaCapiEventId }: T_ListingPage) => {
+export const ListingPage = ({ listing }: T_ListingPage) => {
   const [openedMobileMap, setOpenedMobileMap] = useState(false);
   const [openedModalReport, setOpenedModalReport] = useState(false);
 
@@ -339,25 +337,6 @@ export const ListingPage = ({ listing, metaCapiEventId }: T_ListingPage) => {
     );
   }, [listing]);
 
-  useEffect(() => {
-    if (!metaCapiEventId) {
-      return;
-    }
-    const contentId = listing.slug ?? listing.id;
-    if (!contentId) {
-      return;
-    }
-
-    trackViewContent({
-      contentCategory: listing.category,
-      contentIds: [contentId],
-      contentName: validTitle,
-      currency: "PLN",
-      eventId: metaCapiEventId,
-      ...(priceNumber > 0 ? { value: priceNumber } : {}),
-    });
-  }, [metaCapiEventId, listing.id]);
-
   const handleOpenedModalReport = useCallback(() => {
     setOpenedModalReport(previousState => !previousState);
   }, []);
@@ -612,8 +591,6 @@ export const ListingPage = ({ listing, metaCapiEventId }: T_ListingPage) => {
             description: validDescription,
             image: seoListingImage,
             title,
-            twitterCreator: links.twitter.creator,
-            twitterSite: links.twitter.site,
             type: "product",
             updatedTime: listing.updatedAt.toString(),
             url: fullListingUrl,

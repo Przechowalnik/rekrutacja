@@ -49,22 +49,22 @@
   },
   "jsonLdFaq": {
     "aboutUs": {
-      "description": "Maszbox to pierwsza w Polsce platforma umożliwiająca wynajem i sprzedaż małych powierzchni - od garaży, magazynów, aż po komórki lokatorskie. Naszym celem jest ułatwienie zarówno właścicielom, jak i najemcom, szybkiego i bezpiecznego zawierania transakcji online. Dzięki Maszbox możesz w prosty sposób dodać ogłoszenie, zarządzać płatnościami oraz monitorować dostępność powierzchni. Platforma łączy innowacyjne technologie z intuicyjnym interfejsem, co sprawia, że korzystanie z niej jest wygodne i bezproblemowe. Dowiedz się, jak Maszbox zmienia rynek wynajmu w Polsce, umożliwiając szybkie, bezpieczne i transparentne transakcje."
+      "description": "do-pracy.pl to pierwsza w Polsce platforma umożliwiająca wynajem i sprzedaż małych powierzchni - od garaży, magazynów, aż po komórki lokatorskie. Naszym celem jest ułatwienie zarówno właścicielom, jak i najemcom, szybkiego i bezpiecznego zawierania transakcji online. Dzięki do-pracy.pl możesz w prosty sposób dodać ogłoszenie, zarządzać płatnościami oraz monitorować dostępność powierzchni. Platforma łączy innowacyjne technologie z intuicyjnym interfejsem, co sprawia, że korzystanie z niej jest wygodne i bezproblemowe. Dowiedz się, jak do-pracy.pl zmienia rynek wynajmu w Polsce, umożliwiając szybkie, bezpieczne i transparentne transakcje."
     },
     "accessibility": {
-      "description": "W Maszbox stawiamy na dostępność - nasza strona i aplikacja spełniają standard WCAG 2.1 AA, wspierają czytniki ekranu i zapewniają odpowiedni kontrast. Dbamy, aby każdy użytkownik mógł wygodnie i bez przeszkód korzystać z platformy."
+      "description": "W do-pracy.pl stawiamy na dostępność - nasza strona i aplikacja spełniają standard WCAG 2.1 AA, wspierają czytniki ekranu i zapewniają odpowiedni kontrast. Dbamy, aby każdy użytkownik mógł wygodnie i bez przeszkód korzystać z platformy."
     },
     "account": {
-      "description": "Zarządzaj swoim kontem na Maszbox - dodawaj ogłoszenia, kontroluj płatności i punkty oraz dbaj o bezpieczeństwo danych."
+      "description": "Zarządzaj swoim kontem na do-pracy.pl - dodawaj ogłoszenia, kontroluj płatności i punkty oraz dbaj o bezpieczeństwo danych."
     },
     "accountAuthenticator": {
       "description": "Zwiększ bezpieczeństwo konta dzięki autoryzacji dwuetapowej."
     },
     "accountBugDetails": {
-      "description": "Sprawdź szczegóły zgłoszonych problemów na Maszbox i monitoruj ich status."
+      "description": "Sprawdź szczegóły zgłoszonych problemów na do-pracy.pl i monitoruj ich status."
     },
     "accountBugNew": {
-      "description": "Zgłaszaj błędy i problemy napotkane na platformie Maszbox."
+      "description": "Zgłaszaj błędy i problemy napotkane na platformie do-pracy.pl."
     },
     "accountBugs": {
       "description": "Przeglądaj listę wszystkich zgłoszonych błędów i monitoruj ich rozwiązanie."
@@ -73,10 +73,10 @@
       "description": "Zarządzaj swoimi zgodami marketingowymi i ustawieniami prywatności."
     },
     "accountDelete": {
-      "description": "Dowiedz się, jak bezpiecznie usunąć swoje konto z platformy Maszbox."
+      "description": "Dowiedz się, jak bezpiecznie usunąć swoje konto z platformy do-pracy.pl."
     },
     "accountEmail": {
-      "description": "Zaktualizuj adres e-mail powiązany z kontem Maszbox."
+      "description": "Zaktualizuj adres e-mail powiązany z kontem do-pracy.pl."
     },
     "accountInvoices": {
       "description": "Przeglądaj i pobieraj faktury za korzystanie z platformy."
@@ -88,40 +88,40 @@
       "description": "Edytuj swoje ogłoszenia, aby zwiększyć ich atrakcyjność i widoczność."
     },
     "accountListingsNew": {
-      "description": "Dodaj nowe ogłoszenie na Maszbox i zacznij zarabiać na swojej przestrzeni."
+      "description": "Dodaj nowe ogłoszenie na do-pracy.pl i zacznij zarabiać na swojej przestrzeni."
     },
     "accountListingsPayments": {
-      "description": "Zarządzaj płatnościami powiązanymi z ogłoszeniami na platformie Maszbox."
+      "description": "Zarządzaj płatnościami powiązanymi z ogłoszeniami na platformie do-pracy.pl."
     },
     "accountPassword": {
       "description": "Zmień hasło do konta, aby zwiększyć bezpieczeństwo swojego profilu."
     },
     "accountPhone": {
-      "description": "Aktualizuj numer telefonu przypisany do Twojego konta Maszbox."
+      "description": "Aktualizuj numer telefonu przypisany do Twojego konta do-pracy.pl."
     },
     "accountPoints": {
-      "description": "Sprawdzaj i wymieniaj punkty zgromadzone w systemie Maszbox."
+      "description": "Sprawdzaj i wymieniaj punkty zgromadzone w systemie do-pracy.pl."
     },
     "accountProfile": {
       "description": "Zarządzaj swoim profilem użytkownika i danymi widocznymi dla innych."
     },
     "accountReferral": {
-      "description": "Zapraszaj znajomych i korzystaj z bonusów w systemie poleceń Maszbox."
+      "description": "Zapraszaj znajomych i korzystaj z bonusów w systemie poleceń do-pracy.pl."
     },
     "accountSessions": {
       "description": "Zarządzaj aktywnymi sesjami swojego konta i zwiększ bezpieczeństwo logowania."
     },
     "admin": {
-      "description": "Panel administratora Maszbox - zarządzaj platformą i monitoruj aktywność użytkowników."
+      "description": "Panel administratora do-pracy.pl - zarządzaj platformą i monitoruj aktywność użytkowników."
     },
     "adminBlogPostEdit": {
-      "description": "Edytuj istniejący blog i aktualizuj jego treść na platformie Maszbox."
+      "description": "Edytuj istniejący blog i aktualizuj jego treść na platformie do-pracy.pl."
     },
     "adminBlogPostNew": {
-      "description": "Utwórz nowy blog i opublikuj treści na platformie Maszbox."
+      "description": "Utwórz nowy blog i opublikuj treści na platformie do-pracy.pl."
     },
     "adminBlogPosts": {
-      "description": "Lista wszystkich opublikowanych wpisów blogowych na platformie Maszbox."
+      "description": "Lista wszystkich opublikowanych wpisów blogowych na platformie do-pracy.pl."
     },
     "adminBugDetails": {
       "description": "Sprawdź szczegóły zgłoszonych błędów i monitoruj ich rozwiązanie."
@@ -130,7 +130,7 @@
       "description": "Edytuj zgłoszenia błędów i aktualizuj ich status w panelu administratora."
     },
     "adminBugs": {
-      "description": "Lista wszystkich zgłoszonych błędów na platformie Maszbox."
+      "description": "Lista wszystkich zgłoszonych błędów na platformie do-pracy.pl."
     },
     "adminCouponEdit": {
       "description": "Edytuj istniejące kupony promocyjne dla użytkowników."
@@ -139,7 +139,7 @@
       "description": "Dodaj nowy kupon promocyjny dostępny dla użytkowników platformy."
     },
     "adminCoupons": {
-      "description": "Przeglądaj wszystkie aktywne kupony dostępne w Maszbox."
+      "description": "Przeglądaj wszystkie aktywne kupony dostępne w do-pracy.pl."
     },
     "adminExchanges": {
       "description": "Zarządzaj wymianami punktów i transakcjami w systemie."
@@ -154,7 +154,7 @@
       "description": "Wyślij email marketingowy do klientów."
     },
     "adminPlanNew": {
-      "description": "Utwórz nowy plan abonamentowy dla użytkowników Maszbox."
+      "description": "Utwórz nowy plan abonamentowy dla użytkowników do-pracy.pl."
     },
     "adminPlans": {
       "description": "Przeglądaj dostępne plany subskrypcyjne i ofertowe."
@@ -175,7 +175,7 @@
       "description": "Lista wszystkich zgłoszeń na platformie."
     },
     "adminSettingEdit": {
-      "description": "Edytuj ustawienia platformy Maszbox, aby dopasować działanie systemu."
+      "description": "Edytuj ustawienia platformy do-pracy.pl, aby dopasować działanie systemu."
     },
     "adminSettingNew": {
       "description": "Dodaj nowe ustawienia konfiguracji platformy."
@@ -241,10 +241,10 @@
       "description": "Autoryzacja konta użytkownika i bezpieczeństwo logowania."
     },
     "blogPostDetails": {
-      "description": "Przeczytaj pełny artykuł na blogu Maszbox - szczegółowe opracowanie, wartościowe wskazówki i praktyczne informacje przygotowane specjalnie dla naszych użytkowników."
+      "description": "Przeczytaj pełny artykuł na blogu do-pracy.pl - szczegółowe opracowanie, wartościowe wskazówki i praktyczne informacje przygotowane specjalnie dla naszych użytkowników."
     },
     "blogPosts": {
-      "description": "Na platformie Maszbox dzielimy się wiedzą, poradami i aktualnościami. Nasz blog to miejsce, w którym znajdziesz starannie przygotowane artykuły, wartościowe treści i inspiracje związane z naszą platformą oraz branżą."
+      "description": "Na platformie do-pracy.pl dzielimy się wiedzą, poradami i aktualnościami. Nasz blog to miejsce, w którym znajdziesz starannie przygotowane artykuły, wartościowe treści i inspiracje związane z naszą platformą oraz branżą."
     },
     "cities": {
       "description": "Wyszukaj miasta i lokalizacje dostępne w serwisie."
@@ -328,7 +328,7 @@
       "description": "Skontaktuj się z nami, wysyłając wiadomość e-mail na podany adres."
     },
     "error": {
-      "description": "Wystąpił błąd podczas korzystania z platformy Maszbox."
+      "description": "Wystąpił błąd podczas korzystania z platformy do-pracy.pl."
     },
     "errorAccountNotFound": {
       "description": "Podane konto nie istnieje lub zostało usunięte."
@@ -349,7 +349,7 @@
       "description": "Znajdź odpowiedzi na najczęściej zadawane pytania i skontaktuj się z obsługą."
     },
     "home": {
-      "description": "Witamy na Maszbox - innowacyjnej platformie do wynajmu i sprzedaży małych powierzchni w Polsce. Oferujemy szybkie i bezpieczne rozwiązania dla właścicieli przestrzeni, którzy chcą zarabiać, oraz dla najemców szukających dostępnych miejsc. Nasza platforma pozwala w prosty sposób przeglądać ogłoszenia, dodawać własne, zarządzać płatnościami i monitorować dostępność powierzchni. Dzięki nowoczesnym narzędziom i intuicyjnemu interfejsowi Maszbox zapewnia komfort użytkowania oraz bezpieczeństwo transakcji, niezależnie od tego, czy szukasz garażu, magazynu czy powierzchni biurowej."
+      "description": "Witamy na do-pracy.pl - innowacyjnej platformie do wynajmu i sprzedaży małych powierzchni w Polsce. Oferujemy szybkie i bezpieczne rozwiązania dla właścicieli przestrzeni, którzy chcą zarabiać, oraz dla najemców szukających dostępnych miejsc. Nasza platforma pozwala w prosty sposób przeglądać ogłoszenia, dodawać własne, zarządzać płatnościami i monitorować dostępność powierzchni. Dzięki nowoczesnym narzędziom i intuicyjnemu interfejsowi do-pracy.pl zapewnia komfort użytkowania oraz bezpieczeństwo transakcji, niezależnie od tego, czy szukasz garażu, magazynu czy powierzchni biurowej."
     },
     "howToAddListing": {
       "description": "Dowiedz się, jak dodać ogłoszenie, postępując zgodnie z poniższymi krokami."
@@ -358,16 +358,16 @@
       "description": "Dowiedz się, jak szukać ogłoszeń na naszej platformie i znaleźć idealną przestrzeń."
     },
     "listings": {
-      "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie Maszbox."
+      "description": "Przeglądaj wszystkie dostępne ogłoszenia na platformie do-pracy.pl."
     },
     "login": {
-      "description": "Zaloguj się, aby w pełni korzystać z funkcji Maszbox."
+      "description": "Zaloguj się, aby w pełni korzystać z funkcji do-pracy.pl."
     },
     "loginFacebook": {
       "description": "Zaloguj się przy pomocy konta Facebook."
     },
     "loginFromCreateListing": {
-      "description": "Zaloguj się, aby w pełni korzystać z funkcji Maszbox."
+      "description": "Zaloguj się, aby w pełni korzystać z funkcji do-pracy.pl."
     },
     "loginGoogle": { "description": "Zaloguj się przy pomocy konta Google." },
     "logout": { "description": "Wyloguj się bezpiecznie ze swojego konta." },
@@ -381,7 +381,7 @@
       "description": "Zapoznaj się z polityką prywatności i zasadami ochrony danych."
     },
     "recoveryAccount": {
-      "description": "Odzyskaj dostęp do swojego konta Maszbox."
+      "description": "Odzyskaj dostęp do swojego konta do-pracy.pl."
     },
     "recoveryAccountBackupEmail": {
       "description": "Przywróć konto za pomocą zapasowego adresu e-mail."
@@ -390,27 +390,27 @@
       "description": "Zmień hasło swojego konta, aby zwiększyć bezpieczeństwo."
     },
     "registration": {
-      "description": "Załóż konto na Maszbox i rozpocznij korzystanie z platformy."
+      "description": "Załóż konto na do-pracy.pl i rozpocznij korzystanie z platformy."
     },
     "registrationAccount": {
-      "description": "Utwórz konto użytkownika i korzystaj z funkcji Maszbox."
+      "description": "Utwórz konto użytkownika i korzystaj z funkcji do-pracy.pl."
     },
     "registrationCompany": {
       "description": "Zarejestruj firmę i rozpocznij publikację ogłoszeń."
     },
     "search": {
-      "description": "Wyszukaj interesujące ogłoszenia i treści w Maszbox."
+      "description": "Wyszukaj interesujące ogłoszenia i treści w do-pracy.pl."
     },
     "termsAndConditions": {
-      "description": "Poznaj regulamin Maszbox i zasady korzystania z platformy."
+      "description": "Poznaj regulamin do-pracy.pl i zasady korzystania z platformy."
     }
   },
   "jsonLdReview": {},
   "jsonLdStructured": {
-    "description": "Maszbox to pierwsza w Polsce platforma ogłoszeniowa stworzona specjalnie do wynajmu i sprzedaży małych powierzchni. Garaż, miejsce parkingowe, piwnica, komórka lokatorska czy niewielki magazyn - każda z tych przestrzeni może być źródłem dodatkowego dochodu. Założyliśmy Maszbox, aby połączyć właścicieli wolnych przestrzeni z osobami, które ich potrzebują - prosto, lokalnie i bez zbędnych formalności. Naszym celem jest, aby każdy użytkownik Maszboxa czuł się bezpiecznie i komfortowo, dlatego dbamy o regulaminy, ochronę danych i przejrzyste zasady publikacji ogłoszeń. Korzystając z platformy Maszbox, możesz zarabiać na tym, co masz - dodatkowy dochód nawet kilka tysięcy zł rocznie, pomagasz innym - Twoja piwnica może stać się miejscem na rower, a garaż bezpiecznym parkingiem, a do tego wszystko jest proste w obsłudze - dodanie ogłoszenia zajmuje tylko 3 minuty. Maszbox to polska platforma stworzona z myślą o lokalnych potrzebach, dzięki której Twoja wolna przestrzeń zaczyna pracować dla Ciebie!",
-    "isPartOfName": "Maszbox",
-    "name": "Maszbox",
-    "url": "https://maszbox.pl"
+    "description": "do-pracy.pl to pierwsza w Polsce platforma ogłoszeniowa stworzona specjalnie do wynajmu i sprzedaży małych powierzchni. Garaż, miejsce parkingowe, piwnica, komórka lokatorska czy niewielki magazyn - każda z tych przestrzeni może być źródłem dodatkowego dochodu. Założyliśmy do-pracy.pl, aby połączyć właścicieli wolnych przestrzeni z osobami, które ich potrzebują - prosto, lokalnie i bez zbędnych formalności. Naszym celem jest, aby każdy użytkownik do-pracy.pl czuł się bezpiecznie i komfortowo, dlatego dbamy o regulaminy, ochronę danych i przejrzyste zasady publikacji ogłoszeń. Korzystając z platformy do-pracy.pl, możesz zarabiać na tym, co masz - dodatkowy dochód nawet kilka tysięcy zł rocznie, pomagasz innym - Twoja piwnica może stać się miejscem na rower, a garaż bezpiecznym parkingiem, a do tego wszystko jest proste w obsłudze - dodanie ogłoszenia zajmuje tylko 3 minuty. do-pracy.pl to polska platforma stworzona z myślą o lokalnych potrzebach, dzięki której Twoja wolna przestrzeń zaczyna pracować dla Ciebie!",
+    "isPartOfName": "do-pracy.pl",
+    "name": "do-pracy.pl",
+    "url": "https://do-pracy.pl"
   },
   "meta": {
     "aboutUs": {
@@ -502,11 +502,11 @@
       "title": "Panel administratora | {{companyName}}"
     },
     "adminBlogPostEdit": {
-      "description": "Edytuj szczegóły istniejącego blogu na platformie Maszbox.",
+      "description": "Edytuj szczegóły istniejącego blogu na platformie do-pracy.pl.",
       "title": "Edycja blogu | {{companyName}}"
     },
     "adminBlogPostNew": {
-      "description": "Utwórz nowy blog na platformie Maszbox.",
+      "description": "Utwórz nowy blog na platformie do-pracy.pl.",
       "title": "Nowy blog | {{companyName}}"
     },
     "adminBlogPosts": {

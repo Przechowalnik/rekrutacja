@@ -49,22 +49,22 @@
   },
   "jsonLdFaq": {
     "aboutUs": {
-      "description": "Maszbox is the first platform in Poland that enables the rental and sale of small spaces - from garages and storage units to utility rooms. Our goal is to make online transactions fast and secure for both owners and tenants. With Maszbox, you can easily add listings, manage payments, and monitor space availability. The platform combines innovative technology with an intuitive interface, ensuring a smooth and user-friendly experience. Discover how Maszbox is transforming the rental market in Poland by enabling quick, safe, and transparent transactions."
+      "description": "do-pracy.pl is the first platform in Poland that enables the rental and sale of small spaces - from garages and storage units to utility rooms. Our goal is to make online transactions fast and secure for both owners and tenants. With do-pracy.pl, you can easily add listings, manage payments, and monitor space availability. The platform combines innovative technology with an intuitive interface, ensuring a smooth and user-friendly experience. Discover how do-pracy.pl is transforming the rental market in Poland by enabling quick, safe, and transparent transactions."
     },
     "accessibility": {
-      "description": "At Maszbox, we prioritize accessibility - our website and app meet the WCAG 2.1 AA standard, support screen readers, and maintain proper contrast. We make sure every user can use the platform comfortably and without barriers."
+      "description": "At do-pracy.pl, we prioritize accessibility - our website and app meet the WCAG 2.1 AA standard, support screen readers, and maintain proper contrast. We make sure every user can use the platform comfortably and without barriers."
     },
     "account": {
-      "description": "Manage your Maszbox account - add listings, control payments and points, and ensure your data security."
+      "description": "Manage your do-pracy.pl account - add listings, control payments and points, and ensure your data security."
     },
     "accountAuthenticator": {
       "description": "Enhance your account security with two-factor authentication."
     },
     "accountBugDetails": {
-      "description": "Check the details of reported issues on Maszbox and monitor their status."
+      "description": "Check the details of reported issues on do-pracy.pl and monitor their status."
     },
     "accountBugNew": {
-      "description": "Report bugs and issues you encounter on the Maszbox platform."
+      "description": "Report bugs and issues you encounter on the do-pracy.pl platform."
     },
     "accountBugs": {
       "description": "Browse all reported bugs and track their resolution."
@@ -73,10 +73,10 @@
       "description": "Manage your marketing consents and privacy preferences."
     },
     "accountDelete": {
-      "description": "Learn how to safely delete your Maszbox account."
+      "description": "Learn how to safely delete your do-pracy.pl account."
     },
     "accountEmail": {
-      "description": "Update the email address associated with your Maszbox account."
+      "description": "Update the email address associated with your do-pracy.pl account."
     },
     "accountInvoices": {
       "description": "View and download invoices for using the platform."
@@ -88,37 +88,37 @@
       "description": "Edit your listings to increase their appeal and visibility."
     },
     "accountListingsNew": {
-      "description": "Add a new listing on Maszbox and start earning from your space."
+      "description": "Add a new listing on do-pracy.pl and start earning from your space."
     },
     "accountListingsPayments": {
-      "description": "Manage payments associated with your Maszbox listings."
+      "description": "Manage payments associated with your do-pracy.pl listings."
     },
     "accountPassword": {
       "description": "Change your password to enhance the security of your account."
     },
     "accountPhone": {
-      "description": "Update the phone number linked to your Maszbox account."
+      "description": "Update the phone number linked to your do-pracy.pl account."
     },
     "accountPoints": {
-      "description": "Check and exchange points collected in the Maszbox system."
+      "description": "Check and exchange points collected in the do-pracy.pl system."
     },
     "accountProfile": {
       "description": "Manage your user profile and information visible to others."
     },
     "accountReferral": {
-      "description": "Invite friends and earn bonuses through the Maszbox referral system."
+      "description": "Invite friends and earn bonuses through the do-pracy.pl referral system."
     },
     "accountSessions": {
       "description": "Manage your active sessions and enhance login security."
     },
     "admin": {
-      "description": "Maszbox admin panel - manage the platform and monitor user activity."
+      "description": "do-pracy.pl admin panel - manage the platform and monitor user activity."
     },
     "adminBlogPostEdit": {
-      "description": "Edit an existing blog and update its content on the Maszbox platform."
+      "description": "Edit an existing blog and update its content on the do-pracy.pl platform."
     },
     "adminBlogPostNew": {
-      "description": "Create a new blog and publish content on the Maszbox platform."
+      "description": "Create a new blog and publish content on the do-pracy.pl platform."
     },
     "adminBlogPosts": {
       "description": "A list of all blog posts published on the platform."
@@ -130,7 +130,7 @@
       "description": "Edit bug reports and update their status in the admin panel."
     },
     "adminBugs": {
-      "description": "A list of all bugs reported on the Maszbox platform."
+      "description": "A list of all bugs reported on the do-pracy.pl platform."
     },
     "adminCouponEdit": {
       "description": "Edit existing promotional coupons for users."
@@ -139,7 +139,7 @@
       "description": "Add a new promotional coupon available to platform users."
     },
     "adminCoupons": {
-      "description": "View all active coupons available on Maszbox."
+      "description": "View all active coupons available on do-pracy.pl."
     },
     "adminExchanges": {
       "description": "Manage point exchanges and transactions in the system."
@@ -154,7 +154,7 @@
       "description": "Send a marketing email to customers."
     },
     "adminPlanNew": {
-      "description": "Create a new subscription plan for Maszbox users."
+      "description": "Create a new subscription plan for do-pracy.pl users."
     },
     "adminPlans": {
       "description": "View available subscription and offer plans."
@@ -175,7 +175,7 @@
       "description": "A list of all reports on the platform."
     },
     "adminSettingEdit": {
-      "description": "Edit Maszbox platform settings to adjust system behavior."
+      "description": "Edit do-pracy.pl platform settings to adjust system behavior."
     },
     "adminSettingNew": {
       "description": "Add new configuration settings for the platform."
@@ -241,10 +241,10 @@
       "description": "User account authentication and login security."
     },
     "blogPostDetails": {
-      "description": "Read the full article on the Maszbox blog - an in-depth piece featuring practical insights, detailed explanations, and valuable guidance prepared for our users."
+      "description": "Read the full article on the do-pracy.pl blog - an in-depth piece featuring practical insights, detailed explanations, and valuable guidance prepared for our users."
     },
     "blogPosts": {
-      "description": "At Maszbox, we share knowledge, insights, and updates. Our blog offers carefully crafted articles, valuable information, and inspiration related to our platform and the broader industry."
+      "description": "At do-pracy.pl, we share knowledge, insights, and updates. Our blog offers carefully crafted articles, valuable information, and inspiration related to our platform and the broader industry."
     },
     "cities": {
       "description": "Search for cities and locations available on the platform."
@@ -328,7 +328,7 @@
       "description": "Contact us by sending an email to the provided address."
     },
     "error": {
-      "description": "An error occurred while using the Maszbox platform."
+      "description": "An error occurred while using the do-pracy.pl platform."
     },
     "errorAccountNotFound": {
       "description": "The provided account does not exist or has been deleted."
@@ -349,7 +349,7 @@
       "description": "Find answers to frequently asked questions and contact support."
     },
     "home": {
-      "description": "Welcome to Maszbox - an innovative platform for renting and selling small spaces in Poland. We offer fast and secure solutions for property owners who want to earn income and for tenants seeking available spaces. Our platform allows you to easily browse listings, add your own, manage payments, and monitor availability. With modern tools and an intuitive interface, Maszbox ensures convenience and transaction security, whether you're looking for a garage, warehouse, or office space."
+      "description": "Welcome to do-pracy.pl - an innovative platform for renting and selling small spaces in Poland. We offer fast and secure solutions for property owners who want to earn income and for tenants seeking available spaces. Our platform allows you to easily browse listings, add your own, manage payments, and monitor availability. With modern tools and an intuitive interface, do-pracy.pl ensures convenience and transaction security, whether you're looking for a garage, warehouse, or office space."
     },
     "howToAddListing": {
       "description": "Learn how to add a listing by following the steps provided below."
@@ -358,16 +358,16 @@
       "description": "Learn how to search for listings on our platform and find the perfect space."
     },
     "listings": {
-      "description": "Browse all available listings on the Maszbox platform."
+      "description": "Browse all available listings on the do-pracy.pl platform."
     },
     "login": {
-      "description": "Log in to fully access all Maszbox features."
+      "description": "Log in to fully access all do-pracy.pl features."
     },
     "loginFacebook": {
       "description": "Log in using your Facebook account."
     },
     "loginFromCreateListing": {
-      "description": "Log in to fully access all Maszbox features."
+      "description": "Log in to fully access all do-pracy.pl features."
     },
     "loginGoogle": {
       "description": "Log in using your Google account."
@@ -385,7 +385,7 @@
       "description": "Read the privacy policy and data protection rules."
     },
     "recoveryAccount": {
-      "description": "Recover access to your Maszbox account."
+      "description": "Recover access to your do-pracy.pl account."
     },
     "recoveryAccountBackupEmail": {
       "description": "Restore your account using a backup email address."
@@ -394,27 +394,27 @@
       "description": "Change your account password to enhance security."
     },
     "registration": {
-      "description": "Create an account on Maszbox and start using the platform."
+      "description": "Create an account on do-pracy.pl and start using the platform."
     },
     "registrationAccount": {
-      "description": "Create a user account and enjoy Maszbox features."
+      "description": "Create a user account and enjoy do-pracy.pl features."
     },
     "registrationCompany": {
       "description": "Register your company and start posting listings."
     },
     "search": {
-      "description": "Search for listings and content on Maszbox."
+      "description": "Search for listings and content on do-pracy.pl."
     },
     "termsAndConditions": {
-      "description": "Review Maszbox’s terms of service and platform usage rules."
+      "description": "Review do-pracy.pl’s terms of service and platform usage rules."
     }
   },
   "jsonLdReview": {},
   "jsonLdStructured": {
-    "description": "Maszbox is the first platform in Poland dedicated specifically to the rental and sale of small spaces. A garage, parking spot, basement, storage unit, or small warehouse - each of these spaces can become an additional source of income. We created Maszbox to connect owners of unused spaces with people who need them - simply, locally, and without unnecessary formalities. Our goal is for every Maszbox user to feel safe and comfortable, which is why we ensure clear regulations, data protection, and transparent listing rules. By using the Maszbox platform, you can earn money from what you already have - gain extra income of even several thousand PLN per year, help others - your basement can become a bike storage, and your garage a secure parking spot, and above all, it’s easy to use - posting a listing takes just 3 minutes. Maszbox is a Polish platform created with local needs in mind, helping your unused space start working for you!",
-    "isPartOfName": "Maszbox",
-    "name": "Maszbox",
-    "url": "https://maszbox.pl"
+    "description": "do-pracy.pl is the first platform in Poland dedicated specifically to the rental and sale of small spaces. A garage, parking spot, basement, storage unit, or small warehouse - each of these spaces can become an additional source of income. We created do-pracy.pl to connect owners of unused spaces with people who need them - simply, locally, and without unnecessary formalities. Our goal is for every do-pracy.pl user to feel safe and comfortable, which is why we ensure clear regulations, data protection, and transparent listing rules. By using the do-pracy.pl platform, you can earn money from what you already have - gain extra income of even several thousand PLN per year, help others - your basement can become a bike storage, and your garage a secure parking spot, and above all, it’s easy to use - posting a listing takes just 3 minutes. do-pracy.pl is a Polish platform created with local needs in mind, helping your unused space start working for you!",
+    "isPartOfName": "do-pracy.pl",
+    "name": "do-pracy.pl",
+    "url": "https://do-pracy.pl"
   },
   "meta": {
     "aboutUs": {
@@ -506,11 +506,11 @@
       "title": "Admin Panel | {{companyName}}"
     },
     "adminBlogPostEdit": {
-      "description": "Edit an existing blog on the Maszbox platform.",
+      "description": "Edit an existing blog on the do-pracy.pl platform.",
       "title": "Edit Blog | {{companyName}}"
     },
     "adminBlogPostNew": {
-      "description": "Create a new blog on the Maszbox platform.",
+      "description": "Create a new blog on the do-pracy.pl platform.",
       "title": "New Blog | {{companyName}}"
     },
     "adminBlogPosts": {

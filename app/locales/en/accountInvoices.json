@@ -1,8 +1,0 @@
-{
-  "actions": "Send invoice to email address",
-  "buttonSendInvoice": "Send",
-  "createdAt": "Invoice creation date",
-  "description": "On this page, you can find all invoices associated with your account.",
-  "noInvoices": "No invoices to display.",
-  "title": "Invoices"
-}

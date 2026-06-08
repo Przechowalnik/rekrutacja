@@ -20,14 +20,7 @@ export const AboutUsPage = () => {
         mainEntity: {
           "@type": "Organization",
           name: tCommon("company.name"),
-          sameAs: [
-            links.facebook.url,
-            links.instagram,
-            links.linkedin,
-            links.youtube,
-            links.tiktok,
-            links.twitter.site,
-          ],
+          sameAs: [],
           url: links.baseUrl,
         },
         name: t("title"),

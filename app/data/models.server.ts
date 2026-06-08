@@ -29,12 +29,8 @@ export type T_CompanyWorkerPermissionsServer =
   keyof typeof E_CompanyWorkerPermissionsServer;
 export type T_UserRolesServer = keyof typeof E_RolesServer;
 
-export const E_SubscriptionStatusServer = $Enums.SubscriptionStatus;
 export const E_CountryServer = $Enums.Country;
 export const E_TaxCountryServer = $Enums.TaxCountry;
-export const E_PlanTypeServer = $Enums.PlanType;
-export type T_PlanTypeServer = keyof typeof E_PlanTypeServer;
-export const E_PlanIntervalServer = $Enums.PlanInterval;
 export const E_BugPriorityServer = $Enums.BugPriority;
 export const E_BugEnvironmentServer = $Enums.BugEnvironment;
 export const E_BugStatusServer = $Enums.BugStatus;

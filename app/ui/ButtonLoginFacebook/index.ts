@@ -1,1 +1,0 @@
-export { ButtonLoginFacebook } from "./ButtonLoginFacebook";

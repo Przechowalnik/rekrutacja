@@ -11,7 +11,6 @@ import { T_CategoryCityCounts } from "~/models/categoryCityCounts";
 import { T_Cities } from "~/models/cities";
 import { T_CityCounts } from "~/models/cityCounts";
 import { getCategorySlug, T_ListingCategory } from "~/models/enums";
-import { BannerIntroRent } from "~/ui/BannerIntroRent";
 import { CardListingCity } from "~/ui/CardListingCity";
 import { Input } from "~/ui/Input";
 import { Section } from "~/ui/Section";
@@ -150,8 +149,6 @@ export const SearchListingCitiesPage = ({
               tSeo,
             }),
             title,
-            twitterCreator: links.twitter.creator,
-            twitterSite: links.twitter.site,
             type: "website",
             url: `${links.baseUrl}${linkCurrent}`,
           },
@@ -209,15 +206,6 @@ export const SearchListingCitiesPage = ({
           </Box>
         </Section>
       )}
-      <Section
-        backgroundSecondary
-        size="lg"
-        withBottomPadding={false}
-        withPageMeta={false}
-        withTopPadding={false}
-      >
-        <BannerIntroRent />
-      </Section>
     </>
   );
 };

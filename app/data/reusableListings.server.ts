@@ -1,29 +1,19 @@
 import { randomUUID } from "node:crypto";
 
 import dayjs from "dayjs";
-import { TFunction } from "i18next";
 
-import { namespaces } from "~/constants/namespaces";
-import { queryKey, queryValue } from "~/constants/queryAndHashes";
-import { E_Routes, getRoute, routesExtra } from "~/constants/routes";
+import { E_Routes } from "~/constants/routes";
 import { database } from "~/data/database.server";
 import { formNames } from "~/lib/zodFormValidator";
-import i18next from "~/localization/i18n.server";
 import { allListingCategoryRent, allListingCategorySale } from "~/models/enums";
 
 import {
   checkListingCityWithDistrictAndNearestCity,
   T_CheckListingCityResult,
 } from "./city.server";
-import { isFreeListingsServer } from "./flags.server";
-import {
-  calculatePointsFromMonths,
-  convertToCorrectSlug,
-  getLocalizedRedirectPath,
-} from "./functions.server";
+import { convertToCorrectSlug } from "./functions.server";
 import { getGeolocation } from "./geolocation.server";
 import { manageFilesInStorage } from "./images.server";
-import { fireMetaInitiateCheckoutEvent } from "./metaCapi.server";
 import {
   E_CompanyWorkerPermissionsServer,
   E_ListingCategoryServer,
@@ -33,17 +23,10 @@ import {
   E_ListingStatusServer,
   E_ListingTypeServer,
   E_RolesServer,
-  E_SubscriptionStatusServer,
   T_ListingStatusServer,
 } from "./models.server";
-import { subtractPoints } from "./points.server";
 import { getAndCheckUser } from "./prismaRequest.server";
-import {
-  prismaSelectCompanyFreeTrial,
-  prismaSelectListingForOwner,
-  prismaSelectProduct,
-  prismaSelectSubscription,
-} from "./prismaSelect.server";
+import { prismaSelectListingForOwner } from "./prismaSelect.server";
 import {
   responseGetOnFailure,
   responseGetOnFailureLogout,
@@ -51,49 +34,10 @@ import {
   responseOnFailureServer,
   responseOnSuccess,
 } from "./response.server";
-import { CURRENCY, formatAmountForStripe, stripe } from "./stripe.server";
-import { getCompanyActivePlan } from "./subscription.server";
 import { checkZodValidator, zodValidator } from "./zodValidator.server";
 
-function resolvePaymentCreateData(parameters: {
-  companyHasFreeListing: boolean;
-  companyListingDurationMonths: number;
-  isCompany: boolean;
-  isFreeListing: boolean;
-  newDateExpiresAt: Date;
-  newDateExpiresAtFreeListing: Date;
-}) {
-  const {
-    companyHasFreeListing,
-    companyListingDurationMonths,
-    isCompany,
-    isFreeListing,
-    newDateExpiresAt,
-    newDateExpiresAtFreeListing,
-  } = parameters;
-
-  const isFreePayment = isFreeListing || (isCompany && companyHasFreeListing);
-
-  let expiresAtAfterAdd: Date | null = null;
-  let monthsToAdd: null | number = null;
-
-  if (isFreeListing) {
-    expiresAtAfterAdd = newDateExpiresAtFreeListing;
-    monthsToAdd = 1;
-  } else if (isCompany && companyHasFreeListing) {
-    expiresAtAfterAdd = newDateExpiresAt;
-    monthsToAdd = companyListingDurationMonths;
-  }
-
-  return {
-    expiresAtAfterAdd,
-    free: isFreePayment,
-    monthsToAdd,
-    status: isFreePayment
-      ? E_ListingPaymentStatusServer.FREE
-      : E_ListingPaymentStatusServer.UNPAID,
-  };
-}
+// All listings are free and valid for 6 months + 1 day from creation/renewal.
+const FREE_LISTING_DURATION_MONTHS = 6;
 
 export const createListing = async ({
   isCompany,
@@ -201,20 +145,7 @@ export const createListing = async ({
         select: {
           company: {
             select: {
-              freeTrial: {
-                select: prismaSelectCompanyFreeTrial,
-              },
-              subscriptions: {
-                orderBy: {
-                  createdAt: "asc",
-                },
-                select: prismaSelectSubscription,
-                where: {
-                  status: {
-                    not: E_SubscriptionStatusServer.CANCELLED,
-                  },
-                },
-              },
+              id: true,
             },
           },
           lang: true,
@@ -410,9 +341,6 @@ export const createListing = async ({
       });
     }
 
-    let companyHasFreeListing = false;
-    let companyListingDurationMonths = 0;
-
     if (isCompany) {
       if (!existingUser?.company) {
         return await responseOnFailure({
@@ -434,102 +362,15 @@ export const createListing = async ({
           status: 401,
         });
       }
-
-      const validFreeTrial = existingUser?.company?.freeTrial
-        ? {
-            endDate: existingUser.company.freeTrial.endDate,
-            id: existingUser.company.freeTrial.id,
-            plan: existingUser.company.freeTrial.plan,
-            startDate: existingUser.company.freeTrial.startDate,
-          }
-        : null;
-
-      const foundActivePlan = getCompanyActivePlan({
-        freeTrial: validFreeTrial,
-        subscriptions: existingUser.company.subscriptions,
-      });
-
-      if (foundActivePlan) {
-        const startDateToSearch = dayjs().startOf("month").toDate();
-        const endDateToSearch = dayjs().endOf("month").toDate();
-
-        const countActiveCompanyListingsInMonth =
-          await database.listingPayment.count({
-            where: {
-              createdAt: {
-                gte: startDateToSearch,
-                lte: endDateToSearch,
-              },
-              listing: {
-                companyId: existingUser?.company?.id,
-              },
-              status: E_ListingPaymentStatusServer.FREE,
-            },
-          });
-
-        companyHasFreeListing =
-          countActiveCompanyListingsInMonth <
-          foundActivePlan.maximumListingsInMonth;
-
-        companyListingDurationMonths = foundActivePlan.listingDurationMonths;
-      }
     }
 
-    const isFreeListing = isFreeListingsServer();
-
-    const newDateExpiresAt = dayjs()
-      .add(companyListingDurationMonths, "month")
-      .toDate();
-
-    const newDateExpiresAtFreeListing = dayjs()
-      .add(6, "month")
+    // Listings are always free, active immediately, and valid for 6 months + 1 day.
+    const expiresAt = dayjs()
+      .add(FREE_LISTING_DURATION_MONTHS, "month")
       .add(1, "day")
       .toDate();
 
-    if (isFreeListing) {
-      const foundPlatformSettings = await database.platformSetting.findFirst({
-        select: {
-          freeTrialMaxListings: true,
-        },
-      });
-
-      if (!foundPlatformSettings) {
-        return await responseOnFailure({
-          message: "somethingWentWrong",
-          request,
-          status: 422,
-        });
-      }
-
-      const countActiveListings = await database.listing.count({
-        where: {
-          ...(isCompany
-            ? { companyId: existingUser.company.id }
-            : { userId: existingUser.id }),
-          status: E_ListingStatusServer.ACTIVE,
-        },
-      });
-
-      if (countActiveListings >= foundPlatformSettings.freeTrialMaxListings) {
-        return await responseOnFailure({
-          message: "freeListingsLimitReached",
-          request,
-          status: 422,
-        });
-      }
-    }
-
-    let expiresAt: Date | null = null;
-    if (isFreeListing) {
-      expiresAt = newDateExpiresAtFreeListing;
-    } else if (isCompany && companyHasFreeListing) {
-      expiresAt = newDateExpiresAt;
-    }
-
-    let status: T_ListingStatusServer = E_ListingStatusServer.UNPAID;
-    if (isFreeListing || (isCompany && companyHasFreeListing)) {
-      status = E_ListingStatusServer.ACTIVE;
-    }
+    const status: T_ListingStatusServer = E_ListingStatusServer.ACTIVE;
 
     const resultImages = await manageFilesInStorage({
       delete: listingImagesToRemove,
@@ -617,20 +458,18 @@ export const createListing = async ({
             ? listingParkingType
             : null,
         payments: {
-          create: resolvePaymentCreateData({
-            companyHasFreeListing,
-            companyListingDurationMonths,
-            isCompany,
-            isFreeListing,
-            newDateExpiresAt,
-            newDateExpiresAtFreeListing,
-          }),
+          create: {
+            expiresAtAfterAdd: expiresAt,
+            free: true,
+            monthsToAdd: FREE_LISTING_DURATION_MONTHS,
+            status: E_ListingPaymentStatusServer.FREE,
+          },
         },
         plotType:
           listingCategory === E_ListingCategoryServer.PLOT && listingPlotType
             ? listingPlotType
             : null,
-        price: formatAmountForStripe(listingPrice),
+        price: BigInt(Math.round(listingPrice * 100)),
         securityOptions: listingSecurityOption,
         slug: `temp-${randomUUID()}`,
         status,
@@ -654,41 +493,13 @@ export const createListing = async ({
       where: { id: createdListing.id },
     });
 
-    const resultListing = { slug: listingSlug };
+    const message = isCompany
+      ? "successCreateListingCompany"
+      : "successCreateListing";
 
-    const isFree = isFreeListing || (isCompany && companyHasFreeListing);
-
-    let message:
-      | "successCreateListing"
-      | "successCreateListingCompany"
-      | "successCreateListingCompanyToPay"
-      | "successCreateListingToPay";
-
-    let redirectTo: { extraPath: string; route: E_Routes } | E_Routes;
-
-    if (isFree) {
-      if (isCompany) {
-        message = "successCreateListingCompany";
-        redirectTo = E_Routes.companyListings;
-      } else {
-        message = "successCreateListing";
-        redirectTo = E_Routes.accountListings;
-      }
-    } else {
-      if (isCompany) {
-        message = "successCreateListingCompanyToPay";
-        redirectTo = {
-          extraPath: `/${resultListing.slug}${routesExtra[E_Routes.companyListings].payments}`,
-          route: E_Routes.companyListings,
-        };
-      } else {
-        message = "successCreateListingToPay";
-        redirectTo = {
-          extraPath: `/${resultListing.slug}${routesExtra[E_Routes.accountListings].payments}`,
-          route: E_Routes.accountListings,
-        };
-      }
-    }
+    const redirectTo = isCompany
+      ? E_Routes.companyListings
+      : E_Routes.accountListings;
 
     return await responseOnSuccess({
       data: {
@@ -719,7 +530,6 @@ export const getReusableListing = async ({
   userCompanyId,
   userId,
   userSessionVersion,
-  withPlatformProduct,
 }: {
   isCompany: boolean;
   listingIdOrSlug: null | string | undefined;
@@ -728,7 +538,6 @@ export const getReusableListing = async ({
   userCompanyId: null | string | undefined;
   userId: string;
   userSessionVersion: null | number;
-  withPlatformProduct: boolean;
 }) => {
   const redirectOnError = await responseGetOnFailure({ request });
   try {
@@ -761,19 +570,6 @@ export const getReusableListing = async ({
     }
 
     if (!existingUser) {
-      return redirectOnError;
-    }
-
-    const foundProduct = withPlatformProduct
-      ? await database.product.findFirst({
-          select: prismaSelectProduct,
-          where: {
-            isDeletedAt: null,
-          },
-        })
-      : null;
-
-    if (!foundProduct && withPlatformProduct) {
       return redirectOnError;
     }
 
@@ -833,11 +629,6 @@ export const getReusableListing = async ({
     return await responseOnSuccess({
       data: {
         listing: foundListing,
-        ...(withPlatformProduct
-          ? {
-              product: foundProduct,
-            }
-          : {}),
       },
       request,
       status: 200,
@@ -1324,7 +1115,7 @@ export const updateListing = async ({
           listingCategory === E_ListingCategoryServer.PLOT && listingPlotType
             ? listingPlotType
             : null,
-        price: formatAmountForStripe(listingPrice),
+        price: BigInt(Math.round(listingPrice * 100)),
         securityOptions: listingSecurityOption,
         slug: `${convertToCorrectSlug(listingTitle)}-${foundListing.listingIndex}`,
         title: listingTitle,
@@ -1356,7 +1147,7 @@ export const updateListing = async ({
   }
 };
 
-export const extensionListing = async ({
+export const extensionFreeListingListing = async ({
   isCompany,
   listingIdOrSlug,
   request,
@@ -1380,33 +1171,6 @@ export const extensionListing = async ({
       });
     }
 
-    const resultValidator = await checkZodValidator({
-      request,
-      validator: {
-        [formNames.checkboxListingUseCompanyCard]:
-          zodValidator.checkbox.optional(),
-        [formNames.checkboxListingUsePoints]: zodValidator.checkbox.optional(),
-        [formNames.listingExtension]: zodValidator.listingExtension,
-      },
-    });
-
-    if (resultValidator?.responseError) {
-      return await responseOnFailure(resultValidator.responseError);
-    }
-
-    if (!resultValidator?.data) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-    const {
-      checkboxListingUseCompanyCard,
-      checkboxListingUsePoints,
-      listingExtension,
-    } = resultValidator.data;
-
     const { existingUser, responseError } = isCompany
       ? await getAndCheckUser({
           authenticator: false,
@@ -1415,30 +1179,11 @@ export const extensionListing = async ({
             select: {
               company: {
                 select: {
-                  points: {
-                    select: {
-                      balance: true,
-                    },
-                  },
-                  ...(checkboxListingUseCompanyCard
-                    ? {
-                        stripe: {
-                          select: {
-                            customerCardId: true,
-                            customerId: true,
-                          },
-                        },
-                      }
-                    : {}),
+                  id: true,
                 },
               },
               email: true,
               lang: true,
-              points: {
-                select: {
-                  balance: true,
-                },
-              },
               role: true,
               workerSettings: {
                 select: {
@@ -1461,11 +1206,6 @@ export const extensionListing = async ({
             select: {
               email: true,
               lang: true,
-              points: {
-                select: {
-                  balance: true,
-                },
-              },
               role: true,
             },
             where: {
@@ -1486,482 +1226,6 @@ export const extensionListing = async ({
         message: "somethingWentWrong",
         request,
         status: 401,
-      });
-    }
-
-    const searchListingProps = {
-      OR: [{ slug: listingIdOrSlug }, { id: listingIdOrSlug }],
-      ...(isCompany && existingUser?.company
-        ? {
-            companyId: existingUser.company.id,
-          }
-        : {
-            userId: existingUser.id,
-          }),
-    };
-
-    const foundActiveProduct = await database.product.findFirst({
-      select: {
-        points_1: true,
-        points_2_5: true,
-        points_6_plus: true,
-        price_1: true,
-        price_2_5: true,
-        price_6_plus: true,
-      },
-      where: {
-        isDeletedAt: null,
-      },
-    });
-
-    if (!foundActiveProduct) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    if (
-      isCompany &&
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      !existingUser?.workerSettings?.permissions?.includes(
-        E_CompanyWorkerPermissionsServer.MANAGE_LISTINGS,
-      ) &&
-      existingUser?.role !== E_RolesServer.B2B_OWNER
-    ) {
-      return await responseOnFailure({
-        message: "noPermission",
-        request,
-        status: 401,
-      });
-    }
-
-    const foundListing = await database.listing.findFirst({
-      select: {
-        expiresAt: true,
-        id: true,
-      },
-      where: searchListingProps,
-    });
-
-    if (!foundListing) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    let amount: number;
-    if (listingExtension === 1) {
-      amount = Number(foundActiveProduct.price_1);
-    } else if (listingExtension > 1 && listingExtension <= 5) {
-      amount = Number(foundActiveProduct.price_2_5);
-    } else {
-      amount = Number(foundActiveProduct.price_6_plus);
-    }
-
-    const url = new URL(request.url);
-    const origin = `${url.protocol}//${url.host}`;
-
-    if (checkboxListingUsePoints) {
-      const validBalance =
-        isCompany && existingUser?.company && "points" in existingUser.company
-          ? (existingUser?.company?.points?.balance ?? 0)
-          : (existingUser?.points?.balance ?? 0);
-
-      const pointsNeededToExtension = calculatePointsFromMonths({
-        months: listingExtension,
-        product: foundActiveProduct,
-      });
-
-      if (validBalance < pointsNeededToExtension) {
-        return await responseOnFailure({
-          message: "noEnoughPoints",
-          request,
-          status: 422,
-        });
-      }
-
-      const resultSubtractPoints = await subtractPoints({
-        companyIdSubtractPoints:
-          isCompany && existingUser?.company ? existingUser.company.id : null,
-        pointsToSubtract: pointsNeededToExtension,
-        request,
-        userIdSubtractPoints: isCompany ? null : existingUser.id,
-      });
-
-      if (resultSubtractPoints?.responseError) {
-        return await responseOnFailure(resultSubtractPoints?.responseError);
-      }
-
-      const isListingCurrentlyActive = foundListing?.expiresAt
-        ? dayjs(foundListing.expiresAt).isAfter(dayjs())
-        : false;
-
-      const validOldDate = isListingCurrentlyActive
-        ? dayjs(foundListing?.expiresAt)
-        : dayjs();
-
-      const newDateExpiresAt = validOldDate
-        .add(listingExtension ?? 0, "month")
-        .toDate();
-
-      await database.listingPayment.create({
-        data: {
-          expiresAtAfterAdd: newDateExpiresAt,
-          expiresAtBeforeAdd: foundListing?.expiresAt,
-          free: false,
-          listingId: foundListing.id,
-          monthsToAdd: listingExtension,
-          points: pointsNeededToExtension,
-          status: E_ListingPaymentStatusServer.PAID,
-        },
-      });
-
-      await database.listing.update({
-        data: {
-          expiresAt: newDateExpiresAt,
-          status: E_ListingStatusServer.ACTIVE,
-        },
-        where: {
-          id: foundListing.id,
-        },
-      });
-
-      return await responseOnSuccess({
-        flashData: {
-          message: "successExtensionListing",
-        },
-        redirectTo: {
-          route: isCompany
-            ? E_Routes.companyListings
-            : E_Routes.accountListings,
-        },
-        request,
-        status: 200,
-      });
-    }
-
-    if (
-      checkboxListingUseCompanyCard &&
-      existingUser?.company &&
-      "stripe" in existingUser.company &&
-      existingUser?.company?.stripe?.customerId &&
-      existingUser?.company?.stripe?.customerCardId
-    ) {
-      const paymentIntent = await stripe.paymentIntents.create({
-        amount: amount * listingExtension,
-        confirm: true,
-        currency: CURRENCY,
-        customer: existingUser?.company?.stripe?.customerId,
-        metadata: {
-          context: "paymentIntents",
-          ...(isCompany
-            ? {
-                companyId: existingUser.company.id,
-              }
-            : {
-                userId: existingUser.id,
-              }),
-          quantity: listingExtension,
-          unitAmount: amount,
-        },
-        payment_method: existingUser?.company?.stripe?.customerCardId,
-        return_url: `${origin}${getLocalizedRedirectPath(
-          getRoute({
-            extraQuery: {
-              [queryKey.message]: "successExtensionListingPaymentIntent3DS", // TODO in account and company
-              [queryKey.messageStatus]: queryValue.messageStatusInformation,
-            },
-            route: isCompany
-              ? E_Routes.companyListings
-              : E_Routes.accountListings,
-          }),
-          request,
-        )}`,
-      });
-
-      // NOSONAR
-      // if (paymentIntent.status === "requires_action") {
-      //   return await responseOnFailure({
-      //     message: "cardRequires3DS",
-      //     status: 422,
-      //   });
-      // }
-
-      await database.listingPayment.create({
-        data: {
-          amount: amount * listingExtension,
-          free: false,
-          listingId: foundListing.id,
-          monthsToAdd: listingExtension,
-          status: E_ListingPaymentStatusServer.PENDING,
-          stripePaymentIntentId: paymentIntent.id,
-        },
-      });
-
-      if (paymentIntent.next_action?.redirect_to_url?.url) {
-        return await responseOnSuccess({
-          redirectTo: {
-            customUrl: paymentIntent.next_action?.redirect_to_url?.url,
-            route: null,
-          },
-          request,
-          status: 200,
-        });
-      }
-
-      return await responseOnSuccess({
-        flashData: {
-          message: "successExtensionListingPaymentIntent",
-        },
-        redirectTo: {
-          route: isCompany
-            ? E_Routes.companyListings
-            : E_Routes.accountListings,
-        },
-        request,
-        status: 200,
-      });
-    }
-
-    const t: TFunction<"invoice", undefined> = await i18next.getFixedT(
-      existingUser.lang.toLowerCase(),
-      namespaces.invoice,
-    );
-
-    const sessionCheckout = await stripe.checkout.sessions.create({
-      cancel_url: `${origin}${getLocalizedRedirectPath(
-        getRoute({
-          extraQuery: {
-            [queryKey.message]: "errorExtensionListing",
-            [queryKey.messageStatus]: queryValue.messageStatusFailure,
-          },
-          route: isCompany
-            ? E_Routes.companyListings
-            : E_Routes.accountListings,
-        }),
-        request,
-      )}`,
-      customer_email: existingUser.email,
-      line_items: [
-        {
-          price_data: {
-            currency: CURRENCY,
-            product_data: {
-              name: t("listing"),
-            },
-            unit_amount: amount,
-          },
-          quantity: listingExtension,
-        },
-      ],
-      metadata: {
-        ...(isCompany && existingUser?.company
-          ? {
-              companyId: existingUser.company.id,
-            }
-          : {
-              userId: existingUser.id,
-            }),
-        quantity: listingExtension,
-        unitAmount: amount,
-      },
-      mode: "payment",
-      payment_intent_data: {
-        metadata: {
-          context: "checkout",
-          ...(isCompany && existingUser?.company
-            ? {
-                companyId: existingUser.company.id,
-              }
-            : {
-                userId: existingUser.id,
-              }),
-          quantity: listingExtension,
-          unitAmount: amount,
-        },
-      },
-      payment_method_types: ["blik", "p24", "card", "paypal"],
-      success_url: `${origin}${getLocalizedRedirectPath(
-        getRoute({
-          extraQuery: {
-            [queryKey.message]: "successExtensionListing",
-            [queryKey.messageStatus]: queryValue.messageStatusSuccess,
-          },
-          route: isCompany
-            ? E_Routes.companyListings
-            : E_Routes.accountListings,
-        }),
-        request,
-      )}`,
-    });
-
-    await database.listingPayment.create({
-      data: {
-        amount: amount * listingExtension,
-        free: false,
-        listingId: foundListing.id,
-        monthsToAdd: listingExtension,
-        status: E_ListingPaymentStatusServer.PENDING,
-        stripeCheckoutId: sessionCheckout.id,
-        stripeCheckoutUrl: sessionCheckout.url,
-      },
-    });
-
-    fireMetaInitiateCheckoutEvent({
-      amount: amount * listingExtension,
-      currency: CURRENCY,
-      email: existingUser.email,
-      listingId: foundListing.id,
-      request,
-      userId: existingUser.id,
-    });
-
-    return await responseOnSuccess({
-      redirectTo: {
-        customUrl: sessionCheckout.url ?? undefined,
-        route: null,
-      },
-      request,
-      status: 200,
-    });
-  } catch (error) {
-    return await responseOnFailureServer({ error, request });
-  }
-};
-
-export const extensionFreeListingListing = async ({
-  isCompany,
-  listingIdOrSlug,
-  request,
-  userCompanyId,
-  userId,
-  userSessionVersion,
-}: {
-  isCompany: boolean;
-  listingIdOrSlug: null | string | undefined;
-  request: Request;
-  userCompanyId: null | string | undefined;
-  userId: string;
-  userSessionVersion: null | number;
-}) => {
-  try {
-    if (
-      (!userCompanyId && isCompany) ||
-      !listingIdOrSlug ||
-      !isFreeListingsServer()
-    ) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    const { existingUser, responseError } = isCompany
-      ? await getAndCheckUser({
-          authenticator: false,
-          company: true,
-          prismaArguments: {
-            select: {
-              company: {
-                select: {
-                  points: {
-                    select: {
-                      balance: true,
-                    },
-                  },
-                },
-              },
-              email: true,
-              lang: true,
-              points: {
-                select: {
-                  balance: true,
-                },
-              },
-              role: true,
-              workerSettings: {
-                select: {
-                  permissions: true,
-                },
-              },
-            },
-            where: {
-              companyId: userCompanyId,
-              id: userId,
-            },
-          },
-          request,
-          respectCompanyPhoneVerification: isCompany,
-          userSessionVersion,
-        })
-      : await getAndCheckUser({
-          authenticator: false,
-          prismaArguments: {
-            select: {
-              email: true,
-              lang: true,
-              points: {
-                select: {
-                  balance: true,
-                },
-              },
-              role: true,
-            },
-            where: {
-              companyId: userCompanyId,
-              id: userId,
-            },
-          },
-          request,
-          userSessionVersion,
-        });
-
-    if (responseError) {
-      return await responseOnFailure(responseError);
-    }
-
-    if (!existingUser) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 401,
-      });
-    }
-
-    const foundPlatformSettings = await database.platformSetting.findFirst({
-      select: {
-        freeTrialMaxListings: true,
-      },
-    });
-
-    if (!foundPlatformSettings) {
-      return await responseOnFailure({
-        message: "somethingWentWrong",
-        request,
-        status: 422,
-      });
-    }
-
-    const countActiveListings = await database.listing.count({
-      where: {
-        ...(isCompany
-          ? { companyId: userCompanyId }
-          : { userId: existingUser.id }),
-        status: E_ListingStatusServer.ACTIVE,
-      },
-    });
-
-    if (countActiveListings >= foundPlatformSettings.freeTrialMaxListings) {
-      return await responseOnFailure({
-        message: "freeListingsLimitReached",
-        request,
-        status: 422,
       });
     }
 

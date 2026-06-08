@@ -1,4 +1,3 @@
-import dayjs from "dayjs";
 import type { Params } from "react-router";
 
 import { E_Routes } from "~/constants/routes";
@@ -9,15 +8,13 @@ import type { T_CompanyWorkerRoles } from "~/models/enums";
 import { getUserFromSession } from "./authSession.server";
 import {
   isEnableCreateOrLoginCompanyServer,
-  isFreeListingsServer,
   isShowDevelopmentHelpersServer,
 } from "./flags.server";
 import type {
   T_CompanyWorkerPermissionsServer,
-  T_PlanTypeServer,
   T_UserRolesServer,
 } from "./models.server";
-import { E_RolesServer, E_SubscriptionStatusServer } from "./models.server";
+import { E_RolesServer } from "./models.server";
 import { responseGetOnFailure } from "./response.server";
 import { applyRateLimit } from "./security.server";
 
@@ -159,132 +156,7 @@ export const checkIsCompanyHaveUserIdInWorkers = async ({
   };
 };
 
-type T_CheckIsCompanyHaveAccessInPlanTypes = {
-  companyId: string;
-  planTypes?: T_PlanTypeServer[];
-};
-
-export const checkIsCompanyHaveAccessInPlanTypes = async ({
-  companyId,
-  planTypes = [],
-}: T_CheckIsCompanyHaveAccessInPlanTypes): Promise<boolean> => {
-  if (!companyId) {
-    return false;
-  }
-
-  const currentDate = dayjs().toDate();
-
-  const companyFreeTrial = await database.companyFreeTrial.count({
-    where: {
-      companyId: companyId,
-      endDate: {
-        gt: currentDate,
-      },
-      plan: {
-        type: {
-          in: planTypes,
-        },
-      },
-    },
-  });
-
-  if (companyFreeTrial > 0) {
-    return true;
-  }
-
-  const companySubscription = await database.subscription.count({
-    where: {
-      companyId: companyId,
-      OR: [
-        {
-          endDate: null,
-        },
-        {
-          endDate: {
-            gt: currentDate,
-          },
-        },
-      ],
-      plan: {
-        type: {
-          in: planTypes,
-        },
-      },
-      status: {
-        notIn: [
-          E_SubscriptionStatusServer.CANCELLED,
-          E_SubscriptionStatusServer.PENDING,
-        ],
-      },
-    },
-  });
-
-  if (companySubscription > 0) {
-    return true;
-  }
-
-  return false;
-};
-
-export const checkIsCompanyHaveActiveSubscription = async ({
-  companyId,
-}: {
-  companyId: string;
-}): Promise<boolean> => {
-  if (!companyId) {
-    return false;
-  }
-
-  if (isFreeListingsServer()) {
-    return true;
-  }
-
-  const currentDate = dayjs().toDate();
-
-  const companyFreeTrial = await database.companyFreeTrial.count({
-    where: {
-      companyId: companyId,
-      endDate: {
-        gt: currentDate,
-      },
-    },
-  });
-  if (companyFreeTrial > 0) {
-    return true;
-  }
-
-  const companySubscription = await database.subscription.count({
-    where: {
-      companyId: companyId,
-      OR: [
-        {
-          endDate: null,
-        },
-        {
-          endDate: {
-            gt: currentDate,
-          },
-        },
-      ],
-      status: {
-        notIn: [
-          E_SubscriptionStatusServer.CANCELLED,
-          E_SubscriptionStatusServer.PENDING,
-        ],
-      },
-    },
-  });
-
-  if (companySubscription > 0) {
-    return true;
-  }
-
-  return false;
-};
-
 type T_RequireUserSession = {
-  activeFreeTrialOrSubscriptionCompany?: boolean;
-  companyPlanTypes?: T_PlanTypeServer[];
   params?: Params<string>;
   redirectPath?: E_Routes;
   request: Request;
@@ -306,8 +178,6 @@ type T_RequireUserSessionResult = {
 };
 
 export const requireUserSession = async ({
-  activeFreeTrialOrSubscriptionCompany,
-  companyPlanTypes,
   params,
   redirectPath = E_Routes.home,
   request,
@@ -413,44 +283,6 @@ export const requireUserSession = async ({
     });
 
     if (!isValidUserCompanyPermissions) {
-      throw redirectOnError;
-    }
-  }
-
-  if (activeFreeTrialOrSubscriptionCompany) {
-    if (!respectCompany) {
-      console.warn("Bad configuration. You must add respectCompany.");
-    }
-
-    if (!userCompanyId) {
-      throw redirectOnError;
-    }
-
-    const isValidCompanySubscriptionActive =
-      await checkIsCompanyHaveActiveSubscription({
-        companyId: userCompanyId,
-      });
-
-    if (!isValidCompanySubscriptionActive) {
-      throw redirectOnError;
-    }
-  }
-
-  if (companyPlanTypes) {
-    if (!respectCompany) {
-      console.warn("Bad configuration. You must add respectCompany.");
-    }
-
-    if (!userCompanyId) {
-      throw redirectOnError;
-    }
-
-    const isValidCompanyPlanTypes = await checkIsCompanyHaveAccessInPlanTypes({
-      companyId: userCompanyId,
-      planTypes: companyPlanTypes,
-    });
-
-    if (!isValidCompanyPlanTypes) {
       throw redirectOnError;
     }
   }

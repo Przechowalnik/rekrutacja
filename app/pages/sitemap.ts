@@ -15,7 +15,6 @@ export const loader: LoaderFunction = async ({ request }) => {
     { lastmod: now, loc: "/sitemap-pages.xml" },
     { lastmod: now, loc: "/sitemap-cities.xml" },
     { lastmod: now, loc: "/sitemap-categories.xml" },
-    { lastmod: now, loc: "/sitemap-blog.xml" },
   ]);
 
   return new Response(sitemapIndexXml, {

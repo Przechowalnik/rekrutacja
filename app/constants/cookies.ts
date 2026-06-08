@@ -1,4 +1,5 @@
 export const cookiesKey = {
+  consent: "cookie_consent",
   email: "email",
   otpCode: "otpCode",
   sms: "sms",

@@ -475,16 +475,6 @@ export const confirmCodeUserEmail = async ({
           sessionVersion: {
             increment: 1,
           },
-          socials: {
-            update: {
-              facebookAccessToken: null,
-              facebookAccessTokenExpiresAt: null,
-              facebookId: null,
-              googleAccessToken: null,
-              googleAccessTokenExpiresAt: null,
-              googleId: null,
-            },
-          },
         },
         select: {
           company: {

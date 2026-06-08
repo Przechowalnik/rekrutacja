@@ -32,10 +32,12 @@ import {
 } from "react-router";
 
 import { GlobalLayout } from "~/components/GlobalLayout";
-import { links as siteLinks } from "~/constants/links";
+import { CookieConsentProvider } from "~/context/CookieConsentContext";
 import { CookiesContextProvider } from "~/context/CookiesContext";
 import { FlashContextProvider } from "~/context/FlashContext";
 import { useNonce } from "~/context/NonceContext";
+import { useCookieConsent } from "~/hooks/useCookieConsent";
+import { CookieConsent } from "~/ui/CookieConsent";
 
 import { Route } from "./+types/root";
 import { ErrorPage } from "./components/ErrorPage";
@@ -56,6 +58,21 @@ import { theme } from "./styles/theme";
 
 config.autoAddCss = false;
 
+const AnalyticsScripts = ({ isProduction }: { isProduction: boolean }) => {
+  const { analyticsConsent } = useCookieConsent();
+
+  if (!isProduction || !analyticsConsent) {
+    return null;
+  }
+
+  return (
+    <>
+      <SpeedInsights debug={false} />
+      <Analytics debug={false} />
+    </>
+  );
+};
+
 const NavigationProgress = dynamic(() =>
   import("@mantine/nprogress").then(module => ({
     default: module.NavigationProgress,
@@ -75,13 +92,6 @@ export const links: LinksFunction = () => {
 
   return [
     { href: stylesGlobal, rel: "stylesheet" },
-    { href: "https://www.googletagmanager.com", rel: "preconnect" },
-    {
-      crossOrigin: "anonymous" as const,
-      href: "https://www.googletagmanager.com",
-      rel: "preconnect",
-    },
-    { href: "https://www.google-analytics.com", rel: "dns-prefetch" },
     { href: "https://fonts.gstatic.com", rel: "dns-prefetch" },
     {
       as: "font",
@@ -97,7 +107,7 @@ export const links: LinksFunction = () => {
       rel: "preload",
       type: "font/woff2",
     },
-    { href: "/favicon.ico", rel: "icon", type: "image/x-icon" },
+    { href: "/favicon.svg", rel: "icon", type: "image/svg+xml" },
     ...(isProduction
       ? [{ href: "/manifest.webmanifest", rel: "manifest" }]
       : []),
@@ -131,15 +141,6 @@ function Layout({ children }: Readonly<PropsWithChildren>) {
     dayjs.locale(i18n.language ?? E_Language.PL.toLowerCase());
   }, [i18n.language]);
 
-  useEffect(() => {
-    if (!isProduction) {
-      return;
-    }
-    void import("~/utilities/webVitals").then(module => {
-      module.reportWebVitals();
-    });
-  }, [isProduction]);
-
   const mantineTheme = useMemo(
     () => theme({ primaryColor: platformColor }),
     [platformColor],
@@ -162,7 +163,7 @@ function Layout({ children }: Readonly<PropsWithChildren>) {
         <meta charSet="utf-8" />
         <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <meta content="#7950f2" name="theme-color" />
+        <meta content="#2563eb" name="theme-color" />
         <meta
           content="strict-origin-when-cross-origin"
           httpEquiv="Referrer-Policy"
@@ -171,67 +172,36 @@ function Layout({ children }: Readonly<PropsWithChildren>) {
         <Meta />
         <Links nonce={nonce} />
         <ColorSchemeScript defaultColorScheme="light" nonce={nonce} />
-        {isProduction && (
-          <>
-            <script
-              defer
-              nonce={nonce}
-              src={siteLinks.gtm}
-              suppressHydrationWarning
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-window.dataLayer = window.dataLayer || [];
-window.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-`,
-              }}
-              nonce={nonce}
-              suppressHydrationWarning
-            />
-          </>
-        )}
       </head>
       <body>
         <noscript>
           <link href={stylesGlobal} rel="stylesheet" />
-          {isProduction && (
-            <iframe
-              height="0"
-              src="https://www.googletagmanager.com/ns.html?id=GTM-TV3D5LDG"
-              style={{ display: "none", visibility: "hidden" }}
-              title="gtm"
-              width="0"
-            />
-          )}
         </noscript>
         <MantineProvider
           defaultColorScheme="light"
           getStyleNonce={() => nonce ?? ""}
           theme={mantineTheme}
         >
-          <DatesProvider settings={datesSettings}>
-            <NavigationSideEffects />
-            <SearchListingsContextProvider>
-              <ConfettiContextProvider>
-                <CookiesContextProvider>
-                  <GlobalGeneratedModalContextProvider>
-                    <GlobalLayout>{children}</GlobalLayout>
-                  </GlobalGeneratedModalContextProvider>
-                </CookiesContextProvider>
-              </ConfettiContextProvider>
-            </SearchListingsContextProvider>
-            <NavigationProgress aria-label={t("imagesAlt.progressBar")} />
-            <Notifications position="bottom-left" zIndex={3001} />
-          </DatesProvider>
-          <ScrollRestoration nonce={nonce} />
-          <Scripts nonce={nonce} />
-          {isProduction && (
-            <>
-              <SpeedInsights debug={false} />
-              <Analytics debug={false} />
-            </>
-          )}
+          <CookieConsentProvider>
+            <DatesProvider settings={datesSettings}>
+              <NavigationSideEffects />
+              <SearchListingsContextProvider>
+                <ConfettiContextProvider>
+                  <CookiesContextProvider>
+                    <GlobalGeneratedModalContextProvider>
+                      <GlobalLayout>{children}</GlobalLayout>
+                    </GlobalGeneratedModalContextProvider>
+                  </CookiesContextProvider>
+                </ConfettiContextProvider>
+              </SearchListingsContextProvider>
+              <CookieConsent />
+              <NavigationProgress aria-label={t("imagesAlt.progressBar")} />
+              <Notifications position="bottom-left" zIndex={3001} />
+            </DatesProvider>
+            <ScrollRestoration nonce={nonce} />
+            <Scripts nonce={nonce} />
+            <AnalyticsScripts isProduction={isProduction} />
+          </CookieConsentProvider>
         </MantineProvider>
       </body>
     </html>

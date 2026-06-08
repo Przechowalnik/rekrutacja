@@ -7,7 +7,7 @@
   },
   "categoryCityFaq": {
     "q1": {
-      "answer": "Prices of {{categoryPlural}} in {{city}} depend on location, area, standard and rental length. Check {{count}} current listings on MaszBox to compare prices and find the best option. Many listings allow price negotiation directly with the owner.",
+      "answer": "Prices of {{categoryPlural}} in {{city}} depend on location, area, standard and rental length. Check {{count}} current listings on do-pracy.pl to compare prices and find the best option. Many listings allow price negotiation directly with the owner.",
       "question": "How much does it cost to rent {{categoryPlural}} in {{city}}?"
     },
     "q2": {
@@ -19,7 +19,7 @@
       "question": "Can I rent {{categoryPlural}} in {{city}} short-term?"
     },
     "q4": {
-      "answer": "Yes. MaszBox is a listings platform where both individuals and companies can add {{categoryPlural}} listings in {{city}} and other cities. Create an account and add a listing - you will reach people actively looking for spaces to rent or buy.",
+      "answer": "Yes. do-pracy.pl is a listings platform where both individuals and companies can add {{categoryPlural}} listings in {{city}} and other cities. Create an account and add a listing - you will reach people actively looking for spaces to rent or buy.",
       "question": "Can I add my own {{categoryPlural}} listing in {{city}}?"
     },
     "q5": {
@@ -37,11 +37,11 @@
       "question": "What spaces can I rent or buy in {{city}}?"
     },
     "q2": {
-      "answer": "Prices in {{city}} ({{voivodeship}} voivodeship) depend on category, area and location. Storage units and basements are usually cheapest, commercial units and warehouses in the center are most expensive. Compare {{count}} current listings on MaszBox.",
+      "answer": "Prices in {{city}} ({{voivodeship}} voivodeship) depend on category, area and location. Storage units and basements are usually cheapest, commercial units and warehouses in the center are most expensive. Compare {{count}} current listings on do-pracy.pl.",
       "question": "How much does it cost to rent a space in {{city}}?"
     },
     "q3": {
-      "answer": "Yes. MaszBox is a listings platform - you can add your own offer for rent or sale of spaces in {{city}}. Create an account, describe your offer, add photos and publish. Your listing will reach people actively searching for spaces in {{city}}.",
+      "answer": "Yes. do-pracy.pl is a listings platform - you can add your own offer for rent or sale of spaces in {{city}}. Create an account, describe your offer, add photos and publish. Your listing will reach people actively searching for spaces in {{city}}.",
       "question": "Can I add my own listing in {{city}}?"
     },
     "q4": {

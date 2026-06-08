@@ -1,18 +1,15 @@
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { Alert, Box, Flex } from "@mantine/core";
+import { Box, Flex } from "@mantine/core";
 import type { FormErrors } from "@mantine/form";
 import { useForm } from "@mantine/form";
 import { notifications } from "@mantine/notifications";
 import type { Dispatch, SetStateAction, SyntheticEvent } from "react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useNavigate, useSearchParams } from "react-router";
+import { useNavigate } from "react-router";
 
 import { namespaces } from "~/constants/namespaces";
-import { queryKey } from "~/constants/queryAndHashes";
 import { E_Routes } from "~/constants/routes";
 import { useFetcherWithActions } from "~/hooks/useFetcherWithActions";
-import { useLayout } from "~/hooks/useLayout";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useRecaptcha } from "~/hooks/useRecaptcha";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
@@ -20,10 +17,8 @@ import { E_CountryCode, E_TaxCountry } from "~/models/enums";
 import { Button } from "~/ui/Button";
 import { ButtonArrowLeft } from "~/ui/ButtonArrowLeft";
 import { Checkbox } from "~/ui/Checkbox";
-import { Collapse } from "~/ui/Collapse";
 import { Fieldset } from "~/ui/Fieldset";
 import { Form } from "~/ui/Form";
-import { IconSeo } from "~/ui/IconSeo";
 import { Input } from "~/ui/Input";
 import { InputPhone } from "~/ui/InputPhone";
 import { InputTax } from "~/ui/InputTax";
@@ -32,20 +27,14 @@ import { Link } from "~/ui/Link";
 import { PasswordSafeVisualization } from "~/ui/PasswordSafeVisualization";
 import { Section } from "~/ui/Section";
 import { SegmentControl } from "~/ui/SegmentControl";
-import { Text } from "~/ui/Text";
 import { convertToFormData, showAllErrorsForm } from "~/utilities/form";
 
 export const RegistrationCompanyPage = () => {
-  const [addedReferralCode, setAddedReferralCode] = useState<null | string>(
-    null,
-  );
   const [password, setPassword] = useState("");
   const [passwordRepeat, setPasswordRepeat] = useState("");
 
-  const { platformColor } = useLayout();
   const { executeV3 } = useRecaptcha();
   const navigate = useNavigate();
-  const [searchParameters] = useSearchParams();
   const fetcher = useFetcherWithActions({});
   const { t: tCommon } = useTranslation(namespaces.common);
   const { i18n, t } = useTranslation(namespaces.registrationCompany);
@@ -65,19 +54,12 @@ export const RegistrationCompanyPage = () => {
       [formNames.language]: i18n.language.toUpperCase(),
       [formNames.phoneCountryCode]: E_CountryCode.POLAND,
       [formNames.phoneNumber]: "",
-      [formNames.referralCode]:
-        searchParameters.get(queryKey.referralCode) ?? "",
       [formNames.taxCountry]: E_TaxCountry.POLAND,
       [formNames.taxNumber]: "",
       [formNames.userFirstName]: "",
       [formNames.userLastName]: "",
     },
     mode: "uncontrolled",
-    onValuesChange(values) {
-      const { referralCode } = values;
-
-      setAddedReferralCode(referralCode ?? null);
-    },
     validate: {
       [formNames.checkboxAcceptNewsletter]: value =>
         checkFormValidator({
@@ -124,12 +106,6 @@ export const RegistrationCompanyPage = () => {
           optional: true,
           value,
         }),
-      [formNames.referralCode]: value =>
-        checkFormValidator({
-          formName: formNames.referralCode,
-          optional: true,
-          value,
-        }),
       [formNames.taxCountry]: value =>
         checkFormValidator({
           formName: formNames.taxCountry,
@@ -151,11 +127,6 @@ export const RegistrationCompanyPage = () => {
         }),
     },
   });
-
-  useEffect(() => {
-    const newReferralCode = searchParameters.get(queryKey.referralCode);
-    setAddedReferralCode(newReferralCode ?? null);
-  }, []);
 
   const handleSubmit = async (
     values: typeof form.values,
@@ -194,7 +165,6 @@ export const RegistrationCompanyPage = () => {
       email,
       phoneCountryCode,
       phoneNumber,
-      referralCode,
       taxCountry,
       taxNumber,
       userFirstName,
@@ -266,7 +236,6 @@ export const RegistrationCompanyPage = () => {
         [formNames.password]: password,
         [formNames.passwordRepeat]: passwordRepeat,
         [formNames.recaptcha]: newRecaptchaToken,
-        [formNames.referralCode]: referralCode,
         [formNames.taxCountry]: taxCountry,
         [formNames.taxNumber]: taxNumber,
         [formNames.userFirstName]: userFirstName,
@@ -542,25 +511,6 @@ export const RegistrationCompanyPage = () => {
               })}
             />
           </Fieldset>
-          <Input
-            clearable
-            form={form}
-            key={form.key(formNames.referralCode)}
-            name={formNames.referralCode}
-            required={false}
-            type="text"
-            {...form.getInputProps(formNames.referralCode)}
-          />
-          <Collapse fullWith opened={!!addedReferralCode}>
-            <Alert
-              color={platformColor}
-              icon={<IconSeo icon={faCircleInfo} size="xl" />}
-            >
-              <Text c={platformColor} fw="bold" size="md">
-                {t("informationReferral")}
-              </Text>
-            </Alert>
-          </Collapse>
         </InputWrapper>
       </Section>
     </Form>

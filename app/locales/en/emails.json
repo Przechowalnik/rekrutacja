@@ -1,13 +1,13 @@
 {
   "company": {
     "address": "ul. Sienkiewicza 36/5, 26-600 Radom",
-    "link": "https://maszbox.pl",
-    "name": "Maszbox Sp. z o. o.",
+    "link": "https://do-pracy.pl",
+    "name": "do-pracy.pl",
     "taxId": "9482656317"
   },
   "footer": {
     "content": "{{companyName}}<br/>{{companyAddress}}<br/>Tax ID: {{companyTaxId}}<br/><br/>©{{currentYear}} {{companyName}} - thank you for being with us",
-    "faq": "<b>Have questions?</b> We have prepared a [Questions and Answers](https://maszbox.pl/pomoc) section.<br/>If needed, please visit our [Contact](https://maszbox.pl/kontakt) page.<br/><br/>Kind regards,<br/>The Maszbox Team",
+    "faq": "<b>Have questions?</b> We have prepared a [Questions and Answers](https://do-pracy.pl/pomoc) section.<br/>If needed, please visit our [Contact](https://do-pracy.pl/kontakt) page.<br/><br/>Kind regards,<br/>The do-pracy.pl Team",
     "policyPrivacy": "Privacy Policy",
     "termsAndCondition": "Terms and Conditions",
     "unsubscribe": "Unsubscribe"
@@ -15,31 +15,31 @@
   "footerParagraph": "Best regards 😊",
   "preview": "Hello!",
   "sendBackupChangedEmail": {
-    "paragraph1": "Your email address has been changed back on the MaszBox platform.",
-    "subject": "Your email address has been changed back on the MaszBox platform"
+    "paragraph1": "Your email address has been changed back on the do-pracy.pl platform.",
+    "subject": "Your email address has been changed back on the do-pracy.pl platform"
   },
   "sendChangedEmail": {
-    "paragraph1": "Your email address has been changed on the MaszBox platform.",
+    "paragraph1": "Your email address has been changed on the do-pracy.pl platform.",
     "paragraph2": "If this wasn’t you, please click the link below. It’s valid for 24 hours only.",
     "paragraph3": "Link to undo changes.",
-    "subject": "Your email address has been changed on the MaszBox platform"
+    "subject": "Your email address has been changed on the do-pracy.pl platform"
   },
   "sendChangedPassword": {
-    "paragraph1": "Your password has been changed on the MaszBox platform.",
-    "subject": "Your password has been changed on the MaszBox platform"
+    "paragraph1": "Your password has been changed on the do-pracy.pl platform.",
+    "subject": "Your password has been changed on the do-pracy.pl platform"
   },
   "sendEmailIsVerified": {
     "paragraph1": "Your email address has been successfully verified using the verification code. This is an important step in securing your account. 😎",
     "paragraph2": "If you didn’t perform this action, please contact our support team so we can assist you. 😥",
     "paragraph3": "Thank you! 😍",
     "preview": "Congratulations!",
-    "subject": "Email address verified on the MaszBox platform",
+    "subject": "Email address verified on the do-pracy.pl platform",
     "title": "Congratulations! 😀"
   },
   "sendEmailOTPCode": {
     "paragraph1": "To complete the two-step authentication process, please copy the code below:",
     "paragraph2": "Then enter this code in the appropriate field to finish the activation process.",
-    "subject": "Two-step authentication code for the MaszBox platform"
+    "subject": "Two-step authentication code for the do-pracy.pl platform"
   },
   "sendInvoice": {
     "paragraph1": "Attached you will find the VAT invoice for our services. Please review the attached document.",
@@ -51,21 +51,21 @@
     "paragraph2": "To extend your listing, please repeat the payment process. We’re here to help if needed.",
     "paragraph3": "Your listing renewal will be possible once the payment is successfully processed.",
     "paragraph4": "Thank you for using our platform. If you have any questions, feel free to contact us — we’re happy to help!",
-    "subject": "Failed payment for listing renewal on the MaszBox platform",
+    "subject": "Failed payment for listing renewal on the do-pracy.pl platform",
     "title2": "Payment issue"
   },
   "sendRecoveryAccountPassword": {
-    "paragraph1": "We understand you’re having trouble accessing your account on the MaszBox platform. We’d like to help you recover it so you can continue using our services.",
+    "paragraph1": "We understand you’re having trouble accessing your account on the do-pracy.pl platform. We’d like to help you recover it so you can continue using our services.",
     "paragraph2": "Please click the link below to start the account recovery process:",
     "paragraph3": "Account recovery link.",
-    "subject": "Account recovery on the MaszBox platform"
+    "subject": "Account recovery on the do-pracy.pl platform"
   },
   "sendSmsCreditsPurchased": {
     "paragraph1": "Thank you for purchasing SMS credits on our platform! We appreciate your trust and are glad to help you communicate effectively.",
     "paragraph2": "Your purchase is currently being processed. Once complete, the SMS credits will be available in your account for immediate use.",
     "paragraph3": "If you have any questions or need support, our team is here to assist you. Feel free to reach out anytime.",
     "paragraph4": "Thank you again for choosing our platform. You’ll soon be able to fully use your purchased SMS credits to achieve your communication goals!",
-    "subject": "SMS credit purchase on the MaszBox platform",
+    "subject": "SMS credit purchase on the do-pracy.pl platform",
     "title2": "What’s next?"
   },
   "sendSubscriptionCancelled": {
@@ -73,7 +73,7 @@
     "paragraph2": "During this time, you can continue using all subscription features. After the billing period ends, your subscription will automatically expire, and your account will revert to the free version.",
     "paragraph3": "If you change your mind or wish to renew your subscription in the future, we’ll be happy to welcome you back anytime.",
     "paragraph4": "Thank you for using our platform. We hope our services met your expectations. If you have any questions, we’re here to help.",
-    "subject": "Subscription cancellation on the MaszBox platform",
+    "subject": "Subscription cancellation on the do-pracy.pl platform",
     "title2": "Subscription active until end of billing period"
   },
   "sendSubscriptionCreated": {
@@ -81,14 +81,14 @@
     "paragraph2": "Your purchase is currently being processed. Once complete, all subscription features will be automatically activated, giving you full access to our resources.",
     "paragraph3": "If you have any questions or need assistance, our team is ready to help and ensure the best possible experience.",
     "paragraph4": "Thank you once again for choosing our platform. You’ll soon enjoy all the benefits of your subscription!",
-    "subject": "Subscription purchase on the MaszBox platform",
+    "subject": "Subscription purchase on the do-pracy.pl platform",
     "title2": "What’s next?"
   },
   "sendSubscriptionDeleted": {
     "paragraph1": "Your subscription on our platform has been successfully canceled and is now inactive. From now on, your account has reverted to the free version with limited features.",
     "paragraph2": "If you decide to regain full access in the future, we’ll be happy to welcome you back. You can renew your subscription anytime to unlock all platform features.",
     "paragraph3": "Thank you for using our platform. We hope our services met your expectations. If you need help or have questions, we’re here for you.",
-    "subject": "Subscription canceled on the MaszBox platform",
+    "subject": "Subscription canceled on the do-pracy.pl platform",
     "title2": "Subscription ended"
   },
   "sendSubscriptionPaymentFailed": {
@@ -96,7 +96,7 @@
     "paragraph2": "There will be a total of 3 payment attempts. If issues persist, we’ll contact you to assist in resolving them.",
     "paragraph3": "The next payment attempt will occur on:",
     "paragraph4": "Thank you for using our platform. If you have questions, please reach out — we’re here to help!",
-    "subject": "Failed subscription payment on the MaszBox platform",
+    "subject": "Failed subscription payment on the do-pracy.pl platform",
     "title2": "Three payment attempts"
   },
   "sendSubscriptionTrialEndingWithBilling": {
@@ -119,14 +119,14 @@
     "paragraph1": "To complete the account activation process, please copy the code below:",
     "paragraph2": "Then go to the login page on our platform and enter the code in the appropriate field to finish activation.",
     "paragraph3": "Thank you for choosing our service! 😍",
-    "preview": "Welcome to MaszBox!",
-    "subject": "Activation code for the MaszBox platform",
-    "title": "Welcome to MaszBox! 😎"
+    "preview": "Welcome to do-pracy.pl!",
+    "subject": "Activation code for the do-pracy.pl platform",
+    "title": "Welcome to do-pracy.pl! 😎"
   },
   "sendVerifiedNewEmail": {
     "paragraph1": "To complete the email change process, please copy the code below:",
     "paragraph2": "Then enter this code in the appropriate field to finish activation.",
-    "subject": "Activation code for the MaszBox platform"
+    "subject": "Activation code for the do-pracy.pl platform"
   },
   "title": "Welcome! 😎"
 }

@@ -4,20 +4,17 @@ import z from "zod";
 import { namespaces } from "~/constants/namespaces";
 import { E_Routes } from "~/constants/routes";
 import { requireUserSession } from "~/data/auth.server";
-import { isFreeListingsServer } from "~/data/flags.server";
 import { E_Requests } from "~/data/formRequests.server";
 import { E_ListingStatusServer, E_RolesServer } from "~/data/models.server";
 import { responseOnFailure, responseThrowError } from "~/data/response.server";
 import {
   extensionFreeListingListing,
-  extensionListing,
   getReusableListing,
 } from "~/data/reusableListings.server";
 import { dynamic } from "~/hoc/dynamic";
 import { getI18nextNamespaces } from "~/lib/i18nextNamespaces";
 import { E_Roles } from "~/models/enums";
 import { Z_Listing } from "~/models/listing";
-import { Z_Product } from "~/models/product";
 import { RespectLocalization } from "~/ui/RespectLocalization";
 import { RespectSchema } from "~/ui/RespectSchema";
 import { RespectUser } from "~/ui/RespectUser";
@@ -38,7 +35,6 @@ export default function Page() {
       <RespectSchema
         schema={z.object({
           listing: Z_Listing,
-          product: Z_Product,
         })}
       >
         {data => (
@@ -50,7 +46,6 @@ export default function Page() {
             <ReusableListingsPaymentsPage
               isCompany={false}
               listing={data.listing}
-              product={data.product}
             />
           </RespectUser>
         )}
@@ -79,7 +74,6 @@ export const loader = async ({ params, request }: LoaderFunctionArgs) => {
       userCompanyId: undefined,
       userId,
       userSessionVersion,
-      withPlatformProduct: true,
     });
   } catch (error) {
     return responseThrowError({ error });
@@ -95,23 +89,14 @@ export async function action({ params, request }: ActionFunctionArgs) {
 
     switch (request.method) {
       case E_Requests.post: {
-        return isFreeListingsServer()
-          ? await extensionFreeListingListing({
-              isCompany: false,
-              listingIdOrSlug: params?.listingIdOrSlug,
-              request,
-              userCompanyId: undefined,
-              userId,
-              userSessionVersion,
-            })
-          : await extensionListing({
-              isCompany: false,
-              listingIdOrSlug: params?.listingIdOrSlug,
-              request,
-              userCompanyId: undefined,
-              userId,
-              userSessionVersion,
-            });
+        return await extensionFreeListingListing({
+          isCompany: false,
+          listingIdOrSlug: params?.listingIdOrSlug,
+          request,
+          userCompanyId: undefined,
+          userId,
+          userSessionVersion,
+        });
       }
     }
 

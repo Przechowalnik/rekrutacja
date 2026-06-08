@@ -1,6 +1,0 @@
-{
-  "buttonAdd": "Doładuj",
-  "description": "Na tej stronie możesz <gradient>zakupić pakiety SMS-ów</gradient>, które umożliwią Ci łatwą i szybką komunikację z klientami. Dzięki SMS-om możesz wysyłać potwierdzenia wizyt zaraz po ich umówieniu oraz przypomnienia dzień przed planowaną wizytą, o ile funkcja ta została włączona w <a href='companySettings'>Ustawieniach</a>.<br/><br/><b>Wybierz odpowiedni pakiet SMS-ów</b> w zależności od potrzeb Twojego biznesu. Nasza platforma oferuje elastyczne opcje dopasowane do różnych ilości wiadomości, dzięki czemu możesz zaoszczędzić czas i zasoby, skutecznie zarządzając komunikacją.<br/><br/><b>Zwiększ efektywność swojej obsługi i pamiętaj, że regularne przypomnienia mogą pomóc zmniejszyć liczbę nieobecności oraz poprawić satysfakcję klientów!",
-  "information": "Dostępna ilość punktów: {{pointsBalance}}",
-  "title": "Doładuj SMS-y"
-}

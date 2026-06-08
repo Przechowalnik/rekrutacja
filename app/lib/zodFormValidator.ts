@@ -24,8 +24,6 @@ import {
   isInListingUnitTypes,
   isInListingUsageOptions,
   isInListingUtilityOptions,
-  isInPlanIntervals,
-  isInPlanTypes,
   isInReportType,
   isInTaxCountries,
 } from "~/models/enums";
@@ -61,13 +59,6 @@ export const formNames = {
   autocompleteAddress: "autocompleteAddress",
   autocompletePlaceId: "autocompletePlaceId",
   autocompleteSessionToken: "autocompleteSessionToken",
-  blogPostContent: "blogPostContent",
-  blogPostDescription: "blogPostDescription",
-  blogPostDescriptionSeo: "blogPostDescriptionSeo",
-  blogPostId: "blogPostId",
-  blogPostSlug: "blogPostSlug",
-  blogPostTitle: "blogPostTitle",
-  blogPostTitleSeo: "blogPostTitleSeo",
   bugActionsBeforeError: "bugActionsBeforeError",
   bugAnswer: "bugAnswer",
   bugDescription: "bugDescription",
@@ -111,8 +102,6 @@ export const formNames = {
   companyName: "companyName",
   companyPhoneCountryCode: "companyPhoneCountryCode",
   companyPhoneNumber: "companyPhoneNumber",
-  companySettingsLoginFacebook: "companySettingsLoginFacebook",
-  companySettingsLoginGoogle: "companySettingsLoginGoogle",
   companySettingsLoginPassword: "companySettingsLoginPassword",
   companySettingsTwoFactorAuthenticationEnabled:
     "companySettingsTwoFactorAuthenticationEnabled",
@@ -839,102 +828,6 @@ export const checkFormValidator = ({
       });
       if (!isValid) {
         return "badBugAnswer";
-      }
-      return null;
-    }
-
-    case "blogPostTitle": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 100,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostTitle";
-      }
-      return null;
-    }
-
-    case "blogPostTitleSeo": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 55,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostTitle";
-      }
-      return null;
-    }
-
-    case "blogPostContent": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 10_000,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostContent";
-      }
-      return null;
-    }
-
-    case "blogPostDescription": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 200,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostDescription";
-      }
-      return null;
-    }
-
-    case "blogPostSlug": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 100,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostSlug";
-      }
-      return null;
-    }
-
-    case "blogPostDescriptionSeo": {
-      if (typeof value !== "string") {
-        return "somethingWentWrong";
-      }
-
-      const isValid = validStringMinAndMaxLength({
-        maxLength: 155,
-        minLength: 1,
-        value,
-      });
-      if (!isValid) {
-        return "badBlogPostDescription";
       }
       return null;
     }
@@ -1776,7 +1669,6 @@ export const checkFormValidator = ({
     case "lastId":
     case "autocompletePlaceId":
     case "autocompleteSessionToken":
-    case "blogPostId":
     case "listingId":
     case "invoiceId":
     case "subscriptionId":
@@ -2535,48 +2427,6 @@ export const checkFormValidator = ({
       } else {
         return "somethingWentWrong";
       }
-    }
-
-    case "planType": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInPlanTypes(validValue);
-      if (!isValid) {
-        return "badPlanType";
-      }
-      return null;
-    }
-
-    case "planInterval": {
-      if (
-        !(typeof value === "object" || typeof value === "string") ||
-        Array.isArray(value) ||
-        value === null ||
-        isDate(value) ||
-        value instanceof File
-      ) {
-        return "somethingWentWrong";
-      }
-
-      let validValue = "";
-      validValue = typeof value === "string" ? value : value.value;
-
-      const isValid = isInPlanIntervals(validValue);
-      if (!isValid) {
-        return "badPlanInterval";
-      }
-      return null;
     }
 
     case "planListingDurationMonths": {
@@ -3659,8 +3509,6 @@ export const checkFormValidator = ({
     case "checkboxExchangeActive":
     case "companySettingsTwoFactorAuthenticationEnabled":
     case "companySettingsLoginPassword":
-    case "companySettingsLoginFacebook":
-    case "companySettingsLoginGoogle":
     case "bugIsReproducible":
     case "checkboxSubscriptionDeleteImmediately":
     case "checkboxCouponActive":

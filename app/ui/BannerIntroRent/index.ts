@@ -1,1 +1,0 @@
-export { BannerIntroRent } from "./BannerIntroRent";

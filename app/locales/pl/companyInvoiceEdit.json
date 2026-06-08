@@ -1,5 +1,0 @@
-{
-  "alert": "Jeśli podasz błędny numer NIP (Numer Identyfikacji Podatkowej), wystąpi błąd podczas aktualizacji danych do faktur. Sprawdź dwukrotnie, czy wszystkie dane są poprawne.",
-  "description": "Pamiętaj, że zmiany wprowadzone na tej stronie będą widoczne na przyszłych fakturach. Sprawdź, czy wszystko się zgadza, żeby uniknąć problemów.",
-  "title": "Aktualizuj dane do faktur"
-}

@@ -59,30 +59,6 @@ export const E_BugStatus = {
   RESOLVED: "RESOLVED",
 } as const;
 
-export const E_SubscriptionStatus = {
-  ACTIVE: "ACTIVE",
-  CANCELLED: "CANCELLED",
-  PENDING: "PENDING",
-  TO_BE_CANCELLED: "TO_BE_CANCELLED",
-  TRIALING: "TRIALING",
-  UNPAID: "UNPAID",
-} as const;
-
-export const E_PlanInterval = {
-  DAY: "DAY",
-  MONTH: "MONTH",
-  WEEK: "WEEK",
-  YEAR: "YEAR",
-} as const;
-
-export const E_PlanType = {
-  BASIC: "BASIC",
-  PREMIUM: "PREMIUM",
-  STANDARD: "STANDARD",
-  TRIAL: "TRIAL",
-  ULTIMATE: "ULTIMATE",
-} as const;
-
 export const E_ListingType = {
   RENT: "RENT",
   SALE: "SALE",
@@ -285,9 +261,6 @@ export const Z_CompanyWorkerPermissions = z.enum([
 export const Z_BugPriority = z.nativeEnum(E_BugPriority);
 export const Z_BugEnvironment = z.nativeEnum(E_BugEnvironment);
 export const Z_BugStatus = z.nativeEnum(E_BugStatus);
-export const Z_SubscriptionStatus = z.nativeEnum(E_SubscriptionStatus);
-export const Z_PlanInterval = z.nativeEnum(E_PlanInterval);
-export const Z_PlanType = z.nativeEnum(E_PlanType);
 export const Z_ListingType = z.nativeEnum(E_ListingType);
 export const Z_ListingStatus = z.nativeEnum(E_ListingStatus);
 export const Z_ListingDeleteReason = z.nativeEnum(E_ListingDeleteReason);
@@ -324,9 +297,6 @@ export type T_CompanyWorkerPermissions = z.infer<
 export type T_BugPriority = z.infer<typeof Z_BugPriority>;
 export type T_BugEnvironment = z.infer<typeof Z_BugEnvironment>;
 export type T_BugStatus = z.infer<typeof Z_BugStatus>;
-export type T_SubscriptionStatus = z.infer<typeof Z_SubscriptionStatus>;
-export type T_PlanInterval = z.infer<typeof Z_PlanInterval>;
-export type T_PlanType = z.infer<typeof Z_PlanType>;
 export type T_ListingType = z.infer<typeof Z_ListingType>;
 export type T_ListingPaymentStatus = z.infer<typeof Z_ListingPaymentStatus>;
 export type T_ListingStatus = z.infer<typeof Z_ListingStatus>;
@@ -408,21 +378,6 @@ export const allBugEnvironment: T_BugEnvironment[] = [
   E_BugEnvironment.DESKTOP_EDGE,
   E_BugEnvironment.DESKTOP_FIREFOX,
   E_BugEnvironment.DESKTOP_OTHER,
-];
-
-export const allPlanIntervals: T_PlanInterval[] = [
-  E_PlanInterval.DAY,
-  E_PlanInterval.WEEK,
-  E_PlanInterval.MONTH,
-  E_PlanInterval.YEAR,
-];
-
-export const allPlanTypes: T_PlanType[] = [
-  E_PlanType.TRIAL,
-  E_PlanType.BASIC,
-  E_PlanType.STANDARD,
-  E_PlanType.PREMIUM,
-  E_PlanType.ULTIMATE,
 ];
 
 export const allLanguages: T_Language[] = [E_Language.PL, E_Language.EN];
@@ -648,14 +603,6 @@ export const isInBugStatus = (value: string) => {
 
 export const isInBugEnvironment = (value: string) => {
   return allBugEnvironment.includes(value as T_BugEnvironment);
-};
-
-export const isInPlanTypes = (value: string) => {
-  return allPlanTypes.includes(value as T_PlanType);
-};
-
-export const isInPlanIntervals = (value: string) => {
-  return allPlanIntervals.includes(value as T_PlanInterval);
 };
 
 export const isInLanguages = (value: string) => {

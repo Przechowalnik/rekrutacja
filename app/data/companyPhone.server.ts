@@ -8,7 +8,6 @@ import { generateRandomDigits } from "./functions.server";
 import { checkPassword, hashPassword } from "./hash.server";
 import { sendVerifiedSMS } from "./hostedSms.server";
 import { E_RolesServer } from "./models.server";
-import { addPointsFromReferral } from "./points.server";
 import { getAndCheckUser } from "./prismaRequest.server";
 import {
   responseOnFailure,
@@ -148,7 +147,6 @@ export const confirmCompanyNewPhone = async ({
         select: {
           company: {
             select: {
-              createdFromReferralCode: true,
               phone: {
                 select: {
                   code: true,
@@ -211,30 +209,6 @@ export const confirmCompanyNewPhone = async ({
         request,
         status: 422,
       });
-    }
-
-    //referral code start
-    if (
-      !existingUser?.company?.phone?.verifiedAt &&
-      existingUser?.company?.createdFromReferralCode
-    ) {
-      const countFoundCompanyWithThisPhone = await database.companyPhone.count({
-        where: {
-          countryCode: existingUser?.company?.phone.countryCodeToConfirm,
-          number: existingUser?.company?.phone?.numberToConfirm,
-        },
-      });
-
-      if (countFoundCompanyWithThisPhone === 0) {
-        const resultAddPoints = await addPointsFromReferral({
-          referralCode: existingUser.company.createdFromReferralCode,
-          request,
-        });
-
-        if (resultAddPoints?.responseError) {
-          return await responseOnFailure(resultAddPoints?.responseError);
-        }
-      }
     }
 
     await database.companyPhone.update({

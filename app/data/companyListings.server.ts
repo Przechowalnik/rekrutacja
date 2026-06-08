@@ -7,14 +7,9 @@ import { getCookieValue, getLastIdCookieName } from "./cookies.server";
 import {
   E_ListingPaymentStatusServer,
   E_ListingStatusServer,
-  E_SubscriptionStatusServer,
 } from "./models.server";
 import { getAndCheckUser } from "./prismaRequest.server";
-import {
-  prismaSelectCompanyFreeTrial,
-  prismaSelectListings,
-  prismaSelectSubscription,
-} from "./prismaSelect.server";
+import { prismaSelectListings } from "./prismaSelect.server";
 import {
   responseGetOnFailure,
   responseGetOnFailureLogout,
@@ -22,8 +17,9 @@ import {
   responseOnFailureServer,
   responseOnSuccess,
 } from "./response.server";
-import { getCompanyActivePlan } from "./subscription.server";
 import { checkZodValidator, zodValidator } from "./zodValidator.server";
+
+const FREE_LISTING_DURATION_MONTHS = 1;
 
 export const getListingsCompany = async ({
   request,
@@ -249,23 +245,10 @@ export const extendListingCompany = async ({
         select: {
           company: {
             select: {
-              freeTrial: {
-                select: prismaSelectCompanyFreeTrial,
-              },
+              id: true,
               phone: {
                 select: {
                   verifiedAt: true,
-                },
-              },
-              subscriptions: {
-                orderBy: {
-                  createdAt: "asc",
-                },
-                select: prismaSelectSubscription,
-                where: {
-                  status: {
-                    not: E_SubscriptionStatusServer.CANCELLED,
-                  },
                 },
               },
             },
@@ -337,68 +320,12 @@ export const extendListingCompany = async ({
         status: 422,
       });
     }
-    let companyListingDurationMonths = 0;
-
-    if (isCompany) {
-      if (!existingUser?.company) {
-        return await responseOnFailure({
-          message: "somethingWentWrong",
-          request,
-          status: 401,
-        });
-      }
-
-      const validFreeTrial = existingUser?.company?.freeTrial
-        ? {
-            endDate: existingUser.company.freeTrial.endDate,
-            id: existingUser.company.freeTrial.id,
-            plan: existingUser.company.freeTrial.plan,
-            startDate: existingUser.company.freeTrial.startDate,
-          }
-        : null;
-
-      const foundActivePlan = getCompanyActivePlan({
-        freeTrial: validFreeTrial,
-        subscriptions: existingUser.company.subscriptions,
+    if (isCompany && !existingUser?.company) {
+      return await responseOnFailure({
+        message: "somethingWentWrong",
+        request,
+        status: 401,
       });
-
-      if (foundActivePlan) {
-        const startDateToSearch = dayjs().startOf("month").toDate();
-        const endDateToSearch = dayjs().endOf("month").toDate();
-
-        const countActiveCompanyListingsInMonth =
-          await database.listingPayment.count({
-            where: {
-              createdAt: {
-                gte: startDateToSearch,
-                lte: endDateToSearch,
-              },
-              listing: {
-                companyId: existingUser?.company?.id,
-              },
-              status: E_ListingPaymentStatusServer.FREE,
-            },
-          });
-
-        companyListingDurationMonths = foundActivePlan.listingDurationMonths;
-
-        if (
-          countActiveCompanyListingsInMonth >=
-          foundActivePlan.maximumListingsInMonth
-        ) {
-          return await responseOnFailure({
-            message: "somethingWentWrong",
-            request,
-            status: 422,
-          });
-        }
-      } else {
-        return await responseOnFailure({
-          message: "somethingWentWrong",
-          request,
-          status: 422,
-        });
-      }
     }
 
     const validDateToNewDateExpiresAt = foundListing?.expiresAt
@@ -406,7 +333,8 @@ export const extendListingCompany = async ({
       : dayjs();
 
     const newDateExpiresAt = validDateToNewDateExpiresAt
-      .add(companyListingDurationMonths, "month")
+      .add(FREE_LISTING_DURATION_MONTHS, "month")
+      .add(1, "day")
       .toDate();
 
     await database.listingPayment.create({
@@ -415,7 +343,7 @@ export const extendListingCompany = async ({
         expiresAtBeforeAdd: foundListing?.expiresAt,
         free: true,
         listingId: foundListing.id,
-        monthsToAdd: companyListingDurationMonths,
+        monthsToAdd: FREE_LISTING_DURATION_MONTHS,
         status: E_ListingPaymentStatusServer.FREE,
       },
     });

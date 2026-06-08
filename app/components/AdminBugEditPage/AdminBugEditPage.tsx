@@ -12,11 +12,8 @@ import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { useSubmitWithActions } from "~/hooks/useSubmitWithActions";
 import { checkFormValidator, formNames } from "~/lib/zodFormValidator";
 import type { T_Bug } from "~/models/bug";
-import type { T_PlatformSetting } from "~/models/platformSetting";
-import { Button } from "~/ui/Button";
 import { ButtonArrowLeft } from "~/ui/ButtonArrowLeft";
 import { ButtonSave } from "~/ui/ButtonSave";
-import { generatePointsFromStatus } from "~/ui/CardBug";
 import { Checkbox } from "~/ui/Checkbox";
 import { DateTimePicker } from "~/ui/DateTimePicker";
 import { Form } from "~/ui/Form";
@@ -39,17 +36,11 @@ const ModalAuthenticator = dynamic(() =>
 
 type T_AdminBugEditPage = {
   bug: T_Bug;
-  platformSetting: T_PlatformSetting;
 };
 
-export const AdminBugEditPage = ({
-  bug,
-  platformSetting,
-}: T_AdminBugEditPage) => {
+export const AdminBugEditPage = ({ bug }: T_AdminBugEditPage) => {
   const [haveChanges, setHaveChanges] = useState(false);
   const [authenticatorUpdateBugOpen, setAuthenticatorUpdateBugOpen] =
-    useState(false);
-  const [authenticatorPointsPayOpen, setAuthenticatorPointsPayOpen] =
     useState(false);
   const { t } = useTranslation(namespaces.adminBugEdit);
   const { t: tCommon } = useTranslation(namespaces.common);
@@ -93,46 +84,9 @@ export const AdminBugEditPage = ({
     },
   });
 
-  const generatedPoints =
-    bug.companyId && bug.priority
-      ? generatePointsFromStatus({
-          bug,
-          platformSetting,
-        })
-      : null;
-
-  const handleCloseAuthenticatorPointsPay = useCallback(() => {
-    setAuthenticatorPointsPayOpen(false);
-  }, []);
-
   const handleCloseAuthenticatorUpdateBug = useCallback(() => {
     setAuthenticatorUpdateBugOpen(false);
   }, []);
-
-  const handlePointsPay = useCallback(() => {
-    setAuthenticatorPointsPayOpen(true);
-  }, []);
-
-  const handleAuthenticatorPointsPayOnSuccess = useCallback(
-    async (authenticator: number | string) => {
-      setAuthenticatorPointsPayOpen(false);
-
-      submit(
-        convertToFormData({
-          [formNames.authenticator]: authenticator,
-          [formNames.bugId]: bug.id,
-        }),
-        {
-          action: getLocalizedRoute({
-            extraPath: `/${bug.id}`,
-            route: E_Routes.adminBugEdit,
-          }),
-          method: "post",
-        },
-      );
-    },
-    [bug],
-  );
 
   const handleAuthenticatorUpdateBugOnSuccess = useCallback(
     async (authenticator: number | string) => {
@@ -186,11 +140,6 @@ export const AdminBugEditPage = ({
         onSuccess={handleAuthenticatorUpdateBugOnSuccess}
         opened={authenticatorUpdateBugOpen}
       />
-      <ModalAuthenticator
-        onClose={handleCloseAuthenticatorPointsPay}
-        onSuccess={handleAuthenticatorPointsPayOnSuccess}
-        opened={authenticatorPointsPayOpen}
-      />
       <Form onSubmit={form.onSubmit(handleSubmit, handleSubmitErrors)}>
         <Section
           breadcrumbs={[
@@ -210,11 +159,6 @@ export const AdminBugEditPage = ({
               >
                 <ButtonArrowLeft />
               </Link>
-              {generatedPoints && !bug.pointsPaidAt && (
-                <Button onClick={handlePointsPay} variant="light">
-                  {t("buttonPointsPay")}
-                </Button>
-              )}
               <ButtonSave
                 disabled={!haveChanges}
                 tooltip={{
@@ -263,29 +207,6 @@ export const AdminBugEditPage = ({
               form={form}
               required
             />
-            {generatedPoints && (
-              <>
-                <Input
-                  disabled
-                  disabledWithOpacity={false}
-                  label={t("bugPointsLabel")}
-                  required={false}
-                  value={generatedPoints}
-                />
-                <DateTimePicker
-                  description={t("bugPointsPaidAtDescription")}
-                  disabled
-                  disabledWithOpacity={false}
-                  name={formNames.bugPointsPaidAt}
-                  required={false}
-                  value={
-                    bug.pointsPaidAt
-                      ? dayjs(bug.pointsPaidAt).toDate()
-                      : undefined
-                  }
-                />
-              </>
-            )}
             <Checkbox
               checked={bug.isReproducible}
               disabled

@@ -1,9 +1,5 @@
 /* eslint-disable no-undef */
 import { reactRouter } from "@react-router/dev/vite";
-import {
-  sentryReactRouter,
-  type SentryReactRouterBuildOptions,
-} from "@sentry/react-router";
 import { defineConfig } from "vite";
 import { analyzer } from "vite-bundle-analyzer";
 import viteCompression from "vite-plugin-compression";
@@ -24,12 +20,6 @@ const isDevelopmentOrTests = () => {
 const isPreview = () => {
   const localEnvironment = (process.env.VITE_VERCEL_ENV ?? "").toLowerCase();
   return localEnvironment === "preview";
-};
-
-const sentryConfig: SentryReactRouterBuildOptions = {
-  authToken: process.env.SENTRY_AUTH_TOKEN,
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
 };
 
 const setWebmanifestMime = {
@@ -83,7 +73,7 @@ export default defineConfig(viteConfig => ({
           ],
           injectRegister: "auto",
           manifest: {
-            description: "MaszBox PWA",
+            description: "do-pracy.pl PWA",
             display: "standalone",
             display_override: ["window-controls-overlay", "standalone"],
             icons: [
@@ -131,9 +121,9 @@ export default defineConfig(viteConfig => ({
               },
             ],
             id: "/",
-            name: "MaszBox",
+            name: "do-pracy.pl",
             protocol_handlers: [
-              { protocol: "web+maszbox", url: "/handle-protocol?url=%s" },
+              { protocol: "web+dopracy", url: "/handle-protocol?url=%s" },
             ],
             screenshots: [
               {
@@ -149,9 +139,9 @@ export default defineConfig(viteConfig => ({
                 type: "image/png",
               },
             ],
-            short_name: "MaszBox",
+            short_name: "do-pracy.pl",
             start_url: "/",
-            theme_color: "#7950f2",
+            theme_color: "#2563eb",
           },
           registerType: "prompt",
           selfDestroying: true,
@@ -162,8 +152,5 @@ export default defineConfig(viteConfig => ({
         viteCompression({ algorithm: "brotliCompress" }),
         viteCompression({ algorithm: "gzip" }),
         analyzer({ enabled: false }),
-        process.env.SENTRY_AUTH_TOKEN && !isPreview()
-          ? sentryReactRouter(sentryConfig, viteConfig)
-          : null,
       ].filter(Boolean),
 }));

@@ -38,8 +38,6 @@ export const updateCompanySettings = async ({
       request,
       validator: {
         [formNames.authenticator]: zodValidator.authenticator,
-        [formNames.companySettingsLoginFacebook]: zodValidator.checkbox,
-        [formNames.companySettingsLoginGoogle]: zodValidator.checkbox,
         [formNames.companySettingsLoginPassword]: zodValidator.checkbox,
         [formNames.companySettingsTwoFactorAuthenticationEnabled]:
           zodValidator.checkbox,
@@ -99,17 +97,11 @@ export const updateCompanySettings = async ({
     }
 
     const {
-      companySettingsLoginFacebook,
-      companySettingsLoginGoogle,
       companySettingsLoginPassword,
       companySettingsTwoFactorAuthenticationEnabled,
     } = resultValidator.data;
 
-    if (
-      !companySettingsLoginFacebook &&
-      !companySettingsLoginGoogle &&
-      !companySettingsLoginPassword
-    ) {
+    if (!companySettingsLoginPassword) {
       return await responseOnFailure({
         message: "companySettingsRequireLoginForm",
         request,
@@ -119,8 +111,6 @@ export const updateCompanySettings = async ({
 
     await database.companySettings.update({
       data: {
-        loginFacebookAt: companySettingsLoginFacebook ? dayjs().toDate() : null,
-        loginGoogleAt: companySettingsLoginGoogle ? dayjs().toDate() : null,
         loginPasswordAt: companySettingsLoginPassword ? dayjs().toDate() : null,
         twoFactorAuthenticationEnabledAt:
           companySettingsTwoFactorAuthenticationEnabled

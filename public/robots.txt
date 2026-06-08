@@ -72,4 +72,4 @@ Disallow: /*?utm_campaign=
 Disallow: /*?utm_term=
 Disallow: /*?utm_content=
 
-Sitemap: https://maszbox.pl/sitemap.xml
+Sitemap: https://do-pracy.pl/sitemap.xml

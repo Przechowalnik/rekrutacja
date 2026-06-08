@@ -1,12 +1,10 @@
 import { randomInt } from "node:crypto";
 
 import { getDistance } from "geolib";
-import { customAlphabet } from "nanoid";
 import slugify from "slugify";
 
 import { E_Language } from "~/models/enums";
 
-import { database } from "./database.server";
 import { E_LanguagesServer } from "./models.server";
 
 const englishRoute = E_Language.EN.toLowerCase();
@@ -224,34 +222,6 @@ export function isNumberOrBooleanAndConvert(value: any): any {
   }
 
   return value;
-}
-
-export async function generateUniqueReferralCode(): Promise<null | string> {
-  const nanoid = customAlphabet("ABCDEFGHIJKLMNOPQRSTUVWXYZ", 12);
-
-  let code: null | string = null;
-  let isUnique = false;
-
-  while (!isUnique) {
-    code = nanoid();
-    const countCompanies = await database.referral.count({
-      where: { code },
-    });
-
-    if (countCompanies === 0) {
-      isUnique = true;
-    }
-  }
-
-  if (!code) {
-    return null;
-  }
-
-  if (code.length < 10) {
-    return null;
-  }
-
-  return code;
 }
 
 export function reduceMultipleSpaces(input: string): string {

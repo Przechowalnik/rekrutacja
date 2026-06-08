@@ -114,22 +114,6 @@ export const getFaq = (
           title: t("faq.accountCompany.addListing.title"),
         },
         {
-          description: t(
-            "faq.accountCompany.exchangePointsForSubscriptionDays.description",
-          ),
-          title: t(
-            "faq.accountCompany.exchangePointsForSubscriptionDays.title",
-          ),
-        },
-        {
-          description: t("faq.accountCompany.checkCompanyPoints.description"),
-          title: t("faq.accountCompany.checkCompanyPoints.title"),
-        },
-        {
-          description: t("faq.accountCompany.findInvoices.description"),
-          title: t("faq.accountCompany.findInvoices.title"),
-        },
-        {
           description: t("faq.accountCompany.deleteEmployee.description"),
           title: t("faq.accountCompany.deleteEmployee.title"),
         },
@@ -188,40 +172,6 @@ export const getFaq = (
           title: t("faq.accountCompany.registerCompanyAccount.title"),
         },
         {
-          description: t("faq.accountCompany.startReferral.description"),
-          title: t("faq.accountCompany.startReferral.title"),
-        },
-        {
-          description: t("faq.accountCompany.invoiceData.description"),
-          title: t("faq.accountCompany.invoiceData.title"),
-        },
-        {
-          description: t("faq.accountCompany.getInvoice.description"),
-          title: t("faq.accountCompany.getInvoice.title"),
-        },
-        {
-          description: t("faq.accountCompany.freeTrial.description"),
-          title: t("faq.accountCompany.freeTrial.title"),
-        },
-        {
-          description: t("faq.accountCompany.createSubscription.description"),
-          title: t("faq.accountCompany.createSubscription.title"),
-        },
-        {
-          description: t(
-            "faq.accountCompany.checkSubscriptionOrFreeTrial.description",
-          ),
-          title: t("faq.accountCompany.checkSubscriptionOrFreeTrial.title"),
-        },
-        {
-          description: t("faq.accountCompany.updateCard.description"),
-          title: t("faq.accountCompany.updateCard.title"),
-        },
-        {
-          description: t("faq.accountCompany.addCard.description"),
-          title: t("faq.accountCompany.addCard.title"),
-        },
-        {
           description: t("faq.accountCompany.information.description"),
           title: t("faq.accountCompany.information.title"),
         },
@@ -263,14 +213,6 @@ export const getFaq = (
           title: t("faq.accountUser.addListing.title"),
         },
         {
-          description: t("faq.accountUser.checkUserPoints.description"),
-          title: t("faq.accountUser.checkUserPoints.title"),
-        },
-        {
-          description: t("faq.accountUser.findInvoices.description"),
-          title: t("faq.accountUser.findInvoices.title"),
-        },
-        {
           description: t("faq.accountUser.updateUserName.description"),
           title: t("faq.accountUser.updateUserName.title"),
         },
@@ -289,18 +231,6 @@ export const getFaq = (
         {
           description: t("faq.accountUser.manageSessions.description"),
           title: t("faq.accountUser.manageSessions.title"),
-        },
-        {
-          description: t("faq.accountUser.loginWithFacebook.description"),
-          title: t("faq.accountUser.loginWithFacebook.title"),
-        },
-        {
-          description: t("faq.accountUser.loginWithGoogle.description"),
-          title: t("faq.accountUser.loginWithGoogle.title"),
-        },
-        {
-          description: t("faq.accountUser.startReferral.description"),
-          title: t("faq.accountUser.startReferral.title"),
         },
         {
           description: t("faq.accountUser.loginToAccount.description"),
@@ -388,10 +318,6 @@ export const getFaq = (
         {
           description: t("faq.settingsSite.updateCookies.description"),
           title: t("faq.settingsSite.updateCookies.title"),
-        },
-        {
-          description: t("faq.settingsSite.enterReferralCode.description"),
-          title: t("faq.settingsSite.enterReferralCode.title"),
         },
         {
           description: t("faq.settingsSite.changeLanguage.description"),

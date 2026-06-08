@@ -9,19 +9,12 @@ import {
   allRoles,
   E_Roles,
   type T_CompanyWorkerPermissions,
-  type T_PlanType,
   type T_Roles,
 } from "~/models/enums";
-import {
-  checkCompanySubscriptionIsActive,
-  checkIfUserHasActivePlanTypes,
-} from "~/utilities/functions";
 
 import { RespectClientSideRendering } from "../RespectClientSideRendering";
 
 type T_RespectUser = {
-  activeFreeTrialOrSubscriptionCompany?: boolean;
-  companyPlanTypes?: T_PlanType[];
   redirectOnError?: E_Routes;
   respectCompany?: boolean;
   respectCompanyPhoneVerification?: boolean;
@@ -37,9 +30,7 @@ type T_RespectUser = {
 };
 
 const RespectUserAfterClientSideRendering = ({
-  activeFreeTrialOrSubscriptionCompany = false,
   children,
-  companyPlanTypes,
   redirectOnError,
   respectCompany = false,
   respectCompanyPhoneVerification,
@@ -115,31 +106,15 @@ const RespectUserAfterClientSideRendering = ({
       : false;
   }
 
-  let respectActiveFreeTrialOrSubscriptionCompany =
-    !activeFreeTrialOrSubscriptionCompany;
-  if (user?.company && activeFreeTrialOrSubscriptionCompany) {
-    respectActiveFreeTrialOrSubscriptionCompany =
-      checkCompanySubscriptionIsActive({ company: user?.company });
-  }
-
-  const userRespectPlanTypes = companyPlanTypes
-    ? checkIfUserHasActivePlanTypes({
-        planTypes: companyPlanTypes,
-        user,
-      })
-    : true;
-
   const redirectToOtherSite =
     !user ||
     !userHasVerifiedPhone ||
     !companyHasVerifiedPhone ||
-    !userRespectPlanTypes ||
     (respectCompany && !user?.company) ||
     !userRespectRole ||
     !userRespectUserCompanyPermissions ||
     !workerRespectCompanyPermissions ||
     !workerRespectCompanyRoles ||
-    !respectActiveFreeTrialOrSubscriptionCompany ||
     isErrorInSkipsPermissionsIfUserIsCompanyWorker ||
     (respectUserEmailVerification
       ? !user?.emailVerification?.verifiedAt

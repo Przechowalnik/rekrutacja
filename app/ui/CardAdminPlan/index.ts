@@ -1,1 +1,0 @@
-export { CardAdminPlan } from "./CardAdminPlan";

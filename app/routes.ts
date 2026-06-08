@@ -12,12 +12,8 @@ const nonLocalizedRoutes: RouteConfigEntry[] = [
   route("sitemap-pages.xml", "./pages/sitemap-pages.ts"),
   route("sitemap-cities.xml", "./pages/sitemap-cities.ts"),
   route("sitemap-categories.xml", "./pages/sitemap-categories.ts"),
-  route("sitemap-blog.xml", "./pages/sitemap-blog.ts"),
-  route("collect/g/collect", "./pages/api/collect.ts"),
-  ...prefix("webhooks", [route("stripe", "./pages/webhooks/stripe.ts")]),
   ...prefix("api", [
     route("cron", "./pages/api/cron.ts"),
-    route("gtm", "./pages/api/gtm.ts"),
     route("latest-listings", "./pages/api/latest-listings.ts"),
     route("searchMap", "./pages/api/searchMap.ts"),
     route("login", "./pages/api/login.ts"),
@@ -50,13 +46,7 @@ const nonLocalizedRoutes: RouteConfigEntry[] = [
       ),
     ]),
 
-    ...prefix("company", [
-      route("banner", "./pages/api/company/banner.ts"),
-      route(
-        "subscriptions/delete",
-        "./pages/api/company/subscriptions/delete.ts",
-      ),
-    ]),
+    ...prefix("company", [route("banner", "./pages/api/company/banner.ts")]),
 
     ...prefix("autocomplete", [
       route("city", "./pages/api/autocomplete/city.ts"),
@@ -64,16 +54,6 @@ const nonLocalizedRoutes: RouteConfigEntry[] = [
     ]),
 
     ...prefix("upload", [route("images", "./pages/api/upload/images.ts")]),
-  ]),
-  ...prefix("auth", [
-    ...prefix("facebook", [
-      index("./pages/auth/facebook/index.ts"),
-      route("callback", "./pages/auth/facebook/callback.ts"),
-    ]),
-    ...prefix("google", [
-      index("./pages/auth/google/index.ts"),
-      route("callback", "./pages/auth/google/callback.ts"),
-    ]),
   ]),
 ];
 
@@ -91,12 +71,6 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
     route("flagi", "./pages/flags.tsx", { id: id("flags") }),
     route("pomoc", "./pages/help.tsx", { id: id("help") }),
     route("kontakt", "./pages/contact.tsx", { id: id("contact") }),
-    route("jak-dodac-ogloszenie", "./pages/how-to-add-a-listing.tsx", {
-      id: id("how-to-add-listing"),
-    }),
-    route("jak-szukac-ogloszenia", "./pages/how-to-search-a-listing.tsx", {
-      id: id("how-to-search-listing"),
-    }),
     route("uwierzytelniacz", "./pages/authenticator.ts", {
       id: id("authenticator"),
     }),
@@ -105,12 +79,6 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
     route("*", "./pages/404.tsx", { id: id("404-splat") }),
     route("blad-konto-nie-znalezione", "./pages/error-account-not-found.tsx", {
       id: id("error-account-not-found"),
-    }),
-    route("blad-logowanie-facebook", "./pages/error-login-from-facebook.tsx", {
-      id: id("error-login-from-facebook"),
-    }),
-    route("blad-logowanie-google", "./pages/error-login-from-google.tsx", {
-      id: id("error-login-from-google"),
     }),
     route("blad-logowanie-haslo", "./pages/error-login-from-password.tsx", {
       id: id("error-login-from-password"),
@@ -186,25 +154,9 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
         id: id("registration-company"),
       }),
     ]),
-    ...prefix("blog", [
-      index("./pages/blog/index.tsx", { id: id("blog") }),
-      route(":blogPostSlug", "./pages/blog/blogPost.tsx", {
-        id: id("blog-post"),
-      }),
-      route("rss.xml/*", "./pages/blog/rss.ts", { id: id("blog-rss") }),
-    ]),
     layout("./pages/admin/layout.ts", { id: id("admin-layout") }, [
       ...prefix("admin", [
         index("./pages/admin/index.tsx", { id: id("admin") }),
-        ...prefix("blog", [
-          index("./pages/admin/blog/index.tsx", { id: id("admin-blog") }),
-          route("nowy", "./pages/admin/blog/new.tsx", {
-            id: id("admin-blog-new"),
-          }),
-          route(":blogPostId", "./pages/admin/blog/blogPost.tsx", {
-            id: id("admin-blog-post"),
-          }),
-        ]),
         ...prefix("raporty", [
           index("./pages/admin/reports/index.tsx", { id: id("admin-reports") }),
         ]),
@@ -219,72 +171,12 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
             }),
           ]),
         ]),
-        ...prefix("kupony", [
-          index("./pages/admin/coupons/index.tsx", { id: id("admin-coupons") }),
-          route("nowy", "./pages/admin/coupons/new.tsx", {
-            id: id("admin-coupon-new"),
-          }),
-          route(":couponId", "./pages/admin/coupons/coupon.tsx", {
-            id: id("admin-coupon"),
-          }),
-        ]),
-        ...prefix("wymiany", [
-          index("./pages/admin/exchanges/index.tsx", {
-            id: id("admin-exchanges"),
-          }),
-          route("nowa", "./pages/admin/exchanges/new.tsx", {
-            id: id("admin-exchange-new"),
-          }),
-          route(":exchangeId", "./pages/admin/exchanges/exchange.tsx", {
-            id: id("admin-exchange"),
-          }),
-        ]),
-        ...prefix("plany", [
-          index("./pages/admin/plans/index.tsx", { id: id("admin-plans") }),
-          route("nowy", "./pages/admin/plans/new.tsx", {
-            id: id("admin-plan-new"),
-          }),
-          route(":planId", "./pages/admin/plans/plan.tsx", {
-            id: id("admin-plan"),
-          }),
-        ]),
-        ...prefix("ustawienia", [
-          index("./pages/admin/settings/index.tsx", {
-            id: id("admin-settings"),
-          }),
-          route("nowe", "./pages/admin/settings/new.tsx", {
-            id: id("admin-setting-new"),
-          }),
-          route("edytuj", "./pages/admin/settings/edit.tsx", {
-            id: id("admin-setting-edit"),
-          }),
-        ]),
-        ...prefix("produkty", [
-          index("./pages/admin/products/index.tsx", {
-            id: id("admin-products"),
-          }),
-          route("nowy", "./pages/admin/products/new.tsx", {
-            id: id("admin-product-new"),
-          }),
-          route(":productId", "./pages/admin/products/product.tsx", {
-            id: id("admin-product"),
-          }),
-        ]),
       ]),
     ]),
     ...prefix("konto", [
       index("./pages/account/index.tsx", { id: id("account") }),
-      route("punkty", "./pages/account/points.tsx", {
-        id: id("account-points"),
-      }),
-      route("faktury", "./pages/account/invoices.tsx", {
-        id: id("account-invoices"),
-      }),
       route("zgody", "./pages/account/consents.tsx", {
         id: id("account-consents"),
-      }),
-      route("polecenie", "./pages/account/referral.tsx", {
-        id: id("account-referral"),
       }),
       route("sesje", "./pages/account/sessions.tsx", {
         id: id("account-sessions"),
@@ -339,13 +231,9 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
       route("ustawienia", "./pages/company/settings.tsx", {
         id: id("company-settings"),
       }),
-      route("polecenie", "./pages/company/referral.tsx", {
-        id: id("company-referral"),
-      }),
       route("telefon", "./pages/company/phone.tsx", {
         id: id("company-phone"),
       }),
-      route("karta", "./pages/company/card.tsx", { id: id("company-card") }),
       route("usun", "./pages/company/delete.tsx", { id: id("company-delete") }),
       ...prefix("profil", [
         index("./pages/company/profile/index.tsx", {
@@ -355,32 +243,10 @@ const createLocalizedRoutes = (langPrefix: string): RouteConfigEntry[] => {
           id: id("company-profile-edit"),
         }),
       ]),
-      ...prefix("punkty", [
-        index("./pages/company/points/index.tsx", { id: id("company-points") }),
-        route("wymiany", "./pages/company/points/exchanges.tsx", {
-          id: id("company-points-exchanges"),
-        }),
-      ]),
       ...prefix("bledy", [
         index("./pages/company/bugs/index.tsx", { id: id("company-bugs") }),
         route(":bugId", "./pages/company/bugs/bug.tsx", {
           id: id("company-bug"),
-        }),
-      ]),
-      ...prefix("faktury", [
-        index("./pages/company/invoices/index.tsx", {
-          id: id("company-invoices"),
-        }),
-        route("edytuj", "./pages/company/invoices/edit.tsx", {
-          id: id("company-invoice-edit"),
-        }),
-      ]),
-      ...prefix("subskrypcje?", [
-        index("./pages/company/subscriptions/index.tsx", {
-          id: id("company-subscriptions"),
-        }),
-        route("nowa?", "./pages/company/subscriptions/new.tsx", {
-          id: id("company-subscription-new"),
         }),
       ]),
       ...prefix("pracownicy", [

@@ -48,13 +48,7 @@ export const deleteUserAccount = async ({
         select: {
           avatar: true,
           firstName: true,
-          referral: {
-            select: {
-              code: true,
-            },
-          },
           role: true,
-          stripeCustomerId: true,
         },
         where: {
           company: null,
@@ -133,27 +127,6 @@ export const deleteUserAccount = async ({
         userId: existingUser.id,
       },
     });
-
-    if (existingUser?.referral?.code) {
-      await database.$transaction([
-        database.user.updateMany({
-          data: {
-            createdFromReferralCode: null,
-          },
-          where: {
-            createdFromReferralCode: existingUser?.referral?.code,
-          },
-        }),
-        database.company.updateMany({
-          data: {
-            createdFromReferralCode: null,
-          },
-          where: {
-            createdFromReferralCode: existingUser?.referral?.code,
-          },
-        }),
-      ]);
-    }
 
     await database.user.delete({
       where: {

@@ -8,7 +8,7 @@ import {
 import { Box, Burger, Flex, useMantineColorScheme } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { memo, useCallback } from "react";
-import { Trans, useTranslation } from "react-i18next";
+import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router";
 
 import { colorsMantine } from "~/constants/colorsMantine";
@@ -377,52 +377,6 @@ const NavigationToMemoize = () => {
                   })}
                 >
                   <Logo light />
-                  <Text c="white" size="sm" visibleFrom="md">
-                    <Trans
-                      components={{
-                        bold: (
-                          <Box
-                            bg={colorsMantine.redPoland}
-                            component="span"
-                            display="inline"
-                            fw="bold"
-                            px={8}
-                            py={2}
-                            style={{
-                              borderRadius: 4,
-                            }}
-                          >
-                            <Text display="inline" fw="bold" span />
-                          </Box>
-                        ),
-                      }}
-                      i18nKey="navigation.title"
-                      ns={namespaces.common}
-                    />
-                  </Text>
-                  <Text c="white" hiddenFrom="md" size="xs">
-                    <Trans
-                      components={{
-                        bold: (
-                          <Box
-                            bg={colorsMantine.redPoland}
-                            component="span"
-                            display="inline"
-                            fw="bold"
-                            px={8}
-                            py={2}
-                            style={{
-                              borderRadius: 4,
-                            }}
-                          >
-                            <Text display="inline" fw="bold" span />
-                          </Box>
-                        ),
-                      }}
-                      i18nKey="navigation.title"
-                      ns={namespaces.common}
-                    />
-                  </Text>
                 </Link>
               </Flex>
               <Burger

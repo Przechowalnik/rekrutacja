@@ -1,6 +1,0 @@
-{
-  "buttonReplace": "Wymień punkty",
-  "description": "Na tej podstronie znajdziesz wszystkie dostępne <tooltipicon label='{{tooltipPoints}}'>Punkty</tooltipicon>, które możesz wykorzystać w trakcie prowadzenia swojej działalności na stronie.",
-  "information": "Dostępna ilość punktów: {{pointsBalance}}",
-  "title": "Punkty"
-}

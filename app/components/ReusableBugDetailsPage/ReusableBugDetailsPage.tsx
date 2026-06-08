@@ -7,10 +7,8 @@ import { dynamic } from "~/hoc/dynamic";
 import { useLocalizedRoute } from "~/hooks/useLocalizedRoute";
 import { formNames } from "~/lib/zodFormValidator";
 import type { T_Bug } from "~/models/bug";
-import type { T_PlatformSetting } from "~/models/platformSetting";
 import { Button } from "~/ui/Button";
 import { ButtonArrowLeft } from "~/ui/ButtonArrowLeft";
-import { generatePointsFromStatus } from "~/ui/CardBug";
 import { Checkbox } from "~/ui/Checkbox";
 import { DateTimePicker } from "~/ui/DateTimePicker";
 import { Input } from "~/ui/Input";
@@ -38,26 +36,16 @@ type T_ReusableBugDetailsPage = {
   bug: T_Bug;
   isAdmin?: boolean;
   isCompany?: boolean;
-  platformSetting: T_PlatformSetting;
 };
 
 export const ReusableBugDetailsPage = ({
   bug,
   isAdmin = false,
   isCompany = false,
-  platformSetting,
 }: T_ReusableBugDetailsPage) => {
   const { t: tQuestions } = useTranslation(namespaces.questions);
   const { t } = useTranslation(namespaces.accountBugDetails);
   const { getLocalizedRoute } = useLocalizedRoute();
-
-  const generatedPoints =
-    bug.companyId && bug.priority
-      ? generatePointsFromStatus({
-          bug,
-          platformSetting,
-        })
-      : null;
 
   const breadcrumbs: E_Routes[] = (() => {
     if (isCompany) {
@@ -141,7 +129,6 @@ export const ReusableBugDetailsPage = ({
         },
       ]}
       size="md"
-      success={bug?.companyId && bug?.pointsPaidAt ? t("success") : undefined}
       title={t("title")}
       warning={bug?.answer ? t("warning") : undefined}
       withHTML={false}
@@ -185,27 +172,6 @@ export const ReusableBugDetailsPage = ({
           disabledWithOpacity={false}
           required={false}
         />
-        {generatedPoints && (
-          <>
-            <Input
-              disabled
-              disabledWithOpacity={false}
-              label={t("bugPointsLabel")}
-              required={false}
-              value={generatedPoints}
-            />
-            <DateTimePicker
-              description={t("bugPointsPaidAtDescription")}
-              disabled
-              disabledWithOpacity={false}
-              name={formNames.bugPointsPaidAt}
-              required={false}
-              value={
-                bug.pointsPaidAt ? dayjs(bug.pointsPaidAt).toDate() : undefined
-              }
-            />
-          </>
-        )}
         <Checkbox
           checked={bug.isReproducible}
           disabled
