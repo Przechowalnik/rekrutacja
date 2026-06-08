@@ -1,0 +1,28 @@
+{
+  "id": "/",
+  "name": "do-pracy.pl",
+  "short_name": "do-pracy.pl",
+  "description": "do-pracy.pl PWA",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone"],
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "icons": [
+    { "src": "/icons/pwa-16x16.webp", "sizes": "16x16", "type": "image/webp" },
+    { "src": "/icons/pwa-32x32.webp", "sizes": "32x32", "type": "image/webp" },
+    { "src": "/icons/pwa-48x48.webp", "sizes": "48x48", "type": "image/webp" },
+    { "src": "/icons/pwa-144x144.webp", "sizes": "144x144", "type": "image/webp" },
+    { "src": "/icons/pwa-180x180.webp", "sizes": "180x180", "type": "image/webp" },
+    { "src": "/icons/pwa-512x512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/icons/pwa-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "/icons/pwa-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ],
+  "protocol_handlers": [
+    { "protocol": "web+dopracy", "url": "/handle-protocol?url=%s" }
+  ],
+  "screenshots": [
+    { "src": "/screenshots/home-wide.png", "sizes": "1280x720", "type": "image/png", "form_factor": "wide" },
+    { "src": "/screenshots/home-mobile.png", "sizes": "540x960", "type": "image/png", "form_factor": "narrow" }
+  ]
+}
